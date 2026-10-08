@@ -20,7 +20,7 @@ test("Foundation shared metals keeps all original bank identities and strict can
   const data = emptyProgress(),
     work = emptyWork();
   work.taskModels = {};
-  for (const q of j.guided) {
+  for (const q of j.guided.filter((q) => q.model)) {
     const b = initialBoard(q.model!);
     expect(validHistory(q.model!, [b])).toBe(true);
     expect(validHistory(q.model!, [])).toBe(false);

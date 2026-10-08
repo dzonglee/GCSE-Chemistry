@@ -13,7 +13,7 @@ This is an implementation ledger, not a completion certificate. All95 original r
 |Conservation of mass|Accepted:18 unchanged original-model checks and8 final affected checks; eight additions preserve equations, atom accounts and complete mass inventories, with corrected native opening and labels. Final inspected samples delivered before uncertainty research.|
 |Measurement uncertainty|Accepted:60 activities preserve original48; independent uncertainty/calibration/exclusion/reproducibility writing and blank frequency table/histogram/bar construction.24 initial production passes,2 corrected graph checks and2 final affected delayed checks; inspected samples delivered.|
 |Changing concentration|Accepted:56 activities preserve original46; independent/delayed mass–volume causal comparisons and full sampling/dilution/solvent inventories, plus explicit seven-symbol guided reference. Final26 production checks pass; seven inspected samples delivered.|
-|Metal reactivity|Actual eight specified metals' water/acid observation breadth; zinc/iron and positive-ion tendency construction.|
+|Metal reactivity|Accepted:60 activities preserve original49; eight-metal water/HCl condition reference, independent/delayed positive-ion and reaction accounts, and valid investigation planning.22 existing plus8 final production checks pass; eight inspected samples delivered.|
 |Acids and metals|Mg/Zn/Fe with HCl/H₂SO₄ breadth and Higher redox writing; inspect actual existing prompts before adding.|
 |Electrolysis|Full cryolite-mixture/anode-replacement explanation and application-specific reactions.|
 |Aqueous electrolysis products|Inert-electrode required-practical investigation/hypothesis independence; copper purification is a different demand.|

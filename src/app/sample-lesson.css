@@ -6903,3 +6903,166 @@ body:has(.sample-lesson) .topic-number {
     align-items: start;
   }
 }
+
+.sample-lesson[data-lesson="metal-reactivity"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="metal-reactivity"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="metal-reactivity"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="metal-reactivity"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="metal-reactivity"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="metal-reactivity"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="metal-reactivity"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="metal-reactivity"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="metal-reactivity"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="metal-reactivity"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="metal-reactivity"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="metal-reactivity"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="metal-reactivity"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="metal-reactivity"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="metal-reactivity"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="metal-reactivity"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="metal-reactivity"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="metal-reactivity"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="metal-reactivity"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="metal-reactivity"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="metal-reactivity"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="metal-reactivity"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="metal-reactivity"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="metal-reactivity"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="metal-reactivity"] .metal-reference-figure {
+  margin: 12px 0;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="metal-reactivity"] .metal-reactivity-workbench {
+    padding: 12px;
+  }
+}
+
+.metal-reaction-reference {
+  padding: 16px;
+  border: 1px solid #c5cce0;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+.metal-reaction-reference h3 {
+  margin-top: 0;
+}
+.metal-reaction-reference label {
+  display: block;
+}
+.metal-reaction-reference select {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin: 8px 0 12px;
+}
+.metal-reference-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.metal-reference-buttons button {
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid #c5cce0;
+  border-radius: 8px;
+  background: white;
+  color: #141b2c;
+  font-size: 18px;
+}
+.metal-reference-buttons button[aria-pressed="true"] {
+  background: #f8ec62;
+  border-color: #343d55;
+}
+.metal-reaction-reference p {
+  line-height: 1.5;
+}
+@media (min-width: 900px) {
+  .metal-reference-response {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+}

@@ -3,10 +3,13 @@ import AxeBuilder from "@axe-core/playwright";
 import { metalReactivityJourney as journey } from "../src/content/journeys/metal-reactivity";
 import { STORAGE_KEY, REVIEW_DELAY } from "../src/lib/progress";
 async function task(page: Page, n: number) {
-  await page
-    .getByRole("button", { name: `Task ${n}`, exact: true })
-    .first()
-    .click();
+  const picker = page.getByLabel("Choose a practice task", { exact: true });
+  if (await picker.isVisible()) await picker.selectOption(String(n - 1));
+  else
+    await page
+      .getByRole("button", { name: `Task ${n}`, exact: true })
+      .first()
+      .click();
 }
 async function select(page: Page, label: string, value: string) {
   await page.getByLabel(label, { exact: true }).selectOption(value);

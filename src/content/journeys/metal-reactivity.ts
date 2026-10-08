@@ -475,7 +475,7 @@ export const metalReactivityJourney: LessonJourney = {
     w(
       "p-controls",
       "Explain a valid comparison",
-      "A student ranks two metals by gas volume after 10 s, but one sample is powder and the other a large chip; their masses also differ. Explain why the rank is not established and what comparison conditions are needed.",
+      "Unequal masses of metal powder and a large chip give different gas volumes after 10 s. Explain why this cannot rank reactivity and give suitable controls.",
       "Exposed area/state of division and metal amount differ, so gas progress may reflect those differences. Use a supplied comparable protocol with controlled metal mass/amount and exposed area, acid volume/concentration/initial temperature and observation interval before applying the stated comparison criterion.",
       [
         "Identify amount and surface confounding.",
@@ -557,8 +557,8 @@ export const metalReactivityJourney: LessonJourney = {
       ),
       w(
         "ca-written",
-        "Fresh experimental limitation",
-        "Two metals are compared with dilute HCl: sample A is oxide-coated with small exposed area at 18°C; sample B has a freshly cleaned larger area at 30°C. B gives gas faster. Explain why the result alone does not establish B as more reactive.",
+        "Check fair conditions",
+        "Dilute-HCl tests: A has an oxide-coated small area at 18°C; B a cleaned larger area at 30°C. B gives gas faster. Explain why this cannot rank their reactivity.",
         "Surface film, exposed area and temperature are uncontrolled, and each can affect observed progress. Comparable supplied trials must control relevant conditions and measure the same defined response before attributing the difference to metal identity.",
         [
           "Identify surface and temperature differences.",
@@ -617,8 +617,8 @@ export const metalReactivityJourney: LessonJourney = {
       ),
       w(
         "cb-written",
-        "Alternative equal-yield claim",
-        "Complete reactions of two different metals both give 80 cm³ hydrogen, but no time measurements or comparison controls are supplied. A student claims they have equal reactivity. Evaluate the claim.",
+        "Evaluate equal yield",
+        "Two metals each give 80 cm³ hydrogen after complete reaction. No times or comparison controls are supplied. Evaluate the claim of equal reactivity.",
         "Equal final gas quantities do not establish equal reaction rate or positive-ion tendency. Reacting quantities and conditions may differ. Comparable timed observations with appropriate controls are needed before using the given rate criterion to rank the metals.",
         [
           "Distinguish final gas quantity from rate.",
@@ -714,3 +714,6 @@ for (const [from, to] of Object.entries({
     (q) => q.id === `mr-v1-${from}`,
   )!.followUp = `mr-v1-${to}`;
 }
+
+import { extendReactivityWriting } from "./reactivity-writing";
+extendReactivityWriting(metalReactivityJourney);

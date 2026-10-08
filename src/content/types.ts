@@ -14,6 +14,7 @@ export type ModelKind =
   | "electrolysis"
   | "predict";
 export interface Question {
+  metalReactionReference?: boolean;
   concentrationSymbols?: boolean;
   frequencyDisplay?: import("../lib/frequency-display").FrequencyDisplayData;
   nanoFootprintDiagram?: {

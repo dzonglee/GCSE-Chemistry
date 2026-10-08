@@ -1,4 +1,5 @@
 "use client";
+import { MetalReactionReference } from "./MetalReactionReference";
 import { ConcentrationSymbols } from "./ConcentrationSymbols";
 import { NanoFootprintDiagram } from "./NanoFootprintDiagram";
 import { MolecularLineConstructionInput } from "./MolecularLineConstructionInput";
@@ -261,6 +262,14 @@ export function QuestionInput(props: InputProps) {
           <NanoFootprintDiagram {...props.question.nanoFootprintDiagram} />
         </div>
       )}
+      {props.question.metalReactionReference && (
+        <div className="metal-reference-response">
+          <div>
+            <ResponseInput {...props} />
+          </div>
+          <MetalReactionReference />
+        </div>
+      )}
       {props.question.concentrationSymbols && (
         <div className="concentration-symbol-response">
           <div>
@@ -501,6 +510,7 @@ export function QuestionInput(props: InputProps) {
         !props.question.nanoFootprintDiagram &&
         !props.question.frequencyDisplay &&
         !props.question.concentrationSymbols &&
+        !props.question.metalReactionReference &&
         !props.question.polymerChainDiagram &&
         !props.question.polymerRepeatDiagram &&
         !props.question.nanotubeDiagram &&

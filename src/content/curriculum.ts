@@ -7280,3 +7280,13 @@ for (const q of tasks(changingConcentrationJourney))
         ...new Set([...(other.exposureAliases ?? []), q.id]),
       ];
   }
+
+// Preserve reciprocal exposure for metal reaction recall and independent method writing.
+for (const q of tasks(metalReactivityJourney))
+  for (const id of q.exposureAliases ?? []) {
+    const other = questionById(id);
+    if (other)
+      other.exposureAliases = [
+        ...new Set([...(other.exposureAliases ?? []), q.id]),
+      ];
+  }
