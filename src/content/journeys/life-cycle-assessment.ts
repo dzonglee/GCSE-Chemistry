@@ -1,5 +1,12 @@
 import type { LearningTask, LessonJourney } from "../types";
 import { lcaRecords as R, type LcaGiven } from "../../lib/life-cycle";
+import {
+  resourceRefresher,
+  resourceGuided,
+  resourcePractice,
+  resourceCheckForms,
+  resourceReviewForms,
+} from "./resource-use";
 const id = (s: string) => "lca-v1-" + s;
 function choice(
   s: string,
@@ -1096,6 +1103,13 @@ practice.forEach((q, i) => {
   q.followUp = id(recovery[i]);
   lcaRecoveryRoutes[q.id] = q.followUp;
 });
+// Append after the original recovery mapping: no saved practice index changes.
+refresher.push(...resourceRefresher);
+guided.push(...resourceGuided);
+practice.push(...resourcePractice);
+checkForms.push(...resourceCheckForms);
+reviewForms.push(...resourceReviewForms);
+for (const q of resourcePractice) lcaRecoveryRoutes[q.id] = q.followUp!;
 export const allLcaTasks = [
   ...warmup,
   ...refresher,
@@ -1171,7 +1185,7 @@ export const lcaJourney: LessonJourney = {
   introduction:
     "Construct a fair lifecycle comparison, calculate equivalent-service data and justify conditional environmental decisions.",
   scopeNote:
-    "Shared Foundation/Higher: AQA Chemistry 8462 4.10.2.1–2 and Trilogy 8464 5.10.2.1–2. Original paper/plastic and other product exercises; actual exam demands include extended evidence-based evaluation. Numerical tasks apply prior arithmetic, ratios, percentages and graph interpretation. Written responses are manually reviewed; software checks do not certify exam readiness.",
+    "Shared Foundation/Higher: AQA Chemistry 8462 4.10.1.1 resource use and 4.10.2.1–2 LCA/recycling; the existing LCA work also addresses Trilogy 8464 5.10.2.1–2. Original paper/plastic and other product exercises; actual exam demands include extended evidence-based evaluation. Numerical tasks apply prior arithmetic, ratios, percentages and graph interpretation. Written responses are manually reviewed; software checks do not certify exam readiness.",
   outcomes: [
     "Classify raw-material, manufacture/packaging, use/operation and end-of-life processes, including transport throughout.",
     "Construct consistent boundaries for equivalent service and identify selective claims.",
@@ -1179,6 +1193,7 @@ export const lcaJourney: LessonJourney = {
     "Compare reusable fixed/repeated processes with single-use service, including ties and whole-use thresholds.",
     "Distinguish measurable quantities from pollutant-effect/value judgements and evaluate paper/plastic shopping bags with declared priorities.",
     "Evaluate reduction, reuse and recycling of limited materials; account for sorting, usable recovery, other streams and new-input demand.",
+    "Explain how resource use meets current needs without compromising future generations; give agricultural/synthetic supplements and classify finite/renewable resources using replenishment information.",
   ],
   warmup,
   refresher,
@@ -1205,7 +1220,11 @@ export const lcaJourney: LessonJourney = {
     },
     {
       label: "Energy scaling by product mass",
-      taskIds: practice.slice(22).map((q) => q.id),
+      taskIds: practice.slice(22, 23).map((q) => q.id),
+    },
+    {
+      label: "Resource use and sustainable development",
+      taskIds: resourcePractice.map((q) => q.id),
     },
   ],
 };
