@@ -1,0 +1,103 @@
+"use client";
+import { FuelPlotEditor } from "./FuelPlotEditor";
+import {
+  emptyFuelDrawing,
+  readFuelDrawing,
+  type FuelDrawingData,
+} from "../lib/fuel-drawing";
+export function FuelDrawingInput({
+  value,
+  onChange,
+  drawing,
+  disabled = false,
+}: {
+  value: string;
+  onChange: (raw: string) => void;
+  drawing: FuelDrawingData;
+  disabled?: boolean;
+}) {
+  const b = readFuelDrawing(value, drawing.data);
+  const temperature = drawing.data.context === "temperature";
+  const plotName = temperature ? "temperature graph" : "fuel plot";
+  if (!b)
+    return (
+      <div role="status">
+        <p>
+          Your saved {plotName} cannot be displayed in the current format. Its
+          original response is retained.
+        </p>
+        <button
+          type="button"
+          disabled={disabled}
+          onClick={() =>
+            onChange(JSON.stringify(emptyFuelDrawing(drawing.data)))
+          }
+        >
+          Start a new {plotName}
+        </button>
+      </div>
+    );
+  return (
+    <section
+      className={`fuel-drawing-input${temperature ? " temperature-drawing-input" : ""}`}
+      aria-label={
+        temperature
+          ? "Temperature graph construction"
+          : "Independent fuel graph construction"
+      }
+    >
+      {temperature ? (
+        <table className="temperature-source-table">
+          <caption aria-label="Mass of salt in grams to lowest temperature in degrees Celsius">
+            Mass / g → minimum / °C
+          </caption>
+          <tbody>
+            {[0, 3].map((i) => (
+              <tr key={i}>
+                {drawing.data.points.slice(i, i + 3).map(([x, y]) => (
+                  <td key={x}>
+                    {x}→{y.toFixed(1)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <>
+          <p>{drawing.note}</p>
+          <p>
+            Construct each original point and your separate fit curve from blank
+            coordinates. The original scales do not change when a proposal is
+            wrong. Curves and estimates are saved for self-review; no automatic
+            examiner mark is awarded.
+          </p>
+        </>
+      )}
+      <FuelPlotEditor
+        data={drawing.data}
+        board={b}
+        onChange={(changes) => onChange(JSON.stringify({ ...b, ...changes }))}
+        disabled={disabled}
+      />
+      {temperature && (
+        <>
+          <p>{drawing.note}</p>
+          <p>
+            Use two separate end heights for a straight best-fit line, with
+            observations balanced around it. Do not join the observations dot to
+            dot. Your intercept is an estimate beyond the measured masses. Save
+            to compare the criteria; no automatic graph mark is awarded.
+          </p>
+        </>
+      )}
+      <button
+        type="button"
+        disabled={disabled}
+        onClick={() => onChange(JSON.stringify(emptyFuelDrawing(drawing.data)))}
+      >
+        Clear this {plotName}
+      </button>
+    </section>
+  );
+}

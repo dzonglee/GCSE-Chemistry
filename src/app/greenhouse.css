@@ -1,0 +1,210 @@
+.greenhouse-workbench {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.greenhouse-original {
+  padding: 12px;
+  border: 1px solid var(--line, #dfe4ee);
+  border-radius: 12px;
+  background: #f7f9fd;
+}
+.greenhouse-original h3 {
+  font-size: 1rem;
+  margin: 0 0 4px;
+}
+.greenhouse-original p {
+  margin: 0;
+  line-height: 1.5;
+}
+.greenhouse-original dl {
+  margin: 8px 0 0;
+}
+.greenhouse-original dl div {
+  display: grid;
+  gap: 4px;
+}
+.greenhouse-original dt {
+  font-weight: 700;
+}
+.greenhouse-original dd {
+  margin: 0;
+  line-height: 1.5;
+}
+.greenhouse-fields {
+  display: grid;
+  gap: 12px;
+}
+.greenhouse-fields label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+  line-height: 1.45;
+  min-width: 0;
+}
+.greenhouse-fields select,
+.greenhouse-fields input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid #c9d2e1;
+  border-radius: 8px;
+  padding: 8px;
+  background: white;
+  color: #192237;
+  font: inherit;
+  font-weight: 400;
+}
+.greenhouse-fields select {
+  font-size: 0.94rem;
+}
+.greenhouse-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.greenhouse-actions button {
+  min-height: 44px;
+}
+.greenhouse-waves,
+.greenhouse-radiation,
+.greenhouse-ledger {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+.greenhouse-waves figcaption,
+.greenhouse-radiation figcaption,
+.greenhouse-ledger figcaption {
+  font-weight: 700;
+}
+.greenhouse-waves > div {
+  padding: 12px;
+  border: 1px solid #dfe4ee;
+  border-radius: 10px;
+}
+.greenhouse-waves svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 380px;
+}
+.greenhouse-waves p {
+  margin: 0;
+  line-height: 1.5;
+}
+.greenhouse-radiation svg {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  background: #fbfcff;
+  border: 1px solid #dfe4ee;
+  border-radius: 10px;
+}
+.greenhouse-radiation text {
+  font:
+    16px var(--font-body),
+    sans-serif;
+  fill: #28354e;
+}
+.greenhouse-radiation ol {
+  padding-left: 22px;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  line-height: 1.6;
+}
+.greenhouse-chain {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.greenhouse-chain li {
+  padding: 12px;
+  border: 1px solid #dfe4ee;
+  border-left: 4px solid #b15c18;
+  border-radius: 8px;
+  line-height: 1.55;
+}
+.greenhouse-chain li + li:before {
+  content: "↓ ";
+  font-weight: 700;
+  color: #9b4a19;
+}
+.greenhouse-note {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #58657c;
+  margin: 0;
+}
+.greenhouse-energy-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  line-height: 1.4;
+  align-items: center;
+}
+.greenhouse-track {
+  grid-row: 2;
+  grid-column: 1/-1;
+  border-radius: 5px;
+  background: #edf0f6;
+  height: 16px;
+  overflow: hidden;
+}
+.greenhouse-track span {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+}
+.greenhouse-proposal-ledger {
+  border: 1px solid #dfe4ee;
+  background: #f7f9fd;
+  padding: 12px;
+  border-radius: 10px;
+}
+.greenhouse-proposal-ledger p {
+  margin: 0;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.greenhouse-proposal-ledger p + p {
+  margin-top: 10px;
+}
+.greenhouse-repair {
+  margin: 0;
+  padding: 12px;
+  background: #f3f5fb;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+.question-panel .greenhouse-original,
+.assessment-card .greenhouse-original {
+  margin-bottom: 14px;
+}
+.greenhouse-original .greenhouse-ledger {
+  margin-top: 12px;
+}
+
+.greenhouse-actions button {
+  border: 1px solid #c9d2e1;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: white;
+  color: #26334c;
+  font: inherit;
+  font-weight: 700;
+}
+.greenhouse-actions .button {
+  background: #3344c6;
+  border-color: #3344c6;
+  color: white;
+}
+.greenhouse-actions button:disabled {
+  opacity: 0.55;
+}

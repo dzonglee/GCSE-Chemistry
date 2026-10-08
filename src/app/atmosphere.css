@@ -1,0 +1,260 @@
+.atmosphere-workbench {
+  border: 1px solid var(--line, #dde2ed);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+  min-width: 0;
+}
+.atmosphere-evidence h3 {
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+}
+.atmosphere-evidence p {
+  margin: 4px 0 8px;
+}
+.atmosphere-evidence dl {
+  margin: 10px 0;
+}
+.atmosphere-evidence dl div {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e8f0;
+}
+.atmosphere-evidence dt {
+  font-weight: 700;
+}
+.atmosphere-evidence dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.atmosphere-fields {
+  border: 0;
+  padding: 0;
+  margin: 8px 0 14px;
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+.atmosphere-fields legend {
+  font-weight: 700;
+  margin: 0 0 6px;
+  padding: 0;
+}
+.atmosphere-fields label {
+  display: block;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+.atmosphere-fields select,
+.atmosphere-fields input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid #cbd3e2;
+  border-radius: 8px;
+  background: #fff;
+  padding: 9px;
+  font: inherit;
+  color: #172033;
+}
+.atmosphere-selected {
+  margin: 6px 0 0;
+  padding-left: 8px;
+  border-left: 3px solid #d7dcec;
+  overflow-wrap: anywhere;
+}
+.atmosphere-flow {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  margin: 18px 0;
+}
+.atmosphere-flow li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #dce2ee;
+  border-radius: 10px;
+  background: #f7f8fc;
+}
+.atmosphere-flow strong {
+  flex: 0 0 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e5e8fa;
+  color: #303cba;
+}
+.atmosphere-equation {
+  margin: 18px 0;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f3f5fd;
+}
+.atmosphere-equation p {
+  margin: 6px 0;
+  font-weight: 700;
+}
+.atmosphere-equation small {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.atmosphere-proportions {
+  display: grid;
+  gap: 10px;
+}
+.atmosphere-gas {
+  position: relative;
+  height: 44px;
+  background: #edf0f7;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.atmosphere-gas span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: #b9c0f4;
+}
+.atmosphere-gas.gas1 span {
+  background: #a2dbd0;
+}
+.atmosphere-gas.gas2 span {
+  background: #ead2a8;
+}
+.atmosphere-gas strong {
+  position: relative;
+  display: block;
+  padding: 9px;
+  color: #172033;
+}
+.atmosphere-graph,
+.atmosphere-bar {
+  margin: 18px 0;
+  min-width: 0;
+}
+.atmosphere-pan {
+  overflow-x: auto;
+  max-width: 100%;
+  border: 1px solid #e1e6ef;
+  border-radius: 8px;
+  overscroll-behavior-x: contain;
+}
+.atmosphere-pan:focus-visible {
+  outline: 3px solid #444fcb;
+  outline-offset: 2px;
+}
+.atmosphere-graph svg {
+  width: 590px;
+  max-width: none;
+  display: block;
+}
+.atmosphere-bar svg {
+  width: 400px;
+  max-width: none;
+  display: block;
+}
+.atmosphere-pan svg text {
+  font-family: inherit;
+  font-size: 16px;
+  fill: #26324b;
+}
+.atmosphere-axis {
+  font-weight: 700;
+  margin: 6px 0;
+}
+.atmosphere-key {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+.atmosphere-key li {
+  margin: 3px 0;
+}
+.atmosphere-graph figcaption,
+.atmosphere-bar figcaption {
+  font-size: 1rem;
+  color: #46516b;
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+.atmosphere-graph table {
+  min-width: 480px;
+  width: 100%;
+  border-collapse: collapse;
+}
+.atmosphere-graph th,
+.atmosphere-graph td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #dde3ed;
+}
+.atmosphere-graph summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 10px 0;
+}
+.atmosphere-marker-note {
+  border-left: 3px solid #bd2541;
+  padding-left: 8px;
+  overflow-wrap: anywhere;
+}
+.atmosphere-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.atmosphere-actions button {
+  min-height: 44px;
+}
+.atmosphere-workbench button:not(.button) {
+  border: 1px solid #cbd3e2;
+  border-radius: 8px;
+  background: #fff;
+  color: #172033;
+  padding: 9px 12px;
+  font: inherit;
+  font-weight: 700;
+}
+.atmosphere-workbench .button {
+  background: #3541c6;
+  color: white;
+}
+.atmosphere-workbench .feedback.good {
+  background: #e5f4ed;
+  color: #235d48;
+}
+.atmosphere-workbench .feedback.bad {
+  background: #fff0ee;
+  color: #933e32;
+}
+.atmosphere-workbench .feedback {
+  padding: 12px;
+  border-radius: 8px;
+}
+@media (max-width: 600px) {
+  .atmosphere-workbench {
+    padding: 12px;
+  }
+  .atmosphere-evidence dl div {
+    grid-template-columns: 1fr;
+  }
+  .atmosphere-flow li {
+    padding: 10px;
+  }
+}
+
+.sample-task-layout.has-model:has(.atmosphere-graph) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.atmosphere-graph .atmosphere-pan {
+  max-width: 592px;
+}
+.atmosphere-scroll-note {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #46516b;
+}

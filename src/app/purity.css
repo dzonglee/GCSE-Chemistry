@@ -1,0 +1,216 @@
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review) * {
+  box-sizing: border-box;
+  min-width: 0;
+}
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review) nav,
+.purity-buttons,
+.purity-marker-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review) button,
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review) select,
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review) input {
+  font: inherit;
+  min-height: 44px;
+  border: 1px solid #ced3df;
+  border-radius: 8px;
+  background: white;
+  padding: 8px 12px;
+  color: #172033;
+  max-width: 100%;
+}
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review) button {
+  cursor: pointer;
+}
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review)
+  button[aria-pressed="true"] {
+  background: #fff078;
+  border-color: #d0b625;
+}
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review)
+  button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review) :focus-visible {
+  outline: 3px solid #3345c9;
+  outline-offset: 3px;
+}
+.purity-workbench h3 {
+  font-size: 22px;
+  margin: 18px 0;
+}
+.purity-eyebrow {
+  font-size: 14px;
+  color: #52607c;
+}
+.purity-compare,
+.purity-field {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  font-weight: 600;
+}
+.purity-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 12px;
+}
+.purity-field input,
+.purity-field select {
+  width: 100%;
+  font-weight: 400;
+}
+.purity-number {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 8px;
+}
+.purity-source {
+  background: #f3f5fa;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 16px 0;
+  line-height: 1.6;
+}
+.purity-comparison,
+.purity-recipe,
+.purity-ledger {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.purity-comparison article,
+.purity-recipe article,
+.purity-ledger article {
+  background: #f3f5fa;
+  border-radius: 12px;
+  padding: 16px;
+}
+.purity-ledger > h3 {
+  grid-column: 1/-1;
+}
+.purity-bar {
+  height: 18px;
+  background: #e1e4ef;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.purity-bar span {
+  display: block;
+  height: 100%;
+  background: #3345c9;
+}
+.purity-canvas {
+  height: 380px;
+  background: #f3f5fa;
+  border: 1px solid #e0e3ec;
+  border-radius: 12px;
+  touch-action: pan-y;
+}
+.purity-canvas canvas {
+  display: block;
+  touch-action: pan-y;
+}
+.purity-scene p,
+.purity-drawing p {
+  line-height: 1.6;
+}
+.purity-feedback {
+  padding: 16px;
+  background: #ecf2f7;
+  border-radius: 12px;
+}
+.purity-diagram-pan {
+  overflow-x: auto;
+  max-width: 100%;
+  border: 1px solid #e0e3ec;
+  border-radius: 12px;
+}
+.purity-diagram-pan svg {
+  display: block;
+}
+.results-list:has(.purity-drawing) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.result-row:has(.purity-drawing) {
+  min-width: 0;
+}
+.purity-temperature-surface {
+  border: 1px solid #e0e3ec;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.purity-temperature svg {
+  display: block;
+}
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review) p {
+  overflow-wrap: anywhere;
+}
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review) h1 {
+  font-size: 36px;
+}
+:is(.purity-workbench, .purity-drawing, .purity-drawing-review) h2 {
+  font-size: 26px;
+}
+@media (max-width: 500px) {
+  :is(.purity-workbench, .purity-drawing, .purity-drawing-review) {
+    padding: 0;
+  }
+  :is(.purity-workbench, .purity-drawing, .purity-drawing-review) h1 {
+    font-size: 30px;
+  }
+  .purity-canvas {
+    height: 320px;
+  }
+  .purity-marker-tools button {
+    padding: 8px;
+    font-size: 14px;
+  }
+  .purity-source {
+    padding: 12px;
+  }
+}
+.purity-route ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style-position: inside;
+}
+.purity-route li {
+  flex: 1 1 200px;
+  padding: 16px;
+  background: #f3f5fa;
+  border-left: 4px solid #3345c9;
+  border-radius: 8px;
+}
+.purity-proposal-bar span {
+  background: #7651a8;
+}
+
+.purity-melting-readings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 12px;
+  padding: 8px;
+  margin: 8px 0;
+  background: #f3f5fa;
+  border-radius: 8px;
+}
+.purity-melting-readings dt,
+.purity-melting-readings dd {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.purity-melting-readings dd {
+  font-weight: 700;
+}
+.purity-calibration {
+  font-size: 14px;
+}

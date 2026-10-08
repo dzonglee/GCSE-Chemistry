@@ -1,0 +1,50 @@
+# Lesson52 — Aqueous electrolysis products: individual before-review
+
+Scope: new Foundation/shared chemical-changes route, aqueous-electrolysis-products, prerequisite Electrolysis. Existing Higher aqueous-electrolysis route and all six of its legacy IDs remain for subsequent individual work. No whole-course parity or exam-readiness claim.
+
+Actual sources read:
+
+- [AQA Chemistry specification](https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF), freshly downloaded and actual 4.4.3.4 and required practical3 text read: inert electrodes, metal/hydrogen cathode competition, halide/oxygen anode prediction, hypothesis. Adjacent4.4.3.5 explicitly Higher.
+- [AQA Combined Trilogy specification](https://filestore.aqa.org.uk/resources/science/specifications/AQA-8464-SP-2016.PDF), fresh download and actual5.4.3.4 / practical9 read. Shared product prediction must not be hidden behind Higher.
+- [Pearson Combined specification](https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-combinedscience-spec.pdf), actual printed43 / PDF47 text read again, corresponding visual page inspected during the immediately preceding lesson: plain3.25 includes CuCl2, NaCl, Na2SO4 and acidified water; plain3.30/31 explicitly copper electrodes, purification and inert/copper-electrode practical. Bold3.27–29 half equations/electron redox belong at Higher.
+- [AQA2018 Foundation QP](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-84621F-QP-JUN18.PDF) and [paired mark scheme](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-84621F-W-MS-JUN18.PDF): actual04.1–04.5 text read and QP13 inverted cylinder and QP14 graph visually inspected. Scheme gives3.6 cm³; hydrogen-only direct proportion, both positive correlation; aqueous KBr gives hydrogen/bromine, not bromide. These actual demands caused separate inverted-scale and graph activities. App data/questions are individually original, not copied exam graphs.
+- [OpenStax actual Electrolysis module](https://raw.githubusercontent.com/openstax/osbooks-chemistry-bundle/main/modules/m68827/index.cnxml), freshly fetched and actual aqueous/water/plating paragraphs read. Real aqueous chloride can give competing oxygen/chlorine and mixtures; standard potentials and kinetics are not imported into Foundation checks. Standard GCSE halide prediction retained for the stated cases, with concentration/electrode/condition limits. Silver-anode plating provides the general active-anode transfer contrast, not a falsely claimed copper-specific source.
+- Chemguide solutions URL returned403; it was not read. No TLS bypass.2019F search found no additional appropriate aqueous paired question; no invented evidence.
+
+Maths comparison: actual direct-proportion.ts and proportion-graphs.ts read; both live lessons opened at desktop1440×1000 and mobile390×844, four full screenshots individually inspected. Unitary scaling transfers to supplied straight-line gas readings; positive correlation is not automatically direct proportion. Borrow task-first predictions, visible native operations, retained incorrect states, undo/reset, hint→repair and separate cold forms. Chemistry adds solvent/electrode constraints, neutral product names and practical evidence. Maths checkout remains unchanged.
+
+Before questions:
+
+- Interesting/interactive? Six different demands: cathode product/reason, paired product prediction, electrode/solution inventory, movable gas graph reading with two classifications, evidence/controlled-variable decision, separate inverted gas-scale marker. Not a navigation widget.
+- Needs a real asset? Yes: selected copper transfer directly supports why solution copper inventory remains unchanged while electrode amounts change. Twelve identified atomic constituents per state, Cu7S1O4, solution Cu2+ and intact tetrahedral SO4²−, anode3→2, cathode3→4. Initial solution copper deposits; anode copper becomes solution ion. Water/hydration/full metal omitted explicitly. Active copper case only; hidden when records change.
+- Why generic model insufficient? Molten salt has no water competition. An inert anode cannot replenish copper. A rising curve differs from a line through origin. An inverted gas scale differs from an upright volume scale. Bubbles differ from identifying tests.
+- Each task considered?51 tasks authored separately:2 prerequisite,6 targeted refreshers,6 guided,21 practice,10 cold checks,6 delayed retrieval. Eleven numeric answers independently recomputed; six explanations self-reviewed. Cold/delayed inverted-scale values differ from guided; paired salt cases and electrode explanations change across forms.
+
+Scientific draft review:
+
+- Copper below H deposits; sodium/magnesium above H give H2 in the stated aqueous model. Molten sodium case gives Na. Sulfate/nitrate are not elemental sulfur/nitrogen products. Halogen names not ion names.
+- Anode/cathode polarity explicit. Copper electrode transfer versus inert oxygen separated. Exact pure-copper mass equality requires supplied matched transfer/no losses; impure anode sludge not all transferred mass.
+- Water ratio2:1 only for supplied complete water electrolysis, same temperature/pressure, no collection loss. Not imposed on chloride graph.
+- Original curved chlorine data does not prove a unique loss cause. Nonzero volume intercept cannot give direct proportion to elapsed time.
+- Inverted scale explicitly0.2 cm³ steps, printed values increase downwards, gas above boundary/water below. Gold wrong reading retained.
+- First standalone asset view showed an oxygen partly hidden behind sulfur at a quarter turn. Starting orientation corrected; cardinal projections and tetrahedral dot products verified without weakening atom separation. No claim all angles show every atom.
+
+Draft unit11 checks initially passed before adding inverted scale. Final isolated checks, app integration, required types/lint/unit/build, browser checks, desktop/mobile capture/inspection, binary export and explicit screenshot delivery remain pending. Do not research lesson53 before sending this lesson's inspected samples.
+
+## After-review and explicit sample delivery
+
+Lesson51's full850 regression passed in23.5minutes before52integration. This single new Foundation route adds the missing shared aqueous/product/practical coverage without rewriting the existing Higher route or its six original IDs. All532 original IDs remain.
+
+Types, lint, formatting and production build pass. Final356 unit checks pass in6.0seconds; all24 final desktop/mobile lesson checks pass in1.1minutes. They exercise all51 original tasks, six model families, correct/wrong predictions, single-step graph and inverted readings, record reset, undo/reload, targeted recovery with the original wrong draft, both reserved forms with deferred feedback, genuine seven-day review, written self-review, initial44px control wholly within664px, SVG fonts at least12px, automated accessibility/reflow, WebGL fallback and actual binary export. Broader route/accessibility/native-family checks are running; full874 regression remains pending.
+
+Review found two app-layout issues beyond the standalone quarter-turn occlusion: first mobile control extended to682.4px; opening title/prompt were shortened without removing phase/electrode/reactivity facts, and the original664px requirement now passes. Gas-table headings were cramped; scoped cell padding, borders and full width corrected desktop/mobile readability. Reading feedback now states4.4 cm³ rather than an internal step count. Independent and delayed scale questions include static diagrams, not just arithmetic prompts. The full fixed question remains separate when an exploration record changes.
+
+Actual downloaded GLB independently parsed after capture: both states have12 identical atomic IDs and Cu7S1O4; pure metal anode3→2 and cathode3→4; dissolved copper ID switches from Cu-solution-1 to Cu-anode-3. Actual exported sulfate transforms preserve four0.48-unit S–O distances and all normalized pair dot products−1/3; real depth span0.554256 confirms nonplanar positions. JSON review retained with samples. Charge0 per represented state, eight sulfate connections total; no salt molecules or waterless claim for the actual electrolyte.
+
+Before/after questions answered: meaningful interactions? Six chemical/measurement/evidence demands rather than navigation. Asset? True atomic transfer supports solution replenishment, with omitted water and partial metal stated. Science mistakes? Corrected projection and scale/UI issues; eleven numeric answers independently recomputed, standard halide rule distinguished from real concentration/electrode dependence. Board deviations? AQA inert practical and Foundation aqueous covered; Pearson active copper/purification included explicitly; Higher half equations remain separate. Student usefulness? Paired predictions, contrasting phase/electrodes, graph classifications, inverted reading, diagnostic evidence and controlled comparisons transfer across changed cases. Maths standard? Actual source and four live views compared; whole-course verdict still below Maths and not exam certified.
+
+Corrected desktop/mobile opening, copper transfer, graph, inverted scale, practical evidence, independent products/scale and fallback screenshots were inspected. Desktop copper-transfer lesson, mobile opening/graph, independent scale screenshot, enlarged-after 3D screenshot and actual GLB were explicitly SENT before lesson53 research. Course now91 routes:52 individually reviewed/delivered,39 preliminary. Continue individually.
+
+Lesson52 broader result: all6 route/search/accessibility/native-family checks passed in53.1seconds. Final full874 desktop/mobile regression is running; its result is not yet claimed.
+
+Lesson52 full regression completed: all874 desktop/mobile browser checks passed in24.9minutes. Final356 unit/24 lesson/6 broader checks, types/lint/format/build pass. Individually inspected samples already explicitly sent. Whole-course parity and exam readiness remain unfinished.

@@ -1,0 +1,244 @@
+.pollution-workbench {
+  min-width: 0;
+}
+.pollution-workbench h3 {
+  font-size: 1rem;
+  margin: 0 0 12px;
+}
+.pollution-context {
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+.pollution-fields {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.pollution-fields label {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+  line-height: 1.5;
+  min-width: 0;
+}
+.pollution-fields input,
+.pollution-fields select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid #bcc8dd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: white;
+  color: #26334c;
+  font: inherit;
+  font-weight: 400;
+}
+.pollution-fields select {
+  font-size: 0.9375rem;
+}
+.pollution-original {
+  padding: 14px;
+  border: 1px solid #dfe4ee;
+  border-radius: 10px;
+  background: #f7f9ff;
+  min-width: 0;
+  margin: 16px 0;
+}
+.pollution-original h3 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+.pollution-original p {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.pollution-original dl > div {
+  display: grid;
+  gap: 5px;
+  margin: 10px 0;
+}
+.pollution-original dt {
+  font-weight: 700;
+}
+.pollution-original dd {
+  margin: 0;
+  line-height: 1.5;
+}
+.pollution-table {
+  min-width: 0;
+  overflow: auto;
+}
+.pollution-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9375rem;
+  table-layout: fixed;
+}
+.pollution-table caption {
+  text-align: left;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.pollution-table th,
+.pollution-table td {
+  padding: 10px 5px;
+  text-align: left;
+  line-height: 1.5;
+  border-bottom: 1px solid #dfe4ee;
+  overflow-wrap: anywhere;
+}
+.pollution-table thead {
+  background: #edf1f8;
+}
+.pollution-fuel-table table {
+  min-width: 400px;
+}
+.pollution-pan-note {
+  font-size: 0.875rem;
+}
+.pollution-original:has(table caption)
+  .pollution-table
+  table:has(th:nth-child(4))
+  th:first-child {
+  width: 15%;
+}
+.pollution-equation {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  padding: 12px 0;
+}
+.pollution-equation-side {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.pollution-species {
+  white-space: nowrap;
+}
+.pollution-coefficient {
+  display: inline-block;
+  min-width: 20px;
+  font-weight: 700;
+  color: #9c4515;
+}
+.pollution-tally {
+  margin: 16px 0;
+}
+.pollution-proposal {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+}
+.pollution-proposal li {
+  display: grid;
+  gap: 5px;
+  padding: 12px;
+  border: 1px solid #dfe4ee;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+.pollution-proposal span {
+  color: #755337;
+}
+.pollution-chain {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  margin: 20px 0;
+}
+.pollution-chain li {
+  border: 1px solid #dfe4ee;
+  border-left: 4px solid #b65c22;
+  border-radius: 8px;
+  padding: 12px;
+  line-height: 1.6;
+}
+.pollution-chain li + li:before {
+  content: "↓ ";
+  font-weight: 700;
+}
+.pollution-unknown {
+  padding: 12px;
+  background: #f7f9ff;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+.pollution-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 16px 0;
+}
+.pollution-actions button {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #bdc8df;
+  border-radius: 8px;
+  background: white;
+  color: #26334c;
+  font: inherit;
+  font-weight: 700;
+}
+.pollution-actions .button {
+  background: #3344c6;
+  color: white;
+  border-color: #3344c6;
+}
+.pollution-actions button:disabled {
+  opacity: 0.55;
+}
+@media (max-width: 480px) {
+  .sample-lesson[data-lesson="air-pollutants"] .multipart-answer {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  .pollution-original {
+    padding: 10px;
+  }
+  .pollution-table table {
+    font-size: 0.875rem;
+  }
+}
+.pollution-product-groups {
+  display: grid;
+  gap: 12px;
+  margin: 16px 0;
+}
+.pollution-product-group {
+  padding: 12px;
+  border: 1px solid #ccd4e4;
+  border-radius: 8px;
+  background: #f7f9ff;
+}
+.pollution-product-group h4 {
+  margin: 0 0 10px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.pollution-product-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+}
+.pollution-product-group li {
+  padding: 6px 9px;
+  background: white;
+  border: 1px solid #ccd4e4;
+  border-radius: 6px;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}

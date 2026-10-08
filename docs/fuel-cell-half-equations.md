@@ -1,0 +1,71 @@
+# Lesson63: Fuel-cell half equations — before authoring
+
+Lesson62 screenshots and matching real Cu/Zn GLB were explicitly SENT before this research. Lesson62 full1076-case browser regression owns `.next`; no application source/build changes are allowed while it runs. This is a private individual draft, not another released lesson.
+
+## Source reading and scope decisions
+
+Actual AQA8462 printed54:4.5.2.2 explicitly makes fuel-cell electrode half equations Higher only, separate Chemistry. The new lesson belongs after the individually reviewed Foundation cells lesson, with the earlier Higher half-equation lesson as prerequisite. The existing course has no dedicated fuel-cell half-equation route; add one only when this individually reviewed lesson is ready to integrate.
+
+Fresh actual AQA specimen Higher Paper1 question06.5, QP20 and paired MS14, text and images inspected. The mark scheme explicitly gives acidic equations H₂→2H⁺+2e⁻ and O₂+4H⁺+4e⁻→2H₂O. Therefore default to a supplied acidic-cell account. Earlier speculation about making alkaline OH⁻ equations the default was not evidence and is rejected. Do not mix acidic/alkaline equations or make advanced electrolyte variants compulsory without relevant source support.
+
+Actual OpenStax Chemistry2e m68825 Fuel Cells section, figure and MathML electrode equations read. Its acidic account gives doubled hydrogen oxidation2H₂→4H⁺+4e⁻, oxygen reduction O₂+4H⁺+4e⁻→2H₂O, and overall2H₂+O₂→2H₂O. The diagram shows electrons in the external circuit and H⁺ in the electrolyte, fuel at the anode and oxygen at the cathode. Its illustrative1.2V/efficiency/historical market statements are not mandatory GCSE facts and are not adopted. State electrode signs for the supplied discharging fuel cell; do not import the positive-anode sign from electrolysis. Oxidation/reduction identify electron loss/gain regardless of electrode sign.
+
+Fresh AQA2018H Q03.4/.5 and actual paired MS11/12: overall equation and comparative evaluation, not fuel-cell half equations. Fresh2019H Q06.4 and paired MS18: oxidation forms water and water can leave as vapour; not a half-equation prompt. These papers cannot substitute for the directly relevant specimen06.5. Fresh2021/2022/2023 papers were searched and contain other electrolysis half-equation demands, not the required fuel-cell pair. Guessed2020/2024 endpoints and old teacher-resource URLs failed; no unreceived pages or guessed content are treated as read. The specimen pair supplies the actual assessed half-equation demand.
+
+The specimen's adjacent06.2/.3 signed simple-cell table is an additional transfer demand beyond lesson62's measured-magnitude cases. Track this for an individual follow-up review before concluding complete cells coverage; do not silently claim that the magnitude cases alone cover every signed-voltage question.
+
+Limited actual Pearson5.25C–5.27C comparison reviewed in lesson62 does not require these electrode half equations. This is the working AQA Higher scope, not a claim of compulsory Pearson/OCR equivalence. Full board mapping remains unfinished.
+
+## Actual Maths comparison
+
+Read forming-equations and equations-and-identities source. Captured and inspected both live lessons at1440×1000 and390×844, all four images. They require a proposed marker/value against a precise equality or context. Chemistry needs two independently checked conserved quantities—each element and total charge—plus correct chemical species and direction. A balanced equation in the wrong electrode direction is still wrong for the stated fuel cell.
+
+## Questions before authoring
+
+Is it interesting? A student repairs an atom-balanced but charge-wrong half equation, routes electrons outside the electrolyte, matches the two electrode reactions and removes only genuine shared terms to recover the overall water equation.
+
+Is it interactive? Build the fixed-formula coefficients and electron side; inspect separate atom/charge ledgers; choose scaling and cancellation counts independently; propose a carrier/path/direction; diagnose chemically meaningful wrong statements. Keep wrong values, routes and cancellation counts visible rather than correcting them automatically.
+
+What does this specific lesson need? H₂ oxidation and O₂ reduction under declared acidic conditions; electrons carry−1 charge but no H/O atoms; equal electron counts before combining; proton/electron cancellation on opposite sides; no electrons or H⁺ remaining in the overall equation; distinguish fuel-cell/electrolysis electrode signs, electron/conventional-current direction and ionic/electronic conduction. Typed independent half equations must actually test atom and charge balance, charged notation and required direction.
+
+Would3D help? A real macroscopic fuel-cell cutaway can distinguish two electrode layers, proton-conducting electrolyte, feed/product paths and external wire/load. Use schematic arrows for a proposed route rather than fictitious moving energy particles or invented voltage. Preserve labels, keyboard/touch rotation, an accessible2D representation and actual GLB export. Geometry does not derive the half-equation coefficients.
+
+Is an existing generic family enough? Reuse the existing independently tested species/charge ledger and strict half-equation parser where appropriate; author a dedicated workbench for the two-electrode combination and carrier routing. Adding another generic cation question would not teach these fuel-cell relationships.
+
+## Review after authoring
+
+Independently verify all H/O/charge inventories, coefficient scales, signs, directions and cancellation boundaries; reject balanced wrong species/direction. Check the actual parser behaviour for notation/multiples/optional states, retaining its declared limits. Reserved tasks have no learning model or early feedback; repeated and model-assisted demands share direct global exposure. Written explanations remain self-reviewed. Check native desktop/mobile controls, retained wrong work, reset/reload/recovery, actual seven-day retrieval, WebGL fallback, exported geometry and accessibility. Inspect and explicitly SEND this lesson's screenshots before any following lesson research.
+
+Whole-course Maths parity, complete exam coverage and student exam readiness remain unestablished.
+
+## Individually authored implementation and review
+
+58 original tasks: two warm-ups, ten targeted refreshers (including a labelled optional conventional-current extension), six guided tasks, 24 practice tasks, two five-question understanding forms and two three-question delayed-review forms. Nine typed equations check fixed species, element counts, signed charge, required direction and explicitly requested smallest positive whole-number coefficients. Seven written explanations remain self-reviewed; no examiner marks are inferred. Twenty-two numerical answers include signed inventories, complete-equation scaling and common electron counts.
+
+Five dedicated modes contain 23 supplied cases: four construction, four combination, three transport, six diagnosis and six evidence cases. Construction keeps atom inventory, predicted charge, electron side and contextual electrode process separate. Combination retains the requested combined scale and exposes over-cancellation as negative arithmetic remainders rather than inventing negative particles. Diagnosis distinguishes atom balance from charge balance and a balanced wrong reaction direction. The supplied acidic proton-conducting account is explicit throughout. The conventional-current case is optional extension content and has its own recovery task.
+
+AQA specimen Higher Paper1 Q06.5 and its actual paired mark scheme were read and rendered: H₂ → 2H⁺ + 2e⁻ and O₂ + 4H⁺ + 4e⁻ → 2H₂O. The OpenStax acidic fuel-cell section and actual apparatus figure supply the external electron route and internal proton route. Typed fuel-cell equations accept liquid or vapour water as appropriate to output conditions; state labels are optional. The 2019 actual Higher train question's steam wording and OpenStax gas-water equation support this distinction. The separate signed-voltage inference in specimen Q06.2–06.3 remains an individually tracked coverage gap, to be addressed after this sample is explicitly sent.
+
+Actual Maths forming-equations and equations-and-identities source and desktop/mobile live pages were inspected. The chemistry equivalent must retain atom and charge inventories as well as equality and declared process direction: a reversed balanced equation is not correct for the stated oxidation electrode. Visual review shortened the initially tall coefficient form, put the electron term inside the displayed equation on its selected side, and gave undo/reset native 44px button styling.
+
+The true macroscopic 3D cutaway has separate graphite electrode and proton-conducting electrolyte layers, hydrogen/oxygen feed chambers, water outlet, two external wires and a load. Its arrow preserves the student's proposed carrier/path/direction, including wrong choices. It does not derive voltage or coefficients, and is not an atom-scale animation. Thirty independently checked route geometries preserve separation and arrow orientation; 36,780 finite vertex positions were examined. Browser verification parses actual downloaded binary GLB positions, rather than checking metadata alone.
+
+Global exposure uses direct existing IDs within and across this and earlier half-equation/cells lessons. In particular, the opening hydrogen construction model exposes an identical cold hydrogen equation; it must not become fresh evidence merely by switching stages. Whole-set feedback remains deferred and delayed review uses the actual seven-day interval. All 24 practice recovery links resolve to targeted teaching.
+
+Initial ten dedicated unit cases passed; full 526-unit run found two frozen 92-route assertions after the new 93rd route was added. Updating the count and preserving the original 532 IDs exposed one test that incorrectly required every global alias to belong to this lesson; it now checks actual whole-course target IDs and verifies direct cross-lesson exposure. Eleven final dedicated unit cases passed. Initial native browser run had18 passes/four test failures: both viewport variants of a wrong freshness expectation and an alert selector matching Next.js's route announcer. These were corrected to assert conservative exposure and target the model's alert. Final visual refinements, full unit/lint/build and desktop/mobile reruns are pending. No lesson63 screenshots have been sent yet, and no lesson64 research has begun.
+
+## Public materials actually used
+
+- [AQA 8462 specification](https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF): 4.5.2.2 and its Higher-only electrode-equation requirement.
+- [AQA specimen Higher Paper1](https://filestore.aqa.org.uk/resources/chemistry/AQA-84621H-SQP.PDF), actual question06.5, and [paired mark scheme](https://filestore.aqa.org.uk/resources/chemistry/AQA-84621H-SMS.PDF): the acidic hydrogen/oxygen pair. Relevant printed pages were visually inspected.
+- [OpenStax actual Fuel Cells section](https://raw.githubusercontent.com/openstax/osbooks-chemistry-bundle/main/modules/m68825/index.cnxml): acidic equations, electron/proton paths and the actual apparatus figure, not guessed catalogue metadata.
+
+Final coefficient buttons provide direct manipulation with fixed formulas and live atom inventories. Wrong electron counts remain wrong after pressing Check model. Typed-answer help now uses the lesson's H⁺/electron notation rather than unrelated copper examples. Twelve dedicated unit cases independently reconstruct all22 numerical answers, fixed-species parsing, global exposure, saved histories, route directions and geometry; all528 whole-course unit checks passed25.3seconds. Final types/lint/production build pass. All24 final lesson desktop/mobile browser cases passed56.9seconds before the notation-only refinement. Final affected-case rerun and broader checks remain pending. No sample has yet been sent.
+
+The notation/canonical-crop refinement passed all8 affected desktop/mobile cases25.9seconds. Independent binary inspection of each canonical GLB verified14 actual meshes,2460 finite position/normal vectors and real transformed separation between electrode/electrolyte layers. Revised desktop construction, desktop combination/diagnosis, mobile construction/route/independent question and the clean mobile3D close-up were visually inspected. The clean crop hides only the sticky header during capture; it does not change the lesson.
+
+The first broader run passed five of six cases and found the new opening input's bottom at697px on the actual664px mobile viewport. The previous lesson-only assertion had checked its top, which was insufficient. Shorter opening headings/prompt retain acidic conditions and the smallest-positive-integer requirement; both lesson and broader checks now require the complete44px control to fit. Final reruns are pending. This is a real viewport repair, not a relaxed check.
+
+The shorter opening passed all24 lesson and six broader desktop/mobile cases together:30/30 in2.0minutes, with the complete first input inside the664px mobile viewport. The last scientific review then scoped liquid/vapour water-state acceptance to fuelOxygen/fuelOverall records only; old aqueous electrolysis retains its phase rules. A dedicated unit case checks both accepted output states and rejected ice/old-electrolysis vapour. Final types/lint/build and all529 unit checks passed22.6seconds. Six final affected/new browser checks are running. Whole-course parity and exam readiness remain unfinished.
+
+Lesson63 final six affected/new browser cases passed19.3seconds after the fuel-cell-only liquid/vapour state correction. Final529unit checks passed22.6seconds; final types/lint/build pass. Reviewed desktop combination, mobile coefficient construction, independent typed question and clean enlarged3D plus matching actual14-mesh GLB were explicitly SENT before any lesson64 research.93routes/63reviewed and delivered/30preliminary. Full1102-case browser regression running with source unchanged; no application source/build mutations while it owns `.next`. Whole-course parity and exam readiness remain unfinished.

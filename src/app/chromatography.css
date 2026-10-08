@@ -1,0 +1,410 @@
+.chroma-given {
+  min-width: 0;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #dce1ea;
+  border-radius: 12px;
+  background: #fafbfe;
+  color: #253047;
+}
+.chroma-given figcaption {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.chroma-given p {
+  line-height: 1.55;
+  margin: 0.6rem 0;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.chroma-given-scroll {
+  max-width: 100%;
+  overflow: auto;
+  border: 1px solid #dce1ea;
+  border-radius: 8px;
+  background: #f5f7fc;
+  overscroll-behavior-x: contain;
+}
+.chroma-given-scroll:focus-visible {
+  outline: 3px solid #3d49c8;
+  outline-offset: 3px;
+}
+.chroma-given-scroll svg {
+  display: block;
+  max-width: none;
+  flex-shrink: 0;
+}
+.chroma-given-key {
+  display: grid;
+  gap: 0.6rem;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.chroma-given-key div {
+  min-width: 0;
+}
+.chroma-given-key dt {
+  font-weight: 600;
+}
+.chroma-given-key dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+@media (min-width: 700px) {
+  .chroma-given-key {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.chroma-drawing {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid #dce1ea;
+  border-radius: 12px;
+  color: #253047;
+}
+.chroma-drawing p {
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.chroma-drawing-source {
+  padding: 0.8rem;
+  background: #f5f7fc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.chroma-drawing-fields {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 1rem 0;
+}
+.chroma-drawing-fields label {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.chroma-drawing-fields input,
+.chroma-drawing-fields select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0.65rem;
+  font: inherit;
+  background: #fff;
+  color: #253047;
+  border: 1px solid #c3cbd8;
+  border-radius: 7px;
+  min-height: 44px;
+}
+.chroma-drawing-fields :disabled {
+  color: #253047;
+  background: #f2f4f9;
+  opacity: 1;
+}
+.chroma-proposal-heading {
+  line-height: 1.55;
+}
+.chroma-off-scale {
+  color: #8b3525;
+  background: #fff1e8;
+  border-radius: 7px;
+  padding: 0.65rem;
+}
+@media (min-width: 850px) {
+  .chroma-drawing-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.chroma-workbench {
+  min-width: 0;
+  color: #253047;
+}
+.chroma-workbench p,
+.chroma-workbench label,
+.chroma-workbench summary {
+  font-size: 14px;
+  line-height: 1.55;
+}
+.chroma-workbench h3 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin: 0 0 0.8rem;
+}
+.chroma-compact-source {
+  background: #f5f7fc;
+  border-radius: 8px;
+  padding: 0.7rem;
+  min-width: 0;
+}
+.chroma-compact-source p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.chroma-canvas {
+  width: 100%;
+  height: 340px;
+  min-width: 0;
+  border: 1px solid #d4d8e2;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f5f0e8;
+}
+.chroma-canvas[hidden] {
+  display: none;
+}
+.chroma-canvas:focus-visible {
+  outline: 3px solid #3345c9;
+  outline-offset: 3px;
+}
+.chroma-canvas canvas {
+  display: block;
+  max-width: 100%;
+}
+.chroma-scene {
+  min-width: 0;
+  margin: 0.8rem 0;
+}
+.chroma-scene-ledger {
+  background: #f5f7fc;
+  padding: 0.7rem;
+  border-radius: 8px;
+}
+.chroma-scene-ledger p {
+  margin: 0.25rem 0;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .chroma-canvas {
+    height: 300px;
+  }
+}
+.chroma-comparison-picker {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.8rem 0;
+  min-width: 0;
+}
+.chroma-comparison-picker select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 0.65rem;
+  border: 1px solid #c3cbd8;
+  border-radius: 7px;
+  font: inherit;
+  min-height: 44px;
+  color: inherit;
+  background: #fff;
+}
+.chroma-original-source {
+  background: #f5f7fc;
+  border-radius: 9px;
+  padding: 1rem;
+  min-width: 0;
+}
+.chroma-original-source p {
+  overflow-wrap: anywhere;
+}
+.chroma-phase-proposal,
+.chroma-relative-comparison {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.chroma-phase-proposal article,
+.chroma-relative-comparison article {
+  background: #fff;
+  border: 1px solid #dce1ea;
+  border-radius: 8px;
+  padding: 0.8rem;
+  min-width: 0;
+}
+.chroma-workbench h4 {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 0.5rem;
+}
+.chroma-source-ledger {
+  display: grid;
+  gap: 0.65rem;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.chroma-source-ledger dt {
+  font-weight: 600;
+}
+.chroma-source-ledger dd {
+  margin: 0;
+}
+.chroma-relative-bar {
+  background: #e5e9f3;
+  border: 1px solid #c3cbd8;
+  height: 22px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.chroma-relative-bar span {
+  display: block;
+  height: 100%;
+  background: #7850b9;
+}
+.chroma-model-actions,
+.chroma-ruler-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.8rem 0;
+}
+.chroma-workbench button {
+  min-height: 44px;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid #c3cbd8;
+  border-radius: 7px;
+  background: #fff;
+  color: #253047;
+  font: inherit;
+  font-size: 14px;
+}
+.chroma-model-actions button:first-child {
+  background: #3345c9;
+  color: white;
+  border-color: #3345c9;
+}
+.chroma-workbench button:disabled {
+  opacity: 0.55;
+}
+.chroma-model-feedback {
+  padding: 0.85rem;
+  background: #eaf3ef;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+.chroma-comparison-notice {
+  padding: 0.7rem;
+  background: #fff5d5;
+  border-radius: 7px;
+}
+.chroma-retained-field {
+  min-width: 0;
+  padding: 0.65rem;
+  background: #f5f7fc;
+  border-radius: 7px;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.chroma-retained-field p {
+  margin: 0.3rem 0 0;
+}
+.chroma-drawing-review {
+  min-width: 0;
+}
+.results-list:has(.chroma-drawing) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.result-row:has(.chroma-drawing) {
+  min-width: 0;
+}
+.chroma-ruler-drag {
+  cursor: grab;
+  touch-action: none;
+}
+.chroma-ruler-drag:active {
+  cursor: grabbing;
+}
+.chroma-ruler-closeups {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  margin: 0.8rem 0;
+}
+.chroma-ruler-closeup {
+  min-width: 0;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #dce1ea;
+  border-radius: 8px;
+  padding: 0.6rem;
+  overflow: auto;
+}
+.chroma-ruler-closeup figcaption {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+.chroma-ruler-closeup svg {
+  display: block;
+  max-width: none;
+}
+@media (min-width: 850px) {
+  .chroma-phase-proposal,
+  .chroma-relative-comparison {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.chroma-selected-proposal {
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.chroma-pan-hint {
+  display: none;
+}
+@media (max-width: 600px) {
+  .chroma-pan-hint {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+.sample-lesson[data-lesson="chromatography"] .sample-task-topline {
+  align-items: center;
+}
+.sample-lesson[data-lesson="chromatography"] .question-navigation {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.sample-lesson[data-lesson="chromatography"] .question-navigation button {
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="chromatography"] .sample-title-row h1 {
+    font-size: 24px;
+    overflow-wrap: anywhere;
+    min-width: 0;
+  }
+  .sample-lesson[data-lesson="chromatography"] .sample-task-prompt {
+    margin-bottom: 0.7rem;
+  }
+  .sample-lesson[data-lesson="chromatography"]
+    .chroma-workbench
+    > .chroma-drawing-fields {
+    margin-top: 0;
+  }
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="chromatography"]
+    .sample-task-answer
+    .question-panel:has(.chroma-drawing) {
+    padding: 0;
+  }
+  .sample-lesson[data-lesson="chromatography"]
+    .sample-task-answer
+    .feedback:has(.chroma-drawing-review) {
+    padding: 8px;
+  }
+  .chroma-drawing {
+    padding: 8px;
+  }
+  .chroma-drawing-source {
+    padding: 8px;
+  }
+}

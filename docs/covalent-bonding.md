@@ -1,0 +1,50 @@
+# Covalent bonding: individual review
+
+Sixteenth lesson, 2026-10-03. Individually researched and authored after the naming/formula screenshots were inspected and sent. Whole-course parity and exam readiness remain unfinished.
+
+## Before building
+
+**Interesting and interactive?** Students place electrons from each bonded atom, preserve the whole-molecule inventory and compare shared regions with electrons around each atom. Conserving the total alone does not make a bond correct: a chlorine pair made from two electrons from one atom remains visibly wrong.
+
+**Assets needed?** Actual outer-electron dot-and-cross diagrams are essential to the assessed demand. Independent construction retains incorrect origins and missing lone pairs. A separate rotatable/exportable 3D methane model shows genuine tetrahedral depth; water is bent, ammonia pyramidal and carbon dioxide linear. Single/double/triple bond projections use one/two/three lines. Shapes, colours and radii are illustrative, not measured angles or electron paths.
+
+**Distinct demands or generic template?** Reuse the Maths lesson navigation and task/answer shell, but replace transfer controls with conserved sharing. Nine individually selected molecule cases need different bond orders and unshared counts. Counting the same shared electrons around both bonded atoms is different from counting the molecule's inventory once. Neither the earlier ion sandbox nor an attractive finished molecule teaches that distinction.
+
+## Sources actually read
+
+- [AQA Chemistry specification](https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF), 4.2.1.4, and corresponding Trilogy 5.2.1.4: shared pairs, strong covalent bonds, named dot-and-cross molecules, line/model representations and their limitations. Covalent substances include small molecules, polymers and giant structures. Detailed polymer repeat units and giant networks remain later lessons.
+- [Pearson specification](https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-chemistry-spec.pdf), 1.28–1.31: pair sharing and specified diagrams, including carbon dioxide. CO₂ is an explicitly chosen additional construction, not a claim that the two boards have identical named lists.
+- Paired [2023 Higher paper](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-84621H-QP-JUN23.PDF) and [scheme](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-84621H-MS-JUN23.PDF), 04.4: one shared HCl pair, six non-bonding chlorine electrons, no extra hydrogen electrons; equivalent electron marker styles accepted.
+- Paired [2019 Foundation paper](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-84621F-QP-JUN19.PDF) and [scheme](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-84621F-W-MS-JUN19.PDF), 02.7: complete the water overlap while retaining the provided bond and four unshared oxygen electrons. Inner electrons are omitted in this lesson's explicitly outer-electron representation.
+- Paired 2022 Higher 07.5 Si₂H₆ partial diagram was read for unfamiliar-frame transfer. That specific unfamiliar construction is not yet taught or counted as covered here.
+- Actual publisher OpenStax modules [covalent bonding m68738](https://github.com/openstax/osbooks-chemistry-bundle/blob/db0a8e6027100ce082e67fc8879faab86f9a58a7/modules/m68738/index.cnxml), [Lewis structures m68739](https://github.com/openstax/osbooks-chemistry-bundle/blob/db0a8e6027100ce082e67fc8879faab86f9a58a7/modules/m68739/index.cnxml) and molecular structure m68742: shared electrons attracted to both nuclei, pair/bond orders, lone pairs and actual methane/ammonia/water geometry. HCl sharing is unequal; the lesson does not equate sharing with identical attraction. Advanced electronegativity calculations, VSEPR prediction and octet exceptions are outside this bounded GCSE introduction. Hydrogen's two-electron case and the selected atoms' eight-electron cases are stated without a universal octet claim.
+
+## Individual task audit
+
+49 original tasks: three warm-up, six refresher, nine guided, fifteen practice, two five-item checks and two three-item delayed forms.
+
+| Stage       | Chosen demands                                                                                                                                                                                                                                                       |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Warm-up     | Outer-electron prerequisites, hydrogen's filled shell and sharing versus ion transfer.                                                                                                                                                                               |
+| Refresher   | Shared-pair definition, both-nucleus attraction, whole inventory versus per-atom count, lone pairs, multiple bonds and representation limits.                                                                                                                        |
+| Guided      | H₂ duplet; Cl₂ six unshared each; HCl chlorine six/hydrogen zero; O₂ double; N₂ triple and one lone pair each; water oxygen four; ammonia nitrogen two; methane carbon zero; CO₂ two double bonds.                                                                   |
+| Practice    | Nine independent complete outer-electron constructions; conserved but wrong same-origin chlorine; missing oxygen lone pair; line-to-electron interpretation; molecular formula inferred from a model; small versus giant classification; written nitrogen reasoning. |
+| Check A     | Independent HCl; double-bond electrons; hydrogen inventory; unshared HCl placement; strong within-molecule covalent bond explanation.                                                                                                                                |
+| Check B     | Independent water; triple-bond pairs; water inventory; ammonia lone electrons; methane formula from a model.                                                                                                                                                         |
+| Delayed A/B | Independent oxygen/chlorine constructions, shared counting, water lone pairs, pair definition and representation limitations.                                                                                                                                        |
+
+Independent references verify total outer electrons: H₂ 2, Cl₂ 14, HCl 8, O₂ 12, N₂ 10, H₂O 8, NH₃ 8, CH₄ 8 and CO₂ 16. Shared pairs contain one electron from each atom in these selected examples. Nitrogen has six electrons in its shared region and two unshared on each atom. Carbon dioxide has four shared electrons in each bond and four unshared electrons on each oxygen.
+
+## After building
+
+**Mistakes corrected?** The first mobile check found a control below the original viewport. Shorter visible electron labels retain full accessible names and pass the unchanged assertion. Independent drawing inputs are grouped by bond, with origins side by side. The formula field's capitalisation attributes were found on the wrong input and moved to the actual independent answer field, with browser assertions. Wrong diagrams are never silently corrected. The unavailable-WebGL projection shows separate lines for multiple bonds.
+
+**Exam-board deviations?** The named cases cover the reviewed AQA drawing list and Pearson CO₂ example. This is not complete coverage of all polymer/network representations, unfamiliar-frame transfer, OCR requirements or the whole bonding specification. Actual exam marker flexibility informed the representation; the app's count fields are structured diagram construction rather than a freehand examination drawing interface.
+
+**Useful to students?** Separate per-atom and whole-molecule ledgers expose double-counting. Independent fields require students to supply every shared and unshared count. Proposed incorrect diagrams remain available for diagnosis; written reasoning remains self-reviewed and never automatically marked correct. These are reviewed design judgments, not evidence from pupil trials.
+
+**Maths UI comparison and improvements?** The actual neighbouring Maths fraction/ratio workbenches and rendered desktop/mobile samples informed explicit conserved quantities, native operations, proposed answers, undo and specific feedback. Chemistry retains the white-card task layout, navigation, local fonts and blue actions. Its content-specific sharing model improves on a generic bonding slider. Long methane constructions still need scrolling on phones; grouping reduces repetition but does not establish overall UI parity.
+
+## Validation
+
+Types, lint, production build and 88 unit checks passed. The final compact version passed all 36 targeted desktop/mobile checks: twelve covalent, sixteen preserved generic-model regressions and eight formula checks. Coverage includes native keyboard/touch operations, conservation, wrong-origin retention, reload/undo/reset, all fifteen practice tasks, deferred reserved assessments, seven-day review, WebGL fallback, accessibility and reflow. Binary GLB inspection verifies C₁H₄, four bonds and genuine non-planar geometry. Desktop methane 3D and mobile HCl/independent-water screenshots were inspected. The full run passed 226 checks and exposed two all-route helper failures: the helper expected one input instead of the new multipart diagram. Filling each labelled field fixed the helper; both all-route checks then passed, completing the 228-case regression. No assertion was removed. Inspected samples were sent before small-molecule research; passing software alone cannot certify exam preparation.

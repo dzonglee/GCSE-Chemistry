@@ -1,0 +1,168 @@
+.materials-workbench {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  background: #fff;
+  min-width: 0;
+}
+.materials-workbench h3 {
+  margin: 0 0 12px;
+}
+.materials-given,
+.materials-context {
+  font-size: 14px;
+  line-height: 1.55;
+}
+.materials-given p,
+.materials-context > p {
+  margin: 0 0 12px;
+}
+.materials-given dl,
+.materials-proposal dl {
+  margin: 10px 0;
+  display: grid;
+  gap: 8px;
+}
+.materials-given dl > div,
+.materials-proposal dl > div {
+  display: grid;
+  grid-template-columns: minmax(85px, 1fr) minmax(0, 2fr);
+  gap: 12px;
+}
+.materials-given dt,
+.materials-proposal dt {
+  font-weight: 700;
+}
+.materials-given dd,
+.materials-proposal dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.materials-fields {
+  display: grid;
+  gap: 12px;
+  margin: 14px 0;
+}
+.materials-fields label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 0;
+}
+.materials-fields input,
+.materials-fields select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 400;
+}
+.materials-workbench select {
+  text-overflow: ellipsis;
+}
+.materials-proposal {
+  background: #f4f5fa;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 14px 0;
+  font-size: 14px;
+}
+.materials-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.materials-given table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.materials-given caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.materials-given th,
+.materials-given td {
+  padding: 8px 5px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+  overflow-wrap: normal;
+}
+.materials-structure {
+  margin: 12px 0;
+}
+.materials-structure svg {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: auto;
+  background: #f4f5fa;
+  border-radius: 12px;
+}
+.materials-structure figcaption,
+.materials-carats figcaption {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 8px;
+  color: var(--muted);
+}
+.materials-carats {
+  margin: 14px 0;
+}
+.materials-purity {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3px;
+}
+.materials-purity span {
+  height: 22px;
+  border-radius: 3px;
+  background: #dce1e8;
+}
+.materials-purity span[data-gold="true"] {
+  background: #b58114;
+}
+.sample-lesson[data-lesson="materials-and-corrosion"] .multipart-answer {
+  grid-template-columns: 1fr;
+}
+@media (max-width: 600px) {
+  .materials-workbench {
+    padding: 14px;
+  }
+  .materials-given dl > div,
+  .materials-proposal dl > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  .materials-given th,
+  .materials-given td {
+    padding: 7px 4px;
+  }
+  .materials-structure svg {
+    max-width: 300px;
+  }
+}
+
+.materials-given {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f7f9ff;
+  padding: 14px;
+  margin: 14px 0;
+}
+.materials-given thead {
+  background: #edf1f8;
+}

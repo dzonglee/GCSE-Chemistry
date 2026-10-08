@@ -1,0 +1,1156 @@
+import type { LearningTask, LessonJourney } from "../types";
+import type { ReversibleMode } from "../../lib/reversible-equilibrium";
+type Task = LearningTask;
+const m = (
+  mode: ReversibleMode,
+  instruction: string,
+  record = "initial",
+): Task["model"] => ({
+  kind: "reversible-equilibrium",
+  mode,
+  record,
+  instruction,
+});
+function c(
+  id: string,
+  title: string,
+  prompt: string,
+  answer: string,
+  errors: Record<string, string>,
+  explanation: string,
+  hint: string,
+  model?: Task["model"],
+): Task {
+  const options = [answer, ...Object.keys(errors)],
+    offset =
+      [...id].reduce((sum, x) => sum + x.charCodeAt(0), 0) % options.length;
+  return {
+    id: "re-v1-" + id,
+    title,
+    purpose: title,
+    prompt,
+    answer,
+    options: [...options.slice(offset), ...options.slice(0, offset)],
+    misconceptions: errors,
+    explanation,
+    hint,
+    model,
+  };
+}
+function n(
+  id: string,
+  title: string,
+  prompt: string,
+  answer: number,
+  unit: string,
+  explanation: string,
+  hint: string,
+  model?: Task["model"],
+): Task {
+  return {
+    id: "re-v1-" + id,
+    title,
+    purpose: title,
+    prompt,
+    answer: String(answer),
+    unit,
+    tolerance: 1e-8,
+    explanation,
+    hint,
+    model,
+  };
+}
+function w(
+  id: string,
+  title: string,
+  prompt: string,
+  answer: string,
+  rubric: string[],
+): Task {
+  return {
+    id: "re-v1-" + id,
+    title,
+    purpose: title,
+    prompt,
+    answer,
+    explanation: answer,
+    hint: rubric[0],
+    rubric,
+  };
+}
+export const warmup: Task[] = [
+  c(
+    "w-arrow",
+    "Read a reversible arrow",
+    "In A ⇌ B, the reverse reaction converts…",
+    "B into A",
+    {
+      "A into B": "That is the displayed forward direction.",
+      "A and B into nothing": "Reactions conserve matter.",
+    },
+    "The reverse direction regenerates the displayed reactant A from B.",
+    "Read from right to left.",
+  ),
+  n(
+    "w-energy",
+    "Recall signed energy",
+    "Reactant energy is 60 kJ and product energy is 20 kJ. What is the signed reaction energy change?",
+    -40,
+    "kJ",
+    "20 − 60 = −40 kJ; 40 kJ is released.",
+    "Products minus reactants.",
+  ),
+];
+export const guided: Task[] = [
+  c(
+    "g-turnover",
+    "Keep totals, change identities",
+    "In the closed 14 A / 6 B model, advance one interval with two reactions each way. What happens to the amounts?",
+    "They stay 14 A and 6 B while both directions continue",
+    {
+      "They become 10 A and 10 B": "Equal rates do not require equal amounts.",
+      "No tokens react because the amounts stay constant":
+        "The two gross changes cancel, but reactions continue.",
+    },
+    "Two A become B and two different B become A. The net change is zero; the amounts are unequal and constant.",
+    "Count both directions, then subtract.",
+    m(
+      "turnover",
+      "Advance one interval, then count amounts and both gross directions.",
+    ),
+  ),
+  c(
+    "g-direction",
+    "Regenerate the starting compound",
+    "For ammonium chloride ⇌ ammonia + hydrogen chloride, which supplied reverse change is shown?",
+    "Ammonia and hydrogen chloride recombine on cooling",
+    {
+      "Heating converts the gases into ammonium chloride in the supplied example":
+        "The supplied heating direction is the opposite.",
+      "The reverse change destroys the gases without a product":
+        "The original compound is regenerated.",
+    },
+    "Cooling allows ammonia and hydrogen chloride to react and regenerate ammonium chloride.",
+    "Reverse the displayed sides, using the supplied conditions.",
+    m(
+      "direction",
+      "Select the requested reverse direction and identify both sides.",
+    ),
+  ),
+  n(
+    "g-energy",
+    "Reverse the energy sign",
+    "A stated batch has forward energy change +30 kJ. What is the signed change for exactly its reverse reaction and the same amount?",
+    -30,
+    "kJ",
+    "The same amount of energy is transferred in the opposite direction: −30 kJ, released to surroundings.",
+    "Swap start and end levels.",
+    m(
+      "energy",
+      "Inspect reverse endpoints; predict signed energy and transfer direction.",
+    ),
+  ),
+  n(
+    "g-rates",
+    "Compare gross and net",
+    "Closed 1:1 A ⇌ B has forward and reverse event rates both 2 per second. Over 2 s, what is the net B change?",
+    0,
+    "tokens",
+    "Forward adds 4 B; reverse removes 4 B. Net 4 − 4 = 0, although 8 events occur.",
+    "Subtract reverse from forward before multiplying by time.",
+    m(
+      "rates",
+      "Calculate net change and final counts; decide whether reactions continue.",
+    ),
+  ),
+  c(
+    "g-boundary",
+    "Use the complete evidence",
+    "A closed sample has constant amounts and measured equal positive forward/reverse rates at fixed temperature. What is demonstrated?",
+    "Dynamic equilibrium",
+    {
+      "A reaction that has stopped":
+        "Positive rates establish continuing reactions.",
+      "Equal amounts of every substance":
+        "Equal rates do not establish equal amounts.",
+    },
+    "Matter is retained and both reactions continue at equal rates. Amounts remain constant.",
+    "Use boundary, rate equality and continuing reaction.",
+    m(
+      "boundary",
+      "Classify the supplied system and choose its supporting evidence.",
+    ),
+  ),
+  n(
+    "g-evidence",
+    "Find the demonstrated interval",
+    "In the supplied closed-system traces, at what earliest reading are rates equal and positive, remaining so with constant amounts at later supplied readings?",
+    4,
+    "s",
+    "At 4 s both rates are 2 events/s; A = 13 and B = 7 remain fixed through 6 and 8 s.",
+    "Read the rate columns separately from the amount columns.",
+    m(
+      "evidence",
+      "Choose the earliest sustained equal-positive-rate reading in this observation window.",
+    ),
+  ),
+];
+export const practice: Task[] = [
+  c(
+    "p-symbol",
+    "Interpret ⇌",
+    "What does ⇌ establish by itself?",
+    "The reaction can proceed in both directions",
+    {
+      "The reaction is already at equilibrium":
+        "Reversibility alone does not establish the current rates.",
+      "Reactant and product amounts are equal":
+        "The symbol does not specify amounts.",
+    },
+    "Products can react to regenerate reactants; current conditions and rates determine the state.",
+    "A reversible equation is not a measurement.",
+  ),
+  c(
+    "p-hydrate",
+    "Restore a hydrated salt",
+    "Hydrated copper sulfate (blue) ⇌ anhydrous copper sulfate (white) + water. Adding water to the white salt can…",
+    "Regenerate the blue hydrated salt",
+    {
+      "Regenerate copper metal": "Copper sulfate remains a compound.",
+      "Destroy the sulfate atoms": "Atoms are conserved.",
+    },
+    "The reverse hydration change restores hydrated copper sulfate.",
+    "Use all substances on the reverse starting side.",
+    m(
+      "direction",
+      "Inspect the supplied reverse hydration record.",
+      "hydrateReverse",
+    ),
+  ),
+  c(
+    "p-ammonia",
+    "Read an unfamiliar reverse",
+    "For nitrogen + hydrogen ⇌ ammonia, which substances start the displayed reverse reaction?",
+    "Ammonia",
+    {
+      "Nitrogen and hydrogen": "Those start the forward direction.",
+      "Nitrogen only": "The reverse starting side is ammonia.",
+    },
+    "In the reverse direction ammonia reacts to form nitrogen and hydrogen. This question supplies direction, not industrial conditions.",
+    "Read the right-hand side first.",
+    m(
+      "direction",
+      "Choose the requested reverse direction; use the supplied record.",
+      "ammoniaReverse",
+    ),
+  ),
+  c(
+    "p-conditions",
+    "Avoid a universal heating rule",
+    "In P + Q ⇌ R, supplied condition D favours P and Q formation. Which direction is favoured?",
+    "The displayed reverse direction",
+    {
+      "Always forward because D is a changed condition":
+        "Changed conditions can favour either displayed direction.",
+      "Neither direction can occur": "The equation is reversible.",
+    },
+    "R reacts to form the displayed reactants P and Q under the supplied condition.",
+    "Use the supplied evidence, not a universal heat rule.",
+    m(
+      "direction",
+      "Match the target reverse direction to supplied condition D.",
+      "unfamiliar",
+    ),
+  ),
+  n(
+    "p-energy-endo",
+    "Reverse an endothermic change",
+    "A batch absorbs 18 kJ in its forward change. What is the signed energy change of exactly the reverse change for the same amount?",
+    -18,
+    "kJ",
+    "Reversal releases 18 kJ: signed change −18 kJ.",
+    "Reverse the sign, not the magnitude.",
+  ),
+  n(
+    "p-energy-exo",
+    "Reverse an exothermic change",
+    "A batch releases 55 kJ in the forward direction. What is the signed reverse change for the same amount?",
+    55,
+    "kJ",
+    "Forward −55 kJ becomes reverse +55 kJ, taken in.",
+    "An exothermic forward change has an endothermic reverse.",
+    m(
+      "energy",
+      "Reverse the supplied 80 → 25 kJ reference endpoints.",
+      "exothermic",
+    ),
+  ),
+  n(
+    "p-energy-offset",
+    "Keep a shifted reference",
+    "Forward reference endpoints are 140 and 170 kJ for 3 g of total material. What is the signed reverse energy change for 6 g of the same total material?",
+    -60,
+    "kJ",
+    "Reference reverse 140 − 170 = −30 kJ. Double batch: −60 kJ.",
+    "Subtract endpoints before scaling.",
+    m(
+      "energy",
+      "Use reverse direction and double the reference batch.",
+      "offset",
+    ),
+  ),
+  n(
+    "p-energy-forward",
+    "Scale a forward batch",
+    "A complete forward change absorbs 24 kJ per reference batch containing 4 g total material. What energy is absorbed by a 10 g batch of the same material?",
+    60,
+    "kJ",
+    "24 × 10/4 = 60 kJ absorbed.",
+    "Use target amount divided by reference amount.",
+    m(
+      "energy",
+      "Inspect the requested forward direction and scaled batch.",
+      "forward",
+    ),
+  ),
+  n(
+    "p-dry-batch",
+    "Scale from the correct starting salt",
+    "A supplied hydration change of 3.0 g anhydrous salt releases 1.2 kJ. How much energy is released when 7.5 g of that anhydrous salt hydrates completely?",
+    3,
+    "kJ",
+    "1.2 × 7.5/3.0 = 3.0 kJ released. Both masses refer to anhydrous starting salt.",
+    "Match the target mass to the supplied reference mass.",
+  ),
+  n(
+    "p-water-mass",
+    "Conserve water in a reverse pair",
+    "A supplied 5.0 g hydrated sample produces 3.2 g dry salt on complete dehydration. What mass of water is produced by 12.5 g of the same hydrated sample?",
+    4.5,
+    "g",
+    "Water per reference = 5.0 − 3.2 = 1.8 g; scale ×12.5/5.0 = 4.5 g.",
+    "Find water by difference, then scale the hydrated batch.",
+  ),
+  c(
+    "p-not-activation",
+    "Separate barrier and energy transfer",
+    "A reverse reaction takes in 25 kJ per stated amount. Can its activation energy be deduced from that value alone?",
+    "No; the activation peak is also needed",
+    {
+      "Yes; activation energy must be 25 kJ":
+        "Overall energy change and activation energy differ.",
+      "Yes; activation energy must be zero":
+        "Even exothermic reactions can require activation energy.",
+    },
+    "Endpoint energy change does not specify the peak above the starting level.",
+    "A barrier requires a peak, not just endpoints.",
+  ),
+  w(
+    "p-energy-written",
+    "Explain the paired energy changes",
+    "Explain why exactly reversed chemical changes transfer the same energy magnitude in opposite directions for the same reacting amount.",
+    "The reverse change swaps the same start/end chemical states. Their energy difference has the same magnitude with opposite sign; one direction releases energy to surroundings and the other takes it in. This comparison requires the same reacting amount.",
+    [
+      "Same chemical endpoint states are swapped.",
+      "Same reacting amount means same energy magnitude.",
+      "Opposite sign and opposite surroundings transfer; distinguish activation energy.",
+    ],
+  ),
+  n(
+    "p-gross",
+    "Count continuing events",
+    "In closed 14 A / 6 B, one interval has two A → B and two B → A events. How many chemical conversion events occur in total?",
+    4,
+    "events",
+    "2 + 2 = 4 gross events, while net amount change is zero.",
+    "Add both directions for total events.",
+    m(
+      "turnover",
+      "Advance one interval and distinguish gross events from net change.",
+    ),
+  ),
+  n(
+    "p-products",
+    "Unequal equilibrium amounts",
+    "In closed 5 A / 15 B, each interval has three events in each direction. After one interval, how many B tokens remain?",
+    15,
+    "tokens",
+    "Three B form and three B are consumed: 15 + 3 − 3 = 15.",
+    "Equal positive rates allow unequal amounts.",
+    m("turnover", "Advance one interval in the mostly-B example.", "products"),
+  ),
+  n(
+    "p-equal-not-eq",
+    "Equal amounts, unequal rates",
+    "Closed 10 A / 10 B undergoes four A → B and one B → A event in one interval. What is the new B count?",
+    13,
+    "tokens",
+    "10 + 4 − 1 = 13 B. Equal starting amounts did not mean equilibrium.",
+    "Use both gross changes.",
+    m(
+      "turnover",
+      "Advance this single supplied interval; do not extrapolate it.",
+      "notEqual",
+    ),
+  ),
+  n(
+    "p-net-reverse",
+    "Follow net reverse change",
+    "Closed 7 A / 13 B undergoes one A → B and three B → A events. What is the new A count?",
+    9,
+    "tokens",
+    "7 − 1 + 3 = 9 A. The reverse direction has the larger gross rate.",
+    "Reverse events form A.",
+    m("turnover", "Advance the supplied reverse-biased interval.", "reverse"),
+  ),
+  c(
+    "p-zero",
+    "A stopped reaction is different",
+    "In a closed sample both measured reaction rates are zero and amounts stay constant. What does this show about dynamic equilibrium?",
+    "Continuing dynamic equilibrium has not been demonstrated",
+    {
+      "It proves dynamic equilibrium because zero equals zero":
+        "Dynamic equilibrium includes continuing reactions.",
+      "It proves equal amounts": "No rate value establishes equal amounts.",
+    },
+    "Arrested change has no continuing turnover; constant amounts alone are insufficient.",
+    "Dynamic describes ongoing reactions.",
+    m(
+      "turnover",
+      "Compare the supplied arrested process with continuing turnover.",
+      "stopped",
+    ),
+  ),
+  w(
+    "p-dynamic-written",
+    "Explain a constant unequal mixture",
+    "Explain how a closed equilibrium mixture can keep 14 A and 6 B while reactions still occur.",
+    "Forward A → B and reverse B → A continue at equal rates in the closed system. Each direction replaces the amount changed by the other, producing no net concentration change. The amounts remain constant but need not be equal.",
+    [
+      "Forward and reverse reactions both continue.",
+      "They occur at exactly the same rate.",
+      "Equal production and consumption give no net concentration change; constant does not mean equal amounts.",
+    ],
+  ),
+  n(
+    "p-rate-forward",
+    "Calculate a net increase",
+    "For constructed 1:1 A ⇌ B, forward rate is 3 events/s and reverse is 1 event/s over 2 s. What is the signed net B change?",
+    4,
+    "tokens",
+    "(3 − 1) × 2 = +4 B.",
+    "Net means forward minus reverse.",
+    m(
+      "rates",
+      "Predict net change and final counts over this interval only.",
+      "increasing",
+    ),
+  ),
+  n(
+    "p-rate-reverse",
+    "Calculate a net decrease",
+    "For constructed 1:1 A ⇌ B, forward rate is 1 event/s and reverse is 3 event/s over 2 s. What is the signed net B change?",
+    -4,
+    "tokens",
+    "(1 − 3) × 2 = −4 B; B is being consumed overall.",
+    "Retain the negative sign.",
+    m("rates", "Use the reverse-biased supplied rates.", "decreasing"),
+  ),
+  n(
+    "p-rate-count",
+    "Update a conserved count",
+    "A closed constructed mixture starts with 10 A / 10 B. Forward 2 and reverse 1 events/s for 3 s. How many A tokens remain?",
+    7,
+    "tokens",
+    "Net B gain = (2 − 1) × 3 = 3; A falls to 10 − 3 = 7.",
+    "A loses what B gains in this 1:1 model.",
+    m(
+      "rates",
+      "Calculate both final amounts, not only rate equality.",
+      "equalAmounts",
+    ),
+  ),
+  c(
+    "p-catalyst",
+    "Catalyse both directions",
+    "At fixed conditions an equilibrium mixture receives a catalyst. Which claim is correct?",
+    "Both directions become faster; equilibrium position stays the same",
+    {
+      "Only forward becomes faster and equilibrium products increase":
+        "A catalyst lowers barriers in both directions without changing equilibrium position.",
+      "Both reactions stop":
+        "A catalyst increases rates rather than stopping reaction.",
+    },
+    "The same equilibrium amounts can have faster continuing turnover; the catalyst changes the pathway, not relative endpoint energies.",
+    "Separate speed from equilibrium position.",
+    m(
+      "rates",
+      "Compare this faster turnover with the starting equal-rate record.",
+      "faster",
+    ),
+  ),
+  c(
+    "p-closed",
+    "Interpret a closed system",
+    "In this equilibrium lesson, a closed reacting system means…",
+    "Reactants and products cannot enter or escape",
+    {
+      "No energy can cross the boundary":
+        "Closed to matter does not mean thermally isolated.",
+      "No particles move or react": "Reactions continue at equilibrium.",
+    },
+    "The matter boundary retains reacting substances; thermal exchange is a separate issue.",
+    "Focus on the reacting matter boundary.",
+  ),
+  c(
+    "p-open",
+    "Inspect escaping product",
+    "Product gas escapes through an outlet and measured forward/reverse rates differ. Is dynamic equilibrium demonstrated?",
+    "No",
+    {
+      "Yes because the equation uses ⇌":
+        "A reversible equation alone does not establish equilibrium.",
+      "Yes because every gas reaction is at equilibrium":
+        "The supplied boundary and rates fail the criterion.",
+    },
+    "The system is open to reacting matter and rates differ.",
+    "Read the outlet and both rates.",
+    m("boundary", "Classify the product-escape record.", "escaping"),
+  ),
+  c(
+    "p-amount-evidence",
+    "Equal snapshot is insufficient",
+    "One closed-system snapshot shows equal A and B amounts. No directional rates or time series were measured. What conclusion is justified?",
+    "Insufficient evidence for dynamic equilibrium",
+    {
+      "Equilibrium is proven": "Equal amounts are not equal rates.",
+      "Equilibrium is impossible":
+        "Equal amounts can occur at equilibrium, but do not prove it.",
+    },
+    "Either equal or unequal amounts can be compatible with equilibrium; continuing equal rates must be established.",
+    "Distinguish possible from demonstrated.",
+    m("boundary", "Use the supplied snapshot evidence.", "equalAmounts"),
+  ),
+  c(
+    "p-flow",
+    "Distinguish steady flow",
+    "Open flow keeps amounts constant, but chemical forward and reverse rates differ. What state is demonstrated?",
+    "A steady open flow, not dynamic chemical equilibrium",
+    {
+      "Dynamic equilibrium because amounts are constant":
+        "External flow can balance net production.",
+      "No reaction because amounts are constant":
+        "Reaction can continue alongside inflow and outflow.",
+    },
+    "The external matter flows explain the constant inventory despite unequal chemical rates.",
+    "Use both boundary and measured chemical rates.",
+    m(
+      "boundary",
+      "Inspect constant amounts maintained by external flow.",
+      "flow",
+    ),
+  ),
+  w(
+    "p-plateau-written",
+    "Review an incomplete claim",
+    "A student says a flat concentration trace proves dynamic equilibrium. Explain the missing evidence.",
+    "A flat trace shows no measured net concentration change. It does not alone distinguish continuing equal forward/reverse reactions from an arrested change or open steady flow. Establish a closed reacting system and both continuing equal directional rates.",
+    [
+      "A plateau describes net observation, not gross reactions.",
+      "Identify stopped change or open flow as a counterexample.",
+      "Require closed matter boundary and continuing equal rates.",
+    ],
+  ),
+  n(
+    "p-evidence-reverse",
+    "Read approach from products",
+    "In the supplied mostly-B traces, what is the earliest demonstrated sustained equilibrium reading?",
+    6,
+    "s",
+    "At 6 s both rates are 2 events/s; 15 A and 5 B remain constant through later supplied readings.",
+    "Check the two rate columns and subsequent amounts.",
+    m("evidence", "Read the reverse-approach time series.", "reverse"),
+  ),
+  c(
+    "p-evidence-cross",
+    "Do not mistake a crossing",
+    "At 1 s, the supplied amount traces both read 10, but forward rate is 4 and reverse rate is 1. What is demonstrated?",
+    "Equal amounts at an instant, with net forward change",
+    {
+      "Dynamic equilibrium": "The gross rates differ.",
+      "No forward reaction": "Forward rate is explicitly positive.",
+    },
+    "The amount crossing does not coincide with balanced directional rates.",
+    "Read rate values at the same time.",
+    m("evidence", "Inspect the one-time amount crossing.", "equalAmounts"),
+  ),
+  n(
+    "p-evidence-catalyst",
+    "Faster arrival, same position",
+    "The uncatalysed trace first demonstrates equilibrium at 4 s. The faster supplied comparison does so at what time?",
+    2,
+    "s",
+    "At 2 s the faster comparison reaches equal rates and the same 13 A / 7 B plateau.",
+    "Find sustained rate equality; compare final amounts separately.",
+    m(
+      "evidence",
+      "Inspect the faster continuing-turnover comparison.",
+      "catalyst",
+    ),
+  ),
+  w(
+    "p-appearance",
+    "Explain observation limits",
+    "A solid reactant and solid product are both white; the gaseous product is colourless. Give two reasons why looking alone may not reveal the reaction.",
+    "The solid reactant and solid product have the same white appearance, and the colourless gaseous product may not be visible. Therefore unchanged visible appearance does not prove no chemical reaction.",
+    [
+      "Both solid substances have the same white appearance.",
+      "The gaseous product is colourless and may not be seen.",
+      "Limit the conclusion: appearance alone cannot exclude a reaction.",
+    ],
+  ),
+  w(
+    "p-boundary-written",
+    "Keep the model and practical distinct",
+    "Explain why the closed-system equilibrium requirement does not mean a student should seal a heated gas-producing test tube.",
+    "Equilibrium models specify a boundary retaining reactants/products. Sealing a heated gas-producing test tube can build pressure and eject a stopper or break the tube. Real apparatus and procedures require qualified school supervision; a conceptual closed model is not a practical instruction.",
+    [
+      "Closed-system equilibrium is a conceptual condition.",
+      "Gas pressure can eject stopper or break heated apparatus.",
+      "Do not infer a laboratory procedure from the model.",
+    ],
+  ),
+];
+export const checkForms: Task[][] = [
+  [
+    c(
+      "a-definition",
+      "Define dynamic equilibrium",
+      "Which description establishes dynamic equilibrium?",
+      "A closed reacting system with continuing equal forward and reverse rates",
+      {
+        "A mixture containing equal amounts":
+          "Amounts and rates are different quantities.",
+        "A closed system with no reaction in either direction":
+          "Dynamic equilibrium includes continuing reactions.",
+      },
+      "Both chemical directions continue at equal rates while the system retains reacting matter.",
+      "Use boundary and both gross rates.",
+    ),
+    n(
+      "a-energy",
+      "Reverse a fresh batch",
+      "A forward reaction releases 36 kJ for a stated batch. What is the signed reverse change for exactly the same batch?",
+      36,
+      "kJ",
+      "Forward −36 kJ becomes reverse +36 kJ; 36 kJ is taken in.",
+      "Swap chemical endpoints.",
+    ),
+    n(
+      "a-net",
+      "Fresh unequal-rate interval",
+      "A constructed closed 1:1 mixture starts with 18 A / 6 B. Forward 4 and reverse 1 events/s for 2 s. How many B tokens are present afterwards?",
+      12,
+      "tokens",
+      "6 + (4 − 1) × 2 = 12 B. Rates differ, so this interval is not equilibrium.",
+      "Use gross difference and initial count.",
+    ),
+    c(
+      "a-plateau",
+      "Evaluate incomplete evidence",
+      "A closed sample has constant amounts but neither directional reaction rate was measured. Which conclusion is justified?",
+      "Dynamic equilibrium remains unconfirmed",
+      {
+        "Dynamic equilibrium is proven":
+          "A stopped change could also have a plateau.",
+        "Dynamic equilibrium is impossible":
+          "It could be equilibrium, but the supplied evidence is incomplete.",
+      },
+      "The plateau alone cannot establish continuing equal rates.",
+      "A net observation does not reveal both gross processes.",
+    ),
+    w(
+      "a-written",
+      "Explain unequal equilibrium amounts",
+      "A closed reacting mixture at fixed temperature stays at 8 units X and 17 units Y. Both directions continue at equal positive rates. Explain why this is dynamic equilibrium despite unequal amounts.",
+      "The system retains reacting matter. Both forward and reverse reactions continue at equal rates, so neither substance accumulates overall. Amounts are constant but do not have to be equal.",
+      [
+        "Closed boundary retains reacting matter.",
+        "Continuing equal directional rates give no net change.",
+        "Constant amounts need not be equal.",
+      ],
+    ),
+  ],
+  [
+    c(
+      "b-direction",
+      "Fresh reverse equation",
+      "For M + N ⇌ P + Q, which substances start the displayed reverse reaction?",
+      "P and Q",
+      {
+        "M and N": "Those start the forward direction.",
+        "M and Q": "Read the complete right-hand side.",
+      },
+      "P and Q react to regenerate M and N.",
+      "Read right to left.",
+    ),
+    n(
+      "b-batch",
+      "Fresh hydration reference",
+      "A supplied hydration reaction of 4 g dry salt releases 1.6 kJ. What energy is released when 9 g of that same dry salt hydrates completely?",
+      3.6,
+      "kJ",
+      "1.6 × 9/4 = 3.6 kJ released. Both reference and target masses refer to dry starting salt.",
+      "Match the batch basis before scaling.",
+    ),
+    n(
+      "b-count",
+      "Fresh reverse-biased interval",
+      "Constructed closed 1:1 X ⇌ Y starts at 8 X / 16 Y. Forward 1 and reverse 2 events/s for 3 s. How many X units remain?",
+      11,
+      "tokens",
+      "X changes by (2 − 1) × 3 = +3; 8 + 3 = 11.",
+      "Reverse events form X.",
+    ),
+    c(
+      "b-catalyst",
+      "Fresh catalyst comparison",
+      "At fixed temperature a catalyst is added to a mixture already at dynamic equilibrium. What changes?",
+      "Both reaction rates increase; equilibrium position is unchanged",
+      {
+        "Only the equilibrium amount of product increases":
+          "The catalyst does not change the equilibrium position.",
+        "The reverse reaction stops": "Catalysis affects both directions.",
+      },
+      "Faster balanced turnover preserves the same equilibrium amounts at fixed conditions.",
+      "Separate pathway speed from equilibrium position.",
+    ),
+    w(
+      "b-written",
+      "Challenge constant open amounts",
+      "An open reactor has constant amounts because fresh reactant enters and product leaves. Its chemical forward and reverse rates differ. Explain why this is not demonstrated dynamic chemical equilibrium.",
+      "External matter flows maintain the inventory. The reactor is open to reacting matter and its chemical directional rates differ. Constant inventory therefore does not establish closed-system continuing equal rates.",
+      [
+        "Matter enters and leaves the system.",
+        "Measured chemical forward and reverse rates differ.",
+        "External-flow balance is not chemical equilibrium.",
+      ],
+    ),
+  ],
+];
+export const reviewForms: Task[][] = [
+  [
+    n(
+      "ra-energy",
+      "Retrieve energy reversal",
+      "A batch absorbs 42 kJ in one direction. What is the signed change for the reverse reaction of the same amount?",
+      -42,
+      "kJ",
+      "Reverse change releases 42 kJ: −42 kJ.",
+      "Swap endpoints and energy sign.",
+    ),
+    c(
+      "ra-zero",
+      "Retrieve the dynamic condition",
+      "A closed mixture has two zero reaction rates. Does equality of these zero rates demonstrate continuing dynamic equilibrium?",
+      "No",
+      {
+        "Yes because the numbers match":
+          "Dynamic equilibrium requires reactions to continue.",
+        "Yes because all amounts must then be equal":
+          "Zero rates do not establish amounts.",
+      },
+      "A stopped change differs from continuing balanced reactions.",
+      "Remember what dynamic means.",
+    ),
+    w(
+      "ra-written",
+      "Retrieve gross versus net",
+      "Explain how zero net concentration change can coexist with nonzero forward and reverse reaction rates.",
+      "The directions continue at equal rates. Each forms the amount the other consumes, so net concentration change is zero even though gross reaction events continue. In a closed reacting system at fixed conditions this is dynamic equilibrium.",
+      [
+        "Both gross directions remain positive.",
+        "Equal rates cancel net accumulation.",
+        "Closed system and fixed conditions complete the criterion.",
+      ],
+    ),
+  ],
+  [
+    n(
+      "rb-water",
+      "Retrieve batch conservation",
+      "A supplied 6 g hydrated sample gives 4 g dry salt on complete dehydration. What mass of water comes from 15 g of the same hydrated sample?",
+      5,
+      "g",
+      "Water per reference = 6 − 4 = 2 g; scale ×15/6 = 5 g.",
+      "Subtract dry mass, then scale the hydrated sample.",
+    ),
+    c(
+      "rb-amounts",
+      "Retrieve the amount distinction",
+      "A closed equilibrium mixture contains more products than reactants. Is that compatible with dynamic equilibrium?",
+      "Yes; amounts need not be equal",
+      {
+        "No; all equilibrium amounts must match":
+          "Rates, not amounts, must be equal.",
+        "No; a majority of products means no reverse reaction":
+          "Products can continue to react in the reverse direction.",
+      },
+      "Continuing equal rates keep the stated amounts constant without requiring equality.",
+      "Compare rates separately from inventory.",
+    ),
+    w(
+      "rb-written",
+      "Retrieve catalyst reasoning",
+      "At fixed conditions, explain why adding a catalyst to a reversible system changes the time to reach equilibrium without changing its equilibrium position.",
+      "A catalyst provides a lower-activation-energy pathway in both directions, increasing both reaction rates. The endpoint chemical states and their relative energies are unchanged, so the equilibrium position is unchanged; equilibrium can be reached faster.",
+      [
+        "Lower activation energy in both directions.",
+        "Both rates increase, permitting faster approach.",
+        "Same equilibrium position at fixed conditions.",
+      ],
+    ),
+  ],
+];
+export const refresher: Task[] = [
+  c(
+    "r-arrow",
+    "Recover reversible notation",
+    "What does ⇌ mean?",
+    "Both displayed directions are possible",
+    {
+      "Equilibrium is already established":
+        "The symbol does not establish measured rates.",
+      "Reactants and products have equal masses separately":
+        "The arrow is not a measurement.",
+    },
+    "Products can regenerate reactants.",
+    "Read both arrows.",
+  ),
+  c(
+    "r-direction",
+    "Recover reverse sides",
+    "In A + B ⇌ C, reverse starts with…",
+    "C",
+    {
+      "A and B": "That is the forward direction.",
+      "A only": "Use the complete reverse starting side.",
+    },
+    "C reacts to form A and B.",
+    "Read right to left.",
+  ),
+  c(
+    "r-condition",
+    "Recover supplied conditions",
+    "Should every reversible equation be read as heat means forward?",
+    "No; use the displayed reaction and supplied conditions",
+    {
+      "Yes in every case":
+        "Which direction heating favours depends on the reaction as written.",
+      "Conditions never affect direction":
+        "Conditions can affect the direction.",
+    },
+    "Forward is defined by the displayed equation, not a universal heating rule.",
+    "Use given conditions.",
+  ),
+  n(
+    "r-sign",
+    "Recover opposite energy",
+    "Forward change is +16 kJ for a batch. What is signed reverse change of the same amount?",
+    -16,
+    "kJ",
+    "Reverse −16 kJ releases the same magnitude.",
+    "Swap the sign.",
+  ),
+  n(
+    "r-scale",
+    "Recover batch scaling",
+    "A stated 3 g dry batch releases 0.9 kJ on hydration. How much is released by 6 g of the same dry material?",
+    1.8,
+    "kJ",
+    "0.9 × 6/3 = 1.8 kJ.",
+    "Match reference and target basis.",
+  ),
+  n(
+    "r-water",
+    "Recover mass difference",
+    "A 7 g hydrated sample gives 4 g dry material. What mass of water is lost?",
+    3,
+    "g",
+    "7 − 4 = 3 g water, with all products retained in the conservation accounting.",
+    "Hydrated minus dry.",
+  ),
+  c(
+    "r-barrier",
+    "Recover different quantities",
+    "Overall reaction energy change specifies…",
+    "The difference between chemical endpoint energies",
+    {
+      "The peak above the start": "That specifies activation energy.",
+      "The number of collisions per second": "That is a rate quantity.",
+    },
+    "Overall change does not determine the activation peak.",
+    "Separate endpoints from barrier.",
+  ),
+  n(
+    "r-gross",
+    "Recover total events",
+    "One interval has three forward and three reverse conversion events. How many events occur?",
+    6,
+    "events",
+    "3 + 3 = 6; net change can still be zero.",
+    "Add gross directions.",
+  ),
+  n(
+    "r-net",
+    "Recover net change",
+    "Constructed 1:1 forward rate 4 events/s, reverse 2 events/s for 2 s. What is net product change?",
+    4,
+    "tokens",
+    "(4 − 2) × 2 = 4.",
+    "Subtract before multiplying.",
+  ),
+  c(
+    "r-dynamic",
+    "Recover continuing rates",
+    "Dynamic equilibrium requires reactions to…",
+    "Continue in both directions at equal rates",
+    {
+      "Stop completely": "Dynamic equilibrium has continuing reactions.",
+      "Continue only forwards": "Both directions continue.",
+    },
+    "Equal positive gross rates cancel net accumulation.",
+    "Dynamic means continuing.",
+  ),
+  c(
+    "r-amounts",
+    "Recover constant versus equal",
+    "Amounts at equilibrium are…",
+    "Constant, but not necessarily equal",
+    {
+      "Always equal": "Equal rates need not imply equal amounts.",
+      "Always changing overall": "Equal rates remove net accumulation.",
+    },
+    "Amounts and directional rates are different quantities.",
+    "Think inventory versus events.",
+  ),
+  c(
+    "r-boundary",
+    "Recover the matter boundary",
+    "A closed reacting system prevents…",
+    "Reactants and products entering or escaping",
+    {
+      "All energy transfer": "Closed to matter need not be isolated to energy.",
+      "All reactions": "Equilibrium reactions continue.",
+    },
+    "The relevant boundary retains reacting substances.",
+    "Focus on matter.",
+  ),
+  c(
+    "r-evidence",
+    "Recover sufficient evidence",
+    "A flat amount trace alone…",
+    "Does not prove continuing equal reaction rates",
+    {
+      "Always proves dynamic equilibrium":
+        "Stopped change or external flow can produce constant amounts.",
+      "Always proves no reaction": "Gross reactions can cancel.",
+    },
+    "Observe the closed boundary and continuing directional rates as well.",
+    "Net observation is not both rates.",
+  ),
+  c(
+    "r-catalyst",
+    "Recover catalyst effect",
+    "At fixed conditions a catalyst changes…",
+    "Both directional rates, without changing equilibrium position",
+    {
+      "Only product amount at equilibrium":
+        "Equilibrium position does not change.",
+      "Only the forward pathway": "Both directions are catalysed.",
+    },
+    "Different pathway and lower barriers affect speed in both directions.",
+    "Separate speed and position.",
+  ),
+  c(
+    "r-appearance",
+    "Recover observation limits",
+    "Two white solids and colourless vapour can show…",
+    "A reaction with no obvious visible change",
+    {
+      "Proof no reaction occurred":
+        "Appearance may fail to distinguish substances.",
+      "Proof all substances are the same":
+        "Different substances can look alike.",
+    },
+    "The observations cannot alone rule out chemical change.",
+    "Use the limits of the evidence.",
+  ),
+  c(
+    "r-apparatus",
+    "Recover conceptual versus practical",
+    "A closed equilibrium model justifies a student sealing a heated gas-producing test tube…",
+    "Never by itself; apparatus needs a supervised procedure",
+    {
+      Always: "Gas pressure can eject a stopper or break glass.",
+      "Whenever a reversible arrow is written":
+        "A model is not a practical procedure.",
+    },
+    "A model boundary is not a laboratory instruction.",
+    "Distinguish model assumptions from apparatus design.",
+  ),
+];
+const recovery = [
+  "arrow",
+  "direction",
+  "direction",
+  "condition",
+  "sign",
+  "sign",
+  "scale",
+  "scale",
+  "scale",
+  "water",
+  "barrier",
+  "sign",
+  "gross",
+  "amounts",
+  "net",
+  "net",
+  "dynamic",
+  "dynamic",
+  "net",
+  "net",
+  "net",
+  "catalyst",
+  "boundary",
+  "boundary",
+  "evidence",
+  "boundary",
+  "evidence",
+  "evidence",
+  "evidence",
+  "catalyst",
+  "appearance",
+  "apparatus",
+];
+practice.forEach((task, i) => {
+  task.followUp = "re-v1-r-" + recovery[i];
+});
+export const reversibleJourney: LessonJourney = {
+  version: 1,
+  introduction:
+    "Reverse a chemical change, follow energy in both directions, and distinguish continuing balanced reactions from unchanged observations.",
+  scopeNote:
+    "Foundation/common AQA reversible reactions, paired energy transfer and dynamic equilibrium, with limited Pearson comparison. Equilibrium requires a closed reacting system with continuing equal forward and reverse rates at fixed conditions. Amounts stay constant but need not be equal. The token models are explicitly constructed 1:1 A ⇌ B; their numbered conserved units, fixed-interval gross rates and plotted readings are not measured molecules, a real mechanism or a universal kinetic law. Real chemical equations can have other stoichiometric coefficients. Equal and opposite energy transfer requires exactly reversed chemical changes and the same reacting amount; scaling must use the supplied matching batch basis. Native energy batches include all reacting material, including water where applicable. Changing equilibrium conditions and industrial Haber choices are taught separately. Practical examples are observation interpretation, not unsupervised apparatus instructions. Written responses remain self-reviewed; this lesson does not certify complete board coverage or exam readiness.",
+  outcomes: [
+    "Interpret reversible equations and supplied changes of direction.",
+    "Reverse the signed energy transfer and scale a matching supplied batch.",
+    "Explain continuing equal directional rates and constant, potentially unequal amounts.",
+    "Distinguish gross rates, net changes and evidence from closed/open/stopped systems.",
+    "Read amount and rate traces separately and explain catalyst effects at fixed conditions.",
+  ],
+  warmup,
+  refresher,
+  guided,
+  practice,
+  checkForms,
+  reviewForms,
+};
+export const reversibleAllTasks = [
+  ...warmup,
+  ...refresher,
+  ...guided,
+  ...practice,
+  ...checkForms.flat(),
+  ...reviewForms.flat(),
+];
+export const reversibleExposureFamilies: Record<string, string[]> = {
+  direction: [
+    "w-arrow",
+    "g-direction",
+    "p-symbol",
+    "p-hydrate",
+    "p-ammonia",
+    "p-conditions",
+    "r-arrow",
+    "r-direction",
+    "r-condition",
+    "b-direction",
+  ],
+  energy: [
+    "w-energy",
+    "g-energy",
+    "p-energy-endo",
+    "p-energy-exo",
+    "p-energy-offset",
+    "p-energy-forward",
+    "p-dry-batch",
+    "p-water-mass",
+    "p-not-activation",
+    "p-energy-written",
+    "r-sign",
+    "r-scale",
+    "r-water",
+    "r-barrier",
+    "a-energy",
+    "b-batch",
+    "ra-energy",
+    "rb-water",
+  ],
+  dynamic: [
+    "a-definition",
+    "g-boundary",
+    "g-turnover",
+    "g-rates",
+    "p-gross",
+    "p-products",
+    "p-equal-not-eq",
+    "p-net-reverse",
+    "p-zero",
+    "p-dynamic-written",
+    "p-rate-forward",
+    "p-rate-reverse",
+    "p-rate-count",
+    "r-gross",
+    "r-net",
+    "r-dynamic",
+    "r-amounts",
+    "a-net",
+    "a-written",
+    "b-count",
+    "ra-zero",
+    "ra-written",
+    "rb-amounts",
+  ],
+  boundary: [
+    "g-boundary",
+    "p-closed",
+    "p-open",
+    "p-amount-evidence",
+    "p-flow",
+    "p-plateau-written",
+    "p-boundary-written",
+    "r-boundary",
+    "r-evidence",
+    "r-apparatus",
+    "a-definition",
+    "a-plateau",
+    "b-written",
+  ],
+  traces: [
+    "g-evidence",
+    "p-evidence-reverse",
+    "p-evidence-cross",
+    "p-plateau-written",
+    "r-evidence",
+  ],
+  catalyst: [
+    "p-catalyst",
+    "p-evidence-catalyst",
+    "r-catalyst",
+    "b-catalyst",
+    "rb-written",
+  ],
+  appearance: ["p-appearance", "r-appearance"],
+};

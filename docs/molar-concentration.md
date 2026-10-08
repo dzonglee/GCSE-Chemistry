@@ -1,0 +1,32 @@
+# Lesson42 research and design review — work in progress
+
+Individually authored draft outside checkout while lesson41 full regression ran. No subsequent lesson research has started. Not delivered or exam-certified.
+
+## Sources actually fetched and read on2026-10-04
+
+- AQA8462 specification official PDF, HTTP200,2700708bytes:4.3.4 is Higher separate Chemistry. c in mol/dm³; amount and mass from c and V; relationship to solute mass and final solution volume; reacting-volume problems also required. This lesson covers concentration/amount/mass; balanced-equation titration calculations and RPA2 are later individually reviewed lessons, an explicit unfinished requirement.
+- Official2022HigherPaper1 QP HTTP2002430646bytes and paired MS HTTP200466808bytes,08.3:25.00cm³ HCl reacts with23.50cm³.100mol/dm³ Ba(OH)2;2HCl+Ba(OH)2→BaCl2+2H2O. Scheme awards.00235mol base,.00470mol acid,division by.025dm³ and.188mol/dm³. These show why concentration basics alone are insufficient for titration exam readiness. No claim this question directly assesses all our nonreacting sampling scenarios.
+- OpenStax Chemistry2e modulem68703, actual public raw repository fetched HTTP20052018bytes and worked examples read. .133mol/355mL=.375M;25.2g acetic acid/M60.052g/mol/.500L=.839M;5.30M NaCl×.250L×58.44g/mol=77.4g;CaCl2 .200M×.2500L×110.98=5.55g. Publisher supplied constants preserved in tests; our original questions explicitly supply GCSE constants. Liter=L=dm³; mL=cm³. Dilution assumes no solute loss. Procedural preparation instructions are not reproduced.
+- OpenStax webpage and GitHubAPI returned tunnel403. Raw public module succeeded; no credentials or bypass. Full OCR alignment remains unfinished.
+
+## Actual Maths comparison
+
+Read unit-rates.ts and compound-measures.ts. Opened actual running guided lessons at3000 and captured/inspected all four desktop/mobile screenshots. Manipulated equal-part model precedes answer checking, units remain visible, undo/reset and incorrect predictions retained. Chemistry uses c,n,m,conversion and sampling/dilution as distinct relationships, not a transplanted money bar. Read-only Maths git status clean.
+
+## User design questions before authoring
+
+What does this lesson need? c=n/V, conversion to final dm³, inverse V=n/c, n=cV, m=nM, g/dm³↔mol/dm³, named dissolved entity and sampling/dilution distinction. No collapsed single formula generator. Is it interesting/interactive? Five changing records require independent predictions of both quantity and relation; changing amount/volume/solute exposes different invariants. Are assets appropriate? Actual dissolved Na+ and Cl− spheres, no salt-molecule bonds, conserved identities and doubled actual cube volume; water/hydration omitted. Counts illustrative, not one mole. Is a generic model sufficient? No: each mode has its own quantities and misconceptions.
+
+## Review after drafting
+
+49 tasks2warm5refresh5guide21practice10check6review. All numeric answers independently recomputed; four explanations ungraded/self-reviewed. All nine draft unit checks passed; production/browser integration still pending. Changed independent input records; true delayed review enforced by existing engine. Shared fixed-answer tasks explicitly use initial givens while native record changes explore other solutions. 3D asset qualitative counts; selected no-water record keeps equal volumes and concentration, while both actual dilution records double volume. Explicit initial numerical givens govern fixed answer tasks. Models saved via existing history/domain rules, not new storage. Need actual GLB binary review, UI layout/accessibility/recovery/persistence checks, screenshots and SEND before moving on.
+
+Wholecourse remains below requested final standard. Lesson41 full run629passed/1older written persistence test raced; actualstoredfalse polling fix under targeted verification. Do not claim630clean from that result.
+
+Reproducible sources: [AQA8462 specification](https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF), [2022HigherPaper1](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-84621H-QP-JUN22.PDF), [paired mark scheme](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-84621H-MS-JUN22.PDF), [actual publisher module](https://raw.githubusercontent.com/openstax/osbooks-chemistry-bundle/main/modules/m68703/index.cnxml). Actual question08.3 onPDFpage25 visually inspected as well as its text and paired scheme. These sources inform original tasks, not an imported question bank.
+
+Additional review: diagram text enlarged and checked atactual12pxminimum; full selected explanations visible outside clipped selectors; independent multipart fields aligned. Default browser-exported solution-volume geometry has ratio1.9999999706 withinFloat32precision, independently read from actual GLB POSITION bounds, with16identified ion meshes across the two sides. No-water native selection now exports ratio1 with matching.40/.40captions and same conserved inventory. No ion pair bonds are present. First layout made ions appear paired; final geometry disperses them with independent minimum-distance checks. Asset sphere radius does not encode molar mass or hydration.
+
+Intermediate verification:231unit checks and26combined new/affected desktop/mobile checks passed in45.3seconds. Four representative/accessibility/model-family cases passed in12.6seconds. Final copy review and all-released-route checks are underway; sample delivery has not yet occurred. Fullcourse status remains41delivered plus this in-review lesson and46preliminary routes.
+
+Final delivery:types/lint/format/build and231unit checks pass. All22final desktop/mobile lesson checks passed in35.6seconds, after26combined new/affected checks passed in45.3seconds. Four representative/accessibility/model-family cases passed in12.6seconds and both all-released-route cases passed in43.5seconds. Final camera changes passed all eight affected cases in15.9seconds; actual quarter-turn screenshots were inspected at both sizes. Projection now fits rotated bounds; each solution rotates around its own centre, preserving side-by-side labels. Actual3D GLBs export matching dilution/no-water inventories. All inspected desktop/mobile, independent, actual asset andGLB samples explicitly SENT before lesson43 research. No bulk lesson generation/export. Full652-case regression underway; wholecourse exam readiness remains unfinished.

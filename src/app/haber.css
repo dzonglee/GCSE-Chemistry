@@ -1,0 +1,348 @@
+.haber-workbench {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  background: #fff;
+  min-width: 0;
+}
+.haber-workbench h3 {
+  margin: 0 0 12px;
+}
+.haber-given {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f7f9ff;
+  padding: 14px;
+  margin: 14px 0;
+  font-size: 14px;
+  line-height: 1.55;
+  min-width: 0;
+}
+.haber-given p {
+  margin: 0 0 12px;
+}
+.haber-fields {
+  display: grid;
+  gap: 12px;
+  margin: 14px 0;
+}
+.haber-fields label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 0;
+}
+.haber-fields input,
+.haber-fields select {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 400;
+}
+.haber-fields select {
+  text-overflow: ellipsis;
+}
+.haber-proposal {
+  background: #f4f5fa;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 14px 0;
+  font-size: 14px;
+}
+.haber-given dl,
+.haber-proposal dl {
+  display: grid;
+  gap: 8px;
+  margin: 10px 0;
+}
+.haber-given dl > div,
+.haber-proposal dl > div {
+  display: grid;
+  grid-template-columns: minmax(80px, 1fr) minmax(0, 2fr);
+  gap: 12px;
+}
+.haber-given dt,
+.haber-proposal dt {
+  font-weight: 700;
+}
+.haber-given dd,
+.haber-proposal dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.haber-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.haber-given table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 12px 0;
+}
+.haber-given caption {
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.haber-given th,
+.haber-given td {
+  padding: 8px 5px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: normal;
+}
+.haber-given thead {
+  background: #edf1f8;
+}
+.haber-flow {
+  margin: 12px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  text-align: center;
+  gap: 8px;
+}
+.haber-flow span {
+  display: block;
+}
+.haber-flow-reactor,
+.haber-flow-cool {
+  padding: 12px;
+  border: 2px solid #3f4fd0;
+  border-radius: 10px;
+  background: white;
+}
+.haber-flow-return {
+  padding: 10px;
+  border: 2px solid #0f7a73;
+  border-radius: 10px;
+  color: #09635d;
+  font-weight: 700;
+  background: #eef8f4;
+}
+.haber-flow-product {
+  font-weight: 700;
+}
+.haber-flow figcaption,
+.haber-graph figcaption {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  text-align: left;
+  margin-top: 8px;
+}
+.haber-graph {
+  margin: 12px 0;
+  min-width: 0;
+}
+.haber-graph-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  background: #fff;
+}
+.haber-graph svg {
+  display: block;
+  width: 100%;
+  min-width: 420px;
+  height: auto;
+}
+.haber-graph text {
+  font-family: inherit;
+  font-size: 14px;
+  fill: #252e46;
+}
+.haber-plot-values {
+  overflow-wrap: anywhere;
+}
+.sample-lesson[data-lesson="haber-and-fertilisers"] .multipart-answer {
+  grid-template-columns: 1fr;
+}
+.haber-input-note,
+.haber-feed-brief {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.haber-feed-diagram {
+  font-size: 14px;
+  margin: 14px 0;
+  line-height: 1.5;
+}
+.haber-feed-diagram > div {
+  margin: 12px 0;
+}
+.haber-feed-track {
+  height: 24px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #eef1f8;
+  overflow: hidden;
+  margin-top: 6px;
+}
+.haber-feed-track > span {
+  display: block;
+  height: 100%;
+}
+.haber-feed-diagram figcaption {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+@media (max-width: 600px) {
+  .haber-workbench {
+    padding: 14px;
+  }
+  .haber-given dl > div,
+  .haber-proposal dl > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  .haber-given th,
+  .haber-given td {
+    padding: 7px 4px;
+  }
+}
+
+.haber-drawing {
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.haber-drawing table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 14px 0;
+}
+.haber-drawing th,
+.haber-drawing td {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+.haber-drawing caption {
+  text-align: left;
+  font-weight: 700;
+}
+.haber-drawing fieldset {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 14px 0;
+}
+.haber-drawing legend {
+  font-weight: 700;
+}
+.haber-drawing input,
+.haber-drawing select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  font: inherit;
+  font-size: 16px;
+  background: #fff;
+}
+.haber-coordinate-fields {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+.haber-coordinate-fields > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.haber-coordinate-fields label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+  min-width: 0;
+}
+@media (max-width: 600px) {
+  .haber-coordinate-fields > div {
+    grid-template-columns: 1fr;
+  }
+}
+
+.haber-bars {
+  margin: 14px 0;
+  font-size: 14px;
+}
+.haber-bar-plot {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 18px 0 75px 32px;
+  height: 220px;
+  position: relative;
+  background: repeating-linear-gradient(
+    to top,
+    #fff 0,
+    #fff 43px,
+    #cbd3e2 43px,
+    #cbd3e2 44px
+  );
+  border-bottom: 2px solid #252e46;
+}
+.haber-bar-plot > div:not(.haber-bar-axis) {
+  height: 100%;
+  position: relative;
+}
+.haber-bar-track {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.haber-bar-track > span {
+  display: block;
+  width: 70%;
+  background: #3f4fd0;
+}
+.haber-bar-label {
+  position: absolute;
+  top: 228px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+.haber-bar-label span {
+  display: block;
+}
+.haber-bar-axis {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  height: 100%;
+  width: 25px;
+}
+.haber-bar-axis span {
+  position: absolute;
+  right: 2px;
+  transform: translateY(50%);
+  font-size: 14px;
+}
+.haber-bars figcaption {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 8px;
+}

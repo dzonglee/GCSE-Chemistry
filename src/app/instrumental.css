@@ -1,0 +1,300 @@
+.sample-task-panel:has(.instrumental-workbench) .question-navigation {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  min-width: 0;
+}
+.sample-task-panel:has(.instrumental-workbench) .question-navigation button {
+  flex: 0 0 auto;
+}
+.sample-task-panel:has(.instrumental-workbench) .sample-task-topline,
+.sample-task-panel:has(.instrumental-workbench) > h2,
+.sample-task-panel:has(.instrumental-workbench) .sample-task-prompt {
+  margin-bottom: 8px;
+}
+.instrumental-workbench,
+.instrumental-given {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #d9deea;
+  border-radius: 12px;
+  background: #fff;
+  color: #18243a;
+}
+.instrumental-workbench h3,
+.instrumental-given h3 {
+  margin: 0 0 7px;
+  font-size: 17px;
+}
+.instrumental-workbench p,
+.instrumental-given p {
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+.instrumental-original {
+  padding: 10px;
+  background: #f4f7fc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.instrumental-original p {
+  margin: 0;
+}
+.instrumental-original dl,
+.instrumental-given dl {
+  margin: 8px 0;
+}
+.instrumental-original dt,
+.instrumental-given dt {
+  font-size: 14px;
+  font-weight: 700;
+}
+.instrumental-original dd,
+.instrumental-given dd {
+  margin: 3px 0 8px;
+}
+.instrumental-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+}
+.instrumental-fields label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+.instrumental-fields input,
+.instrumental-fields select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid #bcc6d6;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+  font: inherit;
+  color: inherit;
+}
+.instrumental-selection {
+  font-size: 14px;
+  font-weight: 400;
+  background: #eceffc;
+  border: 1px solid #3545c5;
+  border-radius: 6px;
+  padding: 8px;
+  overflow-wrap: anywhere;
+}
+.instrumental-small {
+  font-size: 14px;
+  color: #53617b;
+}
+.instrumental-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.instrumental-actions button,
+.instrumental-candidates button {
+  min-height: 44px;
+  padding: 9px 12px;
+  max-width: 100%;
+  border: 1px solid #bac4d6;
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: #263779;
+  cursor: pointer;
+}
+.instrumental-actions button[data-primary="true"],
+.instrumental-actions button[aria-pressed="true"],
+.instrumental-candidates button[aria-pressed="true"] {
+  background: #3545c5;
+  color: #fff;
+}
+.instrumental-actions button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.instrumental-candidates {
+  border: 1px solid #dce2ed;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.instrumental-candidates legend {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0 4px;
+}
+.instrumental-candidates label {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #dce2ed;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.instrumental-candidates input {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  accent-color: #3545c5;
+}
+.instrumental-candidates label:has(input:checked) {
+  background: #eceffc;
+  border-color: #3545c5;
+}
+.instrumental-candidates button {
+  grid-column: 1/-1;
+}
+.instrumental-spectrum,
+.instrumental-calibration {
+  margin: 12px 0;
+  min-width: 0;
+}
+.instrumental-spectrum figcaption,
+.instrumental-calibration figcaption {
+  font-size: 14px;
+  font-weight: 700;
+}
+.instrumental-pan {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #dce2ed;
+  border-radius: 8px;
+  background: #fff;
+  overscroll-behavior-x: contain;
+  margin: 10px 0;
+}
+.instrumental-spectrum-svg {
+  display: block;
+  width: 314px;
+  min-width: 314px;
+  height: auto;
+  margin: 0 auto;
+  font-family: inherit;
+}
+.instrumental-chart {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  max-width: 392px;
+  margin: 0 auto;
+}
+.instrumental-row-labels {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1px;
+  margin: 10px 0;
+  font-size: 15px;
+}
+.instrumental-row-labels span {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding-left: 4px;
+}
+.instrumental-calibration-svg {
+  display: block;
+  width: 100%;
+  min-width: 310px;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  font-family: inherit;
+  touch-action: pan-y;
+}
+.instrumental-table {
+  overflow-x: auto;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.instrumental-table table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+.instrumental-table th,
+.instrumental-table td {
+  padding: 8px;
+  border-bottom: 1px solid #dce2ed;
+  vertical-align: top;
+}
+.instrumental-table caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.instrumental-path {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 12px;
+}
+.instrumental-path li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: #f4f7fc;
+  border: 1px solid #dce2ed;
+  border-radius: 6px;
+  padding: 7px;
+  font-size: 14px;
+  min-height: 36px;
+}
+.instrumental-path strong {
+  display: inline-grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  flex: none;
+  background: #3545c5;
+  color: #fff;
+  border-radius: 50%;
+}
+.instrumental-feedback {
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 8px;
+}
+.instrumental-correct {
+  background: #e6f4ec;
+  color: #195d46;
+}
+.instrumental-reconsider {
+  background: #fff2da;
+  color: #634613;
+}
+.instrumental-given {
+  margin: 12px 0;
+}
+@media (max-width: 560px) {
+  .instrumental-workbench,
+  .instrumental-given {
+    padding: 8px;
+  }
+  .instrumental-candidates {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .instrumental-original {
+    padding: 8px;
+  }
+  .instrumental-path {
+    gap: 4px;
+  }
+  .instrumental-path li {
+    padding: 4px;
+    min-height: 28px;
+  }
+}

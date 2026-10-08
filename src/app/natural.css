@@ -1,0 +1,241 @@
+.natural-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+.natural-workbench {
+  background: white;
+  border: 1px solid #dce2ef;
+  border-radius: 18px;
+  padding: 24px;
+  margin-top: 0;
+}
+.natural-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 18px 0;
+}
+.natural-field {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+  min-width: 0;
+}
+.natural-field input,
+.natural-field select {
+  font: inherit;
+  font-weight: 400;
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  padding: 8px;
+  border: 1px solid #bfc9e0;
+  border-radius: 8px;
+  background: white;
+}
+.natural-workbench button {
+  font: inherit;
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 1px solid #bbc7df;
+  border-radius: 8px;
+  background: white;
+  color: #24314a;
+}
+.natural-workbench button[aria-pressed="true"] {
+  background: #fff074;
+}
+.natural-workbench button:disabled {
+  opacity: 0.5;
+}
+.natural-eyebrow {
+  color: #4c5793;
+  font-size: 14px;
+}
+.natural-given,
+.natural-feedback {
+  background: #f2f5fc;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 18px 0;
+}
+.natural-pan {
+  overflow: auto;
+  border: 1px solid #dce2ef;
+  border-radius: 12px;
+  margin: 18px 0;
+  padding: 14px;
+}
+.natural-pan svg {
+  display: block;
+  max-width: none;
+  color: #344055;
+}
+.natural-dna-row,
+.natural-associations {
+  display: flex;
+  justify-content: space-around;
+  gap: 14px;
+}
+.natural-dna-row span {
+  display: grid;
+  text-align: center;
+  background: #eef1f9;
+  border: 2px solid #8999b9;
+  border-radius: 10px;
+  padding: 12px;
+  flex: 1;
+}
+.natural-dna-row span.chosen {
+  background: #fff074;
+  border-color: #4656cf;
+}
+.natural-dna-row small {
+  font-size: 13px;
+  white-space: nowrap;
+}
+.natural-associations {
+  color: #8490a8;
+  font-size: 24px;
+}
+.natural-peptide {
+  display: flex;
+}
+.natural-peptide-unit {
+  flex: 1;
+  padding: 16px;
+  border: 1px solid #bcc8df;
+  border-radius: 12px;
+  position: relative;
+}
+.natural-peptide-unit p {
+  white-space: nowrap;
+}
+.natural-carbonyl {
+  padding-left: 70%;
+}
+.natural-link {
+  background: #e5eaf8;
+  padding: 8px;
+}
+.natural-canvas {
+  height: 350px;
+  width: 100%;
+  background: #f3f5fb;
+  border-radius: 12px;
+}
+.natural-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+}
+.natural-scene p {
+  font-size: 14px;
+}
+.natural-workbench summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 10px 0;
+}
+.natural-workbench h2 {
+  margin-top: 0;
+}
+@media (max-width: 600px) {
+  .natural-workbench {
+    padding: 16px;
+  }
+  .natural-controls {
+    grid-template-columns: 1fr;
+  }
+  .natural-canvas {
+    height: 280px;
+  }
+}
+.natural-dna-row strong.chosen-base {
+  background: #fff074;
+  border-radius: 6px;
+}
+.natural-diagram-note {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.natural-review {
+  background: #eef1fc;
+  padding: 18px;
+  border-radius: 12px;
+  margin-top: 18px;
+}
+.natural-drawing pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.natural-dna > div + div {
+  margin-top: 12px;
+}
+.natural-core {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 24px;
+  margin: 18px 0;
+  border: 1px solid #dce2ef;
+  border-radius: 12px;
+}
+.natural-unknown {
+  background: #d9deea;
+  padding: 18px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+.natural-helix-given {
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #dce2ef;
+  border-radius: 12px;
+  background: #fff;
+}
+.natural-helix-given svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+.natural-helix-given figcaption {
+  font-size: 13px;
+  color: #52617d;
+}
+
+.natural-drawing,
+.natural-given,
+.natural-review,
+.natural-pan {
+  min-width: 0;
+  max-width: 100%;
+}
+.assessment-results .result-row:has(.natural-drawing) {
+  min-width: 0;
+}
+.assessment-results .result-row:has(.natural-drawing) > div {
+  min-width: 0;
+}
+
+.natural-repeat-preview {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.natural-workbench[data-focus="unit"] .natural-first-control {
+  margin-top: 0;
+}
+
+.natural-pan-help {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--secondary);
+}

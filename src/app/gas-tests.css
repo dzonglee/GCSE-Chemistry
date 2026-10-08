@@ -1,0 +1,438 @@
+.sample-task-panel:has(.gas-tests-workbench) .question-navigation {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  min-width: 0;
+  overflow-x: auto;
+}
+.sample-task-panel:has(.gas-tests-workbench) .question-navigation button {
+  flex: 0 0 auto;
+}
+.gas-tests-workbench {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #d9deea;
+  border-radius: 12px;
+  background: #fff;
+  color: #18243a;
+}
+.gas-tests-workbench h3,
+.gas-original h3,
+.gas-scene h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+.gas-tests-workbench p {
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+.gas-original {
+  padding: 12px;
+  border-radius: 10px;
+  background: #f4f7fc;
+  margin-bottom: 12px;
+}
+.gas-original blockquote {
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid #dce2ed;
+  border-radius: 8px;
+  background: #fff;
+}
+.gas-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.gas-fields label,
+.gas-evidence-step label {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  font-size: 14px;
+}
+.gas-fields label > span:first-child,
+.gas-evidence-step label > span:first-child {
+  font-weight: 700;
+}
+.gas-fields select,
+.gas-evidence-step select {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 10px;
+  border: 1px solid #bcc6d6;
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  color: inherit;
+}
+.gas-selected {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+  background: #eceffc;
+  padding: 8px;
+  border: 1px solid #3545c5;
+  border-radius: 6px;
+}
+.gas-model-actions,
+.gas-stage-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.gas-model-actions button,
+.gas-stage-buttons button,
+.gas-2d-toggle {
+  min-height: 44px;
+  max-width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #bac4d6;
+  border-radius: 8px;
+  background: #fff;
+  color: #263779;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.gas-model-actions button:first-child {
+  background: #3545c5;
+  color: #fff;
+  border-color: #3545c5;
+}
+.gas-tests-workbench button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.gas-tests-workbench button:focus-visible,
+.gas-tests-workbench select:focus-visible,
+.gas-svg-pan:focus-visible,
+.gas-canvas:focus-visible {
+  outline: 3px solid #ba8b08;
+  outline-offset: 3px;
+}
+.gas-source-sketch:focus-visible,
+.gas-cold-svg:focus-visible {
+  outline: 3px solid #ba8b08;
+  outline-offset: 3px;
+}
+.gas-stage-buttons button[aria-pressed="true"] {
+  background: #f8e861;
+  color: #202638;
+  border-color: #c8b73b;
+}
+.gas-recorded-frame {
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #dce2ed;
+  border-radius: 8px;
+  min-height: 90px;
+}
+.gas-caption {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #536175;
+}
+.gas-source-sketch {
+  max-width: 100%;
+  overflow: auto;
+}
+.gas-source-sketch svg {
+  display: block;
+  width: 290px;
+  min-width: 290px;
+  max-width: none;
+  height: 170px;
+}
+.gas-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.gas-comparison article {
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #dce2ed;
+  border-radius: 8px;
+  min-width: 0;
+}
+.gas-comparison h4 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+.gas-feedback {
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.gas-correct {
+  background: #e7f4ec;
+  color: #1b6048;
+}
+.gas-reconsider {
+  background: #fff4da;
+  color: #664716;
+}
+.gas-feedback ul {
+  padding-left: 20px;
+}
+.gas-feedback li {
+  overflow-wrap: anywhere;
+  margin-bottom: 8px;
+}
+.gas-scene {
+  margin-top: 16px;
+}
+.gas-canvas {
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #dce2ed;
+  border-radius: 10px;
+  background: #f4f7fc;
+}
+.gas-canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+.gas-apparatus {
+  margin: 12px 0;
+  min-width: 0;
+}
+.gas-svg-pan {
+  max-width: 100%;
+  overflow: auto;
+  border: 1px solid #dce2ed;
+  border-radius: 10px;
+  overscroll-behavior-x: contain;
+}
+.gas-svg-pan svg {
+  display: block;
+  width: 410px;
+  min-width: 410px;
+  max-width: none;
+  height: 335px;
+}
+.gas-apparatus figcaption {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+.gas-evidence-chain {
+  display: grid;
+  gap: 12px;
+}
+.gas-evidence-step {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 10px;
+  position: relative;
+  padding: 12px;
+  border: 1px solid #dce2ed;
+  border-radius: 10px;
+}
+.gas-step-number {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #3545c5;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+.gas-evidence-step:not(:last-child):after {
+  content: "↓";
+  position: absolute;
+  bottom: -19px;
+  left: 24px;
+  background: #fff;
+  padding: 0 4px;
+  color: #536175;
+  z-index: 1;
+}
+@media (max-width: 560px) {
+  .gas-tests-workbench[data-gas-mode="procedure"] .gas-original {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  .gas-tests-workbench[data-gas-mode="procedure"] .gas-original p {
+    margin: 4px 0;
+  }
+  .gas-tests-workbench {
+    padding: 10px;
+  }
+  .gas-original {
+    padding: 10px;
+  }
+  .gas-fields,
+  .gas-comparison {
+    grid-template-columns: 1fr;
+  }
+  .gas-canvas {
+    height: 290px;
+  }
+  .gas-evidence-step {
+    padding: 10px;
+    grid-template-columns: 26px minmax(0, 1fr);
+    gap: 8px;
+  }
+  .gas-step-number {
+    width: 24px;
+    height: 24px;
+  }
+  .gas-tests-workbench h3,
+  .gas-original h3 {
+    font-size: 16px;
+  }
+}
+.gas-cold-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.gas-cold-pair article {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #dce2ed;
+  border-radius: 10px;
+  background: #fff;
+}
+.gas-cold-svg {
+  max-width: 100%;
+  overflow: auto;
+}
+.gas-cold-svg svg {
+  display: block;
+  width: 250px;
+  min-width: 250px;
+  max-width: none;
+  height: 205px;
+}
+.gas-cold-original p {
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 560px) {
+  .gas-cold-pair {
+    grid-template-columns: 1fr;
+  }
+}
+.gas-drawing,
+.gas-drawing-review {
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid #dce2ed;
+  border-radius: 10px;
+  background: #fff;
+}
+.gas-drawing-source {
+  padding: 10px;
+  background: #f4f7fc;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.gas-drawing-source p,
+.gas-drawing-review p {
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.gas-drawing-fields {
+  display: grid;
+  gap: 12px;
+}
+.gas-drawing-fields label {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  font-size: 14px;
+}
+.gas-drawing-fields label > span:first-child {
+  font-weight: 700;
+}
+.gas-drawing-fields select,
+.gas-drawing-fields textarea {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 10px;
+  border: 1px solid #bcc6d6;
+  border-radius: 8px;
+  font: inherit;
+  color: #18243a;
+  background: #fff;
+}
+.gas-drawing-fields textarea {
+  resize: vertical;
+}
+.gas-drawing-fields select:focus-visible,
+.gas-drawing-fields textarea:focus-visible,
+.gas-drawing-pan:focus-visible {
+  outline: 3px solid #ba8b08;
+  outline-offset: 3px;
+}
+.gas-drawing-figure {
+  margin: 12px 0;
+  min-width: 0;
+}
+.gas-drawing-figure figcaption {
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.gas-drawing-pan {
+  max-width: 100%;
+  overflow: auto;
+  border: 1px solid #dce2ed;
+  border-radius: 10px;
+  overscroll-behavior-x: contain;
+}
+.gas-drawing-pan svg {
+  display: block;
+  width: 340px;
+  min-width: 340px;
+  max-width: none;
+  height: 285px;
+}
+.gas-drawing-labels {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.gas-drawing-labels dt {
+  font-weight: 700;
+}
+.gas-drawing-labels dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.gas-drawing > button {
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1px solid #bac4d6;
+  border-radius: 8px;
+  background: #fff;
+  color: #263779;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.gas-drawing > button:disabled {
+  opacity: 0.5;
+}
+.gas-drawing-review h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}

@@ -1,0 +1,6905 @@
+/* Individually authored journeys follow the inspected Maths lesson shell. */
+.sample-lesson {
+  --ink: #111827;
+  --border: #e2e6ee;
+  --sunken: #f7f8fb;
+  --control-border: #c9d0dc;
+  --hint-bg: #fdf4dc;
+  --hint-border: #f0dda6;
+  --hint-ink: #7a5300;
+}
+.shell-bank {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  background: var(--sunken);
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+.shell-counters {
+  display: grid;
+  gap: 7px;
+}
+.shell-current {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  margin-top: 12px;
+  background: var(--sunken);
+  border-radius: 8px;
+}
+.shell-current span {
+  font-size: 1.25rem;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+}
+.shell-current small {
+  color: var(--secondary);
+}
+.shell-diagram {
+  margin: 12px 0;
+}
+.shell-diagram svg {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  margin: auto;
+}
+.shell-diagram figcaption {
+  color: var(--secondary);
+  font-size: 0.78rem;
+  text-align: center;
+  line-height: 1.5;
+}
+.shell-view-switch {
+  margin-top: 12px;
+}
+.answer-diagram {
+  margin-top: 14px;
+  font-size: 0.86rem;
+}
+.answer-diagram summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.answer-diagram p {
+  color: var(--secondary);
+}
+.charge-distribution {
+  padding: 0;
+  border: 0;
+  margin: 10px 0 14px;
+}
+.charge-distribution legend {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.charge-distribution > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.scattering-workbench .prediction-card {
+  min-height: 48px;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1.5px solid var(--control-border);
+  background: white;
+  color: var(--ink);
+}
+.scattering-workbench .prediction-card[aria-pressed="true"] {
+  background: var(--blue-tint);
+  border-color: var(--blue);
+  color: #2435a8;
+}
+.alpha-approach {
+  display: grid;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 650;
+  margin-bottom: 12px;
+}
+.scattering-prediction {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  background: var(--sunken);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+.atomic-model-diagram {
+  margin: 14px 0;
+}
+.atomic-model-diagram svg {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  margin: auto;
+}
+.atomic-model-diagram figcaption {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--secondary);
+}
+.scattering-observations {
+  background: var(--sunken);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.87rem;
+}
+.scattering-observations ul {
+  margin-bottom: 0;
+  padding-left: 18px;
+}
+.sample-lesson .lesson-breadcrumb {
+  margin-bottom: 20px;
+  font-size: 0.88rem;
+}
+.sample-title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.sample-title-row h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 850;
+  font-stretch: 112%;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.sample-topic-tile {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--blue);
+  color: white;
+  display: grid;
+  place-items: center;
+  font: 800 1.5rem var(--body);
+  flex-shrink: 0;
+}
+.sample-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.sample-overview p {
+  margin: 0;
+}
+.sample-overview .text-button {
+  font-size: 0.9rem;
+  min-height: 36px;
+  padding: 0;
+}
+.sample-stages {
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  margin-bottom: 20px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.sample-stages button {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 48px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--secondary);
+  padding: 8px 10px;
+  text-align: left;
+  font-size: 0.86rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+.sample-stages button span {
+  display: grid;
+  place-items: center;
+  background: #e6eaf1;
+  color: var(--muted);
+  border-radius: 100px;
+  min-width: 28px;
+  height: 26px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.sample-stages button[aria-current] {
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 800;
+}
+.sample-stages button[aria-current] span {
+  background: var(--ink);
+  color: white;
+}
+.sample-task-panel {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: white;
+  padding: 30px;
+}
+.sample-task-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+.sample-task-chip {
+  background: var(--blue-tint);
+  color: #2336a8;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.sample-task-topline .question-navigation {
+  margin: 0;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.sample-task-topline .question-navigation button {
+  background: white;
+  border: 1.5px solid var(--control-border);
+  border-radius: 10px;
+  min-height: 44px;
+  padding: 9px 12px;
+  width: auto;
+  font-size: 0.85rem;
+  font-weight: 750;
+}
+.sample-task-topline .question-navigation button[aria-current] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: white;
+}
+.sample-task-panel > h2 {
+  font-family: var(--heading);
+  font-weight: 800;
+  font-stretch: 112%;
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+}
+.sample-task-prompt {
+  font-size: 0.98rem;
+  color: var(--secondary);
+  max-width: 70ch;
+  margin: 0 0 20px;
+}
+.sample-task-layout {
+  display: grid;
+  gap: 24px;
+}
+.sample-task-layout.has-model {
+  grid-template-columns: minmax(0, 1fr) minmax(275px, 32%);
+  align-items: start;
+}
+.sample-task-layout > * {
+  min-width: 0;
+}
+.sample-lesson .task-workbench {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  margin: 0;
+  background: white;
+}
+.sample-lesson .bench-instruction {
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.sample-lesson .task-workbench > svg {
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  margin: 10px 0 0;
+  display: block;
+}
+.sample-lesson .particle-tray {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.sample-lesson .particle-choice {
+  background: white;
+  border: 1.5px solid var(--control-border);
+  border-radius: 10px;
+  color: var(--ink);
+  min-width: 0;
+  padding: 10px 5px;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+}
+.sample-lesson .particle-choice[aria-pressed="true"] {
+  background: var(--blue-tint);
+  border: 2px solid var(--blue);
+  padding: 9.5px 4.5px;
+}
+.sample-lesson .particle-choice strong {
+  font-size: 0.84rem;
+}
+.sample-lesson .particle-choice small {
+  font-size: 0.72rem;
+  color: var(--secondary);
+  line-height: 1.4;
+}
+.particle-token {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: white;
+  background: #3f4fd0;
+}
+.particle-token.neutron {
+  background: #c9982f;
+  color: #211600;
+}
+.particle-token.electron {
+  background: #6b3fc4;
+}
+.placement-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.sample-lesson .placement-actions .button {
+  flex: 1;
+  min-height: 44px;
+  padding: 8px 10px;
+  font-size: 0.84rem;
+}
+.region-ledger {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-size: 0.8rem;
+}
+.region-ledger > div {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--sunken);
+}
+.region-ledger span {
+  color: var(--secondary);
+}
+.particle-counters {
+  display: grid;
+  gap: 8px;
+}
+.particle-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.particle-counter > strong {
+  font-size: 0.88rem;
+}
+.counter-steps {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.counter-steps output {
+  font-weight: 800;
+  width: 28px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.counter-steps button {
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid var(--control-border);
+  border-radius: 8px;
+  background: white;
+  font-size: 1.3rem;
+  color: var(--ink);
+}
+.counter-steps button:disabled {
+  background: var(--sunken);
+}
+.sample-lesson[data-lesson="inside-an-atom"] .counter-steps button {
+  width: 44px;
+  height: 44px;
+}
+.sample-lesson[data-lesson="inside-an-atom"]
+  .assessment-session
+  .session-heading {
+  margin: 8px 0;
+}
+.sample-lesson[data-lesson="inside-an-atom"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="inside-an-atom"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="balancing-equations"]
+  .assessment-session
+  .session-heading {
+  margin: 8px 0;
+}
+.sample-lesson[data-lesson="balancing-equations"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="balancing-equations"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="balancing-equations"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="balancing-equations"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="balancing-equations"]
+  .assessment-session
+  .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+.sample-lesson[data-lesson="balancing-equations"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="balancing-equations"] .sample-task-panel > h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="balancing-equations"] .sample-task-prompt {
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="balancing-equations"] .session-heading {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .sample-lesson[data-lesson="balancing-equations"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="balancing-equations"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="balancing-equations"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="balancing-equations"] .sample-task-panel > h2 {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="balancing-equations"] .sample-task-prompt {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="balancing-equations"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="balancing-equations"]
+    .sample-task-topline:has(.practice-task-picker) {
+    grid-template-columns: 1fr;
+  }
+  .sample-lesson[data-lesson="balancing-equations"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+@supports (field-sizing: content) {
+  @media (max-width: 600px) {
+    .sample-lesson[data-lesson="balancing-equations"] .written-answer textarea {
+      field-sizing: content;
+      height: auto;
+      max-height: 420px;
+    }
+  }
+}
+.review-schedule {
+  margin: 4px 0;
+}
+.review-schedule > summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+.review-schedule > summary::after {
+  content: "▸";
+  margin-left: auto;
+}
+.review-schedule[open] > summary::after {
+  transform: rotate(90deg);
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="inside-an-atom"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+  .sample-lesson[data-lesson="inside-an-atom"] .multipart-answer {
+    grid-template-columns: 1fr;
+  }
+  .sample-lesson[data-lesson="inside-an-atom"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+@supports (field-sizing: content) {
+  @media (max-width: 600px) {
+    .sample-lesson[data-lesson="inside-an-atom"] .written-answer textarea {
+      field-sizing: content;
+      height: auto;
+      max-height: 420px;
+    }
+  }
+}
+.atom-ledger {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+.transformation-fixed {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 10px 0 16px;
+}
+.atom-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 16px;
+}
+.atom-comparison > div {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+.atom-comparison .nuclide-card {
+  padding: 8px 0;
+  margin: 0;
+  background: transparent;
+}
+.atom-comparison .nuclide-card > p {
+  display: none;
+}
+.atom-comparison > div > p {
+  margin: 3px 0;
+  color: var(--secondary);
+}
+.nuclide-charge {
+  font-size: 0.9rem;
+  align-self: flex-start;
+  margin-left: -3px;
+}
+.atom-ledger > div {
+  display: grid;
+  gap: 3px;
+}
+.atom-ledger small {
+  font-size: 0.7rem;
+}
+.atom-ledger strong {
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+.atom-ledger span {
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.3;
+}
+.bench-definition {
+  margin: 14px 0 0;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--sunken);
+  color: var(--secondary);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.atom-scene {
+  margin: 18px 0;
+}
+.atom-scene-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  font-size: 0.78rem;
+}
+.atom-scene-heading .text-button {
+  font-size: 0.76rem;
+  padding: 0;
+  min-height: 36px;
+}
+.atom-scene-canvas {
+  height: 340px;
+  width: 100%;
+  margin: 4px 0;
+  background: radial-gradient(ellipse at center, #fff 15%, #f2f5fb 100%);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+}
+.atom-scene-canvas:active {
+  cursor: grabbing;
+}
+.atom-scene-canvas canvas {
+  display: block;
+}
+.atom-scene-fallback > svg {
+  width: 100%;
+  max-height: 340px;
+  display: block;
+}
+.atom-scene-description {
+  font-size: 0.76rem;
+  color: var(--secondary);
+  margin: 10px 0;
+}
+.atom-view-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.sample-lesson .atom-view-controls .button {
+  min-height: 40px;
+  padding: 7px 10px;
+  font-size: 0.77rem;
+}
+.sample-lesson .atom-view-controls .button[aria-pressed="true"] {
+  background: var(--blue-tint);
+  border-color: var(--blue);
+}
+.atom-view-controls .text-button {
+  font-size: 0.76rem;
+  min-height: 40px;
+  padding: 4px;
+}
+.atom-scene-caption {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin: 10px 0 0;
+  line-height: 1.4;
+}
+.atom-asset-download {
+  font-size: 0.73rem;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.atom-asset-download .text-button {
+  font-size: 0.76rem;
+}
+.bench-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin-top: 18px;
+}
+.sample-lesson .bench-actions .button {
+  min-height: 44px;
+  padding: 9px 14px;
+  font-size: 0.88rem;
+}
+.sample-lesson .bench-actions .text-button {
+  padding: 0;
+  min-height: 44px;
+  font-size: 0.84rem;
+}
+.model-boundaries {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.model-boundaries summary {
+  cursor: pointer;
+}
+.sample-hint {
+  border: 1px solid var(--hint-border);
+  border-radius: 14px;
+  background: var(--hint-bg);
+  color: var(--ink);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+.sample-hint > strong {
+  color: var(--hint-ink);
+  display: block;
+  font-size: 0.86rem;
+  margin-bottom: 4px;
+}
+.sample-hint > strong {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sample-hint svg {
+  width: 16px;
+  height: 16px;
+}
+.sample-hint p {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+.sample-task-answer .question-panel {
+  background: var(--sunken);
+  padding: 18px;
+  border: 0;
+  border-radius: 14px;
+  margin: 0 0 18px;
+}
+.sample-task-answer .numeric-label {
+  font-weight: 750;
+  font-size: 0.88rem;
+}
+.sample-task-answer .numeric-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sample-task-answer .numeric-input input {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  background: white;
+  border: 1.5px solid var(--control-border);
+  min-height: 48px;
+  font-weight: 400;
+}
+.sample-task-answer .numeric-input span {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.sample-task-answer .numeric-label small {
+  font-size: 0.74rem;
+  font-weight: 400;
+  margin-top: 6px;
+}
+.sample-task-answer .sample-check-answer {
+  width: 100%;
+  margin-top: 14px;
+  min-height: 48px;
+  font-size: 0.9rem;
+}
+.sample-task-answer .answers {
+  display: grid;
+  gap: 8px;
+}
+.sample-task-answer .answer-option {
+  padding: 10px;
+  gap: 8px;
+  font-size: 0.84rem;
+  background: white;
+}
+.sample-task-answer .answer-option .answer-letter {
+  display: none;
+}
+.sample-task-answer .answer-option input {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+.sample-task-answer .feedback {
+  padding: 12px;
+  font-size: 0.84rem;
+  margin-top: 12px;
+}
+.sample-task-answer .feedback p {
+  margin: 6px 0 0;
+}
+.sample-learning-note {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+.sample-task-actions {
+  display: grid;
+  gap: 10px;
+}
+.sample-task-actions .button {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+.sample-recovery {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.sample-recovery .text-button {
+  font-size: 0.8rem;
+  padding: 0;
+  min-height: 36px;
+}
+.sample-explanation {
+  margin-top: 22px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  font-size: 0.88rem;
+}
+.sample-explanation summary,
+.sample-extras summary {
+  cursor: pointer;
+  font-weight: 750;
+}
+.sample-extras {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+.sample-extras > details {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 20px;
+  font-size: 0.9rem;
+}
+.sample-lesson .multipart-answer {
+  font-size: 0.8rem;
+  gap: 8px;
+}
+.sample-lesson .nuclide-card {
+  padding: 12px;
+  gap: 12px;
+  background: white;
+  margin-bottom: 14px;
+}
+.sample-lesson .nuclide-card p {
+  font-size: 0.75rem;
+}
+.sample-lesson .nuclide > strong {
+  font-size: 2rem;
+}
+.sample-lesson .nuclide-numbers {
+  font-size: 0.9rem;
+}
+.topic-lesson-links {
+  list-style: none;
+  margin: 2px 0 12px 20px;
+  padding: 0 0 0 10px;
+  border-left: 2px solid var(--blue);
+}
+.topic-lesson-links li a {
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  color: var(--secondary);
+}
+body:has(.sample-lesson) .brand-mark {
+  background: #111827;
+  color: white;
+}
+body:has(.sample-lesson) .brand {
+  font-weight: 800;
+}
+body:has(.sample-lesson) .nav-main:first-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  border-radius: 12px;
+  background: #eef1f6;
+  padding: 5px;
+}
+body:has(.sample-lesson) .nav-main:first-child a {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 8px 5px;
+}
+body:has(.sample-lesson) .topic-number {
+  background: var(--topic);
+  color: white;
+  font-weight: 800;
+  border-radius: 6px;
+}
+@media (max-width: 1180px) and (min-width: 901px) {
+  .sample-task-layout.has-model {
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 33%);
+    gap: 16px;
+  }
+  .sample-task-panel {
+    padding: 24px;
+  }
+}
+@media (max-width: 900px) {
+  .sample-task-layout.has-model {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  body:has(.sample-lesson) main {
+    padding: 18px 18px 40px;
+  }
+  .sample-lesson .lesson-breadcrumb {
+    margin: 0 0 16px;
+  }
+  .sample-lesson
+    .lesson-breadcrumb
+    > :not(:nth-child(3)):not(.sample-tier):not(.sample-course-scope) {
+    display: none;
+  }
+  .sample-lesson .lesson-breadcrumb > a:nth-child(3)::before {
+    content: "‹ ";
+  }
+  .sample-title-row {
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .sample-title-row h1 {
+    font-size: 1.75rem;
+  }
+  .sample-topic-tile {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+  }
+  .sample-overview {
+    margin-bottom: 14px;
+    font-size: 0.84rem;
+  }
+  .sample-overview .text-button {
+    min-height: 28px;
+    font-size: 0.83rem;
+  }
+  .sample-stages {
+    margin-bottom: 16px;
+  }
+  .sample-stages button {
+    flex: 0 0 auto;
+    min-height: 44px;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  .sample-task-panel {
+    padding: 16px;
+  }
+  .sample-task-topline {
+    margin-bottom: 12px;
+  }
+  .sample-task-topline .question-navigation {
+    display: none;
+  }
+  .sample-task-chip {
+    width: 100%;
+  }
+  .sample-task-panel > h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  .sample-task-prompt {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+  .sample-lesson .task-workbench {
+    padding: 14px;
+  }
+  .sample-lesson .particle-tray {
+    gap: 6px;
+  }
+  .sample-lesson .particle-choice {
+    padding: 8px 4px;
+  }
+  .sample-lesson .particle-choice small {
+    font-size: 0.6rem;
+  }
+  .sample-lesson .particle-choice strong {
+    font-size: 0.77rem;
+  }
+  .sample-lesson .particle-choice[aria-pressed="true"] {
+    padding: 7.5px 3.5px;
+  }
+  .sample-task-topline {
+    flex-wrap: wrap;
+  }
+  .sample-task-layout {
+    gap: 20px;
+  }
+  .sample-lesson .placement-actions .button {
+    font-size: 0.75rem;
+    padding: 8px 5px;
+  }
+  .atom-ledger strong {
+    font-size: 0.8rem;
+  }
+  .atom-scene-canvas {
+    height: 280px;
+  }
+  .sample-extras > details {
+    padding: 15px 18px;
+  }
+  .sample-task-answer .question-panel {
+    padding: 16px;
+  }
+}
+
+.sample-lesson[data-lesson="transition-metals"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="transition-metals"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="transition-metals"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="transition-metals"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="transition-metals"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="transition-metals"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="transition-metals"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="transition-metals"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="transition-metals"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="transition-metals"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="transition-metals"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="transition-metals"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="transition-metals"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="transition-metals"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="transition-metals"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="transition-metals"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="transition-metals"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+.transition-paper-prediction {
+  margin: 16px 0;
+}
+.transition-paper-prediction > div {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #7b8190;
+  background: #f8f9fc;
+  border-radius: 4px;
+}
+.transition-paper-prediction > div[data-colour="blue"] {
+  background: #4267ca;
+}
+.transition-paper-prediction > div[data-colour="pink"] {
+  background: #e5a5bb;
+}
+.transition-paper-prediction figcaption {
+  font-size: 14px;
+  margin-top: 8px;
+}
+.sample-mobile-tasks {
+  display: none;
+}
+@media (max-width: 650px) {
+  .sample-mobile-tasks {
+    display: flex;
+    margin-top: 20px;
+  }
+  .sample-mobile-tasks button {
+    min-height: 44px;
+    padding: 8px 11px;
+    width: auto;
+    font-size: 0.8rem;
+  }
+  .sample-mobile-tasks button[aria-current] {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: white;
+  }
+}
+.scale-workbench > label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.scale-workbench select {
+  width: 100%;
+  min-height: 44px;
+}
+.scale-calculation {
+  background: var(--ground);
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 16px;
+}
+.scale-calculation p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+.scale-figure {
+  margin: 16px 0;
+}
+.scale-figure svg {
+  width: 100%;
+  height: auto;
+}
+.scale-figure figcaption {
+  font-size: 0.8rem;
+  color: var(--secondary);
+  line-height: 1.6;
+}
+.scale-diagrams {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  align-items: center;
+  gap: 12px;
+}
+@media (max-width: 650px) {
+  .scale-diagrams {
+    grid-template-columns: 1fr;
+  }
+  .scale-diagrams .nucleus-scale-inset {
+    max-width: 210px;
+    justify-self: center;
+  }
+}
+.mixture-workbench > label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.mixture-workbench input[type="range"] {
+  min-height: 44px;
+  width: 100%;
+}
+.mixture-percentages {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.85rem;
+  margin: 8px 0 14px;
+}
+.mixture-figure {
+  margin: 18px 0;
+}
+.mixture-figure svg {
+  width: 100%;
+  height: auto;
+}
+.mixture-figure figcaption {
+  font-size: 0.82rem;
+  color: var(--secondary);
+  line-height: 1.6;
+}
+.mixture-table {
+  width: 100%;
+  font-size: 0.85rem;
+  border-collapse: collapse;
+}
+.mixture-table caption {
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.mixture-table th,
+.mixture-table td {
+  padding: 9px 5px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.mixture-formula {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  background: var(--ground);
+  padding: 12px;
+  border-radius: 8px;
+}
+.isotope-data {
+  width: 100%;
+  font-size: 0.9rem;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.isotope-data caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.isotope-data td,
+.isotope-data th {
+  text-align: left;
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border);
+}
+.position-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.position-controls label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.position-controls select {
+  min-height: 44px;
+  width: 100%;
+}
+.position-selection {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  background: var(--ground);
+  padding: 12px;
+  border-radius: 8px;
+}
+.position-table {
+  width: 100%;
+  table-layout: fixed;
+  font-size: 0.85rem;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+.position-table caption {
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.position-table td,
+.position-table th {
+  height: 36px;
+  text-align: center;
+  padding: 3px 1px;
+  border: 1px solid var(--border);
+}
+.position-table th:first-child {
+  width: 48px;
+  font-size: 0.72rem;
+}
+.position-table .position-proposed {
+  background: var(--blue-tint);
+  color: #263786;
+  border: 2px solid var(--blue);
+}
+.position-caption {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--secondary);
+}
+.first-twenty-details {
+  margin: 16px 0;
+  font-size: 0.86rem;
+}
+.sample-lesson[data-lesson="inside-an-atom"]
+  .question-panel
+  .first-twenty-details {
+  margin: 8px 0;
+}
+.first-twenty-details summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+.first-twenty-reference {
+  overflow-x: auto;
+  max-width: 100%;
+  margin-top: 12px;
+}
+.first-twenty-reference table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 400px;
+  font-size: 0.82rem;
+}
+.first-twenty-reference.symbol-reference table {
+  min-width: 0;
+  font-size: 14px;
+}
+.first-twenty-reference caption {
+  text-align: left;
+  margin: 8px 0;
+  font-weight: 700;
+}
+.first-twenty-reference td,
+.first-twenty-reference th {
+  padding: 9px 5px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.sample-lesson[data-lesson="reacting-masses"] .multipart-answer label {
+  grid-template-rows: 1fr auto;
+}
+
+.reaction-mole-shares {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: white;
+}
+.reaction-mole-bar {
+  height: 28px;
+  background: #eef1f7;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.reaction-mole-bar span {
+  display: block;
+  height: 100%;
+  background: #354bc5;
+}
+.reaction-mole-bar.prediction span {
+  background: #c99532;
+}
+.reaction-mole-shares figcaption {
+  margin-top: 1rem;
+}
+
+.sample-lesson[data-lesson="balancing-from-masses"] .multipart-answer label {
+  grid-template-rows: 1fr auto;
+}
+
+.mass-balance-workbench .element-ledger {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+.mass-balance-workbench .element-ledger caption {
+  margin-bottom: 0.75rem;
+  text-align: left;
+  font-weight: 700;
+}
+.mass-balance-workbench .element-ledger th,
+.mass-balance-workbench .element-ledger td {
+  padding: 0.625rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.mass-balance-workbench .element-ledger th:first-child {
+  text-align: left;
+}
+@media (max-width: 650px) {
+  .mass-balance-workbench .element-ledger {
+    font-size: 0.9rem;
+  }
+}
+
+.extraction-mass-ledger {
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background: var(--ground);
+  border-radius: 0.7rem;
+}
+.extraction-mass-ledger svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.extraction-mass-ledger figcaption {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.acid-pair-inventory {
+  padding: 0.7rem;
+  background: var(--ground);
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+}
+.acid-pair-inventory dl {
+  display: grid;
+  gap: 0.6rem;
+}
+.acid-pair-inventory dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.acid-pair-inventory dd {
+  font-weight: 700;
+  margin: 0;
+}
+
+.neutralisation-focus-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin: 0.7rem 0;
+}
+.neutralisation-focus-controls .button {
+  min-width: 0;
+  padding-inline: 0.4rem;
+}
+.neutralisation-focus-controls [aria-pressed="true"] {
+  border-color: var(--blue);
+  background: var(--blue-tint);
+}
+.neutralisation-single-state {
+  grid-template-columns: 1fr;
+}
+
+.aqueous-gas-graph table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: 1rem;
+}
+.aqueous-gas-graph th,
+.aqueous-gas-graph td {
+  padding: 0.5rem 0.4rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.aqueous-gas-graph caption {
+  text-align: left;
+  padding-bottom: 0.5rem;
+}
+
+.sample-lesson .half-counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+}
+.sample-lesson .half-counter strong {
+  font-size: 0.9rem;
+}
+.sample-lesson .half-balance,
+.sample-lesson .half-external-charge {
+  background: var(--blue-tint);
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+}
+.sample-lesson .half-equation-preview {
+  font-weight: 700;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+  padding: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+}
+
+.sample-lesson .ph-classification {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin: 0.6rem 0;
+}
+.sample-lesson .ph-classification button {
+  min-height: 44px;
+  font-size: 0.85rem;
+}
+.sample-lesson .ph-swatch {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  border: 1px solid var(--border);
+  vertical-align: middle;
+  border-radius: 0.2rem;
+}
+.sample-lesson .ph-colour-chart,
+.sample-lesson .ph-measurements table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.sample-lesson .ph-colour-chart td,
+.sample-lesson .ph-colour-chart th,
+.sample-lesson .ph-measurements td,
+.sample-lesson .ph-measurements th {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.sample-lesson .ph-colour-chart caption,
+.sample-lesson .ph-measurements caption {
+  text-align: left;
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+}
+.sample-lesson .ph-measurements {
+  margin: 1rem 0;
+}
+.sample-lesson .ph-measurements svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.sample-lesson .ph-probe-canvas {
+  height: 320px;
+}
+
+.thermal-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 12px 0;
+}
+.thermal-fields > div {
+  min-width: 0;
+}
+.thermal-workbench .thermal-fields label {
+  display: block;
+  margin: 0 0 6px;
+}
+.thermal-fields input,
+.thermal-fields select {
+  width: 100%;
+  max-width: 100%;
+  min-height: 44px;
+}
+.thermal-selection {
+  font-size: 0.88rem;
+  margin: 6px 0;
+  color: var(--secondary);
+}
+.thermal-workbench figure {
+  margin: 16px 0;
+}
+.thermal-workbench svg {
+  display: block;
+  width: 100%;
+  max-height: 300px;
+}
+.thermal-workbench dt {
+  font-weight: 700;
+}
+.thermal-workbench dd {
+  margin: 0 0 12px;
+}
+.thermal-workbench table {
+  width: 100%;
+  margin: 16px 0;
+}
+.thermal-equation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.thermal-reaction-arrow {
+  display: grid;
+  text-align: center;
+  line-height: 1.1;
+}
+.thermal-reaction-arrow small {
+  font-size: 0.8rem;
+}
+@media (max-width: 600px) {
+  .thermal-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+.thermal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.reversible-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 12px 0;
+}
+.reversible-fields label,
+.reversible-workbench label {
+  display: block;
+}
+.reversible-fields input,
+.reversible-fields select,
+.reversible-workbench details select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 44px;
+}
+.reversible-selection {
+  font-size: 0.875rem;
+  margin: 6px 0;
+  color: var(--muted);
+}
+.reversible-workbench figure {
+  margin: 16px 0;
+}
+.reversible-workbench svg {
+  width: 100%;
+  max-height: 300px;
+  font-size: 18px;
+}
+.reversible-workbench dt {
+  font-weight: 700;
+}
+.reversible-workbench dd {
+  margin: 0 0 12px;
+}
+.reversible-equation {
+  padding: 16px;
+  background: #f4f6fb;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+.reversible-equation strong {
+  color: #3544c9;
+}
+.reversible-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 12px 0;
+}
+.reversible-vessel {
+  border: 3px solid #828b9c;
+  border-radius: 20px;
+  padding: 14px;
+  background: #f7f9fc;
+}
+.reversible-token-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+.reversible-token {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 46px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+.reversible-token small {
+  font-size: 12px;
+}
+.token-a {
+  background: #e7eaff;
+  color: #2739ac;
+}
+.token-b {
+  background: #daf3eb;
+  color: #086050;
+}
+.token-changed {
+  border-color: #84641d;
+  box-shadow: 0 0 0 2px #f5e4b6;
+}
+.reversible-boundary {
+  padding: 12px;
+  border-left: 4px solid #08756f;
+  background: #edf7f4;
+}
+.reversible-traces {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.reversible-traces > p {
+  grid-column: 1/-1;
+}
+.reversible-workbench table {
+  width: 100%;
+  table-layout: fixed;
+}
+.reversible-workbench th,
+.reversible-workbench td {
+  overflow-wrap: anywhere;
+}
+.reversible-workbench figcaption {
+  font-size: 0.875rem;
+  margin: 10px 0;
+}
+.reversible-workbench details {
+  margin-top: 12px;
+}
+@media (max-width: 600px) {
+  .reversible-fields,
+  .reversible-traces {
+    grid-template-columns: 1fr;
+  }
+  .reversible-token-grid {
+    gap: 8px;
+  }
+  .reversible-vessel {
+    padding: 10px;
+  }
+  .reversible-token {
+    gap: 3px;
+  }
+  .reversible-token small {
+    font-size: 11px;
+  }
+}
+
+.reversible-token-figure table th:first-child {
+  width: 50%;
+  white-space: normal;
+}
+
+.reversible-fields > div {
+  min-width: 0;
+}
+
+.reversible-reading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+.reversible-reading p {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #edf7f4;
+  overflow-wrap: anywhere;
+}
+.reversible-reading p:last-child {
+  background: #edf0ff;
+}
+.reversible-reading-arrow {
+  font-size: 24px;
+  color: #3544c9;
+}
+@media (max-width: 600px) {
+  .reversible-reading {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .reversible-reading-arrow {
+    text-align: center;
+    transform: rotate(90deg);
+  }
+}
+
+.shift-workbench {
+  min-width: 0;
+}
+.shift-workbench h4 {
+  margin: 0 0 8px;
+}
+.shift-equation {
+  font-size: 1.12rem;
+  font-weight: 700;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.shift-stage {
+  padding: 10px 12px;
+  background: #edf0fd;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.shift-fields,
+.shift-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+.shift-fields > div,
+.shift-two > section {
+  min-width: 0;
+}
+.shift-fields label,
+.shift-workbench details label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.shift-fields input,
+.shift-fields select,
+.shift-workbench details select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 44px;
+}
+.shift-selection {
+  font-size: 0.9rem;
+  color: #4e5b70;
+  overflow-wrap: anywhere;
+  margin: 6px 0;
+}
+.shift-two > section {
+  background: #f4f6fb;
+  border: 1px solid #dce2ec;
+  padding: 14px;
+  border-radius: 10px;
+}
+.shift-workbench figure {
+  margin: 16px 0;
+}
+.shift-workbench svg {
+  display: block;
+  width: 100%;
+  max-height: 300px;
+  font-size: 36px;
+}
+.shift-workbench figcaption {
+  font-size: 0.9rem;
+  color: #4e5b70;
+}
+.shift-scroll {
+  overflow-x: auto;
+}
+.shift-workbench table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.shift-workbench th,
+.shift-workbench td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #e2e6ee;
+  overflow-wrap: anywhere;
+}
+.shift-workbench th:first-child {
+  width: 45%;
+}
+.shift-workbench button {
+  min-height: 44px;
+  max-width: 100%;
+  white-space: normal;
+}
+.shift-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+@media (max-width: 600px) {
+  .shift-fields,
+  .shift-two {
+    grid-template-columns: 1fr;
+  }
+  .shift-equation {
+    font-size: 1rem;
+  }
+  .shift-workbench th,
+  .shift-workbench td {
+    padding: 7px 5px;
+  }
+}
+
+.shift-two input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+}
+.shift-two label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.shift-tally {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0;
+}
+.shift-tally span {
+  display: grid;
+  place-items: center;
+  min-width: 30px;
+  min-height: 30px;
+  background: #dce2fd;
+  border: 1px solid #a6b0df;
+  border-radius: 7px;
+  font-weight: 700;
+}
+
+.shift-workbench .model-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 12px 0;
+}
+.shift-workbench button {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+  line-height: 1.35;
+  cursor: pointer;
+}
+.shift-workbench button.button {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+  font-weight: 700;
+}
+.shift-workbench button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+.shift-workbench button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.shift-workbench .shift-data-table th:first-child {
+  width: 30%;
+}
+.shift-workbench .shift-data-table th[scope="col"] {
+  font-size: 0.95rem;
+}
+
+.practical-workbench {
+  color: #172139;
+  line-height: 1.6;
+  padding: 20px;
+  border: 1px solid #e0e5f0;
+  border-radius: 16px;
+  background: #fff;
+  min-width: 0;
+}
+.practical-workbench h3 {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-top: 0;
+}
+.practical-workbench button {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #d7dfed;
+  border-radius: 9px;
+  background: white;
+  color: #172139;
+  font: inherit;
+  cursor: pointer;
+}
+.practical-workbench button.button {
+  background: #3344c8;
+  color: white;
+  border-color: #3344c8;
+}
+.practical-workbench button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.practical-workbench :focus-visible {
+  outline: 3px solid #3444c8;
+  outline-offset: 3px;
+}
+.practical-workbench label {
+  display: block;
+  font-weight: 650;
+  margin: 18px 0 8px;
+}
+.practical-workbench input,
+.practical-workbench select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 11px;
+  border: 1px solid #a4b5d1;
+  border-radius: 8px;
+  background: #fff;
+  color: #172139;
+  font: inherit;
+}
+.practical-workbench .model-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+.practical-workbench table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.practical-workbench caption {
+  font-weight: 500;
+  padding: 8px;
+}
+.practical-workbench th,
+.practical-workbench td {
+  padding: 10px 6px;
+  text-align: left;
+  border-bottom: 1px solid #d8e0ef;
+  vertical-align: top;
+}
+.practical-workbench th {
+  font-size: 0.95rem;
+}
+.practical-workbench th:first-child {
+  width: 30%;
+}
+.practical-workbench .practical-scroll {
+  overflow-x: auto;
+}
+.practical-workbench .practical-scroll table {
+  min-width: 290px;
+}
+.practical-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.practical-selection,
+.practical-note,
+.practical-workbench figcaption {
+  font-size: 0.9rem;
+  color: #4c5e79;
+}
+.practical-workbench svg {
+  display: block;
+  width: 100%;
+  font-size: 36px;
+}
+.practical-workbench figure {
+  margin: 16px 0;
+}
+.practical-equation {
+  font-weight: 650;
+  text-align: center;
+}
+.practical-dilution {
+  display: flex;
+  min-height: 60px;
+  border: 2px solid #7785a6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.practical-dilution div:first-child {
+  background: #f5dc64;
+  flex: none;
+  min-width: 0;
+}
+.practical-dilution div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  overflow: hidden;
+  background: #deedf8;
+}
+.practical-observation {
+  padding: 16px;
+  background: #f3f5fb;
+  border-radius: 12px;
+}
+.practical-cross {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  background: white;
+  border: 1px solid #d6dfec;
+}
+.practical-workbench details {
+  margin-top: 18px;
+}
+.practical-workbench summary {
+  font-weight: 650;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .practical-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .practical-workbench {
+    padding: 14px;
+  }
+  .practical-workbench th,
+  .practical-workbench td {
+    padding: 8px 5px;
+  }
+}
+
+.practical-dilution .practical-unfilled {
+  background: #eef0f5;
+  color: #4c5e79;
+}
+
+@media (max-width: 700px) {
+  .practical-workbench .practical-scroll table {
+    min-width: 0;
+    table-layout: fixed;
+  }
+  .practical-workbench .practical-scroll th:first-child {
+    width: 55%;
+  }
+}
+
+@media (max-width: 700px) {
+  .practical-workbench .practical-scroll th,
+  .practical-workbench .practical-scroll td,
+  .practical-workbench .practical-scroll caption {
+    overflow-wrap: anywhere;
+  }
+}
+
+.oil-workbench,
+.oil-drawing {
+  min-width: 0;
+  color: #17243d;
+  overflow-wrap: anywhere;
+}
+.oil-workbench h3 {
+  font-size: 1.12rem;
+  line-height: 1.4;
+  margin: 18px 0 12px;
+}
+.oil-workbench p,
+.oil-drawing p {
+  line-height: 1.6;
+}
+.oil-workbench label,
+.oil-drawing label {
+  display: block;
+  font-weight: 650;
+  margin: 18px 0 8px;
+}
+.oil-workbench input,
+.oil-workbench select,
+.oil-drawing input,
+.oil-drawing select {
+  width: 100%;
+  min-height: 48px;
+  font: inherit;
+  border: 1px solid #a4b3d1;
+  border-radius: 9px;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.oil-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.oil-selection {
+  font-size: 0.92rem;
+  color: #526785;
+  margin: 4px 0 12px;
+}
+.oil-workbench table,
+.oil-drawing table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+.oil-workbench caption,
+.oil-drawing caption {
+  padding: 10px;
+  font-weight: 600;
+}
+.oil-workbench th,
+.oil-workbench td,
+.oil-drawing th,
+.oil-drawing td {
+  padding: 10px 7px;
+  border-bottom: 1px solid #dce3ef;
+  vertical-align: top;
+  text-align: left;
+}
+.oil-component-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  min-height: 44px;
+  text-align: left;
+  border: 1px solid #abb8d0;
+  border-radius: 10px;
+  padding: 12px;
+  background: white;
+  color: #17243d;
+  font: inherit;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.oil-component-choice strong {
+  font-size: 1.12rem;
+}
+.oil-component-choice[aria-pressed="true"] {
+  background: #eaf0ff;
+  border: 2px solid #3545bf;
+  padding: 11px;
+}
+.oil-components {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.oil-stage {
+  border: 1px solid #d7dfef;
+  border-left: 5px solid #536cb8;
+  border-radius: 9px;
+  padding: 0 12px 6px;
+  margin: 10px 0;
+  background: #f8faff;
+}
+.oil-given {
+  padding: 12px;
+  background: #eff3fb;
+  border-radius: 10px;
+}
+.oil-order {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.oil-order-card {
+  border: 1px solid #c2cee3;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  min-width: 0;
+}
+.oil-order-card strong {
+  font-size: 1.12rem;
+}
+.oil-size-bar {
+  height: 14px;
+  background: #eef1f7;
+  border: 1px solid #b4bfd2;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.oil-size-bar span {
+  display: block;
+  height: 100%;
+  background: #3a4fc1;
+}
+.oil-workbench .model-controls,
+.oil-drawing .model-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 14px 0;
+}
+.oil-workbench button,
+.oil-drawing button {
+  min-height: 44px;
+  font: inherit;
+  border-radius: 9px;
+}
+.oil-workbench button:not(.button):not(.oil-component-choice),
+.oil-drawing button {
+  padding: 9px 12px;
+  border: 1px solid #bdc9df;
+  background: white;
+  color: #17243d;
+  cursor: pointer;
+}
+.oil-workbench button:disabled,
+.oil-drawing button:disabled {
+  opacity: 0.48;
+  cursor: default;
+}
+.oil-workbench svg,
+.oil-drawing svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-size: 26px;
+}
+.oil-workbench figure {
+  margin: 18px 0;
+}
+.oil-chart-heading {
+  font-weight: 600;
+}
+.oil-scene .oil-canvas {
+  width: 100%;
+  height: 260px;
+  min-height: 260px;
+  touch-action: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.oil-scene figcaption {
+  font-size: 0.92rem;
+  color: #526785;
+}
+.oil-workbench summary {
+  cursor: pointer;
+  font-weight: 650;
+  padding: 12px 0;
+  min-height: 44px;
+}
+.oil-workbench :focus-visible,
+.oil-drawing :focus-visible {
+  outline: 3px solid #293db9;
+  outline-offset: 3px;
+}
+@media (max-width: 700px) {
+  .oil-fields,
+  .oil-components,
+  .oil-order {
+    grid-template-columns: 1fr;
+  }
+  .oil-workbench th,
+  .oil-workbench td,
+  .oil-drawing th,
+  .oil-drawing td {
+    padding: 9px 5px;
+  }
+}
+
+.oil-workbench .model-controls .button {
+  background: #3341c2;
+  color: white;
+  border: 1px solid #3341c2;
+  padding: 10px 14px;
+}
+.oil-drawing svg {
+  max-width: 420px;
+}
+
+.alkane-workbench,
+.alkane-drawing {
+  min-width: 0;
+  color: #263149;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.alkane-workbench button,
+.alkane-drawing button,
+.alkane-workbench input,
+.alkane-workbench select,
+.alkane-drawing select {
+  min-height: 44px;
+  max-width: 100%;
+  font: inherit;
+  border: 1px solid #cbd3e0;
+  border-radius: 8px;
+  background: white;
+  padding: 8px 12px;
+}
+.alkane-workbench button[aria-pressed="true"] {
+  background: #3349bd;
+  color: white;
+}
+.alkane-attachments fieldset {
+  min-width: 0;
+  border: 1px solid #dbe1eb;
+  border-radius: 10px;
+  margin: 12px 0;
+  padding: 12px;
+}
+.alkane-attachments legend {
+  font-weight: 700;
+}
+.alkane-attachment-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.alkane-attachment-buttons button {
+  overflow-wrap: anywhere;
+}
+.alkane-diagram-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.alkane-diagram-scroll svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.alkane-diagram-scroll text,
+.alkane-supplied-graph text {
+  font-size: 26px;
+  font-family: inherit;
+}
+.alkane-supplied-graph {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+}
+.alkane-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.alkane-field {
+  min-width: 0;
+}
+.alkane-field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.alkane-field input,
+.alkane-field select {
+  width: 100%;
+}
+.alkane-selected {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.alkane-workbench table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+.alkane-workbench th,
+.alkane-workbench td {
+  padding: 8px 4px;
+  border-bottom: 1px solid #dce2ed;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.alkane-workbench caption {
+  text-align: left;
+  font-weight: 700;
+}
+.alkane-given,
+.alkane-report {
+  background: #f3f5fb;
+  border-radius: 10px;
+  padding: 14px;
+}
+.alkane-symbolic {
+  font-size: 28px;
+  font-weight: 700;
+}
+.alkane-substitution {
+  font-size: 20px;
+}
+.alkane-equation-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px;
+  background: #f3f5fb;
+  border-radius: 10px;
+}
+.alkane-equation-display span {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.alkane-product-packets {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.alkane-product-packets > div {
+  background: #f3f5fb;
+  border-radius: 8px;
+  padding: 8px;
+  overflow-wrap: anywhere;
+}
+.alkane-product-packets strong {
+  font-size: 26px;
+}
+.alkane-product-packets span {
+  display: block;
+  font-size: 14px;
+}
+.alkane-workbench details select {
+  width: 100%;
+  margin: 8px 0;
+}
+.alkane-workbench .model-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.alkane-workbench .button {
+  background: #3349bd;
+  color: white;
+}
+.alkane-drawing > select {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+}
+@media (max-width: 600px) {
+  .alkane-fields {
+    grid-template-columns: 1fr;
+  }
+  .alkane-workbench th,
+  .alkane-workbench td {
+    font-size: 14px;
+  }
+}
+.alkane-canvas {
+  height: 260px;
+  max-width: 100%;
+  touch-action: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.alkane-scene {
+  margin: 14px 0;
+}
+.alkane-workbench th,
+.alkane-workbench td {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.alkane-workbench button:focus-visible,
+.alkane-drawing button:focus-visible,
+.alkane-diagram-scroll:focus-visible {
+  outline: 3px solid #e3ac27;
+  outline-offset: 3px;
+}
+
+.result-indicator.self-review {
+  color: #3349bd;
+  background: #eef1ff;
+}
+@media (max-width: 600px) {
+  .results-list .result-row summary:has(.result-self-review) {
+    flex-wrap: wrap;
+  }
+  .results-list .result-row summary > span.result-self-review {
+    display: block;
+    flex-basis: 100%;
+    margin-left: 33px;
+    text-align: left;
+  }
+}
+
+.cracking-workbench,
+.alkene-drawing {
+  min-width: 0;
+  color: #263149;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.cracking-workbench button,
+.alkene-drawing button,
+.cracking-workbench input,
+.cracking-workbench select,
+.alkene-drawing select {
+  min-height: 44px;
+  max-width: 100%;
+  font: inherit;
+  border: 1px solid #cbd3e0;
+  border-radius: 8px;
+  background: white;
+  padding: 8px 12px;
+}
+.cracking-workbench button[aria-pressed="true"] {
+  background: #3349bd;
+  color: white;
+}
+.alkene-attachments fieldset {
+  min-width: 0;
+  border: 1px solid #dbe1eb;
+  border-radius: 10px;
+  margin: 12px 0;
+  padding: 12px;
+}
+.alkene-attachments legend {
+  font-weight: 700;
+}
+.alkene-attachment-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.alkene-attachment-buttons button {
+  overflow-wrap: anywhere;
+}
+.alkene-diagram-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.alkene-diagram-scroll svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.alkene-diagram-scroll text,
+.alkane-supplied-graph text {
+  font-size: 26px;
+  font-family: inherit;
+}
+.alkane-supplied-graph {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+}
+.cracking-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.cracking-field {
+  min-width: 0;
+}
+.cracking-field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.cracking-field input,
+.cracking-field select {
+  width: 100%;
+}
+.cracking-selected {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.cracking-workbench table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+.cracking-workbench th,
+.cracking-workbench td {
+  padding: 8px 4px;
+  border-bottom: 1px solid #dce2ed;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.cracking-workbench caption {
+  text-align: left;
+  font-weight: 700;
+}
+.cracking-given,
+.cracking-report {
+  background: #f3f5fb;
+  border-radius: 10px;
+  padding: 14px;
+}
+.alkane-symbolic {
+  font-size: 28px;
+  font-weight: 700;
+}
+.alkane-substitution {
+  font-size: 20px;
+}
+.alkane-equation-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px;
+  background: #f3f5fb;
+  border-radius: 10px;
+}
+.alkane-equation-display span {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.alkane-product-packets {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.alkane-product-packets > div {
+  background: #f3f5fb;
+  border-radius: 8px;
+  padding: 8px;
+  overflow-wrap: anywhere;
+}
+.alkane-product-packets strong {
+  font-size: 26px;
+}
+.alkane-product-packets span {
+  display: block;
+  font-size: 14px;
+}
+.cracking-workbench details select {
+  width: 100%;
+  margin: 8px 0;
+}
+.cracking-workbench .model-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.cracking-workbench .button {
+  background: #3349bd;
+  color: white;
+}
+.alkene-drawing > select {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+}
+@media (max-width: 600px) {
+  .cracking-fields {
+    grid-template-columns: 1fr;
+  }
+  .cracking-workbench th,
+  .cracking-workbench td {
+    font-size: 14px;
+  }
+}
+.cracking-canvas {
+  height: 260px;
+  max-width: 100%;
+  touch-action: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cracking-scene {
+  margin: 14px 0;
+}
+.cracking-workbench th,
+.cracking-workbench td {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.cracking-workbench button:focus-visible,
+.alkene-drawing button:focus-visible,
+.alkene-diagram-scroll:focus-visible {
+  outline: 3px solid #e3ac27;
+  outline-offset: 3px;
+}
+
+.cracking-equation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px;
+  background: #f3f5fb;
+  border-radius: 10px;
+}
+.cracking-equation span {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.cracking-formulas {
+  font-weight: 700;
+  font-size: 20px;
+}
+.cracking-process-flow > div,
+.bromine-report {
+  background: #f3f5fb;
+  border: 1px solid #dbe1eb;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 12px 0;
+}
+.cracking-process-flow p {
+  margin: 8px 0;
+}
+.cracking-proposed-route {
+  text-align: center;
+}
+.bromine-colour {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+.bromine-swatch {
+  display: block;
+  width: 36px;
+  height: 56px;
+  flex-shrink: 0;
+  border: 2px solid #94a3bb;
+  border-radius: 8px 8px 14px 14px;
+}
+.bromine-swatch.orange {
+  background: #d68f37;
+}
+.bromine-swatch.colourless {
+  background: #fff;
+}
+.bromine-report h4 {
+  font-size: 16px;
+  margin: 0;
+}
+.bromine-report button {
+  width: 100%;
+}
+.alkene-drawing > label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 700;
+}
+.cracking-workbench button[aria-pressed="true"] {
+  background: #3349bd;
+  color: white;
+}
+/* Supplied exam structures use the available card width. */
+.hydrocarbon-given {
+  margin: 0;
+}
+.hydrocarbon-given figcaption {
+  margin-bottom: 0.5rem;
+}
+
+/* Individually reviewed alcohol/acid and fuel-graph constructions. */
+/* Individually reviewed alcohol/acid and fuel-graph constructions. */
+
+.alcohol-workbench,
+.organic-drawing-input {
+  min-width: 0;
+  color: #263149;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.alcohol-workbench button,
+.organic-drawing-input button,
+.alcohol-workbench input,
+.alcohol-workbench select,
+.organic-drawing-input select {
+  min-height: 44px;
+  max-width: 100%;
+  font: inherit;
+  border: 1px solid #cbd3e0;
+  border-radius: 8px;
+  background: white;
+  padding: 8px 12px;
+}
+.alcohol-workbench button[aria-pressed="true"] {
+  background: #3349bd;
+  color: white;
+}
+.organic-attachments fieldset {
+  min-width: 0;
+  border: 1px solid #dbe1eb;
+  border-radius: 10px;
+  margin: 12px 0;
+  padding: 12px;
+}
+.organic-attachments legend {
+  font-weight: 700;
+}
+.organic-attachment-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.organic-attachment-buttons button {
+  overflow-wrap: anywhere;
+}
+.organic-diagram-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.organic-diagram-scroll svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.organic-diagram-scroll text {
+  font-size: 26px;
+  font-family: inherit;
+}
+.organic-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.organic-field {
+  min-width: 0;
+}
+.organic-field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.organic-field input,
+.organic-field select {
+  width: 100%;
+}
+.organic-selected {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.alcohol-workbench table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+.alcohol-workbench th,
+.alcohol-workbench td {
+  padding: 8px 4px;
+  border-bottom: 1px solid #dce2ed;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.alcohol-workbench caption {
+  text-align: left;
+  font-weight: 700;
+}
+.alcohol-workbench details select {
+  width: 100%;
+  margin: 8px 0;
+}
+.alcohol-workbench .model-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.alcohol-workbench .button {
+  background: #3349bd;
+  color: white;
+}
+.organic-drawing-input > select {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+}
+@media (max-width: 600px) {
+  .organic-fields {
+    grid-template-columns: 1fr;
+  }
+  .alcohol-workbench th,
+  .alcohol-workbench td {
+    font-size: 14px;
+  }
+}
+.alcohol-canvas {
+  height: 260px;
+  max-width: 100%;
+  touch-action: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.alcohol-scene {
+  margin: 14px 0;
+}
+.alcohol-workbench th,
+.alcohol-workbench td {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.alcohol-workbench button:focus-visible,
+.organic-drawing-input button:focus-visible,
+.organic-diagram-scroll:focus-visible {
+  outline: 3px solid #e3ac27;
+  outline-offset: 3px;
+}
+.organic-drawing-input > label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 700;
+}
+.alcohol-workbench button[aria-pressed="true"] {
+  background: #3349bd;
+  color: white;
+}
+.alcohol-workbench figure {
+  margin: 0;
+}
+.fuel-apparatus {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.organic-report,
+.organic-reaction-flow > div,
+.fuel-apparatus > div {
+  background: #f3f5fb;
+  border: 1px solid #dbe1eb;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 12px 0;
+}
+.organic-equation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.fuel-normalized-bars {
+  padding: 12px;
+  border: 1px solid #dbe1eb;
+  border-radius: 10px;
+}
+.fuel-bar-track {
+  height: 20px;
+  background: #e8edf5;
+  margin: 8px 0;
+}
+.fuel-bar-track span {
+  display: block;
+  height: 100%;
+  background: #3349bd;
+}
+.fuel-plot-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.fuel-plot-scroll svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.fuel-plot-scroll text {
+  font-size: 20px;
+  font-family: inherit;
+}
+.fuel-plot-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.fuel-plot-fields label {
+  display: block;
+}
+.fuel-plot-fields input,
+.fuel-plot-fields select {
+  width: 100%;
+  min-height: 44px;
+  font: inherit;
+}
+.fuel-drawing-input button,
+.fuel-drawing-input select,
+.fuel-drawing-input input {
+  min-height: 44px;
+  max-width: 100%;
+  font: inherit;
+}
+.model-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.organic-drawing-input > label {
+  display: block;
+  font-weight: 700;
+  margin-top: 12px;
+}
+@media (max-width: 600px) {
+  .fuel-apparatus,
+  .fuel-plot-fields {
+    grid-template-columns: 1fr;
+  }
+}
+.fuel-apparatus {
+  display: block;
+}
+.fuel-apparatus-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.fuel-apparatus-card {
+  min-width: 0;
+  border: 1px solid #dbe1eb;
+  border-radius: 12px;
+  padding: 14px;
+  background: #f7f9fc;
+}
+.fuel-water-vessel {
+  border: 2px solid #8097bc;
+  border-top: 0;
+  border-radius: 0 0 16px 16px;
+  padding: 16px 10px;
+  background: #e8f1fb;
+}
+.fuel-water-vessel span,
+.fuel-burner span,
+.fuel-burner strong {
+  display: block;
+  margin: 4px 0;
+}
+.fuel-heat-arrow {
+  text-align: center;
+  font-size: 32px;
+  color: #b66624;
+  margin: 8px 0;
+}
+.fuel-burner {
+  border: 2px solid #8c98ad;
+  border-radius: 12px;
+  padding: 10px;
+  background: white;
+}
+.fuel-apparatus-card h4 {
+  margin: 0 0 14px;
+}
+@media (max-width: 600px) {
+  .fuel-apparatus-pair {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+}
+
+.fuel-drawing-input button,
+.fuel-drawing-input input,
+.fuel-drawing-input select {
+  border: 1px solid #cbd3e0;
+  border-radius: 8px;
+  background: white;
+  padding: 8px 12px;
+}
+.fuel-drawing-input button[aria-pressed="true"] {
+  background: #3349bd;
+  color: white;
+}
+.fuel-drawing-input button:focus-visible,
+.fuel-drawing-input input:focus-visible,
+.fuel-drawing-input select:focus-visible {
+  outline: 3px solid #e3ac27;
+  outline-offset: 3px;
+}
+.sample-task-topline:has(.practice-task-picker) {
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.practice-task-picker {
+  min-width: 0;
+  flex: 1 1 260px;
+  max-width: 480px;
+}
+.practice-task-picker label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.practice-task-picker select {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #cbd3e0;
+  border-radius: 8px;
+  background: white;
+  font: inherit;
+  padding: 8px 12px;
+}
+.practice-task-picker select:focus-visible {
+  outline: 3px solid #e3ac27;
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .practice-task-picker {
+    max-width: none;
+  }
+}
+
+.polymerisation-workbench,
+.polymerisation-drawing {
+  border: 1px solid #dce2ed;
+  border-radius: 14px;
+  background: #fff;
+  padding: 20px;
+  min-width: 0;
+}
+.polymerisation-workbench h3,
+.polymerisation-drawing h3 {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+.polymerisation-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+  margin: 18px 0;
+}
+.polymerisation-field {
+  min-width: 0;
+}
+.polymerisation-field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.polymerisation-field input,
+.polymerisation-field select {
+  width: 100%;
+  min-height: 44px;
+  background: #fff;
+  border: 1px solid #c8d2e4;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font: inherit;
+  color: #14213d;
+}
+.polymerisation-selected {
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+.polymerisation-original,
+.polymerisation-reactants section,
+.polymerisation-link-proposal {
+  padding: 16px;
+  border: 1px solid #d9e0f0;
+  border-radius: 12px;
+  background: #f4f6fd;
+}
+.polymerisation-source {
+  margin: 20px 0;
+}
+.polymerisation-displayed {
+  margin: 18px 0;
+}
+.polymerisation-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  padding: 8px 0;
+  overscroll-behavior-x: contain;
+}
+.polymerisation-scroll:focus-visible {
+  outline: 3px solid #3542ce;
+  outline-offset: 3px;
+}
+.polymerisation-displayed svg {
+  display: block;
+}
+.polymerisation-displayed line,
+.polymerisation-brackets path {
+  stroke: #526385;
+  stroke-width: 2.4;
+  fill: none;
+}
+.polymerisation-displayed text {
+  font:
+    22px Arial,
+    sans-serif;
+  fill: #465471;
+}
+.polymerisation-displayed .polymerisation-vacant {
+  fill: #a1acc4;
+}
+.polymerisation-brackets path {
+  stroke: #3946c6;
+}
+.polymerisation-displayed figcaption,
+.polymerisation-scene figcaption {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: #485976;
+}
+.polymerisation-scene {
+  margin: 18px 0;
+}
+.polymerisation-canvas {
+  height: 260px;
+  overflow: hidden;
+  background: #f7f9fd;
+  border-radius: 12px;
+  touch-action: none;
+}
+.polymerisation-canvas:focus-visible {
+  outline: 3px solid #3542ce;
+  outline-offset: 3px;
+}
+.polymerisation-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 260px;
+}
+.polymerisation-reactants {
+  display: grid;
+  gap: 12px;
+}
+.polymerisation-reactants p {
+  overflow-wrap: anywhere;
+}
+.polymerisation-tier {
+  font-weight: 700;
+  color: #6a3fb6;
+}
+.polymerisation-workbench .model-controls,
+.polymerisation-scene .model-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 14px 0;
+}
+.polymerisation-workbench button,
+.polymerisation-drawing button {
+  min-height: 44px;
+  border: 1px solid #c8d2e4;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  font: inherit;
+  color: #17243e;
+}
+.polymerisation-workbench button:focus-visible,
+.polymerisation-drawing button:focus-visible {
+  outline: 3px solid #3542ce;
+  outline-offset: 3px;
+}
+.polymerisation-workbench .model-controls button:first-child {
+  background: #3542ce;
+  color: #fff;
+}
+.polymerisation-scene .model-controls button:first-child {
+  background: #fff;
+  color: #17243e;
+}
+.polymerisation-workbench button:disabled,
+.polymerisation-drawing button:disabled {
+  opacity: 0.5;
+}
+.polymerisation-workbench .feedback {
+  padding: 15px;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+.polymerisation-workbench .feedback.correct {
+  background: #e7f5ed;
+  color: #146441;
+}
+.polymerisation-workbench .feedback.incorrect {
+  background: #fff2e4;
+  color: #7a4611;
+}
+.polymerisation-workbench details summary {
+  cursor: pointer;
+  min-height: 44px;
+  font-weight: 700;
+  display: list-item;
+  padding: 10px 0;
+}
+@media (max-width: 600px) {
+  .polymerisation-fields {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .polymerisation-workbench,
+  .polymerisation-drawing {
+    padding: 16px;
+  }
+  .polymerisation-scroll svg {
+    max-width: none;
+  }
+  .polymerisation-original {
+    padding: 12px;
+  }
+}
+
+.polymerisation-source + .polymerisation-fields {
+  margin-top: 4px;
+}
+
+.temperature-source-table {
+  width: 100%;
+  margin: 0 0 4px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 16px;
+}
+.temperature-source-table caption {
+  font-weight: 700;
+  text-align: left;
+  padding-bottom: 4px;
+}
+.temperature-source-table td {
+  padding: 2px 4px;
+  width: 33.333%;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+}
+.temperature-drawing-input .organic-fields {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 4px 0 10px;
+}
+.temperature-drawing-input .organic-field label {
+  margin: 0 0 4px;
+}
+.temperature-drawing-input .organic-field input {
+  width: 100%;
+  min-width: 0;
+}
+.temperature-graph-reference {
+  margin: 14px 0;
+}
+.temperature-drawing-input .fuel-plot-scroll text,
+.temperature-graph-reference .fuel-plot-scroll text {
+  font-size: 24px;
+}
+
+.sample-lesson[data-lesson="atomic-models"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="atomic-models"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="atomic-models"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="atomic-models"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="atomic-models"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="atomic-models"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="atomic-models"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="atomic-models"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="atomic-models"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="atomic-models"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="atomic-models"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="atomic-models"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="atomic-models"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="atomic-models"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="atomic-models"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="atomic-models"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="atomic-models"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="atomic-models"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="atomic-models"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="atomic-models"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="atomic-models"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="atomic-models"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="atomic-models"] .bench-instruction {
+  margin-bottom: 8px;
+}
+.atomic-model-diagram.with-text-legend svg text:not(.atomic-charge-symbol) {
+  display: none;
+}
+.atomic-model-diagram.with-text-legend figcaption {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.compact-historical-diagram {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 8px;
+  margin: 4px 0;
+}
+.compact-historical-diagram > figcaption {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.historical-thumbnail .atomic-model-diagram {
+  margin: 0;
+}
+.historical-thumbnail svg text,
+.historical-thumbnail figcaption {
+  display: none;
+}
+.historical-diagram-enlarge {
+  grid-column: 1 / -1;
+}
+.historical-diagram-enlarge > summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+.historical-diagram-enlarge > summary::before {
+  content: "▸";
+  margin-right: 8px;
+}
+.historical-diagram-enlarge[open] > summary::before {
+  content: "▾";
+}
+.historical-diagram-enlarge .atomic-model-diagram {
+  display: block;
+}
+
+.compact-historical-diagram > .historical-thumbnail {
+  grid-column: 1;
+  grid-row: 1;
+}
+.compact-historical-diagram > figcaption {
+  grid-column: 2;
+  grid-row: 1;
+}
+.historical-diagram-enlarge {
+  grid-row: 2;
+}
+.sample-lesson[data-lesson="atomic-models"] .written-answer textarea {
+  margin-top: 4px;
+}
+
+@media (min-width: 601px) {
+  .sample-lesson[data-lesson="atomic-models"] .practice-task-picker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sample-lesson[data-lesson="atomic-models"] .practice-task-picker label {
+    margin: 0;
+    white-space: nowrap;
+  }
+  .sample-lesson[data-lesson="atomic-models"] .practice-task-picker select {
+    min-width: 0;
+    flex: 1;
+  }
+  .sample-lesson[data-lesson="atomic-models"] .compact-historical-diagram {
+    grid-template-columns: 72px minmax(0, 1fr) auto;
+    column-gap: 12px;
+  }
+  .sample-lesson[data-lesson="atomic-models"] .historical-diagram-enlarge {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .sample-lesson[data-lesson="atomic-models"]
+    .historical-diagram-enlarge[open] {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+/* Periodic history keeps the first decision and written response visible. */
+.sample-lesson[data-lesson="periodic-development"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="periodic-development"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="periodic-development"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="periodic-development"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="periodic-development"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="periodic-development"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="periodic-development"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="periodic-development"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="periodic-development"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="periodic-development"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="periodic-development"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="periodic-development"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="periodic-development"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="periodic-development"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="periodic-development"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="periodic-development"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="periodic-development"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="periodic-development"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="periodic-development"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="periodic-development"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="periodic-development"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="periodic-development"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="periodic-development"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.historical-evidence-records {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 12px 0;
+}
+.historical-evidence-records section {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  min-width: 0;
+}
+.historical-evidence-records h3 {
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+.historical-evidence-records p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+}
+.historical-test-workbench > label {
+  display: block;
+  margin: 8px 0;
+}
+.historical-test-workbench select {
+  width: 100%;
+  min-height: 44px;
+}
+@media (max-width: 600px) {
+  .historical-evidence-records {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Group 1 keeps the first decision and written response visible. */
+.sample-lesson[data-lesson="group-reactions"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="group-reactions"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="group-reactions"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="group-reactions"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="group-reactions"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="group-reactions"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="group-reactions"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="group-reactions"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="group-reactions"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="group-reactions"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="group-reactions"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="group-reactions"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="group-reactions"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="group-reactions"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="group-reactions"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="group-reactions"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="group-reactions"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="group-reactions"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="group-reactions"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="group-reactions"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="group-reactions"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="group-reactions"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="group-reactions"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.alkali-reference {
+  margin: 8px 0;
+}
+.alkali-reference summary {
+  min-height: 44px;
+  padding: 10px 8px;
+  cursor: pointer;
+}
+.alkali-reference table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.alkali-reference caption {
+  text-align: left;
+  padding: 8px 0;
+}
+.alkali-reference th,
+.alkali-reference td {
+  padding: 8px 4px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.alkali-reference p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.shell-diagram.with-text-legend svg {
+  max-width: 220px;
+}
+.shell-diagram.with-text-legend svg text {
+  display: none;
+}
+.shell-diagram.with-text-legend figcaption {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.shell-diagram.with-text-legend figcaption strong,
+.shell-diagram.with-text-legend figcaption span {
+  display: block;
+}
+
+.sample-lesson[data-lesson="group-reactions"] .task-workbench button {
+  min-height: 44px;
+}
+.sample-lesson[data-lesson="group-reactions"]
+  .alkali-shell-comparison
+  .shell-diagram {
+  margin: 12px 0;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="group-reactions"] .task-workbench {
+    padding: 12px;
+  }
+}
+
+/* Group 7 keeps the first decision and written response visible. */
+.sample-lesson[data-lesson="group-seven"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="group-seven"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="group-seven"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="group-seven"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="group-seven"] .sample-task-answer .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="group-seven"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="group-seven"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="group-seven"] .assessment-session .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="group-seven"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="group-seven"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="group-seven"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="group-seven"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="group-seven"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="group-seven"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="group-seven"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="group-seven"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="group-seven"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="group-seven"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="group-seven"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="group-seven"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="group-seven"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="group-seven"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="group-seven"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.halogen-reference {
+  margin: 8px 0;
+}
+.halogen-reference summary {
+  min-height: 44px;
+  padding: 10px 8px;
+  cursor: pointer;
+}
+.halogen-reference table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.halogen-reference caption {
+  text-align: left;
+  padding: 8px 0;
+}
+.halogen-reference th,
+.halogen-reference td {
+  padding: 8px 4px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.halogen-reference p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.sample-lesson[data-lesson="group-seven"] .task-workbench button,
+.sample-lesson[data-lesson="group-seven"] .task-workbench input[type="range"] {
+  min-height: 44px;
+}
+.sample-lesson[data-lesson="group-seven"] .halogen-outer figcaption {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.sample-lesson[data-lesson="group-seven"] .halogen-data {
+  font-size: 14px;
+  margin: 8px 0;
+}
+.sample-lesson[data-lesson="group-seven"] .halogen-data th,
+.sample-lesson[data-lesson="group-seven"] .halogen-data td {
+  padding: 4px;
+}
+
+.sample-lesson[data-lesson="group-seven"] .halogen-data {
+  line-height: 1.35;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="group-seven"] .halogen-data caption {
+  padding-bottom: 4px;
+}
+.sample-lesson[data-lesson="group-seven"] .halogen-data th,
+.sample-lesson[data-lesson="group-seven"] .halogen-data td {
+  padding: 3px;
+}
+.sample-lesson[data-lesson="group-seven"] .halogen-response {
+  display: grid;
+  gap: 8px 20px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="group-seven"] .halogen-response > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="group-seven"] .question-panel .answer-option {
+  min-height: 44px;
+  padding: 8px;
+}
+@media (min-width: 601px) {
+  .sample-lesson[data-lesson="group-seven"] .halogen-response {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sample-lesson[data-lesson="group-seven"] .halogen-response .written-answer {
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="group-seven"] .halogen-response {
+    gap: 4px;
+  }
+  .sample-lesson[data-lesson="group-seven"] .halogen-response .halogen-data {
+    margin: 2px 0;
+  }
+}
+
+.sample-lesson[data-lesson="group-zero"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="group-zero"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="group-zero"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="group-zero"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="group-zero"] .sample-task-answer .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="group-zero"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="group-zero"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="group-zero"] .assessment-session .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="group-zero"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="group-zero"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="group-zero"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="group-zero"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="group-zero"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="group-zero"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="group-zero"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="group-zero"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="group-zero"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="group-zero"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="group-zero"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="group-zero"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="group-zero"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="group-zero"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="group-zero"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.noble-boiling-data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 4px 0;
+}
+.noble-boiling-data caption {
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: 4px;
+}
+.noble-boiling-data th,
+.noble-boiling-data td {
+  text-align: left;
+  padding: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.noble-data-response {
+  display: grid;
+  gap: 4px 20px;
+  align-items: start;
+}
+.noble-data-response > * {
+  min-width: 0;
+}
+@media (min-width: 601px) {
+  .noble-data-response {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.sample-lesson[data-lesson="group-zero"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="group-zero"] .noble-boiling-data {
+  line-height: 1.35;
+  margin: 2px 0;
+}
+.sample-lesson[data-lesson="group-zero"] .noble-boiling-data th,
+.sample-lesson[data-lesson="group-zero"] .noble-boiling-data td {
+  padding: 3px;
+}
+.sample-lesson[data-lesson="group-zero"] .noble-data-response .written-answer {
+  gap: 6px;
+}
+.sample-lesson[data-lesson="group-zero"]
+  .noble-use-workbench
+  .alkali-count-table {
+  table-layout: fixed;
+  font-size: 14px;
+}
+.sample-lesson[data-lesson="group-zero"]
+  .noble-use-workbench
+  .alkali-count-table
+  th,
+.sample-lesson[data-lesson="group-zero"]
+  .noble-use-workbench
+  .alkali-count-table
+  td {
+  padding: 4px;
+  overflow-wrap: anywhere;
+}
+.noble-use-workbench figure {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+.noble-use-workbench figcaption {
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="group-zero"] .task-workbench {
+    padding: 12px;
+  }
+  .sample-lesson[data-lesson="group-zero"]
+    .noble-data-response
+    .written-answer
+    textarea {
+    height: 72px;
+    min-height: 72px;
+    padding: 10px;
+  }
+}
+
+.sample-lesson[data-lesson="group-zero"] .noble-boiling-data caption {
+  padding-bottom: 2px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="group-zero"] .sample-task-answer .question-panel {
+    padding-top: 8px;
+  }
+  .sample-lesson[data-lesson="group-zero"]
+    .noble-data-response
+    .written-answer
+    textarea {
+    height: 68px;
+    min-height: 68px;
+  }
+}
+
+.sample-lesson[data-lesson="periodic-patterns"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="periodic-patterns"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="periodic-patterns"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="periodic-patterns"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="periodic-patterns"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="periodic-patterns"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="periodic-patterns"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="periodic-patterns"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="periodic-patterns"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="periodic-patterns"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="periodic-patterns"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="periodic-patterns"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="periodic-patterns"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="periodic-patterns"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="periodic-patterns"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="periodic-patterns"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="periodic-patterns"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="periodic-patterns"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="periodic-patterns"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="periodic-patterns"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="periodic-patterns"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="periodic-patterns"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="periodic-patterns"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="periodic-patterns"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="periodic-patterns"] .position-table,
+.sample-lesson[data-lesson="periodic-patterns"] .position-table th:first-child {
+  font-size: 14px;
+}
+
+.sample-lesson[data-lesson="periodic-patterns"] .shell-response {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="periodic-patterns"] .shell-response > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="periodic-patterns"] .shell-response .shell-diagram {
+  margin: 0;
+}
+.sample-lesson[data-lesson="periodic-patterns"]
+  .shell-response
+  .shell-diagram
+  svg {
+  width: 100%;
+}
+.sample-lesson[data-lesson="periodic-patterns"]
+  .shell-response
+  .shell-diagram
+  svg
+  text {
+  display: none;
+}
+.sample-lesson[data-lesson="periodic-patterns"]
+  .shell-response
+  .shell-diagram
+  figcaption {
+  font-size: 14px;
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="periodic-patterns"] .shell-response {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+  }
+  .sample-lesson[data-lesson="periodic-patterns"]
+    .shell-response
+    .multipart-answer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ionic bonding keeps transfer operations and independent writing visible. */
+.sample-lesson[data-lesson="ionic-bonding"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="ionic-bonding"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="ionic-bonding"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="ionic-bonding"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="ionic-bonding"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="ionic-bonding"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="ionic-bonding"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="ionic-bonding"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="ionic-bonding"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="ionic-bonding"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="ionic-bonding"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ionic-bonding"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="ionic-bonding"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="ionic-bonding"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="ionic-bonding"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="ionic-bonding"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="ionic-bonding"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ionic-bonding"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="ionic-bonding"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="ionic-bonding"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="ionic-bonding"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="ionic-bonding"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="ionic-bonding"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="ionic-bonding"] .task-workbench button {
+  min-height: 44px;
+}
+.sample-lesson[data-lesson="ionic-bonding"] .ionic-diagram-response {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="ionic-bonding"] .ionic-diagram-response > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="ionic-bonding"]
+  .ionic-diagram-response
+  .ion-dot-cross {
+  margin: 0;
+}
+.sample-lesson[data-lesson="ionic-bonding"] .ionic-diagram-response figcaption {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="ionic-bonding"]
+  .ionic-diagram-response
+  figcaption
+  strong,
+.sample-lesson[data-lesson="ionic-bonding"]
+  .ionic-diagram-response
+  figcaption
+  span {
+  display: block;
+  margin-bottom: 4px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ionic-bonding"] .ionic-diagram-response {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Ionic structures keep model predictions and written explanations visible. */
+.sample-lesson[data-lesson="ionic-structures"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="ionic-structures"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="ionic-structures"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="ionic-structures"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="ionic-structures"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="ionic-structures"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="ionic-structures"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="ionic-structures"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="ionic-structures"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="ionic-structures"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="ionic-structures"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ionic-structures"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="ionic-structures"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="ionic-structures"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="ionic-structures"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="ionic-structures"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="ionic-structures"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ionic-structures"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="ionic-structures"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="ionic-structures"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="ionic-structures"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="ionic-structures"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="ionic-structures"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="ionic-structures"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="ionic-structures"] .ionic-slice-response {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="ionic-structures"] .ionic-slice-response > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="ionic-structures"] .ionic-slice-response figure {
+  margin: 0;
+}
+.sample-lesson[data-lesson="ionic-structures"] .ionic-slice-response svg {
+  width: 100%;
+  display: block;
+}
+.sample-lesson[data-lesson="ionic-structures"]
+  .ionic-slice-response
+  figcaption {
+  font-size: 14px;
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ionic-structures"] .ionic-slice-response {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+  }
+}
+
+/* States keep conserved particle predictions and written explanations visible. */
+.sample-lesson[data-lesson="states-of-matter"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="states-of-matter"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="states-of-matter"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="states-of-matter"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="states-of-matter"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="states-of-matter"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="states-of-matter"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="states-of-matter"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="states-of-matter"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="states-of-matter"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="states-of-matter"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="states-of-matter"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="states-of-matter"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="states-of-matter"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="states-of-matter"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="states-of-matter"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="states-of-matter"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="states-of-matter"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="states-of-matter"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="states-of-matter"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="states-of-matter"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="states-of-matter"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="states-of-matter"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="states-of-matter"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="states-of-matter"] .state-diagram-response {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="states-of-matter"] .state-diagram-response > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="states-of-matter"] .state-diagram-response figure {
+  margin: 0;
+}
+.sample-lesson[data-lesson="states-of-matter"] .state-diagram-response svg {
+  width: 100%;
+  display: block;
+}
+.sample-lesson[data-lesson="states-of-matter"]
+  .state-diagram-response
+  figcaption {
+  font-size: 14px;
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="states-of-matter"] .state-diagram-response {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Covalent drawing and force responses remain visible. */
+.sample-lesson[data-lesson="covalent-bonding"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="covalent-bonding"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="covalent-bonding"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="covalent-bonding"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="covalent-bonding"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="covalent-bonding"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="covalent-bonding"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="covalent-bonding"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="covalent-bonding"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="covalent-bonding"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="covalent-bonding"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="covalent-bonding"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="covalent-bonding"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="covalent-bonding"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="covalent-bonding"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="covalent-bonding"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="covalent-bonding"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="covalent-bonding"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="covalent-bonding"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="covalent-bonding"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="covalent-bonding"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="covalent-bonding"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="covalent-bonding"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="covalent-bonding"] .task-workbench button {
+  min-height: 44px;
+}
+
+.molecular-line-preview svg {
+  max-width: 360px;
+  margin-inline: auto;
+}
+
+.molecular-line-controls {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.molecular-line-controls legend {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.molecular-line-controls label {
+  display: block;
+  min-width: 0;
+}
+.molecular-line-controls input {
+  width: 100%;
+  min-height: 44px;
+  display: block;
+  margin-top: 4px;
+}
+
+.sample-lesson[data-lesson="covalent-bonding"] .covalent-diagram-response {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="covalent-bonding"] .covalent-diagram-response > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="covalent-bonding"]
+  .covalent-diagram-response
+  figure {
+  margin: 0;
+}
+.sample-lesson[data-lesson="covalent-bonding"] .covalent-diagram-response svg {
+  width: 100%;
+  display: block;
+}
+.sample-lesson[data-lesson="covalent-bonding"]
+  .covalent-diagram-response
+  figcaption {
+  font-size: 14px;
+  line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="covalent-bonding"] .covalent-diagram-response {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+  }
+}
+
+.sample-lesson[data-lesson="covalent-bonding"] .covalent-construction-controls {
+  padding: 12px;
+  gap: 8px;
+}
+.sample-lesson[data-lesson="covalent-bonding"]
+  .covalent-construction-controls
+  > p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Molecular property explanations and native predictions. */
+/* Covalent drawing and force responses remain visible. */
+.sample-lesson[data-lesson="small-molecules-properties"]
+  .sample-task-panel
+  > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="small-molecules-properties"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="small-molecules-properties"]
+  .practice-task-picker
+  label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="small-molecules-properties"]
+  .written-answer
+  textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="small-molecules-properties"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="small-molecules-properties"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="small-molecules-properties"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="small-molecules-properties"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="small-molecules-properties"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="small-molecules-properties"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="small-molecules-properties"]
+  .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="small-molecules-properties"]
+    .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="small-molecules-properties"]
+    .sample-task-panel
+    > h2,
+  .sample-lesson[data-lesson="small-molecules-properties"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="small-molecules-properties"]
+    .session-heading
+    .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="small-molecules-properties"]
+    .session-heading
+    > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="small-molecules-properties"]
+    .written-answer
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="small-molecules-properties"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="small-molecules-properties"]
+    .sample-title-row
+    h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="small-molecules-properties"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="small-molecules-properties"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="small-molecules-properties"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="small-molecules-properties"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="small-molecules-properties"]
+  .task-workbench
+  button {
+  min-height: 44px;
+}
+
+/* Metallic causal writing and native predictions. */
+/* Covalent drawing and force responses remain visible. */
+.sample-lesson[data-lesson="structure-and-properties"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="structure-and-properties"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="structure-and-properties"]
+  .practice-task-picker
+  label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="structure-and-properties"]
+  .written-answer
+  textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="structure-and-properties"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="structure-and-properties"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="structure-and-properties"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="structure-and-properties"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="structure-and-properties"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="structure-and-properties"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="structure-and-properties"]
+  .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="structure-and-properties"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="structure-and-properties"]
+    .sample-task-panel
+    > h2,
+  .sample-lesson[data-lesson="structure-and-properties"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="structure-and-properties"]
+    .session-heading
+    .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="structure-and-properties"]
+    .session-heading
+    > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="structure-and-properties"]
+    .written-answer
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="structure-and-properties"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="structure-and-properties"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="structure-and-properties"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="structure-and-properties"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="structure-and-properties"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="structure-and-properties"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="structure-and-properties"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="structure-and-properties"]
+  .metallic-diagram-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(228px, 320px);
+  gap: 20px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="structure-and-properties"]
+  .metallic-diagram-response
+  > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="structure-and-properties"]
+  .metallic-diagram-response
+  figure {
+  margin: 0;
+}
+.sample-lesson[data-lesson="structure-and-properties"]
+  .metallic-diagram-response
+  svg {
+  width: 100%;
+  display: block;
+}
+@media (max-width: 700px) {
+  .sample-lesson[data-lesson="structure-and-properties"]
+    .metallic-diagram-response {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="structure-and-properties"]
+  .metallic-workbench
+  .reaction-amounts-asset {
+  margin: 12px 0;
+  width: 100%;
+}
+
+/* Diamond causal writing and native predictions. */
+/* Covalent drawing and force responses remain visible. */
+.sample-lesson[data-lesson="carbon-structures"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="carbon-structures"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="carbon-structures"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="carbon-structures"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="carbon-structures"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="carbon-structures"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="carbon-structures"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="carbon-structures"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="carbon-structures"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="carbon-structures"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="carbon-structures"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="carbon-structures"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="carbon-structures"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="carbon-structures"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="carbon-structures"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="carbon-structures"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="carbon-structures"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="carbon-structures"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="carbon-structures"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="carbon-structures"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="carbon-structures"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="carbon-structures"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="carbon-structures"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="carbon-structures"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="carbon-structures"] .network-diagram-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(228px, 320px);
+  gap: 20px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="carbon-structures"] .network-diagram-response > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="carbon-structures"]
+  .network-diagram-response
+  figure {
+  margin: 0;
+}
+.sample-lesson[data-lesson="carbon-structures"] .network-diagram-response svg {
+  width: 100%;
+  display: block;
+}
+@media (max-width: 700px) {
+  .sample-lesson[data-lesson="carbon-structures"] .network-diagram-response {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="carbon-structures"]
+  .assessment-session
+  .question-panel {
+  padding-top: 12px;
+}
+
+/* Individually reviewed graphite control and diagram layout. */
+.sample-lesson[data-lesson="graphite"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="graphite"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="graphite"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="graphite"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="graphite"] .sample-task-answer .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="graphite"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="graphite"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="graphite"] .assessment-session .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="graphite"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="graphite"] .assessment-session .question-panel h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="graphite"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="graphite"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="graphite"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="graphite"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="graphite"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="graphite"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="graphite"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="graphite"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="graphite"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="graphite"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="graphite"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="graphite"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="graphite"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="graphite"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="graphite"] .network-diagram-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(228px, 320px);
+  gap: 20px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="graphite"] .network-diagram-response > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="graphite"] .network-diagram-response figure {
+  margin: 0;
+}
+.sample-lesson[data-lesson="graphite"] .network-diagram-response svg {
+  width: 100%;
+  display: block;
+}
+@media (max-width: 700px) {
+  .sample-lesson[data-lesson="graphite"] .network-diagram-response {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="graphite"] .assessment-session .question-panel {
+  padding-top: 12px;
+}
+
+/* Individually reviewed graphene sheet and panel responses. */
+.sample-lesson[data-lesson="graphene"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="graphene"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="graphene"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="graphene"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="graphene"] .sample-task-answer .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="graphene"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="graphene"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="graphene"] .assessment-session .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="graphene"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="graphene"] .assessment-session .question-panel h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="graphene"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="graphene"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="graphene"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="graphene"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="graphene"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="graphene"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="graphene"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="graphene"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="graphene"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="graphene"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="graphene"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="graphene"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="graphene"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="graphene"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="graphene"] .graphene-reference-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(228px, 320px);
+  gap: 20px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="graphene"] .graphene-reference-response > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="graphene"] .graphene-reference-response figure {
+  margin: 0;
+}
+.sample-lesson[data-lesson="graphene"] .graphene-reference-response svg {
+  width: 100%;
+  display: block;
+}
+@media (max-width: 700px) {
+  .sample-lesson[data-lesson="graphene"] .graphene-reference-response {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="graphene"] .assessment-session .question-panel {
+  padding-top: 12px;
+}
+
+/* Individually reviewed fullerene recognition and short recall. */
+.sample-lesson[data-lesson="fullerenes"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="fullerenes"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="fullerenes"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="fullerenes"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="fullerenes"] .sample-task-answer .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="fullerenes"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="fullerenes"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="fullerenes"] .assessment-session .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="fullerenes"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="fullerenes"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="fullerenes"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="fullerenes"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="fullerenes"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="fullerenes"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="fullerenes"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="fullerenes"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="fullerenes"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="fullerenes"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="fullerenes"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="fullerenes"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="fullerenes"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="fullerenes"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="fullerenes"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="fullerenes"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="fullerenes"] .fullerene-reference-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(228px, 320px);
+  gap: 20px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="fullerenes"] .fullerene-reference-response > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="fullerenes"] .fullerene-reference-response figure {
+  margin: 0;
+}
+.sample-lesson[data-lesson="fullerenes"] .fullerene-reference-response svg {
+  width: 100%;
+  display: block;
+}
+@media (max-width: 700px) {
+  .sample-lesson[data-lesson="fullerenes"] .fullerene-reference-response {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="fullerenes"] .assessment-session .question-panel {
+  padding-top: 12px;
+}
+
+/* Nanotubes: distinct carrier, aspect-ratio and material-evidence responses. */
+.sample-lesson[data-lesson="carbon-nanotubes"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="carbon-nanotubes"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="carbon-nanotubes"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="carbon-nanotubes"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="carbon-nanotubes"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="carbon-nanotubes"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="carbon-nanotubes"] .nanotube-reference-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(228px, 320px);
+  gap: 20px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"]
+  .nanotube-reference-response
+  > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"]
+  .nanotube-reference-response
+  figure {
+  margin: 0;
+}
+.sample-lesson[data-lesson="carbon-nanotubes"]
+  .nanotube-reference-response
+  svg {
+  width: 100%;
+  display: block;
+}
+@media (max-width: 700px) {
+  .sample-lesson[data-lesson="carbon-nanotubes"] .nanotube-reference-response {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="carbon-nanotubes"]
+  .assessment-session
+  .question-panel {
+  padding-top: 12px;
+}
+
+/* At narrow widths retain each material's three labeled measurements together. */
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="carbon-nanotubes"] .graphene-panel-data table {
+    display: block;
+    width: 100%;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .graphene-panel-data caption {
+    display: block;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .graphene-panel-data thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .graphene-panel-data tbody {
+    display: block;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .graphene-panel-data tbody tr {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 12px;
+    border: 1px solid #dce1eb;
+    border-radius: 8px;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .graphene-panel-data tbody th {
+    grid-column: 1/-1;
+    padding: 8px;
+    background: #f1f4fa;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"] .graphene-panel-data tbody td {
+    padding: 8px 3px;
+    text-align: center;
+    min-width: 0;
+    border-bottom: 0;
+  }
+  .sample-lesson[data-lesson="carbon-nanotubes"]
+    .graphene-panel-data
+    tbody
+    td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+/* Polymer response layout reviewed against chain and repeat demands. */
+.sample-lesson[data-lesson="polymer-structures"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="polymer-structures"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="polymer-structures"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="polymer-structures"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="polymer-structures"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="polymer-structures"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="polymer-structures"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="polymer-structures"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="polymer-structures"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="polymer-structures"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="polymer-structures"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="polymer-structures"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="polymer-structures"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="polymer-structures"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="polymer-structures"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="polymer-structures"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="polymer-structures"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="polymer-structures"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="polymer-structures"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="polymer-structures"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="polymer-structures"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="polymer-structures"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="polymer-structures"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="polymer-structures"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="polymer-structures"] .polymer-reference-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(228px, 320px);
+  gap: 20px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="polymer-structures"]
+  .polymer-reference-response
+  > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="polymer-structures"]
+  .polymer-reference-response
+  figure {
+  margin: 0;
+}
+.sample-lesson[data-lesson="polymer-structures"]
+  .polymer-reference-response
+  svg {
+  width: 100%;
+  display: block;
+}
+@media (max-width: 700px) {
+  .sample-lesson[data-lesson="polymer-structures"] .polymer-reference-response {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="polymer-structures"]
+  .assessment-session
+  .question-panel {
+  padding-top: 12px;
+}
+
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .nano-reference-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(228px, 320px);
+  gap: 20px;
+  align-items: start;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .nano-reference-response
+  > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .nano-reference-response
+  figure {
+  margin: 0;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .nano-reference-response
+  svg {
+  width: 100%;
+  display: block;
+}
+@media (max-width: 700px) {
+  .sample-lesson[data-lesson="particles-and-nanoparticles"]
+    .nano-reference-response {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .assessment-session
+  .question-panel {
+  padding-top: 12px;
+}
+
+/* Nanoparticle response controls retain the same readable opening bounds. */
+/* Polymer response layout reviewed against chain and repeat demands. */
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .sample-task-panel
+  > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .practice-task-picker
+  label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .written-answer
+  textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="particles-and-nanoparticles"]
+    .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="particles-and-nanoparticles"]
+    .sample-task-panel
+    > h2,
+  .sample-lesson[data-lesson="particles-and-nanoparticles"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="particles-and-nanoparticles"]
+    .session-heading
+    .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="particles-and-nanoparticles"]
+    .session-heading
+    > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="particles-and-nanoparticles"]
+    .written-answer
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="particles-and-nanoparticles"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="particles-and-nanoparticles"]
+    .sample-title-row
+    h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="particles-and-nanoparticles"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="particles-and-nanoparticles"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="particles-and-nanoparticles"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="particles-and-nanoparticles"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="particles-and-nanoparticles"]
+  .task-workbench
+  button {
+  min-height: 44px;
+}
+
+/* Mass response layout preserves boundary instructions and readable controls. */
+.sample-lesson[data-lesson="conservation-of-mass"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="conservation-of-mass"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="conservation-of-mass"] .practice-task-picker label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="conservation-of-mass"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="conservation-of-mass"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="conservation-of-mass"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="conservation-of-mass"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="conservation-of-mass"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="conservation-of-mass"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="conservation-of-mass"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="conservation-of-mass"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="conservation-of-mass"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="conservation-of-mass"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="conservation-of-mass"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="conservation-of-mass"] .session-heading .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="conservation-of-mass"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="conservation-of-mass"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="conservation-of-mass"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="conservation-of-mass"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="conservation-of-mass"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="conservation-of-mass"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="conservation-of-mass"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="conservation-of-mass"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="conservation-of-mass"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="conservation-of-mass"] .boundary-gas-diagram {
+  margin: 12px 0;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="conservation-of-mass"] .mass-workbench {
+    padding: 12px;
+  }
+}
+
+/* Measurement response layout preserves boundary instructions and readable controls. */
+.sample-lesson[data-lesson="measurement-uncertainty"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="measurement-uncertainty"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="measurement-uncertainty"]
+  .practice-task-picker
+  label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="measurement-uncertainty"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="measurement-uncertainty"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="measurement-uncertainty"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="measurement-uncertainty"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="measurement-uncertainty"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="measurement-uncertainty"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="measurement-uncertainty"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="measurement-uncertainty"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="measurement-uncertainty"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="measurement-uncertainty"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="measurement-uncertainty"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="measurement-uncertainty"]
+    .session-heading
+    .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="measurement-uncertainty"]
+    .session-heading
+    > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="measurement-uncertainty"]
+    .written-answer
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="measurement-uncertainty"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="measurement-uncertainty"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="measurement-uncertainty"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="measurement-uncertainty"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="measurement-uncertainty"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="measurement-uncertainty"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="measurement-uncertainty"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="measurement-uncertainty"]
+  .measurement-distribution {
+  margin: 12px 0;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="measurement-uncertainty"] .measurement-workbench {
+    padding: 12px;
+  }
+}
+
+.frequency-display {
+  margin: 12px 0;
+}
+.frequency-display svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.frequency-display figcaption,
+.frequency-unplotted {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.frequency-unplotted {
+  overflow-wrap: anywhere;
+}
+@media (min-width: 900px) {
+  .frequency-response {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+}
+
+.sample-lesson[data-lesson="changing-concentration"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="changing-concentration"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="changing-concentration"]
+  .practice-task-picker
+  label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="changing-concentration"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="changing-concentration"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="changing-concentration"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="changing-concentration"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="changing-concentration"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="changing-concentration"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="changing-concentration"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="changing-concentration"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="changing-concentration"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="changing-concentration"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="changing-concentration"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="changing-concentration"]
+    .session-heading
+    .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="changing-concentration"] .session-heading > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="changing-concentration"]
+    .written-answer
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="changing-concentration"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="changing-concentration"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="changing-concentration"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="changing-concentration"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="changing-concentration"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="changing-concentration"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="changing-concentration"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="changing-concentration"]
+  .concentration-factor-axis {
+  margin: 12px 0;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="changing-concentration"]
+    .changing-concentration-workbench {
+    padding: 12px;
+  }
+}
+
+.concentration-symbols {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+.concentration-symbols h3 {
+  margin-top: 0;
+}
+.concentration-symbol-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.concentration-symbol-buttons button {
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 20px;
+  border: 1px solid #c5cce0;
+  border-radius: 8px;
+  background: white;
+  color: #141b2c;
+}
+.concentration-symbol-buttons button[aria-pressed="true"] {
+  background: #f8ec62;
+  border-color: #343d55;
+}
+.concentration-symbols p {
+  line-height: 1.5;
+}
+@media (min-width: 900px) {
+  .concentration-symbol-response {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+}

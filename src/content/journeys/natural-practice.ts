@@ -1,0 +1,540 @@
+import { c, n, w, draw } from "./natural-tasks";
+import type { NaturalTask as Task } from "./natural-types";
+export const practice: Task[] = [
+  c(
+    "p-dna-unit",
+    "Identify a whole DNA monomer",
+    "A marked rung contains one unit on each strand. What is one monomer?",
+    "One nucleotide on one strand",
+    {
+      "The whole rung": "A rung contains two nucleotide monomers.",
+      "The base alone": "A base is a component of a nucleotide.",
+    },
+    "One complete nucleotide belongs to one strand.",
+    "Count one strand unit.",
+  ),
+  c(
+    "p-dna-shape",
+    "Name the shape precisely",
+    "Two long DNA chains wind around one another. Name this shape.",
+    "Double helix",
+    {
+      DNA: "That names the molecule, not its shape.",
+      "Amino acid": "That is a protein monomer type.",
+    },
+    "Most DNA has two polymer chains in a double helix.",
+    "Name the arrangement.",
+  ),
+  n(
+    "p-dna-count",
+    "Count a two-strand excerpt",
+    "A DNA excerpt has six positions on each of two strands. How many nucleotides are present in the excerpt?",
+    "12",
+    "nucleotides",
+    "6 × 2 = 12; each rung contains two nucleotide units.",
+    "Count both sides.",
+  ),
+  n(
+    "p-dna-types",
+    "Distinguish types and copies",
+    "The shown short excerpt has eight nucleotides but only A and T labels. How many different nucleotide types can DNA use generally?",
+    "4",
+    "possible types",
+    "Four types are possible even when a short excerpt shows only two.",
+    "A short excerpt is not the entire DNA molecule.",
+  ),
+  c(
+    "p-dna-information",
+    "Describe why DNA matters",
+    "Which statement describes a role of DNA?",
+    "It encodes genetic instructions",
+    {
+      "It is made only from glucose": "DNA monomers are nucleotides.",
+      "Every nucleotide is a whole organism":
+        "Nucleotides contribute to a large molecule.",
+    },
+    "DNA encodes genetic instructions for development and functioning.",
+    "Distinguish a molecule from an organism.",
+  ),
+  draw(
+    "p-dna-draw",
+    "Mark one complete nucleotide",
+    "In the supplied two-position, two-strand excerpt, independently highlight one complete nucleotide at the first position. Retain a two-strand structure and identify its overall shape.",
+    "dna",
+    "two",
+    "Highlight either complete nucleotide on one strand; identify two strands, double helix and nucleotide monomers.",
+    [
+      "Select one complete left or right nucleotide, not the whole rung or a base alone.",
+      "Retain two polymer strands; identify double helix.",
+      "The supplied A/T pairing key is a visual aid, not extra recall.",
+    ],
+  ),
+  w(
+    "p-dna-explain",
+    "Explain a counting error",
+    "A student calls each whole DNA rung one nucleotide. Explain why this gives the wrong unit count.",
+    "Each rung pairs one nucleotide from each of two strands. A complete rung contains two nucleotides, while one monomer belongs to one strand.",
+    [
+      "Identify a nucleotide as one complete strand unit.",
+      "State that a rung contains two nucleotides.",
+      "Distinguish unit count from strand count.",
+    ],
+    "Follow both sides of a rung.",
+  ),
+  c(
+    "p-dna-most",
+    "Use the specification wording carefully",
+    "Which statement accurately describes the common DNA structure?",
+    "Most DNA molecules have two polymer chains",
+    {
+      "Every DNA-related molecule must have exactly two chains":
+        "The specification describes most DNA molecules, not an unrestricted universal.",
+      "Each chain is one nucleotide only":
+        "A DNA polymer chain contains many nucleotides.",
+    },
+    "Most DNA has two polymer chains arranged as a double helix.",
+    "Use the wording justified by the source.",
+  ),
+  c(
+    "p-starch",
+    "Identify starch monomers",
+    "Starch is a naturally occurring polymer based on what monomer?",
+    "Glucose",
+    { Ethene: "Ethene makes poly(ethene).", Nucleotides: "Those make DNA." },
+    "Starch is built from glucose-derived units.",
+    "Use its natural building block.",
+  ),
+  c(
+    "p-cellulose",
+    "Identify cellulose monomers",
+    "Cellulose is a plant cell-wall polymer. What monomer is it based on?",
+    "Glucose",
+    {
+      "Amino acids": "Those make protein chains.",
+      "Sodium chloride units": "Cellulose is not an ionic lattice.",
+    },
+    "Cellulose is a glucose-based polymer.",
+    "Compare with starch.",
+  ),
+  c(
+    "p-starch-cellulose",
+    "Shared building block, different polymer",
+    "Starch and cellulose are both glucose-based. What follows?",
+    "They share a monomer but differ in linking arrangement",
+    {
+      "They must be identical polymers": "The way units are linked differs.",
+      "Only one of them can be a polymer":
+        "Both are naturally occurring polymers.",
+    },
+    "A common monomer does not require identical structure or properties.",
+    "Consider how the units join.",
+  ),
+  draw(
+    "p-ring-draw",
+    "Mark one glucose-derived contribution",
+    "Select a whole glucose-derived contribution in the supplied four-ring crop. Keep one full ring and one linking O, choosing either adjoining bridge.",
+    "repeat",
+    "four",
+    "Select one complete ring plus one linking O; for example boundaries 2 to 4 in this crop.",
+    [
+      "One complete ring is included.",
+      "One adjoining linking oxygen is included.",
+      "Exclude the other complete rings and do not identify a single O as a glucose monomer.",
+    ],
+    "Mark the complete contribution.",
+  ),
+  c(
+    "p-ring-identity",
+    "Avoid unsupported unique identification",
+    "A diagram is only described as a glucose-based polymer crop. Which identification is supported without further distinguishing information?",
+    "A glucose-based polymer",
+    {
+      "Definitely DNA": "DNA uses nucleotides.",
+      "Uniquely cellulose":
+        "The provided evidence alone does not establish that unique identity.",
+    },
+    "Use the most specific identity justified by the supplied information.",
+    "A glucose-derived crop can fit more than one named polymer.",
+  ),
+  w(
+    "p-ring-explain",
+    "Distinguish monomer and residue",
+    "Explain why a ring joined into a glucose-based chain is not the same complete molecule as free glucose.",
+    "The original monomer is glucose. Its contribution becomes covalently joined to neighbouring contributions, and the shown end-omitted unit includes the linking arrangement rather than all the groups of a free glucose molecule.",
+    [
+      "Name glucose as the original monomer.",
+      "Explain that the contribution is joined to neighbours.",
+      "Do not call one bridging O a whole monomer or the crop a whole isolated molecule.",
+    ],
+    "Compare original molecule and chain contribution.",
+  ),
+  c(
+    "p-protein",
+    "Identify protein monomers",
+    "Proteins are polymers based on which monomer type?",
+    "Amino acids",
+    {
+      Nucleotides: "Nucleotides make DNA.",
+      "Only ethene": "Ethene makes an addition polymer.",
+    },
+    "Different amino acids can occur in one protein chain.",
+    "Use the molecule family.",
+  ),
+  c(
+    "p-protein-mixed",
+    "Allow different amino acids",
+    "Which statement about a protein chain is accurate?",
+    "Different amino acids can occur in the same chain",
+    {
+      "It must contain only one amino-acid type":
+        "Protein chains can contain different amino acids.",
+      "Its monomers must be glucose":
+        "Glucose is not the protein monomer type.",
+    },
+    "Different amino acids can combine in one chain.",
+    "The chain need not use identical contributions.",
+  ),
+  c(
+    "p-order",
+    "Compare two supplied sequences",
+    "Glycine–alanine–glycine and alanine–glycine–glycine contain the same contributions. What differs?",
+    "Their sequence",
+    {
+      "Their complete atom totals":
+        "The same contributions preserve the totals.",
+      "The number of shown contributions": "Each has three.",
+    },
+    "Position and order differ, even though composition is the same.",
+    "Read from the same indicated end.",
+  ),
+  c(
+    "p-composition",
+    "Spot a changed contribution",
+    "Glycine–alanine is changed to alanine–alanine. Given glycine C₂H₅NO₂ and alanine C₃H₇NO₂, what changes?",
+    "The complete atom composition",
+    {
+      "Only the printed order": "A glycine contribution has been replaced.",
+      "Nothing about the units":
+        "Glycine and alanine have different supplied formulas.",
+    },
+    "Replacing glycine with alanine changes the carbon and hydrogen totals.",
+    "Compare the formulas, not only chain length.",
+  ),
+  c(
+    "p-connectivity",
+    "Use supplied isomeric structures",
+    "Alanine H₂N–CH(CH₃)–COOH and beta-alanine H₂N–CH₂–CH₂–COOH share a formula. Which conclusion is justified?",
+    "Their atom connectivity differs",
+    {
+      "Their supplied atom totals must differ": "Both are C₃H₇NO₂.",
+      "Their structures must be identical":
+        "The printed bonding arrangement differs.",
+    },
+    "The same atom totals do not prove the same connectivity. The unfamiliar structures are supplied.",
+    "Trace the amino-group attachment.",
+  ),
+  w(
+    "p-function",
+    "Explain the limits of sequence evidence",
+    "Two short polypeptide excerpts have the same composition but different order. Explain what this shows and what it cannot establish.",
+    "The same contributions preserve the atom composition, while their different order changes sequence. These short excerpts do not establish the complete folding or exact biological function of a protein.",
+    [
+      "State same complete atom composition.",
+      "State different sequence.",
+      "Avoid asserting a specific or necessarily identical/different exact function from the short excerpt.",
+    ],
+    "Separate composition, sequence and function.",
+  ),
+  c(
+    "p-groups",
+    "Higher: identify both glycine groups",
+    "In H₂N–CH₂–COOH, which two different functional groups allow repeated condensation?",
+    "Amino and carboxylic acid groups",
+    {
+      "Two identical alcohol groups": "Glycine has NH₂ and COOH.",
+      "C=C and an ionic charge only":
+        "Those are not the supplied reactive-group pair.",
+    },
+    "One amino acid carries both different groups.",
+    "Read the two ends.",
+  ),
+  c(
+    "p-one-type",
+    "Higher: one monomer type can polymerise",
+    "Many identical glycine molecules form a polypeptide. Which statement is accurate?",
+    "One monomer type can have two different reactive groups",
+    {
+      "Condensation always needs two different monomer types":
+        "Glycine provides both NH₂ and COOH itself.",
+      "Glycine must become an alkene first":
+        "Condensation does not require that transformation.",
+    },
+    "Different reactive groups within one amino acid permit repeated linking.",
+    "Distinguish group types from molecule types.",
+  ),
+  c(
+    "p-peptide-bond",
+    "Higher: identify a peptide link",
+    "Which bond joins amino-acid contributions in this supplied condensation?",
+    "Carbonyl C–N",
+    {
+      "C–O ester link": "That is the wrong joining atom for the peptide link.",
+      "C=C addition site": "This reaction is not alkene addition.",
+    },
+    "The joining carbon is the carbonyl carbon; its O remains in C=O.",
+    "Identify the nitrogen.",
+  ),
+  c(
+    "p-water-origin",
+    "Higher: retain carbonyl oxygen",
+    "At one junction, which atoms leave as H₂O?",
+    "Acid OH and one amino H",
+    {
+      "Carbonyl O and both amino H":
+        "The carbonyl O remains; one H remains on internal N.",
+      "Both complete functional groups": "The joining C and N must stay.",
+    },
+    "OH + H gives water while C=O and N remain in the chain.",
+    "Count oxygen and both H atoms.",
+  ),
+  draw(
+    "p-peptide-draw",
+    "Higher: build a mixed dipeptide",
+    "Using the fixed glycine then alanine carbon groups, independently build their open dipeptide. Keep the original order, show the C–N junction and retain the outer NH₂ and COOH.",
+    "peptide",
+    "mixed",
+    "NH₂–CH₂–C(=O)–NH–CH(CH₃)–C(=O)–OH, with one H₂O released.",
+    [
+      "Preserve glycine then alanine carbon groups.",
+      "Use the carbonyl C–N joining bond; retain both C=O bonds.",
+      "Remove internal acid OH and one amino H.",
+      "Retain NH₂ and COOH at opposite open ends.",
+    ],
+    "Inspect both ends and the junction.",
+  ),
+  n(
+    "p-gly-three-water",
+    "Higher: count actual waters",
+    "Three glycine molecules join into one finite open chain with two links. How many waters are released?",
+    "2",
+    "water molecules",
+    "There are two actual joining links and one water per link.",
+    "Count shown junctions.",
+  ),
+  n(
+    "p-gly-four-mass",
+    "Higher: count a whole four-glycine chain",
+    "Four glycines of Mr 75 join into one finite open chain with three links. Each link releases H₂O of Mr 18. Find whole-chain Mr.",
+    "246",
+    "relative formula mass",
+    "4 × 75 − 3 × 18 = 246. Both terminal groups remain.",
+    "Use three actual losses.",
+  ),
+  n(
+    "p-mixed-mass",
+    "Higher: count a whole mixed dipeptide",
+    "Glycine Mr 75 and alanine Mr 89 make one open dipeptide, releasing one H₂O of Mr 18. Find product Mr.",
+    "146",
+    "relative formula mass",
+    "75 + 89 − 18 = 146.",
+    "Subtract one whole water.",
+  ),
+  n(
+    "p-mixed-H",
+    "Higher: conserve hydrogen",
+    "Glycine C₂H₅NO₂ and alanine C₃H₇NO₂ make one peptide link and release H₂O. How many H atoms remain?",
+    "10",
+    "H atoms",
+    "5 + 7 − 2 = 10.",
+    "Water removes two H.",
+  ),
+  n(
+    "p-mixed-O",
+    "Higher: conserve oxygen",
+    "The same glycine/alanine dipeptide starts with four O atoms and releases one H₂O. How many O atoms remain?",
+    "3",
+    "O atoms",
+    "2 + 2 − 1 = 3. Carbonyl O atoms stay in the chain.",
+    "Water removes one O.",
+  ),
+  n(
+    "p-three-N",
+    "Higher: keep the nitrogen atoms",
+    "Three glycine molecules join into one finite open chain. How many N atoms are in the whole chain?",
+    "3",
+    "N atoms",
+    "Each glycine contributes one N; water removes no N.",
+    "Do not remove the complete amino group.",
+  ),
+  n(
+    "p-three-carbon",
+    "Higher: preserve every carbon",
+    "Glycine–alanine–glycine forms one open chain. Given C₂, C₃ and C₂ in the original molecules, how many C atoms remain?",
+    "7",
+    "C atoms",
+    "2 + 3 + 2 = 7; water loss removes no carbon.",
+    "Sum original carbons.",
+  ),
+  n(
+    "p-three-mass",
+    "Higher: preserve both terminal groups",
+    "Glycine–alanine–glycine has feed Mr 75 + 89 + 75 and two actual joining links. Each link releases H₂O of Mr 18. Find whole-chain Mr.",
+    "203",
+    "relative formula mass",
+    "75 + 89 + 75 − 2 × 18 = 203.",
+    "Subtract the actual two waters.",
+  ),
+  c(
+    "p-endgroups",
+    "Higher: distinguish full chain and repeat shorthand",
+    "Why does a finite open-chain question specify both terminal groups?",
+    "Its complete atom account includes the ends",
+    {
+      "Every end must disappear":
+        "The supplied open chain retains terminal NH₂ and COOH.",
+      "Repeat shorthand always counts every terminal atom":
+        "End-omitted repeat notation is a different representation.",
+    },
+    "Actual finite-chain inventory and conventional end-omitted repeat notation answer different counting questions.",
+    "Inspect the outer ends.",
+  ),
+  draw(
+    "p-peptide-three",
+    "Higher: retain a three-unit open chain",
+    "Independently build the supplied three-glycine open chain, retaining the outer terminal groups. Show two peptide junctions and account for their water.",
+    "peptide",
+    "three",
+    "NH₂–CH₂–C(=O)–NH–CH₂–C(=O)–NH–CH₂–C(=O)–OH, releasing two H₂O.",
+    [
+      "Retain all three CH₂ groups in order.",
+      "Join each carbonyl C to the following N.",
+      "Retain every C=O; remove internal acid OH and one H from each internal N.",
+      "Keep the outer NH₂ and COOH; release two waters.",
+    ],
+    "Count actual junctions, then inspect the ends.",
+  ),
+  w(
+    "p-condensation-explain",
+    "Higher: compare peptide condensation and alkene addition",
+    "Explain two differences between the supplied amino-acid condensation and ethene addition polymerisation.",
+    "Amino acids have amino and acid functional groups and make peptide C–N links while releasing water at each actual junction. Ethene addition uses C=C monomers, makes a single carbon backbone and releases no small molecule.",
+    [
+      "Identify NH₂/COOH versus C=C monomer features.",
+      "Describe peptide C–N joining versus a carbon backbone from addition.",
+      "State water release in the supplied condensation and no small-molecule release in ethene addition.",
+    ],
+    "Compare both monomer groups and the products.",
+  ),
+];
+practice.push(
+  n(
+    "p-amino-mass",
+    "Higher: count the whole amino group",
+    "Given Ar N 14 and H 1, what is the relative mass of NH₂?",
+    "16",
+    "relative mass",
+    "14 + 2 × 1 = 16. Both H atoms belong to the original amino group.",
+    "Read the H subscript.",
+  ),
+  n(
+    "p-acid-mass",
+    "Higher: count the whole acid group",
+    "Given Ar C 12, O 16 and H 1, what is the relative mass of COOH?",
+    "45",
+    "relative mass",
+    "12 + 2 × 16 + 1 = 45. COOH contains two oxygens.",
+    "Count the carbonyl O and OH oxygen.",
+  ),
+  n(
+    "p-core-ends",
+    "Higher: sum the unchanged groups",
+    "In H₂N–[unknown section]–COOH, NH₂ has relative mass 16 and COOH has relative mass 45. What is their combined contribution?",
+    "61",
+    "relative mass",
+    "16 + 45 = 61. The unknown middle section is not part of this total.",
+    "Add the two printed end groups.",
+  ),
+  n(
+    "p-core-75",
+    "Higher: subtract a missing section",
+    "H₂N–[unknown section]–COOH has Mr 75. The unchanged NH₂ and COOH contribute 61. Find the unknown section’s relative mass.",
+    "14",
+    "relative mass",
+    "75 − 61 = 14. Do not replace the unknown section with a named molecule.",
+    "Whole mass minus known groups.",
+  ),
+  n(
+    "p-core-103",
+    "Higher: transfer the inverse calculation",
+    "An unfamiliar H₂N–[unknown section]–COOH monomer has Mr 103. Given Ar H 1, C 12, N 14, O 16, find its unknown section’s relative mass.",
+    "42",
+    "relative mass",
+    "NH₂ contributes 16; COOH contributes 45. 103 − 61 = 42. This numerical mass alone does not identify a unique structure.",
+    "Find the known end groups before subtracting.",
+  ),
+);
+
+practice.push({
+  ...c(
+    "p-visual",
+    "Recognise an unfamiliar polymer diagram",
+    "The supplied schematic shows the usual structure of a naturally occurring polymer. Which monomer type contributes units to its two chains?",
+    "Nucleotides",
+    {
+      Glucose:
+        "Glucose is the monomer for starch and cellulose, not this common winding two-strand structure.",
+      "Amino acids":
+        "Amino acids form polypeptides; this diagram represents the common DNA arrangement.",
+    },
+    "The common two-chain winding structure is DNA. Its monomers are nucleotides.",
+    "Recognise the structure before naming the monomer.",
+  ),
+  naturalHelix: { positions: 10, turns: 1.5 },
+});
+
+practice.push(
+  c(
+    "p-amino-repeat",
+    "Higher: choose the complete glycine contribution",
+    "Which bracketed expression represents the end-omitted polypeptide contribution from H₂N–CH₂–COOH?",
+    "[–NH–CH₂–C(=O)–]ₙ",
+    {
+      "[NH₂–CH₂–COOH]ₙ":
+        "This repeats unjoined original monomers with terminal groups.",
+      "[–NH–CH₂–O–]ₙ": "The carbonyl carbon has been lost.",
+      "[–NH–CH₂–CH₂–]ₙ": "The carbonyl oxygen has been lost.",
+    },
+    "One amino H and acid OH are removed. NH, CH₂ and C=O remain; both boundary bonds continue to neighbouring contributions, which join C to N.",
+    "Trace the original atoms and the joining bond.",
+    "peptideUnit",
+  ),
+  draw(
+    "p-amino-repeat-draw",
+    "Higher: draw the supplied beta-alanine repeat",
+    "Draw one bracketed repeat contribution from H₂N–CH₂–CH₂–COOH. Show C=O, bonds continuing through both brackets and n. Identify the joining atoms. This asks for an end-omitted repeat, not a finite open chain.",
+    "peptideUnit",
+    "beta",
+    "[–NH–CH₂–CH₂–C(=O)–]ₙ; neighbouring contributions join through carbonyl C to N.",
+    [
+      "Keep both CH₂ groups in the supplied order.",
+      "Keep one H on N and the original carbonyl C=O; omit acid OH inside the repeat.",
+      "Show bonds crossing both brackets and n outside.",
+      "Identify the continuing link as C–N.",
+    ],
+    "Copy the supplied carbon section; remove only acid OH and one amino H.",
+  ),
+  c(
+    "p-amino-repeat-ends",
+    "Higher: use the question's chain convention",
+    "A question shows four original glycine contributions in one finite open chain, including its outer NH₂ and COOH groups. Does the formal end-omitted n-water repeat equation mean this chain released four waters?",
+    "No: its three actual junctions release three waters",
+    {
+      "Yes: n always counts released waters in every diagram":
+        "The formal end-omitted notation does not replace counting the shown finite-chain junctions.",
+      "No: no water is released":
+        "Each actual amino-acid joining junction releases water.",
+    },
+    "A finite open chain of four original monomers has three junctions and retains both ends. The formal equation with n H₂O accompanies end-omitted repeat notation. Read the stated convention before calculating.",
+    "Count actual junctions in the finite structure.",
+  ),
+);

@@ -1,0 +1,207 @@
+.lca-workbench {
+  min-width: 0;
+}
+.lca-workbench h3 {
+  margin-top: 0;
+}
+.lca-given {
+  border: 1px solid #d6def0;
+  border-radius: 12px;
+  background: #f7f9ff;
+  padding: 16px;
+  margin: 16px 0;
+}
+.lca-given h3 {
+  margin-top: 0;
+}
+.lca-given p {
+  margin: 0 0 12px;
+}
+.lca-given dl,
+.lca-proposal dl {
+  margin: 0;
+}
+.lca-given dl > div,
+.lca-proposal dl > div {
+  margin: 12px 0;
+}
+.lca-given dt,
+.lca-proposal dt {
+  font-weight: 700;
+}
+.lca-given dd,
+.lca-proposal dd {
+  margin: 4px 0 0;
+}
+.lca-given table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  font-size: 15px;
+}
+.lca-given caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.lca-given th,
+.lca-given td {
+  padding: 10px 6px;
+  border-bottom: 1px solid #d6def0;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+.lca-given th:first-child {
+  width: 54%;
+}
+.lca-given thead {
+  background: #edf1f8;
+}
+.lca-fields {
+  display: grid;
+  gap: 14px;
+  margin: 16px 0;
+}
+.lca-fields label {
+  font-weight: 700;
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+.lca-fields input,
+.lca-fields select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #aab7d5;
+  border-radius: 10px;
+  padding: 11px;
+  background: white;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 400;
+  min-height: 44px;
+}
+.lca-proposal {
+  padding: 18px;
+  background: #eef3fc;
+  border-radius: 12px;
+  margin: 20px 0;
+  overflow-wrap: anywhere;
+}
+.lca-proposal p {
+  margin: 10px 0;
+}
+.lca-boundary {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.lca-boundary li {
+  border: 2px dashed #aab7d5;
+  border-radius: 8px;
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+}
+.lca-boundary li[data-included="true"] {
+  border: 2px solid #3f4fd0;
+  background: white;
+}
+.lca-branches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 16px 0;
+}
+.lca-branches > div {
+  border-top: 4px solid #3f4fd0;
+  border-radius: 10px;
+  background: white;
+  padding: 14px;
+}
+.lca-branches > div:last-child {
+  border-color: #0f7a73;
+}
+.lca-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+.lca-actions button {
+  border: 1px solid #aab7d5;
+  border-radius: 10px;
+  padding: 11px 16px;
+  background: white;
+  font: inherit;
+  font-weight: 700;
+  min-height: 44px;
+}
+.lca-actions .button {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}
+.lca-actions button:disabled {
+  opacity: 0.55;
+}
+.lca-workbench .feedback {
+  background: #edf0ff;
+  border-radius: 12px;
+  padding: 18px;
+  overflow-wrap: anywhere;
+}
+.lca-energy-chart {
+  margin: 16px 0;
+}
+.lca-energy-chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+.lca-energy-chart figcaption {
+  margin-bottom: 12px;
+}
+.lca-source-chart summary {
+  margin-top: 14px;
+}
+.lca-workbench details > summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  .lca-branches,
+  .lca-boundary {
+    grid-template-columns: 1fr;
+  }
+  .lca-given {
+    padding: 12px;
+  }
+  .lca-given table {
+    font-size: 14px;
+  }
+  .lca-given th,
+  .lca-given td {
+    padding: 10px 4px;
+  }
+}
+@media (max-width: 600px) {
+  .lca-energy-chart svg text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .lca-energy-chart svg text {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="life-cycle-and-recycling"] .multipart-answer {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+}
