@@ -7290,3 +7290,16 @@ for (const q of tasks(metalReactivityJourney))
         ...new Set([...(other.exposureAliases ?? []), q.id]),
       ];
   }
+
+// Keep newly reserved metal–acid help/exposure links reciprocal after curriculum normalization.
+{
+  const all = tasks(acidNeutralisationJourney);
+  for (const q of all)
+    for (const id of q.exposureAliases ?? []) {
+      const other = all.find((item) => item.id === id);
+      if (other)
+        other.exposureAliases = [
+          ...new Set([...(other.exposureAliases ?? []), q.id]),
+        ];
+    }
+}

@@ -14,6 +14,7 @@ export type ModelKind =
   | "electrolysis"
   | "predict";
 export interface Question {
+  acidMetalReference?: "products" | "electrons";
   metalReactionReference?: boolean;
   concentrationSymbols?: boolean;
   frequencyDisplay?: import("../lib/frequency-display").FrequencyDisplayData;

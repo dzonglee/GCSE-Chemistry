@@ -25,6 +25,7 @@ import { QuestionInput } from "./QuestionInput";
 import { TaskWorkbench } from "./TaskWorkbench";
 import { WorkbenchInputDraft } from "./WorkbenchInputDraft";
 import { AssessmentSession } from "./AssessmentSession";
+import { acidMetalForTier } from "@/content/journeys/acid-metal-writing";
 import { statesForTier } from "@/content/journeys/states-writing";
 import { haberForTier } from "@/content/journeys/haber-and-fertilisers";
 export function DetailedLesson({
@@ -37,11 +38,15 @@ export function DetailedLesson({
   const { data, ready } = useProgress();
   const mixedHaber = lesson.slug === "haber-and-fertilisers";
   const mixedStates = lesson.slug === "states-of-matter";
+  const mixedAcid = lesson.slug === "acids-and-neutralisation";
+  const filteredLearning = mixedHaber || mixedAcid;
   const journey = mixedHaber
     ? haberForTier(data.preferences.tier)
     : mixedStates
       ? statesForTier(fullJourney, data.preferences.tier)
-      : fullJourney;
+      : mixedAcid
+        ? acidMetalForTier(fullJourney, data.preferences.tier)
+        : fullJourney;
   const work = data.work[lesson.slug] ?? emptyWork();
   const section = work.section;
   const stage: LearningStage =
@@ -51,7 +56,7 @@ export function DetailedLesson({
     work.learning?.stage === stage
       ? Math.min(work.learning.index, fullJourney[stage].length - 1)
       : 0;
-  const index = mixedHaber
+  const index = filteredLearning
     ? Math.max(
         0,
         list.findIndex((q) => q.id === fullJourney[stage][savedPosition]?.id),
@@ -101,7 +106,7 @@ export function DetailedLesson({
             learning: {
               version: 1,
               stage: next,
-              index: mixedHaber
+              index: filteredLearning
                 ? Math.max(
                     0,
                     fullJourney[next].findIndex(
@@ -150,7 +155,7 @@ export function DetailedLesson({
       learning: {
         version: 1,
         stage: "refresher",
-        index: mixedHaber
+        index: filteredLearning
           ? Math.max(
               0,
               fullJourney.refresher.findIndex(
@@ -238,6 +243,7 @@ export function DetailedLesson({
         "measurement-uncertainty",
         "changing-concentration",
         "metal-reactivity",
+        "acids-and-neutralisation",
       ].includes(lesson.slug)) &&
     section === "review" &&
     work.run?.kind === "review" &&
@@ -271,6 +277,7 @@ export function DetailedLesson({
         "measurement-uncertainty",
         "changing-concentration",
         "metal-reactivity",
+        "acids-and-neutralisation",
       ].includes(lesson.slug));
   const reviewSchedule = (
     <ReviewContainer className={compactReview ? "review-schedule" : "panel"}>
@@ -345,6 +352,7 @@ export function DetailedLesson({
           "measurement-uncertainty",
           "changing-concentration",
           "metal-reactivity",
+          "acids-and-neutralisation",
         ].includes(lesson.slug) ||
           (section === "explore" && stage === "guided")) && (
           <button className="text-button" onClick={() => choose("warmup")}>
@@ -446,6 +454,7 @@ export function DetailedLesson({
                   "measurement-uncertainty",
                   "changing-concentration",
                   "metal-reactivity",
+                  "acids-and-neutralisation",
                 ].includes(lesson.slug)
               }
               title={
@@ -469,7 +478,7 @@ export function DetailedLesson({
                     : journey.reviewForms
               }
               savedForms={
-                (mixedHaber || mixedStates) && !legacyRun
+                (mixedHaber || mixedStates || mixedAcid) && !legacyRun
                   ? [
                       ...(section === "check"
                         ? fullJourney.checkForms
@@ -477,11 +486,15 @@ export function DetailedLesson({
                       ...(section === "check"
                         ? (mixedStates
                             ? statesForTier(fullJourney, "foundation")
-                            : haberForTier("foundation")
+                            : mixedAcid
+                              ? acidMetalForTier(fullJourney, "foundation")
+                              : haberForTier("foundation")
                           ).checkForms
                         : (mixedStates
                             ? statesForTier(fullJourney, "foundation")
-                            : haberForTier("foundation")
+                            : mixedAcid
+                              ? acidMetalForTier(fullJourney, "foundation")
+                              : haberForTier("foundation")
                           ).reviewForms),
                     ]
                   : undefined
@@ -560,7 +573,7 @@ export function DetailedLesson({
           <h2 ref={heading} tabIndex={-1}>
             {q.title ?? q.prompt}
           </h2>
-          {mixedHaber && q.tier === "higher" && (
+          {filteredLearning && q.tier === "higher" && (
             <p className="sample-tier">Higher extension</p>
           )}
           {q.title && <p className="sample-task-prompt">{q.prompt}</p>}
@@ -836,6 +849,7 @@ export function DetailedLesson({
               "measurement-uncertainty",
               "changing-concentration",
               "metal-reactivity",
+              "acids-and-neutralisation",
             ].includes(lesson.slug)) && (
             <div
               className="sample-mobile-tasks question-navigation"
@@ -867,7 +881,7 @@ export function DetailedLesson({
           {(journey.outcomes ?? [lesson.goal]).map((outcome) => (
             <p key={outcome}>{outcome}</p>
           ))}
-          {mixedHaber && (
+          {filteredLearning && (
             <p>
               Showing{" "}
               {data.preferences.tier === "higher"

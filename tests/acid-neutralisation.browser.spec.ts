@@ -3,10 +3,13 @@ import AxeBuilder from "@axe-core/playwright";
 import { acidNeutralisationJourney as journey } from "../src/content/journeys/acids-and-neutralisation";
 import { STORAGE_KEY, REVIEW_DELAY } from "../src/lib/progress";
 async function task(page: Page, n: number) {
-  await page
-    .getByRole("button", { name: `Task ${n}`, exact: true })
-    .first()
-    .click();
+  const picker = page.locator(".practice-task-picker select");
+  if (await picker.isVisible()) await picker.selectOption(String(n - 1));
+  else
+    await page
+      .getByRole("button", { name: `Task ${n}`, exact: true })
+      .first()
+      .click();
 }
 async function select(page: Page, label: string, value: string) {
   await page.getByLabel(label, { exact: true }).selectOption(value);
@@ -156,7 +159,7 @@ test("all original practice works while four written explanations remain self-re
 }) => {
   await page.goto(route);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
-  for (let i = 0; i < journey.practice.length; i++) {
+  for (let i = 0; i < 20; i++) {
     await task(page, i + 1);
     const q = journey.practice[i];
     await answer(page, q);

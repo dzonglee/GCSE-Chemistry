@@ -7066,3 +7066,197 @@ body:has(.sample-lesson) .topic-number {
     align-items: start;
   }
 }
+
+/* Acid–metal construction preserves media-scoped native controls. */
+/* Measurement response layout preserves boundary instructions and readable controls. */
+.sample-lesson[data-lesson="acids-and-neutralisation"] .sample-task-panel > h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="acids-and-neutralisation"] .sample-task-prompt {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="acids-and-neutralisation"]
+  .practice-task-picker
+  label {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="acids-and-neutralisation"]
+  .written-answer
+  textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.sample-lesson[data-lesson="acids-and-neutralisation"]
+  .sample-task-answer
+  .question-panel {
+  padding-top: 12px;
+}
+.sample-lesson[data-lesson="acids-and-neutralisation"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="acids-and-neutralisation"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="acids-and-neutralisation"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="acids-and-neutralisation"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="acids-and-neutralisation"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 12px;
+}
+.sample-lesson[data-lesson="acids-and-neutralisation"]
+  .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="acids-and-neutralisation"] .practice-task-picker {
+    display: none;
+  }
+  .sample-lesson[data-lesson="acids-and-neutralisation"]
+    .sample-task-panel
+    > h2,
+  .sample-lesson[data-lesson="acids-and-neutralisation"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="acids-and-neutralisation"]
+    .session-heading
+    .eyebrow {
+    font-size: 14px;
+  }
+  .sample-lesson[data-lesson="acids-and-neutralisation"]
+    .session-heading
+    > span {
+    font-size: 12px;
+  }
+  .sample-lesson[data-lesson="acids-and-neutralisation"]
+    .written-answer
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="acids-and-neutralisation"] .sample-title-row {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="acids-and-neutralisation"] .sample-title-row h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-lesson="acids-and-neutralisation"] .sample-overview {
+    margin-bottom: 8px;
+    gap: 4px 18px;
+  }
+  .sample-lesson[data-lesson="acids-and-neutralisation"] .sample-stages {
+    margin-bottom: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="acids-and-neutralisation"] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="acids-and-neutralisation"] .bench-instruction {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="acids-and-neutralisation"] .task-workbench button {
+  min-height: 44px;
+}
+
+.sample-lesson[data-lesson="acids-and-neutralisation"]
+  .measurement-distribution {
+  margin: 12px 0;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="acids-and-neutralisation"]
+    .measurement-workbench {
+    padding: 12px;
+  }
+}
+
+.acid-metal-reference {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f7f8fc;
+  overflow-wrap: anywhere;
+}
+.acid-metal-reference select {
+  min-height: 44px;
+  width: 100%;
+  margin: 8px 0 12px;
+}
+.acid-metal-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.acid-metal-buttons button {
+  min-height: 44px;
+  min-width: 44px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+}
+.acid-metal-buttons button[aria-pressed="true"] {
+  background: var(--yellow);
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.acid-metal-response {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+}
+.acid-metal-electrons {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+@media (min-width: 900px) {
+  .acid-metal-response {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="acids-and-neutralisation"] .task-workbench {
+    padding: 12px;
+  }
+  .sample-lesson[data-lesson="acids-and-neutralisation"]
+    .task-workbench
+    button {
+    min-height: 44px;
+  }
+}
+
+.sample-lesson[data-lesson="acids-and-neutralisation"] .sample-tier {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0 0 4px;
+}

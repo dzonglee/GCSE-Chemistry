@@ -1,3 +1,4 @@
+import { extendAcidMetalWriting } from "./acid-metal-writing";
 import type { LearningTask, LessonJourney, TaskModel } from "../types";
 import { choice, number } from "./helpers";
 const c = (
@@ -70,7 +71,7 @@ export const acidNeutralisationJourney: LessonJourney = {
   introduction:
     "Use reacting ions, salt identities and evidence to distinguish acid reactions.",
   scopeNote:
-    "Foundation/shared AQA Chemistry 4.4.2.1–4.4.2.4, Combined Trilogy 5.4.2.1–5.4.2.4 and related plain Pearson 3.1–3.3,3.9–3.14. Aqueous acids supply H+; aqueous alkalis supply OH− and are soluble bases. Insoluble metal oxides/hydroxides can be bases without being alkalis. Ordinary supplied Mg/Zn/Fe reactions with dilute hydrochloric/sulfuric acids form salts and H2; do not universally predict H2 for nitric acid with metals. Oxides/hydroxides give salt and water; carbonates additionally give CO2. AQA describes acid neutralisation by carbonates; Pearson separately lists that reaction family and defines a base through salt/water only. These descriptions are not claimed identical. Acid determines chloride/nitrate/sulfate; the positive ion and charge balance determine salt name/formula. The Foundation net ionic shorthand is H+ + OH− → H2O; Na+/Cl− spectators stay separate in solution. Real 3D represents the hydrated version H3O+ + OH− → 2H2O, including one initial water carrying the proton; it retains Na1Cl1O2H4 before/after, with trigonal-pyramidal hydronium, bent 104.5° water and unchanged aqueous spectators. This is a static representative identity mapping, not a microscopic mechanism or full solvent model. The native quantities count supplied reacting units, omitting water background/counterions, and count additional water formed in the GCSE shorthand. Stop when one reactant supply is exhausted; excess H+ or OH− determines the stated strong acid/alkali cases, not overall electrical charge. Every complete solution is electrically neutral through counterions; ion counts do not determine an exact pH. Equal volume alone does not guarantee matching reactive supply. Supplied pH < 7 acidic, pH 7 neutral, pH > 7 alkaline; a given wide-range chart gives approximate pH, whereas litmus alone does not give an exact reading. Warming alone does not prove complete neutralisation and bubbles alone do not identify a gas. Gas tests are supplied teacher-observed evidence, not unsupervised procedures. Required soluble-salt preparation, detailed pH/indicators, titration and Higher electron/strong/weak/factor-ten reasoning need separate lessons; no completed-course/practical/exam certification. Six written explanations remain self-reviewed and never automatically correct or official examiner marks.",
+    "Foundation/shared AQA Chemistry 4.4.2.1–4.4.2.4, Combined Trilogy 5.4.2.1–5.4.2.4 and related plain Pearson 3.1–3.3,3.9–3.14. Aqueous acids supply H+; aqueous alkalis supply OH− and are soluble bases. Insoluble metal oxides/hydroxides can be bases without being alkalis. Ordinary supplied Mg/Zn/Fe reactions with dilute hydrochloric/sulfuric acids form salts and H2; do not universally predict H2 for nitric acid with metals. Oxides/hydroxides give salt and water; carbonates additionally give CO2. AQA describes acid neutralisation by carbonates; Pearson separately lists that reaction family and defines a base through salt/water only. These descriptions are not claimed identical. Acid determines chloride/nitrate/sulfate; the positive ion and charge balance determine salt name/formula. The Foundation net ionic shorthand is H+ + OH− → H2O; Na+/Cl− spectators stay separate in solution. Real 3D represents the hydrated version H3O+ + OH− → 2H2O, including one initial water carrying the proton; it retains Na1Cl1O2H4 before/after, with trigonal-pyramidal hydronium, bent 104.5° water and unchanged aqueous spectators. This is a static representative identity mapping, not a microscopic mechanism or full solvent model. The native quantities count supplied reacting units, omitting water background/counterions, and count additional water formed in the GCSE shorthand. Stop when one reactant supply is exhausted; excess H+ or OH− determines the stated strong acid/alkali cases, not overall electrical charge. Every complete solution is electrically neutral through counterions; ion counts do not determine an exact pH. Equal volume alone does not guarantee matching reactive supply. Supplied pH < 7 acidic, pH 7 neutral, pH > 7 alkaline; a given wide-range chart gives approximate pH, whereas litmus alone does not give an exact reading. Warming alone does not prove complete neutralisation and bubbles alone do not identify a gas. Gas tests are supplied teacher-observed evidence, not unsupervised procedures. Required soluble-salt preparation, detailed pH/indicators, titration and Higher strong/weak/factor-ten reasoning need separate lessons; no completed-course/practical/exam certification. Written explanations remain self-reviewed and never automatically correct or official examiner marks.",
   outcomes: [
     "Distinguish acid, insoluble base and soluble alkali.",
     "Predict products for the supplied acid reaction families.",
@@ -238,8 +239,8 @@ export const acidNeutralisationJourney: LessonJourney = {
     ),
     c(
       "g-identity",
-      "Identify an aqueous acid",
-      "A hydrochloric acid solution has measured pH 2. Which acid ion is represented in GCSE aqueous notation?",
+      "Identify acid ions",
+      "Hydrochloric acid has pH 2. Which acid ion is represented in GCSE aqueous notation?",
       "H+",
       {
         "OH−": "OH− is the alkali's characteristic supplied ion.",
@@ -556,7 +557,7 @@ export const acidNeutralisationJourney: LessonJourney = {
       ),
       w(
         "a-explain",
-        "Fresh unequal-supply reasoning",
+        "Explain excess ions",
         "Two equal-volume strong-acid/alkali batches supply 5 H+ and 8 OH− units. Explain why complete reaction does not give a neutral solution in this supplied case.",
         "Only five 1:1 pairs can react. Three supplied OH− units remain in excess, so the resulting stated strong-acid/alkali mixture is alkaline. Equal volume did not mean equal reacting supply.",
         [
@@ -723,3 +724,5 @@ const recovery: Record<string, string> = {
 };
 for (const task of acidNeutralisationJourney.practice)
   task.followUp = `an-v1-${recovery[task.id.replace("an-v1-", "")]}`;
+
+extendAcidMetalWriting(acidNeutralisationJourney);
