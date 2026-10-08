@@ -1,4 +1,9 @@
 import { temperatureScatter } from "../../lib/temperature-scatter";
+import {
+  energyEquationGuided,
+  energyEquationRecovery,
+  energyEquationPractice,
+} from "./energy-linear-equation";
 import type { LearningTask, LessonJourney, TaskModel } from "../types";
 import type { PracticalMode } from "../../lib/energy-practical";
 import { choice, number } from "./helpers";
@@ -997,3 +1002,11 @@ alias(["r-risk", "p-risk", "g-evidence"], "supplied-risk-model-demand");
 
 practicalJourney.practice.at(-1)!.followUp = "ep-v1-r-scatter";
 alias(["g-scatter", "r-scatter"], "scatter-original-a");
+
+// Append only after original mappings: existing task indices, graph data and reserved forms stay intact.
+practicalJourney.guided.push(energyEquationGuided);
+practicalJourney.refresher.push(energyEquationRecovery);
+practicalJourney.practice.push(energyEquationPractice);
+practicalJourney.outcomes!.push(
+  "Interpret y=mx+c as a linear fitted relationship: m is its constant gradient and c is the extrapolated value at x=0.",
+);

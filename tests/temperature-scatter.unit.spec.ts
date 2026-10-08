@@ -38,7 +38,7 @@ test("original temperature data support balanced straight fits and extrapolated 
 });
 
 test("blank, unreadable and wrong graph work is distinguished without awarding a graph or intercept mark", () => {
-  const q = j.practice.at(-1)!,
+  const q = j.practice.find((q) => q.id === "ep-v1-p-scatter")!,
     d = q.fuelDrawing!,
     b = emptyFuelDrawing(d.data);
   expect(mark(q, JSON.stringify(b))).toMatchObject({
@@ -71,9 +71,9 @@ test("blank, unreadable and wrong graph work is distinguished without awarding a
 });
 
 test("the appended graph practice retains independent data, direct recovery, saved drafts and original sealed forms", () => {
-  const g = j.guided.at(-1)!,
-    r = j.refresher.at(-1)!,
-    p = j.practice.at(-1)!;
+  const g = j.guided.find((q) => q.id === "ep-v1-g-scatter")!,
+    r = j.refresher.find((q) => q.id === "ep-v1-r-scatter")!,
+    p = j.practice.find((q) => q.id === "ep-v1-p-scatter")!;
   expect(p.followUp).toBe(r.id);
   expect(g.fuelDrawing).toEqual(r.fuelDrawing);
   expect(p.fuelDrawing!.data.points).not.toEqual(g.fuelDrawing!.data.points);

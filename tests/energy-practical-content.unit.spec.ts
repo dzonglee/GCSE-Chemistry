@@ -17,7 +17,7 @@ const all = [
   ...j.checkForms.flat(),
   ...j.reviewForms.flat(),
 ];
-test("the individual Foundation/shared journey has59 tasks, valid recovery targets and six preserved original IDs", () => {
+test("the individual Foundation/shared journey has62 tasks, valid recovery targets and six preserved original IDs", () => {
   const l = lessons.find((l) => l.slug === "energy-practical")!;
   expect(l.tier).toBe("foundation");
   expect(l.course).toBe("combined");
@@ -26,10 +26,10 @@ test("the individual Foundation/shared journey has59 tasks, valid recovery targe
   expect([...l.questions, ...l.checks].map((q) => q.id)).toEqual(
     Array.from({ length: 6 }, (_, i) => "energy-practical-" + i),
   );
-  expect(all).toHaveLength(59);
-  expect(new Set(all.map((q) => q.id)).size).toBe(59);
-  expect(j.guided).toHaveLength(7);
-  expect(j.practice).toHaveLength(24);
+  expect(all).toHaveLength(62);
+  expect(new Set(all.map((q) => q.id)).size).toBe(62);
+  expect(j.guided).toHaveLength(8);
+  expect(j.practice).toHaveLength(25);
   for (const q of all) {
     expect(q.purpose).toBeTruthy();
     if (q.followUp)
@@ -64,7 +64,7 @@ test("all25 numerical answers match independent temperature, mean and graph refe
     "d-b-mean": 6.3,
     "d-b-intercept": 22.2,
   };
-  const numeric = all.filter((q) => !q.options && !q.rubric);
+  const numeric = all.filter((q) => !q.options && !q.rubric && !q.parts);
   expect(numeric).toHaveLength(25);
   for (const q of numeric) {
     expect(Number(q.answer), q.id).toBe(refs[q.id.replace("ep-v1-", "")]);
