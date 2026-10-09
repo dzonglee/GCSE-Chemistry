@@ -1,0 +1,350 @@
+[WebServer] (node:108733) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 16 tests using 2 workers
+
+(node:108750) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:108749) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 [desktop] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (39.1s)
+  ✘   2 [desktop] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (39.5s)
+(node:109288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:109296) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [desktop] › tests/learning.browser.spec.ts:467:5 › blocked storage leaves the app usable and warns accurately (3.3s)
+  ✓   5 [desktop] › tests/learning.browser.spec.ts:494:5 › corrupt data is preserved and explicit deletion touches only the Chemistry namespace (3.0s)
+  ✓   6 [desktop] › tests/learning.browser.spec.ts:528:5 › another tab cannot be silently overwritten by stale local work (7.4s)
+  ✓   7 [desktop] › tests/learning.browser.spec.ts:715:5 › simultaneous tab saves retain a winner and flag the conflicting writer (5.3s)
+  ✓   8 [desktop] › tests/learning.browser.spec.ts:750:5 › immediate refresh recovers a draft even while its commit lock is held (5.7s)
+(node:109970) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 [desktop] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (42.7s)
+(node:110203) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 [mobile] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (4.0m)
+(node:110590) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 [mobile] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (4.0m)
+(node:110918) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 [mobile] › tests/learning.browser.spec.ts:467:5 › blocked storage leaves the app usable and warns accurately (3.3s)
+  ✓  13 [mobile] › tests/learning.browser.spec.ts:494:5 › corrupt data is preserved and explicit deletion touches only the Chemistry namespace (2.9s)
+  ✓  14 [mobile] › tests/learning.browser.spec.ts:528:5 › another tab cannot be silently overwritten by stale local work (7.3s)
+  ✓  15 [mobile] › tests/learning.browser.spec.ts:715:5 › simultaneous tab saves retain a winner and flag the conflicting writer (5.0s)
+  ✘  11 [mobile] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (42.1s)
+  ✓  16 [mobile] › tests/learning.browser.spec.ts:750:5 › immediate refresh recovers a draft even while its commit lock is held (5.3s)
+
+
+  1) [desktop] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: pol-cond-v1-ra-groups
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 664
+    Received:    908.015625
+
+      53 |   const b = (await page.locator(first).first().boundingBox())!;
+      54 |   expect(b.height, label).toBeGreaterThanOrEqual(44);
+    > 55 |   expect(b.y + b.height, label).toBeLessThanOrEqual(664);
+         |                                 ^
+      56 |   expect(
+      57 |     await page.evaluate(
+      58 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at geometry (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:55:33)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:369:11
+
+    Error Context: test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [desktop] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: pol-cond-v1-ra-groups
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 664
+    Received:    858.421875
+
+      53 |   const b = (await page.locator(first).first().boundingBox())!;
+      54 |   expect(b.height, label).toBeGreaterThanOrEqual(44);
+    > 55 |   expect(b.y + b.height, label).toBeLessThanOrEqual(664);
+         |                                 ^
+      56 |   expect(
+      57 |     await page.evaluate(
+      58 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at geometry (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:55:33)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:369:11
+
+    Error Context: test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [desktop] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: pol-cond-v1-ra-groups
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 664
+    Received:    813.734375
+
+      53 |   const b = (await page.locator(first).first().boundingBox())!;
+      54 |   expect(b.height, label).toBeGreaterThanOrEqual(44);
+    > 55 |   expect(b.y + b.height, label).toBeLessThanOrEqual(664);
+         |                                 ^
+      56 |   expect(
+      57 |     await page.evaluate(
+      58 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at geometry (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:55:33)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:369:11
+
+    Error Context: test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [mobile] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Test timeout of 240000ms exceeded.
+
+    Error: locator.tap: Test timeout of 240000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Try the next form', exact: true })
+        - locator resolved to <button class="button">Try the next form</button>
+      - attempting tap action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <p>Compare each point with your retained response. T…</p> from <div class="results-list">…</div> subtree intercepts pointer events
+      - retrying tap action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <svg role="img" width="670" height="170" viewBox="0 0 670 170" aria-label="Reference diacid functional groups">…</svg> from <div class="results-list">…</div> subtree intercepts pointer events
+      - retrying tap action
+        - waiting 20ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <p>Compare each point with your retained response. T…</p> from <div class="results-list">…</div> subtree intercepts pointer events
+      2 × retrying tap action
+          - waiting 100ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a href="/">…</a> from <header class="mobile-bar">…</header> subtree intercepts pointer events
+      106 × retrying tap action
+            - waiting 500ms
+            - waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <details class="result-row">…</details> from <div class="results-list">…</div> subtree intercepts pointer events
+          - retrying tap action
+            - waiting 500ms
+            - waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <svg role="img" width="670" height="170" viewBox="0 0 670 170" aria-label="Reference diacid functional groups">…</svg> from <div class="results-list">…</div> subtree intercepts pointer events
+          - retrying tap action
+            - waiting 500ms
+            - waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <a href="/">…</a> from <header class="mobile-bar">…</header> subtree intercepts pointer events
+          - retrying tap action
+            - waiting 500ms
+            - waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <a href="/">…</a> from <header class="mobile-bar">…</header> subtree intercepts pointer events
+      - retrying tap action
+        - waiting 500ms
+
+
+      32 | async function tap(page: Page, name: string) {
+      33 |   const button = page.getByRole("button", { name, exact: true });
+    > 34 |   if (test.info().project.name === "mobile") await button.tap();
+         |                                                           ^
+      35 |   else await button.click();
+      36 | }
+      37 | async function practice(page: Page, id: string) {
+        at tap (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:34:59)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:343:15
+
+    Error Context: test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [mobile] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Test timeout of 240000ms exceeded.
+
+    Error: locator.tap: Test timeout of 240000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Try the next form', exact: true })
+        - locator resolved to <button class="button">Try the next form</button>
+      - attempting tap action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <figcaption>Reference diol. Both supplied carbon ends remain.…</figcaption> from <div class="results-list">…</div> subtree intercepts pointer events
+      - retrying tap action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <details open="" class="result-row">…</details> from <div class="results-list">…</div> subtree intercepts pointer events
+      - retrying tap action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <figcaption>Reference diol. Both supplied carbon ends remain.…</figcaption> from <div class="results-list">…</div> subtree intercepts pointer events
+        - retrying tap action
+          - waiting 100ms
+        106 × waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <figcaption>Reference diol. Both supplied carbon ends remain.…</figcaption> from <div class="results-list">…</div> subtree intercepts pointer events
+          - retrying tap action
+            - waiting 500ms
+            - waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <section class="assessment-results">…</section> intercepts pointer events
+          - retrying tap action
+            - waiting 500ms
+            - waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <figcaption>Reference diacid. Both supplied carbon ends remai…</figcaption> from <div class="results-list">…</div> subtree intercepts pointer events
+          - retrying tap action
+            - waiting 500ms
+            - waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <figcaption>Reference diol. Both supplied carbon ends remain.…</figcaption> from <div class="results-list">…</div> subtree intercepts pointer events
+          - retrying tap action
+            - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <figcaption>Reference diol. Both supplied carbon ends remain.…</figcaption> from <div class="results-list">…</div> subtree intercepts pointer events
+      - retrying tap action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <section class="assessment-results">…</section> intercepts pointer events
+      - retrying tap action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <figcaption>Reference diacid. Both supplied carbon ends remai…</figcaption> from <div class="results-list">…</div> subtree intercepts pointer events
+      - retrying tap action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      32 | async function tap(page: Page, name: string) {
+      33 |   const button = page.getByRole("button", { name, exact: true });
+    > 34 |   if (test.info().project.name === "mobile") await button.tap();
+         |                                                           ^
+      35 |   else await button.click();
+      36 | }
+      37 | async function practice(page: Page, id: string) {
+        at tap (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:34:59)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:343:15
+
+    Error Context: test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [mobile] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: pol-cond-v1-ra-groups
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 664
+    Received:    813.734375
+
+      53 |   const b = (await page.locator(first).first().boundingBox())!;
+      54 |   expect(b.height, label).toBeGreaterThanOrEqual(44);
+    > 55 |   expect(b.y + b.height, label).toBeLessThanOrEqual(664);
+         |                                 ^
+      56 |   expect(
+      57 |     await page.evaluate(
+      58 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at geometry (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:55:33)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:369:11
+
+    Error Context: test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6 failed
+    [desktop] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [desktop] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [desktop] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [mobile] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [mobile] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [mobile] › tests/condensation-review.browser.spec.ts:214:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+  10 passed (6.2m)

@@ -1,0 +1,134 @@
+.condensation-construction {
+  min-width: 0;
+}
+.condensation-construction p {
+  margin: 10px 0;
+}
+.condensation-construction label {
+  display: block;
+  font-weight: 700;
+  margin: 8px 0;
+}
+.condensation-construction select {
+  width: 100%;
+  min-height: 46px;
+  padding: 8px;
+  border: 1px solid #c8d2e4;
+  border-radius: 8px;
+  background: white;
+  font: inherit;
+  color: #14213d;
+}
+.condensation-construction button {
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid #c8d2e4;
+  border-radius: 8px;
+  background: white;
+  color: #14213d;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.condensation-construction button[aria-pressed="true"] {
+  background: #303bcf;
+  color: white;
+  border-color: #303bcf;
+}
+.condensation-construction button:focus-visible {
+  outline: 3px solid #303bcf;
+  outline-offset: 2px;
+}
+.condensation-construction button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.condensation-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0;
+}
+.condensation-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  border: 1px solid #dce2ed;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+.condensation-scroll:focus-visible {
+  outline: 3px solid #303bcf;
+  outline-offset: 2px;
+}
+.condensation-scroll svg {
+  display: block;
+  max-width: none;
+  height: 170px;
+}
+.condensation-scroll text {
+  fill: #14213d;
+  font:
+    18px var(--font-body),
+    sans-serif;
+}
+.condensation-scroll line,
+.condensation-scroll path {
+  stroke: #14213d;
+  stroke-width: 2;
+  fill: none;
+}
+.condensation-ends {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.condensation-end {
+  min-width: 0;
+  border: 1px solid #dce2ed;
+  border-radius: 8px;
+  padding: 10px;
+}
+.condensation-end h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.condensation-construction figure {
+  margin: 12px 0;
+}
+.condensation-construction figcaption {
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .condensation-ends {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* A result grid must constrain its scroll regions instead of expanding to SVG width. */
+.results-list:has(.condensation-construction) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.result-row:has(.condensation-construction) {
+  min-width: 0;
+}
+
+.condensation-group-editor {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  min-width: 0;
+}
+.condensation-group-controls,
+.condensation-group-diagrams {
+  min-width: 0;
+}
+.condensation-group-diagrams figure:first-child,
+.condensation-group-diagrams figure:first-child .condensation-scroll {
+  margin-top: 0;
+}
+@media (min-width: 901px) {
+  .condensation-group-editor {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+  }
+}

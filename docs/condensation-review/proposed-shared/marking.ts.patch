@@ -1,0 +1,23 @@
+--- a/src/lib/marking.ts
++++ b/src/lib/marking.ts
+@@ -18 +18,5 @@
+-import { readPolyesterDrawing, blankPolyesterDrawing } from "./polyester";
++import {
++  readPolyesterResponse,
++  blankPolyesterResponse,
++  describePolyesterResponse,
++} from "./condensation-drawing";
+@@ -128 +132,4 @@
+-      ? [readPolyesterDrawing(raw), blankPolyesterDrawing()]
++      ? [
++          readPolyesterResponse(raw, q.polyesterDrawing),
++          blankPolyesterResponse(q.polyesterDrawing),
++        ]
+@@ -212 +219 @@
+-    (q.polyesterDrawing && !readPolyesterDrawing(raw))
++    (q.polyesterDrawing && !readPolyesterResponse(raw, q.polyesterDrawing))
+@@ -474 +481,3 @@
+-  if (q.polymerisationDrawing || q.polyesterDrawing)
++  if (q.polyesterDrawing)
++    return describePolyesterResponse(raw, q.polyesterDrawing);
++  if (q.polymerisationDrawing)

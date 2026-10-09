@@ -429,19 +429,11 @@ export function PolymerisationWorkbench({
     const r = polyesterRecords[id];
     content = (
       <>
-        <p className="polymerisation-tier">
-          Higher: construct the repeating unit
+        <p className="polyester-original">
+          Diol: {r.diol}
+          <br />
+          Diacid: {r.diacid}
         </p>
-        <div className="polymerisation-reactants">
-          <section>
-            <h3>Original diol</h3>
-            <p>{r.diol}</p>
-          </section>
-          <section>
-            <h3>Original diacid</h3>
-            <p>{r.diacid}</p>
-          </section>
-        </div>
         <PolyesterChoices
           board={b}
           onChange={(k, v) => append({ ...b, [k]: v })}
@@ -546,7 +538,7 @@ export function PolymerisationWorkbench({
       role="region"
       aria-label="Task model"
     >
-      {mode !== "addition" && mode !== "reverse" && (
+      {mode !== "addition" && mode !== "reverse" && mode !== "polyester" && (
         <h3>{polymerisationRecords[mode][id].title}</h3>
       )}
       {content}

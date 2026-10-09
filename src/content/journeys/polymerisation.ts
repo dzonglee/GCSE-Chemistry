@@ -1,4 +1,5 @@
 import type { LearningTask as Task, LessonJourney as Journey } from "../types";
+import { extendCondensationWriting } from "./condensation-writing";
 import {
   additionRecords,
   reverseRecords,
@@ -1406,3 +1407,8 @@ export const polymerisationJourney: Journey = {
     },
   ],
 };
+extendCondensationWriting(
+  polymerisationJourney,
+  polymerisationExposureFamilies,
+  polymerisationRecovery,
+);

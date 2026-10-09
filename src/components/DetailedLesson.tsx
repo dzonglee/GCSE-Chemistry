@@ -29,6 +29,7 @@ import { naturalForTier } from "@/content/journeys/natural-higher-assessments";
 import { acidMetalForTier } from "@/content/journeys/acid-metal-writing";
 import { statesForTier } from "@/content/journeys/states-writing";
 import { haberForTier } from "@/content/journeys/haber-and-fertilisers";
+import { polymerisationForTier } from "@/content/journeys/condensation-writing";
 export function DetailedLesson({
   lesson,
   journey: fullJourney,
@@ -41,7 +42,8 @@ export function DetailedLesson({
   const mixedStates = lesson.slug === "states-of-matter";
   const mixedNatural = lesson.slug === "natural-polymers";
   const mixedAcid = lesson.slug === "acids-and-neutralisation";
-  const filteredLearning = mixedHaber || mixedAcid;
+  const mixedPolymer = lesson.slug === "polymers";
+  const filteredLearning = mixedHaber || mixedAcid || mixedPolymer;
   const journey = mixedHaber
     ? haberForTier(data.preferences.tier)
     : mixedStates
@@ -50,7 +52,9 @@ export function DetailedLesson({
         ? acidMetalForTier(fullJourney, data.preferences.tier)
         : mixedNatural
           ? naturalForTier(fullJourney, data.preferences.tier)
-          : fullJourney;
+          : mixedPolymer
+            ? polymerisationForTier(fullJourney, data.preferences.tier)
+            : fullJourney;
   const work = data.work[lesson.slug] ?? emptyWork();
   const section = work.section;
   const stage: LearningStage =
@@ -260,6 +264,10 @@ export function DetailedLesson({
     lesson.slug === "life-cycle-and-recycling" &&
     work.run?.kind === "review" &&
     work.run.ids.every((id) => id.startsWith("lca-v1-resource-"));
+  const compactCondensationReview =
+    mixedPolymer &&
+    work.run?.kind === "review" &&
+    work.run.ids.every((id) => id.startsWith("pol-cond-v1-"));
   const compactIonReview = [
     "ion-tests",
     "aqueous-electrolysis-products",
@@ -268,7 +276,8 @@ export function DetailedLesson({
     "life-cycle-and-recycling",
   ].includes(lesson.slug);
   const compactReview =
-    (compactIonReview ||
+    (compactCondensationReview ||
+      compactIonReview ||
       lesson.slug === "inside-an-atom" ||
       lesson.slug === "balancing-equations" ||
       lesson.slug === "transition-metals" ||
@@ -307,7 +316,8 @@ export function DetailedLesson({
   const ReviewContainer = compactReview ? "details" : "section";
   const reviewScheduleAfter =
     compactReview &&
-    (compactIonReview ||
+    (compactCondensationReview ||
+      compactIonReview ||
       lesson.slug === "balancing-equations" ||
       lesson.slug === "transition-metals" ||
       lesson.slug === "atomic-models" ||
@@ -517,6 +527,7 @@ export function DetailedLesson({
             <AssessmentSession
               id={lesson.slug}
               navigationAfterResponse={
+                mixedPolymer ||
                 mixedNatural ||
                 lesson.slug === "ph-scale-and-indicators" ||
                 lesson.slug === "life-cycle-and-recycling" ||
@@ -576,7 +587,11 @@ export function DetailedLesson({
                     : journey.reviewForms
               }
               savedForms={
-                (mixedHaber || mixedStates || mixedAcid || mixedNatural) &&
+                (mixedHaber ||
+                  mixedStates ||
+                  mixedAcid ||
+                  mixedNatural ||
+                  mixedPolymer) &&
                 !legacyRun
                   ? [
                       ...(section === "check"
@@ -589,7 +604,12 @@ export function DetailedLesson({
                               ? statesForTier(fullJourney, "foundation")
                               : mixedAcid
                                 ? acidMetalForTier(fullJourney, "foundation")
-                                : haberForTier("foundation")
+                                : mixedPolymer
+                                  ? polymerisationForTier(
+                                      fullJourney,
+                                      "foundation",
+                                    )
+                                  : haberForTier("foundation")
                           ).checkForms
                         : (mixedNatural
                             ? naturalForTier(fullJourney, "foundation")
@@ -597,7 +617,12 @@ export function DetailedLesson({
                               ? statesForTier(fullJourney, "foundation")
                               : mixedAcid
                                 ? acidMetalForTier(fullJourney, "foundation")
-                                : haberForTier("foundation")
+                                : mixedPolymer
+                                  ? polymerisationForTier(
+                                      fullJourney,
+                                      "foundation",
+                                    )
+                                  : haberForTier("foundation")
                           ).reviewForms),
                     ]
                   : undefined
@@ -633,7 +658,9 @@ export function DetailedLesson({
               {index + 1} of {list.length}
             </span>
             {stage === "practice" && journey.practiceGroups ? (
-              lesson.slug !== "life-cycle-and-recycling" && practicePicker
+              lesson.slug !== "life-cycle-and-recycling" &&
+              !q.polyesterDrawing &&
+              practicePicker
             ) : (
               <div
                 ref={taskNavigation}
@@ -657,7 +684,7 @@ export function DetailedLesson({
           <h2 ref={heading} tabIndex={-1}>
             {q.title ?? q.prompt}
           </h2>
-          {filteredLearning && q.tier === "higher" && (
+          {filteredLearning && !mixedPolymer && q.tier === "higher" && (
             <p className="sample-tier">Higher extension</p>
           )}
           {q.title && <p className="sample-task-prompt">{q.prompt}</p>}
@@ -841,6 +868,7 @@ export function DetailedLesson({
                   ? "Try your own answer first. Use support if you need it."
                   : "Try a step, explain what changed, then check your answer."}
               </p>
+              {q.polyesterDrawing && practicePicker}
               <div className="sample-task-actions">
                 {!q.openingHint && (
                   <button

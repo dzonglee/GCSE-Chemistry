@@ -1,0 +1,23 @@
+--- a/src/components/AssessmentSession.tsx
++++ b/src/components/AssessmentSession.tsx
+@@ -387,5 +387,7 @@
+-        q.writtenEquations && q.id.startsWith("ion-tests-v1-write-")
+-          ? checked.feedback
+-          : q.parts
+-            ? "Complete every part with a valid number before recording."
+-            : "Enter a valid number only; use the unit shown beside the input.",
++        q.polyesterDrawing && q.id.startsWith("pol-cond-v1-")
++          ? "Your saved construction cannot be read. Your work is retained; start a new construction explicitly, or leave this question unanswered."
++          : q.writtenEquations && q.id.startsWith("ion-tests-v1-write-")
++            ? checked.feedback
++            : q.parts
++              ? "Complete every part with a valid number before recording."
++              : "Enter a valid number only; use the unit shown beside the input.",
+@@ -450,0 +453,3 @@
++        data-condensation-response={
++          q.id.startsWith("pol-cond-v1-") || undefined
++        }
+@@ -457,0 +463 @@
++          {q.id.startsWith("pol-cond-v1-") ? " · Higher" : ""}
+@@ -574,0 +581 @@
++            disabled={q.id.startsWith("pol-cond-v1-") && !recorded}

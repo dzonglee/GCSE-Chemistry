@@ -8145,3 +8145,89 @@ body:has(.sample-lesson) .topic-number {
     margin-bottom: 0;
   }
 }
+
+/* Condensation only: reach the actual construction before supporting notes. */
+.sample-task-panel:has([data-condensation-construction]),
+.sample-task-panel:has(.polyester-original) {
+  padding: 16px;
+}
+.sample-task-panel:has([data-condensation-construction]) > h2,
+.sample-task-panel:has(.polyester-original) > h2 {
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 10px 0;
+}
+.sample-task-panel:has([data-condensation-construction]) .sample-task-prompt,
+.sample-task-panel:has(.polyester-original) .sample-task-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 8px 0;
+}
+.sample-task-panel:has(.polyester-original) .polyester-original {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+.sample-task-panel:has(.polyester-original) .polymerisation-fields {
+  margin-top: 8px;
+}
+.sample-task-panel:has([data-condensation-construction]) .question-panel {
+  margin-top: 0;
+  padding: 0;
+}
+.sample-lesson .assessment-session .question-panel[data-condensation-response] {
+  padding: 12px;
+  margin-top: 12px;
+}
+.sample-lesson
+  .assessment-session
+  .question-panel[data-condensation-response]
+  > h2 {
+  font-size: 18px;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+.sample-lesson
+  .assessment-session:has([data-condensation-response])
+  .session-heading {
+  margin: 12px 0;
+}
+.sample-lesson .question-panel[data-condensation-response] > .eyebrow {
+  margin-bottom: 8px;
+}
+
+[data-condensation-construction="legacy-repeat"] {
+  padding: 12px;
+}
+.sample-task-panel:has(.polyester-original) {
+  padding: 12px;
+}
+.sample-task-panel:has(.polyester-original) .polymerisation-workbench {
+  padding: 8px;
+}
+.sample-task-panel:has(.polyester-original) .sample-task-topline {
+  margin-bottom: 0;
+}
+.sample-task-panel:has(.polyester-original) > h2 {
+  margin: 6px 0;
+}
+.sample-task-panel:has(.polyester-original) .polymerisation-field label {
+  margin-bottom: 4px;
+}
+
+@media (min-width: 901px) {
+  .sample-lesson[data-lesson="polymers"]
+    .sample-task-panel:has([data-condensation-construction])
+    > h2,
+  .sample-lesson[data-lesson="polymers"]
+    .sample-task-panel:has(.polyester-original)
+    > h2 {
+    font-size: 24px;
+  }
+  .sample-lesson[data-lesson="polymers"]
+    .assessment-session
+    .question-panel[data-condensation-response]
+    > h2 {
+    font-size: 22px;
+  }
+}

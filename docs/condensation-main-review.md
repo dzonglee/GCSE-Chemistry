@@ -1,0 +1,33 @@
+# Higher condensation: main-session integration review
+
+Individual integration accepted after the checks below; whole-course acceptance remains open. Worker delivery868f764 was fetched directly from GitHub. Main preserved the original95-route application and integrated only its84 owned condensation files and five separately reviewed shared proposals. No main branch merge/deploy occurred.
+
+## Independently reviewed material
+
+Main reread actual AQA8462 section4.7.3.2 and personally inspected printed69, including both monomers, ester repeat boundaries and the conventional end-omitted2nH₂O equation. Main freshly downloaded actual2018 Higher Paper2 QP/MS and2020 Higher Paper2 QP/MS, read Q06.1–2 andQ07.6 respectively and personally inspected both paired figures.2018Q06.1 is a short by-product name/formula demand, accepting water or hydrogen chloride for its unspecified reagents; Q06.2 is addition, not evidence that it demands a polyester drawing.2020Q07.6 identifies correct ester connectivity. These are not inflated into universal full-drawing exam questions.
+
+Main freshly downloaded RSC Higher worksheet509327, read its four-page text and personally inspected its page3 group/water/repeat figure. It supports constructing both reactive ends and deducing ester connectivity. Page4's introductory hydrogen-chloride sentence conflicts with its water answer; that inconsistency was not copied as a universal rule. Main inspected the specification's distinction between normally lost small molecules and the stated diol/diacid water case.
+
+Actual Maths expanding-double-brackets.ts source read again; four fresh3000 guided/independent320/1280 views captured and personally inspected. Guided work isolates a coefficient with visible support; independent work supplies a complete expression before whole-set marking. Chemistry retains that progression while requiring actual reactive ends and connected structure, rather than a generic numeric or recognition task.
+
+## Reviewed integration decisions
+
+Original91 task identities, version1, stage positions, two original check forms and two original delayed forms remain. Existing Higher-titled learning tasks now carry explicit tier tags and retain their old aliases while gaining only new-condensation equivalents. Two original addition forms remain available. Higher defaults to the new forms; started original forms remain reachable through saved-form identities. Foundation does not receive new condensation work.
+
+Thirteen appended tasks supply one guided functional-group construction, two practice constructions, two three-item independent forms and two two-item delayed forms. Ten full structure responses plus the guide remain manual; two short water formula responses may be checked. No automatic examiner structure marks are awarded. References remain sealed until whole submission, learner structures remain visible, malformed work retains its raw bytes, and delayed forms use the real seven-day gate.
+
+Main reviewed both retained alcohol-derived linking O atoms, both carboxyl C and C=O groups, correct ester connectivity across the repeat boundaries, omitted end caps and lower-right outside n. Reversed/cyclically shifted equivalents are judged manually. Supplied carbon spacers and maximum16 backbone tokens are explicit bounds; this is not an unrestricted molecular editor. Original addition3D assets and finite actual-link models remain. A new decorative3D object is unnecessary for the missing independently constructed connectivity decisions.
+
+Shared proposals were first applied to exact old baselines with zero fuzz and candidate hashes verified. Three-way integration preserved the newer natural-polymer tier forms, pH/aqueous/resource compact review and resource practice-picker DOM order. Seven lesson-component overlaps and one stylesheet append overlap were resolved explicitly. A missed CSS closing brace was caught by formatting, corrected before building, and formatting then passed. No runner/server owned the Chemistry build during these source edits.
+
+## Current validation
+
+Integrated V1 types, full lint with zero allowed warnings and production build passed. All1019 unit checks passed in1.2minutes, including the original91-definition fixture and independent literal atom/bond references. The V1 frozen production integration run passed all86 cases in26.5minutes: new condensation and original polymerisation, plus affected natural-polymer, pH, aqueous and resource-magnitude cases. This is a scoped integration run, not the whole course.
+
+After that runner exited and2259 fingerprints were verified, main improved the desktop editor: the active monomer appears beside the controls and its edited end is revealed using local diagram scrolling. Diol canvas cropping removes empty space without shrinking glyphs; phone controls remain vertically arranged. Desktop question headings increased without weakening44-pixel controls, the664-pixel first-response limit or12-pixel actual visible SVG text. A missing space in the reference footer was corrected. Neither saved structure bytes nor the science changed.
+
+Final V2 types, full clean lint and production build passed. Nineteen affected units passed in10.7seconds. All22 final condensation production browser checks passed in5.4minutes, including two added cases for Higher-to-Foundation run preservation and the matching edited-end preview. The runner exited0 and2259 production/source fingerprints verified. The V1 full1019 units/86 browser cases and V2 final19 units/22 browser cases are separate runs.
+
+Twenty-two current-build images were captured with fonts ready and native phone touch retained. Visual review caught a desktop screenshot mid smooth-scroll animation; the private capture script was corrected to use an instant top scroll, assert scrollY0 and settle persistence before capture, then all22 were retaken. Images show actual group construction, retained wrong groups, a learner-produced complete repeat, separate post-submission reference and both repeat boundaries/ester junctions. Final build and image hashes are in docs/qa/condensation-main-final/manifest.json. Sample links were explicitly sent before subsequent lesson research. No screenshots were edited.
+
+Current catalog:95 routes/5796 tasks/2162 practice/885 manual. Actual Playwright inventory:2436 cases in146 files. A complete final current-course regression is still required; neither task counts nor old regression results establish exam readiness. Whole-course statement/qualification/WS/MS/AT/practical/cumulative/UI audit remains open. Potable-water/RP8 is exclusively assigned in PARALLEL-SCOPE-POTABLE.md; main will not author that lesson during the assignment.

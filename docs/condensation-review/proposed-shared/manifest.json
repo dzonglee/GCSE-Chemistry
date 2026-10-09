@@ -1,0 +1,42 @@
+[
+  {
+    "path": "src/lib/marking.ts",
+    "beforeSha256": "181d05cee21d1a7d4f73a39e2cb685bc7443dc8f8edb8dd2afd1983f7f73f4e7",
+    "candidateSha256": "33f02f71e1756fec1e6688bdcbcb6a4a6a0027c40ace0656fef16f249939eac3",
+    "patch": "marking.ts.patch",
+    "dryRunPassed": true,
+    "appliedBytesExactlyMatched": true
+  },
+  {
+    "path": "src/components/DetailedLesson.tsx",
+    "beforeSha256": "736ec1efe489e736eb7c4d79f48f09fa8359510e942648ae8ed831eea7660538",
+    "candidateSha256": "a02ce8c3c19f1c0fa019109624b29562521e0c84e71e73f75f9ab08d393f32d6",
+    "patch": "DetailedLesson.tsx.patch",
+    "dryRunPassed": true,
+    "appliedBytesExactlyMatched": true
+  },
+  {
+    "path": "src/components/AssessmentSession.tsx",
+    "beforeSha256": "a92c450e9d3bc3909a1f0e85736426491b1a5e8d54da8aade8a78742727786bc",
+    "candidateSha256": "a9d18e5fdefcdf0575efb7a5b5f1a232210d74695c56ea342ec6f7e5c807cec9",
+    "patch": "AssessmentSession.tsx.patch",
+    "dryRunPassed": true,
+    "appliedBytesExactlyMatched": true
+  },
+  {
+    "path": "src/app/sample-lesson.css",
+    "beforeSha256": "7b5b75ab0c23d989262f98626ce2b1035f3c15a0915db49bae2f4d2a57832133",
+    "candidateSha256": "b8f7391179b0e08326be733d17e29b59a9f7d61d064ebd18cea36fcb8114880b",
+    "patch": "sample-lesson.css.patch",
+    "dryRunPassed": true,
+    "appliedBytesExactlyMatched": true
+  },
+  {
+    "path": "src/app/layout.tsx",
+    "beforeSha256": "5599c46cd1d4e2527ec9fe245aeecf10457426ed95e046fc22b8ea91f4bec0bb",
+    "candidateSha256": "8a34db31d57225b74f9c060d34ffa52188b6a9ec3804f155ae7646f0dca62397",
+    "patch": "layout.tsx.patch",
+    "dryRunPassed": true,
+    "appliedBytesExactlyMatched": true
+  }
+]

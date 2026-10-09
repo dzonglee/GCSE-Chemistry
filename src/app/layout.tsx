@@ -14,6 +14,7 @@ import localFont from "next/font/local";
 import { Shell } from "@/components/Shell";
 import "./globals.css";
 import "./sample-lesson.css";
+import "./condensation.css";
 import "./pathways.css";
 import "./natural.css";
 import "./purity.css";

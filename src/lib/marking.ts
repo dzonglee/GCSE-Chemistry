@@ -15,7 +15,11 @@ import {
   readPolymerisationDrawing,
   blankPolymerisationDrawing,
 } from "./polymerisation-board";
-import { readPolyesterDrawing, blankPolyesterDrawing } from "./polyester";
+import {
+  readPolyesterResponse,
+  blankPolyesterResponse,
+  describePolyesterResponse,
+} from "./condensation-drawing";
 import {
   describeOrganicDrawing,
   readOrganicDrawing,
@@ -125,7 +129,10 @@ export function mark(
       ? [readPolymerisationDrawing(raw), blankPolymerisationDrawing()]
       : [],
     q.polyesterDrawing
-      ? [readPolyesterDrawing(raw), blankPolyesterDrawing()]
+      ? [
+          readPolyesterResponse(raw, q.polyesterDrawing),
+          blankPolyesterResponse(q.polyesterDrawing),
+        ]
       : [],
   ]) {
     if (
@@ -209,7 +216,7 @@ export function mark(
     (q.naturalDrawing && !readNaturalDrawing(raw, q.naturalDrawing)) ||
     (q.pathwayDrawing && !readPathwayDrawing(raw)) ||
     (q.polymerisationDrawing && !readPolymerisationDrawing(raw)) ||
-    (q.polyesterDrawing && !readPolyesterDrawing(raw))
+    (q.polyesterDrawing && !readPolyesterResponse(raw, q.polyesterDrawing))
   )
     return {
       correct: false,
@@ -476,7 +483,9 @@ export function displayResponse(q: Question, raw: string) {
   if (q.purityDrawing) return describePurityDrawing(q.purityDrawing, raw);
   if (q.naturalDrawing) return describeNaturalDrawing(raw, q.naturalDrawing);
   if (q.pathwayDrawing) return describePathwayDrawing(raw);
-  if (q.polymerisationDrawing || q.polyesterDrawing)
+  if (q.polyesterDrawing)
+    return describePolyesterResponse(raw, q.polyesterDrawing);
+  if (q.polymerisationDrawing)
     return raw
       ? "Saved structure — inspect the retained drawing below."
       : "No structure saved.";

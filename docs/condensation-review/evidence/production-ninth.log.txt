@@ -1,0 +1,418 @@
+[WebServer] (node:112148) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 46 tests using 2 workers
+
+(node:112165) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:112164) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/condensation-review.browser.spec.ts:153:7 › fonts-ready 320: original and new guided/practice construction controls, readable SVGs and axe (16.3s)
+  ✘   2 [desktop] › tests/condensation-review.browser.spec.ts:219:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (23.3s)
+(node:112680) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [desktop] › tests/condensation-review.browser.spec.ts:153:7 › fonts-ready 390: original and new guided/practice construction controls, readable SVGs and axe (15.9s)
+  ✓   5 [desktop] › tests/condensation-review.browser.spec.ts:153:7 › fonts-ready 1280: original and new guided/practice construction controls, readable SVGs and axe (16.5s)
+  ✘   4 [desktop] › tests/condensation-review.browser.spec.ts:219:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (23.4s)
+(node:113151) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [desktop] › tests/condensation-review.browser.spec.ts:407:5 › wrong and unreadable constructions retain exact bytes; malformed work cannot record and scoped reset preserves siblings (16.4s)
+  ✘   6 [desktop] › tests/condensation-review.browser.spec.ts:219:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (23.8s)
+(node:113396) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [desktop] › tests/condensation-review.browser.spec.ts:454:5 › helped equivalent construction cannot be fresh in a reserved Higher form (10.1s)
+  ✓   9 [desktop] › tests/condensation-review.browser.spec.ts:481:5 › a started ORIGINAL addition form survives a Higher switch with answer bytes and reserved IDs intact (16.2s)
+  ✓  11 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › reverse: all original comparisons retain wrong proposals on reload and accept their chemical targets (32.9s)
+  ✓  10 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › addition: all original comparisons retain wrong proposals on reload and accept their chemical targets (43.5s)
+  ✓  13 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › inventory: all original comparisons retain wrong proposals on reload and accept their chemical targets (26.5s)
+  ✓  12 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › segment: all original comparisons retain wrong proposals on reload and accept their chemical targets (26.7s)
+  ✘  15 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › links: all original comparisons retain wrong proposals on reload and accept their chemical targets (11.8s)
+  ✘  14 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › ester: all original comparisons retain wrong proposals on reload and accept their chemical targets (11.9s)
+
+
+  1) [desktop] › tests/condensation-review.browser.spec.ts:219:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: submitted groups and reference
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 75
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure landmarks are unique",
+    +     "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+    +     "id": "landmark-unique",
+    +     "impact": "moderate",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "accessibleText": "diol structure: scroll to inspect both ends",
+    +               "role": "region",
+    +             },
+    +             "id": "landmark-is-unique",
+    +             "impact": "moderate",
+    +             "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"diol structure: scroll to inspect both ends\">",
+    +                 "target": Array [
+    +                   ".polymerisation-review > .condensation-construction > div > figure:nth-child(1) > .condensation-scroll[role=\"region\"]",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +         "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"diol structure: scroll to inspect both ends\">",
+    +         "impact": "moderate",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div:nth-child(4) > figure:nth-child(1) > .condensation-scroll[role=\"region\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "accessibleText": "acid structure: scroll to inspect both ends",
+    +               "role": "region",
+    +             },
+    +             "id": "landmark-is-unique",
+    +             "impact": "moderate",
+    +             "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"acid structure: scroll to inspect both ends\">",
+    +                 "target": Array [
+    +                   ".polymerisation-review > .condensation-construction > div > figure:nth-child(2) > .condensation-scroll[role=\"region\"]",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +         "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"acid structure: scroll to inspect both ends\">",
+    +         "impact": "moderate",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div:nth-child(4) > figure:nth-child(2) > .condensation-scroll[role=\"region\"]",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.semantics",
+    +       "best-practice",
+    +     ],
+    +   },
+    + ]
+
+      77 |     expect(sizes.length, label).toBeGreaterThan(0);
+      78 |   for (const size of sizes) expect(size, label).toBeGreaterThanOrEqual(12);
+    > 79 |   expect((await new AxeBuilder({ page }).analyze()).violations, label).toEqual(
+         |                                                                        ^
+      80 |     [],
+      81 |   );
+      82 |   return {
+        at layout (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:79:72)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:336:7
+
+    Error Context: test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [desktop] › tests/condensation-review.browser.spec.ts:219:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: submitted groups and reference
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 75
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure landmarks are unique",
+    +     "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+    +     "id": "landmark-unique",
+    +     "impact": "moderate",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "accessibleText": "diol structure: scroll to inspect both ends",
+    +               "role": "region",
+    +             },
+    +             "id": "landmark-is-unique",
+    +             "impact": "moderate",
+    +             "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"diol structure: scroll to inspect both ends\">",
+    +                 "target": Array [
+    +                   ".polymerisation-review > .condensation-construction > div > figure:nth-child(1) > .condensation-scroll[role=\"region\"]",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +         "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"diol structure: scroll to inspect both ends\">",
+    +         "impact": "moderate",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div:nth-child(4) > figure:nth-child(1) > .condensation-scroll[role=\"region\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "accessibleText": "acid structure: scroll to inspect both ends",
+    +               "role": "region",
+    +             },
+    +             "id": "landmark-is-unique",
+    +             "impact": "moderate",
+    +             "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"acid structure: scroll to inspect both ends\">",
+    +                 "target": Array [
+    +                   ".polymerisation-review > .condensation-construction > div > figure:nth-child(2) > .condensation-scroll[role=\"region\"]",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +         "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"acid structure: scroll to inspect both ends\">",
+    +         "impact": "moderate",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div:nth-child(4) > figure:nth-child(2) > .condensation-scroll[role=\"region\"]",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.semantics",
+    +       "best-practice",
+    +     ],
+    +   },
+    + ]
+
+      77 |     expect(sizes.length, label).toBeGreaterThan(0);
+      78 |   for (const size of sizes) expect(size, label).toBeGreaterThanOrEqual(12);
+    > 79 |   expect((await new AxeBuilder({ page }).analyze()).violations, label).toEqual(
+         |                                                                        ^
+      80 |     [],
+      81 |   );
+      82 |   return {
+        at layout (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:79:72)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:336:7
+
+    Error Context: test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [desktop] › tests/condensation-review.browser.spec.ts:219:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: submitted groups and reference
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 75
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure landmarks are unique",
+    +     "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+    +     "id": "landmark-unique",
+    +     "impact": "moderate",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "accessibleText": "diol structure: scroll to inspect both ends",
+    +               "role": "region",
+    +             },
+    +             "id": "landmark-is-unique",
+    +             "impact": "moderate",
+    +             "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"diol structure: scroll to inspect both ends\">",
+    +                 "target": Array [
+    +                   ".polymerisation-review > .condensation-construction > div > figure:nth-child(1) > .condensation-scroll[role=\"region\"]",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +         "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"diol structure: scroll to inspect both ends\">",
+    +         "impact": "moderate",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div:nth-child(4) > figure:nth-child(1) > .condensation-scroll[role=\"region\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "accessibleText": "acid structure: scroll to inspect both ends",
+    +               "role": "region",
+    +             },
+    +             "id": "landmark-is-unique",
+    +             "impact": "moderate",
+    +             "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"acid structure: scroll to inspect both ends\">",
+    +                 "target": Array [
+    +                   ".polymerisation-review > .condensation-construction > div > figure:nth-child(2) > .condensation-scroll[role=\"region\"]",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +         "html": "<div class=\"condensation-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"acid structure: scroll to inspect both ends\">",
+    +         "impact": "moderate",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div:nth-child(4) > figure:nth-child(2) > .condensation-scroll[role=\"region\"]",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.semantics",
+    +       "best-practice",
+    +     ],
+    +   },
+    + ]
+
+      77 |     expect(sizes.length, label).toBeGreaterThan(0);
+      78 |   for (const size of sizes) expect(size, label).toBeGreaterThanOrEqual(12);
+    > 79 |   expect((await new AxeBuilder({ page }).analyze()).violations, label).toEqual(
+         |                                                                        ^
+      80 |     [],
+      81 |   );
+      82 |   return {
+        at layout (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:79:72)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:336:7
+
+    Error Context: test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [desktop] › tests/polymerisation.browser.spec.ts:96:7 › ester: all original comparisons retain wrong proposals on reload and accept their chemical targets
+
+    Test was interrupted.
+
+    Error: locator.evaluate: Test ended.
+    Call log:
+      - waiting for getByRole('region', { name: 'Task model', exact: true }).locator('[id$="growth"]')
+        - locator resolved to visible <select id="_r_0_growth">…</select>
+
+
+      41 |     if (k === "record") continue;
+      42 |     const el = root.locator(`[id$="${k}"]`);
+    > 43 |     if ((await el.evaluate((e) => e.tagName)) === "SELECT")
+         |                   ^
+      44 |       await el.selectOption(v);
+      45 |     else await el.fill(v);
+      46 |   }
+        at fill (/workspace/chemistry-condensation-runtime/tests/polymerisation.browser.spec.ts:43:19)
+        at /workspace/chemistry-condensation-runtime/tests/polymerisation.browser.spec.ts:154:9
+
+    Error Context: test-results/browser/polymerisation.browser-est-b18aa-cept-their-chemical-targets-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/polymerisation.browser-est-b18aa-cept-their-chemical-targets-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/polymerisation.browser-est-b18aa-cept-their-chemical-targets-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [desktop] › tests/polymerisation.browser.spec.ts:96:7 › links: all original comparisons retain wrong proposals on reload and accept their chemical targets
+
+    Test was interrupted.
+
+    Error: locator.evaluate: Test ended.
+    Call log:
+      - waiting for getByRole('region', { name: 'Task model', exact: true }).locator('[id$="smallCount"]')
+
+
+      41 |     if (k === "record") continue;
+      42 |     const el = root.locator(`[id$="${k}"]`);
+    > 43 |     if ((await el.evaluate((e) => e.tagName)) === "SELECT")
+         |                   ^
+      44 |       await el.selectOption(v);
+      45 |     else await el.fill(v);
+      46 |   }
+        at fill (/workspace/chemistry-condensation-runtime/tests/polymerisation.browser.spec.ts:43:19)
+        at /workspace/chemistry-condensation-runtime/tests/polymerisation.browser.spec.ts:124:9
+
+    Error Context: test-results/browser/polymerisation.browser-lin-313cf-cept-their-chemical-targets-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/polymerisation.browser-lin-313cf-cept-their-chemical-targets-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/polymerisation.browser-lin-313cf-cept-their-chemical-targets-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [desktop] › tests/condensation-review.browser.spec.ts:219:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [desktop] › tests/condensation-review.browser.spec.ts:219:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [desktop] › tests/condensation-review.browser.spec.ts:219:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+  2 interrupted
+    [desktop] › tests/polymerisation.browser.spec.ts:96:7 › ester: all original comparisons retain wrong proposals on reload and accept their chemical targets
+    [desktop] › tests/polymerisation.browser.spec.ts:96:7 › links: all original comparisons retain wrong proposals on reload and accept their chemical targets
+  31 did not run
+  10 passed (2.9m)

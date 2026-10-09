@@ -1,0 +1,43 @@
+[WebServer] (node:129186) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 28 tests using 2 workers
+
+(node:129202) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:129203) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/condensation-review.browser.spec.ts:168:7 › fonts-ready 320: original and new guided/practice construction controls, readable SVGs and axe (17.0s)
+  ✓   3 [desktop] › tests/condensation-review.browser.spec.ts:168:7 › fonts-ready 390: original and new guided/practice construction controls, readable SVGs and axe (16.8s)
+  ✓   2 [desktop] › tests/condensation-review.browser.spec.ts:234:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (55.8s)
+  ✓   5 [desktop] › tests/condensation-review.browser.spec.ts:168:7 › fonts-ready 1280: original and new guided/practice construction controls, readable SVGs and axe (16.5s)
+  ✓   4 [desktop] › tests/condensation-review.browser.spec.ts:234:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (53.7s)
+  ✓   7 [desktop] › tests/condensation-review.browser.spec.ts:445:5 › wrong and unreadable constructions retain exact bytes; malformed work cannot record and scoped reset preserves siblings (16.4s)
+  ✓   8 [desktop] › tests/condensation-review.browser.spec.ts:492:5 › helped equivalent construction cannot be fresh in a reserved Higher form (11.9s)
+  ✓   6 [desktop] › tests/condensation-review.browser.spec.ts:234:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (58.4s)
+  ✓   9 [desktop] › tests/condensation-review.browser.spec.ts:519:5 › a started ORIGINAL addition form survives a Higher switch with answer bytes and reserved IDs intact (17.7s)
+  ✓  10 [desktop] › tests/learning.browser.spec.ts:467:5 › blocked storage leaves the app usable and warns accurately (3.6s)
+  ✓  11 [desktop] › tests/learning.browser.spec.ts:494:5 › corrupt data is preserved and explicit deletion touches only the Chemistry namespace (3.1s)
+  ✓  13 [desktop] › tests/learning.browser.spec.ts:715:5 › simultaneous tab saves retain a winner and flag the conflicting writer (5.2s)
+  ✓  12 [desktop] › tests/learning.browser.spec.ts:528:5 › another tab cannot be silently overwritten by stale local work (7.5s)
+(node:131250) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  14 [desktop] › tests/learning.browser.spec.ts:750:5 › immediate refresh recovers a draft even while its commit lock is held (5.5s)
+(node:131400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 [mobile] › tests/condensation-review.browser.spec.ts:168:7 › fonts-ready 320: original and new guided/practice construction controls, readable SVGs and axe (15.9s)
+  ✓  17 [mobile] › tests/condensation-review.browser.spec.ts:168:7 › fonts-ready 390: original and new guided/practice construction controls, readable SVGs and axe (15.3s)
+  ✓  16 [mobile] › tests/condensation-review.browser.spec.ts:234:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (54.2s)
+  ✓  19 [mobile] › tests/condensation-review.browser.spec.ts:168:7 › fonts-ready 1280: original and new guided/practice construction controls, readable SVGs and axe (16.2s)
+  ✓  18 [mobile] › tests/condensation-review.browser.spec.ts:234:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (53.8s)
+  ✓  21 [mobile] › tests/condensation-review.browser.spec.ts:445:5 › wrong and unreadable constructions retain exact bytes; malformed work cannot record and scoped reset preserves siblings (16.0s)
+  ✓  22 [mobile] › tests/condensation-review.browser.spec.ts:492:5 › helped equivalent construction cannot be fresh in a reserved Higher form (10.7s)
+  ✓  23 [mobile] › tests/condensation-review.browser.spec.ts:519:5 › a started ORIGINAL addition form survives a Higher switch with answer bytes and reserved IDs intact (17.4s)
+  ✓  24 [mobile] › tests/learning.browser.spec.ts:467:5 › blocked storage leaves the app usable and warns accurately (3.0s)
+  ✓  20 [mobile] › tests/condensation-review.browser.spec.ts:234:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (57.3s)
+  ✓  25 [mobile] › tests/learning.browser.spec.ts:494:5 › corrupt data is preserved and explicit deletion touches only the Chemistry namespace (3.2s)
+  ✓  26 [mobile] › tests/learning.browser.spec.ts:528:5 › another tab cannot be silently overwritten by stale local work (7.1s)
+  ✓  27 [mobile] › tests/learning.browser.spec.ts:715:5 › simultaneous tab saves retain a winner and flag the conflicting writer (5.2s)
+  ✓  28 [mobile] › tests/learning.browser.spec.ts:750:5 › immediate refresh recovers a draft even while its commit lock is held (4.8s)
+
+  28 passed (5.0m)

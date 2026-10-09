@@ -1,0 +1,40 @@
+
+> gcse-chemistry@0.1.0 test:unit
+> playwright test --config=playwright.unit.config.ts tests/condensation-review.unit.spec.ts tests/polymerisation.unit.spec.ts tests/polymer-writing.unit.spec.ts
+
+
+Running 22 tests using 2 workers
+
+(node:128952) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:128964) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:128965) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/polymer-writing.unit.spec.ts:13:5 › polymer corrections preserve original identities, forms and saved positions while reserving full causal writing (12ms)
+  ✓   2 tests/polymer-writing.unit.spec.ts:32:5 › polymer writing retains physical-change and representation distinctions (3ms)
+  ✓   4 tests/condensation-review.unit.spec.ts:30:5 › all 91 original identities, positions, forms, answers and addition content survive unchanged (44ms)
+  ✓   5 tests/condensation-review.unit.spec.ts:69:5 › Higher-only forms add genuine blank construction; original addition forms remain accessible and Foundation never receives condensation (15ms)
+  ✓   6 tests/condensation-review.unit.spec.ts:111:7 › groups: malformed bytes fail decoding; chemically wrong valid proposals remain exactly readable (5ms)
+  ✓   7 tests/condensation-review.unit.spec.ts:111:7 › sequence: malformed bytes fail decoding; chemically wrong valid proposals remain exactly readable (4ms)
+  ✓   8 tests/condensation-review.unit.spec.ts:155:5 › chain decoder bounds malformed schema without rejecting ether, terminal-OH or same-formula connectivity mistakes (1ms)
+  ✓   9 tests/condensation-review.unit.spec.ts:181:5 › literal polyester paths retain O atoms, ester adjacency and correct valence INCLUDING the boundary, not merely matching formula (36ms)
+  ✓  10 tests/condensation-review.unit.spec.ts:230:5 › equivalent constructions and original help share conservative direct exposure, without linking addition or different response demands (6ms)
+(node:128964) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+  ✓  11 tests/polymerisation.unit.spec.ts:41:5 › 91 individual demands retain literal numerical references and honest independent drawing review (52ms)
+  ✓  12 tests/polymerisation.unit.spec.ts:105:7 › addition: every supplied record preserves exact schema, blank initial response and its scientific answer (67ms)
+  ✓  13 tests/polymerisation.unit.spec.ts:105:7 › reverse: every supplied record preserves exact schema, blank initial response and its scientific answer (19ms)
+  ✓  14 tests/polymerisation.unit.spec.ts:105:7 › segment: every supplied record preserves exact schema, blank initial response and its scientific answer (26ms)
+  ✓  15 tests/polymerisation.unit.spec.ts:105:7 › inventory: every supplied record preserves exact schema, blank initial response and its scientific answer (25ms)
+  ✓  16 tests/polymerisation.unit.spec.ts:105:7 › ester: every supplied record preserves exact schema, blank initial response and its scientific answer (20ms)
+  ✓  17 tests/polymerisation.unit.spec.ts:105:7 › links: every supplied record preserves exact schema, blank initial response and its scientific answer (9ms)
+  ✓  18 tests/polymerisation.unit.spec.ts:105:7 › polyester: every supplied record preserves exact schema, blank initial response and its scientific answer (12ms)
+  ✓  19 tests/polymerisation.unit.spec.ts:127:5 › actual chains of two to four contributions conserve literal atoms, connections and local carbon valence (120ms)
+  ✓  20 tests/polymerisation.unit.spec.ts:185:5 › raw numeric attempts and crop changes survive valid one-step history without exponent masquerading as zero (4ms)
+  ✓  21 tests/polymerisation.unit.spec.ts:210:5 › finite-link evidence is independently traversed; polyester retains both carbonyls and both alcohol oxygens (2ms)
+  ✓  22 tests/polymerisation.unit.spec.ts:246:5 › every practice task has reviewed recovery, unique group placement and cold Foundation scope (30ms)
+  ✓   3 tests/polymer-writing.unit.spec.ts:41:5 › helped polymer physical and representation equivalents retain reciprocal exposure (1.4s)
+
+  22 passed (7.9s)

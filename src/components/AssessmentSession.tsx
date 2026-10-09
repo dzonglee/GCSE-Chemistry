@@ -395,11 +395,13 @@ export function AssessmentSession({
     }
     if (checked.invalid) {
       setMessage(
-        q.writtenEquations && q.id.startsWith("ion-tests-v1-write-")
-          ? checked.feedback
-          : q.parts
-            ? "Complete every part with a valid number before recording."
-            : "Enter a valid number only; use the unit shown beside the input.",
+        q.polyesterDrawing && q.id.startsWith("pol-cond-v1-")
+          ? "Your saved construction cannot be read. Your work is retained; start a new construction explicitly, or leave this question unanswered."
+          : q.writtenEquations && q.id.startsWith("ion-tests-v1-write-")
+            ? checked.feedback
+            : q.parts
+              ? "Complete every part with a valid number before recording."
+              : "Enter a valid number only; use the unit shown beside the input.",
       );
       return;
     }
@@ -459,6 +461,9 @@ export function AssessmentSession({
       <form
         className="question-panel"
         data-written-equations={q.writtenEquations || undefined}
+        data-condensation-response={
+          q.id.startsWith("pol-cond-v1-") || undefined
+        }
         onSubmit={(e) => {
           e.preventDefault();
           record();
@@ -466,6 +471,7 @@ export function AssessmentSession({
       >
         <p className="eyebrow">
           Question {run.index + 1} of {questions.length}
+          {q.id.startsWith("pol-cond-v1-") ? " · Higher" : ""}
         </p>
         <h2 ref={heading} tabIndex={-1}>
           {(q.writtenEquations ||
@@ -604,6 +610,7 @@ export function AssessmentSession({
           <button
             className="button primary"
             onClick={() => navigate(run.index + 1)}
+            disabled={q.id.startsWith("pol-cond-v1-") && !recorded}
           >
             Next question →
           </button>
