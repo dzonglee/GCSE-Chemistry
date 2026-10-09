@@ -8626,3 +8626,44 @@ body:has(.sample-lesson) .topic-number {
   > p {
   margin: 4px 0;
 }
+
+/* Only the separately appended minor-air responses use this compact opening. */
+.sample-task-panel[data-atmosphere-minor],
+.assessment-session .question-panel[data-atmosphere-minor] {
+  padding: 16px;
+}
+.sample-task-panel[data-atmosphere-minor] > h2,
+.question-panel[data-atmosphere-minor] h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.sample-task-panel[data-atmosphere-minor] .sample-task-prompt {
+  font-size: 15px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.sample-task-panel[data-atmosphere-minor] .sample-task-topline {
+  margin-bottom: 8px;
+}
+[data-atmosphere-minor] .written-answer textarea {
+  min-height: 104px;
+  height: 104px;
+}
+@media (max-width: 600px) {
+  .sample-lesson:has([data-atmosphere-minor])
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+  .sample-task-panel[data-atmosphere-minor],
+  .assessment-session .question-panel[data-atmosphere-minor] {
+    padding: 12px;
+  }
+  .question-panel[data-atmosphere-minor] h2 {
+    font-size: 18px;
+  }
+  [data-atmosphere-minor] .written-answer textarea {
+    min-height: 64px;
+    height: 64px;
+  }
+}

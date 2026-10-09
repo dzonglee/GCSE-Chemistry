@@ -1,0 +1,496 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "stage": "warmup",
+      "form": 0,
+      "index": 0,
+      "id": "early-atmosphere-v1-w-whole",
+      "sha256": "2ffe530d74399be0fb15ddd1d0b47bd74e29f415ab113bcf2caddf369780fc00"
+    },
+    {
+      "stage": "warmup",
+      "form": 0,
+      "index": 1,
+      "id": "early-atmosphere-v1-w-condense",
+      "sha256": "0e8f4b7eb793e92d900059837b8d41c350417b9466f85873a11d107ae734720b"
+    },
+    {
+      "stage": "warmup",
+      "form": 0,
+      "index": 2,
+      "id": "early-atmosphere-v1-w-photosynth",
+      "sha256": "134711f8ef3a7c948df65078a918f1242f25080d897009b38e86964117b486b1"
+    },
+    {
+      "stage": "warmup",
+      "form": 0,
+      "index": 3,
+      "id": "early-atmosphere-v1-w-time",
+      "sha256": "7511b829f68e2ca6b582437d3f09a0ae98a73be33ba47ba3e240663810ee843d"
+    },
+    {
+      "stage": "refresher",
+      "form": 0,
+      "index": 0,
+      "id": "early-atmosphere-v1-r-composition",
+      "sha256": "ed47fdde03d4b6398d16d0b63dd4d67d0dac36affd1ce6a9d4120cfc54441e8e"
+    },
+    {
+      "stage": "refresher",
+      "form": 0,
+      "index": 1,
+      "id": "early-atmosphere-v1-r-ocean",
+      "sha256": "7740a4215c7d800f34f8d5691b789c53b6ccd5c277e90cb35703187b22c36eff"
+    },
+    {
+      "stage": "refresher",
+      "form": 0,
+      "index": 2,
+      "id": "early-atmosphere-v1-r-photo",
+      "sha256": "76b1b8e35eb19ff74d4c2de8003ea30663677ca732f30b45ac252a6362af688d"
+    },
+    {
+      "stage": "refresher",
+      "form": 0,
+      "index": 3,
+      "id": "early-atmosphere-v1-r-carbonate",
+      "sha256": "8ab8b6977abeec407ea871313d7cc380e7fc5f02734b728990e1ab12f9018cdf"
+    },
+    {
+      "stage": "refresher",
+      "form": 0,
+      "index": 4,
+      "id": "early-atmosphere-v1-r-coal",
+      "sha256": "9b66f0ba1dafeddf8afea48aeb52172f0da1ebd351a86226dc980efa2d5f5a64"
+    },
+    {
+      "stage": "refresher",
+      "form": 0,
+      "index": 5,
+      "id": "early-atmosphere-v1-r-oil",
+      "sha256": "dff9d7f7f23558ba4dde7e32837311fb76f31c41e9af5b52cdc3d6e701687f0a"
+    },
+    {
+      "stage": "refresher",
+      "form": 0,
+      "index": 6,
+      "id": "early-atmosphere-v1-r-graph",
+      "sha256": "0e5b5856293ee0c0a3a051a98b2ccb01ceb6e5d7d89ef0c1647b4d44b592f10f"
+    },
+    {
+      "stage": "refresher",
+      "form": 0,
+      "index": 7,
+      "id": "early-atmosphere-v1-r-evidence",
+      "sha256": "629f4d31cc0373c7546b335663dac20a0cba1ffcc58bc6a2676731acf26dc115"
+    },
+    {
+      "stage": "guided",
+      "form": 0,
+      "index": 0,
+      "id": "early-atmosphere-v1-g-composition",
+      "sha256": "f9a2a02dde5678ac721f0b75577b7f2c914ba741548aa1ae5d80608f13b2c233"
+    },
+    {
+      "stage": "guided",
+      "form": 0,
+      "index": 1,
+      "id": "early-atmosphere-v1-g-ocean",
+      "sha256": "fc14fa80dc973b0261ab29b6e67e3acb3e2d0e62908c52e4b6b9a0bc84f3c8be"
+    },
+    {
+      "stage": "guided",
+      "form": 0,
+      "index": 2,
+      "id": "early-atmosphere-v1-g-photo",
+      "sha256": "3c1bbff1df6c7d98993afede1cb4fde3cb9c912293cb5d9c1f5def647b71cd49"
+    },
+    {
+      "stage": "guided",
+      "form": 0,
+      "index": 3,
+      "id": "early-atmosphere-v1-g-store",
+      "sha256": "3b569e060d1fba5850b62469f86fda94c8d6ae6e6a9198d1926cbf5953d2496f"
+    },
+    {
+      "stage": "guided",
+      "form": 0,
+      "index": 4,
+      "id": "early-atmosphere-v1-g-graph",
+      "sha256": "e26b91a0f02a7ab1979373dd495026cc1ba201f1434b722dd69a24bf72638534"
+    },
+    {
+      "stage": "guided",
+      "form": 0,
+      "index": 5,
+      "id": "early-atmosphere-v1-g-plateau",
+      "sha256": "ed808bdc18415fdfe2016c012318242a23109e18570999802c8a7ed14e6c8c6f"
+    },
+    {
+      "stage": "guided",
+      "form": 0,
+      "index": 6,
+      "id": "early-atmosphere-v1-g-bar",
+      "sha256": "0d4e0a2a32d7ae3c9ee02b9816f18b66eb8c41b2ef8c62ab15f9132150f5fa87"
+    },
+    {
+      "stage": "guided",
+      "form": 0,
+      "index": 7,
+      "id": "early-atmosphere-v1-g-bar-rescale",
+      "sha256": "eafc06372d9bd95cf916c9c1a9ac4e674a51ede0352c0167e86c2a00694e7655"
+    },
+    {
+      "stage": "guided",
+      "form": 0,
+      "index": 8,
+      "id": "early-atmosphere-v1-g-evidence",
+      "sha256": "be53949c44bfa96fec791081ac74c4811b98a0260134a03dc8b7f90acb4c089a"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 0,
+      "id": "early-atmosphere-v1-p-composition",
+      "sha256": "063bd32676c681fa378af61168512b598d40a8e9070d53569a4e51a7f3d6d31d"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 1,
+      "id": "early-atmosphere-v1-p-approx",
+      "sha256": "17d469fb2a84f4569c0f7192aa77006eb2f05291165ba1074d833e9e2bd5e3d2"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 2,
+      "id": "early-atmosphere-v1-p-volume",
+      "sha256": "6a6a106ae673279486165c4831eeb0b3db01caa9ae982799760e3af0ff597279"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 3,
+      "id": "early-atmosphere-v1-p-dry",
+      "sha256": "ce529c880ac5c24b126c4e0cea1440673d70e8ae71e76d995c9d27e82f57da59"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 4,
+      "id": "early-atmosphere-v1-p-volcano",
+      "sha256": "fdd7d81e15b230394926387049ec337fce08883bfa5c2984c8bd42690b87e8b9"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 5,
+      "id": "early-atmosphere-v1-p-minor",
+      "sha256": "6282d178384e404f9e53b711b72b09711f6b00a4ee31271e79ecd399f1fa5bb1"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 6,
+      "id": "early-atmosphere-v1-p-ocean",
+      "sha256": "91e45974bc56cd6a8da0577e7a2f276948d272afc97ff1d560f7837a9de4fbee"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 7,
+      "id": "early-atmosphere-v1-p-dissolve",
+      "sha256": "2eaad7c50470a58b048b0fd91e228652a5068dd89502819ca9a11c878672557e"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 8,
+      "id": "early-atmosphere-v1-p-photo",
+      "sha256": "c44ce394e823d05ea7b10af3529e7f55480e0199790032ed8f4ed58c21ae2c10"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 9,
+      "id": "early-atmosphere-v1-p-equation",
+      "sha256": "caca03dc735cdf9ab1f8cf95363c42defb767cfff85ddc437cbb10a784254e8b"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 10,
+      "id": "early-atmosphere-v1-p-billion",
+      "sha256": "63abcf344e491f47606592539644b7d5063188d61f6b1192617377e824d89271"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 11,
+      "id": "early-atmosphere-v1-p-nitrogen",
+      "sha256": "400dd343416ae47646999fb547025c804595ec4ccd775e89dc80f1d945414e6e"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 12,
+      "id": "early-atmosphere-v1-p-limestone",
+      "sha256": "b373e358a6ba7459a30759787d32d05527df023005ab456873a8169adfd38087"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 13,
+      "id": "early-atmosphere-v1-p-coal",
+      "sha256": "556abfe9af4c70665d3d742d69bc5a436f966b2abd5f61941864f344c06d8c1b"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 14,
+      "id": "early-atmosphere-v1-p-fuels",
+      "sha256": "269dadd3652922a79b6244a40c66296acc3d2f6b9140afd598f26328fa539373"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 15,
+      "id": "early-atmosphere-v1-p-graph",
+      "sha256": "4aaaecf452bb6c23bc20c7e4d3994e895a598b79de22edecc121111519c3ab86"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 16,
+      "id": "early-atmosphere-v1-p-interpolate",
+      "sha256": "737f57962ba6c7dfd3741ec68c58e0d0bbd2acfd2beca3995bd54a8a7550274b"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 17,
+      "id": "early-atmosphere-v1-p-plateau",
+      "sha256": "1389729f271b014586862c6be5d8f992faa5b001cb6644def95623c865888beb"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 18,
+      "id": "early-atmosphere-v1-p-axis",
+      "sha256": "67f68841e90a0063c21f2c3f4bcf2b82fd27a61d1ce97dab59b8d6d6ac3a27b1"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 19,
+      "id": "early-atmosphere-v1-p-bar",
+      "sha256": "e6b16e747c951ca23a7b75eb53b3d923e2556d468a41ba98c8cb0bda8aaba9d7"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 20,
+      "id": "early-atmosphere-v1-p-points",
+      "sha256": "cf40744a6e16f189823eddf0cfe25fc823372cec03ee9165c94c161b8d5cdbda"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 21,
+      "id": "early-atmosphere-v1-p-plateau-limit",
+      "sha256": "cf7344b67e81c8abc6c2bfdcd347c2bfb35ba3a1049bc83e1b522d84e2084393"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 22,
+      "id": "early-atmosphere-v1-p-evidence",
+      "sha256": "dd13e4710bbff61ad5afbbd8a84b0b96c424fc8ae71d5e8f80ed67c0e6dd04c4"
+    },
+    {
+      "stage": "practice",
+      "form": 0,
+      "index": 23,
+      "id": "early-atmosphere-v1-p-synthesis",
+      "sha256": "efeb262fac922e8e8e65a68347ca07ebdabf325fd0562f84288d324cf30b5b4c"
+    },
+    {
+      "stage": "checkForms",
+      "form": 0,
+      "index": 0,
+      "id": "early-atmosphere-v1-cA-whole",
+      "sha256": "f132fead715ce36f1e5a18034e20f38e1278d283ddd87720ad39cb281308b303"
+    },
+    {
+      "stage": "checkForms",
+      "form": 0,
+      "index": 1,
+      "id": "early-atmosphere-v1-cA-origin",
+      "sha256": "595c5445dd0baed4f6768ca5dd1484be951d875f12b67b040b3dea7f3b8176f4"
+    },
+    {
+      "stage": "checkForms",
+      "form": 0,
+      "index": 2,
+      "id": "early-atmosphere-v1-cA-ocean",
+      "sha256": "79def77d2649786e68f69ea611d5805316e1e820d17c7881d962ac818cfe9bd2"
+    },
+    {
+      "stage": "checkForms",
+      "form": 0,
+      "index": 3,
+      "id": "early-atmosphere-v1-cA-photo",
+      "sha256": "0f8a7551c780781a9786ce35eb6b32b1486eb48da51fa24564f7cf3ed8e801dd"
+    },
+    {
+      "stage": "checkForms",
+      "form": 0,
+      "index": 4,
+      "id": "early-atmosphere-v1-cA-graph",
+      "sha256": "c4c40ba5cedf7528eb86b21bfd22709654dfe650619e95a5d96b9817d22c5ff0"
+    },
+    {
+      "stage": "checkForms",
+      "form": 0,
+      "index": 5,
+      "id": "early-atmosphere-v1-cA-bar",
+      "sha256": "f5ff664961f384d0fc4c158828a9942354e416db701fce573300be241a99a464"
+    },
+    {
+      "stage": "checkForms",
+      "form": 0,
+      "index": 6,
+      "id": "early-atmosphere-v1-cA-store",
+      "sha256": "c7ec8511f14ad3aa696352e66360b4c07c1dbbbe79558f4caf12942016c4ab86"
+    },
+    {
+      "stage": "checkForms",
+      "form": 0,
+      "index": 7,
+      "id": "early-atmosphere-v1-cA-evidence",
+      "sha256": "ce4bcfa7d2d1ff245be9546a8a88ccd6603fb39b6ee0fb125685e3a31e31eae5"
+    },
+    {
+      "stage": "checkForms",
+      "form": 1,
+      "index": 0,
+      "id": "early-atmosphere-v1-cB-whole",
+      "sha256": "7f16c6fe6cc859c624d986ad3595a3c65aae5ece396304147c1383b862580418"
+    },
+    {
+      "stage": "checkForms",
+      "form": 1,
+      "index": 1,
+      "id": "early-atmosphere-v1-cB-minor",
+      "sha256": "0d4265fe9a6ff39bb3c763ca884c5889cb2660b6e4ffb2663322774a90856169"
+    },
+    {
+      "stage": "checkForms",
+      "form": 1,
+      "index": 2,
+      "id": "early-atmosphere-v1-cB-carbonate",
+      "sha256": "4cc24d44b57c8a8429452a13d8869a2f6f12024be57c5e5268302afe513719bb"
+    },
+    {
+      "stage": "checkForms",
+      "form": 1,
+      "index": 3,
+      "id": "early-atmosphere-v1-cB-nitrogen",
+      "sha256": "3e67ea52b231e2e61ce9d071e7c02a4515bf335a26e186bc821510126db3f647"
+    },
+    {
+      "stage": "checkForms",
+      "form": 1,
+      "index": 4,
+      "id": "early-atmosphere-v1-cB-graph",
+      "sha256": "5a4860a1968a9c8c28184989e352c63007998ad31bc7a951ed55d746e23fcc5f"
+    },
+    {
+      "stage": "checkForms",
+      "form": 1,
+      "index": 5,
+      "id": "early-atmosphere-v1-cB-bar",
+      "sha256": "ef3f5f9f5a6a252f58049b2b86417fb32e8f2450d572c164c779bdabc7835bef"
+    },
+    {
+      "stage": "checkForms",
+      "form": 1,
+      "index": 6,
+      "id": "early-atmosphere-v1-cB-coal",
+      "sha256": "06939ebb1e03fdb2b59f6a855c4ebb42fba6352ec48a15ad5044e135cb40620a"
+    },
+    {
+      "stage": "checkForms",
+      "form": 1,
+      "index": 7,
+      "id": "early-atmosphere-v1-cB-synthesis",
+      "sha256": "9b825d5e909baf728a70cb7778bfde7c265eba3ebfb640d504999dbe1c86f0de"
+    },
+    {
+      "stage": "reviewForms",
+      "form": 0,
+      "index": 0,
+      "id": "early-atmosphere-v1-vA-volume",
+      "sha256": "277293a212e4b189fc791cd4c10f5c45702fd3e89a97e112ea6d3f328bce6fd5"
+    },
+    {
+      "stage": "reviewForms",
+      "form": 0,
+      "index": 1,
+      "id": "early-atmosphere-v1-vA-ocean",
+      "sha256": "e361c5f4b03144a307eb86b7ff2edc4c85143ae338560521e1c7b02f9e9e93fb"
+    },
+    {
+      "stage": "reviewForms",
+      "form": 0,
+      "index": 2,
+      "id": "early-atmosphere-v1-vA-graph",
+      "sha256": "abd0afe50a2c405d6cb39bc282d281c975c2e0e4b247838c05012cc14094cce0"
+    },
+    {
+      "stage": "reviewForms",
+      "form": 0,
+      "index": 3,
+      "id": "early-atmosphere-v1-vA-stores",
+      "sha256": "d43ff7cfeec298d5c822f5a2657aa597a3329333ead80eebb3e604abfb34b1af"
+    },
+    {
+      "stage": "reviewForms",
+      "form": 1,
+      "index": 0,
+      "id": "early-atmosphere-v1-vB-time",
+      "sha256": "1855971cc86f84192d9d460716d20dd197d036e0d9dc0323ccc9a04e13cf9453"
+    },
+    {
+      "stage": "reviewForms",
+      "form": 1,
+      "index": 1,
+      "id": "early-atmosphere-v1-vB-photo",
+      "sha256": "9aae4e2149a9e7545bfa24ffbd63e17f4f30601933e63363944ad89d0b1217f7"
+    },
+    {
+      "stage": "reviewForms",
+      "form": 1,
+      "index": 2,
+      "id": "early-atmosphere-v1-vB-bar",
+      "sha256": "3f0ba6bbbf273a6777bae34cc8fdb709b748e685831ad988c2e4ee76303180e2"
+    },
+    {
+      "stage": "reviewForms",
+      "form": 1,
+      "index": 3,
+      "id": "early-atmosphere-v1-vB-evidence",
+      "sha256": "c5f62ae5c7c0ba9d60fb3ede48958ea7403353d787e95a53d5e1919b4ff007fc"
+    }
+  ],
+  "legacy": [
+    "early-atmosphere-0",
+    "early-atmosphere-1",
+    "early-atmosphere-2",
+    "early-atmosphere-3",
+    "early-atmosphere-4",
+    "early-atmosphere-5"
+  ]
+}

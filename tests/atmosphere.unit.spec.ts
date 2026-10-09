@@ -28,13 +28,13 @@ const lesson = lessons.find((l) => l.slug === "early-atmosphere")!;
 test("individual atmosphere lesson reserves distinct forms, retains six legacy IDs and supplies exact recoveries", () => {
   expect(lesson.journey).toBe(j);
   expect(lesson.course).toBe("combined");
-  expect(allAtmosphereTasks).toHaveLength(69);
-  expect(new Set(allAtmosphereTasks.map((q) => q.id)).size).toBe(69);
+  expect(allAtmosphereTasks).toHaveLength(74);
+  expect(new Set(allAtmosphereTasks.map((q) => q.id)).size).toBe(74);
   expect(j.practiceGroups!.flatMap((g) => g.taskIds)).toEqual(
     j.practice.map((q) => q.id),
   );
-  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8]);
-  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4]);
+  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8, 1]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4, 1]);
   expect([...lesson.questions, ...lesson.checks].map((q) => q.id)).toEqual(
     Array.from({ length: 6 }, (_, i) => "early-atmosphere-" + i),
   );
@@ -250,7 +250,7 @@ test("misconceptions give specific feedback, and written explanations stay hones
         expect(mark(q, raw).feedback).toContain(feedback);
     }
   }
-  expect(allAtmosphereTasks.filter((q) => q.rubric)).toHaveLength(11);
+  expect(allAtmosphereTasks.filter((q) => q.rubric)).toHaveLength(14);
   expect(atmosphereRecords.algae.feedback).toContain("glucose + oxygen");
   expect(atmosphereRecords.algae.feedback).toContain(
     "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂",

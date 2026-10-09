@@ -1,0 +1,193 @@
+{
+  "build": "RPh3msbh_pgW6YlLt8nwU",
+  "note": "Controlled QA openings; response filled through native UI, retained after reload, independent reference opened only after whole submission.",
+  "captures": [
+    {
+      "file": "320-guided-retained-viewport.png",
+      "width": 320,
+      "sha256": "2d630227f520ee0d02ac5f8ab9c647e073bfc562098d80859c47c0487ffd8c74"
+    },
+    {
+      "file": "320-guided-retained-full.png",
+      "width": 320,
+      "sha256": "a98822d74b1a2bed2704851cd17b5a26d2259f9f69e2473d8591f6c3af60559f"
+    },
+    {
+      "file": "320-guided-feedback-viewport.png",
+      "width": 320,
+      "sha256": "4af104e9c6bfcf99aca2576522540a0db96ea34a7054221455e8817f796d4b8c"
+    },
+    {
+      "file": "320-guided-feedback-full.png",
+      "width": 320,
+      "sha256": "a39b232b34a7e9862171bf05ad0c939d2152084d59f5fde60b2b10ad624a8b3c"
+    },
+    {
+      "file": "320-practice-retained-viewport.png",
+      "width": 320,
+      "sha256": "2d85c80b46361682800226c44342ec487500276e8f2f195b232d6a32a7b01e54"
+    },
+    {
+      "file": "320-practice-retained-full.png",
+      "width": 320,
+      "sha256": "76c1511da06a619b72e1204aaaceab8702a46fb15344f79e09027c2347618faf"
+    },
+    {
+      "file": "320-check-retained-viewport.png",
+      "width": 320,
+      "sha256": "79e82c839d45ce9c1db0372c26bc1ecd4e38e90561932e9ed4a7ca9c25d56a4d"
+    },
+    {
+      "file": "320-check-retained-full.png",
+      "width": 320,
+      "sha256": "781ad73a5eec8c19cdcf6e343d2e9db2f3871ab0b36ae8dd8cbeb073970a7756"
+    },
+    {
+      "file": "320-manual-reference-viewport.png",
+      "width": 320,
+      "sha256": "0fedaaa2e4ea85a845c54533e1f69184b30fa404fc6027918a37a2203c62892e"
+    },
+    {
+      "file": "320-manual-reference-full.png",
+      "width": 320,
+      "sha256": "b886fd38d0cd808f9f5558e817bd9343fe5082483cae61c8dcb2fc39d5c18e78"
+    },
+    {
+      "file": "320-review-retained-viewport.png",
+      "width": 320,
+      "sha256": "5e6b5644a2903c9a994818342f049829e4b049579c2899b8a09f85c46939ed4d"
+    },
+    {
+      "file": "320-review-retained-full.png",
+      "width": 320,
+      "sha256": "5a42055eb2767611071d5219ba2587b24373e21cc5921f2403c968d680221e9c"
+    },
+    {
+      "file": "1280-guided-retained-viewport.png",
+      "width": 1280,
+      "sha256": "d3fc080d1ca6e58f915a0fc98e97832bbed3f82fc61057cc48bda143e349862d"
+    },
+    {
+      "file": "1280-guided-retained-full.png",
+      "width": 1280,
+      "sha256": "98c68163f1522343f1484a05b2e0a77c47f035ad5340a32ed3a1c5bcb2f467a8"
+    },
+    {
+      "file": "1280-guided-feedback-viewport.png",
+      "width": 1280,
+      "sha256": "32bd0f3157553c41c24f7f9c50429898f053bb5fd0bcc59916d9a32ac149f057"
+    },
+    {
+      "file": "1280-guided-feedback-full.png",
+      "width": 1280,
+      "sha256": "cbe057c67e6e06c77662d7341b56fdc1e9ca74ba69bf22994fa4f2fcd80d92d5"
+    },
+    {
+      "file": "1280-practice-retained-viewport.png",
+      "width": 1280,
+      "sha256": "69625e4903a00a8ba5605ac8f756c0f17c9bcdd133457f75c6c485e5fd26258e"
+    },
+    {
+      "file": "1280-practice-retained-full.png",
+      "width": 1280,
+      "sha256": "db5efa189698eaf27c28f9c479b2e0cc46c7c757874892fd0598a581569e6a2b"
+    },
+    {
+      "file": "1280-check-retained-viewport.png",
+      "width": 1280,
+      "sha256": "1c50f61e74f7eb474bdd00b0afb5d60cca712343e3337c1ff5092587117f6ab6"
+    },
+    {
+      "file": "1280-check-retained-full.png",
+      "width": 1280,
+      "sha256": "40709830d5ccb49976c1b03b54c49a1a55218e620ee6e72a0e2af10f4a0870b3"
+    },
+    {
+      "file": "1280-manual-reference-viewport.png",
+      "width": 1280,
+      "sha256": "0ffa6c768dd3b92ea8f25c5123940c9ee00da72c12c6ea8045b56414b5c95e09"
+    },
+    {
+      "file": "1280-manual-reference-full.png",
+      "width": 1280,
+      "sha256": "6b831a769f5f0c602956931a34345f766fd9bef6c178e6b597eb57297a99f8ae"
+    },
+    {
+      "file": "1280-review-retained-viewport.png",
+      "width": 1280,
+      "sha256": "35aa2b690eb9fde4da76b5fb5026a110f193bc15006747594699624c2852b1d0"
+    },
+    {
+      "file": "1280-review-retained-full.png",
+      "width": 1280,
+      "sha256": "1b396020927b2bfd8ab8194fb3671bf07d1a788993107021cf23b8864fdc7723"
+    }
+  ],
+  "accepted": true,
+  "personallyInspected": [
+    "320-guided-retained-viewport.png",
+    "320-guided-retained-full.png",
+    "320-guided-feedback-viewport.png",
+    "320-guided-feedback-full.png",
+    "320-practice-retained-viewport.png",
+    "320-practice-retained-full.png",
+    "320-check-retained-viewport.png",
+    "320-check-retained-full.png",
+    "320-manual-reference-viewport.png",
+    "320-manual-reference-full.png",
+    "320-review-retained-viewport.png",
+    "320-review-retained-full.png",
+    "1280-guided-retained-viewport.png",
+    "1280-guided-retained-full.png",
+    "1280-guided-feedback-viewport.png",
+    "1280-guided-feedback-full.png",
+    "1280-practice-retained-viewport.png",
+    "1280-practice-retained-full.png",
+    "1280-check-retained-viewport.png",
+    "1280-check-retained-full.png",
+    "1280-manual-reference-viewport.png",
+    "1280-manual-reference-full.png",
+    "1280-review-retained-viewport.png",
+    "1280-review-retained-full.png"
+  ],
+  "research": {
+    "readSpecSections": [
+      "8462 4.9.1.1",
+      "8464 5.9.1.1"
+    ],
+    "readPairedQuestions": [
+      "2022 8462/2F Q03.1\u201303.2"
+    ],
+    "personallyInspectedFigures": [
+      "8462 page76",
+      "8464 page110",
+      "question paper page12",
+      "mark scheme page11"
+    ],
+    "personallyInspectedMaths": [
+      "maths-320-guided.png",
+      "maths-320-independent.png",
+      "maths-1280-guided.png",
+      "maths-1280-independent.png"
+    ],
+    "downloadHashes": {
+      "8462-current.pdf": "ecd869d1874091a0a52abaeb8fce238a9c1cc207698713dfb66788eb0d448d43",
+      "8464-current.pdf": "d9de6e1889d675861a814c21eb5509fe1b7941452dc0c4794dfc9927e9b6c894",
+      "2022f2-qp.pdf": "99aa4ece23c592f7c1414500c39a3da5dfa569d636a12f50cc8451b2ed2e629d",
+      "2022f2-ms.pdf": "b012e343168643798af9020a286f36ca1d0013b933ce816d13854e0fef4341dc"
+    }
+  },
+  "validation": "Final V4 types/lint/build actual exits0; final four affected mobile cases passed49.8seconds actualexit0. V3 ten units7.9seconds passed; four desktop/retention cases passed alongside four mobile failures. V1 original30browsercases passed. Unified whole-course regression remains pending.",
+  "sourceHashes": {
+    "src/components/DetailedLesson.tsx": "f5ef0a0229bdfdc17bde46983c436a10a0c4d2b1a5b2bd8519990746d1ce26c7",
+    "src/components/AssessmentSession.tsx": "8104dfb9fba70d75bcae20c5b699791ae55f2513278090e2b42630fa39dabc53",
+    "src/app/sample-lesson.css": "3f8988ea070462452e91302025181b4b22b690dd16e0074917efd934728e4110",
+    "src/content/journeys/early-atmosphere.ts": "5b60ab689bd3404986c442b8aa9ed7e91f98400bfbb9d9d252f8bee65d0d6e55",
+    "src/content/curriculum.ts": "a13f5cfc4050608d0c5d05e525424705a57e65bfa89c47b45e9360d58264b7d9",
+    "tests/atmosphere.unit.spec.ts": "e27dc84ec3f15f5947b9dba9258ef8b69e7c65304ae3e4494516c41a81dee097",
+    "tests/atmosphere.browser.spec.ts": "ba3d1142a0e4a91429093ddc294bf8cf43fc665a5c0adddabdd0b9b107b22ff6",
+    "tests/atmosphere-minor.unit.spec.ts": "099eaf89603cfb34fc28a5cc05fe70a1c4efed496f67798791bd6bc8fd9fb3cc",
+    "tests/atmosphere-minor.browser.spec.ts": "e697b5057386a9f8c08a862f2f5873becc7dee96f496007499c931fb6fd29db7",
+    "tests/fixtures/early-atmosphere-minor-original.json": "50c8f32f3025129625610e12341b01f84ebe427e3e779aa88ad14542beedeff2"
+  }
+}

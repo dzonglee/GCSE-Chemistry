@@ -567,6 +567,9 @@ export function AssessmentSession({
       {questions.length <= 20 && !navigationAfterResponse && questionNavigation}
       <form
         className="question-panel"
+        data-atmosphere-minor={
+          q.id.startsWith("early-atmosphere-v1-minor-") || undefined
+        }
         data-full-paper={examPaper ? "true" : undefined}
         data-paper-part={examPaper?.parts[run.index].number}
         data-salt-heating={id === "making-soluble-salts" || undefined}

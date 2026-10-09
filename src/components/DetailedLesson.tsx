@@ -281,8 +281,12 @@ export function DetailedLesson({
     "ph-scale-and-indicators",
     "life-cycle-and-recycling",
   ].includes(lesson.slug);
+  const minorAtmosphereRun = work.run?.ids.some((id) =>
+    id.startsWith("early-atmosphere-v1-minor-"),
+  );
   const compactReview =
-    (compactYieldReview ||
+    (minorAtmosphereRun ||
+      compactYieldReview ||
       saltLesson ||
       organicLesson ||
       compactCondensationReview ||
@@ -325,7 +329,8 @@ export function DetailedLesson({
   const ReviewContainer = compactReview ? "details" : "section";
   const reviewScheduleAfter =
     compactReview &&
-    (compactYieldReview ||
+    (minorAtmosphereRun ||
+      compactYieldReview ||
       saltLesson ||
       organicLesson ||
       compactCondensationReview ||
@@ -540,6 +545,7 @@ export function DetailedLesson({
             <AssessmentSession
               id={lesson.slug}
               navigationAfterResponse={
+                minorAtmosphereRun ||
                 saltLesson ||
                 organicLesson ||
                 mixedPolymer ||
@@ -664,6 +670,9 @@ export function DetailedLesson({
       ) : (
         <section
           className="sample-task-panel"
+          data-atmosphere-minor={
+            q.id.startsWith("early-atmosphere-v1-minor-") || undefined
+          }
           data-salt-heating={saltLesson || undefined}
           data-alkene-combustion={organicLesson || undefined}
           data-yield-reversible={
@@ -686,6 +695,7 @@ export function DetailedLesson({
             {stage === "practice" && journey.practiceGroups ? (
               lesson.slug !== "life-cycle-and-recycling" &&
               !organicLesson &&
+              !q.id.startsWith("early-atmosphere-v1-minor-") &&
               !q.polyesterDrawing &&
               practicePicker
             ) : (
@@ -961,7 +971,9 @@ export function DetailedLesson({
               </div>
             </div>
           </div>
-          {(lesson.slug === "life-cycle-and-recycling" || organicLesson) &&
+          {(lesson.slug === "life-cycle-and-recycling" ||
+            organicLesson ||
+            q.id.startsWith("early-atmosphere-v1-minor-")) &&
             practicePicker}
           {(!(stage === "practice" && journey.practiceGroups) ||
             lesson.slug === "balancing-equations" ||

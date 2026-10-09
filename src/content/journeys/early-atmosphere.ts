@@ -981,6 +981,95 @@ practice.forEach((q, i) => {
   q.followUp = id(recovery[i]);
   atmosphereRecoveryRoutes[q.id] = q.followUp;
 });
+// A separately reserved correction; original tasks, positions and forms stay intact.
+const minorReference =
+  "Modern air is mainly nitrogen (about four-fifths) and oxygen (about one-fifth). Small proportions include carbon dioxide, water vapour and noble gases. Water vapour varies and is excluded from dry-air tables. The rounded 78% nitrogen, 21% oxygen and 1% other dry gases is not a claim that the whole remaining 1% is carbon dioxide.";
+const minorRubric = [
+  "Identify nitrogen and oxygen as the two main gases, with their approximate proportions.",
+  "Include carbon dioxide, water vapour and noble gases among the gases present in small proportions.",
+  "Distinguish variable water vapour from a dry-air table; do not make all other dry gases carbon dioxide.",
+];
+refresher.push(
+  choice(
+    "minor-r-group",
+    "Recall the minor gas groups",
+    "Which list includes three minor components of modern air?",
+    "Carbon dioxide, water vapour and noble gases",
+    {
+      "Only carbon dioxide":
+        "The other-gas fraction also includes noble gases; humid air contains water vapour.",
+      "Nitrogen, oxygen and carbon dioxide":
+        "Nitrogen and oxygen are the main components, not minor ones.",
+    },
+    minorReference,
+    "Separate the two main gases from the small components.",
+  ),
+);
+guided.push(
+  choice(
+    "minor-g-other",
+    "What is in the other gases?",
+    "Modern dry air is rounded to 78% nitrogen, 21% oxygen and 1% other gases. Which statement is correct?",
+    "The 1% includes noble gases and carbon dioxide",
+    {
+      "The whole 1% is carbon dioxide":
+        "Carbon dioxide is only part of the other-gas fraction.",
+      "The 1% is a fixed water-vapour percentage":
+        "Dry-air tables exclude water vapour, whose proportion varies.",
+    },
+    minorReference,
+    "Other gases is a category, not the name of a single gas.",
+  ),
+);
+const minorPractice = written(
+  "minor-p-components",
+  "Describe modern air",
+  "Describe modern air's main proportions and minor gases. Explain dry air.",
+  minorReference,
+  minorRubric,
+  "Name the main gases, then the smaller components; explain the word dry.",
+);
+minorPractice.followUp = id("minor-r-group");
+atmosphereRecoveryRoutes[minorPractice.id] = minorPractice.followUp;
+practice.push(minorPractice);
+checkForms.push([
+  written(
+    "minor-c-description",
+    "Check a modern-air description",
+    "Correct ‘air has only two gases’. Include proportions, minor gases and dry air.",
+    minorReference,
+    minorRubric,
+    "Give a complete description rather than agreeing with the two-gas claim.",
+  ),
+]);
+reviewForms.push([
+  written(
+    "minor-v-recall",
+    "Recall the complete composition",
+    "Describe modern air's proportions and minor gases. Explain why dry-air data do not fix humidity.",
+    minorReference,
+    minorRubric,
+    "Recall both the major and minor components and the table's conditions.",
+  ),
+]);
+const minorIds = [
+  "minor-r-group",
+  "minor-g-other",
+  "minor-p-components",
+  "minor-c-description",
+  "minor-v-recall",
+].map(id);
+for (const q of [
+  refresher.at(-1)!,
+  guided.at(-1)!,
+  minorPractice,
+  checkForms.at(-1)![0],
+  reviewForms.at(-1)![0],
+])
+  q.exposureAliases = [
+    ...minorIds.filter((other) => other !== q.id),
+    id("g-composition"),
+  ];
 export const allAtmosphereTasks = [
   ...warmup,
   ...refresher,
@@ -1012,6 +1101,7 @@ export const atmosphereJourney: LessonJourney = {
     "AQA Chemistry/Trilogy atmospheric evolution, both tiers. Original graphs are illustrative reconstructions; supplied percentages are not precise ancient measurements. Modern dry-air data exclude variable water vapour. Written explanations use honest self-review, without examiner marks. This lesson does not certify full-course coverage or exam readiness.",
   outcomes: [
     "Calculate and compare modern dry-air percentages using the stated whole and precision.",
+    "Recall the small proportions of carbon dioxide, water vapour and noble gases, distinguishing dry air from variable humidity.",
     "Describe a qualified volcanic-origin theory, cooling and ocean formation.",
     "Use the photosynthesis equation to explain gradual oxygen increase and CO₂ decrease.",
     "Explain CO₂ dissolution, carbonate sediment, limestone and distinct fossil-fuel origins.",
@@ -1039,7 +1129,11 @@ export const atmosphereJourney: LessonJourney = {
     },
     {
       label: "Evaluate and connect explanations",
-      taskIds: practice.slice(22).map((q) => q.id),
+      taskIds: practice.slice(22, 24).map((q) => q.id),
+    },
+    {
+      label: "Complete modern-air composition",
+      taskIds: [minorPractice.id],
     },
   ],
 };
