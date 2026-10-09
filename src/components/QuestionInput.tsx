@@ -206,7 +206,12 @@ export function QuestionInput(props: InputProps) {
         <CellsComparison {...props.question.cellsComparison} />
       )}
       {props.question.phMeasurements && (
-        <PhMeasurements {...props.question.phMeasurements} />
+        <div className="ph-measurement-response">
+          <div>
+            <ResponseInput {...props} />
+          </div>
+          <PhMeasurements {...props.question.phMeasurements} />
+        </div>
       )}
       {props.question.practicalGraph && (
         <PracticalPlot data={props.question.practicalGraph} />
@@ -520,6 +525,7 @@ export function QuestionInput(props: InputProps) {
         </div>
       )}
       {!(props.question.naturalHelix && props.compactNatural) &&
+        !props.question.phMeasurements &&
         !props.question.invertedGasScale &&
         !props.question.halogenResults &&
         !props.question.nobleBoilingPoints &&
@@ -817,12 +823,14 @@ function ResponseInput({
           onChange={(e) => onChange(e.target.value)}
         />
         <small>
-          {question.writtenEquations &&
-          question.id.startsWith("ion-tests-v1-write-")
-            ? "Use formulas and state symbols; type → or ->. Name spectator ions on a separate line. Scientific accuracy is reviewed manually."
-            : question.writtenEquations
-              ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
-              : "Write in your own words. Use the marking points for self-review when feedback appears."}
+          {question.id.startsWith("ph-v1-method-") && question.writtenEquations
+            ? "Use ion charges and state symbols; type → or ->. Explain conservation and spectators separately. Scientific accuracy is reviewed manually."
+            : question.writtenEquations &&
+                question.id.startsWith("ion-tests-v1-write-")
+              ? "Use formulas and state symbols; type → or ->. Name spectator ions on a separate line. Scientific accuracy is reviewed manually."
+              : question.writtenEquations
+                ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
+                : "Write in your own words. Use the marking points for self-review when feedback appears."}
         </small>
       </label>
     );

@@ -7755,3 +7755,157 @@ body:has(.sample-lesson) .topic-number {
   left: 0;
   max-width: 100%;
 }
+
+/* pH reserved responses precede question navigation and supplied evidence. */
+.sample-lesson[data-lesson="ph-scale-and-indicators"]
+  .assessment-session
+  .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="ph-scale-and-indicators"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="ph-scale-and-indicators"]
+  .assessment-session
+  .question-panel {
+  padding: 16px;
+  margin-top: 12px;
+}
+.sample-lesson[data-lesson="ph-scale-and-indicators"]
+  .assessment-session
+  .question-panel
+  h2 {
+  font-size: 20px;
+  line-height: 1.35;
+}
+.sample-lesson[data-lesson="ph-scale-and-indicators"]
+  .assessment-session
+  textarea {
+  height: 104px;
+  min-height: 104px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ph-scale-and-indicators"]
+    .assessment-session
+    .question-panel {
+    padding: 12px;
+  }
+  .sample-lesson[data-lesson="ph-scale-and-indicators"]
+    .assessment-session
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+.ph-measurement-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
+  gap: 16px;
+  align-items: start;
+}
+.ph-measurement-response .ph-measurements {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .ph-measurement-response {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sample-lesson[data-lesson="ph-scale-and-indicators"]:has(
+      .assessment-session > .question-panel
+    )
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+  .sample-lesson[data-lesson="ph-scale-and-indicators"]
+    .assessment-session
+    .written-equation-prompt {
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 8px 0;
+  }
+  .sample-lesson[data-lesson="ph-scale-and-indicators"]
+    .assessment-session
+    .question-panel
+    > .eyebrow {
+    margin-bottom: 8px;
+  }
+}
+
+/* Keep every pH practice task reachable without pushing its response down. */
+@media (min-width: 601px) {
+  .sample-lesson[data-lesson="ph-scale-and-indicators"] .sample-task-topline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="ph-scale-and-indicators"]
+    .sample-task-topline
+    .question-navigation {
+    flex: 1;
+    min-width: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 4px;
+    margin: 0;
+  }
+  .sample-lesson[data-lesson="ph-scale-and-indicators"]
+    .sample-task-topline
+    .question-navigation
+    button {
+    flex: 0 0 auto;
+  }
+}
+.sample-lesson[data-lesson="ph-scale-and-indicators"]
+  .sample-task-panel:has(.written-answer)
+  > h2 {
+  font-size: 20px;
+  line-height: 1.35;
+}
+.sample-lesson[data-lesson="ph-scale-and-indicators"]
+  .sample-task-panel:has(.written-answer)
+  .sample-task-prompt {
+  font-size: 15px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="ph-scale-and-indicators"]
+  .sample-task-answer
+  textarea {
+  height: 104px;
+  min-height: 104px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ph-scale-and-indicators"]
+    .sample-task-answer
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+  .sample-lesson[data-lesson="ph-scale-and-indicators"]
+    .sample-task-answer
+    .question-panel:has(.written-answer) {
+    padding: 12px;
+  }
+  .sample-lesson[data-lesson="ph-scale-and-indicators"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-topline {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ph-scale-and-indicators"]:has(
+      .sample-task-panel .written-answer
+    )
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+}

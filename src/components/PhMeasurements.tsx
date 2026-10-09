@@ -41,7 +41,7 @@ export function PhMeasurements({
             <text
               x="38"
               y={y(v) + 7}
-              fontSize="22"
+              fontSize="24"
               textAnchor="end"
               fill="#33405a"
             >
@@ -49,7 +49,7 @@ export function PhMeasurements({
             </text>
           </g>
         ))}
-        <text x="12" y="23" fontSize="22" fill="#33405a">
+        <text x="12" y="23" fontSize="24" fill="#33405a">
           pH
         </text>
         <polyline
@@ -77,7 +77,7 @@ export function PhMeasurements({
               <text
                 x={x(p.amount)}
                 y="280"
-                fontSize="22"
+                fontSize="24"
                 textAnchor={
                   i === 0 ? "start" : i === points.length - 1 ? "end" : "middle"
                 }
@@ -88,7 +88,7 @@ export function PhMeasurements({
             )}
           </g>
         ))}
-        <text x="222" y="306" fontSize="22" textAnchor="middle" fill="#33405a">
+        <text x="222" y="306" fontSize="24" textAnchor="middle" fill="#33405a">
           {quantity} / {unit}
         </text>
       </svg>

@@ -2,17 +2,17 @@ import { test, expect } from "@playwright/test";
 import { phJourney as j } from "../src/content/journeys/ph";
 import { tasks } from "../src/content/journeys/helpers";
 import { mark } from "../src/lib/marking";
-test("49 individually authored Foundation tasks retain two changed cold forms, delayed retrieval and six self-reviewed explanations", () => {
+test("61 Foundation tasks retain original forms and add manually reviewed method construction", () => {
   const all = tasks(j);
-  expect(all).toHaveLength(49);
-  expect(new Set(all.map((q) => q.id)).size).toBe(49);
-  expect(j.practice).toHaveLength(20);
+  expect(all).toHaveLength(61);
+  expect(new Set(all.map((q) => q.id)).size).toBe(61);
+  expect(j.practice).toHaveLength(22);
   expect(j.guided).toHaveLength(5);
-  expect(j.refresher).toHaveLength(6);
+  expect(j.refresher).toHaveLength(8);
   expect(j.guided[0].openingHint).toBe(true);
   expect(j.guided.slice(1).some((q) => q.openingHint)).toBe(false);
   const written = all.filter((q) => q.rubric);
-  expect(written).toHaveLength(6);
+  expect(written).toHaveLength(18);
   for (const q of written)
     expect(mark(q, q.answer)).toMatchObject({
       correct: false,
@@ -25,11 +25,11 @@ test("49 individually authored Foundation tasks retain two changed cold forms, d
       j.refresher.some((r) => r.id === q.followUp),
       q.id,
     ).toBe(true);
-  for (const f of j.checkForms) {
+  for (const f of j.checkForms.slice(0, 2)) {
     expect(f).toHaveLength(5);
     for (const q of f) expect(q.model).toBeUndefined();
   }
-  for (const f of j.reviewForms) expect(f).toHaveLength(3);
+  for (const f of j.reviewForms.slice(0, 2)) expect(f).toHaveLength(3);
   const a = j.checkForms[0].find((q) => q.phMeasurements)!,
     b = j.checkForms[1].find((q) => q.phMeasurements)!;
   expect(a.phMeasurements!.unit).toBe("cm³");

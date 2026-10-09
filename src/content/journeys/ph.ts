@@ -1,6 +1,7 @@
 import type { LearningTask, LessonJourney, TaskModel } from "../types";
 import type { PhMode } from "../../lib/ph-evidence";
 import { choice, number } from "./helpers";
+import { addPhMethodWriting } from "./ph-method-writing";
 const c = (
   id: string,
   title: string,
@@ -790,3 +791,4 @@ for (const group of repetitions)
   ])
     if (group.includes(q.id))
       q.exposureAliases = group.filter((id) => id !== q.id);
+addPhMethodWriting(phJourney);

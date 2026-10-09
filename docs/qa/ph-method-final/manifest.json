@@ -1,0 +1,85 @@
+{
+  "build": "HMnmop5Lt2Eaa8-Wp6xby",
+  "captures": [
+    {
+      "file": "320-indicator-method.png",
+      "width": 320,
+      "id": "ph-v1-method-ca-indicator",
+      "firstResponseBottom": 607.9375,
+      "sha256": "c5e5506fea76637092c6ffd0dbb19675c8250ecb99e772235b8b6b49d2a46d4d"
+    },
+    {
+      "file": "320-ionic-equation.png",
+      "width": 320,
+      "id": "ph-v1-method-ca-equation",
+      "firstResponseBottom": 628.1875,
+      "sha256": "805bfb685bf3db1b4fd3fb0b6e1fc4fa56cba0920a0b1438bf781e2e24b233e7"
+    },
+    {
+      "file": "320-retained-wrong-equation.png",
+      "width": 320,
+      "id": "ph-v1-method-ca-equation",
+      "sha256": "809fd0675a1bdb7b3562490ec23d89235d17c27a1d0d9370d4628823158177e4"
+    },
+    {
+      "file": "320-separate-reference.png",
+      "width": 320,
+      "id": "ph-v1-method-ca-equation",
+      "sha256": "38122d596b45b46548ae66b6944d44b853b9b10a3e0bae8452a525b4c8cc59ff"
+    },
+    {
+      "file": "320-delayed-method.png",
+      "width": 320,
+      "id": "ph-v1-method-rb-indicator",
+      "firstResponseBottom": 628.1875,
+      "sha256": "2557b85cccd0746d8b874afa8d1b0606f9ebdc71aca4a6d53c24f4ca118ff035"
+    },
+    {
+      "file": "1280-indicator-method.png",
+      "width": 1280,
+      "id": "ph-v1-method-ca-indicator",
+      "firstResponseBottom": 623.609375,
+      "sha256": "c8e18437b47d0d2a713be03d9a1dbff68f2019e2988673acdf28b0902347ca9e"
+    },
+    {
+      "file": "1280-ionic-equation.png",
+      "width": 1280,
+      "id": "ph-v1-method-ca-equation",
+      "firstResponseBottom": 649.953125,
+      "sha256": "b41f8bdfbf44cc68d4efa89b647d87b9d88df56a3200c446950337b0b6171d3e"
+    },
+    {
+      "file": "1280-retained-wrong-equation.png",
+      "width": 1280,
+      "id": "ph-v1-method-ca-equation",
+      "sha256": "9135f389c91e450c3a33af11c160189b2a19aa134117d260794400839c9d4b73"
+    },
+    {
+      "file": "1280-separate-reference.png",
+      "width": 1280,
+      "id": "ph-v1-method-ca-equation",
+      "sha256": "b720a70e9a063d70f74998a525aad6a29763f483351c971ccac8bef7cb2948a1"
+    },
+    {
+      "file": "1280-delayed-method.png",
+      "width": 1280,
+      "id": "ph-v1-method-rb-indicator",
+      "firstResponseBottom": 649.953125,
+      "sha256": "1a722f2459a13e0e6b228a0ddc713a4f35d71aec95f8d6bf9044f64cbb05b15e"
+    },
+    {
+      "file": "320-practice-graph.png",
+      "width": 320,
+      "id": "ph-v1-p-excess-volume",
+      "minimumGlyphSize": 12.45703125,
+      "sha256": "26bcc9977c2f3f2b4485851a417318569419d038c1b7526c27d2fcdd967061dd"
+    },
+    {
+      "file": "1280-practice-graph.png",
+      "width": 1280,
+      "id": "ph-v1-p-excess-volume",
+      "minimumGlyphSize": 20.571093750000003,
+      "sha256": "5060d71e275f686e1ba2f0a8e4177fd767a4919b3e7b012590750d6eb32c354f"
+    }
+  ]
+}

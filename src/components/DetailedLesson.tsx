@@ -101,7 +101,13 @@ export function DetailedLesson({
     else if (tab.right > frame.right) nav.scrollLeft += tab.right - frame.right;
   }, [ready, section, stage]);
   useEffect(() => {
-    if (!ready || lesson.slug !== "aqueous-electrolysis-products" || !q.rubric)
+    if (
+      !ready ||
+      !(
+        lesson.slug === "ph-scale-and-indicators" ||
+        (lesson.slug === "aqueous-electrolysis-products" && q.rubric)
+      )
+    )
       return;
     const nav = taskNavigation.current;
     if (!nav) return;
@@ -257,6 +263,7 @@ export function DetailedLesson({
     "ion-tests",
     "aqueous-electrolysis-products",
     "natural-polymers",
+    "ph-scale-and-indicators",
   ].includes(lesson.slug);
   const compactReview =
     (compactIonReview ||
@@ -408,6 +415,7 @@ export function DetailedLesson({
           "ion-tests",
           "aqueous-electrolysis-products",
           "natural-polymers",
+          "ph-scale-and-indicators",
         ].includes(lesson.slug) ||
           (section === "explore" && stage === "guided")) && (
           <button className="text-button" onClick={() => choose("warmup")}>
@@ -483,6 +491,7 @@ export function DetailedLesson({
               id={lesson.slug}
               navigationAfterResponse={
                 mixedNatural ||
+                lesson.slug === "ph-scale-and-indicators" ||
                 lesson.slug === "aqueous-electrolysis-products" ||
                 lesson.slug === "ion-tests" ||
                 compactEquationForm ||

@@ -39,9 +39,16 @@ async function answer(page: Page, q: (typeof journey.practice)[number]) {
     await page.getByRole("radio", { name: q.answer, exact: true }).check();
   else
     await page
-      .getByLabel(q.rubric ? "Your explanation" : "Your answer", {
-        exact: true,
-      })
+      .getByLabel(
+        q.writtenEquations
+          ? "Your equations"
+          : q.rubric
+            ? "Your explanation"
+            : "Your answer",
+        {
+          exact: true,
+        },
+      )
       .fill(q.answer);
 }
 async function saved(page: Page) {
@@ -147,7 +154,7 @@ test("reserved checks defer marking, retain drafts and separate actual seven-day
   ).toBeVisible();
 });
 
-test("all original practice works while two written explanations remain self-reviewed", async ({
+test("all practice works while complete writing remains self-reviewed", async ({
   page,
 }) => {
   await page.goto(route);
@@ -158,14 +165,22 @@ test("all original practice works while two written explanations remain self-rev
     await answer(page, q);
     await page
       .getByRole("button", {
-        name: q.rubric ? "Save and review explanation" : "Check answer",
+        name: q.writtenEquations
+          ? "Save and review equations"
+          : q.rubric
+            ? "Save and review explanation"
+            : "Check answer",
         exact: true,
       })
       .click();
     if (q.rubric) {
       await expect(
         page.locator(".sample-task-answer .feedback[role=status]"),
-      ).toContainText("Compare your explanation");
+      ).toContainText(
+        q.writtenEquations
+          ? "Compare your equations"
+          : "Compare your explanation",
+      );
       await expect
         .poll(() =>
           page.evaluate(

@@ -278,7 +278,8 @@ export function AssessmentSession({
                     </p>
                     {(q.writtenEquations ||
                       q.id.startsWith("aqp-v1-method-") ||
-                      q.id.startsWith("natural-v1-h-")) &&
+                      q.id.startsWith("natural-v1-h-") ||
+                      q.id.startsWith("ph-v1-method-")) &&
                       q.referenceResponse && (
                         <details className="sample-reference">
                           <summary>Compare a reference response</summary>
@@ -288,7 +289,9 @@ export function AssessmentSession({
                               ? "Compare the complete reaction direction, substance identities and atom counts with your retained equations."
                               : q.id.startsWith("natural-v1-h-")
                                 ? "Compare your functional groups, actual junctions and stated chain convention with this reference."
-                                : "Compare your electrode predictions, labelled observations and suitable testing method with this reference."}{" "}
+                                : q.id.startsWith("ph-v1-method-")
+                                  ? "Compare your sample, indicator, chart and approximate reporting method with this reference."
+                                  : "Compare your electrode predictions, labelled observations and suitable testing method with this reference."}{" "}
                             This reference does not award an automatic mark.
                           </p>
                         </details>
@@ -468,6 +471,7 @@ export function AssessmentSession({
               "ion-tests",
               "aqueous-electrolysis-products",
               "natural-polymers",
+              "ph-scale-and-indicators",
             ].includes(id) &&
               q.rubric)) &&
           q.title
@@ -480,6 +484,7 @@ export function AssessmentSession({
             "ion-tests",
             "aqueous-electrolysis-products",
             "natural-polymers",
+            "ph-scale-and-indicators",
           ].includes(id) &&
             q.rubric)) &&
           q.title &&
