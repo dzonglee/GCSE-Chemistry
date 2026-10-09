@@ -92,6 +92,8 @@ type InputProps = {
   onChange: (value: string) => void;
   disabled?: boolean;
   compactAssessment?: boolean;
+  compactNatural?: boolean;
+  naturalInstructions?: string;
   compactHistorical?: boolean;
 };
 export function QuestionInput(props: InputProps) {
@@ -158,9 +160,20 @@ export function QuestionInput(props: InputProps) {
         <ChromaGiven data={props.question.chromatographyGiven} />
       )}
       {props.question.naturalGiven && (
-        <NaturalGiven data={props.question.naturalGiven} />
+        <NaturalGiven
+          data={props.question.naturalGiven}
+          compact={props.compactNatural}
+        />
       )}
-      {props.question.naturalHelix && (
+      {props.question.naturalHelix && props.compactNatural && (
+        <div className="natural-helix-response">
+          <div>
+            <ResponseInput {...props} />
+          </div>
+          <NaturalHelixDiagram data={props.question.naturalHelix} compact />
+        </div>
+      )}
+      {props.question.naturalHelix && !props.compactNatural && (
         <NaturalHelixDiagram
           data={props.question.naturalHelix}
           compact={props.compactAssessment}
@@ -506,7 +519,8 @@ export function QuestionInput(props: InputProps) {
           <ResponseInput {...props} />
         </div>
       )}
-      {!props.question.invertedGasScale &&
+      {!(props.question.naturalHelix && props.compactNatural) &&
+        !props.question.invertedGasScale &&
         !props.question.halogenResults &&
         !props.question.nobleBoilingPoints &&
         !props.question.shellDiagram &&
@@ -604,6 +618,7 @@ function ResponseInput({
   onChange,
   disabled = false,
   compactAssessment,
+  naturalInstructions,
 }: InputProps) {
   if (question.gasDrawing)
     return (
@@ -636,6 +651,7 @@ function ResponseInput({
     return (
       <NaturalDrawingInput
         data={question.naturalDrawing}
+        instructions={naturalInstructions}
         value={value}
         onChange={onChange}
         disabled={disabled}

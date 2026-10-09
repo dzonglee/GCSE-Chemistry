@@ -1,0 +1,71 @@
+{
+  "build": "IUWlFguvy1VkvRJkaLfia",
+  "captures": [
+    {
+      "file": "320-check-repeat.png",
+      "width": 320,
+      "id": "natural-v1-h-ca-repeat",
+      "firstResponseBottom": 611.171875,
+      "sha256": "db5330a39513e4ca76d1f6c0ff26dfc7b8483823bf4abeb0988aebc89d9ed4dd"
+    },
+    {
+      "file": "320-retained-wrong-structure.png",
+      "width": 320,
+      "id": "natural-v1-h-ca-repeat",
+      "sha256": "92524d14588084fabc84494d4cf6761f585bc2b4147d084f168d32a6d9ad6fc7"
+    },
+    {
+      "file": "320-separate-reference.png",
+      "width": 320,
+      "id": "natural-v1-h-ca-repeat",
+      "sha256": "61d303acafefa83d4f49ded19bb8af43648ea9ea77140acab41a477643aad32d"
+    },
+    {
+      "file": "320-written-reasoning.png",
+      "width": 320,
+      "id": "natural-v1-h-cb-explain",
+      "firstResponseBottom": 653.96875,
+      "sha256": "c542f41ad7fcaa12b5fb8bff2f9c4c09c06c84b898e469606c080ae971ec4f13"
+    },
+    {
+      "file": "320-delayed-chain.png",
+      "width": 320,
+      "id": "natural-v1-h-ra-peptide",
+      "firstResponseBottom": 651.671875,
+      "sha256": "a488661c30abd3f01b52f6996718d3dbe47a44b4ee62911614f7cbf576859411"
+    },
+    {
+      "file": "1280-check-repeat.png",
+      "width": 1280,
+      "id": "natural-v1-h-ca-repeat",
+      "firstResponseBottom": 562.828125,
+      "sha256": "0d55a6c6598729df1be1d328e2017423eb56bebac9fd8f23125da9b98e9cc872"
+    },
+    {
+      "file": "1280-retained-wrong-structure.png",
+      "width": 1280,
+      "id": "natural-v1-h-ca-repeat",
+      "sha256": "90be9084df96acaee820c59bbb3e9da7aecdcb7698c0d412818d0fe650c4a698"
+    },
+    {
+      "file": "1280-separate-reference.png",
+      "width": 1280,
+      "id": "natural-v1-h-ca-repeat",
+      "sha256": "77728f5433bfc8de995414423c80259dd89df125a92bc29b7ebcc607d832c3f7"
+    },
+    {
+      "file": "1280-written-reasoning.png",
+      "width": 1280,
+      "id": "natural-v1-h-cb-explain",
+      "firstResponseBottom": 606.921875,
+      "sha256": "4b66a1e1910f7217a423d4e36790ab51016bf2442958b90097f6ffe5280ebcec"
+    },
+    {
+      "file": "1280-delayed-chain.png",
+      "width": 1280,
+      "id": "natural-v1-h-ra-peptide",
+      "firstResponseBottom": 562.828125,
+      "sha256": "1f0e495057940a03d5d91e49ebe239a0661b84630e90fef053f197f876bd150e"
+    }
+  ]
+}

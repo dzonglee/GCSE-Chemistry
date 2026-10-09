@@ -1,3 +1,7 @@
+import {
+  naturalHigherChecks,
+  naturalHigherReviews,
+} from "./natural-higher-assessments";
 import { warmup, refresher } from "./natural-tasks";
 import { guided } from "./natural-guided";
 import { practice } from "./natural-practice";
@@ -119,12 +123,36 @@ export const naturalExposureFamilies: Record<string, string[]> = {
     "p-amino-repeat",
     "p-amino-repeat-draw",
     "p-amino-repeat-ends",
+    "h-ca-repeat",
+    "h-cb-repeat",
+    "h-ra-repeat",
+    "h-rb-repeat",
   ],
-  peptideJoining: ["r-peptide", "g-join", "p-peptide-bond"],
+  peptideJoining: [
+    "r-peptide",
+    "g-join",
+    "p-peptide-bond",
+    "p-peptide-draw",
+    "p-peptide-three",
+    "h-ca-peptide",
+    "h-cb-peptide",
+    "h-ra-peptide",
+    "h-rb-peptide",
+  ],
+  higherGroupReasoning: ["r-groups", "p-groups", "p-one-type", "h-ca-explain"],
+  finiteConvention: [
+    "r-links",
+    "p-endgroups",
+    "p-amino-repeat-ends",
+    "h-cb-explain",
+  ],
   unknownSection75: ["r-core-subtract", "p-core-75"],
   unchangedGroups: ["r-core-ends", "p-core-ends"],
   peptideWater: ["r-water", "p-water-origin"],
 };
+checkForms.push(...naturalHigherChecks);
+reviewForms.push(...naturalHigherReviews);
+
 const allTasks = [
   ...warmup,
   ...refresher,
@@ -147,7 +175,7 @@ export const naturalJourney: NaturalJourney = {
   introduction:
     "Identify original monomer types and complete contributions in natural polymer chains. Distinguish nucleotide units, glucose-derived contributions and amino-acid sequence; Higher tasks build actual peptide junctions and conserve finite-chain atoms.",
   scopeNote:
-    "Chemistry only. Natural-polymer monomer types and DNA structure are both-tier content. Tasks explicitly headed Higher cover amino-acid condensation, peptide structures and finite-chain accounting. The reserved checks and delayed reviews assess the common both-tier content; they do not certify Higher condensation exam readiness.",
+    "Chemistry only. Natural-polymer monomer types and DNA structure are both-tier content. Tasks explicitly headed Higher cover amino-acid condensation, peptide structures and finite-chain accounting. The two original reserved checks and delayed reviews assess common both-tier content. Additional Higher forms construct peptide chains and bracketed contributions and explain condensation; full structural and written responses require manual comparison, not automatic examiner marks.",
   outcomes: [
     "Identify nucleotides, amino acids and glucose as the appropriate monomer types.",
     "Distinguish one nucleotide from a whole rung and recognise the common two-strand double helix.",

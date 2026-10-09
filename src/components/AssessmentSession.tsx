@@ -277,7 +277,8 @@ export function AssessmentSession({
                       criteria do not award an automatic examiner mark.
                     </p>
                     {(q.writtenEquations ||
-                      q.id.startsWith("aqp-v1-method-")) &&
+                      q.id.startsWith("aqp-v1-method-") ||
+                      q.id.startsWith("natural-v1-h-")) &&
                       q.referenceResponse && (
                         <details className="sample-reference">
                           <summary>Compare a reference response</summary>
@@ -285,7 +286,9 @@ export function AssessmentSession({
                           <p>
                             {q.writtenEquations
                               ? "Compare the complete reaction direction, substance identities and atom counts with your retained equations."
-                              : "Compare your electrode predictions, labelled observations and suitable testing method with this reference."}{" "}
+                              : q.id.startsWith("natural-v1-h-")
+                                ? "Compare your functional groups, actual junctions and stated chain convention with this reference."
+                                : "Compare your electrode predictions, labelled observations and suitable testing method with this reference."}{" "}
                             This reference does not award an automatic mark.
                           </p>
                         </details>
@@ -461,7 +464,11 @@ export function AssessmentSession({
         <h2 ref={heading} tabIndex={-1}>
           {(q.writtenEquations ||
             q.conciseHeading ||
-            (["ion-tests", "aqueous-electrolysis-products"].includes(id) &&
+            ([
+              "ion-tests",
+              "aqueous-electrolysis-products",
+              "natural-polymers",
+            ].includes(id) &&
               q.rubric)) &&
           q.title
             ? q.title
@@ -469,10 +476,21 @@ export function AssessmentSession({
         </h2>
         {(q.writtenEquations ||
           q.conciseHeading ||
-          (["ion-tests", "aqueous-electrolysis-products"].includes(id) &&
+          ([
+            "ion-tests",
+            "aqueous-electrolysis-products",
+            "natural-polymers",
+          ].includes(id) &&
             q.rubric)) &&
-          q.title && <p className="written-equation-prompt">{q.prompt}</p>}
+          q.title &&
+          !(id === "natural-polymers" && q.naturalDrawing) && (
+            <p className="written-equation-prompt">{q.prompt}</p>
+          )}
         <QuestionInput
+          naturalInstructions={
+            id === "natural-polymers" && q.naturalDrawing ? q.prompt : undefined
+          }
+          compactNatural={id === "natural-polymers"}
           compactAssessment={questions.length > 20}
           compactHistorical={id === "atomic-models"}
           question={q}

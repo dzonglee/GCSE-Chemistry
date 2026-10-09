@@ -13,7 +13,13 @@ import {
 import type { NaturalDiagramData } from "../lib/natural";
 import { PeptideRepeatDiagram } from "./PeptideRepeatDiagram";
 import { DNA2D, GlucoseCrop, PeptideDiagram } from "./NaturalWorkbench";
-export function NaturalGiven({ data }: { data: NaturalDiagramData }) {
+export function NaturalGiven({
+  data,
+  compact = false,
+}: {
+  data: NaturalDiagramData;
+  compact?: boolean;
+}) {
   if (data.mode === "peptideUnit")
     return (
       <section className="natural-given">
@@ -25,8 +31,9 @@ export function NaturalGiven({ data }: { data: NaturalDiagramData }) {
                 .amino
             ].formula
           }
-          . Construct your own bracketed contribution from this original
-          structure.
+          {compact
+            ? "."
+            : ". Construct your own bracketed contribution from this original structure."}
         </p>
       </section>
     );
@@ -39,7 +46,22 @@ export function NaturalGiven({ data }: { data: NaturalDiagramData }) {
             .map((k) => aminoAcids[k].formula)
             .join(" + ")}
         </p>
-        <p>These are the original molecules, not a completed peptide answer.</p>
+        {!compact && (
+          <p>
+            These are the original molecules, not a completed peptide answer.
+          </p>
+        )}
+      </section>
+    );
+  if (data.mode === "dna" && compact)
+    return (
+      <section className="natural-given">
+        <p>
+          <strong>Source:</strong>{" "}
+          {dnaCases[data.record as keyof typeof dnaCases].source.length}{" "}
+          positions on each of two strands. Original labels are fixed. Key: A–T;
+          C–G.
+        </p>
       </section>
     );
   if (data.mode === "dna")
@@ -50,6 +72,15 @@ export function NaturalGiven({ data }: { data: NaturalDiagramData }) {
           {dnaCases[data.record as keyof typeof dnaCases].source.length}{" "}
           positions on each of two strands. The original-strand labels are
           fixed. Supplied visual key: A pairs with T; C pairs with G.
+        </p>
+      </section>
+    );
+  if (compact)
+    return (
+      <section className="natural-given">
+        <p>
+          Glucose-derived crop below; ends omitted. Mark boundaries. Joined
+          units, not free monomers.
         </p>
       </section>
     );
@@ -69,11 +100,13 @@ export function NaturalDrawingInput({
   onChange,
   data,
   disabled = false,
+  instructions,
 }: {
   value: string;
   onChange: (v: string) => void;
   data: NaturalDiagramData;
   disabled?: boolean;
+  instructions?: string;
 }) {
   const b = readNaturalDrawing(value, data);
   if (!b)
@@ -118,13 +151,13 @@ export function NaturalDrawingInput({
               "mechanism",
             ];
   const labels: Record<string, string> = {
-    nitrogen: "Your nitrogen group inside the repeat",
+    nitrogen: "Your nitrogen group",
     core: "Your retained carbon section",
     continuation: "Your bonds crossing the boundaries",
     brackets: "Your repeat brackets",
     multiplier: "Your multiplier outside the brackets",
     junction: "Your joining atom pair between contributions",
-    unit: "Your highlighted whole unit at position 1",
+    unit: "Your whole unit at position 1",
     strands: "Your number of polymer strands",
     shape: "Your overall arrangement",
     monomer: "Your monomer name",
@@ -218,6 +251,9 @@ export function NaturalDrawingInput({
                   />
                 )}
               </label>
+              {i === 1 && instructions && (
+                <p className="natural-task-instructions">{instructions}</p>
+              )}
               {(data.mode === "peptideUnit" || data.mode === "peptide") &&
                 i === 1 && (
                   <div className="natural-repeat-preview">

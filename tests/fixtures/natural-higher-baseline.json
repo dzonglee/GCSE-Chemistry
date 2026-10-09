@@ -1,0 +1,2421 @@
+{
+  "stageIds": {
+    "warmup": [
+      "natural-v1-w-polymer",
+      "natural-v1-w-units",
+      "natural-v1-w-oxygen"
+    ],
+    "refresher": [
+      "natural-v1-r-dna-unit",
+      "natural-v1-r-dna-shape",
+      "natural-v1-r-dna-types",
+      "natural-v1-r-protein",
+      "natural-v1-r-glucose",
+      "natural-v1-r-repeat",
+      "natural-v1-r-identity",
+      "natural-v1-r-sequence",
+      "natural-v1-r-function",
+      "natural-v1-r-groups",
+      "natural-v1-r-peptide",
+      "natural-v1-r-water",
+      "natural-v1-r-links",
+      "natural-v1-r-mass",
+      "natural-v1-r-information",
+      "natural-v1-r-composition",
+      "natural-v1-r-connectivity",
+      "natural-v1-r-core-ends",
+      "natural-v1-r-core-subtract",
+      "natural-v1-r-amino-repeat"
+    ],
+    "guided": [
+      "natural-v1-g-unit",
+      "natural-v1-g-count",
+      "natural-v1-g-types",
+      "natural-v1-g-glucose",
+      "natural-v1-g-repeat",
+      "natural-v1-g-order",
+      "natural-v1-g-connectivity",
+      "natural-v1-g-join",
+      "natural-v1-g-three",
+      "natural-v1-g-inventory",
+      "natural-v1-g-core",
+      "natural-v1-g-amino-repeat"
+    ],
+    "practice": [
+      "natural-v1-p-dna-unit",
+      "natural-v1-p-dna-shape",
+      "natural-v1-p-dna-count",
+      "natural-v1-p-dna-types",
+      "natural-v1-p-dna-information",
+      "natural-v1-p-dna-draw",
+      "natural-v1-p-dna-explain",
+      "natural-v1-p-dna-most",
+      "natural-v1-p-starch",
+      "natural-v1-p-cellulose",
+      "natural-v1-p-starch-cellulose",
+      "natural-v1-p-ring-draw",
+      "natural-v1-p-ring-identity",
+      "natural-v1-p-ring-explain",
+      "natural-v1-p-protein",
+      "natural-v1-p-protein-mixed",
+      "natural-v1-p-order",
+      "natural-v1-p-composition",
+      "natural-v1-p-connectivity",
+      "natural-v1-p-function",
+      "natural-v1-p-groups",
+      "natural-v1-p-one-type",
+      "natural-v1-p-peptide-bond",
+      "natural-v1-p-water-origin",
+      "natural-v1-p-peptide-draw",
+      "natural-v1-p-gly-three-water",
+      "natural-v1-p-gly-four-mass",
+      "natural-v1-p-mixed-mass",
+      "natural-v1-p-mixed-H",
+      "natural-v1-p-mixed-O",
+      "natural-v1-p-three-N",
+      "natural-v1-p-three-carbon",
+      "natural-v1-p-three-mass",
+      "natural-v1-p-endgroups",
+      "natural-v1-p-peptide-three",
+      "natural-v1-p-condensation-explain",
+      "natural-v1-p-amino-mass",
+      "natural-v1-p-acid-mass",
+      "natural-v1-p-core-ends",
+      "natural-v1-p-core-75",
+      "natural-v1-p-core-103",
+      "natural-v1-p-visual",
+      "natural-v1-p-amino-repeat",
+      "natural-v1-p-amino-repeat-draw",
+      "natural-v1-p-amino-repeat-ends"
+    ]
+  },
+  "checkForms": [
+    [
+      "natural-v1-c-a-protein",
+      "natural-v1-c-a-glucose",
+      "natural-v1-c-a-types",
+      "natural-v1-c-a-count",
+      "natural-v1-c-a-shape",
+      "natural-v1-c-a-diagram",
+      "natural-v1-c-a-information",
+      "natural-v1-c-a-draw"
+    ],
+    [
+      "natural-v1-c-b-dna",
+      "natural-v1-c-b-cellulose",
+      "natural-v1-c-b-count",
+      "natural-v1-c-b-sequence",
+      "natural-v1-c-b-information",
+      "natural-v1-c-b-diagram",
+      "natural-v1-c-b-types",
+      "natural-v1-c-b-draw"
+    ]
+  ],
+  "reviewForms": [
+    [
+      "natural-v1-v-a-count",
+      "natural-v1-v-a-protein",
+      "natural-v1-v-a-draw"
+    ],
+    [
+      "natural-v1-v-b-dna",
+      "natural-v1-v-b-glucose",
+      "natural-v1-v-b-draw"
+    ]
+  ],
+  "tasks": [
+    {
+      "id": "natural-v1-w-polymer",
+      "title": "Distinguish a chain from its building blocks",
+      "purpose": "Distinguish a chain from its building blocks",
+      "prompt": "What are the small molecules which join to make a polymer called?",
+      "answer": "Monomers",
+      "options": [
+        "Electrons",
+        "Mixtures",
+        "Monomers"
+      ],
+      "misconceptions": {
+        "Electrons": "Electrons are not the repeating molecular building blocks.",
+        "Mixtures": "A polymer chain is covalently joined, not merely mixed."
+      },
+      "explanation": "Many monomer molecules contribute units to a polymer chain.",
+      "hint": "Think about the original molecules."
+    },
+    {
+      "id": "natural-v1-w-units",
+      "title": "Count units on both strands",
+      "purpose": "Count units on both strands",
+      "prompt": "A supplied excerpt has three units on each of two strands. How many strand units are shown in total?",
+      "answer": "Six",
+      "options": [
+        "Three",
+        "Two",
+        "Six"
+      ],
+      "misconceptions": {
+        "Three": "Count both strands.",
+        "Two": "Two is the number of strands, not the number of units."
+      },
+      "explanation": "3 + 3 = 6. One whole rung contains one unit on each strand.",
+      "hint": "Separate strands from units.",
+      "exposureAliases": [
+        "natural-v1-v-a-count"
+      ]
+    },
+    {
+      "id": "natural-v1-w-oxygen",
+      "title": "Read a complete water molecule",
+      "purpose": "Read a complete water molecule",
+      "prompt": "What atoms are in one H₂O molecule?",
+      "answer": "Two H and one O",
+      "options": [
+        "Two O and one H",
+        "Two H and one O",
+        "One H and one O"
+      ],
+      "misconceptions": {
+        "One H and one O": "That is OH, not H₂O.",
+        "Two O and one H": "The 2 belongs to H."
+      },
+      "explanation": "One water molecule contains two hydrogen atoms and one oxygen atom.",
+      "hint": "Read the subscript."
+    },
+    {
+      "id": "natural-v1-r-dna-unit",
+      "title": "One nucleotide belongs to one strand",
+      "purpose": "One nucleotide belongs to one strand",
+      "prompt": "At a paired position, what is one complete DNA monomer?",
+      "answer": "One nucleotide on one strand",
+      "options": [
+        "One base alone",
+        "One nucleotide on one strand",
+        "The complete two-sided rung"
+      ],
+      "misconceptions": {
+        "The complete two-sided rung": "A complete rung contains two nucleotides.",
+        "One base alone": "A base is part of a nucleotide, not the whole monomer."
+      },
+      "explanation": "One nucleotide is one complete strand unit.",
+      "hint": "Follow one strand.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "dna",
+        "record": "initial",
+        "instruction": "One nucleotide belongs to one strand",
+        "focus": "unit"
+      },
+      "exposureAliases": [
+        "natural-v1-g-unit",
+        "natural-v1-p-dna-unit",
+        "natural-v1-c-b-dna",
+        "natural-v1-v-b-dna",
+        "natural-polymers-1"
+      ]
+    },
+    {
+      "id": "natural-v1-r-dna-shape",
+      "title": "Separate name and shape",
+      "purpose": "Separate name and shape",
+      "prompt": "What is the overall shape of most DNA molecules?",
+      "answer": "Double helix",
+      "options": [
+        "Single straight chain",
+        "Double helix",
+        "DNA"
+      ],
+      "misconceptions": {
+        "DNA": "DNA names the molecule; the question asks its shape.",
+        "Single straight chain": "Most DNA contains two chains wound around one another."
+      },
+      "explanation": "Most DNA has two polymer chains in a double helix.",
+      "hint": "Think about both winding strands.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "dna",
+        "record": "eight",
+        "instruction": "Separate name and shape",
+        "focus": "shape"
+      },
+      "exposureAliases": [
+        "natural-v1-p-dna-shape",
+        "natural-v1-c-a-shape"
+      ]
+    },
+    {
+      "id": "natural-v1-r-dna-types",
+      "title": "Possible types are not excerpt counts",
+      "purpose": "Possible types are not excerpt counts",
+      "prompt": "How many different nucleotide types are available in DNA?",
+      "answer": "Four",
+      "options": [
+        "Eight",
+        "Four",
+        "Two"
+      ],
+      "misconceptions": {
+        "Two": "Two is the strand count, not the number of types.",
+        "Eight": "An excerpt may contain eight units but only four possible types."
+      },
+      "explanation": "DNA uses four different nucleotide types; a short excerpt need not show all four.",
+      "hint": "Distinguish types from positions.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "dna",
+        "record": "cg",
+        "instruction": "Possible types are not excerpt counts",
+        "focus": "types"
+      },
+      "exposureAliases": [
+        "natural-v1-g-types",
+        "natural-v1-p-dna-types",
+        "natural-v1-c-a-types",
+        "natural-v1-c-b-types"
+      ]
+    },
+    {
+      "id": "natural-v1-r-protein",
+      "title": "Name protein monomers",
+      "purpose": "Name protein monomers",
+      "prompt": "Proteins are polymers based on what monomer type?",
+      "answer": "Amino acids",
+      "options": [
+        "Glucose",
+        "Nucleotides",
+        "Amino acids"
+      ],
+      "misconceptions": {
+        "Glucose": "Glucose is the building block of starch and cellulose.",
+        "Nucleotides": "Nucleotides form DNA."
+      },
+      "explanation": "Different amino acids can contribute to one protein chain.",
+      "hint": "Use the supplied chain description.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "identify",
+        "record": "protein",
+        "instruction": "Name protein monomers"
+      },
+      "exposureAliases": [
+        "natural-v1-p-protein",
+        "natural-v1-c-a-protein",
+        "natural-v1-v-a-protein",
+        "natural-polymers-0"
+      ]
+    },
+    {
+      "id": "natural-v1-r-glucose",
+      "title": "Name carbohydrate building blocks",
+      "purpose": "Name carbohydrate building blocks",
+      "prompt": "Starch and cellulose are both based on which monomer?",
+      "answer": "Glucose",
+      "options": [
+        "Ethene",
+        "Amino acids",
+        "Glucose"
+      ],
+      "misconceptions": {
+        "Ethene": "Ethene forms poly(ethene), not starch or cellulose.",
+        "Amino acids": "Amino acids form polypeptides."
+      },
+      "explanation": "Both are glucose-based polymers with different linking arrangements.",
+      "hint": "Same building block does not mean same structure.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "identify",
+        "record": "cellulose",
+        "instruction": "Name carbohydrate building blocks"
+      },
+      "exposureAliases": [
+        "natural-v1-g-glucose",
+        "natural-v1-p-cellulose",
+        "natural-v1-c-b-cellulose",
+        "natural-v1-p-starch",
+        "natural-v1-c-a-glucose",
+        "natural-v1-v-b-glucose",
+        "natural-polymers-2"
+      ]
+    },
+    {
+      "id": "natural-v1-r-repeat",
+      "title": "Select a whole contribution",
+      "purpose": "Select a whole contribution",
+      "prompt": "Which selection represents one glucose-derived contribution in this supplied crop?",
+      "answer": "One complete ring with one linking oxygen",
+      "options": [
+        "All three rings",
+        "One complete ring with one linking oxygen",
+        "One oxygen alone"
+      ],
+      "misconceptions": {
+        "One oxygen alone": "The bridge alone omits the carbon-containing ring.",
+        "All three rings": "That is the whole crop, not one contribution."
+      },
+      "explanation": "A complete contribution includes a whole ring and one linking O; it is not an isolated glucose molecule.",
+      "hint": "Check the ring and the adjoining bridge.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "repeat",
+        "record": "initial",
+        "instruction": "Select a whole contribution"
+      },
+      "exposureAliases": [
+        "natural-v1-g-repeat",
+        "natural-v1-p-ring-draw",
+        "natural-v1-p-ring-explain",
+        "natural-v1-c-b-draw",
+        "natural-v1-v-a-draw"
+      ]
+    },
+    {
+      "id": "natural-v1-r-identity",
+      "title": "Use the amount of evidence actually given",
+      "purpose": "Use the amount of evidence actually given",
+      "prompt": "A crop is only described as glucose-derived. What identity is justified here?",
+      "answer": "A glucose-based polymer",
+      "options": [
+        "Definitely DNA",
+        "Uniquely starch",
+        "A glucose-based polymer"
+      ],
+      "misconceptions": {
+        "Definitely DNA": "DNA is based on nucleotides.",
+        "Uniquely starch": "The supplied information does not uniquely distinguish starch from cellulose."
+      },
+      "explanation": "Name only what the supplied structure and context justify.",
+      "hint": "Avoid guessing a more specific identity.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "identify",
+        "record": "fragment",
+        "instruction": "Use the amount of evidence actually given"
+      }
+    },
+    {
+      "id": "natural-v1-r-sequence",
+      "title": "Same composition can have a different order",
+      "purpose": "Same composition can have a different order",
+      "prompt": "Glycine–alanine–glycine is rearranged as alanine–glycine–glycine. What is unchanged?",
+      "answer": "The complete atom composition",
+      "options": [
+        "The identity of every position",
+        "The complete atom composition",
+        "The order"
+      ],
+      "misconceptions": {
+        "The order": "The order changed.",
+        "The identity of every position": "The first two positions changed."
+      },
+      "explanation": "The same contributions in a different order preserve total composition.",
+      "hint": "Count the contributions.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "sequence",
+        "record": "initial",
+        "instruction": "Same composition can have a different order"
+      },
+      "exposureAliases": [
+        "natural-v1-g-order",
+        "natural-v1-p-order",
+        "natural-v1-c-b-sequence"
+      ]
+    },
+    {
+      "id": "natural-v1-r-function",
+      "title": "Respect the limits of a short excerpt",
+      "purpose": "Respect the limits of a short excerpt",
+      "prompt": "Two short excerpts have the same atom composition. What exact function can this alone prove?",
+      "answer": "No exact function is determined",
+      "options": [
+        "No exact function is determined",
+        "They must have exactly the same function",
+        "They must have exactly different functions"
+      ],
+      "misconceptions": {
+        "They must have exactly the same function": "Composition alone does not fix sequence, full structure or exact function.",
+        "They must have exactly different functions": "A short fragment does not prove a specific functional change."
+      },
+      "explanation": "Order influences structure, but these excerpts alone do not determine an exact protein function.",
+      "hint": "Distinguish evidence from certainty.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "sequence",
+        "record": "initial",
+        "instruction": "Respect the limits of a short excerpt"
+      }
+    },
+    {
+      "id": "natural-v1-r-groups",
+      "title": "Higher: find two different functional groups",
+      "purpose": "Higher: find two different functional groups",
+      "tier": "higher",
+      "prompt": "Glycine is H₂N–CH₂–COOH. Which pair of functional groups does it contain?",
+      "answer": "An amino group and a carboxylic acid group",
+      "options": [
+        "An amino group and a carboxylic acid group",
+        "Two alcohol groups",
+        "A C=C bond only"
+      ],
+      "misconceptions": {
+        "Two alcohol groups": "NH₂ is an amino group; COOH is a carboxylic acid group.",
+        "A C=C bond only": "Glycine does not need an alkene bond to undergo condensation."
+      },
+      "explanation": "One amino acid molecule has two different functional groups.",
+      "hint": "Look at both ends.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "peptide",
+        "record": "initial",
+        "instruction": "Higher: find two different functional groups"
+      },
+      "exposureAliases": [
+        "natural-v1-p-groups"
+      ]
+    },
+    {
+      "id": "natural-v1-r-peptide",
+      "title": "Higher: identify the actual joining atoms",
+      "purpose": "Higher: identify the actual joining atoms",
+      "tier": "higher",
+      "prompt": "In the supplied amino-acid condensation, which atoms make the peptide joining bond?",
+      "answer": "Carbonyl carbon and amino nitrogen",
+      "options": [
+        "Carbonyl carbon and amino nitrogen",
+        "Carbon and oxygen",
+        "Two carbon atoms"
+      ],
+      "misconceptions": {
+        "Carbon and oxygen": "C–O is an ester-link choice, not this peptide link.",
+        "Two carbon atoms": "A C–C joining bond is not the peptide link."
+      },
+      "explanation": "The new C–N bond joins the carbonyl carbon to the amino nitrogen.",
+      "hint": "Retain the carbonyl oxygen.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "peptide",
+        "record": "initial",
+        "instruction": "Higher: identify the actual joining atoms"
+      },
+      "exposureAliases": [
+        "natural-v1-g-join",
+        "natural-v1-p-peptide-bond"
+      ]
+    },
+    {
+      "id": "natural-v1-r-water",
+      "title": "Higher: identify the atoms removed",
+      "purpose": "Higher: identify the atoms removed",
+      "tier": "higher",
+      "prompt": "Which groups form water at one amino-acid joining junction?",
+      "answer": "Acid OH and one amino H",
+      "options": [
+        "Carbonyl O and both amino H",
+        "The entire amino group",
+        "Acid OH and one amino H"
+      ],
+      "misconceptions": {
+        "Carbonyl O and both amino H": "The carbonyl O remains in the chain.",
+        "The entire amino group": "Nitrogen remains in the chain and forms the link."
+      },
+      "explanation": "Acid OH plus one H forms H₂O. The internal nitrogen retains one H.",
+      "hint": "Remove OH + H, not C=O.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "peptide",
+        "record": "initial",
+        "instruction": "Higher: identify the atoms removed"
+      },
+      "exposureAliases": [
+        "natural-v1-p-water-origin"
+      ]
+    },
+    {
+      "id": "natural-v1-r-links",
+      "title": "Higher: count actual open-chain links",
+      "purpose": "Higher: count actual open-chain links",
+      "tier": "higher",
+      "prompt": "Four monomers join into one finite open chain, with both outer terminal groups shown. How many joining links are there?",
+      "answer": "3",
+      "unit": "links",
+      "explanation": "There is a link between each adjacent pair: four units give three actual links.",
+      "hint": "Count spaces between units.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "peptide",
+        "record": "four",
+        "instruction": "Higher: count actual open-chain links"
+      }
+    },
+    {
+      "id": "natural-v1-r-mass",
+      "title": "Higher: subtract released water once per link",
+      "purpose": "Higher: subtract released water once per link",
+      "tier": "higher",
+      "prompt": "Two glycines each have Mr 75. One joining link releases one H₂O of Mr 18. What is the whole dipeptide Mr?",
+      "answer": "132",
+      "unit": "relative formula mass",
+      "explanation": "75 + 75 − 18 = 132; both terminal groups remain.",
+      "hint": "Subtract only the water actually released.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "mass",
+        "record": "initial",
+        "instruction": "Higher: subtract released water once per link",
+        "focus": "Mr"
+      }
+    },
+    {
+      "id": "natural-v1-r-information",
+      "title": "DNA carries instructions",
+      "purpose": "DNA carries instructions",
+      "prompt": "Which statement describes why DNA is important?",
+      "answer": "It encodes genetic instructions",
+      "options": [
+        "A short excerpt always contains all four types",
+        "It encodes genetic instructions",
+        "It is made from glucose only"
+      ],
+      "misconceptions": {
+        "It is made from glucose only": "DNA uses nucleotide monomers.",
+        "A short excerpt always contains all four types": "A short excerpt may omit some types."
+      },
+      "explanation": "DNA encodes genetic instructions for development and functioning. Most DNA has two nucleotide chains in a double helix.",
+      "hint": "Separate biological role from monomer counts.",
+      "exposureAliases": [
+        "natural-v1-p-dna-information",
+        "natural-v1-c-b-information",
+        "natural-v1-c-a-information"
+      ]
+    },
+    {
+      "id": "natural-v1-r-composition",
+      "title": "Replacing a contribution changes its inventory",
+      "purpose": "Replacing a contribution changes its inventory",
+      "prompt": "Glycine C₂H₅NO₂ is replaced by alanine C₃H₇NO₂ in an otherwise unchanged excerpt. What changes?",
+      "answer": "The complete carbon and hydrogen totals",
+      "options": [
+        "Only the displayed order",
+        "No atom totals",
+        "The complete carbon and hydrogen totals"
+      ],
+      "misconceptions": {
+        "Only the displayed order": "A contribution was replaced by a different formula.",
+        "No atom totals": "C₂H₅ and C₃H₇ contain different C and H counts."
+      },
+      "explanation": "A replacement changes composition, while reordering the same contributions preserves composition.",
+      "hint": "Compare the given formulas.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "sequence",
+        "record": "different",
+        "instruction": "Replacing a contribution changes its inventory"
+      }
+    },
+    {
+      "id": "natural-v1-r-connectivity",
+      "title": "Same formula can have different connectivity",
+      "purpose": "Same formula can have different connectivity",
+      "prompt": "Alanine H₂N–CH(CH₃)–COOH and beta-alanine H₂N–CH₂–CH₂–COOH have the same formula. What differs in the supplied structures?",
+      "answer": "Atom connectivity",
+      "options": [
+        "Atom connectivity",
+        "The supplied atom totals",
+        "Nothing about the structures"
+      ],
+      "misconceptions": {
+        "The supplied atom totals": "Both are C₃H₇NO₂.",
+        "Nothing about the structures": "The carbon skeleton and amino-group attachment differ."
+      },
+      "explanation": "Atom composition and connectivity answer different questions. These unfamiliar structures are supplied, not recalled names.",
+      "hint": "Follow the bonds in each formula.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "sequence",
+        "record": "beta",
+        "instruction": "Same formula can have different connectivity"
+      }
+    },
+    {
+      "id": "natural-v1-r-core-ends",
+      "title": "Higher: account for unchanged end groups",
+      "purpose": "Higher: account for unchanged end groups",
+      "tier": "higher",
+      "prompt": "Given Ar: H 1, C 12, N 14, O 16, calculate the combined relative mass of NH₂ and COOH in H₂N–[unknown section]–COOH.",
+      "answer": "61",
+      "unit": "relative mass",
+      "explanation": "NH₂: 14 + 2 = 16. COOH: 12 + 2 × 16 + 1 = 45. Combined mass = 61.",
+      "hint": "Count all atoms in both printed end groups.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "core",
+        "record": "initial",
+        "instruction": "Higher: account for unchanged end groups",
+        "focus": "ends"
+      },
+      "exposureAliases": [
+        "natural-v1-p-core-ends"
+      ]
+    },
+    {
+      "id": "natural-v1-r-core-subtract",
+      "title": "Higher: work backwards from whole mass",
+      "purpose": "Higher: work backwards from whole mass",
+      "tier": "higher",
+      "prompt": "H₂N–[unknown section]–COOH has whole Mr 75. Its unchanged NH₂ and COOH groups together have relative mass 61. Find the unknown section’s relative mass.",
+      "answer": "14",
+      "unit": "relative mass",
+      "explanation": "75 − 61 = 14. The mass does not by itself identify the section’s connectivity.",
+      "hint": "Subtract the known parts from the whole.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "core",
+        "record": "initial",
+        "instruction": "Higher: work backwards from whole mass",
+        "focus": "core"
+      },
+      "exposureAliases": [
+        "natural-v1-p-core-75"
+      ]
+    },
+    {
+      "id": "natural-v1-r-amino-repeat",
+      "title": "Higher: distinguish repeat boundaries from chain ends",
+      "purpose": "Higher: distinguish repeat boundaries from chain ends",
+      "tier": "higher",
+      "prompt": "For glycine H₂N–CH₂–COOH, which end-omitted contribution belongs inside the polypeptide brackets?",
+      "answer": "–NH–CH₂–C(=O)–",
+      "options": [
+        "–NH–CH₂–C(=O)–",
+        "–NH₂–CH₂–COOH–",
+        "–NH–CH₂–CH₂–"
+      ],
+      "misconceptions": {
+        "–NH₂–CH₂–COOH–": "Those are the original monomer's terminal groups, not the internal contribution.",
+        "–NH–CH₂–CH₂–": "The original carbonyl oxygen must remain; condensation does not turn C=O into CH₂."
+      },
+      "explanation": "Remove acid OH and one amino H while retaining CH₂ and C=O. The repeat bonds cross both brackets; n sits outside. Adjacent contributions meet through C–N.",
+      "hint": "Retain the carbon skeleton and carbonyl oxygen.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "peptideUnit",
+        "record": "initial",
+        "instruction": "Higher: distinguish repeat boundaries from chain ends"
+      },
+      "exposureAliases": [
+        "natural-v1-g-amino-repeat",
+        "natural-v1-p-amino-repeat",
+        "natural-v1-p-amino-repeat-draw",
+        "natural-v1-p-amino-repeat-ends"
+      ]
+    },
+    {
+      "id": "natural-v1-g-unit",
+      "title": "Select one nucleotide",
+      "purpose": "Select one nucleotide",
+      "prompt": "Highlight one whole DNA monomer, then identify it.",
+      "answer": "One nucleotide on one strand",
+      "options": [
+        "One base alone",
+        "One nucleotide on one strand",
+        "One complete rung"
+      ],
+      "misconceptions": {
+        "One complete rung": "That contains one nucleotide from each strand.",
+        "One base alone": "A base is only part of the whole nucleotide."
+      },
+      "explanation": "A single nucleotide is one monomer on one strand. The other side of the rung is a second nucleotide.",
+      "hint": "Highlight either complete strand unit.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "dna",
+        "record": "initial",
+        "instruction": "Select one nucleotide",
+        "focus": "unit"
+      },
+      "exposureAliases": [
+        "natural-v1-r-dna-unit",
+        "natural-v1-p-dna-unit",
+        "natural-v1-c-b-dna",
+        "natural-v1-v-b-dna",
+        "natural-v1-p-dna-draw",
+        "natural-v1-c-a-draw",
+        "natural-v1-v-b-draw",
+        "natural-polymers-1"
+      ]
+    },
+    {
+      "id": "natural-v1-g-count",
+      "title": "Count both strands",
+      "purpose": "Count both strands",
+      "prompt": "The supplied DNA excerpt has four positions on each of two strands. How many nucleotides are shown?",
+      "answer": "8",
+      "unit": "nucleotides",
+      "explanation": "Four on each strand gives eight total; four rungs do not mean four nucleotides.",
+      "hint": "Count complete units on both sides.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "dna",
+        "record": "initial",
+        "instruction": "Count both strands",
+        "focus": "count"
+      }
+    },
+    {
+      "id": "natural-v1-g-types",
+      "title": "Read an excerpt without changing the general rule",
+      "purpose": "Read an excerpt without changing the general rule",
+      "prompt": "The CGCG excerpt only shows two of the possible type labels. How many nucleotide types are available in DNA generally?",
+      "answer": "Four",
+      "options": [
+        "Eight",
+        "Four",
+        "Two"
+      ],
+      "misconceptions": {
+        "Two": "This short excerpt does not contain every possible type.",
+        "Eight": "Eight is the number of units shown across both strands."
+      },
+      "explanation": "Four possible types is different from the number of types occurring in a short excerpt.",
+      "hint": "Use the full DNA rule.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "dna",
+        "record": "cg",
+        "instruction": "Read an excerpt without changing the general rule",
+        "focus": "types"
+      },
+      "exposureAliases": [
+        "natural-v1-r-dna-types",
+        "natural-v1-p-dna-types",
+        "natural-v1-c-a-types",
+        "natural-v1-c-b-types"
+      ]
+    },
+    {
+      "id": "natural-v1-g-glucose",
+      "title": "Match named cellulose to its monomer",
+      "purpose": "Match named cellulose to its monomer",
+      "prompt": "Cellulose is named in the supplied case. What is its original building block?",
+      "answer": "Glucose",
+      "options": [
+        "Nucleotides",
+        "Glucose",
+        "Amino acids"
+      ],
+      "misconceptions": {
+        "Amino acids": "Those are protein building blocks.",
+        "Nucleotides": "Those are DNA building blocks."
+      },
+      "explanation": "Cellulose and starch are both glucose-based polymers; their linking arrangements differ.",
+      "hint": "A shared monomer does not make identical polymers.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "identify",
+        "record": "cellulose",
+        "instruction": "Match named cellulose to its monomer"
+      },
+      "exposureAliases": [
+        "natural-v1-r-glucose",
+        "natural-v1-p-cellulose",
+        "natural-v1-c-b-cellulose",
+        "natural-v1-p-starch",
+        "natural-v1-c-a-glucose",
+        "natural-v1-v-b-glucose",
+        "natural-polymers-2"
+      ]
+    },
+    {
+      "id": "natural-v1-g-repeat",
+      "title": "Select a whole glucose-derived contribution",
+      "purpose": "Select a whole glucose-derived contribution",
+      "prompt": "Choose boundaries around one complete ring plus one bridge oxygen. What did you select?",
+      "answer": "One glucose-derived contribution",
+      "options": [
+        "One glucose-derived contribution",
+        "One isolated glucose molecule",
+        "The complete polymer molecule"
+      ],
+      "misconceptions": {
+        "One isolated glucose molecule": "The contribution inside the chain differs from the original monomer.",
+        "The complete polymer molecule": "The displayed crop is only an excerpt."
+      },
+      "explanation": "A whole ring and one linking O make one contribution in the given end-omitted crop.",
+      "hint": "Keep one complete ring, not just its oxygen.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "repeat",
+        "record": "initial",
+        "instruction": "Select a whole glucose-derived contribution"
+      },
+      "exposureAliases": [
+        "natural-v1-r-repeat",
+        "natural-v1-p-ring-draw",
+        "natural-v1-p-ring-explain",
+        "natural-v1-c-b-draw",
+        "natural-v1-v-a-draw"
+      ]
+    },
+    {
+      "id": "natural-v1-g-order",
+      "title": "Reconstruct the target order",
+      "purpose": "Reconstruct the target order",
+      "prompt": "Rebuild alanine–glycine–glycine from the supplied original glycine–alanine–glycine. What is preserved?",
+      "answer": "The atom composition",
+      "options": [
+        "The order of the first two contributions",
+        "A proved exact protein function",
+        "The atom composition"
+      ],
+      "misconceptions": {
+        "The order of the first two contributions": "Their order changed.",
+        "A proved exact protein function": "These excerpts do not determine an exact function."
+      },
+      "explanation": "Reordering the same contributions preserves the atom inventory but changes sequence.",
+      "hint": "Match each target position.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "sequence",
+        "record": "initial",
+        "instruction": "Reconstruct the target order"
+      },
+      "exposureAliases": [
+        "natural-v1-r-sequence",
+        "natural-v1-p-order",
+        "natural-v1-c-b-sequence"
+      ]
+    },
+    {
+      "id": "natural-v1-g-connectivity",
+      "title": "Use the given structures, not mass alone",
+      "purpose": "Use the given structures, not mass alone",
+      "prompt": "Alanine is H₂N–CH(CH₃)–COOH; beta-alanine is H₂N–CH₂–CH₂–COOH. Both have C₃H₇NO₂. Which difference is shown?",
+      "answer": "Different atom connectivity",
+      "options": [
+        "Different complete atom totals",
+        "Exactly identical structures",
+        "Different atom connectivity"
+      ],
+      "misconceptions": {
+        "Different complete atom totals": "Their supplied formulas have the same totals.",
+        "Exactly identical structures": "The amino group and carbon skeleton connect differently."
+      },
+      "explanation": "The same molecular formula and Mr do not guarantee the same connectivity. Both unfamiliar structures are supplied.",
+      "hint": "Follow the printed bonds.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "sequence",
+        "record": "beta",
+        "instruction": "Use the given structures, not mass alone"
+      }
+    },
+    {
+      "id": "natural-v1-g-join",
+      "title": "Higher: join the carbon to the nitrogen",
+      "purpose": "Higher: join the carbon to the nitrogen",
+      "tier": "higher",
+      "prompt": "Build the two-glycine dipeptide, retaining terminal NH₂ and COOH. Which new bond joins the units?",
+      "answer": "C–N",
+      "options": [
+        "C–O",
+        "C–C",
+        "C–N"
+      ],
+      "misconceptions": {
+        "C–O": "That does not make this peptide linkage.",
+        "C–C": "That joins the wrong atom pair."
+      },
+      "explanation": "Carbonyl C bonds to amino N; carbonyl O remains doubly bonded to C.",
+      "hint": "Check the joining atoms.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "peptide",
+        "record": "initial",
+        "instruction": "Higher: join the carbon to the nitrogen"
+      },
+      "exposureAliases": [
+        "natural-v1-r-peptide",
+        "natural-v1-p-peptide-bond"
+      ]
+    },
+    {
+      "id": "natural-v1-g-three",
+      "title": "Higher: keep the actual open-chain endpoints",
+      "purpose": "Higher: keep the actual open-chain endpoints",
+      "tier": "higher",
+      "prompt": "Three glycine molecules make the shown finite open chain. How many waters do its two joining links release?",
+      "answer": "2",
+      "unit": "water molecules",
+      "explanation": "Two actual junctions release two H₂O. The left NH₂ and right COOH remain at the open ends.",
+      "hint": "Count shown junctions, not repeat symbols.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "peptide",
+        "record": "three",
+        "instruction": "Higher: keep the actual open-chain endpoints"
+      }
+    },
+    {
+      "id": "natural-v1-g-inventory",
+      "title": "Higher: count the whole mixed dipeptide",
+      "purpose": "Higher: count the whole mixed dipeptide",
+      "tier": "higher",
+      "prompt": "Glycine C₂H₅NO₂ and alanine C₃H₇NO₂ form one C–N joining link, releasing H₂O. How many H atoms remain in the whole chain?",
+      "answer": "10",
+      "unit": "hydrogen atoms",
+      "explanation": "5 + 7 − 2 = 10. The full product is C₅H₁₀N₂O₃ with Mr 146.",
+      "hint": "Subtract both water hydrogens.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "mass",
+        "record": "mixed",
+        "instruction": "Higher: count the whole mixed dipeptide",
+        "focus": "H"
+      }
+    },
+    {
+      "id": "natural-v1-g-core",
+      "title": "Higher: find an unfamiliar missing section",
+      "purpose": "Higher: find an unfamiliar missing section",
+      "tier": "higher",
+      "prompt": "H₂N–[unknown section]–COOH has whole Mr 89. Use Ar H 1, C 12, N 14, O 16 to calculate the relative mass of its unknown section.",
+      "answer": "28",
+      "unit": "relative mass",
+      "explanation": "NH₂ and COOH contribute 16 + 45 = 61. The section contributes 89 − 61 = 28. Do not infer a unique structure from this mass.",
+      "hint": "Find both known group masses, then subtract.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "core",
+        "record": "larger",
+        "instruction": "Higher: find an unfamiliar missing section",
+        "focus": "core"
+      }
+    },
+    {
+      "id": "natural-v1-g-amino-repeat",
+      "title": "Higher: preserve an unfamiliar supplied carbon section",
+      "purpose": "Higher: preserve an unfamiliar supplied carbon section",
+      "tier": "higher",
+      "prompt": "Build one bracketed contribution from H₂N–CH₂–CH₂–COOH. Which carbon section remains between NH and C=O?",
+      "answer": "CH₂–CH₂",
+      "options": [
+        "CH₂ only",
+        "CH(CH₃)",
+        "CH₂–CH₂"
+      ],
+      "misconceptions": {
+        "CH₂ only": "Condensation removes OH and H; it does not remove a carbon atom.",
+        "CH(CH₃)": "That rearranges the supplied connectivity rather than retaining it."
+      },
+      "explanation": "The supplied monomer contributes –NH–CH₂–CH₂–C(=O)–. Keep both carbons in their original order, bonds through both brackets and n outside.",
+      "hint": "Copy the given carbon section without rearranging it.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "peptideUnit",
+        "record": "beta",
+        "instruction": "Higher: preserve an unfamiliar supplied carbon section"
+      },
+      "exposureAliases": [
+        "natural-v1-r-amino-repeat",
+        "natural-v1-p-amino-repeat",
+        "natural-v1-p-amino-repeat-draw",
+        "natural-v1-p-amino-repeat-ends"
+      ]
+    },
+    {
+      "id": "natural-v1-p-dna-unit",
+      "title": "Identify a whole DNA monomer",
+      "purpose": "Identify a whole DNA monomer",
+      "prompt": "A marked rung contains one unit on each strand. What is one monomer?",
+      "answer": "One nucleotide on one strand",
+      "options": [
+        "One nucleotide on one strand",
+        "The whole rung",
+        "The base alone"
+      ],
+      "misconceptions": {
+        "The whole rung": "A rung contains two nucleotide monomers.",
+        "The base alone": "A base is a component of a nucleotide."
+      },
+      "explanation": "One complete nucleotide belongs to one strand.",
+      "hint": "Count one strand unit.",
+      "followUp": "natural-v1-r-dna-unit",
+      "exposureAliases": [
+        "natural-v1-r-dna-unit",
+        "natural-v1-g-unit",
+        "natural-v1-c-b-dna",
+        "natural-v1-v-b-dna",
+        "natural-polymers-1"
+      ]
+    },
+    {
+      "id": "natural-v1-p-dna-shape",
+      "title": "Name the shape precisely",
+      "purpose": "Name the shape precisely",
+      "prompt": "Two long DNA chains wind around one another. Name this shape.",
+      "answer": "Double helix",
+      "options": [
+        "Double helix",
+        "DNA",
+        "Amino acid"
+      ],
+      "misconceptions": {
+        "DNA": "That names the molecule, not its shape.",
+        "Amino acid": "That is a protein monomer type."
+      },
+      "explanation": "Most DNA has two polymer chains in a double helix.",
+      "hint": "Name the arrangement.",
+      "followUp": "natural-v1-r-dna-shape",
+      "exposureAliases": [
+        "natural-v1-r-dna-shape",
+        "natural-v1-c-a-shape"
+      ]
+    },
+    {
+      "id": "natural-v1-p-dna-count",
+      "title": "Count a two-strand excerpt",
+      "purpose": "Count a two-strand excerpt",
+      "prompt": "A DNA excerpt has six positions on each of two strands. How many nucleotides are present in the excerpt?",
+      "answer": "12",
+      "unit": "nucleotides",
+      "explanation": "6 × 2 = 12; each rung contains two nucleotide units.",
+      "hint": "Count both sides.",
+      "followUp": "natural-v1-r-dna-unit"
+    },
+    {
+      "id": "natural-v1-p-dna-types",
+      "title": "Distinguish types and copies",
+      "purpose": "Distinguish types and copies",
+      "prompt": "The shown short excerpt has eight nucleotides but only A and T labels. How many different nucleotide types can DNA use generally?",
+      "answer": "4",
+      "unit": "possible types",
+      "explanation": "Four types are possible even when a short excerpt shows only two.",
+      "hint": "A short excerpt is not the entire DNA molecule.",
+      "followUp": "natural-v1-r-dna-types",
+      "exposureAliases": [
+        "natural-v1-r-dna-types",
+        "natural-v1-g-types",
+        "natural-v1-c-a-types",
+        "natural-v1-c-b-types"
+      ]
+    },
+    {
+      "id": "natural-v1-p-dna-information",
+      "title": "Describe why DNA matters",
+      "purpose": "Describe why DNA matters",
+      "prompt": "Which statement describes a role of DNA?",
+      "answer": "It encodes genetic instructions",
+      "options": [
+        "It is made only from glucose",
+        "Every nucleotide is a whole organism",
+        "It encodes genetic instructions"
+      ],
+      "misconceptions": {
+        "It is made only from glucose": "DNA monomers are nucleotides.",
+        "Every nucleotide is a whole organism": "Nucleotides contribute to a large molecule."
+      },
+      "explanation": "DNA encodes genetic instructions for development and functioning.",
+      "hint": "Distinguish a molecule from an organism.",
+      "followUp": "natural-v1-r-information",
+      "exposureAliases": [
+        "natural-v1-r-information",
+        "natural-v1-c-b-information",
+        "natural-v1-c-a-information"
+      ]
+    },
+    {
+      "id": "natural-v1-p-dna-draw",
+      "title": "Mark one complete nucleotide",
+      "purpose": "Mark one complete nucleotide",
+      "prompt": "In the supplied two-position, two-strand excerpt, independently highlight one complete nucleotide at the first position. Retain a two-strand structure and identify its overall shape.",
+      "answer": "Highlight either complete nucleotide on one strand; identify two strands, double helix and nucleotide monomers.",
+      "rubric": [
+        "Select one complete left or right nucleotide, not the whole rung or a base alone.",
+        "Retain two polymer strands; identify double helix.",
+        "The supplied A/T pairing key is a visual aid, not extra recall."
+      ],
+      "explanation": "Highlight either complete nucleotide on one strand; identify two strands, double helix and nucleotide monomers.",
+      "hint": "Build your own proposal from the supplied structure; check complete units and every shown link.",
+      "naturalGiven": {
+        "mode": "dna",
+        "record": "two"
+      },
+      "naturalDrawing": {
+        "mode": "dna",
+        "record": "two"
+      },
+      "followUp": "natural-v1-r-dna-unit",
+      "exposureAliases": [
+        "natural-v1-g-unit",
+        "natural-v1-c-a-draw",
+        "natural-v1-v-b-draw"
+      ]
+    },
+    {
+      "id": "natural-v1-p-dna-explain",
+      "title": "Explain a counting error",
+      "purpose": "Explain a counting error",
+      "prompt": "A student calls each whole DNA rung one nucleotide. Explain why this gives the wrong unit count.",
+      "answer": "Each rung pairs one nucleotide from each of two strands. A complete rung contains two nucleotides, while one monomer belongs to one strand.",
+      "rubric": [
+        "Identify a nucleotide as one complete strand unit.",
+        "State that a rung contains two nucleotides.",
+        "Distinguish unit count from strand count."
+      ],
+      "explanation": "Each rung pairs one nucleotide from each of two strands. A complete rung contains two nucleotides, while one monomer belongs to one strand.",
+      "hint": "Follow both sides of a rung.",
+      "followUp": "natural-v1-r-dna-unit"
+    },
+    {
+      "id": "natural-v1-p-dna-most",
+      "title": "Use the specification wording carefully",
+      "purpose": "Use the specification wording carefully",
+      "prompt": "Which statement accurately describes the common DNA structure?",
+      "answer": "Most DNA molecules have two polymer chains",
+      "options": [
+        "Most DNA molecules have two polymer chains",
+        "Every DNA-related molecule must have exactly two chains",
+        "Each chain is one nucleotide only"
+      ],
+      "misconceptions": {
+        "Every DNA-related molecule must have exactly two chains": "The specification describes most DNA molecules, not an unrestricted universal.",
+        "Each chain is one nucleotide only": "A DNA polymer chain contains many nucleotides."
+      },
+      "explanation": "Most DNA has two polymer chains arranged as a double helix.",
+      "hint": "Use the wording justified by the source.",
+      "followUp": "natural-v1-r-dna-shape"
+    },
+    {
+      "id": "natural-v1-p-starch",
+      "title": "Identify starch monomers",
+      "purpose": "Identify starch monomers",
+      "prompt": "Starch is a naturally occurring polymer based on what monomer?",
+      "answer": "Glucose",
+      "options": [
+        "Ethene",
+        "Nucleotides",
+        "Glucose"
+      ],
+      "misconceptions": {
+        "Ethene": "Ethene makes poly(ethene).",
+        "Nucleotides": "Those make DNA."
+      },
+      "explanation": "Starch is built from glucose-derived units.",
+      "hint": "Use its natural building block.",
+      "followUp": "natural-v1-r-glucose",
+      "exposureAliases": [
+        "natural-v1-r-glucose",
+        "natural-v1-g-glucose",
+        "natural-v1-c-a-glucose",
+        "natural-v1-v-b-glucose"
+      ]
+    },
+    {
+      "id": "natural-v1-p-cellulose",
+      "title": "Identify cellulose monomers",
+      "purpose": "Identify cellulose monomers",
+      "prompt": "Cellulose is a plant cell-wall polymer. What monomer is it based on?",
+      "answer": "Glucose",
+      "options": [
+        "Glucose",
+        "Amino acids",
+        "Sodium chloride units"
+      ],
+      "misconceptions": {
+        "Amino acids": "Those make protein chains.",
+        "Sodium chloride units": "Cellulose is not an ionic lattice."
+      },
+      "explanation": "Cellulose is a glucose-based polymer.",
+      "hint": "Compare with starch.",
+      "followUp": "natural-v1-r-glucose",
+      "exposureAliases": [
+        "natural-v1-r-glucose",
+        "natural-v1-g-glucose",
+        "natural-v1-c-b-cellulose",
+        "natural-polymers-2"
+      ]
+    },
+    {
+      "id": "natural-v1-p-starch-cellulose",
+      "title": "Shared building block, different polymer",
+      "purpose": "Shared building block, different polymer",
+      "prompt": "Starch and cellulose are both glucose-based. What follows?",
+      "answer": "They share a monomer but differ in linking arrangement",
+      "options": [
+        "They share a monomer but differ in linking arrangement",
+        "They must be identical polymers",
+        "Only one of them can be a polymer"
+      ],
+      "misconceptions": {
+        "They must be identical polymers": "The way units are linked differs.",
+        "Only one of them can be a polymer": "Both are naturally occurring polymers."
+      },
+      "explanation": "A common monomer does not require identical structure or properties.",
+      "hint": "Consider how the units join.",
+      "followUp": "natural-v1-r-glucose",
+      "exposureAliases": [
+        "natural-v1-v-b-glucose"
+      ]
+    },
+    {
+      "id": "natural-v1-p-ring-draw",
+      "title": "Mark one glucose-derived contribution",
+      "purpose": "Mark one glucose-derived contribution",
+      "prompt": "Select a whole glucose-derived contribution in the supplied four-ring crop. Keep one full ring and one linking O, choosing either adjoining bridge.",
+      "answer": "Select one complete ring plus one linking O; for example boundaries 2 to 4 in this crop.",
+      "rubric": [
+        "One complete ring is included.",
+        "One adjoining linking oxygen is included.",
+        "Exclude the other complete rings and do not identify a single O as a glucose monomer."
+      ],
+      "explanation": "Select one complete ring plus one linking O; for example boundaries 2 to 4 in this crop.",
+      "hint": "Mark the complete contribution.",
+      "naturalGiven": {
+        "mode": "repeat",
+        "record": "four"
+      },
+      "naturalDrawing": {
+        "mode": "repeat",
+        "record": "four"
+      },
+      "followUp": "natural-v1-r-repeat",
+      "exposureAliases": [
+        "natural-v1-r-repeat",
+        "natural-v1-g-repeat",
+        "natural-v1-p-ring-explain",
+        "natural-v1-c-b-draw",
+        "natural-v1-v-a-draw"
+      ]
+    },
+    {
+      "id": "natural-v1-p-ring-identity",
+      "title": "Avoid unsupported unique identification",
+      "purpose": "Avoid unsupported unique identification",
+      "prompt": "A diagram is only described as a glucose-based polymer crop. Which identification is supported without further distinguishing information?",
+      "answer": "A glucose-based polymer",
+      "options": [
+        "Uniquely cellulose",
+        "A glucose-based polymer",
+        "Definitely DNA"
+      ],
+      "misconceptions": {
+        "Definitely DNA": "DNA uses nucleotides.",
+        "Uniquely cellulose": "The provided evidence alone does not establish that unique identity."
+      },
+      "explanation": "Use the most specific identity justified by the supplied information.",
+      "hint": "A glucose-derived crop can fit more than one named polymer.",
+      "followUp": "natural-v1-r-identity"
+    },
+    {
+      "id": "natural-v1-p-ring-explain",
+      "title": "Distinguish monomer and residue",
+      "purpose": "Distinguish monomer and residue",
+      "prompt": "Explain why a ring joined into a glucose-based chain is not the same complete molecule as free glucose.",
+      "answer": "The original monomer is glucose. Its contribution becomes covalently joined to neighbouring contributions, and the shown end-omitted unit includes the linking arrangement rather than all the groups of a free glucose molecule.",
+      "rubric": [
+        "Name glucose as the original monomer.",
+        "Explain that the contribution is joined to neighbours.",
+        "Do not call one bridging O a whole monomer or the crop a whole isolated molecule."
+      ],
+      "explanation": "The original monomer is glucose. Its contribution becomes covalently joined to neighbouring contributions, and the shown end-omitted unit includes the linking arrangement rather than all the groups of a free glucose molecule.",
+      "hint": "Compare original molecule and chain contribution.",
+      "followUp": "natural-v1-r-repeat",
+      "exposureAliases": [
+        "natural-v1-r-repeat",
+        "natural-v1-g-repeat",
+        "natural-v1-p-ring-draw",
+        "natural-v1-c-b-draw",
+        "natural-v1-v-a-draw"
+      ]
+    },
+    {
+      "id": "natural-v1-p-protein",
+      "title": "Identify protein monomers",
+      "purpose": "Identify protein monomers",
+      "prompt": "Proteins are polymers based on which monomer type?",
+      "answer": "Amino acids",
+      "options": [
+        "Only ethene",
+        "Amino acids",
+        "Nucleotides"
+      ],
+      "misconceptions": {
+        "Nucleotides": "Nucleotides make DNA.",
+        "Only ethene": "Ethene makes an addition polymer."
+      },
+      "explanation": "Different amino acids can occur in one protein chain.",
+      "hint": "Use the molecule family.",
+      "followUp": "natural-v1-r-protein",
+      "exposureAliases": [
+        "natural-v1-r-protein",
+        "natural-v1-c-a-protein",
+        "natural-v1-v-a-protein",
+        "natural-polymers-0"
+      ]
+    },
+    {
+      "id": "natural-v1-p-protein-mixed",
+      "title": "Allow different amino acids",
+      "purpose": "Allow different amino acids",
+      "prompt": "Which statement about a protein chain is accurate?",
+      "answer": "Different amino acids can occur in the same chain",
+      "options": [
+        "Different amino acids can occur in the same chain",
+        "It must contain only one amino-acid type",
+        "Its monomers must be glucose"
+      ],
+      "misconceptions": {
+        "It must contain only one amino-acid type": "Protein chains can contain different amino acids.",
+        "Its monomers must be glucose": "Glucose is not the protein monomer type."
+      },
+      "explanation": "Different amino acids can combine in one chain.",
+      "hint": "The chain need not use identical contributions.",
+      "followUp": "natural-v1-r-protein"
+    },
+    {
+      "id": "natural-v1-p-order",
+      "title": "Compare two supplied sequences",
+      "purpose": "Compare two supplied sequences",
+      "prompt": "Glycine–alanine–glycine and alanine–glycine–glycine contain the same contributions. What differs?",
+      "answer": "Their sequence",
+      "options": [
+        "Their complete atom totals",
+        "The number of shown contributions",
+        "Their sequence"
+      ],
+      "misconceptions": {
+        "Their complete atom totals": "The same contributions preserve the totals.",
+        "The number of shown contributions": "Each has three."
+      },
+      "explanation": "Position and order differ, even though composition is the same.",
+      "hint": "Read from the same indicated end.",
+      "followUp": "natural-v1-r-sequence",
+      "exposureAliases": [
+        "natural-v1-r-sequence",
+        "natural-v1-g-order",
+        "natural-v1-c-b-sequence"
+      ]
+    },
+    {
+      "id": "natural-v1-p-composition",
+      "title": "Spot a changed contribution",
+      "purpose": "Spot a changed contribution",
+      "prompt": "Glycine–alanine is changed to alanine–alanine. Given glycine C₂H₅NO₂ and alanine C₃H₇NO₂, what changes?",
+      "answer": "The complete atom composition",
+      "options": [
+        "Nothing about the units",
+        "The complete atom composition",
+        "Only the printed order"
+      ],
+      "misconceptions": {
+        "Only the printed order": "A glycine contribution has been replaced.",
+        "Nothing about the units": "Glycine and alanine have different supplied formulas."
+      },
+      "explanation": "Replacing glycine with alanine changes the carbon and hydrogen totals.",
+      "hint": "Compare the formulas, not only chain length.",
+      "followUp": "natural-v1-r-composition"
+    },
+    {
+      "id": "natural-v1-p-connectivity",
+      "title": "Use supplied isomeric structures",
+      "purpose": "Use supplied isomeric structures",
+      "prompt": "Alanine H₂N–CH(CH₃)–COOH and beta-alanine H₂N–CH₂–CH₂–COOH share a formula. Which conclusion is justified?",
+      "answer": "Their atom connectivity differs",
+      "options": [
+        "Their supplied atom totals must differ",
+        "Their structures must be identical",
+        "Their atom connectivity differs"
+      ],
+      "misconceptions": {
+        "Their supplied atom totals must differ": "Both are C₃H₇NO₂.",
+        "Their structures must be identical": "The printed bonding arrangement differs."
+      },
+      "explanation": "The same atom totals do not prove the same connectivity. The unfamiliar structures are supplied.",
+      "hint": "Trace the amino-group attachment.",
+      "followUp": "natural-v1-r-connectivity"
+    },
+    {
+      "id": "natural-v1-p-function",
+      "title": "Explain the limits of sequence evidence",
+      "purpose": "Explain the limits of sequence evidence",
+      "prompt": "Two short polypeptide excerpts have the same composition but different order. Explain what this shows and what it cannot establish.",
+      "answer": "The same contributions preserve the atom composition, while their different order changes sequence. These short excerpts do not establish the complete folding or exact biological function of a protein.",
+      "rubric": [
+        "State same complete atom composition.",
+        "State different sequence.",
+        "Avoid asserting a specific or necessarily identical/different exact function from the short excerpt."
+      ],
+      "explanation": "The same contributions preserve the atom composition, while their different order changes sequence. These short excerpts do not establish the complete folding or exact biological function of a protein.",
+      "hint": "Separate composition, sequence and function.",
+      "followUp": "natural-v1-r-function"
+    },
+    {
+      "id": "natural-v1-p-groups",
+      "title": "Higher: identify both glycine groups",
+      "purpose": "Higher: identify both glycine groups",
+      "tier": "higher",
+      "prompt": "In H₂N–CH₂–COOH, which two different functional groups allow repeated condensation?",
+      "answer": "Amino and carboxylic acid groups",
+      "options": [
+        "Two identical alcohol groups",
+        "C=C and an ionic charge only",
+        "Amino and carboxylic acid groups"
+      ],
+      "misconceptions": {
+        "Two identical alcohol groups": "Glycine has NH₂ and COOH.",
+        "C=C and an ionic charge only": "Those are not the supplied reactive-group pair."
+      },
+      "explanation": "One amino acid carries both different groups.",
+      "hint": "Read the two ends.",
+      "followUp": "natural-v1-r-groups",
+      "exposureAliases": [
+        "natural-v1-r-groups"
+      ]
+    },
+    {
+      "id": "natural-v1-p-one-type",
+      "title": "Higher: one monomer type can polymerise",
+      "purpose": "Higher: one monomer type can polymerise",
+      "tier": "higher",
+      "prompt": "Many identical glycine molecules form a polypeptide. Which statement is accurate?",
+      "answer": "One monomer type can have two different reactive groups",
+      "options": [
+        "Glycine must become an alkene first",
+        "One monomer type can have two different reactive groups",
+        "Condensation always needs two different monomer types"
+      ],
+      "misconceptions": {
+        "Condensation always needs two different monomer types": "Glycine provides both NH₂ and COOH itself.",
+        "Glycine must become an alkene first": "Condensation does not require that transformation."
+      },
+      "explanation": "Different reactive groups within one amino acid permit repeated linking.",
+      "hint": "Distinguish group types from molecule types.",
+      "followUp": "natural-v1-r-groups"
+    },
+    {
+      "id": "natural-v1-p-peptide-bond",
+      "title": "Higher: identify a peptide link",
+      "purpose": "Higher: identify a peptide link",
+      "tier": "higher",
+      "prompt": "Which bond joins amino-acid contributions in this supplied condensation?",
+      "answer": "Carbonyl C–N",
+      "options": [
+        "Carbonyl C–N",
+        "C–O ester link",
+        "C=C addition site"
+      ],
+      "misconceptions": {
+        "C–O ester link": "That is the wrong joining atom for the peptide link.",
+        "C=C addition site": "This reaction is not alkene addition."
+      },
+      "explanation": "The joining carbon is the carbonyl carbon; its O remains in C=O.",
+      "hint": "Identify the nitrogen.",
+      "followUp": "natural-v1-r-peptide",
+      "exposureAliases": [
+        "natural-v1-r-peptide",
+        "natural-v1-g-join"
+      ]
+    },
+    {
+      "id": "natural-v1-p-water-origin",
+      "title": "Higher: retain carbonyl oxygen",
+      "purpose": "Higher: retain carbonyl oxygen",
+      "tier": "higher",
+      "prompt": "At one junction, which atoms leave as H₂O?",
+      "answer": "Acid OH and one amino H",
+      "options": [
+        "Both complete functional groups",
+        "Acid OH and one amino H",
+        "Carbonyl O and both amino H"
+      ],
+      "misconceptions": {
+        "Carbonyl O and both amino H": "The carbonyl O remains; one H remains on internal N.",
+        "Both complete functional groups": "The joining C and N must stay."
+      },
+      "explanation": "OH + H gives water while C=O and N remain in the chain.",
+      "hint": "Count oxygen and both H atoms.",
+      "followUp": "natural-v1-r-water",
+      "exposureAliases": [
+        "natural-v1-r-water"
+      ]
+    },
+    {
+      "id": "natural-v1-p-peptide-draw",
+      "title": "Higher: build a mixed dipeptide",
+      "purpose": "Higher: build a mixed dipeptide",
+      "tier": "higher",
+      "prompt": "Using the fixed glycine then alanine carbon groups, independently build their open dipeptide. Keep the original order, show the C–N junction and retain the outer NH₂ and COOH.",
+      "answer": "NH₂–CH₂–C(=O)–NH–CH(CH₃)–C(=O)–OH, with one H₂O released.",
+      "rubric": [
+        "Preserve glycine then alanine carbon groups.",
+        "Use the carbonyl C–N joining bond; retain both C=O bonds.",
+        "Remove internal acid OH and one amino H.",
+        "Retain NH₂ and COOH at opposite open ends."
+      ],
+      "explanation": "NH₂–CH₂–C(=O)–NH–CH(CH₃)–C(=O)–OH, with one H₂O released.",
+      "hint": "Inspect both ends and the junction.",
+      "naturalGiven": {
+        "mode": "peptide",
+        "record": "mixed"
+      },
+      "naturalDrawing": {
+        "mode": "peptide",
+        "record": "mixed"
+      },
+      "followUp": "natural-v1-r-peptide"
+    },
+    {
+      "id": "natural-v1-p-gly-three-water",
+      "title": "Higher: count actual waters",
+      "purpose": "Higher: count actual waters",
+      "tier": "higher",
+      "prompt": "Three glycine molecules join into one finite open chain with two links. How many waters are released?",
+      "answer": "2",
+      "unit": "water molecules",
+      "explanation": "There are two actual joining links and one water per link.",
+      "hint": "Count shown junctions.",
+      "followUp": "natural-v1-r-links"
+    },
+    {
+      "id": "natural-v1-p-gly-four-mass",
+      "title": "Higher: count a whole four-glycine chain",
+      "purpose": "Higher: count a whole four-glycine chain",
+      "tier": "higher",
+      "prompt": "Four glycines of Mr 75 join into one finite open chain with three links. Each link releases H₂O of Mr 18. Find whole-chain Mr.",
+      "answer": "246",
+      "unit": "relative formula mass",
+      "explanation": "4 × 75 − 3 × 18 = 246. Both terminal groups remain.",
+      "hint": "Use three actual losses.",
+      "followUp": "natural-v1-r-mass"
+    },
+    {
+      "id": "natural-v1-p-mixed-mass",
+      "title": "Higher: count a whole mixed dipeptide",
+      "purpose": "Higher: count a whole mixed dipeptide",
+      "tier": "higher",
+      "prompt": "Glycine Mr 75 and alanine Mr 89 make one open dipeptide, releasing one H₂O of Mr 18. Find product Mr.",
+      "answer": "146",
+      "unit": "relative formula mass",
+      "explanation": "75 + 89 − 18 = 146.",
+      "hint": "Subtract one whole water.",
+      "followUp": "natural-v1-r-mass"
+    },
+    {
+      "id": "natural-v1-p-mixed-H",
+      "title": "Higher: conserve hydrogen",
+      "purpose": "Higher: conserve hydrogen",
+      "tier": "higher",
+      "prompt": "Glycine C₂H₅NO₂ and alanine C₃H₇NO₂ make one peptide link and release H₂O. How many H atoms remain?",
+      "answer": "10",
+      "unit": "H atoms",
+      "explanation": "5 + 7 − 2 = 10.",
+      "hint": "Water removes two H.",
+      "followUp": "natural-v1-r-water"
+    },
+    {
+      "id": "natural-v1-p-mixed-O",
+      "title": "Higher: conserve oxygen",
+      "purpose": "Higher: conserve oxygen",
+      "tier": "higher",
+      "prompt": "The same glycine/alanine dipeptide starts with four O atoms and releases one H₂O. How many O atoms remain?",
+      "answer": "3",
+      "unit": "O atoms",
+      "explanation": "2 + 2 − 1 = 3. Carbonyl O atoms stay in the chain.",
+      "hint": "Water removes one O.",
+      "followUp": "natural-v1-r-water"
+    },
+    {
+      "id": "natural-v1-p-three-N",
+      "title": "Higher: keep the nitrogen atoms",
+      "purpose": "Higher: keep the nitrogen atoms",
+      "tier": "higher",
+      "prompt": "Three glycine molecules join into one finite open chain. How many N atoms are in the whole chain?",
+      "answer": "3",
+      "unit": "N atoms",
+      "explanation": "Each glycine contributes one N; water removes no N.",
+      "hint": "Do not remove the complete amino group.",
+      "followUp": "natural-v1-r-mass"
+    },
+    {
+      "id": "natural-v1-p-three-carbon",
+      "title": "Higher: preserve every carbon",
+      "purpose": "Higher: preserve every carbon",
+      "tier": "higher",
+      "prompt": "Glycine–alanine–glycine forms one open chain. Given C₂, C₃ and C₂ in the original molecules, how many C atoms remain?",
+      "answer": "7",
+      "unit": "C atoms",
+      "explanation": "2 + 3 + 2 = 7; water loss removes no carbon.",
+      "hint": "Sum original carbons.",
+      "followUp": "natural-v1-r-mass"
+    },
+    {
+      "id": "natural-v1-p-three-mass",
+      "title": "Higher: preserve both terminal groups",
+      "purpose": "Higher: preserve both terminal groups",
+      "tier": "higher",
+      "prompt": "Glycine–alanine–glycine has feed Mr 75 + 89 + 75 and two actual joining links. Each link releases H₂O of Mr 18. Find whole-chain Mr.",
+      "answer": "203",
+      "unit": "relative formula mass",
+      "explanation": "75 + 89 + 75 − 2 × 18 = 203.",
+      "hint": "Subtract the actual two waters.",
+      "followUp": "natural-v1-r-mass"
+    },
+    {
+      "id": "natural-v1-p-endgroups",
+      "title": "Higher: distinguish full chain and repeat shorthand",
+      "purpose": "Higher: distinguish full chain and repeat shorthand",
+      "tier": "higher",
+      "prompt": "Why does a finite open-chain question specify both terminal groups?",
+      "answer": "Its complete atom account includes the ends",
+      "options": [
+        "Its complete atom account includes the ends",
+        "Every end must disappear",
+        "Repeat shorthand always counts every terminal atom"
+      ],
+      "misconceptions": {
+        "Every end must disappear": "The supplied open chain retains terminal NH₂ and COOH.",
+        "Repeat shorthand always counts every terminal atom": "End-omitted repeat notation is a different representation."
+      },
+      "explanation": "Actual finite-chain inventory and conventional end-omitted repeat notation answer different counting questions.",
+      "hint": "Inspect the outer ends.",
+      "followUp": "natural-v1-r-links"
+    },
+    {
+      "id": "natural-v1-p-peptide-three",
+      "title": "Higher: retain a three-unit open chain",
+      "purpose": "Higher: retain a three-unit open chain",
+      "tier": "higher",
+      "prompt": "Independently build the supplied three-glycine open chain, retaining the outer terminal groups. Show two peptide junctions and account for their water.",
+      "answer": "NH₂–CH₂–C(=O)–NH–CH₂–C(=O)–NH–CH₂–C(=O)–OH, releasing two H₂O.",
+      "rubric": [
+        "Retain all three CH₂ groups in order.",
+        "Join each carbonyl C to the following N.",
+        "Retain every C=O; remove internal acid OH and one H from each internal N.",
+        "Keep the outer NH₂ and COOH; release two waters."
+      ],
+      "explanation": "NH₂–CH₂–C(=O)–NH–CH₂–C(=O)–NH–CH₂–C(=O)–OH, releasing two H₂O.",
+      "hint": "Count actual junctions, then inspect the ends.",
+      "naturalGiven": {
+        "mode": "peptide",
+        "record": "three"
+      },
+      "naturalDrawing": {
+        "mode": "peptide",
+        "record": "three"
+      },
+      "followUp": "natural-v1-r-links"
+    },
+    {
+      "id": "natural-v1-p-condensation-explain",
+      "title": "Higher: compare peptide condensation and alkene addition",
+      "purpose": "Higher: compare peptide condensation and alkene addition",
+      "tier": "higher",
+      "prompt": "Explain two differences between the supplied amino-acid condensation and ethene addition polymerisation.",
+      "answer": "Amino acids have amino and acid functional groups and make peptide C–N links while releasing water at each actual junction. Ethene addition uses C=C monomers, makes a single carbon backbone and releases no small molecule.",
+      "rubric": [
+        "Identify NH₂/COOH versus C=C monomer features.",
+        "Describe peptide C–N joining versus a carbon backbone from addition.",
+        "State water release in the supplied condensation and no small-molecule release in ethene addition."
+      ],
+      "explanation": "Amino acids have amino and acid functional groups and make peptide C–N links while releasing water at each actual junction. Ethene addition uses C=C monomers, makes a single carbon backbone and releases no small molecule.",
+      "hint": "Compare both monomer groups and the products.",
+      "followUp": "natural-v1-r-groups"
+    },
+    {
+      "id": "natural-v1-p-amino-mass",
+      "title": "Higher: count the whole amino group",
+      "purpose": "Higher: count the whole amino group",
+      "tier": "higher",
+      "prompt": "Given Ar N 14 and H 1, what is the relative mass of NH₂?",
+      "answer": "16",
+      "unit": "relative mass",
+      "explanation": "14 + 2 × 1 = 16. Both H atoms belong to the original amino group.",
+      "hint": "Read the H subscript.",
+      "followUp": "natural-v1-r-core-ends"
+    },
+    {
+      "id": "natural-v1-p-acid-mass",
+      "title": "Higher: count the whole acid group",
+      "purpose": "Higher: count the whole acid group",
+      "tier": "higher",
+      "prompt": "Given Ar C 12, O 16 and H 1, what is the relative mass of COOH?",
+      "answer": "45",
+      "unit": "relative mass",
+      "explanation": "12 + 2 × 16 + 1 = 45. COOH contains two oxygens.",
+      "hint": "Count the carbonyl O and OH oxygen.",
+      "followUp": "natural-v1-r-core-ends"
+    },
+    {
+      "id": "natural-v1-p-core-ends",
+      "title": "Higher: sum the unchanged groups",
+      "purpose": "Higher: sum the unchanged groups",
+      "tier": "higher",
+      "prompt": "In H₂N–[unknown section]–COOH, NH₂ has relative mass 16 and COOH has relative mass 45. What is their combined contribution?",
+      "answer": "61",
+      "unit": "relative mass",
+      "explanation": "16 + 45 = 61. The unknown middle section is not part of this total.",
+      "hint": "Add the two printed end groups.",
+      "followUp": "natural-v1-r-core-ends",
+      "exposureAliases": [
+        "natural-v1-r-core-ends"
+      ]
+    },
+    {
+      "id": "natural-v1-p-core-75",
+      "title": "Higher: subtract a missing section",
+      "purpose": "Higher: subtract a missing section",
+      "tier": "higher",
+      "prompt": "H₂N–[unknown section]–COOH has Mr 75. The unchanged NH₂ and COOH contribute 61. Find the unknown section’s relative mass.",
+      "answer": "14",
+      "unit": "relative mass",
+      "explanation": "75 − 61 = 14. Do not replace the unknown section with a named molecule.",
+      "hint": "Whole mass minus known groups.",
+      "followUp": "natural-v1-r-core-subtract",
+      "exposureAliases": [
+        "natural-v1-r-core-subtract"
+      ]
+    },
+    {
+      "id": "natural-v1-p-core-103",
+      "title": "Higher: transfer the inverse calculation",
+      "purpose": "Higher: transfer the inverse calculation",
+      "tier": "higher",
+      "prompt": "An unfamiliar H₂N–[unknown section]–COOH monomer has Mr 103. Given Ar H 1, C 12, N 14, O 16, find its unknown section’s relative mass.",
+      "answer": "42",
+      "unit": "relative mass",
+      "explanation": "NH₂ contributes 16; COOH contributes 45. 103 − 61 = 42. This numerical mass alone does not identify a unique structure.",
+      "hint": "Find the known end groups before subtracting.",
+      "followUp": "natural-v1-r-core-subtract"
+    },
+    {
+      "id": "natural-v1-p-visual",
+      "title": "Recognise an unfamiliar polymer diagram",
+      "purpose": "Recognise an unfamiliar polymer diagram",
+      "prompt": "The supplied schematic shows the usual structure of a naturally occurring polymer. Which monomer type contributes units to its two chains?",
+      "answer": "Nucleotides",
+      "options": [
+        "Glucose",
+        "Amino acids",
+        "Nucleotides"
+      ],
+      "misconceptions": {
+        "Glucose": "Glucose is the monomer for starch and cellulose, not this common winding two-strand structure.",
+        "Amino acids": "Amino acids form polypeptides; this diagram represents the common DNA arrangement."
+      },
+      "explanation": "The common two-chain winding structure is DNA. Its monomers are nucleotides.",
+      "hint": "Recognise the structure before naming the monomer.",
+      "naturalHelix": {
+        "positions": 10,
+        "turns": 1.5
+      },
+      "followUp": "natural-v1-r-dna-shape",
+      "exposureAliases": [
+        "natural-v1-c-a-diagram",
+        "natural-v1-c-b-diagram"
+      ]
+    },
+    {
+      "id": "natural-v1-p-amino-repeat",
+      "title": "Higher: choose the complete glycine contribution",
+      "purpose": "Higher: choose the complete glycine contribution",
+      "tier": "higher",
+      "prompt": "Which bracketed expression represents the end-omitted polypeptide contribution from H₂N–CH₂–COOH?",
+      "answer": "[–NH–CH₂–C(=O)–]ₙ",
+      "options": [
+        "[–NH–CH₂–CH₂–]ₙ",
+        "[–NH–CH₂–C(=O)–]ₙ",
+        "[NH₂–CH₂–COOH]ₙ",
+        "[–NH–CH₂–O–]ₙ"
+      ],
+      "misconceptions": {
+        "[NH₂–CH₂–COOH]ₙ": "This repeats unjoined original monomers with terminal groups.",
+        "[–NH–CH₂–O–]ₙ": "The carbonyl carbon has been lost.",
+        "[–NH–CH₂–CH₂–]ₙ": "The carbonyl oxygen has been lost."
+      },
+      "explanation": "One amino H and acid OH are removed. NH, CH₂ and C=O remain; both boundary bonds continue to neighbouring contributions, which join C to N.",
+      "hint": "Trace the original atoms and the joining bond.",
+      "model": {
+        "kind": "natural-polymers",
+        "mode": "peptideUnit",
+        "record": "initial",
+        "instruction": "Higher: choose the complete glycine contribution"
+      },
+      "followUp": "natural-v1-r-amino-repeat",
+      "exposureAliases": [
+        "natural-v1-r-amino-repeat",
+        "natural-v1-g-amino-repeat",
+        "natural-v1-p-amino-repeat-draw",
+        "natural-v1-p-amino-repeat-ends"
+      ]
+    },
+    {
+      "id": "natural-v1-p-amino-repeat-draw",
+      "title": "Higher: draw the supplied beta-alanine repeat",
+      "purpose": "Higher: draw the supplied beta-alanine repeat",
+      "tier": "higher",
+      "prompt": "Draw one bracketed repeat contribution from H₂N–CH₂–CH₂–COOH. Show C=O, bonds continuing through both brackets and n. Identify the joining atoms. This asks for an end-omitted repeat, not a finite open chain.",
+      "answer": "[–NH–CH₂–CH₂–C(=O)–]ₙ; neighbouring contributions join through carbonyl C to N.",
+      "rubric": [
+        "Keep both CH₂ groups in the supplied order.",
+        "Keep one H on N and the original carbonyl C=O; omit acid OH inside the repeat.",
+        "Show bonds crossing both brackets and n outside.",
+        "Identify the continuing link as C–N."
+      ],
+      "explanation": "[–NH–CH₂–CH₂–C(=O)–]ₙ; neighbouring contributions join through carbonyl C to N.",
+      "hint": "Copy the supplied carbon section; remove only acid OH and one amino H.",
+      "naturalGiven": {
+        "mode": "peptideUnit",
+        "record": "beta"
+      },
+      "naturalDrawing": {
+        "mode": "peptideUnit",
+        "record": "beta"
+      },
+      "followUp": "natural-v1-r-amino-repeat",
+      "exposureAliases": [
+        "natural-v1-r-amino-repeat",
+        "natural-v1-g-amino-repeat",
+        "natural-v1-p-amino-repeat",
+        "natural-v1-p-amino-repeat-ends"
+      ]
+    },
+    {
+      "id": "natural-v1-p-amino-repeat-ends",
+      "title": "Higher: use the question's chain convention",
+      "purpose": "Higher: use the question's chain convention",
+      "tier": "higher",
+      "prompt": "A question shows four original glycine contributions in one finite open chain, including its outer NH₂ and COOH groups. Does the formal end-omitted n-water repeat equation mean this chain released four waters?",
+      "answer": "No: its three actual junctions release three waters",
+      "options": [
+        "Yes: n always counts released waters in every diagram",
+        "No: no water is released",
+        "No: its three actual junctions release three waters"
+      ],
+      "misconceptions": {
+        "Yes: n always counts released waters in every diagram": "The formal end-omitted notation does not replace counting the shown finite-chain junctions.",
+        "No: no water is released": "Each actual amino-acid joining junction releases water."
+      },
+      "explanation": "A finite open chain of four original monomers has three junctions and retains both ends. The formal equation with n H₂O accompanies end-omitted repeat notation. Read the stated convention before calculating.",
+      "hint": "Count actual junctions in the finite structure.",
+      "followUp": "natural-v1-r-amino-repeat",
+      "exposureAliases": [
+        "natural-v1-r-amino-repeat",
+        "natural-v1-g-amino-repeat",
+        "natural-v1-p-amino-repeat",
+        "natural-v1-p-amino-repeat-draw"
+      ]
+    },
+    {
+      "id": "natural-v1-c-a-protein",
+      "title": "Identify the monomer type",
+      "purpose": "Identify the monomer type",
+      "prompt": "A naturally occurring protein is a polymer based on which monomer type?",
+      "answer": "Amino acids",
+      "options": [
+        "Glucose",
+        "Amino acids",
+        "Nucleotides"
+      ],
+      "misconceptions": {
+        "Nucleotides": "Those are DNA monomers.",
+        "Glucose": "That is a carbohydrate building block."
+      },
+      "explanation": "Proteins are polymers based on amino acids.",
+      "hint": "Use the named polymer.",
+      "exposureAliases": [
+        "natural-v1-r-protein",
+        "natural-v1-p-protein",
+        "natural-v1-v-a-protein",
+        "natural-polymers-0"
+      ]
+    },
+    {
+      "id": "natural-v1-c-a-glucose",
+      "title": "Identify a shared building block",
+      "purpose": "Identify a shared building block",
+      "prompt": "Which pair of naturally occurring polymers is based on glucose?",
+      "answer": "Starch and cellulose",
+      "options": [
+        "DNA and cellulose",
+        "Starch and cellulose",
+        "DNA and proteins"
+      ],
+      "misconceptions": {
+        "DNA and proteins": "Their monomers are nucleotides and amino acids.",
+        "DNA and cellulose": "DNA is not glucose-based."
+      },
+      "explanation": "Starch and cellulose are glucose-based polymers.",
+      "hint": "Consider each monomer type.",
+      "exposureAliases": [
+        "natural-v1-r-glucose",
+        "natural-v1-g-glucose",
+        "natural-v1-p-starch",
+        "natural-v1-v-b-glucose"
+      ]
+    },
+    {
+      "id": "natural-v1-c-a-types",
+      "title": "Distinguish possible nucleotide types",
+      "purpose": "Distinguish possible nucleotide types",
+      "prompt": "An unfamiliar short DNA excerpt only shows three type labels. How many possible nucleotide types are available in DNA?",
+      "answer": "Four",
+      "options": [
+        "Two",
+        "Four",
+        "Three"
+      ],
+      "misconceptions": {
+        "Three": "The excerpt need not display every type.",
+        "Two": "That is the usual strand count."
+      },
+      "explanation": "DNA uses four possible nucleotide types.",
+      "hint": "Separate an excerpt from the general rule.",
+      "exposureAliases": [
+        "natural-v1-r-dna-types",
+        "natural-v1-g-types",
+        "natural-v1-p-dna-types",
+        "natural-v1-c-b-types"
+      ]
+    },
+    {
+      "id": "natural-v1-c-a-count",
+      "title": "Count both complete strands",
+      "purpose": "Count both complete strands",
+      "prompt": "A supplied DNA excerpt has five positions on each of two strands. How many nucleotide units are shown in total?",
+      "answer": "10",
+      "unit": "nucleotides",
+      "explanation": "5 × 2 = 10 complete strand units.",
+      "hint": "Count both strands."
+    },
+    {
+      "id": "natural-v1-c-a-shape",
+      "title": "Name a structural arrangement",
+      "purpose": "Name a structural arrangement",
+      "prompt": "Name the common two-chain arrangement shown in the supplied schematic.",
+      "answer": "Double helix",
+      "options": [
+        "Single helix",
+        "Double helix",
+        "DNA"
+      ],
+      "misconceptions": {
+        "DNA": "That names the molecule instead of the shape.",
+        "Single helix": "The supplied description has two winding strands."
+      },
+      "explanation": "Most DNA has two polymer chains in a double helix.",
+      "hint": "Name the shape.",
+      "naturalHelix": {
+        "positions": 14,
+        "turns": 2.5
+      },
+      "exposureAliases": [
+        "natural-v1-r-dna-shape",
+        "natural-v1-p-dna-shape"
+      ]
+    },
+    {
+      "id": "natural-v1-c-a-diagram",
+      "title": "Recognise the supplied polymer structure",
+      "purpose": "Recognise the supplied polymer structure",
+      "prompt": "The supplied schematic shows the usual structure of a naturally occurring polymer. Which monomer type makes its two chains?",
+      "answer": "Nucleotides",
+      "options": [
+        "Nucleotides",
+        "Glucose",
+        "Amino acids"
+      ],
+      "misconceptions": {
+        "Glucose": "Glucose-based polymers do not have this common two-strand winding arrangement.",
+        "Amino acids": "Those contribute to polypeptides; this supplied diagram represents the common DNA arrangement."
+      },
+      "explanation": "The two-chain winding diagram represents the common DNA structure. Its monomer type is nucleotides.",
+      "hint": "Read the supplied structure.",
+      "naturalHelix": {
+        "positions": 12,
+        "turns": 2
+      },
+      "exposureAliases": [
+        "natural-v1-p-visual",
+        "natural-v1-c-b-diagram"
+      ]
+    },
+    {
+      "id": "natural-v1-c-a-information",
+      "title": "Explain its importance",
+      "purpose": "Explain its importance",
+      "prompt": "Which statement describes a role of DNA?",
+      "answer": "It encodes genetic instructions",
+      "options": [
+        "It encodes genetic instructions",
+        "It is made only from glucose",
+        "Every short excerpt must show all four types"
+      ],
+      "misconceptions": {
+        "It is made only from glucose": "DNA is based on nucleotides.",
+        "Every short excerpt must show all four types": "A short excerpt need not contain every type."
+      },
+      "explanation": "DNA encodes genetic instructions for development and functioning.",
+      "hint": "Use the role of the molecule.",
+      "exposureAliases": [
+        "natural-v1-r-information",
+        "natural-v1-p-dna-information",
+        "natural-v1-c-b-information"
+      ]
+    },
+    {
+      "id": "natural-v1-c-a-draw",
+      "title": "Select one monomer independently",
+      "purpose": "Select one monomer independently",
+      "prompt": "Using the supplied six-position excerpt and its provided visual key, mark one complete nucleotide at position 1. Show a two-strand DNA proposal and identify the overall shape.",
+      "answer": "Mark either one whole nucleotide on either strand at position 1, with two strands and double-helix identification.",
+      "rubric": [
+        "Choose one complete nucleotide, not a rung or a base alone.",
+        "Retain two polymer strands.",
+        "Identify double helix and nucleotide monomers.",
+        "Treat the provided pairing key as supplied information."
+      ],
+      "explanation": "Mark either one whole nucleotide on either strand at position 1, with two strands and double-helix identification.",
+      "hint": "Build your own proposal from the supplied structure; check complete units and every shown link.",
+      "naturalGiven": {
+        "mode": "dna",
+        "record": "six"
+      },
+      "naturalDrawing": {
+        "mode": "dna",
+        "record": "six"
+      },
+      "exposureAliases": [
+        "natural-v1-g-unit",
+        "natural-v1-p-dna-draw",
+        "natural-v1-v-b-draw"
+      ]
+    },
+    {
+      "id": "natural-v1-c-b-dna",
+      "title": "Name the monomer rather than a component",
+      "purpose": "Name the monomer rather than a component",
+      "prompt": "What is the general name of one complete DNA monomer?",
+      "answer": "Nucleotide",
+      "options": [
+        "Nucleotide",
+        "Base alone",
+        "Amino acid"
+      ],
+      "misconceptions": {
+        "Base alone": "A base is only part of a nucleotide.",
+        "Amino acid": "That is a protein monomer."
+      },
+      "explanation": "DNA is a polymer based on nucleotides.",
+      "hint": "Name the whole unit.",
+      "exposureAliases": [
+        "natural-v1-r-dna-unit",
+        "natural-v1-g-unit",
+        "natural-v1-p-dna-unit",
+        "natural-v1-v-b-dna",
+        "natural-polymers-1"
+      ]
+    },
+    {
+      "id": "natural-v1-c-b-cellulose",
+      "title": "Identify a named natural polymer",
+      "purpose": "Identify a named natural polymer",
+      "prompt": "Cellulose is based on which original monomer?",
+      "answer": "Glucose",
+      "options": [
+        "Ethene",
+        "Nucleotides",
+        "Glucose"
+      ],
+      "misconceptions": {
+        "Ethene": "Ethene makes poly(ethene).",
+        "Nucleotides": "Those make DNA."
+      },
+      "explanation": "Cellulose is glucose-based.",
+      "hint": "Use the named polymer.",
+      "exposureAliases": [
+        "natural-v1-r-glucose",
+        "natural-v1-g-glucose",
+        "natural-v1-p-cellulose",
+        "natural-polymers-2"
+      ]
+    },
+    {
+      "id": "natural-v1-c-b-count",
+      "title": "Count a different excerpt",
+      "purpose": "Count a different excerpt",
+      "prompt": "A supplied DNA excerpt has seven positions on each of two strands. How many nucleotide units are present?",
+      "answer": "14",
+      "unit": "nucleotides",
+      "explanation": "7 × 2 = 14, not seven whole-rung units.",
+      "hint": "Count both sides."
+    },
+    {
+      "id": "natural-v1-c-b-sequence",
+      "title": "Distinguish order from inventory",
+      "purpose": "Distinguish order from inventory",
+      "prompt": "Two excerpts contain the same two glycine contributions and one alanine contribution, but in different order. What is unchanged?",
+      "answer": "The complete atom composition",
+      "options": [
+        "The sequence",
+        "An established exact biological function",
+        "The complete atom composition"
+      ],
+      "misconceptions": {
+        "The sequence": "The supplied order differs.",
+        "An established exact biological function": "These excerpts do not establish an exact function."
+      },
+      "explanation": "The same contributions preserve total composition while sequence differs.",
+      "hint": "Count the contributions.",
+      "exposureAliases": [
+        "natural-v1-r-sequence",
+        "natural-v1-g-order",
+        "natural-v1-p-order"
+      ]
+    },
+    {
+      "id": "natural-v1-c-b-information",
+      "title": "State the role of DNA",
+      "purpose": "State the role of DNA",
+      "prompt": "Which statement explains the importance of DNA?",
+      "answer": "It encodes genetic instructions",
+      "options": [
+        "It contains only glucose units",
+        "Every short excerpt must contain all four types",
+        "It encodes genetic instructions"
+      ],
+      "misconceptions": {
+        "It contains only glucose units": "DNA has nucleotide monomers.",
+        "Every short excerpt must contain all four types": "A short excerpt need not show every type."
+      },
+      "explanation": "DNA encodes genetic instructions for development and functioning.",
+      "hint": "Use its information-carrying role.",
+      "exposureAliases": [
+        "natural-v1-r-information",
+        "natural-v1-p-dna-information",
+        "natural-v1-c-a-information"
+      ]
+    },
+    {
+      "id": "natural-v1-c-b-diagram",
+      "title": "Recognise the supplied polymer structure",
+      "purpose": "Recognise the supplied polymer structure",
+      "prompt": "The supplied schematic shows the usual structure of a naturally occurring polymer. Which monomer type makes its two chains?",
+      "answer": "Nucleotides",
+      "options": [
+        "Glucose",
+        "Amino acids",
+        "Nucleotides"
+      ],
+      "misconceptions": {
+        "Glucose": "Glucose-based polymers do not have this common two-strand winding arrangement.",
+        "Amino acids": "Those contribute to polypeptides; this supplied diagram represents the common DNA arrangement."
+      },
+      "explanation": "The two-chain winding diagram represents the common DNA structure. Its monomer type is nucleotides.",
+      "hint": "Read the supplied structure.",
+      "naturalHelix": {
+        "positions": 15,
+        "turns": 3
+      },
+      "exposureAliases": [
+        "natural-v1-p-visual",
+        "natural-v1-c-a-diagram"
+      ]
+    },
+    {
+      "id": "natural-v1-c-b-types",
+      "title": "Separate types from excerpt length",
+      "purpose": "Separate types from excerpt length",
+      "prompt": "An unfamiliar DNA excerpt has twelve positions on each strand. How many possible nucleotide types can DNA use generally?",
+      "answer": "Four",
+      "options": [
+        "Four",
+        "Twelve",
+        "Two"
+      ],
+      "misconceptions": {
+        "Twelve": "Positions are not the number of possible types.",
+        "Two": "Two is the common strand count."
+      },
+      "explanation": "DNA uses four possible nucleotide types, independent of excerpt length.",
+      "hint": "Distinguish types from copies.",
+      "exposureAliases": [
+        "natural-v1-r-dna-types",
+        "natural-v1-g-types",
+        "natural-v1-p-dna-types",
+        "natural-v1-c-a-types"
+      ]
+    },
+    {
+      "id": "natural-v1-c-b-draw",
+      "title": "Select a complete glucose-derived contribution",
+      "purpose": "Select a complete glucose-derived contribution",
+      "prompt": "In the supplied five-ring crop, independently select one complete repeating contribution.",
+      "answer": "A complete ring plus one linking O, for example boundaries 4 to 6 in this crop.",
+      "rubric": [
+        "Include one whole glucose-derived ring.",
+        "Include one adjoining linking O.",
+        "Exclude the other whole rings; do not select O alone.",
+        "Name glucose as the original monomer rather than calling the joined contribution a complete free glucose molecule."
+      ],
+      "explanation": "A complete ring plus one linking O, for example boundaries 4 to 6 in this crop.",
+      "hint": "Build your own proposal from the supplied structure; check complete units and every shown link.",
+      "naturalGiven": {
+        "mode": "repeat",
+        "record": "middle"
+      },
+      "naturalDrawing": {
+        "mode": "repeat",
+        "record": "middle"
+      },
+      "exposureAliases": [
+        "natural-v1-r-repeat",
+        "natural-v1-g-repeat",
+        "natural-v1-p-ring-draw",
+        "natural-v1-p-ring-explain",
+        "natural-v1-v-a-draw"
+      ]
+    },
+    {
+      "id": "natural-v1-v-a-count",
+      "title": "Retrieve a whole-excerpt count",
+      "purpose": "Retrieve a whole-excerpt count",
+      "prompt": "A later two-strand DNA excerpt has three positions on each strand. How many nucleotide units are shown?",
+      "answer": "6",
+      "unit": "nucleotides",
+      "explanation": "3 × 2 = 6 complete strand units.",
+      "hint": "Count both strands.",
+      "exposureAliases": [
+        "natural-v1-w-units"
+      ]
+    },
+    {
+      "id": "natural-v1-v-a-protein",
+      "title": "Retrieve the protein building blocks",
+      "purpose": "Retrieve the protein building blocks",
+      "prompt": "Which monomer type contributes units to protein chains?",
+      "answer": "Amino acids",
+      "options": [
+        "Amino acids",
+        "Glucose",
+        "Nucleotides"
+      ],
+      "misconceptions": {
+        "Glucose": "Glucose is used in starch and cellulose.",
+        "Nucleotides": "Nucleotides are used in DNA."
+      },
+      "explanation": "Proteins are polymers based on amino acids.",
+      "hint": "Use the named polymer.",
+      "exposureAliases": [
+        "natural-v1-r-protein",
+        "natural-v1-p-protein",
+        "natural-v1-c-a-protein",
+        "natural-polymers-0"
+      ]
+    },
+    {
+      "id": "natural-v1-v-a-draw",
+      "title": "Retrieve a whole contribution",
+      "purpose": "Retrieve a whole contribution",
+      "prompt": "Independently mark one complete glucose-derived contribution in the supplied two-ring crop, including one bridge oxygen.",
+      "answer": "One complete ring plus one linking O; boundaries 0 to 2 or 1 to 3 are examples.",
+      "rubric": [
+        "Include one complete ring and one bridge O.",
+        "Do not select a whole two-ring crop or a lone O.",
+        "Name glucose as the original monomer."
+      ],
+      "explanation": "One complete ring plus one linking O; boundaries 0 to 2 or 1 to 3 are examples.",
+      "hint": "Build your own proposal from the supplied structure; check complete units and every shown link.",
+      "naturalGiven": {
+        "mode": "repeat",
+        "record": "short"
+      },
+      "naturalDrawing": {
+        "mode": "repeat",
+        "record": "short"
+      },
+      "exposureAliases": [
+        "natural-v1-r-repeat",
+        "natural-v1-g-repeat",
+        "natural-v1-p-ring-draw",
+        "natural-v1-p-ring-explain",
+        "natural-v1-c-b-draw"
+      ]
+    },
+    {
+      "id": "natural-v1-v-b-dna",
+      "title": "Retrieve the monomer name",
+      "purpose": "Retrieve the monomer name",
+      "prompt": "What is the general name of one complete DNA strand unit?",
+      "answer": "Nucleotide",
+      "options": [
+        "Whole rung",
+        "Glucose",
+        "Nucleotide"
+      ],
+      "misconceptions": {
+        "Whole rung": "A rung contains two units.",
+        "Glucose": "Glucose is a carbohydrate monomer."
+      },
+      "explanation": "One nucleotide belongs to one strand.",
+      "hint": "Follow one strand.",
+      "exposureAliases": [
+        "natural-v1-r-dna-unit",
+        "natural-v1-g-unit",
+        "natural-v1-p-dna-unit",
+        "natural-v1-c-b-dna",
+        "natural-polymers-1"
+      ]
+    },
+    {
+      "id": "natural-v1-v-b-glucose",
+      "title": "Retrieve the common building block",
+      "purpose": "Retrieve the common building block",
+      "prompt": "Which original monomer is shared by starch and cellulose?",
+      "answer": "Glucose",
+      "options": [
+        "Amino acid",
+        "Nucleotide",
+        "Glucose"
+      ],
+      "misconceptions": {
+        "Amino acid": "Those contribute to proteins.",
+        "Nucleotide": "Those contribute to DNA."
+      },
+      "explanation": "Both are glucose-based polymers.",
+      "hint": "Recall the carbohydrate building block.",
+      "exposureAliases": [
+        "natural-v1-r-glucose",
+        "natural-v1-g-glucose",
+        "natural-v1-p-starch",
+        "natural-v1-c-a-glucose",
+        "natural-v1-p-starch-cellulose"
+      ]
+    },
+    {
+      "id": "natural-v1-v-b-draw",
+      "title": "Retrieve one nucleotide selection",
+      "purpose": "Retrieve one nucleotide selection",
+      "prompt": "In the supplied CGCG two-strand excerpt, independently highlight one complete nucleotide at position 1. Identify its monomer type and the common DNA arrangement.",
+      "answer": "One complete nucleotide on either strand at position 1; two strands and double helix.",
+      "rubric": [
+        "Select one whole nucleotide rather than a rung or base alone.",
+        "Identify nucleotides and two strands.",
+        "Identify the common double-helix arrangement; supplied labels need not show all four possible types."
+      ],
+      "explanation": "One complete nucleotide on either strand at position 1; two strands and double helix.",
+      "hint": "Build your own proposal from the supplied structure; check complete units and every shown link.",
+      "naturalGiven": {
+        "mode": "dna",
+        "record": "cg"
+      },
+      "naturalDrawing": {
+        "mode": "dna",
+        "record": "cg"
+      },
+      "exposureAliases": [
+        "natural-v1-g-unit",
+        "natural-v1-p-dna-draw",
+        "natural-v1-c-a-draw"
+      ]
+    }
+  ]
+}

@@ -28,8 +28,8 @@ const all = [
   ...j.reviewForms.flat(),
 ];
 test("the individually authored lesson has complete recovery routes and common-tier reserved forms", () => {
-  expect(all).toHaveLength(102);
-  expect(new Set(all.map((q) => q.id)).size).toBe(102);
+  expect(all).toHaveLength(112);
+  expect(new Set(all.map((q) => q.id)).size).toBe(112);
   const grouped = j.practiceGroups!.flatMap((g) => g.taskIds);
   expect(grouped).toHaveLength(45);
   expect(new Set(grouped).size).toBe(45);
@@ -38,17 +38,20 @@ test("the individually authored lesson has complete recovery routes and common-t
     expect(naturalRecovery[q.id][0]).toBe(q.followUp);
     expect(j.refresher.some((r) => r.id === q.followUp)).toBe(true);
   }
-  for (const form of [...j.checkForms, ...j.reviewForms])
+  for (const form of [
+    ...j.checkForms.slice(0, 2),
+    ...j.reviewForms.slice(0, 2),
+  ])
     for (const q of form) {
       expect(q.model).toBeUndefined();
       expect(q.tier).not.toBe("higher");
     }
-  expect(j.checkForms.map((f) => f.filter((q) => !q.rubric).length)).toEqual([
-    7, 7,
-  ]);
-  expect(j.reviewForms.map((f) => f.filter((q) => !q.rubric).length)).toEqual([
-    2, 2,
-  ]);
+  expect(
+    j.checkForms.slice(0, 2).map((f) => f.filter((q) => !q.rubric).length),
+  ).toEqual([7, 7]);
+  expect(
+    j.reviewForms.slice(0, 2).map((f) => f.filter((q) => !q.rubric).length),
+  ).toEqual([2, 2]);
   const lesson = lessons.find((l) => l.slug === "natural-polymers")!;
   expect(lesson.tier).toBe("foundation");
   expect(lesson.course).toBe("separate");

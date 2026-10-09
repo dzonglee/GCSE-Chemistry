@@ -25,6 +25,7 @@ import { QuestionInput } from "./QuestionInput";
 import { TaskWorkbench } from "./TaskWorkbench";
 import { WorkbenchInputDraft } from "./WorkbenchInputDraft";
 import { AssessmentSession } from "./AssessmentSession";
+import { naturalForTier } from "@/content/journeys/natural-higher-assessments";
 import { acidMetalForTier } from "@/content/journeys/acid-metal-writing";
 import { statesForTier } from "@/content/journeys/states-writing";
 import { haberForTier } from "@/content/journeys/haber-and-fertilisers";
@@ -38,6 +39,7 @@ export function DetailedLesson({
   const { data, ready } = useProgress();
   const mixedHaber = lesson.slug === "haber-and-fertilisers";
   const mixedStates = lesson.slug === "states-of-matter";
+  const mixedNatural = lesson.slug === "natural-polymers";
   const mixedAcid = lesson.slug === "acids-and-neutralisation";
   const filteredLearning = mixedHaber || mixedAcid;
   const journey = mixedHaber
@@ -46,7 +48,9 @@ export function DetailedLesson({
       ? statesForTier(fullJourney, data.preferences.tier)
       : mixedAcid
         ? acidMetalForTier(fullJourney, data.preferences.tier)
-        : fullJourney;
+        : mixedNatural
+          ? naturalForTier(fullJourney, data.preferences.tier)
+          : fullJourney;
   const work = data.work[lesson.slug] ?? emptyWork();
   const section = work.section;
   const stage: LearningStage =
@@ -252,6 +256,7 @@ export function DetailedLesson({
   const compactIonReview = [
     "ion-tests",
     "aqueous-electrolysis-products",
+    "natural-polymers",
   ].includes(lesson.slug);
   const compactReview =
     (compactIonReview ||
@@ -402,6 +407,7 @@ export function DetailedLesson({
           "electrolysis",
           "ion-tests",
           "aqueous-electrolysis-products",
+          "natural-polymers",
         ].includes(lesson.slug) ||
           (section === "explore" && stage === "guided")) && (
           <button className="text-button" onClick={() => choose("warmup")}>
@@ -476,6 +482,7 @@ export function DetailedLesson({
             <AssessmentSession
               id={lesson.slug}
               navigationAfterResponse={
+                mixedNatural ||
                 lesson.slug === "aqueous-electrolysis-products" ||
                 lesson.slug === "ion-tests" ||
                 compactEquationForm ||
@@ -532,23 +539,28 @@ export function DetailedLesson({
                     : journey.reviewForms
               }
               savedForms={
-                (mixedHaber || mixedStates || mixedAcid) && !legacyRun
+                (mixedHaber || mixedStates || mixedAcid || mixedNatural) &&
+                !legacyRun
                   ? [
                       ...(section === "check"
                         ? fullJourney.checkForms
                         : fullJourney.reviewForms),
                       ...(section === "check"
-                        ? (mixedStates
-                            ? statesForTier(fullJourney, "foundation")
-                            : mixedAcid
-                              ? acidMetalForTier(fullJourney, "foundation")
-                              : haberForTier("foundation")
+                        ? (mixedNatural
+                            ? naturalForTier(fullJourney, "foundation")
+                            : mixedStates
+                              ? statesForTier(fullJourney, "foundation")
+                              : mixedAcid
+                                ? acidMetalForTier(fullJourney, "foundation")
+                                : haberForTier("foundation")
                           ).checkForms
-                        : (mixedStates
-                            ? statesForTier(fullJourney, "foundation")
-                            : mixedAcid
-                              ? acidMetalForTier(fullJourney, "foundation")
-                              : haberForTier("foundation")
+                        : (mixedNatural
+                            ? naturalForTier(fullJourney, "foundation")
+                            : mixedStates
+                              ? statesForTier(fullJourney, "foundation")
+                              : mixedAcid
+                                ? acidMetalForTier(fullJourney, "foundation")
+                                : haberForTier("foundation")
                           ).reviewForms),
                     ]
                   : undefined
