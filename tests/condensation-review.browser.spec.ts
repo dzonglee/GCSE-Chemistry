@@ -164,6 +164,21 @@ async function readWork(page: Page) {
     STORAGE_KEY,
   );
 }
+async function selectedPartVisible(page: Page, regionName: string) {
+  const region = page.getByRole("region", { name: regionName, exact: true });
+  await expect(region.locator("[data-condensation-selected]")).toHaveCount(1);
+  await expect
+    .poll(() =>
+      region.evaluate((el) => {
+        const part = el.querySelector("[data-condensation-selected]")!;
+        const p = part.getBoundingClientRect(),
+          r = el.getBoundingClientRect();
+        return p.left >= r.left + 1 && p.right <= r.right - 1;
+      }),
+    )
+    .toBe(true);
+  return region;
+}
 for (const width of [320, 390, 1280]) {
   test(`fonts-ready ${width}: original and new guided/practice construction controls, readable SVGs and axe`, async ({
     page,
@@ -634,3 +649,177 @@ test("functional-group changes show the edited monomer and reveal its end beside
   await expect.poll(() => region.evaluate((n) => n.scrollLeft)).toBe(0);
   expect((await readWork(page)).drafts[added.guided[0].id]).toBe(before);
 });
+
+for (const width of [320, 390, 1280]) {
+  test(`fonts-ready ${width}: edited chemical parts stay visible through wrong work, keyboard movement, repair and reload`, async ({
+    page,
+  }, info) => {
+    test.setTimeout(180000);
+    await page.setViewportSize({ width, height: 664 });
+    await tier(page, "higher");
+    await page.goto(route);
+    await tap(page, "Learn");
+    await tap(page, "Task 8");
+    const name = `${info.project.name}-${width}-selection`;
+    await shot(page, name + "-groups-blank");
+    await page.locator('[id$="diolLeftO"]').selectOption("1");
+    await page.locator('[id$="diolLeftH"]').selectOption("1");
+    await selectedPartVisible(
+      page,
+      "Your diol structure: scroll to inspect both ends",
+    );
+    await shot(page, name + "-groups-partial");
+    await tap(page, "Edit diacid right");
+    await page.locator('[id$="acidRightO"]').selectOption("1");
+    await page.locator('[id$="acidRightH"]').selectOption("1");
+    await page.locator('[id$="acidRightCarbonyl"]').selectOption("1");
+    const acid = await selectedPartVisible(
+      page,
+      "Your diacid structure: scroll to inspect both ends",
+    );
+    const wrongGroup = (await readWork(page)).drafts[added.guided[0].id];
+    expect(JSON.parse(wrongGroup).acidRightCarbonyl).toBe("1");
+    // A selected end stays visible when its container changes width, without
+    // changing the student's proposal or making the reference available.
+    for (const resized of [1280, 320, 390, width]) {
+      await page.setViewportSize({ width: resized, height: 664 });
+      await selectedPartVisible(
+        page,
+        "Your diacid structure: scroll to inspect both ends",
+      );
+      expect((await readWork(page)).drafts[added.guided[0].id]).toBe(
+        wrongGroup,
+      );
+      await expect(page.locator(".polymerisation-review")).toHaveCount(0);
+    }
+    await shot(page, name + "-groups-wrong");
+    await tap(page, "Save and review structure");
+    await expect(page.locator(".polymerisation-review")).toBeVisible();
+    await expect(
+      page.locator(".polymerisation-review [data-condensation-selected]"),
+    ).toHaveCount(0);
+    await layout(page, "wrong functional groups and explicit reference");
+    await shot(page, name + "-groups-feedback");
+    expect(
+      (await readWork(page)).attempts[added.guided[0].id].at(-1),
+    ).toMatchObject({ answer: wrongGroup, correct: false });
+    // Manual inspection remains available; the next actual edit follows the end again.
+    if (width < 500) {
+      await acid.focus();
+      const oldLeft = await acid.evaluate((el) => el.scrollLeft);
+      await page.keyboard.press("ArrowLeft");
+      await expect
+        .poll(() => acid.evaluate((el) => el.scrollLeft))
+        .toBeLessThan(oldLeft);
+    }
+    await page.locator('[id$="acidRightCarbonyl"]').selectOption("2");
+    await selectedPartVisible(
+      page,
+      "Your diacid structure: scroll to inspect both ends",
+    );
+    await construct(page, added.guided[0]);
+    const repairedGroup = (await readWork(page)).drafts[added.guided[0].id];
+    await tap(page, "Save and review structure");
+    await page.reload();
+    const groups = await readWork(page);
+    expect(groups.drafts[added.guided[0].id]).toBe(repairedGroup);
+    expect(groups.attempts[added.guided[0].id].at(-2).answer).toBe(wrongGroup);
+    expect(groups.attempts[added.guided[0].id].at(-1)).toMatchObject({
+      answer: repairedGroup,
+      correct: false,
+    });
+    await shot(page, name + "-groups-repaired-reload");
+    await practice(page, added.practice[1].id);
+    await shot(page, name + "-repeat-blank");
+    for (const atom of ["O", "CH₂", "CH₂"]) await tap(page, "Add " + atom);
+    const repeatName = "Your repeat construction: scroll to inspect all atoms";
+    await selectedPartVisible(page, repeatName);
+    await shot(page, name + "-repeat-partial");
+    for (const atom of ["CH₂", "CH₂", "O", "C", "CH₂", "C"])
+      await tap(page, "Add " + atom);
+    await page
+      .getByLabel("Separate O attached to this C", { exact: true })
+      .selectOption("1");
+    await selectedPartVisible(page, repeatName);
+    const wrongRepeat = (await readWork(page)).drafts[added.practice[1].id];
+    await shot(page, name + "-repeat-wrong");
+    await tap(page, "Save and review structure");
+    await layout(page, "wrong repeat and explicit reference");
+    await shot(page, name + "-repeat-feedback");
+    await page.reload();
+    expect((await readWork(page)).drafts[added.practice[1].id]).toBe(
+      wrongRepeat,
+    );
+    await page
+      .getByLabel("Choose a backbone position to edit", { exact: true })
+      .selectOption("6");
+    await selectedPartVisible(page, repeatName);
+    // Changing a selection never changes the raw construction.
+    expect((await readWork(page)).drafts[added.practice[1].id]).toBe(
+      wrongRepeat,
+    );
+    await page
+      .getByLabel("Separate O attached to this C", { exact: true })
+      .selectOption("2");
+    const move = page.getByRole("button", {
+      name: "Move selected atom left",
+      exact: true,
+    });
+    await move.focus();
+    await page.keyboard.press("Enter");
+    await selectedPartVisible(page, repeatName);
+    expect(
+      JSON.parse(
+        JSON.parse((await readWork(page)).drafts[added.practice[1].id]).chain,
+      )[5],
+    ).toMatchObject({ atom: "C", oxygen: "2" });
+    await tap(page, "Move selected atom right");
+    await selectedPartVisible(page, repeatName);
+    await page
+      .getByLabel("Choose a backbone position to edit", { exact: true })
+      .selectOption("8");
+    await tap(page, "Remove selected atom");
+    await selectedPartVisible(page, repeatName);
+    await tap(page, "Add C");
+    await page
+      .getByLabel("Separate O attached to this C", { exact: true })
+      .selectOption("2");
+    await selectedPartVisible(page, repeatName);
+    const root = page.locator('[data-condensation-construction="sequence"]');
+    for (const key of ["left", "right", "brackets"])
+      await root.locator(`[id$="${key}"]`).selectOption("1");
+    await root.locator('[id$="countMark"]').selectOption("n");
+    const repairedRepeat = (await readWork(page)).drafts[added.practice[1].id];
+    const path = JSON.parse(JSON.parse(repairedRepeat).chain);
+    expect(path.map((a: { atom: string }) => a.atom)).toEqual([
+      "O",
+      "CH2",
+      "CH2",
+      "CH2",
+      "CH2",
+      "O",
+      "C",
+      "CH2",
+      "C",
+    ]);
+    expect(
+      path
+        .filter((a: { atom: string }) => a.atom === "C")
+        .map((a: { oxygen: string }) => a.oxygen),
+    ).toEqual(["2", "2"]);
+    await tap(page, "Save and review structure");
+    await page.reload();
+    const repeats = await readWork(page);
+    expect(repeats.drafts[added.practice[1].id]).toBe(repairedRepeat);
+    expect(repeats.attempts[added.practice[1].id].at(-2).answer).toBe(
+      wrongRepeat,
+    );
+    expect(repeats.attempts[added.practice[1].id].at(-1)).toMatchObject({
+      answer: repairedRepeat,
+      correct: false,
+    });
+    await selectedPartVisible(page, repeatName);
+    await layout(page, "repaired repeat after reload with reference");
+    await shot(page, name + "-repeat-repaired-reload");
+  });
+}

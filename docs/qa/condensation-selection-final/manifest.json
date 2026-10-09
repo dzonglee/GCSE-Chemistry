@@ -1,0 +1,285 @@
+{
+  "build": "UkVbrARbhr0HxcmO3vsQD",
+  "captures": [
+    {
+      "file": "320-guided-groups-viewport.png",
+      "width": 320,
+      "firstResponseBottom": 598.875,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "4a0f3a53570629ca91a77363f6c3ae6a984ee8a99c269a00b9e026820b988b97"
+    },
+    {
+      "file": "320-guided-groups-full.png",
+      "width": 320,
+      "firstResponseBottom": 598.875,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "216a597afe9d0e514e524f897cccf5f3d3d710806c25a4e90c16f5ef558c9b36"
+    },
+    {
+      "file": "320-guided-diacid-right-viewport.png",
+      "width": 320,
+      "firstResponseBottom": 598.875,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "3977a3f490f71d11af981be55ffa2a046b515a45761022707e1314f8e61675c4"
+    },
+    {
+      "file": "320-guided-diacid-right-full.png",
+      "width": 320,
+      "firstResponseBottom": 598.875,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "24877d1b602d3ef91a9d3f1062f876b5dd506c7bdd2356fd354df2db00328d00"
+    },
+    {
+      "file": "320-retained-wrong-groups-viewport.png",
+      "width": 320,
+      "firstResponseBottom": 626.6875,
+      "id": "pol-cond-v1-ca-groups",
+      "sha256": "cb1e750d2ad0db523417493a5f9656e7c067878279b22761523b2aab5f299518"
+    },
+    {
+      "file": "320-retained-wrong-groups-full.png",
+      "width": 320,
+      "firstResponseBottom": 626.6875,
+      "id": "pol-cond-v1-ca-groups",
+      "sha256": "e9724662b3fadd1937286b020facd4a2f5c99cdc20d99636f7e047d81372b61f"
+    },
+    {
+      "file": "320-independent-repeat-viewport.png",
+      "width": 320,
+      "firstResponseBottom": 605.40625,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "81a32ad54b6e6c404c4ca4dd2fb3ff5a17cff5c5df6d229ead35ff7aa9d39012"
+    },
+    {
+      "file": "320-independent-repeat-full.png",
+      "width": 320,
+      "firstResponseBottom": 605.40625,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "5d203f23f4e08d5f01706974f31a0627505e5040af0c900841a3e147464a343a"
+    },
+    {
+      "file": "320-separate-repeat-reference.png",
+      "width": 320,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "11c98436ba710591d9e5ac69d9feef96857c1740540a009a9480d76674ba6b38"
+    },
+    {
+      "file": "320-repeat-left.png",
+      "width": 320,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "758d952d35c7b98a90962dab890a68c1dee0c118b2b410ce42ac919f0b8bc9e9"
+    },
+    {
+      "file": "320-repeat-ester-junction.png",
+      "width": 320,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "27b53592fe6ac07d7815f2bcb5622fcb3237de5926bbad2676e422eac7bfe2d1"
+    },
+    {
+      "file": "320-repeat-right.png",
+      "width": 320,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "aa01628d1a8baf35708046a3fef5c7c596c8b0383c8172e660bf2225310348be"
+    },
+    {
+      "file": "390-guided-groups-viewport.png",
+      "width": 390,
+      "firstResponseBottom": 577.875,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "2b0429f4e9ca0e7603d34a249301e58d3ba0684fe71ea83af899337084a471ab"
+    },
+    {
+      "file": "390-guided-groups-full.png",
+      "width": 390,
+      "firstResponseBottom": 577.875,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "c0607449167d00181446c9023b990aace0ba070349477897397abf5585186dad"
+    },
+    {
+      "file": "390-guided-diacid-right-viewport.png",
+      "width": 390,
+      "firstResponseBottom": 577.875,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "90752a24caf192f8c979e1b1f2fe47b345d4b84b94d40a53b0ca18d18b6b0bbb"
+    },
+    {
+      "file": "390-guided-diacid-right-full.png",
+      "width": 390,
+      "firstResponseBottom": 577.875,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "d767a5242a4789ef275b0e158ec7a6081e4a374a33e37861c8b12f4355ed1633"
+    },
+    {
+      "file": "390-retained-wrong-groups-viewport.png",
+      "width": 390,
+      "firstResponseBottom": 626.6875,
+      "id": "pol-cond-v1-ca-groups",
+      "sha256": "23c77184f2d1e230745826a4413f8f334c8b7e82e54cb1cca7f19d7c570b9344"
+    },
+    {
+      "file": "390-retained-wrong-groups-full.png",
+      "width": 390,
+      "firstResponseBottom": 626.6875,
+      "id": "pol-cond-v1-ca-groups",
+      "sha256": "ebfa10d018507761d2c70843da83eddd190f30a48e150b8f478bf0f80922c014"
+    },
+    {
+      "file": "390-independent-repeat-viewport.png",
+      "width": 390,
+      "firstResponseBottom": 581.109375,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "ccd6ebbc24feb0cf2b62b026279d15604819bedbfd839794c46f1bb3b1cdfd45"
+    },
+    {
+      "file": "390-independent-repeat-full.png",
+      "width": 390,
+      "firstResponseBottom": 581.109375,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "1f08dab9d3c5fbd0aee01c9372832768c6f72656c743cc8b3aecc7d9ed3cd873"
+    },
+    {
+      "file": "390-separate-repeat-reference.png",
+      "width": 390,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "eab2faddcc8f8ed036ceb60be2ffce0c2f96d7990c344deffa86ebf193316a3c"
+    },
+    {
+      "file": "390-repeat-left.png",
+      "width": 390,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "2cf8b16cd62070a1cd3513756b60ba397bfef603842904344aa8e1417543e51a"
+    },
+    {
+      "file": "390-repeat-ester-junction.png",
+      "width": 390,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "d86869fc4f492e16174ea0d59a3b7c90051aa800f918cce8229ce54e84a1510b"
+    },
+    {
+      "file": "390-repeat-right.png",
+      "width": 390,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "a7a1751a1dcb1b05d4ec9de9e9806eca8c74163fbba51829491a72c44cf4fbf2"
+    },
+    {
+      "file": "1280-guided-groups-viewport.png",
+      "width": 1280,
+      "firstResponseBottom": 567.0625,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "c240b251153b11b9d9a0df63259329f85a50286202972fb6aec3e3aa2e48647b"
+    },
+    {
+      "file": "1280-guided-groups-full.png",
+      "width": 1280,
+      "firstResponseBottom": 567.0625,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "6fea27366de57e92786032debb809b080ceb44a408906077bca2c86ab92b19b3"
+    },
+    {
+      "file": "1280-guided-diacid-right-viewport.png",
+      "width": 1280,
+      "firstResponseBottom": 567.0625,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "8a9d4b1fdb1e06ec9bc98193e148f749c7048f2046c532cdcc66b798e6680de5"
+    },
+    {
+      "file": "1280-guided-diacid-right-full.png",
+      "width": 1280,
+      "firstResponseBottom": 567.0625,
+      "id": "pol-cond-v1-g-groups",
+      "sha256": "e38aba9408ac97669e6651ef27252615a28bb0611f7788829cb2562f698d5fd4"
+    },
+    {
+      "file": "1280-retained-wrong-groups-viewport.png",
+      "width": 1280,
+      "firstResponseBottom": 601.9375,
+      "id": "pol-cond-v1-ca-groups",
+      "sha256": "c4ffee42dacde97aa124aded299d2a3ce19300ca135b02f4266d6f35781d4a6d"
+    },
+    {
+      "file": "1280-retained-wrong-groups-full.png",
+      "width": 1280,
+      "firstResponseBottom": 601.9375,
+      "id": "pol-cond-v1-ca-groups",
+      "sha256": "2b8dcc6b1676057f3dfe2ba097f243ee31c11c77ec3c11a42110dd79269f018a"
+    },
+    {
+      "file": "1280-independent-repeat-viewport.png",
+      "width": 1280,
+      "firstResponseBottom": 532.0625,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "d984faf9b2a34cbf88bdca0b7bde631b41e611093b2af0b7082fc0972fa30bb5"
+    },
+    {
+      "file": "1280-independent-repeat-full.png",
+      "width": 1280,
+      "firstResponseBottom": 532.0625,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "847f6206c6e4e7935247dfa2940f767d3f2f9046013eff33f72348bdb84dfd7b"
+    },
+    {
+      "file": "1280-separate-repeat-reference.png",
+      "width": 1280,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "7a1a7e36c83edeae0f80bd52d06a59955b8b43b653cc30d28ef9115a42543259"
+    },
+    {
+      "file": "1280-repeat-left.png",
+      "width": 1280,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "c9b04a138cafd8a053394210a0a298c3e7a5331be1d3ee76f0eaf633ce961ef3"
+    },
+    {
+      "file": "1280-repeat-ester-junction.png",
+      "width": 1280,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "c885c8d1639c6c0b043284719a0a1e2082db75355ea3d00cbbb3c75e4ac833e6"
+    },
+    {
+      "file": "1280-repeat-right.png",
+      "width": 1280,
+      "id": "pol-cond-v1-ca-repeat",
+      "sha256": "6cbcd44f88a7046fecec227c85c9afab7462cc12345c82ae8fe309723ab49392"
+    }
+  ],
+  "source_hashes": {
+    "src/components/CondensationConstruction.tsx": "ed99ff8762f0ba00f5f936e2ece91bb627e2b952119cc21b1caebb19dd1a08b6",
+    "src/app/condensation.css": "39f22ed2f413c67a6dd3c9cb93c6259f5eade285011aa14638ef8a73b8d128dd",
+    "tests/condensation-review.browser.spec.ts": "91a95269a5b53c8697571cb996dd78b852840de6bc14449aaa51caccf3e77e41"
+  },
+  "research": [
+    {
+      "file": "spec.pdf",
+      "url": "https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF",
+      "status": 200,
+      "sha256": "ecd869d1874091a0a52abaeb8fce238a9c1cc207698713dfb66788eb0d448d43"
+    },
+    {
+      "url": "https://edu.rsc.org/download?ac=509327",
+      "error": "HTTP Error 405: Method Not Allowed"
+    },
+    {
+      "file": "2023h2-qp.pdf",
+      "url": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-84622H-QP-JUN23.PDF",
+      "status": 200,
+      "sha256": "8881c2ab53a769ac9eabb4968bc02227469ee37412779de2d498d2b90ddf29e5"
+    },
+    {
+      "file": "2023h2-ms.pdf",
+      "url": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-84622H-MS-JUN23.PDF",
+      "status": 200,
+      "sha256": "44b55a549ce1490c41c31a54d57acb32c64f5368b29fa38e12b8fb7dfcedab53"
+    }
+  ],
+  "validation": {
+    "types": "V2 exit0",
+    "lint": "V2 exit0",
+    "units": "V1 affected22pass9.3s; final hook/resize changes verified by browser",
+    "build": "V2 exit0",
+    "browser": "V2 all56pass10.5m exit0",
+    "capture": "36native images exit0; all personally inspected and sent",
+    "freeze": "2286verified after browser exit0 and manual server deliberate exit130;3201 released",
+    "content": "171files match905108a exactly",
+    "inventory": "2662cases153files, not unified pass"
+  }
+}

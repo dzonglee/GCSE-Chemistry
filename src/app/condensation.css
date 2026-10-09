@@ -77,6 +77,11 @@
   stroke-width: 2;
   fill: none;
 }
+.condensation-scroll .condensation-selection {
+  fill: #edf4ff;
+  stroke: #303bcf;
+  stroke-width: 2;
+}
 .condensation-ends {
   display: grid;
   grid-template-columns: 1fr 1fr;
