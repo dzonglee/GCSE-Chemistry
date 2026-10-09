@@ -1,0 +1,33 @@
+--- a/src/app/sample-lesson.css
++++ b/src/app/sample-lesson.css
+@@ -6903,3 +6903,30 @@
+     align-items: start;
+   }
+ }
++
++/* Only the appended energy coefficient task has a multipart answer.
++   Keep its long practice navigation in one keyboard-scrollable desktop row. */
++@media (min-width: 601px) {
++  .sample-lesson[data-lesson="energy-practical"]
++    .sample-task-panel:has(.multipart-answer)
++    .sample-task-topline {
++    display: block;
++  }
++  .sample-lesson[data-lesson="energy-practical"]
++    .sample-task-panel:has(.multipart-answer)
++    .sample-task-topline
++    .question-navigation {
++    flex-wrap: nowrap;
++    justify-content: flex-start;
++    overflow-x: auto;
++    max-width: 100%;
++    margin-top: 8px;
++    padding-bottom: 4px;
++  }
++  .sample-lesson[data-lesson="energy-practical"]
++    .sample-task-panel:has(.multipart-answer)
++    .question-navigation
++    button {
++    flex: 0 0 auto;
++  }
++}

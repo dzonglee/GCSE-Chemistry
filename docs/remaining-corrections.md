@@ -34,3 +34,5 @@ Final shared UI review should also check construction legends outside particle-c
 ## Parallel-session boundary — 9 October 2026
 
 Both prior assignments were pushed on codex/chemistry-resource-use-energy-review, latest2107f57. Main is integrating resource use first, then energy. New exclusive second-worker assignment: ion-tests only, from main-followups baselined7c04cc, on codex/chemistry-ion-equations-review. Prompt published at main-followups commit60aea81 in PARALLEL-SCOPE-NEXT.md. Main retains shared integration, electrolysis, aqueous electrolysis, Higher condensation/natural polymers and the whole-course audit/regression.
+
+Energy-practical accepted9 October: original59 definitions/indices/forms preserved; three equation teaching/recovery/practice tasks plus eight reserved signed-coefficient/in-range-prediction tasks.70 tasks/25 practice/10 manual.990 full units, types/full lint/build and all34 affected production cases passed in two runs; screenshots inspected and explicitly sent. Whole-course math mapping still needs review; do not count this single route as all MS4b coverage.

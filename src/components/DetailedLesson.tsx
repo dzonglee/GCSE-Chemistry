@@ -215,6 +215,9 @@ export function DetailedLesson({
         : stage === "guided"
           ? "Practise without the model →"
           : "Return to learning →";
+  const compactEquationForm =
+    lesson.slug === "energy-practical" &&
+    work.run?.ids.every((id) => id.startsWith("ep-v1-equation-"));
   const compactResourceReview =
     lesson.slug === "life-cycle-and-recycling" &&
     work.run?.kind === "review" &&
@@ -225,6 +228,7 @@ export function DetailedLesson({
       lesson.slug === "transition-metals" ||
       lesson.slug === "atomic-models" ||
       compactResourceReview ||
+      compactEquationForm ||
       [
         "periodic-development",
         "group-reactions",
@@ -260,6 +264,7 @@ export function DetailedLesson({
       lesson.slug === "transition-metals" ||
       lesson.slug === "atomic-models" ||
       compactResourceReview ||
+      compactEquationForm ||
       [
         "periodic-development",
         "group-reactions",
@@ -433,6 +438,7 @@ export function DetailedLesson({
             <AssessmentSession
               id={lesson.slug}
               navigationAfterResponse={
+                compactEquationForm ||
                 lesson.slug === "inside-an-atom" ||
                 lesson.slug === "balancing-equations" ||
                 lesson.slug === "transition-metals" ||

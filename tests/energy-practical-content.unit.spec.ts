@@ -17,7 +17,7 @@ const all = [
   ...j.checkForms.flat(),
   ...j.reviewForms.flat(),
 ];
-test("the individual Foundation/shared journey has59 tasks, valid recovery targets and six preserved original IDs", () => {
+test("the individual Foundation/shared journey has70 tasks, valid recovery targets and six preserved original IDs", () => {
   const l = lessons.find((l) => l.slug === "energy-practical")!;
   expect(l.tier).toBe("foundation");
   expect(l.course).toBe("combined");
@@ -26,10 +26,10 @@ test("the individual Foundation/shared journey has59 tasks, valid recovery targe
   expect([...l.questions, ...l.checks].map((q) => q.id)).toEqual(
     Array.from({ length: 6 }, (_, i) => "energy-practical-" + i),
   );
-  expect(all).toHaveLength(59);
-  expect(new Set(all.map((q) => q.id)).size).toBe(59);
-  expect(j.guided).toHaveLength(7);
-  expect(j.practice).toHaveLength(24);
+  expect(all).toHaveLength(70);
+  expect(new Set(all.map((q) => q.id)).size).toBe(70);
+  expect(j.guided).toHaveLength(8);
+  expect(j.practice).toHaveLength(25);
   for (const q of all) {
     expect(q.purpose).toBeTruthy();
     if (q.followUp)
@@ -64,7 +64,9 @@ test("all25 numerical answers match independent temperature, mean and graph refe
     "d-b-mean": 6.3,
     "d-b-intercept": 22.2,
   };
-  const numeric = all.filter((q) => !q.options && !q.rubric);
+  const numeric = all.filter(
+    (q) => !q.options && !q.rubric && !q.id.startsWith("ep-v1-equation-"),
+  );
   expect(numeric).toHaveLength(25);
   for (const q of numeric) {
     expect(Number(q.answer), q.id).toBe(refs[q.id.replace("ep-v1-", "")]);
@@ -97,10 +99,10 @@ test("ten method, graph and explanation responses remain self-reviewed even when
   }
 });
 test("cold and delayed checks have distinct IDs, static graph stimuli and no learning model or premature hint", () => {
-  expect(j.checkForms.map((f) => f.length)).toEqual([5, 5]);
-  expect(j.reviewForms.map((f) => f.length)).toEqual([3, 3]);
+  expect(j.checkForms.map((f) => f.length)).toEqual([5, 5, 2, 2]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([3, 3, 2, 2]);
   const reserved = [...j.checkForms.flat(), ...j.reviewForms.flat()];
-  expect(new Set(reserved.map((q) => q.id)).size).toBe(16);
+  expect(new Set(reserved.map((q) => q.id)).size).toBe(24);
   for (const q of reserved) {
     expect(q.model).toBeUndefined();
     expect(q.openingHint).not.toBe(true);
