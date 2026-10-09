@@ -8485,3 +8485,144 @@ body:has(.sample-lesson) .topic-number {
     padding: 12px;
   }
 }
+
+/* Alkene combustion: keep chemical responses ahead of optional supporting notes. */
+.sample-task-panel[data-alkene-combustion],
+.assessment-session > .question-panel[data-alkene-combustion] {
+  padding: 16px;
+}
+.sample-task-panel[data-alkene-combustion] > h2,
+.question-panel[data-alkene-combustion] h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.sample-task-panel[data-alkene-combustion] textarea,
+.question-panel[data-alkene-combustion] textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.assessment-session:has(> .question-panel[data-alkene-combustion])
+  .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.assessment-session:has(> .question-panel[data-alkene-combustion]) > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.question-panel[data-alkene-combustion] > .eyebrow {
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="organic-reactions"]:has([data-alkene-combustion])
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+  .sample-task-panel[data-alkene-combustion],
+  .assessment-session > .question-panel[data-alkene-combustion] {
+    padding: 12px;
+  }
+  .sample-task-panel[data-alkene-combustion] > h2,
+  .question-panel[data-alkene-combustion] h2 {
+    font-size: 20px;
+  }
+  .sample-task-panel[data-alkene-combustion] textarea,
+  .question-panel[data-alkene-combustion] textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+  .question-panel[data-alkene-combustion] .written-equation-prompt {
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 8px 0;
+  }
+}
+
+.sample-task-panel[data-alkene-combustion] .question-navigation {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+}
+.sample-task-panel[data-alkene-combustion] .question-navigation button {
+  flex: 0 0 auto;
+}
+.sample-task-panel[data-alkene-combustion] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-task-panel[data-alkene-combustion] .sample-task-prompt {
+  margin-bottom: 12px;
+}
+
+.assessment-session > .question-panel[data-alkene-combustion] {
+  margin-top: 4px;
+}
+
+/* Keep the lesson's original diagrams readable while removing repeated spacing. */
+.sample-lesson[data-lesson="organic-reactions"] .pathway-workbench .addition {
+  padding: 10px;
+  margin: 0;
+}
+.sample-lesson[data-lesson="organic-reactions"]
+  .pathway-workbench
+  .addition
+  > span {
+  display: none;
+}
+.sample-lesson[data-lesson="organic-reactions"]
+  .pathway-workbench
+  .addition
+  > h2 {
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+.sample-lesson[data-lesson="organic-reactions"]
+  .pathway-workbench
+  .addition
+  > p {
+  margin: 8px 0;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="organic-reactions"] .sample-title-row h1 {
+    font-size: 24px;
+  }
+  .sample-task-panel[data-alkene-combustion] .sample-task-prompt {
+    font-size: 15px;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+  .sample-task-panel[data-alkene-combustion]
+    .sample-task-answer
+    .question-panel {
+    padding: 12px;
+  }
+  .sample-lesson[data-lesson="organic-reactions"]
+    .pathway-workbench
+    .addition
+    > p,
+  .sample-lesson[data-lesson="organic-reactions"] .pathway-drawing > p {
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 8px 0;
+  }
+  .sample-lesson[data-lesson="organic-reactions"] .pathway-given {
+    padding: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="organic-reactions"]
+  .pathway-workbench
+  .addition
+  > h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.sample-lesson[data-lesson="organic-reactions"]
+  .pathway-workbench
+  .addition
+  > p {
+  margin: 4px 0;
+}

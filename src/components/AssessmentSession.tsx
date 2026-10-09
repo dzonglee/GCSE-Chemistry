@@ -263,7 +263,8 @@ export function AssessmentSession({
                 {!(
                   q.rubric &&
                   (q.id.startsWith("py-v1-reversible-") ||
-                    q.id.startsWith("ss-v1-heating-"))
+                    q.id.startsWith("ss-v1-heating-") ||
+                    q.id.startsWith("path-comb-v1-"))
                 ) && <p>{q.explanation}</p>}
                 {q.fuelDrawing && (
                   <TemperatureGraphReference drawing={q.fuelDrawing} />
@@ -286,6 +287,7 @@ export function AssessmentSession({
                       q.id.startsWith("ph-v1-method-") ||
                       q.id.startsWith("py-v1-reversible-") ||
                       q.id.startsWith("ss-v1-heating-") ||
+                      q.id.startsWith("path-comb-v1-") ||
                       q.id.startsWith("lca-v1-magnitude-")) &&
                       q.referenceResponse && (
                         <details className="sample-reference">
@@ -302,9 +304,11 @@ export function AssessmentSession({
                                     ? "Compare the reverse reaction, incomplete conversion, separation losses and unwanted products with your retained explanation."
                                     : q.id.startsWith("lca-v1-magnitude-")
                                       ? "Compare your rounded quantities, approximate ratio, saving's fraction and limits with this reference."
-                                      : q.id.startsWith("ss-v1-heating-")
-                                        ? "Compare your apparatus, reagents, stage order and separation purposes with this reference."
-                                        : "Compare your electrode predictions, labelled observations and suitable testing method with this reference."}{" "}
+                                      : q.id.startsWith("path-comb-v1-")
+                                        ? "Compare your reaction conditions, complete products and limits of flame evidence with this reference."
+                                        : q.id.startsWith("ss-v1-heating-")
+                                          ? "Compare your apparatus, reagents, stage order and separation purposes with this reference."
+                                          : "Compare your electrode predictions, labelled observations and suitable testing method with this reference."}{" "}
                             This reference does not award an automatic mark.
                           </p>
                         </details>
@@ -471,6 +475,7 @@ export function AssessmentSession({
       <form
         className="question-panel"
         data-salt-heating={id === "making-soluble-salts" || undefined}
+        data-alkene-combustion={id === "organic-reactions" || undefined}
         data-written-equations={q.writtenEquations || undefined}
         data-condensation-response={
           q.id.startsWith("pol-cond-v1-") || undefined
@@ -488,6 +493,7 @@ export function AssessmentSession({
           {(q.writtenEquations ||
             q.conciseHeading ||
             id === "making-soluble-salts" ||
+            id === "organic-reactions" ||
             ([
               "ion-tests",
               "aqueous-electrolysis-products",
@@ -503,6 +509,7 @@ export function AssessmentSession({
         {(q.writtenEquations ||
           q.conciseHeading ||
           id === "making-soluble-salts" ||
+          id === "organic-reactions" ||
           ([
             "ion-tests",
             "aqueous-electrolysis-products",

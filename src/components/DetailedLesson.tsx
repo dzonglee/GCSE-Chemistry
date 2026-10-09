@@ -58,8 +58,10 @@ export function DetailedLesson({
   const work = data.work[lesson.slug] ?? emptyWork();
   const section = work.section;
   const saltLesson = lesson.slug === "making-soluble-salts";
+  const organicLesson = lesson.slug === "organic-reactions";
   const warmupAfterResponse =
     saltLesson ||
+    organicLesson ||
     (lesson.slug === "yield-and-atom-economy" &&
       (section === "check" || section === "review"));
   const stage: LearningStage =
@@ -282,6 +284,7 @@ export function DetailedLesson({
   const compactReview =
     (compactYieldReview ||
       saltLesson ||
+      organicLesson ||
       compactCondensationReview ||
       compactIonReview ||
       lesson.slug === "inside-an-atom" ||
@@ -324,6 +327,7 @@ export function DetailedLesson({
     compactReview &&
     (compactYieldReview ||
       saltLesson ||
+      organicLesson ||
       compactCondensationReview ||
       compactIonReview ||
       lesson.slug === "balancing-equations" ||
@@ -537,6 +541,7 @@ export function DetailedLesson({
               id={lesson.slug}
               navigationAfterResponse={
                 saltLesson ||
+                organicLesson ||
                 mixedPolymer ||
                 mixedNatural ||
                 lesson.slug === "ph-scale-and-indicators" ||
@@ -660,6 +665,7 @@ export function DetailedLesson({
         <section
           className="sample-task-panel"
           data-salt-heating={saltLesson || undefined}
+          data-alkene-combustion={organicLesson || undefined}
           data-yield-reversible={
             q.id.startsWith("py-v1-reversible-") || undefined
           }
@@ -679,6 +685,7 @@ export function DetailedLesson({
             </span>
             {stage === "practice" && journey.practiceGroups ? (
               lesson.slug !== "life-cycle-and-recycling" &&
+              !organicLesson &&
               !q.polyesterDrawing &&
               practicePicker
             ) : (
@@ -888,7 +895,7 @@ export function DetailedLesson({
                   ? "Try your own answer first. Use support if you need it."
                   : "Try a step, explain what changed, then check your answer."}
               </p>
-              {q.polyesterDrawing && practicePicker}
+              {q.polyesterDrawing && !organicLesson && practicePicker}
               <div className="sample-task-actions">
                 {!q.openingHint && (
                   <button
@@ -954,7 +961,8 @@ export function DetailedLesson({
               </div>
             </div>
           </div>
-          {lesson.slug === "life-cycle-and-recycling" && practicePicker}
+          {(lesson.slug === "life-cycle-and-recycling" || organicLesson) &&
+            practicePicker}
           {(!(stage === "practice" && journey.practiceGroups) ||
             lesson.slug === "balancing-equations" ||
             lesson.slug === "transition-metals" ||
@@ -1010,13 +1018,15 @@ export function DetailedLesson({
           </details>
         </section>
       )}
-      {saltLesson && section !== "check" && section !== "review" && (
-        <p className="sample-learning-note">
-          <button className="text-button" onClick={() => choose("warmup", 0)}>
-            Rusty? Try the warm-up first
-          </button>
-        </p>
-      )}
+      {(saltLesson || organicLesson) &&
+        section !== "check" &&
+        section !== "review" && (
+          <p className="sample-learning-note">
+            <button className="text-button" onClick={() => choose("warmup", 0)}>
+              Rusty? Try the warm-up first
+            </button>
+          </p>
+        )}
       <div className="sample-extras">
         <details>
           <summary>What am I learning?</summary>

@@ -1,0 +1,157 @@
+{
+  "build": "ZxDT6pAS3pFBehGv4euoI",
+  "captures": [
+    {
+      "file": "320-combustion-choice-viewport.png",
+      "width": 320,
+      "id": "path-comb-v1-g-smoke",
+      "firstResponseBottom": 523.734375,
+      "sha256": "f1fca307fc0bbc6b9fc99233a616c271a6c38de58088e03246aff2378bc1738c"
+    },
+    {
+      "file": "320-combustion-choice-full.png",
+      "width": 320,
+      "id": "path-comb-v1-g-smoke",
+      "firstResponseBottom": 523.734375,
+      "sha256": "068cb098be85da5828e29eef5b1199e55312e0f40f40bc52bb765d25fbb3e345"
+    },
+    {
+      "file": "320-balanced-combustion-coefficients-viewport.png",
+      "width": 320,
+      "id": "path-comb-v1-p-ethene",
+      "firstResponseBottom": 583.984375,
+      "sha256": "6d3c94aa2b558d811cd79041a3d085fbc504c0ed940ed5a7d4d8f55ed9700973"
+    },
+    {
+      "file": "320-balanced-combustion-coefficients-full.png",
+      "width": 320,
+      "id": "path-comb-v1-p-ethene",
+      "firstResponseBottom": 583.984375,
+      "sha256": "f427f442ebad380875b0d74a1081e2d8b632ba19a869ddd4f59e4c4754d7e26c"
+    },
+    {
+      "file": "320-combustion-explanation-practice-viewport.png",
+      "width": 320,
+      "id": "path-comb-v1-p-explain",
+      "firstResponseBottom": 619.375,
+      "sha256": "587c87e515b8bd7e78155865470278f768c01f7cb59e662b8b796b34ac4b8af3"
+    },
+    {
+      "file": "320-combustion-explanation-practice-full.png",
+      "width": 320,
+      "id": "path-comb-v1-p-explain",
+      "firstResponseBottom": 619.375,
+      "sha256": "1b19968ce3f2d730ce49bd953f40b5293e504a7f28da579d0a1bc6befb3b4f42"
+    },
+    {
+      "file": "320-independent-wrong-claims-viewport.png",
+      "width": 320,
+      "id": "path-comb-v1-ca-claims",
+      "firstResponseBottom": 633.25,
+      "sha256": "a04cbc0e2c6117dcffc4dbe23253e18931e264d76dd97627fce9a59683887062"
+    },
+    {
+      "file": "320-independent-wrong-claims-full.png",
+      "width": 320,
+      "id": "path-comb-v1-ca-claims",
+      "firstResponseBottom": 633.25,
+      "sha256": "9c30d3e04510ddcdb46ff9334963d6ed30a12149d26d9febe23a51bc94be4838"
+    },
+    {
+      "file": "320-separate-reference.png",
+      "width": 320,
+      "id": "path-comb-v1-ca-claims",
+      "sha256": "1729b3a4929f6ec07d3df81ba82e73881bc1620ea007d6f7b1b68ef17c2dae1b"
+    },
+    {
+      "file": "320-original-addition-3d-viewport.png",
+      "width": 320,
+      "id": "path-v1-g-hydrogen",
+      "firstResponseBottom": 484.515625,
+      "sha256": "65047b60cf9f21e8612be5ed9d0256141005f72a0d0d2af4cbe0a79c3b7e1549"
+    },
+    {
+      "file": "320-original-addition-3d-full.png",
+      "width": 320,
+      "id": "path-v1-g-hydrogen",
+      "firstResponseBottom": 484.515625,
+      "sha256": "8460f9c7663750dfd1703bccd12afca0829ebef4c0c95c8020127f308bfe8466"
+    },
+    {
+      "file": "1280-combustion-choice-viewport.png",
+      "width": 1280,
+      "id": "path-comb-v1-g-smoke",
+      "firstResponseBottom": 505.078125,
+      "sha256": "458c42ed4e3d361f00bd939d79ba125dc343584b8924488f3414fec5dc79fc48"
+    },
+    {
+      "file": "1280-combustion-choice-full.png",
+      "width": 1280,
+      "id": "path-comb-v1-g-smoke",
+      "firstResponseBottom": 505.078125,
+      "sha256": "3bed949e56725b7f39d10b0a0033076ff389dfdaf1d0c7abe43391783490d779"
+    },
+    {
+      "file": "1280-balanced-combustion-coefficients-viewport.png",
+      "width": 1280,
+      "id": "path-comb-v1-p-ethene",
+      "firstResponseBottom": 564.109375,
+      "sha256": "9a4709ecee662353b423f7e7ae7845c662792fbd372eb613bb588dac31418a2f"
+    },
+    {
+      "file": "1280-balanced-combustion-coefficients-full.png",
+      "width": 1280,
+      "id": "path-comb-v1-p-ethene",
+      "firstResponseBottom": 564.109375,
+      "sha256": "81e75c0c4f5bc43d1fd65041fbb6bc826dd77f92384316a86d41c38cf3957ba0"
+    },
+    {
+      "file": "1280-combustion-explanation-practice-viewport.png",
+      "width": 1280,
+      "id": "path-comb-v1-p-explain",
+      "firstResponseBottom": 600.796875,
+      "sha256": "19a8665e8407aaead02db6bb62e2ee272d67f93f6f77d687a0e2f73419ea9bf4"
+    },
+    {
+      "file": "1280-combustion-explanation-practice-full.png",
+      "width": 1280,
+      "id": "path-comb-v1-p-explain",
+      "firstResponseBottom": 600.796875,
+      "sha256": "0c1957ab8806fde04e3fe6956140c15ecba0edd7e7dd7e7e8f5e745ecdca7120"
+    },
+    {
+      "file": "1280-independent-wrong-claims-viewport.png",
+      "width": 1280,
+      "id": "path-comb-v1-ca-claims",
+      "firstResponseBottom": 621.546875,
+      "sha256": "e865cf494ed00edbddc95b9d1ba34745387d084c6ee45d077a0d4f4469093f51"
+    },
+    {
+      "file": "1280-independent-wrong-claims-full.png",
+      "width": 1280,
+      "id": "path-comb-v1-ca-claims",
+      "firstResponseBottom": 621.546875,
+      "sha256": "d92a59eb29cffc184aa8c5b50e085be2fa812afa3140861df8bef4d990f7cb83"
+    },
+    {
+      "file": "1280-separate-reference.png",
+      "width": 1280,
+      "id": "path-comb-v1-ca-claims",
+      "sha256": "cb5c1b0a14290db16fa0414e3df6f076abf99f4f22d1b359dd89baaef70caac5"
+    },
+    {
+      "file": "1280-original-addition-3d-viewport.png",
+      "width": 1280,
+      "id": "path-v1-g-hydrogen",
+      "firstResponseBottom": 513.765625,
+      "sha256": "d17463f2ea8847d59fcdde2b3ec993efbbf25eac5304e2e936bf61f46d24876c"
+    },
+    {
+      "file": "1280-original-addition-3d-full.png",
+      "width": 1280,
+      "id": "path-v1-g-hydrogen",
+      "firstResponseBottom": 513.765625,
+      "sha256": "2c0e67502f0b8f765d2a3aeb2edd585c0c9705f289ad1bb7fd186aa88aef6842"
+    }
+  ]
+}

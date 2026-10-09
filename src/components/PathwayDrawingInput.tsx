@@ -5,17 +5,20 @@ import {
   readPathwayDrawing,
   type PathwayDrawingData,
 } from "../lib/pathway-board";
+import { PathwayGiven } from "./PathwayReview";
 import { PathwayDisplayed } from "./PathwayDisplayed";
 export function PathwayDrawingInput({
   value,
   onChange,
   drawing,
   disabled = false,
+  showGiven = false,
 }: {
   value: string;
   onChange: (s: string) => void;
   drawing: PathwayDrawingData;
   disabled?: boolean;
+  showGiven?: boolean;
 }) {
   const id = useId(),
     saved = value ? readPathwayDrawing(value) : null,
@@ -60,15 +63,16 @@ export function PathwayDrawingInput({
   }
   return (
     <section className="pathway-drawing">
+      {field("n", "Number of carbon atoms", [
+        ["", "Choose"],
+        ...["2", "3", "4", "5"].map((v) => [v, v] as [string, string]),
+      ])}
       <p>{drawing.note}</p>
       <p>
         Build the full product from blank choices. Your drawing is saved for
         your own review; the app does not award an examiner drawing mark.
       </p>
-      {field("n", "Number of carbon atoms", [
-        ["", "Choose"],
-        ...["2", "3", "4", "5"].map((v) => [v, v] as [string, string]),
-      ])}
+      {showGiven && <PathwayGiven caseId={drawing.caseId} />}
       <PathwayDisplayed board={b} />
       {Array.from({ length: Number(b.n) }, (_, i) => (
         <fieldset key={i}>

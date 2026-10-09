@@ -91,9 +91,9 @@ export function PathwayEvidence({
     );
   }
   const headings = {
-    conditions: "Conditions are part of the route",
-    infer: "Work backwards from the atom difference",
-    ledger: "Count one complete product molecule",
+    conditions: "Reaction conditions",
+    infer: "Infer the reagent",
+    ledger: "Count product atoms",
   };
   return (
     <section className="addition">
@@ -106,7 +106,6 @@ export function PathwayEvidence({
             : "Molecular inventory"}
       </span>
       <h2>{headings[mode]}</h2>
-      <p>{record.title}</p>
       {mode === "conditions" ? (
         <>
           <p>
@@ -115,10 +114,6 @@ export function PathwayEvidence({
               ? r.title
               : "Propane and bromine water at ordinary room conditions without UV"}
             .
-          </p>
-          <p>
-            Choose the process, catalyst and conditions. An observation is
-            required only where a colour test is specified.
           </p>
           <div className="process-fields">
             {field("reaction", "Reaction type", [
@@ -160,6 +155,10 @@ export function PathwayEvidence({
               ["notSpecified", "No colour test supplied"],
             ])}
           </div>
+          <p>
+            Choose the process, catalyst and conditions. An observation is
+            required only where a colour test is specified.
+          </p>
         </>
       ) : (
         <>
@@ -171,8 +170,7 @@ export function PathwayEvidence({
                   /[0-9]/g,
                   (c) => "₀₁₂₃₄₅₆₇₈₉"[Number(c)],
                 )}
-                . Infer the added reagent from the supplied product; do not
-                treat this comparison as a spontaneous reverse reaction.
+                .
               </p>
               <div className="process-fields">
                 {field("reagent", "Inferred added reagent", [
@@ -185,6 +183,10 @@ export function PathwayEvidence({
                   ["hydrogenBromide", "Hydrogen bromide"],
                 ])}
               </div>
+              <p>
+                Infer the added reagent from the supplied product; do not treat
+                this comparison as a spontaneous reverse reaction.
+              </p>
               <div className="structure-pair">
                 <PathwayDisplayed
                   board={source(r)}
@@ -203,6 +205,9 @@ export function PathwayEvidence({
           )}
           {r && mode === "ledger" && (
             <>
+              <div className="process-fields">
+                {number("C", "Product C atoms")}
+              </div>
               <p>
                 Use the given fully displayed product. Include hydrogens bonded
                 to oxygen and both halogen atoms.
@@ -218,12 +223,14 @@ export function PathwayEvidence({
             </>
           )}
           <div className="process-fields">
-            {["C", "H", "O", "Cl", "Br", "I"].map((e) =>
-              number(
-                e,
-                (mode === "infer" ? "Added " : "Product ") + e + " atoms",
-              ),
-            )}
+            {["C", "H", "O", "Cl", "Br", "I"]
+              .filter((e) => !(r && mode === "ledger" && e === "C"))
+              .map((e) =>
+                number(
+                  e,
+                  (mode === "infer" ? "Added " : "Product ") + e + " atoms",
+                ),
+              )}
             {mode === "infer" ? (
               <>
                 {field("kind", "Type of chemical change", [
@@ -256,6 +263,7 @@ export function PathwayEvidence({
           </div>
         </>
       )}
+      <p className="pathway-record-title">{record.title}</p>
       <button
         type="button"
         onClick={() => setFeedback(checkPathwayBoard(mode, b).message)}

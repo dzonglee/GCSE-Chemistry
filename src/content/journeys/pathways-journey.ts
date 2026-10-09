@@ -1,3 +1,4 @@
+import { extendAlkeneCombustion } from "./alkene-combustion";
 import type { PathwayJourney as Journey } from "./pathways-types";
 import { warmup, refresher } from "./pathways-tasks";
 import { guided } from "./pathways-guided";
@@ -253,3 +254,5 @@ export const pathwaysJourney: Journey = {
     },
   ],
 };
+
+extendAlkeneCombustion(pathwaysJourney, pathwaysRecovery);

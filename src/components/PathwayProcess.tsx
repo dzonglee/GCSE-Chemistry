@@ -83,17 +83,10 @@ export function PathwayProcess({
     <section className="addition">
       <span>Learn the method · Process evidence</span>
       <h2>What leaves the cooler?</h2>
+      <p>Ethene + steam → ethanol.</p>
       <p>
-        Ethene + steam → ethanol. Each reported addition uses one ethene and one
-        water molecule.
-      </p>
-      <p>
-        <strong>Supplied feed:</strong> {r.ethene} ethene and {r.steam} water
-        molecules. <strong>Reported reactions:</strong> {r.reacted}.
-      </p>
-      <p>
-        These small integer counts are a schematic accounting model. Use the
-        reported reaction count; the feed does not prove complete conversion.
+        <strong>Feed:</strong> {r.ethene} ethene + {r.steam} water.
+        <strong> Reported additions:</strong> {r.reacted}.
       </p>
       <div className="process-fields">
         {number("etheneLeft", "Unreacted ethene molecules")}
@@ -101,6 +94,11 @@ export function PathwayProcess({
         {number("ethanol", "Ethanol molecules produced")}
         {number("maximum", "Maximum additions allowed by the feed")}
       </div>
+      <p>Each reported addition uses one ethene and one water molecule.</p>
+      <p>
+        These small integer counts are a schematic accounting model. Use the
+        reported reaction count; the feed does not prove complete conversion.
+      </p>
       <div className="process-flow">
         <div>
           <strong>Reactor</strong>

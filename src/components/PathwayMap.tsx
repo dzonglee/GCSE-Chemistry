@@ -97,20 +97,20 @@ export function PathwayMap({
       </span>
       <h2>Choose a chemically possible route</h2>
       <p>
-        <strong>Target:</strong> {r.title}. Use the original starting material
-        and identify the second feed, process and product.
-      </p>
-      <p>
         <strong>Given starting material:</strong> {r.source},{" "}
         {r.sourceFormula.replace(/[0-9]/g, (c) => "₀₁₂₃₄₅₆₇₈₉"[Number(c)])}.
       </p>
-      {r.given && <p>{r.given}</p>}
       <div className="process-fields">
         {field("feed", "Second feed or biological agent", feeds)}
         {field("method", "Process on your arrow", methods)}
         {field("product", "Proposed organic product", products)}
         {field("byproduct", "Separate small by-product", byproducts)}
       </div>
+      <p>
+        <strong>Target:</strong> {r.title}. Use the original starting material
+        and identify the second feed, process and product.
+      </p>
+      {r.given && <p>{r.given}</p>}
       <div className="process-flow">
         <div>
           <strong>Fixed start</strong>

@@ -379,9 +379,7 @@ export function mark(
     return {
       correct: !wrong,
       empty: false,
-      feedback: wrong
-        ? `Revisit ${wrong.label.toLowerCase()}. ${q.hint}`
-        : q.explanation,
+      feedback: wrong ? `Revisit ${wrong.label}. ${q.hint}` : q.explanation,
     };
   }
   const value = q.options ? null : readNumber(raw);

@@ -188,7 +188,7 @@ export function QuestionInput(props: InputProps) {
           compact={props.compactAssessment}
         />
       )}
-      {props.question.pathwayGiven && (
+      {props.question.pathwayGiven && !props.question.pathwayDrawing && (
         <PathwayGiven {...props.question.pathwayGiven} />
       )}
       {props.question.hydrocarbonGiven && (
@@ -679,6 +679,7 @@ function ResponseInput({
         value={value}
         onChange={onChange}
         drawing={question.pathwayDrawing}
+        showGiven={!!question.pathwayGiven}
         disabled={disabled}
       />
     );

@@ -62,7 +62,12 @@ async function answer(page: Page, q: (typeof j.practice)[number]) {
     }
   } else if (q.rubric)
     await page.getByLabel("Your explanation", { exact: true }).fill(q.answer);
-  else if (q.options)
+  else if (q.parts) {
+    for (const part of q.parts)
+      await page
+        .getByRole("textbox", { name: part.label, exact: true })
+        .fill(String(part.answer));
+  } else if (q.options)
     await page.getByRole("radio", { name: q.answer, exact: true }).check();
   else await page.getByLabel("Your answer", { exact: true }).fill(q.answer);
 }
@@ -121,7 +126,7 @@ for (const mode of Object.keys(pathwayRecords) as PathwayMode[])
       }
     },
   );
-test("all46 original practice tasks mark numerical/choice answers while drawn and written responses remain self-reviewed", async ({
+test("all48 practice tasks retain the original46 and mark numeric/choice/parts answers while drawings and writing stay self-reviewed", async ({
   page,
 }, info) => {
   test.setTimeout(180000);

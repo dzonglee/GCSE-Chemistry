@@ -37,9 +37,9 @@ const all = [
   ...j.checkForms.flat(),
   ...j.reviewForms.flat(),
 ];
-test("103 original demands preserve eighteen literal numbers, complete groups and precise recovery entry points", () => {
-  expect(all).toHaveLength(103);
-  expect(new Set(all.map((q) => q.id)).size).toBe(103);
+test("111 demands preserve the original eighteen literal numbers, complete groups and precise recovery entry points", () => {
+  expect(all).toHaveLength(111);
+  expect(new Set(all.map((q) => q.id)).size).toBe(111);
   const references: Record<string, string> = {
     "g-mass": "46",
     "p-ethanol-Mr": "46",
@@ -295,9 +295,9 @@ test("both-tier route scope, genuinely separate cold/delayed sets and direct exp
   expect(l.tier).toBe("foundation");
   expect(l.course).toBe("separate");
   expect(l.journey).toBe(j);
-  expect(j.checkForms.map((f) => f.length)).toEqual([7, 7]);
-  expect(j.reviewForms.map((f) => f.length)).toEqual([3, 3]);
-  for (const f of j.checkForms) {
+  expect(j.checkForms.map((f) => f.length)).toEqual([7, 7, 1, 1]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([3, 3, 1, 1]);
+  for (const f of j.checkForms.slice(0, 2)) {
     expect(f.filter((q) => q.rubric)).toHaveLength(2);
     expect(
       f.every((q) => !q.model && !/Higher/i.test(q.title + q.prompt)),
@@ -335,4 +335,36 @@ test("earlier drawn products and route/test questions retain direct exposure wit
     .find((q) => q.id === "crk-v1-r-bromine")!;
   expect(prior.exposureAliases).toContain("path-v1-d1-test");
   expect(j.reviewForms[0][0].exposureAliases).toContain(prior.id);
+});
+
+test("new combustion equations conserve each element and retain malformed versus valid wrong coefficients", () => {
+  for (const [suffix, carbons, hydrogens] of [
+    ["p-ethene", 2, 4],
+    ["cb-propene", 3, 6],
+  ] as const) {
+    const q = all.find((q) => q.id === "path-comb-v1-" + suffix)!;
+    const values = Object.fromEntries(q.parts!.map((p) => [p.id, p.answer]));
+    let divisor = 0;
+    for (const value of Object.values(values)) {
+      expect(Number.isInteger(value) && value > 0).toBe(true);
+      let a = divisor,
+        b = value;
+      while (b) [a, b] = [b, a % b];
+      divisor = a;
+    }
+    expect(divisor).toBe(1);
+    expect(values.fuel * carbons).toBe(values.carbonDioxide);
+    expect(values.fuel * hydrogens).toBe(2 * values.water);
+    expect(2 * values.oxygen).toBe(2 * values.carbonDioxide + values.water);
+    expect(mark(q, q.answer).correct).toBe(true);
+    const raw = JSON.stringify({ ...JSON.parse(q.answer), oxygen: "1..2" });
+    expect(mark(q, raw).invalid).toBe(true);
+    const fraction = JSON.stringify({ ...JSON.parse(q.answer), oxygen: "1/2" });
+    expect(mark(q, fraction).invalid).not.toBe(true);
+    expect(mark(q, fraction).correct).toBe(false);
+    const wrong = JSON.stringify({ ...JSON.parse(q.answer), oxygen: "1" });
+    expect(mark(q, wrong).invalid).not.toBe(true);
+    expect(mark(q, wrong).correct).toBe(false);
+    expect(mark(q, wrong).feedback).toContain("Revisit O₂.");
+  }
 });
