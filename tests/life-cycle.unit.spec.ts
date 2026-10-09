@@ -24,18 +24,18 @@ import {
 } from "../src/lib/workbench";
 import { lessons } from "../src/content/curriculum";
 import { mark } from "../src/lib/marking";
-test("one67-task shared lifecycle lesson has six deliberate activities and15 sources with faded independent support", () => {
+test("one89-task shared lifecycle/resource lesson has six deliberate activities and15 sources with faded independent support", () => {
   const l = lessons.find((l) => l.slug === "life-cycle-and-recycling")!;
   expect(l.journey).toBe(j);
   expect(l.tier).toBe("foundation");
   expect(l.course).toBe("combined");
-  expect(all).toHaveLength(67);
-  expect(new Set(all.map((q) => q.id)).size).toBe(67);
-  expect(j.refresher).toHaveLength(16);
-  expect(j.guided).toHaveLength(6);
-  expect(j.practice).toHaveLength(23);
-  expect(j.checkForms.map((f) => f.length)).toEqual([6, 6]);
-  expect(j.reviewForms.map((f) => f.length)).toEqual([3, 3]);
+  expect(all).toHaveLength(89);
+  expect(new Set(all.map((q) => q.id)).size).toBe(89);
+  expect(j.refresher).toHaveLength(19);
+  expect(j.guided).toHaveLength(9);
+  expect(j.practice).toHaveLength(27);
+  expect(j.checkForms.map((f) => f.length)).toEqual([6, 6, 3, 3]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([3, 3, 3, 3]);
   expect(Object.keys(R)).toHaveLength(15);
   expect(j.practiceGroups!.flatMap((g) => g.taskIds)).toEqual(
     j.practice.map((q) => q.id),
@@ -256,7 +256,7 @@ test("26 scalar answers and eight independent24-field constructions match separa
   expect((540 + 15 * 6) / 15).toBe(42);
   expect(160 - 150 * 0.8).toBe(40);
 });
-test("paper/plastic trade-offs and thirteen extended responses preserve honest manually reviewed judgement", () => {
+test("paper/plastic trade-offs and extended and short resource responses preserve honest manually reviewed judgement", () => {
   expect(R.bags.expected).toEqual({
     energyChoice: "a",
     waterChoice: "a",
@@ -270,7 +270,7 @@ test("paper/plastic trade-offs and thirteen extended responses preserve honest m
     judgement: "conditional",
   });
   const written = all.filter((q) => q.rubric);
-  expect(written).toHaveLength(13);
+  expect(written).toHaveLength(24);
   for (const q of written) {
     expect(q.referenceResponse).toBe(q.answer);
     expect(mark(q, q.answer).selfReview).toBe(true);

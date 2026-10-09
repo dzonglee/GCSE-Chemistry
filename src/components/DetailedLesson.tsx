@@ -215,11 +215,16 @@ export function DetailedLesson({
         : stage === "guided"
           ? "Practise without the model →"
           : "Return to learning →";
+  const compactResourceReview =
+    lesson.slug === "life-cycle-and-recycling" &&
+    work.run?.kind === "review" &&
+    work.run.ids.every((id) => id.startsWith("lca-v1-resource-"));
   const compactReview =
     (lesson.slug === "inside-an-atom" ||
       lesson.slug === "balancing-equations" ||
       lesson.slug === "transition-metals" ||
       lesson.slug === "atomic-models" ||
+      compactResourceReview ||
       [
         "periodic-development",
         "group-reactions",
@@ -254,6 +259,7 @@ export function DetailedLesson({
     (lesson.slug === "balancing-equations" ||
       lesson.slug === "transition-metals" ||
       lesson.slug === "atomic-models" ||
+      compactResourceReview ||
       [
         "periodic-development",
         "group-reactions",
