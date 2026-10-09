@@ -1,0 +1,17 @@
+[
+  {
+    "file": "tests/ion-equations.browser.spec.ts",
+    "sha256": "96ceee4dd9500a6d309010ef2bf64e264a52390a7c75273c2c1073c037549af4",
+    "exact_patch_result": true
+  },
+  {
+    "file": "tests/ion-tests.browser.spec.ts",
+    "sha256": "2fcb226627e62f38ad240cc0e7346cf1bd7a5288ca15066ce4d0ce77123e3238",
+    "exact_patch_result": true
+  },
+  {
+    "file": "tests/ion-native-capture.ts",
+    "sha256": "f1a1549537a1d95cd6400a73ca577fea86d7dd877300d06ceb6400f4d52bfa04",
+    "exact_patch_result": true
+  }
+]

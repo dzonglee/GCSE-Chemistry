@@ -1,0 +1,14 @@
+--- a/src/components/DetailedLesson.tsx
++++ b/src/components/DetailedLesson.tsx
+@@ -761,7 +761,10 @@
+                                   ? "Use the criteria to check every atom, bond and functional group."
+                                   : q.fuelDrawing
+                                     ? "Use the criteria to check your points, fit and estimate."
+-                                    : "Improve any missing point using the marking points above. Include the reasons for your conclusion."}
++                                    : q.id.startsWith("ion-tests-v1-write-") ||
++                                        q.id === "ion-tests-v1-p-molecular"
++                                      ? "Use the criteria to check formulas, coefficients, state symbols and any requested spectator ions."
++                                      : "Improve any missing point using the marking points above. Include the reasons for your conclusion."}
+                         </p>
+                       </>
+                     )}

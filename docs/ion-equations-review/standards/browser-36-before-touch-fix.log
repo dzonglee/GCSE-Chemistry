@@ -1,0 +1,59 @@
+[WebServer] (node:74650) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 36 tests using 2 workers
+
+(node:74666) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:74667) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/ion-equations.browser.spec.ts:219:5 › new cold and seven-day written forms seal references, retain old history, reject malformed recording and keep helped equivalents non-fresh (35.1s)
+  ✓   2 [desktop] › tests/ion-equations.browser.spec.ts:124:5 › complete writing at fonts-ready320/390/1280 retains malformed drafts, recordable wrong chemistry and recovery (42.3s)
+  ✓   4 [desktop] › tests/ion-equations.browser.spec.ts:507:5 › all original manual practice controls fit and retain malformed and wrong work without automatic marks (55.3s)
+(node:76317) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › flame: original science, wrong proposal, undo, scoped clear and reload (10.0s)
+  ✓   6 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › hydroxide: original science, wrong proposal, undo, scoped clear and reload (10.2s)
+  ✓   3 [desktop] › tests/ion-equations.browser.spec.ts:397:5 › every original sealed ion question has a complete first response within664px at320/390/1280 (1.6m)
+(node:76941) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › anion: original science, wrong proposal, undo, scoped clear and reload (11.4s)
+  ✓   8 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › equation: original science, wrong proposal, undo, scoped clear and reload (12.2s)
+  ✓   9 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › fault: original science, wrong proposal, undo, scoped clear and reload (12.2s)
+  ✓  11 [desktop] › tests/ion-tests.browser.spec.ts:143:5 › first ion control is usable on a short screen and long selected values stay readable at 320px (5.6s)
+  ✓  10 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › compound: original science, wrong proposal, undo, scoped clear and reload (12.1s)
+  ✓  12 [desktop] › tests/ion-tests.browser.spec.ts:159:5 › all 35 practice responses use real answers, coefficient construction and honest written review (17.0s)
+  ✓  14 [desktop] › tests/ion-tests.browser.spec.ts:285:5 › reading both original hydroxide stages leaves the chemical proposal unchanged (5.8s)
+  ✓  13 [desktop] › tests/ion-tests.browser.spec.ts:190:5 › two reserved ten-question forms and delayed five-question forms keep marking sealed and criteria explicit (21.6s)
+  ✓  15 [desktop] › tests/ion-tests.browser.spec.ts:320:5 › a wrong equation shows actual zero and charge imbalance, then the smallest positive ratio (6.0s)
+  ✓  17 [desktop] › tests/ion-tests.browser.spec.ts:455:5 › unavailable WebGL retains readable portions and wrong scientific choices (5.6s)
+  ✓  16 [desktop] › tests/ion-tests.browser.spec.ts:344:5 › real 3D portions export current wrong reagents, preserve camera-independent work and retain fresh separation (9.3s)
+(node:77856) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  18 [desktop] › tests/ion-tests.browser.spec.ts:486:5 › wrong practice response offers its specific recovery and returns to the retained task (5.4s)
+(node:77878) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  20 [mobile] › tests/ion-equations.browser.spec.ts:219:5 › new cold and seven-day written forms seal references, retain old history, reject malformed recording and keep helped equivalents non-fresh (35.1s)
+  ✓  19 [mobile] › tests/ion-equations.browser.spec.ts:124:5 › complete writing at fonts-ready320/390/1280 retains malformed drafts, recordable wrong chemistry and recovery (42.4s)
+  ✓  22 [mobile] › tests/ion-equations.browser.spec.ts:507:5 › all original manual practice controls fit and retain malformed and wrong work without automatic marks (57.3s)
+(node:79517) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  23 [mobile] › tests/ion-tests.browser.spec.ts:87:7 › flame: original science, wrong proposal, undo, scoped clear and reload (8.7s)
+  ✓  24 [mobile] › tests/ion-tests.browser.spec.ts:87:7 › hydroxide: original science, wrong proposal, undo, scoped clear and reload (8.7s)
+  ✓  21 [mobile] › tests/ion-equations.browser.spec.ts:397:5 › every original sealed ion question has a complete first response within664px at320/390/1280 (1.6m)
+(node:80186) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  25 [mobile] › tests/ion-tests.browser.spec.ts:87:7 › anion: original science, wrong proposal, undo, scoped clear and reload (11.4s)
+  ✓  26 [mobile] › tests/ion-tests.browser.spec.ts:87:7 › equation: original science, wrong proposal, undo, scoped clear and reload (9.3s)
+  ✓  27 [mobile] › tests/ion-tests.browser.spec.ts:87:7 › fault: original science, wrong proposal, undo, scoped clear and reload (9.8s)
+  ✓  29 [mobile] › tests/ion-tests.browser.spec.ts:143:5 › first ion control is usable on a short screen and long selected values stay readable at 320px (4.3s)
+  ✓  28 [mobile] › tests/ion-tests.browser.spec.ts:87:7 › compound: original science, wrong proposal, undo, scoped clear and reload (9.8s)
+  ✓  30 [mobile] › tests/ion-tests.browser.spec.ts:159:5 › all 35 practice responses use real answers, coefficient construction and honest written review (14.8s)
+  ✓  31 [mobile] › tests/ion-tests.browser.spec.ts:190:5 › two reserved ten-question forms and delayed five-question forms keep marking sealed and criteria explicit (17.4s)
+  ✓  32 [mobile] › tests/ion-tests.browser.spec.ts:285:5 › reading both original hydroxide stages leaves the chemical proposal unchanged (4.9s)
+  ✓  33 [mobile] › tests/ion-tests.browser.spec.ts:320:5 › a wrong equation shows actual zero and charge imbalance, then the smallest positive ratio (4.7s)
+  ✓  34 [mobile] › tests/ion-tests.browser.spec.ts:344:5 › real 3D portions export current wrong reagents, preserve camera-independent work and retain fresh separation (7.6s)
+  ✓  35 [mobile] › tests/ion-tests.browser.spec.ts:455:5 › unavailable WebGL retains readable portions and wrong scientific choices (5.1s)
+  ✓  36 [mobile] › tests/ion-tests.browser.spec.ts:486:5 › wrong practice response offers its specific recovery and returns to the retained task (4.1s)
+
+  36 passed (6.3m)

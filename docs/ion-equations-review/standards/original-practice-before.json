@@ -1,0 +1,128 @@
+[
+  {
+    "mode": "desktop",
+    "width": 320,
+    "index": 25,
+    "height": 153.984375,
+    "bottom": 890.765625
+  },
+  {
+    "mode": "desktop",
+    "width": 320,
+    "index": 26,
+    "height": 153.984375,
+    "bottom": 823.78125
+  },
+  {
+    "mode": "desktop",
+    "width": 320,
+    "index": 27,
+    "height": 153.984375,
+    "bottom": 846.109375
+  },
+  {
+    "mode": "desktop",
+    "width": 390,
+    "index": 25,
+    "height": 153.984375,
+    "bottom": 846.109375
+  },
+  {
+    "mode": "desktop",
+    "width": 390,
+    "index": 26,
+    "height": 153.984375,
+    "bottom": 801.453125
+  },
+  {
+    "mode": "desktop",
+    "width": 390,
+    "index": 27,
+    "height": 153.984375,
+    "bottom": 797.796875
+  },
+  {
+    "mode": "desktop",
+    "width": 1280,
+    "index": 25,
+    "height": 161.71875,
+    "bottom": 768.84375
+  },
+  {
+    "mode": "desktop",
+    "width": 1280,
+    "index": 26,
+    "height": 161.71875,
+    "bottom": 744.53125
+  },
+  {
+    "mode": "desktop",
+    "width": 1280,
+    "index": 27,
+    "height": 161.71875,
+    "bottom": 744.53125
+  },
+  {
+    "mode": "mobile",
+    "width": 320,
+    "index": 25,
+    "height": 153.984375,
+    "bottom": 890.765625
+  },
+  {
+    "mode": "mobile",
+    "width": 320,
+    "index": 26,
+    "height": 153.984375,
+    "bottom": 823.78125
+  },
+  {
+    "mode": "mobile",
+    "width": 320,
+    "index": 27,
+    "height": 153.984375,
+    "bottom": 846.109375
+  },
+  {
+    "mode": "mobile",
+    "width": 390,
+    "index": 25,
+    "height": 153.984375,
+    "bottom": 846.109375
+  },
+  {
+    "mode": "mobile",
+    "width": 390,
+    "index": 26,
+    "height": 153.984375,
+    "bottom": 801.453125
+  },
+  {
+    "mode": "mobile",
+    "width": 390,
+    "index": 27,
+    "height": 153.984375,
+    "bottom": 797.796875
+  },
+  {
+    "mode": "mobile",
+    "width": 1280,
+    "index": 25,
+    "height": 161.71875,
+    "bottom": 768.84375
+  },
+  {
+    "mode": "mobile",
+    "width": 1280,
+    "index": 26,
+    "height": 161.71875,
+    "bottom": 744.53125
+  },
+  {
+    "mode": "mobile",
+    "width": 1280,
+    "index": 27,
+    "height": 161.71875,
+    "bottom": 744.53125
+  }
+]

@@ -1,4 +1,6 @@
-# Executed validation
+# Original delivery validation (historical)
+
+[Current standards recheck, corrected coverage and final results](standards-comparison.md) supersede the original test-clock method and narrower original-layout coverage below.
 
 Scope: ion-tests only. This is not a completed whole-course browser regression. Chemistry production ran on own port3202; the actual Maths reference copy ran on own3300. Native `/usr/bin/chromium` ran both desktop and iPhone13 projects, including explicit fonts-ready320/390/1280 ×664px views. No reused servers, retries or reduced thresholds.
 

@@ -1,0 +1,237 @@
+--- a/tests/ion-equations.browser.spec.ts
++++ b/tests/ion-equations.browser.spec.ts
+@@ -1 +1 @@
+-import { test, expect, type Page } from "@playwright/test";
++import { test, expect, devices, type Page } from "@playwright/test";
+@@ -19,0 +20 @@
++import { assertIonNativeDevice, captureIonNative } from "./ion-native-capture";
+@@ -40,0 +42 @@
++  await assertIonNativeDevice(page);
+@@ -50,0 +53,4 @@
++      native: await page.evaluate(() => ({
++        touch: navigator.maxTouchPoints > 0,
++        dpr: devicePixelRatio,
++      })),
+@@ -60,5 +66,10 @@
+-  for (const font of await page
+-    .locator("svg text")
+-    .evaluateAll((nodes) =>
+-      nodes.map((node) => Number.parseFloat(getComputedStyle(node).fontSize)),
+-    ))
++  for (const font of await page.locator("svg text").evaluateAll((nodes) =>
++    nodes.map((node) => {
++      const text = node as SVGTextElement,
++        matrix = text.getScreenCTM();
++      return (
++        Number.parseFloat(getComputedStyle(text).fontSize) *
++        (matrix ? Math.hypot(matrix.a, matrix.b) : 1)
++      );
++    }),
++  ))
+@@ -76,0 +88,9 @@
++  await page.evaluate(() => {
++    (document.activeElement as HTMLElement)?.blur();
++    const nav = document.querySelector<HTMLElement>(".sample-stages"),
++      active = nav?.querySelector<HTMLElement>('[aria-current="step"]');
++    if (nav && active)
++      nav.scrollLeft =
++        active.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2;
++    document.querySelector<HTMLElement>(".sidebar")?.scrollTo(0, 0);
++  });
+@@ -80,9 +100,11 @@
+-  await page.screenshot({
+-    path: path.join(dir, name + "-viewport.png"),
+-    fullPage: false,
+-    scale: "css",
+-  });
+-  await page.screenshot({
+-    path: path.join(dir, name + ".png"),
+-    fullPage: true,
+-    scale: "css",
++  await captureIonNative(page, async () => {
++    await page.screenshot({
++      path: path.join(dir, name + "-viewport.png"),
++      fullPage: false,
++      scale: "css",
++    });
++    await page.screenshot({
++      path: path.join(dir, name + ".png"),
++      fullPage: true,
++      scale: "css",
++    });
+@@ -99 +121,3 @@
+-  await page.getByRole("button", { name: "Practise", exact: true }).click();
++  const stage = page.getByRole("button", { name: "Practise", exact: true });
++  if (test.info().project.name === "mobile") await stage.tap();
++  else await stage.click();
+@@ -134,0 +159,6 @@
++    );
++    await expect(page.locator(".question-panel .feedback")).toContainText(
++      "check formulas, coefficients, state symbols",
++    );
++    await expect(page.locator(".question-panel .feedback")).not.toContainText(
++      "Include the reasons for your conclusion",
+@@ -190,0 +221 @@
++  const before = await state(page);
+@@ -194,0 +226,3 @@
++  const after = await state(page);
++  expect(after.history).toEqual(before.history);
++  expect(after.run).toEqual(before.run);
+@@ -421,0 +456,3 @@
++        ...devices[
++          info.project.name === "mobile" ? "iPhone 13" : "Desktop Chrome"
++        ],
+@@ -432,0 +470,8 @@
++        expect(await page.evaluate(() => navigator.maxTouchPoints > 0)).toBe(
++          info.project.name === "mobile",
++        );
++        expect(await page.evaluate(() => devicePixelRatio)).toBe(
++          info.project.name === "mobile"
++            ? devices["iPhone 13"].deviceScaleFactor
++            : 1,
++        );
+@@ -465,0 +511 @@
++        expect(actual.history.slice(0, -1)).toEqual(work.history ?? []);
+@@ -471,0 +518,45 @@
++
++test("all original manual practice controls fit and retain malformed and wrong work without automatic marks", async ({
++  page,
++}, info) => {
++  test.setTimeout(120000);
++  for (const width of [320, 390, 1280]) {
++    await page.setViewportSize({ width, height: 664 });
++    await page.goto(route);
++    for (const index of [25, 26, 27]) {
++      const q = j.practice[index];
++      await practice(page, index);
++      await layout(page, 'textarea[aria-label="Your explanation"]');
++      const input = page.getByLabel("Your explanation", { exact: true });
++      const attempts = (await state(page)).attempts[q.id];
++      await input.fill(malformed);
++      await saved(page);
++      await page.reload();
++      await expect(input).toHaveValue(malformed);
++      expect((await state(page)).attempts[q.id]).toEqual(attempts);
++      await input.fill(wrong);
++      await page.locator(".sample-check-answer").click();
++      await expect(page.locator(".question-panel .feedback")).toContainText(
++        "Compare",
++      );
++      if (index === 26) {
++        await expect(page.locator(".question-panel .feedback")).toContainText(
++          "check formulas, coefficients, state symbols",
++        );
++        await expect(
++          page.locator(".question-panel .feedback"),
++        ).not.toContainText("Include the reasons for your conclusion");
++      }
++      await saved(page);
++      await page.reload();
++      await expect(input).toHaveValue(wrong);
++      const attempt = (await state(page)).attempts[q.id].at(-1);
++      expect(attempt.correct).toBe(false);
++      expect(attempt.answer).toBe(wrong);
++      await shot(
++        page,
++        `${info.project.name}-original-practice-${index + 1}-${width}`,
++      );
++    }
++  }
++});
+--- a/tests/ion-tests.browser.spec.ts
++++ b/tests/ion-tests.browser.spec.ts
+@@ -1,0 +2 @@
++import { assertIonNativeDevice, captureIonNative } from "./ion-native-capture";
+@@ -54,0 +56,4 @@
++  await p.evaluate(async () => {
++    await document.fonts.ready;
++  });
++  await assertIonNativeDevice(p);
+@@ -56,3 +61 @@
+-    await p.evaluate(
+-      () => document.documentElement.scrollWidth <= innerWidth + 1,
+-    ),
++    await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
+@@ -73,4 +76,6 @@
+-  await p.screenshot({
+-    path: path.join(dir, `${device}-${name}.png`),
+-    fullPage: true,
+-    scale: "css",
++  await captureIonNative(p, async () => {
++    await p.screenshot({
++      path: path.join(dir, `${device}-${name}.png`),
++      fullPage: true,
++      scale: "css",
++    });
+@@ -250,10 +255,6 @@
+-    await page.evaluate(
+-      ({ key, delay }) => {
+-        const p = JSON.parse(localStorage.getItem(key)!);
+-        for (const r of p.work["ion-tests"].history)
+-          r.submitted = Date.now() - delay - 1000;
+-        p.work["ion-tests"].run.submitted = Date.now() - delay - 1000;
+-        localStorage.setItem(key, JSON.stringify(p));
+-      },
+-      { key: STORAGE_KEY, delay: REVIEW_DELAY },
+-    );
++    const retained = await page.evaluate(
++      (key) => JSON.parse(localStorage.getItem(key)!).work["ion-tests"],
++      STORAGE_KEY,
++    );
++    const now = await page.evaluate(() => Date.now());
++    await page.clock.setSystemTime(now + REVIEW_DELAY + 1000);
+@@ -260,0 +262,6 @@
++    const afterClock = await page.evaluate(
++      (key) => JSON.parse(localStorage.getItem(key)!).work["ion-tests"],
++      STORAGE_KEY,
++    );
++    expect(afterClock.history).toEqual(retained.history);
++    expect(afterClock.run).toEqual(retained.run);
+--- /dev/null
++++ b/tests/ion-native-capture.ts
+@@ -0,0 +1,45 @@
++import {
++  devices,
++  expect,
++  test,
++  type CDPSession,
++  type Page,
++} from "@playwright/test";
++
++const sessions = new WeakMap<Page, CDPSession>();
++
++export async function assertIonNativeDevice(page: Page) {
++  const mobile = test.info().project.name === "mobile";
++  expect(await page.evaluate(() => navigator.maxTouchPoints > 0)).toBe(mobile);
++  expect(await page.evaluate(() => devicePixelRatio)).toBe(
++    mobile ? devices["iPhone 13"].deviceScaleFactor : 1,
++  );
++}
++
++export async function captureIonNative(
++  page: Page,
++  capture: () => Promise<void>,
++) {
++  const touchPoints = await page.evaluate(() => navigator.maxTouchPoints);
++  try {
++    await capture();
++  } finally {
++    // Chromium full-page capture resets touch emulation. Restore the native
++    // protocol setting, without overriding navigator or altering the app.
++    if (touchPoints) {
++      let session = sessions.get(page);
++      if (!session) {
++        session = await page.context().newCDPSession(page);
++        sessions.set(page, session);
++      }
++      await session.send("Emulation.setTouchEmulationEnabled", {
++        enabled: true,
++        maxTouchPoints: touchPoints,
++      });
++      // Detaching also resets emulation; context closure owns session cleanup.
++    }
++    expect(await page.evaluate(() => navigator.maxTouchPoints)).toBe(
++      touchPoints,
++    );
++  }
++}

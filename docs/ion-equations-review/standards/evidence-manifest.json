@@ -1,0 +1,367 @@
+[
+  {
+    "file": "docs/ion-equations-review/README.md",
+    "bytes": 17068,
+    "sha256": "70080176e125c719120b1c953008b36be02bfabf30584f0d0bd153adb2a2048a"
+  },
+  {
+    "file": "docs/ion-equations-review/feature-test-update.patch",
+    "bytes": 11134,
+    "sha256": "0b2f2a25c3ee1f11043142166f64244306e3f5a8550cc2d5743c8c13ea761cd2"
+  },
+  {
+    "file": "docs/ion-equations-review/main-test-update.patch",
+    "bytes": 8421,
+    "sha256": "d1e758f06e1edf8d58e00489d90a2ac35b3f3564314ea461543a84859d6f152d"
+  },
+  {
+    "file": "docs/ion-equations-review/shared-equation-feedback.patch",
+    "bytes": 1018,
+    "sha256": "5dc53a8e1aed2fd4e8a40ab510356ce151fe74fe8862e48c98c32be20f5e2c86"
+  },
+  {
+    "file": "docs/ion-equations-review/shared-followup.patch",
+    "bytes": 2764,
+    "sha256": "57d417ff9b2d44cb7c2b7371297a8dc51dcbc8e98e5116e6a0cace83932d6aa0"
+  },
+  {
+    "file": "docs/ion-equations-review/shared-native-assessment.patch",
+    "bytes": 5675,
+    "sha256": "15f634c61efa9eda16f2fa37363ebaecce8fda099da6d62bc64b6b80259db531"
+  },
+  {
+    "file": "docs/ion-equations-review/shared-original-practice.patch",
+    "bytes": 1746,
+    "sha256": "f5cb48cd15724fe1a706959b7f05fdb9fe84bc40c41a27071afa2a234d6ae2b5"
+  },
+  {
+    "file": "docs/ion-equations-review/standards-comparison.md",
+    "bytes": 19760,
+    "sha256": "267f5b98ff44d68b40fe2da4a61288abd8679e9e8233b9e3410ea9bacb4e9a49"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/browser-36-before-touch-fix.log",
+    "bytes": 7422,
+    "sha256": "f1219c268e30decc994faa88febd4622a80efc498162e4d11ddd2b348ede7842"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/browser-36-initial-stopped.log",
+    "bytes": 8188,
+    "sha256": "73c52c7c8a1392b52b6dfe130bbebcf949ca845a3a7f6b06857a9b60cc3fcfbe"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/browser-feedback-final.log",
+    "bytes": 1627,
+    "sha256": "b6c1746c453431f4de97a0ea7cc58ddea2360f19124b80483326dcdbc232deef"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/browser-initial-stopped.log",
+    "bytes": 7999,
+    "sha256": "1b3bec3319f1e94d6991d3b87c11fd6117120b26ab0dc34e5790588d79afccf9"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/browser-legacy-clock-final.log",
+    "bytes": 927,
+    "sha256": "bd2fe474b55883f135c2fcce70ebef1f26c070d9666e33da025ac3b0080c13cf"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/browser-native-final.log",
+    "bytes": 7422,
+    "sha256": "0dd2113358b209845b0753a9764a49a889b746de82614862285fa3e79db277f6"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/build-environment-failure.md",
+    "bytes": 623,
+    "sha256": "d5217cd5351c2721663a9ffec184cc3e9eefd1ffb09d5073e276397878aec75a"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/build.log",
+    "bytes": 1496,
+    "sha256": "097d3233823c418318ff13eea15821f770f1e47a9b763ab9945e642cc44b7b1b"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/changed-files.txt",
+    "bytes": 4275,
+    "sha256": "6dbab9fdbf666988d7cd04345541958fc70dcfbb282bf338102916fa0f78d84f"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/feedback-branch-freeze-verified.log",
+    "bytes": 31,
+    "sha256": "eb2970cc91ba4bb6a0f0673daf0a3af6aa30603544cfa6f0e4f814d4235d28d2"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/feedback-candidate-build.log",
+    "bytes": 1497,
+    "sha256": "82f30e5a4959405912c0bef73656ee8c7e8585e0836e2356683f7ad0acb6a671"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/feedback-candidate-freeze-verified.log",
+    "bytes": 31,
+    "sha256": "ed23f8abf222c8ae0b32b1622c801e9138fbe2d3da1b908cf33e3ef81ff0c984"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/feedback-candidate-lint.log",
+    "bytes": 40,
+    "sha256": "fe60c82f67b74697fbe667110219784fdb196a0def9dafd2b230d512936b687e"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/feedback-candidate-typecheck.log",
+    "bytes": 125,
+    "sha256": "b95b82184426eac0916298de5376436a4c1b727205c84724826eca2318d8d14e"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/feedback-candidate-unit-full.log",
+    "bytes": 154814,
+    "sha256": "fd1fd24a2b06a16f0848a4e77c512f1d6a3481795dd0f780d505ecd11efdb538"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/feedback-lint.log",
+    "bytes": 40,
+    "sha256": "fe60c82f67b74697fbe667110219784fdb196a0def9dafd2b230d512936b687e"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/feedback-typecheck.log",
+    "bytes": 125,
+    "sha256": "b95b82184426eac0916298de5376436a4c1b727205c84724826eca2318d8d14e"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/geometry-feedback-final.jsonl",
+    "bytes": 9582,
+    "sha256": "3bbc48fa38fb2516be2b5c53fbe7f284ba32508e8b825ad389d45ee4e921d11f"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/geometry-feedback-summary.json",
+    "bytes": 234,
+    "sha256": "88a07cfbada4b7c0649bf75d2f0ae5b7a483475cf1c397565a18f8e7cc718f30"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/geometry-native-final.jsonl",
+    "bytes": 77946,
+    "sha256": "c5acdf28c4afcbd7a84e89b13aa810e36f49466af62c232a2e751130787bfe60"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/geometry-native-summary.json",
+    "bytes": 413,
+    "sha256": "26060586b75e798de4499dccea358c9c84c19f88c2b7ad38c358fbabb59a22f0"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/history-harness-initial-error.md",
+    "bytes": 5196,
+    "sha256": "5b3d7399167d39b6f737c5a3b720134050383207de3379a444167bcb8edde573"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/legacy-clock-branch-freeze-verified.log",
+    "bytes": 31,
+    "sha256": "eb2970cc91ba4bb6a0f0673daf0a3af6aa30603544cfa6f0e4f814d4235d28d2"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/legacy-clock-candidate-freeze-verified.log",
+    "bytes": 31,
+    "sha256": "ed23f8abf222c8ae0b32b1622c801e9138fbe2d3da1b908cf33e3ef81ff0c984"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/legacy-clock-lint.log",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/lesson-comparison.json",
+    "bytes": 867,
+    "sha256": "263ec71e8d059eb86ac652e9ce8d351efa32fdcf7f6defff4aea58ec10a029f0"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/main-test-patch-apply-final.log",
+    "bytes": 138,
+    "sha256": "d4e675bae73143b84f8ad078b4b507171da210ace249f0f67742615614192053"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/main-test-patch-proof-final.json",
+    "bytes": 510,
+    "sha256": "c270e00ea20596128d969e405d337763b59fd2d876ffbe0e6f5d8e79cb8b73b4"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/native-typescript-child.json",
+    "bytes": 105,
+    "sha256": "1f97dfbacdc1d646c90a2136157d1e37d70604697b141a42579b2ea2c0147125"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/original-molecular-before-320.png",
+    "bytes": 346547,
+    "sha256": "a4c6c7a32c5b83ffa32f16a566c95c76958344ee2b3e58ef93686a413f70a5dc"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/original-practice-690-error.md",
+    "bytes": 14647,
+    "sha256": "e92345ed1f85df6e30ef984cf31087e9b831baaaf5ac09a00723cbb75abed1e6"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/original-practice-before.json",
+    "bytes": 2110,
+    "sha256": "62614abfe3d526e76b33ea23ea4064650c75ec48d9214c23fefd769ad87ab990"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/patch-apply-proof.json",
+    "bytes": 721,
+    "sha256": "add7fd4928203a421f5c92131a6e212a27aa16556ff4fa76531812c7498df224"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/patch-baseline-proof.json",
+    "bytes": 181,
+    "sha256": "4c444b1d161903f7cc23841aad60ee47f7104a48f0e2805064b27a34d1ac380e"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/practice-candidate-build-native.log",
+    "bytes": 1496,
+    "sha256": "5f84708df09977e4ceeab93dbf1f7c0269347c3b6aa0528876ef6bedc921860e"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/practice-candidate-build-retry.log",
+    "bytes": 273,
+    "sha256": "18ed80cb9e3141a3a298314b44232c621f111904c41538459fde17d5c1959b09"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/practice-candidate-build.log",
+    "bytes": 273,
+    "sha256": "7db29dc3debd33f54209b5350f97514f0e076efcbdeb6653b28bfa5528c06c9a"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/touch-probe.json",
+    "bytes": 666,
+    "sha256": "b5ec6f94c4a6714f773198384482cde322a0ab7656ea0b38a8c67b7d31f75312"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/touch-sequence.json",
+    "bytes": 497,
+    "sha256": "9585fe40bb06720d6688de7633e248c1d90cc70f5ba59fc47bfc5989cacf54af"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/touch-sequence.log",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "file": "docs/ion-equations-review/standards/unit-full.log",
+    "bytes": 154816,
+    "sha256": "249086b38b337e509129aa9c31900a7ad6a114804caa976481c63433cdba21ce"
+  },
+  {
+    "file": "docs/ion-equations-review/validation.md",
+    "bytes": 9727,
+    "sha256": "2815f1f41b5f7497cc757875cb01dccb60fe51bb4e3539733421b4087672079a"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/delayed-aluminium-320.png",
+    "bytes": 48007,
+    "sha256": "8f80f74aa2d5b2c585f7100449032a57b0168eaf2b08e500dd987232170a953b"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/delayed-manual-wrong-work-1280.png",
+    "bytes": 227935,
+    "sha256": "8225648d66f20ab5f200fb42fe83038a2427f8806e9f8009d50a7119cd26591f"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/guided-1280-full.png",
+    "bytes": 189468,
+    "sha256": "f94ed9443cfc92e3d76fa7fe1e88bbe05311784a418fd35e7a03f72d004332c7"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/guided-1280.png",
+    "bytes": 103861,
+    "sha256": "2c263f5bc41bdb0c4dd0740ce912c213e9076fc120e40577fe96a20675526ff0"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/guided-320-full.png",
+    "bytes": 143716,
+    "sha256": "e6a1e8dcc9f366692c3b0cf92d2ec14f75d9b2293afe6cdba841df733acfc1ee"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/guided-320.png",
+    "bytes": 47610,
+    "sha256": "5851be2e474d83b92c294776f58f341963b5eae9345436306efa7288c7061109"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/guided-390.png",
+    "bytes": 51299,
+    "sha256": "bdfc650b0cf557ac6634e3b6dd2eec2bdd201f2df4d9c6e9a90283b69563cacb"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/independent-1280.png",
+    "bytes": 89782,
+    "sha256": "3af7091476f343bc759352998a98eb370407fa57a01c76f3b22077456385c5b8"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/independent-320.png",
+    "bytes": 47097,
+    "sha256": "85829e47d558d37e0f209cba99f5104246722fffca2e48d09c94ee131d055a4f"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/independent-390.png",
+    "bytes": 48835,
+    "sha256": "cce25f94738753ce8d067c4a6a388b8a5047df2b1404af86aaafceffb18abe99"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/manual-wrong-work-1280.png",
+    "bytes": 132371,
+    "sha256": "b52aa2c34877764f4ac3ca8d8242b6d7641dc24bce33f1aa1895c4d6f5189a55"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/original-distinguishing-390.png",
+    "bytes": 53960,
+    "sha256": "8b4862104930eac4b653f30f18d3e6d42a7cb77bd82da01ee3bf4f3452266ede"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/original-method-1280.png",
+    "bytes": 103034,
+    "sha256": "d9a02376b792e6e7450f6c03617c61385db6425e43c590aa436b913ea11299ed"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/original-method-320-full.png",
+    "bytes": 147872,
+    "sha256": "ee534b96e601ae765cea9b6ec5650108a102a121033fc7e5e6af034b9a5e370a"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/original-method-320.png",
+    "bytes": 51834,
+    "sha256": "f0a7d67072b9d861b619bac49c615904866cd4071a35b7cd6fe4b9cad6a72596"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/original-method-390.png",
+    "bytes": 57620,
+    "sha256": "12a2ff8ca048134d4418b18e214ae4da2d7d54a9c1252e96ae1b68ea161bc081"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/original-molecular-1280.png",
+    "bytes": 96105,
+    "sha256": "e8aa51fc09df62624ada6dd00bf8a60fb7afe3a3655367428efbfad1ef02c9e7"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/original-molecular-320-full.png",
+    "bytes": 130378,
+    "sha256": "5a533625594bdc63aa2b81225c92852baf108d3279358182789a36ea2ae5f068"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/original-molecular-320.png",
+    "bytes": 50746,
+    "sha256": "91285e9c258ed947de0b2dac26d9c95865ac26838084c40d6d1ee4c58ba6fbe7"
+  },
+  {
+    "file": "docs/qa/ion-equations-final/standards-manifest.json",
+    "bytes": 8668,
+    "sha256": "37f693333df450da438c4fab55bb25f4483dff9e049f337373b066dc6f60bde0"
+  },
+  {
+    "file": "tests/ion-equations.browser.spec.ts",
+    "bytes": 20468,
+    "sha256": "96ceee4dd9500a6d309010ef2bf64e264a52390a7c75273c2c1073c037549af4"
+  },
+  {
+    "file": "tests/ion-native-capture.ts",
+    "bytes": 1341,
+    "sha256": "f1a1549537a1d95cd6400a73ca577fea86d7dd877300d06ceb6400f4d52bfa04"
+  },
+  {
+    "file": "tests/ion-tests.browser.spec.ts",
+    "bytes": 19657,
+    "sha256": "2fcb226627e62f38ad240cc0e7346cf1bd7a5288ca15066ce4d0ce77123e3238"
+  }
+]

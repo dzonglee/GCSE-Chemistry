@@ -1,0 +1,110 @@
+[WebServer] (node:72169) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 36 tests using 2 workers
+
+(node:72185) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:72186) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/ion-equations.browser.spec.ts:219:5 › new cold and seven-day written forms seal references, retain old history, reject malformed recording and keep helped equivalents non-fresh (35.7s)
+  ✓   2 [desktop] › tests/ion-equations.browser.spec.ts:124:5 › complete writing at fonts-ready320/390/1280 retains malformed drafts, recordable wrong chemistry and recovery (43.4s)
+  ✘   4 [desktop] › tests/ion-equations.browser.spec.ts:507:5 › all original manual practice controls fit and retain malformed and wrong work without automatic marks (2.9s)
+(node:73016) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › flame: original science, wrong proposal, undo, scoped clear and reload (11.1s)
+  ✓   6 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › hydroxide: original science, wrong proposal, undo, scoped clear and reload (10.4s)
+  ✓   7 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › anion: original science, wrong proposal, undo, scoped clear and reload (11.9s)
+  ✓   8 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › fault: original science, wrong proposal, undo, scoped clear and reload (10.2s)
+  ✓   9 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › equation: original science, wrong proposal, undo, scoped clear and reload (9.6s)
+  ✓  10 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › compound: original science, wrong proposal, undo, scoped clear and reload (9.8s)
+  ✘  11 [desktop] › tests/ion-tests.browser.spec.ts:143:5 › first ion control is usable on a short screen and long selected values stay readable at 320px (3.9s)
+  ✘   3 [desktop] › tests/ion-equations.browser.spec.ts:397:5 › every original sealed ion question has a complete first response within664px at320/390/1280 (1.3m)
+
+
+  1) [desktop] › tests/ion-equations.browser.spec.ts:507:5 › all original manual practice controls fit and retain malformed and wrong work without automatic marks
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 664
+    Received:    690.4375
+
+      74 |     expect(font).toBeGreaterThanOrEqual(12);
+      75 |   expect(box.height).toBeGreaterThanOrEqual(44);
+    > 76 |   expect(box.y + box.height).toBeLessThanOrEqual(664);
+         |                              ^
+      77 |   expect(
+      78 |     await page.evaluate(
+      79 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at layout (/workspace/chemistry-ion-runtime/tests/ion-equations.browser.spec.ts:76:30)
+        at /workspace/chemistry-ion-runtime/tests/ion-equations.browser.spec.ts:517:7
+
+    Error Context: test-results/browser/ion-equations.browser-all--3f19a-ork-without-automatic-marks-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/ion-equations.browser-all--3f19a-ork-without-automatic-marks-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/ion-equations.browser-all--3f19a-ork-without-automatic-marks-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [desktop] › tests/ion-equations.browser.spec.ts:397:5 › every original sealed ion question has a complete first response within664px at320/390/1280
+
+    Test was interrupted.
+
+    Error: browserContext.newPage: Test ended.
+     Please check out https://github.com/dequelabs/axe-core-npm/blob/develop/packages/playwright/error-handling.md
+
+      80 |     ),
+      81 |   ).toBe(true);
+    > 82 |   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+         |           ^
+      83 | }
+      84 | async function shot(page: Page, name: string) {
+      85 |   await ready(page);
+        at AxeBuilder.analyze (/workspace/chemistry-ion-runtime/node_modules/@axe-core/playwright/dist/index.js:253:13)
+        at layout (/workspace/chemistry-ion-runtime/tests/ion-equations.browser.spec.ts:82:11)
+        at /workspace/chemistry-ion-runtime/tests/ion-equations.browser.spec.ts:476:13
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/ion-equations.browser-ever-d781c--within664px-at320-390-1280-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/ion-equations.browser-ever-d781c--within664px-at320-390-1280-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [desktop] › tests/ion-tests.browser.spec.ts:143:5 › first ion control is usable on a short screen and long selected values stay readable at 320px
+
+    Test was interrupted.
+
+    Error: browserContext.newPage: Target page, context or browser has been closed
+     Please check out https://github.com/dequelabs/axe-core-npm/blob/develop/packages/playwright/error-handling.md
+
+      58 |     ),
+      59 |   ).toBe(true);
+    > 60 |   expect((await new AxeBuilder({ page: p }).analyze()).violations).toEqual([]);
+         |           ^
+      61 | }
+      62 | async function shot(p: Page, name: string, device: string) {
+      63 |   const dir = path.join(process.cwd(), "test-results", "qa", "ion-tests");
+        at AxeBuilder.analyze (/workspace/chemistry-ion-runtime/node_modules/@axe-core/playwright/dist/index.js:253:13)
+        at accessible (/workspace/chemistry-ion-runtime/tests/ion-tests.browser.spec.ts:60:11)
+        at /workspace/chemistry-ion-runtime/tests/ion-tests.browser.spec.ts:156:3
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/ion-tests.browser-first-io-f48e7-lues-stay-readable-at-320px-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/ion-tests.browser-first-io-f48e7-lues-stay-readable-at-320px-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [desktop] › tests/ion-equations.browser.spec.ts:507:5 › all original manual practice controls fit and retain malformed and wrong work without automatic marks
+  2 interrupted
+    [desktop] › tests/ion-equations.browser.spec.ts:397:5 › every original sealed ion question has a complete first response within664px at320/390/1280
+    [desktop] › tests/ion-tests.browser.spec.ts:143:5 › first ion control is usable on a short screen and long selected values stay readable at 320px
+  25 did not run
+  8 passed (2.2m)

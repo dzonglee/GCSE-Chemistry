@@ -1,0 +1,13 @@
+[WebServer] (node:90406) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 2 workers
+
+(node:90423) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:90422) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [mobile] › tests/ion-tests.browser.spec.ts:195:5 › two reserved ten-question forms and delayed five-question forms keep marking sealed and criteria explicit (18.6s)
+  ✓  2 [desktop] › tests/ion-tests.browser.spec.ts:195:5 › two reserved ten-question forms and delayed five-question forms keep marking sealed and criteria explicit (20.0s)
+
+  2 passed (26.8s)

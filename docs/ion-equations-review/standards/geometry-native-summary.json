@@ -1,0 +1,18 @@
+{
+  "measurements": 252,
+  "minimum_height": 46,
+  "maximum_bottom": 660.5,
+  "widths": [
+    320,
+    390,
+    1280
+  ],
+  "desktop_dpr1_touch_false": 126,
+  "mobile_dpr3_touch_true": 126,
+  "original_manual_measurements": 18,
+  "original_manual_max_bottom": 658.4375,
+  "runner_exit": 0,
+  "runtime_frozen_files": 2531,
+  "branch_frozen_files": 2565,
+  "both_trees_verified_unchanged_after_runner_exit": true
+}

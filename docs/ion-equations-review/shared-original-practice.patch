@@ -1,0 +1,62 @@
+--- a/src/app/ion-tests.css
++++ b/src/app/ion-tests.css
+@@ -542,3 +542,59 @@
+     align-items: center;
+   }
+ }
++
++/* Existing manual ion practice: keep the full prompt before the response,
++   with the task picker afterwards, as for the appended equation writing. */
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your explanation"]) {
++  display: flex;
++  flex-direction: column;
++  padding: 16px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your explanation"])
++  .sample-task-topline:has(.practice-task-picker) {
++  order: 3;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your explanation"])
++  > h2 {
++  font-size: 20px;
++  line-height: 1.35;
++  margin-bottom: 8px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your explanation"])
++  .sample-task-prompt {
++  font-size: 15px;
++  line-height: 1.4;
++  margin: 0 0 8px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your explanation"])
++  .question-panel {
++  padding: 12px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel
++  textarea[aria-label="Your explanation"] {
++  height: 104px;
++  min-height: 104px;
++}
++@media (max-width: 600px) {
++  .sample-lesson[data-lesson="ion-tests"]
++    .sample-task-panel
++    textarea[aria-label="Your explanation"] {
++    height: 84px;
++    min-height: 84px;
++  }
++}
++
++@media (max-width: 600px) {
++  .sample-lesson[data-lesson="ion-tests"]:has(
++      .sample-task-panel textarea[aria-label="Your explanation"]
++    )
++    :is(.sample-title-row, .sample-overview, .sample-stages) {
++    margin-bottom: 4px;
++  }
++}

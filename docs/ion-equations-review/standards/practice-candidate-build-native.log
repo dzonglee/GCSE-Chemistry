@@ -1,0 +1,53 @@
+
+> gcse-chemistry@0.1.0 build
+> next build
+
+▲ Next.js 16.3.5 (Turbopack)
+✓ Running next.config.ts took 21ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 153ms
+  Running TypeScript ...
+  Finished TypeScript in 3.2s ...
+  Collecting page data using 4 workers ...
+  Generating static pages using 4 workers (0/131) ...
+  Generating static pages using 4 workers (32/131)
+  Generating static pages using 4 workers (65/131)
+  Generating static pages using 4 workers (98/131)
+✓ Generating static pages using 4 workers (131/131) in 4.1s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /accessibility
+├ ○ /coverage
+├ ○ /diagnostics
+├   /diagnostics/[slug]
+│ ├ ● /diagnostics/foundation
+│ └ ● /diagnostics/higher
+├ ○ /exams
+├   /exams/[slug]
+│ ├ ● /exams/paper-1-foundation-extended
+│ ├ ● /exams/paper-2-foundation-extended
+│ ├ ● /exams/paper-1-higher-extended
+│ └ ● [+9 more paths]
+├ ○ /learn
+├   /lessons/[slug]
+│ ├ ● /lessons/inside-an-atom
+│ ├ ● /lessons/atomic-models
+│ ├ ● /lessons/atomic-scale
+│ └ ● [+92 more paths]
+├ ○ /practice
+├ ○ /preferences
+├ ○ /privacy
+├ ○ /terms
+└   /topics/[slug]
+  ├ ● /topics/atomic-structure
+  ├ ● /topics/bonding
+  ├ ● /topics/quantitative
+  └ ● [+7 more paths]
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)

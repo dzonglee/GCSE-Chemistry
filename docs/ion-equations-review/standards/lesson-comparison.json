@@ -1,0 +1,26 @@
+{
+  "compared_main": "4d86f94963e09812847fcac076e9b99d9f1a02f6",
+  "worker": "cc5d26e2f5859d7a49acd9ef5f475189dcb3786e",
+  "files": [
+    {
+      "file": "src/content/journeys/ion-equation-writing.ts",
+      "sha256": "95efa8f3f1a1af3f1c946851b328d973ac90f03b8431c7ecdf1ca4654952217d",
+      "identical_to_main": true
+    },
+    {
+      "file": "src/content/journeys/ion-tests.ts",
+      "sha256": "3e259e82b9add5577abb15b91229ab9d258a85a8d26b1eb239810a442a5bd17a",
+      "identical_to_main": true
+    },
+    {
+      "file": "src/lib/ion-equation-writing.ts",
+      "sha256": "2a90d84bc4d0dddc9a48c843c4b68ab7a830dc0c5ac3d8082eb7f1eb29e6be56",
+      "identical_to_main": true
+    },
+    {
+      "file": "tests/ion-equations.unit.spec.ts",
+      "sha256": "ab36ca9d63a4e2f0e3ecc7c98997aa68ac9446852fb91f78722f28e1bcbe9dae",
+      "identical_to_main": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Construct the whole equation", "height": 84, "bottom": 660.5}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a sequenced two-ion method", "height": 84, "bottom": 658.4375}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Magnesium chloride", "height": 84, "bottom": 558.4375}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a balanced molecular equation", "height": 84, "bottom": 574.4375}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": ".question-panel .answer-option", "title": "What stays in solution?", "height": 56, "bottom": 558.65625}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Initial aluminium precipitate", "height": 84, "bottom": 606.4375}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Explain the remaining pair", "height": 84, "bottom": 595.4375}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Calcium under supplied conditions", "height": 84, "bottom": 606.4375}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Construct the whole equation", "height": 84, "bottom": 639.5}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Magnesium chloride", "height": 84, "bottom": 558.4375}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a sequenced two-ion method", "height": 84, "bottom": 616.4375}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": ".question-panel .answer-option", "title": "What stays in solution?", "height": 56, "bottom": 510.34375}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a balanced molecular equation", "height": 84, "bottom": 553.4375}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Initial aluminium precipitate", "height": 84, "bottom": 558.4375}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Calcium under supplied conditions", "height": 84, "bottom": 585.4375}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Construct the whole equation", "height": 104, "bottom": 609.1875}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Explain the remaining pair", "height": 84, "bottom": 547.4375}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Magnesium chloride", "height": 104, "bottom": 543.515625}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a sequenced two-ion method", "height": 104, "bottom": 564.515625}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": ".question-panel .answer-option", "title": "What stays in solution?", "height": 56, "bottom": 550.46875}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Initial aluminium precipitate", "height": 104, "bottom": 543.515625}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "Your equations", "title": "Calcium under supplied conditions", "height": 104, "bottom": 543.515625}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a balanced molecular equation", "height": 104, "bottom": 543.515625}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Construct the whole equation", "height": 84, "bottom": 660.5}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": false, "dpr": 1}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Explain the remaining pair", "height": 104, "bottom": 543.515625}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Magnesium chloride", "height": 84, "bottom": 558.4375}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": ".question-panel .answer-option", "title": "What stays in solution?", "height": 56, "bottom": 558.65625}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Initial aluminium precipitate", "height": 84, "bottom": 606.4375}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Calcium under supplied conditions", "height": 84, "bottom": 606.4375}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a sequenced two-ion method", "height": 84, "bottom": 658.4375}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Construct the whole equation", "height": 84, "bottom": 639.5}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Magnesium chloride", "height": 84, "bottom": 558.4375}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a balanced molecular equation", "height": 84, "bottom": 574.4375}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": ".question-panel .answer-option", "title": "What stays in solution?", "height": 56, "bottom": 510.34375}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Initial aluminium precipitate", "height": 84, "bottom": 558.4375}
+{"viewport": {"width": 320, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Explain the remaining pair", "height": 84, "bottom": 595.4375}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Calcium under supplied conditions", "height": 84, "bottom": 585.4375}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Construct the whole equation", "height": 104, "bottom": 609.1875}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a sequenced two-ion method", "height": 84, "bottom": 616.4375}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Magnesium chloride", "height": 104, "bottom": 543.515625}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a balanced molecular equation", "height": 84, "bottom": 553.4375}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": ".question-panel .answer-option", "title": "What stays in solution?", "height": 56, "bottom": 550.46875}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Initial aluminium precipitate", "height": 104, "bottom": 543.515625}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "Your equations", "title": "Calcium under supplied conditions", "height": 104, "bottom": 543.515625}
+{"viewport": {"width": 390, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Explain the remaining pair", "height": 84, "bottom": 547.4375}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a sequenced two-ion method", "height": 104, "bottom": 564.515625}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Write a balanced molecular equation", "height": 104, "bottom": 543.515625}
+{"viewport": {"width": 1280, "height": 664}, "native": {"touch": true, "dpr": 3}, "selector": "textarea[aria-label=\"Your explanation\"]", "title": "Explain the remaining pair", "height": 104, "bottom": 543.515625}

@@ -1,0 +1,37 @@
+[
+  {
+    "label": "fresh",
+    "touch": 1,
+    "dpr": 3
+  },
+  {
+    "label": "after axe",
+    "touch": 1,
+    "dpr": 3
+  },
+  {
+    "label": "after viewport screenshot",
+    "touch": 1,
+    "dpr": 3
+  },
+  {
+    "label": "after full screenshot",
+    "touch": 0,
+    "dpr": 3
+  },
+  {
+    "label": "after viewport resize",
+    "touch": 0,
+    "dpr": 3
+  },
+  {
+    "label": "after reload",
+    "touch": 1,
+    "dpr": 3
+  },
+  {
+    "label": "after second axe",
+    "touch": 1,
+    "dpr": 3
+  }
+]

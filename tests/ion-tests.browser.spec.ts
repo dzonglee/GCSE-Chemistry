@@ -1,4 +1,5 @@
 import { test, expect, type Page, type Locator } from "@playwright/test";
+import { assertIonNativeDevice, captureIonNative } from "./ion-native-capture";
 import AxeBuilder from "@axe-core/playwright";
 import fs from "node:fs";
 import path from "node:path";
@@ -52,10 +53,12 @@ async function answer(p: Page, q: Question) {
   else await p.getByRole("radio", { name: q.answer, exact: true }).check();
 }
 async function accessible(p: Page) {
+  await p.evaluate(async () => {
+    await document.fonts.ready;
+  });
+  await assertIonNativeDevice(p);
   expect(
-    await p.evaluate(
-      () => document.documentElement.scrollWidth <= innerWidth + 1,
-    ),
+    await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
   ).toBe(true);
   expect((await new AxeBuilder({ page: p }).analyze()).violations).toEqual([]);
 }
@@ -70,10 +73,12 @@ async function shot(p: Page, name: string, device: string) {
       requestAnimationFrame(() => requestAnimationFrame(() => r())),
     );
   });
-  await p.screenshot({
-    path: path.join(dir, `${device}-${name}.png`),
-    fullPage: true,
-    scale: "css",
+  await captureIonNative(p, async () => {
+    await p.screenshot({
+      path: path.join(dir, `${device}-${name}.png`),
+      fullPage: true,
+      scale: "css",
+    });
   });
 }
 for (const mode of [
@@ -247,17 +252,19 @@ test("two reserved ten-question forms and delayed five-question forms keep marki
       page.getByRole("button", { name: "Start review →", exact: true }),
     ).toHaveCount(0);
     await saved(page);
-    await page.evaluate(
-      ({ key, delay }) => {
-        const p = JSON.parse(localStorage.getItem(key)!);
-        for (const r of p.work["ion-tests"].history)
-          r.submitted = Date.now() - delay - 1000;
-        p.work["ion-tests"].run.submitted = Date.now() - delay - 1000;
-        localStorage.setItem(key, JSON.stringify(p));
-      },
-      { key: STORAGE_KEY, delay: REVIEW_DELAY },
+    const retained = await page.evaluate(
+      (key) => JSON.parse(localStorage.getItem(key)!).work["ion-tests"],
+      STORAGE_KEY,
     );
+    const now = await page.evaluate(() => Date.now());
+    await page.clock.setSystemTime(now + REVIEW_DELAY + 1000);
     await page.reload();
+    const afterClock = await page.evaluate(
+      (key) => JSON.parse(localStorage.getItem(key)!).work["ion-tests"],
+      STORAGE_KEY,
+    );
+    expect(afterClock.history).toEqual(retained.history);
+    expect(afterClock.run).toEqual(retained.run);
     await page
       .getByRole("button", {
         name: f ? "Try the next form" : "Start review →",

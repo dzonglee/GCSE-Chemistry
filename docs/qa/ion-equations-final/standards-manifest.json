@@ -1,0 +1,173 @@
+[
+  {
+    "file": "guided-320.png",
+    "source_file": "mobile-guided-320-viewport.png",
+    "sha256": "5851be2e474d83b92c294776f58f341963b5eae9345436306efa7288c7061109",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "guided-320-full.png",
+    "source_file": "mobile-guided-320.png",
+    "sha256": "e6a1e8dcc9f366692c3b0cf92d2ec14f75d9b2293afe6cdba841df733acfc1ee",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "guided-390.png",
+    "source_file": "mobile-guided-390-viewport.png",
+    "sha256": "bdfc650b0cf557ac6634e3b6dd2eec2bdd201f2df4d9c6e9a90283b69563cacb",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "guided-1280.png",
+    "source_file": "desktop-guided-1280-viewport.png",
+    "sha256": "2c263f5bc41bdb0c4dd0740ce912c213e9076fc120e40577fe96a20675526ff0",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "guided-1280-full.png",
+    "source_file": "desktop-guided-1280.png",
+    "sha256": "f94ed9443cfc92e3d76fa7fe1e88bbe05311784a418fd35e7a03f72d004332c7",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "independent-320.png",
+    "source_file": "mobile-independent-0-320-viewport.png",
+    "sha256": "85829e47d558d37e0f209cba99f5104246722fffca2e48d09c94ee131d055a4f",
+    "personally_inspected": true,
+    "run": "36-case native run; independent/review unchanged by final learning-feedback cue",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "independent-390.png",
+    "source_file": "mobile-independent-0-390-viewport.png",
+    "sha256": "cce25f94738753ce8d067c4a6a388b8a5047df2b1404af86aaafceffb18abe99",
+    "personally_inspected": true,
+    "run": "36-case native run; independent/review unchanged by final learning-feedback cue",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "independent-1280.png",
+    "source_file": "desktop-independent-0-1280-viewport.png",
+    "sha256": "3af7091476f343bc759352998a98eb370407fa57a01c76f3b22077456385c5b8",
+    "personally_inspected": true,
+    "run": "36-case native run; independent/review unchanged by final learning-feedback cue",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "manual-wrong-work-1280.png",
+    "source_file": "desktop-independent-wrong-0.png",
+    "sha256": "b52aa2c34877764f4ac3ca8d8242b6d7641dc24bce33f1aa1895c4d6f5189a55",
+    "personally_inspected": true,
+    "run": "36-case native run; independent/review unchanged by final learning-feedback cue",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "delayed-aluminium-320.png",
+    "source_file": "mobile-delayed-opening-1-320-viewport.png",
+    "sha256": "8f80f74aa2d5b2c585f7100449032a57b0168eaf2b08e500dd987232170a953b",
+    "personally_inspected": true,
+    "run": "36-case native run; independent/review unchanged by final learning-feedback cue",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "delayed-manual-wrong-work-1280.png",
+    "source_file": "desktop-delayed-0.png",
+    "sha256": "8225648d66f20ab5f200fb42fe83038a2427f8806e9f8009d50a7119cd26591f",
+    "personally_inspected": true,
+    "run": "36-case native run; independent/review unchanged by final learning-feedback cue",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "original-method-320.png",
+    "source_file": "mobile-original-practice-26-320-viewport.png",
+    "sha256": "f0a7d67072b9d861b619bac49c615904866cd4071a35b7cd6fe4b9cad6a72596",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "original-method-320-full.png",
+    "source_file": "mobile-original-practice-26-320.png",
+    "sha256": "ee534b96e601ae765cea9b6ec5650108a102a121033fc7e5e6af034b9a5e370a",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "original-method-390.png",
+    "source_file": "mobile-original-practice-26-390-viewport.png",
+    "sha256": "12a2ff8ca048134d4418b18e214ae4da2d7d54a9c1252e96ae1b68ea161bc081",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "original-method-1280.png",
+    "source_file": "desktop-original-practice-26-1280-viewport.png",
+    "sha256": "d9a02376b792e6e7450f6c03617c61385db6425e43c590aa436b913ea11299ed",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "original-molecular-320.png",
+    "source_file": "mobile-original-practice-27-320-viewport.png",
+    "sha256": "91285e9c258ed947de0b2dac26d9c95865ac26838084c40d6d1ee4c58ba6fbe7",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "original-molecular-1280.png",
+    "source_file": "desktop-original-practice-27-1280-viewport.png",
+    "sha256": "e8aa51fc09df62624ada6dd00bf8a60fb7afe3a3655367428efbfad1ef02c9e7",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "original-distinguishing-390.png",
+    "source_file": "mobile-original-practice-28-390-viewport.png",
+    "sha256": "8b4862104930eac4b653f30f18d3e6d42a7cb77bd82da01ee3bf4f3452266ede",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  },
+  {
+    "file": "original-molecular-320-full.png",
+    "source_file": "mobile-original-practice-27-320.png",
+    "sha256": "5a533625594bdc63aa2b81225c92852baf108d3279358182789a36ea2ae5f068",
+    "personally_inspected": true,
+    "run": "4-case final learning-feedback run",
+    "source": "private integrated production candidate3202",
+    "framing": "fonts ready; native viewport/full-page; sidebar/stage scroll only; no product CSS injection"
+  }
+]

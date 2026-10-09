@@ -1,4 +1,4 @@
-import { test, expect, type Page } from "@playwright/test";
+import { test, expect, devices, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import fs from "node:fs";
 import path from "node:path";
@@ -17,6 +17,7 @@ import {
   REVIEW_DELAY,
   exposureIds,
 } from "../src/lib/progress";
+import { assertIonNativeDevice, captureIonNative } from "./ion-native-capture";
 const route = "/lessons/ion-tests",
   slug = "ion-tests";
 const dir = path.join(process.cwd(), "test-results/qa/ion-equations");
@@ -38,6 +39,7 @@ async function ready(page: Page) {
 }
 async function layout(page: Page, selector?: string) {
   await ready(page);
+  await assertIonNativeDevice(page);
   const box = (await (
     selector
       ? page.locator(selector).first()
@@ -48,6 +50,10 @@ async function layout(page: Page, selector?: string) {
     path.join(dir, "geometry.jsonl"),
     JSON.stringify({
       viewport: page.viewportSize(),
+      native: await page.evaluate(() => ({
+        touch: navigator.maxTouchPoints > 0,
+        dpr: devicePixelRatio,
+      })),
       selector: selector ?? "Your equations",
       title: await page
         .locator(".sample-task-panel h2,.assessment-session h2")
@@ -57,11 +63,16 @@ async function layout(page: Page, selector?: string) {
       bottom: box.y + box.height,
     }) + "\n",
   );
-  for (const font of await page
-    .locator("svg text")
-    .evaluateAll((nodes) =>
-      nodes.map((node) => Number.parseFloat(getComputedStyle(node).fontSize)),
-    ))
+  for (const font of await page.locator("svg text").evaluateAll((nodes) =>
+    nodes.map((node) => {
+      const text = node as SVGTextElement,
+        matrix = text.getScreenCTM();
+      return (
+        Number.parseFloat(getComputedStyle(text).fontSize) *
+        (matrix ? Math.hypot(matrix.a, matrix.b) : 1)
+      );
+    }),
+  ))
     expect(font).toBeGreaterThanOrEqual(12);
   expect(box.height).toBeGreaterThanOrEqual(44);
   expect(box.y + box.height).toBeLessThanOrEqual(664);
@@ -74,18 +85,29 @@ async function layout(page: Page, selector?: string) {
 }
 async function shot(page: Page, name: string) {
   await ready(page);
+  await page.evaluate(() => {
+    (document.activeElement as HTMLElement)?.blur();
+    const nav = document.querySelector<HTMLElement>(".sample-stages"),
+      active = nav?.querySelector<HTMLElement>('[aria-current="step"]');
+    if (nav && active)
+      nav.scrollLeft =
+        active.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2;
+    document.querySelector<HTMLElement>(".sidebar")?.scrollTo(0, 0);
+  });
   fs.mkdirSync(dir, { recursive: true });
   // Capture the native viewport first: full-page capture can resize sticky
   // containers while collecting the taller image.
-  await page.screenshot({
-    path: path.join(dir, name + "-viewport.png"),
-    fullPage: false,
-    scale: "css",
-  });
-  await page.screenshot({
-    path: path.join(dir, name + ".png"),
-    fullPage: true,
-    scale: "css",
+  await captureIonNative(page, async () => {
+    await page.screenshot({
+      path: path.join(dir, name + "-viewport.png"),
+      fullPage: false,
+      scale: "css",
+    });
+    await page.screenshot({
+      path: path.join(dir, name + ".png"),
+      fullPage: true,
+      scale: "css",
+    });
   });
 }
 async function state(page: Page) {
@@ -96,7 +118,9 @@ async function state(page: Page) {
   );
 }
 async function practice(page: Page, index: number) {
-  await page.getByRole("button", { name: "Practise", exact: true }).click();
+  const stage = page.getByRole("button", { name: "Practise", exact: true });
+  if (test.info().project.name === "mobile") await stage.tap();
+  else await stage.click();
   await page
     .getByLabel("Choose a practice task", { exact: true })
     .selectOption(String(index));
@@ -132,6 +156,12 @@ test("complete writing at fonts-ready320/390/1280 retains malformed drafts, reco
     await page.locator(".sample-check-answer").click();
     await expect(page.locator(".question-panel .feedback")).toContainText(
       "no automatic mark",
+    );
+    await expect(page.locator(".question-panel .feedback")).toContainText(
+      "check formulas, coefficients, state symbols",
+    );
+    await expect(page.locator(".question-panel .feedback")).not.toContainText(
+      "Include the reasons for your conclusion",
     );
     await shot(page, `${info.project.name}-guided-${width}`);
     await practice(page, 32);
@@ -188,19 +218,16 @@ test("complete writing at fonts-ready320/390/1280 retains malformed drafts, reco
 });
 async function expire(page: Page) {
   await saved(page);
-  await page.evaluate(
-    ({ key, delay }) => {
-      const data = JSON.parse(localStorage.getItem(key)!);
-      const work = data.work["ion-tests"];
-      const at = Date.now() - delay - 1000;
-      work.history.at(-1).submitted = at;
-      work.run.submitted = at;
-      localStorage.setItem(key, JSON.stringify(data));
-    },
-    { key: STORAGE_KEY, delay: REVIEW_DELAY },
-  );
+  const before = await state(page);
+  const now = await page.evaluate(() => Date.now());
+  // Advance the browser clock: never rewrite saved submission/response history.
+  await page.clock.setSystemTime(now + REVIEW_DELAY + 1000);
   await page.reload();
+  const after = await state(page);
+  expect(after.history).toEqual(before.history);
+  expect(after.run).toEqual(before.run);
 }
+
 test("new cold and seven-day written forms seal references, retain old history, reject malformed recording and keep helped equivalents non-fresh", async ({
   page,
 }, info) => {
@@ -377,4 +404,159 @@ test("new cold and seven-day written forms seal references, retain old history, 
   const final = (await state(page)).history;
   expect(final).toHaveLength(8);
   expect(final.slice(0, 4)).toEqual(work.history);
+});
+
+test("every original sealed ion question has a complete first response within664px at320/390/1280", async ({
+  browser,
+}, info) => {
+  test.setTimeout(240000);
+  for (const kind of ["check", "review"] as const)
+    for (const f of [0, 1]) {
+      const data = emptyProgress(),
+        work = emptyWork(),
+        form = (kind === "check" ? j.checkForms : j.reviewForms)[f],
+        old = Date.now() - REVIEW_DELAY - 2000;
+      work.section = kind;
+      work.run = {
+        kind,
+        ids: form.map((q) => q.id),
+        index: 0,
+        started: Date.now(),
+        responses: {},
+      };
+      if (kind === "review") {
+        const previous = j.checkForms[f];
+        work.history = [
+          {
+            kind: "check",
+            ids: previous.map((q) => q.id),
+            index: previous.length - 1,
+            started: old - 1000,
+            submitted: old,
+            responses: Object.fromEntries(
+              previous.map((q) => [
+                q.id,
+                {
+                  answer: q.answer,
+                  correct: !q.rubric,
+                  helped: false,
+                  fresh: false,
+                  at: old,
+                },
+              ]),
+            ),
+          },
+        ];
+        data.seen = Object.fromEntries(
+          exposureIds(previous.map((q) => q.id)).map((id) => [id, old]),
+        );
+      }
+      data.work[slug] = work;
+      const context = await browser.newContext({
+        ...devices[
+          info.project.name === "mobile" ? "iPhone 13" : "Desktop Chrome"
+        ],
+        viewport: { width: 320, height: 664 },
+      });
+      try {
+        const page = await context.newPage();
+        await page.addInitScript(
+          ({ key, raw }) => {
+            if (!localStorage.getItem(key)) localStorage.setItem(key, raw);
+          },
+          { key: STORAGE_KEY, raw: JSON.stringify(data) },
+        );
+        await page.goto(route);
+        expect(await page.evaluate(() => navigator.maxTouchPoints > 0)).toBe(
+          info.project.name === "mobile",
+        );
+        expect(await page.evaluate(() => devicePixelRatio)).toBe(
+          info.project.name === "mobile"
+            ? devices["iPhone 13"].deviceScaleFactor
+            : 1,
+        );
+        for (const [i] of form.entries()) {
+          if (i)
+            await page
+              .getByRole("button", { name: "Next question →", exact: true })
+              .click();
+          const selector =
+            ".question-panel .answer-option,.question-panel input:not([type=checkbox]),.question-panel textarea,.question-panel select";
+          for (const width of [320, 390, 1280]) {
+            await page.setViewportSize({ width, height: 664 });
+            await expect(page.locator(selector).first()).toBeVisible();
+            await layout(page, selector);
+            await expect(
+              page.locator(
+                ".assessment-review-criteria,.results-list,.sample-reference,.task-workbench",
+              ),
+            ).toHaveCount(0);
+            if (!i)
+              await shot(
+                page,
+                `${info.project.name}-original-${kind}-${f}-${width}`,
+              );
+          }
+          // Native layout and sealing are tested independently of answer correctness.
+          await page
+            .getByRole("button", { name: "Leave unanswered", exact: true })
+            .click();
+          await saved(page);
+        }
+        await page
+          .getByRole("button", { name: "Submit whole set", exact: true })
+          .click();
+        await saved(page);
+        const actual = await state(page);
+        expect(actual.history.slice(0, -1)).toEqual(work.history ?? []);
+        expect(actual.history.at(-1).ids).toEqual(form.map((q) => q.id));
+      } finally {
+        await context.close();
+      }
+    }
+});
+
+test("all original manual practice controls fit and retain malformed and wrong work without automatic marks", async ({
+  page,
+}, info) => {
+  test.setTimeout(120000);
+  for (const width of [320, 390, 1280]) {
+    await page.setViewportSize({ width, height: 664 });
+    await page.goto(route);
+    for (const index of [25, 26, 27]) {
+      const q = j.practice[index];
+      await practice(page, index);
+      await layout(page, 'textarea[aria-label="Your explanation"]');
+      const input = page.getByLabel("Your explanation", { exact: true });
+      const attempts = (await state(page)).attempts[q.id];
+      await input.fill(malformed);
+      await saved(page);
+      await page.reload();
+      await expect(input).toHaveValue(malformed);
+      expect((await state(page)).attempts[q.id]).toEqual(attempts);
+      await input.fill(wrong);
+      await page.locator(".sample-check-answer").click();
+      await expect(page.locator(".question-panel .feedback")).toContainText(
+        "Compare",
+      );
+      if (index === 26) {
+        await expect(page.locator(".question-panel .feedback")).toContainText(
+          "check formulas, coefficients, state symbols",
+        );
+        await expect(
+          page.locator(".question-panel .feedback"),
+        ).not.toContainText("Include the reasons for your conclusion");
+      }
+      await saved(page);
+      await page.reload();
+      await expect(input).toHaveValue(wrong);
+      const attempt = (await state(page)).attempts[q.id].at(-1);
+      expect(attempt.correct).toBe(false);
+      expect(attempt.answer).toBe(wrong);
+      await shot(
+        page,
+        `${info.project.name}-original-practice-${index + 1}-${width}`,
+      );
+    }
+  }
 });

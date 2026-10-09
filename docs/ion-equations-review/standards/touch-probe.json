@@ -1,0 +1,44 @@
+[
+  {
+    "label": "fresh",
+    "touch": 1,
+    "dpr": 3,
+    "touchEvents": 0
+  },
+  {
+    "label": "after axe",
+    "touch": 1,
+    "dpr": 3,
+    "touchEvents": 0
+  },
+  {
+    "label": "after actual native tap",
+    "touch": 1,
+    "dpr": 3,
+    "touchEvents": 1
+  },
+  {
+    "label": "after native emulation restore",
+    "touch": 1,
+    "dpr": 3,
+    "touchEvents": 1
+  },
+  {
+    "label": "after restored native tap",
+    "touch": 1,
+    "dpr": 3,
+    "touchEvents": 2
+  },
+  {
+    "label": "after session detach",
+    "touch": 0,
+    "dpr": 3,
+    "touchEvents": 2
+  },
+  {
+    "label": "after reload",
+    "touch": 1,
+    "dpr": 3,
+    "touchEvents": 0
+  }
+]

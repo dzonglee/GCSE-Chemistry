@@ -1,0 +1,187 @@
+--- a/src/components/DetailedLesson.tsx
++++ b/src/components/DetailedLesson.tsx
+@@ -215,9 +215,7 @@
+         : stage === "guided"
+           ? "Practise without the model →"
+           : "Return to learning →";
+-  const ionWritingRun =
+-    lesson.slug === "ion-tests" &&
+-    work.run?.ids.every((id) => id.startsWith("ion-tests-v1-write-"));
++  const ionWritingRun = lesson.slug === "ion-tests";
+   const compactReview =
+     (ionWritingRun ||
+       lesson.slug === "inside-an-atom" ||
+@@ -358,6 +356,7 @@
+           "changing-concentration",
+           "metal-reactivity",
+           "acids-and-neutralisation",
++          "ion-tests",
+         ].includes(lesson.slug) ||
+           (section === "explore" && stage === "guided")) && (
+           <button className="text-button" onClick={() => choose("warmup")}>
+@@ -432,6 +431,7 @@
+             <AssessmentSession
+               id={lesson.slug}
+               navigationAfterResponse={
++                lesson.slug === "ion-tests" ||
+                 lesson.slug === "inside-an-atom" ||
+                 lesson.slug === "balancing-equations" ||
+                 lesson.slug === "transition-metals" ||
+--- a/src/components/AssessmentSession.tsx
++++ b/src/components/AssessmentSession.tsx
+@@ -457,13 +457,17 @@
+           Question {run.index + 1} of {questions.length}
+         </p>
+         <h2 ref={heading} tabIndex={-1}>
+-          {(q.writtenEquations || q.conciseHeading) && q.title
++          {(q.writtenEquations ||
++            q.conciseHeading ||
++            (id === "ion-tests" && q.rubric)) &&
++          q.title
+             ? q.title
+             : q.prompt}
+         </h2>
+-        {(q.writtenEquations || q.conciseHeading) && q.title && (
+-          <p className="written-equation-prompt">{q.prompt}</p>
+-        )}
++        {(q.writtenEquations ||
++          q.conciseHeading ||
++          (id === "ion-tests" && q.rubric)) &&
++          q.title && <p className="written-equation-prompt">{q.prompt}</p>}
+         <QuestionInput
+           compactAssessment={questions.length > 20}
+           compactHistorical={id === "atomic-models"}
+--- a/src/app/ion-tests.css
++++ b/src/app/ion-tests.css
+@@ -414,3 +414,131 @@
+   button {
+   flex: 0 0 auto;
+ }
++
++/* Original sealed ion forms also put the answer ahead of navigation. */
++@media (max-width: 600px) {
++  .sample-lesson[data-lesson="ion-tests"]:has(.assessment-session > .question-panel)
++    :is(.sample-title-row, .sample-overview, .sample-stages) {
++    margin-bottom: 4px;
++  }
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session
++  .question-panel:has(.written-answer)
++  .written-equation-prompt {
++  font-size: 15px;
++  line-height: 1.4;
++  margin: 8px 0;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session
++  .question-panel:not([data-written-equations]):has(.written-answer)
++  .written-equation-prompt {
++  line-height: 1.35;
++}
++.sample-lesson[data-lesson="ion-tests"] .assessment-session .session-heading {
++  margin: 8px 0;
++  gap: 8px;
++  flex-wrap: wrap;
++}
++.sample-lesson[data-lesson="ion-tests"] .assessment-session > progress {
++  display: block;
++  height: 6px;
++  margin: 4px 0;
++}
++.sample-lesson[data-lesson="ion-tests"] .assessment-session .question-panel {
++  margin-top: 8px;
++  padding: 12px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session
++  .question-panel
++  > .eyebrow {
++  margin-bottom: 4px;
++}
++.sample-lesson[data-lesson="ion-tests"] .assessment-session .question-panel h2 {
++  font-size: 20px;
++  line-height: 1.35;
++  margin-bottom: 8px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session
++  .written-answer
++  textarea {
++  height: 104px;
++  min-height: 104px;
++}
++@media (max-width: 600px) {
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .written-answer
++    textarea {
++    height: 84px;
++    min-height: 84px;
++  }
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .question-panel:has(.multipart-answer)
++    h2 {
++    font-size: 18px;
++    line-height: 1.3;
++  }
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .question-panel:has(.multipart-answer)
++    .ion-original {
++    padding: 6px;
++    margin-bottom: 6px;
++  }
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .question-panel:has(.multipart-answer)
++    .ion-original h3 {
++    font-size: 16px;
++    margin-bottom: 4px;
++  }
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .question-panel:has(.multipart-answer)
++    .ion-original dl,
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .question-panel:has(.multipart-answer)
++    .ion-original dl div,
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .question-panel:has(.multipart-answer)
++    .ion-original dd {
++    margin: 0;
++  }
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .question-panel:has(.multipart-answer)
++    .ion-original dt {
++    font-size: 12px;
++    line-height: 1.35;
++  }
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .question-panel:has(.multipart-answer)
++    .ion-original dd {
++    font-size: 14px;
++    line-height: 1.4;
++  }
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .multipart-answer {
++    grid-template-columns: minmax(0, 1fr);
++  }
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .multipart-answer legend {
++    margin-bottom: 4px;
++  }
++  .sample-lesson[data-lesson="ion-tests"]
++    .assessment-session
++    .multipart-answer label {
++    grid-template-columns: minmax(0, 1fr) 64px;
++    align-items: center;
++  }
++}

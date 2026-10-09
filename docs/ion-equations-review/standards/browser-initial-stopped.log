@@ -1,0 +1,97 @@
+[WebServer] (node:62429) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 34 tests using 2 workers
+
+(node:62457) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:62458) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/ion-equations.browser.spec.ts:219:5 › new cold and seven-day written forms seal references, retain old history, reject malformed recording and keep helped equivalents non-fresh (35.3s)
+  ✓   2 [desktop] › tests/ion-equations.browser.spec.ts:124:5 › complete writing at fonts-ready320/390/1280 retains malformed drafts, recordable wrong chemistry and recovery (42.4s)
+(node:63212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › flame: original science, wrong proposal, undo, scoped clear and reload (9.7s)
+  ✓   5 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › hydroxide: original science, wrong proposal, undo, scoped clear and reload (9.8s)
+  ✘   3 [desktop] › tests/ion-equations.browser.spec.ts:397:5 › every original sealed ion question has a complete first response within664px at320/390/1280 (31.4s)
+(node:63769) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › anion: original science, wrong proposal, undo, scoped clear and reload (13.9s)
+  ✓   7 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › fault: original science, wrong proposal, undo, scoped clear and reload (11.9s)
+  ✓   8 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › equation: original science, wrong proposal, undo, scoped clear and reload (12.1s)
+  ✓  10 [desktop] › tests/ion-tests.browser.spec.ts:143:5 › first ion control is usable on a short screen and long selected values stay readable at 320px (5.1s)
+  ✓   9 [desktop] › tests/ion-tests.browser.spec.ts:87:7 › compound: original science, wrong proposal, undo, scoped clear and reload (12.1s)
+  ✓  11 [desktop] › tests/ion-tests.browser.spec.ts:159:5 › all 35 practice responses use real answers, coefficient construction and honest written review (17.9s)
+  ✓  12 [desktop] › tests/ion-tests.browser.spec.ts:190:5 › two reserved ten-question forms and delayed five-question forms keep marking sealed and criteria explicit (20.1s)
+  ✓  13 [desktop] › tests/ion-tests.browser.spec.ts:285:5 › reading both original hydroxide stages leaves the chemical proposal unchanged (5.9s)
+  ✓  14 [desktop] › tests/ion-tests.browser.spec.ts:320:5 › a wrong equation shows actual zero and charge imbalance, then the smallest positive ratio (5.9s)
+  ✓  15 [desktop] › tests/ion-tests.browser.spec.ts:344:5 › real 3D portions export current wrong reagents, preserve camera-independent work and retain fresh separation (9.3s)
+  ✓  16 [desktop] › tests/ion-tests.browser.spec.ts:455:5 › unavailable WebGL retains readable portions and wrong scientific choices (6.8s)
+(node:64768) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  17 [desktop] › tests/ion-tests.browser.spec.ts:486:5 › wrong practice response offers its specific recovery and returns to the retained task (5.1s)
+(node:64913) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  18 [mobile] › tests/ion-equations.browser.spec.ts:124:5 › complete writing at fonts-ready320/390/1280 retains malformed drafts, recordable wrong chemistry and recovery (3.0s)
+
+
+  1) [desktop] › tests/ion-equations.browser.spec.ts:397:5 › every original sealed ion question has a complete first response within664px at320/390/1280
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    Expected: undefined
+    Received: []
+
+      497 |         await saved(page);
+      498 |         const actual = await state(page);
+    > 499 |         expect(actual.history.slice(0, -1)).toEqual(work.history);
+          |                                             ^
+      500 |         expect(actual.history.at(-1).ids).toEqual(form.map((q) => q.id));
+      501 |       } finally {
+      502 |         await context.close();
+        at /workspace/chemistry-ion-runtime/tests/ion-equations.browser.spec.ts:499:45
+
+    Error Context: test-results/browser/ion-equations.browser-ever-d781c--within664px-at320-390-1280-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/ion-equations.browser-ever-d781c--within664px-at320-390-1280-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/ion-equations.browser-ever-d781c--within664px-at320-390-1280-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/ion-equations.browser.spec.ts:124:5 › complete writing at fonts-ready320/390/1280 retains malformed drafts, recordable wrong chemistry and recovery
+
+    Test was interrupted.
+
+    Error: frame.evaluate: Test ended.
+
+      80 |     ),
+      81 |   ).toBe(true);
+    > 82 |   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+         |           ^
+      83 | }
+      84 | async function shot(page: Page, name: string) {
+      85 |   await ready(page);
+        at AxeBuilder.runPartialRecursive (/workspace/chemistry-ion-runtime/node_modules/@axe-core/playwright/dist/index.js:318:34)
+        at AxeBuilder.analyze (/workspace/chemistry-ion-runtime/node_modules/@axe-core/playwright/dist/index.js:245:28)
+        at layout (/workspace/chemistry-ion-runtime/tests/ion-equations.browser.spec.ts:82:11)
+        at /workspace/chemistry-ion-runtime/tests/ion-equations.browser.spec.ts:136:5
+
+    Error Context: test-results/browser/ion-equations.browser-comp-db0c0-rong-chemistry-and-recovery-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/ion-equations.browser-comp-db0c0-rong-chemistry-and-recovery-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/ion-equations.browser-comp-db0c0-rong-chemistry-and-recovery-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [desktop] › tests/ion-equations.browser.spec.ts:397:5 › every original sealed ion question has a complete first response within664px at320/390/1280
+  1 interrupted
+    [mobile] › tests/ion-equations.browser.spec.ts:124:5 › complete writing at fonts-ready320/390/1280 retains malformed drafts, recordable wrong chemistry and recovery
+  16 did not run
+  16 passed (2.7m)
