@@ -1,0 +1,936 @@
+[
+  {
+    "width": 320,
+    "samples": [
+      {
+        "stage": "before",
+        "scrollLeft": 211,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          88,
+          232
+        ],
+        "visible": true
+      },
+      {
+        "stage": "first movement",
+        "scrollLeft": 177,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          122,
+          266
+        ],
+        "visible": true
+      },
+      {
+        "stage": "after edit",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame0",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame1",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame2",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame3",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame4",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame5",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame6",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame7",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame8",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame9",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame10",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame11",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame12",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame13",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame14",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame15",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame16",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame17",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame18",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame19",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame20",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame21",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame22",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame23",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame24",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame25",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame26",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame27",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame28",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame29",
+        "scrollLeft": 209,
+        "width": 248,
+        "region": [
+          35,
+          285
+        ],
+        "selected": [
+          90,
+          234
+        ],
+        "visible": true
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "samples": [
+      {
+        "stage": "before",
+        "scrollLeft": 176,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          123,
+          267
+        ],
+        "visible": true
+      },
+      {
+        "stage": "first movement",
+        "scrollLeft": 138,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          161,
+          305
+        ],
+        "visible": true
+      },
+      {
+        "stage": "after edit",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame0",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame1",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame2",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame3",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame4",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame5",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame6",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame7",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame8",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame9",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame10",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame11",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame12",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame13",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame14",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame15",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame16",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame17",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame18",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame19",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame20",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame21",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame22",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame23",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame24",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame25",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame26",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame27",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame28",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      },
+      {
+        "stage": "frame29",
+        "scrollLeft": 174,
+        "width": 318,
+        "region": [
+          35,
+          355
+        ],
+        "selected": [
+          125,
+          269
+        ],
+        "visible": true
+      }
+    ]
+  }
+]

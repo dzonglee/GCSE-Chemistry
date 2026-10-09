@@ -1,0 +1,26 @@
+[
+  {
+    "name": "desktop",
+    "width": 1280,
+    "touch": 0,
+    "partialCalculation": "421 − √1089 × 11",
+    "wrong1798SurvivedReload": true,
+    "independent6117Deferred": true
+  },
+  {
+    "name": "mobile",
+    "width": 320,
+    "touch": 1,
+    "partialCalculation": "421 − √1089 × 11",
+    "wrong1798SurvivedReload": true,
+    "independent6117Deferred": true
+  },
+  {
+    "name": "mobile",
+    "width": 390,
+    "touch": 1,
+    "partialCalculation": "421 − √1089 × 11",
+    "wrong1798SurvivedReload": true,
+    "independent6117Deferred": true
+  }
+]

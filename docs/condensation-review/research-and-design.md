@@ -61,6 +61,10 @@ This Chemistry extension follows that progression: scaffolded reactive-end teach
 - Original version1, all91 task identities and original stage/practice positions/forms remain intact. Only existing Higher tasks acquire explicit tier metadata and conservative new exposure aliases. The original addition tasks/forms are regression-compared with their full pre-change runtime objects. Started original or Higher forms survive a tier switch by their stored IDs.
 - Foundation receives the original addition forms; Higher starts with the two condensation forms and can still rotate into both original addition forms. The full stored journey appends new forms without replacing original positions. Separate-Chemistry route boundaries remain in force.
 
+## Fresh transcript-driven review
+
+See [quality-followup.md](quality-followup.md) for fresh online specification/RSC/2023 paired-paper retrieval, figure inspection, exact newer Maths reference branch, state-by-state review, confirmed mobile visibility weakness, correction and final evidence. The original clause-to-task mapping above remains unchanged.
+
 ## Limits
 
 The editor supports supplied aliphatic CH₂ spacers and up to16 backbone tokens, not every aromatic/branched polymer or unrestricted freehand drawing. Supporting construction practice is not mislabelled as an exact mark scheme for a particular official polyester question. Automated axe and emulated native Chromium mobile checks do not establish screen-reader acceptance or iOS Safari support. New Higher delayed forms retain the real seven-day gate and manual outcomes; app counters do not establish exam readiness. No full Pearson/OCR certification, whole-course audit, merge or deployment is claimed. The main session must integrate the separate shared proposals and run its final whole-course regression.

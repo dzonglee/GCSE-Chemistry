@@ -1,0 +1,37 @@
+{
+  "onlineRetrievedAgain": true,
+  "figuresPersonallyInspected": true,
+  "sources": [
+    {
+      "url": "https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF",
+      "file": "specification-quality-reread.pdf",
+      "page": 69,
+      "sha256": "ecd869d1874091a0a52abaeb8fce238a9c1cc207698713dfb66788eb0d448d43",
+      "readAndInspectedDemand": "4.7.3.2: Higher functional groups, repeating units and usually small-molecule loss."
+    },
+    {
+      "url": "https://edu.rsc.org/download?ac=509327",
+      "file": "rsc-quality-reread.pdf",
+      "page": 3,
+      "sha256": "4e854c815634d725157b449ddd162cd33295b54e8dc761163ba492680631a086",
+      "readAndInspectedDemand": "Q3: complete groups, identify lost fragments, draw a polyester repeat with ester links and n."
+    },
+    {
+      "url": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-84622H-QP-JUN23.PDF",
+      "file": "qp2023-quality-reread.pdf",
+      "page": 9,
+      "sha256": "8881c2ab53a769ac9eabb4968bc02227469ee37412779de2d498d2b90ddf29e5",
+      "readAndInspectedDemand": "Q02.7: complete displayed COOH; supplied C/O/O-H scaffold, one-mark response."
+    },
+    {
+      "url": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-84622H-MS-JUN23.PDF",
+      "file": "ms2023-quality-reread.pdf",
+      "page": 10,
+      "sha256": "44b55a549ce1490c41c31a54d57acb32c64f5368b29fa38e12b8fb7dfcedab53",
+      "readAndInspectedDemand": "Q02.7 accepts C=O plus C-O-H; spec4.7.2.4 prerequisite, not proof of universal polyester drawing demand."
+    }
+  ],
+  "referenceMathsBranch": "codex/optionb-b127-b166",
+  "referenceMathsCommit": "32342d38e6c5d5436e472c56a97161eb272796e9",
+  "transcriptReadInFull": true
+}

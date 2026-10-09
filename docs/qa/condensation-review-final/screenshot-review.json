@@ -1,24 +1,24 @@
 {
-  "note": "Actual frozen production captures, personally inspected via full/viewport and unresized diagram close-ups. Correct manual paths retain four oxygen atoms and omit terminal groups. Wrong examples are deliberate retained ungraded proposals. Keyboard-focused raw full-page captures with sticky-header artifacts are retained externally, not selected as final opening samples. Final captures were refreshed from the build with distinct simultaneous-result landmarks and personally reinspected.",
+  "note": "Fresh final production opening/manual captures and state captures personally inspected. The independent-repeat-full sample intentionally retains wrong carbonyl/notation choices. Raw keyboard state captures may show focused skip link/sticky header; opening samples use page scroll0 and blur. No image editing. Automated raw captures are not all claimed personally inspected.",
   "files": [
     {
       "file": "desktop-1280-guided-viewport.png",
-      "sha256": "26d13a1039fbfea40abb9cb2672a57958a2b2ca2d333e21a194a1f532061daab",
+      "sha256": "2cd140f743a69bec5394654a7b7c28d4a7ec225b9ff1b822f3c347ac7b4ff0c6",
       "personallyInspected": true
     },
     {
       "file": "desktop-1280-guided-full.png",
-      "sha256": "49f2ef0a8834929d7ce1177be4fcbad5659fdb8242845d6c535057f38d3db5a2",
+      "sha256": "9a85022703c0a3257ade9c17020a5aa86927782155cff4cbc8b1f22b77566cca",
       "personallyInspected": true
     },
     {
       "file": "desktop-1280-manual-independent-correct-viewport.png",
-      "sha256": "d17f2797a9307b346b957c39ce9da88cb5b34834dd961c5b79ca54770ff2676d",
+      "sha256": "7aa141c6b39cd0f61a61e021a241b17f9d3fccb0148e48530c27f2d10813d819",
       "personallyInspected": true
     },
     {
       "file": "desktop-1280-manual-independent-correct-full.png",
-      "sha256": "14f5306112521dc965ec5460c3aaa4646a206816149844fbd35365390a0181bb",
+      "sha256": "60869f7558486e87f93ab67b25883e26f30e9bf396cbd74888e3c48d61f202e1",
       "personallyInspected": true
     },
     {
@@ -28,7 +28,7 @@
     },
     {
       "file": "mobile-320-guided-full.png",
-      "sha256": "563bbfdd85837381f739bee64174d6bc00c98cc0e8880d411ad4bc0e72c9faac",
+      "sha256": "2999f2ba5f10119cba3736a7ba2d1d8151f345d82ff20b4c80666b72e03cdcfb",
       "personallyInspected": true
     },
     {
@@ -38,7 +38,7 @@
     },
     {
       "file": "mobile-320-manual-independent-correct-full.png",
-      "sha256": "bf60570609aaf5ad792812f666fedda7b7022f610a16cbe24f2affd5a276b27e",
+      "sha256": "d6d0f6814a4f9186cb6caf708793038f2e2e31a6589b3355cd4b91b3a573aafc",
       "personallyInspected": true
     },
     {
@@ -48,22 +48,22 @@
     },
     {
       "file": "mobile-390-guided-full.png",
-      "sha256": "60034b0c13c4242cdd052c296cfd2f367d534560e2139c9919470389d4d46803",
+      "sha256": "f79518ad80251392c20b0d9ee7735ac4fd4ed07a35bb092874ec0add30c82f19",
       "personallyInspected": true
     },
     {
       "file": "mobile-390-manual-independent-correct-viewport.png",
-      "sha256": "675810f935596a063c517a096b4972096894d318d762f4602dc51d01f69296d0",
+      "sha256": "a5f5d8e60b9908f82fc2acadb358d465d2cdbdad197d9af982fd99d9468914bc",
       "personallyInspected": true
     },
     {
       "file": "mobile-390-manual-independent-correct-full.png",
-      "sha256": "84b3d4d59683ee1e729fff4c382fd3ecf9108e9ebccf1365258a081058f0486a",
+      "sha256": "456e662e4c67867d42ed3534d0a16aa0ee5b25f081934f22d0f8421a8de6c479",
       "personallyInspected": true
     },
     {
       "file": "mobile-320-repeat-left.png",
-      "sha256": "ea14322d8612db74ed10de98e363515dc885072a47cdcef76d769e85535f83ff",
+      "sha256": "d47dac958062c090b325ae2d88b64c4495ce2119095e590af45e605d410508b0",
       "personallyInspected": true
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "file": "mobile-390-repeat-left.png",
-      "sha256": "0e751104dd85007a657ad4865bf9266e7d3d457de2aa3ffa1dc49ccaf519948d",
+      "sha256": "fdf34ed0d808d01800b184d08f7549e606dafae98b69417c85dae71d21f7bdab",
       "personallyInspected": true
     },
     {
@@ -93,12 +93,52 @@
     },
     {
       "file": "desktop-1280-independent-repeat-full.png",
-      "sha256": "f9000c16f9c6840b1aeae56d9b7534aacd48978ab7e537dfd4a336a22f5eaefd",
+      "sha256": "cda0f092c57be55c87befa1a211642dc828d3a5eea717fa6c20fb993e35bb103",
       "personallyInspected": true
     },
     {
       "file": "mobile-320-independent-groups-viewport.png",
       "sha256": "143c1f78fe31b42f8627e4baa121557b63b08d0c785e7fce87e21a223edfa5d5",
+      "personallyInspected": true
+    },
+    {
+      "file": "quality-states/desktop-1280-selection-groups-feedback-full.png",
+      "sha256": "deb43991c6e666387a2354bd5ba10928fc054d8193d10063740a644d16c1c429",
+      "personallyInspected": true
+    },
+    {
+      "file": "quality-states/desktop-1280-selection-repeat-wrong-full.png",
+      "sha256": "e9cef72566d0aa1f0d9e9a73105cb6503046a048b6cd540744018f167d7691a5",
+      "personallyInspected": true
+    },
+    {
+      "file": "quality-states/desktop-1280-selection-repeat-repaired-reload-full.png",
+      "sha256": "d9b2a7ca5adbef73875b565d1bec5bfce08f718bc0e54fbff11e35d32b678531",
+      "personallyInspected": true
+    },
+    {
+      "file": "quality-states/mobile-320-selection-groups-partial-full.png",
+      "sha256": "5bba90a8af0fbb53fe1e43ea6202b1194925a78e6184bd1aff57b38de9dcfd71",
+      "personallyInspected": true
+    },
+    {
+      "file": "quality-states/mobile-320-selection-groups-feedback-full.png",
+      "sha256": "edbcd4159ebc1ae5362482f84dc55328d7281756a8e55ef2e8c6ac3fda539f87",
+      "personallyInspected": true
+    },
+    {
+      "file": "quality-states/mobile-320-selection-repeat-wrong-full.png",
+      "sha256": "96a6c402781149278821b478f25e857247acfbb1c98751034ceaa1233feb5193",
+      "personallyInspected": true
+    },
+    {
+      "file": "quality-states/mobile-390-selection-repeat-repaired-reload-full.png",
+      "sha256": "e1b659d3b4265d013c0e5cd14e720926838fbf5c6e013a9fa1ebedc4835e55d0",
+      "personallyInspected": true
+    },
+    {
+      "file": "quality-states/mobile-390-selection-groups-repaired-reload-full.png",
+      "sha256": "1d693f7803d792d4bea5be29f7b5c4986b40e513addebabbc7516dfa92d009e5",
       "personallyInspected": true
     }
   ]

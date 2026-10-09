@@ -62,7 +62,7 @@ export function PolymerisationReview({
         <p>
           {d.construction === "groups"
             ? "Check both complete alcohol groups and both complete carboxylic-acid groups."
-            : "The reference retains both original spacers, both carbonyls and both alcohol-derived linking oxygens. Equivalent repeat phases are valid."}
+            : "The reference retains both original spacers, both carbonyls and both alcohol-derived linking oxygens. Equivalent repeat phases are valid."}{" "}
           Compare your retained response and the criteria; no examiner drawing
           mark is awarded.
         </p>

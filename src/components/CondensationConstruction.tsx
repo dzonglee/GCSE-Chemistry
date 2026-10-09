@@ -1,5 +1,5 @@
 "use client";
-import { useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import type { PolyesterDrawingData } from "../lib/polyester";
 import {
   blankCondensationDrawing,
@@ -16,6 +16,46 @@ const styles = {
   end: "condensation-end",
 };
 
+// Follow the student's selection horizontally without moving page focus or
+// correcting their drawing. Manual panning remains available between edits.
+function useVisibleSelection(
+  first: number | undefined,
+  last: number | undefined,
+  count: number,
+  revision: string,
+) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const region = ref.current;
+    if (!region || first === undefined || last === undefined || !count) return;
+    const left = 55 + first * 80 - 32;
+    const right = 55 + last * 80 + 32;
+    // An edit may happen while a native keyboard pan is still moving. Stop
+    // that pan and centre the edited part; manual panning remains available
+    // until the next selection or edit.
+    region.scrollTo({
+      left: Math.max(0, (left + right - region.clientWidth) / 2),
+      behavior: "instant",
+    });
+  }, [first, last, count, revision]);
+  return ref;
+}
+
+function Selection({ first, last }: { first: number; last: number }) {
+  return (
+    <rect
+      className="condensation-selection"
+      data-condensation-selected="true"
+      aria-hidden="true"
+      x={55 + first * 80 - 32}
+      y="14"
+      width={(last - first) * 80 + 64}
+      height="148"
+      rx="8"
+    />
+  );
+}
+
 function Structure({
   chain,
   left = "0",
@@ -23,6 +63,7 @@ function Structure({
   brackets = "0",
   countMark = "none",
   label,
+  selectedPosition,
 }: {
   chain: ChainAtom[];
   left?: string;
@@ -30,12 +71,22 @@ function Structure({
   brackets?: string;
   countMark?: string;
   label: string;
+  selectedPosition?: number;
 }) {
   const w = Math.max(230, chain.length * 80 + 110),
     x = (i: number) => 55 + i * 80;
+  const region = useVisibleSelection(
+    selectedPosition,
+    selectedPosition,
+    chain.length,
+    selectedPosition === undefined
+      ? ""
+      : JSON.stringify(chain[selectedPosition]),
+  );
   return (
     <figure>
       <div
+        ref={region}
         className={styles.scroll}
         tabIndex={0}
         role="region"
@@ -49,6 +100,9 @@ function Structure({
           role="img"
           aria-label={label}
         >
+          {selectedPosition !== undefined && chain[selectedPosition] && (
+            <Selection first={selectedPosition} last={selectedPosition} />
+          )}
           {chain.length === 0 ? (
             <text x="15" y="85">
               No backbone atoms chosen
@@ -125,6 +179,9 @@ function Structure({
       <figcaption>
         {label}. CH₂ represents its two hydrogen atoms. Scroll sideways if
         needed; your choices are shown unchanged.
+        {selectedPosition !== undefined && chain[selectedPosition] && (
+          <> The outlined atom is position {selectedPosition + 1}.</>
+        )}
       </figcaption>
     </figure>
   );
@@ -171,10 +228,12 @@ function FunctionalGroups({
   d,
   data,
   reference = false,
+  activeEnd,
 }: {
   d: Record<string, string>;
   data: PolyesterDrawingData;
   reference?: boolean;
+  activeEnd?: string;
 }) {
   return (
     <div>
@@ -184,94 +243,142 @@ function FunctionalGroups({
           stem,
           stem === "diol" ? data.diolC : data.acidSpacerC,
         );
-        const w = chain.length * 80 + 110,
-          x = (i: number) => 55 + i * 80;
         return (
-          <figure key={stem}>
-            <div
-              className={styles.scroll}
-              tabIndex={0}
-              role="region"
-              aria-label={`${reference ? "Reference" : "Your"} ${stem === "acid" ? "diacid" : "diol"} structure: scroll to inspect both ends`}
-            >
-              <svg
-                width={w}
-                style={{ width: w, height: 170, maxWidth: "none" }}
-                height="170"
-                viewBox={`0 0 ${w} 170`}
-                role="img"
-                aria-label={`${reference ? "Reference" : "Your"} ${stem === "acid" ? "diacid" : "diol"} functional groups`}
-              >
-                {chain.map((a, i) => (
-                  <g key={i}>
-                    <text x={x(i)} y="94" textAnchor="middle">
-                      {a.atom === "CH2" ? "CH₂" : a.atom}
-                    </text>
-                    {i < chain.length - 1 &&
-                      (() => {
-                        const order =
-                          i === 0 && chain[0].atom === "O"
-                            ? d[stem + "LeftO"]
-                            : i === chain.length - 2 &&
-                                chain.at(-1)!.atom === "O"
-                              ? d[stem + "RightO"]
-                              : "1";
-                        return (
-                          <>
-                            <line
-                              x1={x(i) + 24}
-                              x2={x(i + 1) - 24}
-                              y1={order === "2" ? 85 : 88}
-                              y2={order === "2" ? 85 : 88}
-                            />
-                            {order === "2" && (
-                              <line
-                                x1={x(i) + 24}
-                                x2={x(i + 1) - 24}
-                                y1="91"
-                                y2="91"
-                              />
-                            )}
-                          </>
-                        );
-                      })()}
-                    {a.oxygen !== "0" && (
-                      <>
-                        <text x={x(i)} y="28" textAnchor="middle">
-                          O
-                        </text>
-                        <line
-                          x1={x(i) - (a.oxygen === "2" ? 3 : 0)}
-                          x2={x(i) - (a.oxygen === "2" ? 3 : 0)}
-                          y1="35"
-                          y2="74"
-                        />
-                        {a.oxygen === "2" && (
-                          <line x1={x(i) + 3} x2={x(i) + 3} y1="35" y2="74" />
-                        )}
-                      </>
-                    )}
-                    {a.hydrogen === "1" && (
-                      <>
-                        <line x1={x(i)} x2={x(i)} y1="104" y2="130" />
-                        <text x={x(i)} y="150" textAnchor="middle">
-                          H
-                        </text>
-                      </>
-                    )}
-                  </g>
-                ))}
-              </svg>
-            </div>
-            <figcaption>
-              {reference ? "Reference" : "Your"}{" "}
-              {stem === "acid" ? "diacid" : "diol"}. Both supplied carbon ends
-              remain. CH₂ abbreviates the spacer hydrogens.
-            </figcaption>
-          </figure>
+          <FunctionalGroupFigure
+            key={stem}
+            chain={chain}
+            d={d}
+            stem={stem}
+            reference={reference}
+            activeEnd={activeEnd}
+          />
         );
       })}
     </div>
+  );
+}
+
+function FunctionalGroupFigure({
+  chain,
+  d,
+  stem,
+  reference,
+  activeEnd,
+}: {
+  chain: ChainAtom[];
+  d: Record<string, string>;
+  stem: "diol" | "acid";
+  reference: boolean;
+  activeEnd?: string;
+}) {
+  const w = chain.length * 80 + 110,
+    x = (i: number) => 55 + i * 80,
+    selected = activeEnd?.startsWith(stem) ?? false,
+    right = activeEnd?.endsWith("Right") ?? false,
+    first = selected
+      ? right
+        ? chain.length - (d[stem + "RightO"] === "0" ? 1 : 2)
+        : 0
+      : undefined,
+    last = selected
+      ? right
+        ? chain.length - 1
+        : d[stem + "LeftO"] === "0"
+          ? 0
+          : 1
+      : undefined;
+  const region = useVisibleSelection(
+    first,
+    last,
+    chain.length,
+    selected ? JSON.stringify(d) : "",
+  );
+  return (
+    <figure>
+      <div
+        ref={region}
+        className={styles.scroll}
+        tabIndex={0}
+        role="region"
+        aria-label={`${reference ? "Reference" : "Your"} ${stem === "acid" ? "diacid" : "diol"} structure: scroll to inspect both ends`}
+      >
+        <svg
+          width={w}
+          style={{ width: w, height: 170, maxWidth: "none" }}
+          height="170"
+          viewBox={`0 0 ${w} 170`}
+          role="img"
+          aria-label={`${reference ? "Reference" : "Your"} ${stem === "acid" ? "diacid" : "diol"} functional groups`}
+        >
+          {first !== undefined && last !== undefined && (
+            <Selection first={first} last={last} />
+          )}
+          {chain.map((a, i) => (
+            <g key={i}>
+              <text x={x(i)} y="94" textAnchor="middle">
+                {a.atom === "CH2" ? "CH₂" : a.atom}
+              </text>
+              {i < chain.length - 1 &&
+                (() => {
+                  const order =
+                    i === 0 && chain[0].atom === "O"
+                      ? d[stem + "LeftO"]
+                      : i === chain.length - 2 && chain.at(-1)!.atom === "O"
+                        ? d[stem + "RightO"]
+                        : "1";
+                  return (
+                    <>
+                      <line
+                        x1={x(i) + 24}
+                        x2={x(i + 1) - 24}
+                        y1={order === "2" ? 85 : 88}
+                        y2={order === "2" ? 85 : 88}
+                      />
+                      {order === "2" && (
+                        <line
+                          x1={x(i) + 24}
+                          x2={x(i + 1) - 24}
+                          y1="91"
+                          y2="91"
+                        />
+                      )}
+                    </>
+                  );
+                })()}
+              {a.oxygen !== "0" && (
+                <>
+                  <text x={x(i)} y="28" textAnchor="middle">
+                    O
+                  </text>
+                  <line
+                    x1={x(i) - (a.oxygen === "2" ? 3 : 0)}
+                    x2={x(i) - (a.oxygen === "2" ? 3 : 0)}
+                    y1="35"
+                    y2="74"
+                  />
+                  {a.oxygen === "2" && (
+                    <line x1={x(i) + 3} x2={x(i) + 3} y1="35" y2="74" />
+                  )}
+                </>
+              )}
+              {a.hydrogen === "1" && (
+                <>
+                  <line x1={x(i)} x2={x(i)} y1="104" y2="130" />
+                  <text x={x(i)} y="150" textAnchor="middle">
+                    H
+                  </text>
+                </>
+              )}
+            </g>
+          ))}
+        </svg>
+      </div>
+      <figcaption>
+        {reference ? "Reference" : "Your"} {stem === "acid" ? "diacid" : "diol"}
+        . Both supplied carbon ends remain. CH₂ abbreviates the spacer
+        hydrogens.
+      </figcaption>
+    </figure>
   );
 }
 export function CondensationReference({
@@ -432,7 +539,7 @@ export function CondensationConstruction({
             ))}
           </div>
           <p>{data.note}</p>
-          <FunctionalGroups d={d} data={data} />
+          <FunctionalGroups d={d} data={data} activeEnd={activeEnd} />
           {["diolLeft", "diolRight", "acidLeft", "acidRight"].some(
             (stem) => d[stem + "O"] === "0" && d[stem + "H"] === "1",
           ) && (
@@ -466,6 +573,7 @@ export function CondensationConstruction({
             brackets={d.brackets}
             countMark={d.countMark}
             label="Your repeat construction"
+            selectedPosition={atom ? position : undefined}
           />
           {atom && (
             <>

@@ -1,5 +1,7 @@
 # Condensation validation and integration
 
+**Current evidence:** [quality follow-up](quality-followup.md) supersedes the initial delivery counts and captures below. The final corrected build passed all1006 units,52 lesson browser cases and10 separate storage cases. It also compares the exact newer Maths branch described by the attached transcript. Initial iteration evidence is retained below as history, not a claim that the previous checks caught every UX weakness.
+
 ## Ownership and tested candidate
 
 The feature branch starts from `4d86f94963e09812847fcac076e9b99d9f1a02f6`. It contains only condensation-specific content, components, helpers, tests and review artifacts. Shared application files remain identical to that baseline. The actual browser-tested application is a private copy at `/workspace/chemistry-condensation-runtime`, with its own dependency installation and the five proposed shared patches applied. This branch requires those proposals to be integrated before its new response kinds and tier-specific assessment flow work in the app. No other lesson was authored or corrected.

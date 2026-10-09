@@ -1,0 +1,102 @@
+[WebServer] (node:144339) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 52 tests using 2 workers
+
+(node:144373) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:144374) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [desktop] › tests/condensation-review.browser.spec.ts:183:7 › fonts-ready 320: original and new guided/practice construction controls, readable SVGs and axe (17.9s)
+  ✓   3 [desktop] › tests/condensation-review.browser.spec.ts:183:7 › fonts-ready 390: original and new guided/practice construction controls, readable SVGs and axe (18.4s)
+  ✓   1 [desktop] › tests/condensation-review.browser.spec.ts:249:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (58.6s)
+  ✓   5 [desktop] › tests/condensation-review.browser.spec.ts:183:7 › fonts-ready 1280: original and new guided/practice construction controls, readable SVGs and axe (17.1s)
+  ✓   4 [desktop] › tests/condensation-review.browser.spec.ts:249:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (57.5s)
+  ✓   7 [desktop] › tests/condensation-review.browser.spec.ts:460:5 › wrong and unreadable constructions retain exact bytes; malformed work cannot record and scoped reset preserves siblings (24.7s)
+  ✓   8 [desktop] › tests/condensation-review.browser.spec.ts:507:5 › helped equivalent construction cannot be fresh in a reserved Higher form (12.1s)
+  ✓   9 [desktop] › tests/condensation-review.browser.spec.ts:534:5 › a started ORIGINAL addition form survives a Higher switch with answer bytes and reserved IDs intact (20.9s)
+  ✓   6 [desktop] › tests/condensation-review.browser.spec.ts:249:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (1.3m)
+  ✓  10 [desktop] › tests/condensation-review.browser.spec.ts:565:7 › fonts-ready 320: edited chemical parts stay visible through wrong work, keyboard movement, repair and reload (19.8s)
+  ✓  11 [desktop] › tests/condensation-review.browser.spec.ts:565:7 › fonts-ready 390: edited chemical parts stay visible through wrong work, keyboard movement, repair and reload (20.4s)
+  ✓  12 [desktop] › tests/condensation-review.browser.spec.ts:565:7 › fonts-ready 1280: edited chemical parts stay visible through wrong work, keyboard movement, repair and reload (22.0s)
+  ✓  13 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › addition: all original comparisons retain wrong proposals on reload and accept their chemical targets (43.9s)
+  ✓  14 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › reverse: all original comparisons retain wrong proposals on reload and accept their chemical targets (32.5s)
+  ✓  15 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › segment: all original comparisons retain wrong proposals on reload and accept their chemical targets (26.4s)
+  ✓  16 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › inventory: all original comparisons retain wrong proposals on reload and accept their chemical targets (26.6s)
+  ✓  17 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › ester: all original comparisons retain wrong proposals on reload and accept their chemical targets (22.8s)
+  ✓  18 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › links: all original comparisons retain wrong proposals on reload and accept their chemical targets (21.3s)
+  ✓  19 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › polyester: all original comparisons retain wrong proposals on reload and accept their chemical targets (24.0s)
+  ✓  20 [desktop] › tests/polymerisation.browser.spec.ts:177:5 › all41 practice tasks, blank independent drawings and teacher references retain honest review (19.2s)
+  ✓  22 [desktop] › tests/polymerisation.browser.spec.ts:354:5 › raw numeric strings, repeated selection, Undo and reset preserve the exact original task (8.8s)
+  ✓  21 [desktop] › tests/polymerisation.browser.spec.ts:249:5 › both cold forms defer all drawing references and retain5 automatic marks plus3 self-reviews; review waits seven days (18.4s)
+  ✓  23 [desktop] › tests/polymerisation.browser.spec.ts:380:5 › 3D growth reload and Undo retain actual chosen crop and permit a real downloaded GLB (9.4s)
+  ✓  24 [desktop] › tests/polymerisation.browser.spec.ts:428:5 › mobile long structures retain readable labels and horizontal keyboard panning without page overflow (6.4s)
+  ✓  26 [desktop] › tests/polymerisation.browser.spec.ts:561:5 › unavailable WebGL preserves readable chemistry and the opening control fits a short mobile viewport (5.2s)
+(node:147427) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  25 [desktop] › tests/polymerisation.browser.spec.ts:478:5 › wrong independent attachments remain visible beside the reference and Clear returns every choice to blank (10.2s)
+(node:147436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  27 [mobile] › tests/condensation-review.browser.spec.ts:183:7 › fonts-ready 320: original and new guided/practice construction controls, readable SVGs and axe (17.3s)
+  ✓  29 [mobile] › tests/condensation-review.browser.spec.ts:183:7 › fonts-ready 390: original and new guided/practice construction controls, readable SVGs and axe (16.6s)
+  ✓  28 [mobile] › tests/condensation-review.browser.spec.ts:249:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (57.1s)
+  ✓  31 [mobile] › tests/condensation-review.browser.spec.ts:183:7 › fonts-ready 1280: original and new guided/practice construction controls, readable SVGs and axe (17.0s)
+  ✓  30 [mobile] › tests/condensation-review.browser.spec.ts:249:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (54.9s)
+  ✓  33 [mobile] › tests/condensation-review.browser.spec.ts:460:5 › wrong and unreadable constructions retain exact bytes; malformed work cannot record and scoped reset preserves siblings (18.8s)
+  ✓  34 [mobile] › tests/condensation-review.browser.spec.ts:507:5 › helped equivalent construction cannot be fresh in a reserved Higher form (11.1s)
+  ✓  35 [mobile] › tests/condensation-review.browser.spec.ts:534:5 › a started ORIGINAL addition form survives a Higher switch with answer bytes and reserved IDs intact (17.0s)
+  ✓  32 [mobile] › tests/condensation-review.browser.spec.ts:249:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (60.0s)
+  ✘  36 [mobile] › tests/condensation-review.browser.spec.ts:565:7 › fonts-ready 320: edited chemical parts stay visible through wrong work, keyboard movement, repair and reload (14.0s)
+(node:149109) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  37 [mobile] › tests/condensation-review.browser.spec.ts:565:7 › fonts-ready 390: edited chemical parts stay visible through wrong work, keyboard movement, repair and reload (20.8s)
+  ✓  38 [mobile] › tests/condensation-review.browser.spec.ts:565:7 › fonts-ready 1280: edited chemical parts stay visible through wrong work, keyboard movement, repair and reload (22.8s)
+  ✓  39 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › addition: all original comparisons retain wrong proposals on reload and accept their chemical targets (42.6s)
+  ✓  40 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › reverse: all original comparisons retain wrong proposals on reload and accept their chemical targets (31.1s)
+  ✓  41 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › segment: all original comparisons retain wrong proposals on reload and accept their chemical targets (24.4s)
+  ✓  42 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › inventory: all original comparisons retain wrong proposals on reload and accept their chemical targets (25.5s)
+  ✓  43 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › ester: all original comparisons retain wrong proposals on reload and accept their chemical targets (22.0s)
+  ✓  44 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › links: all original comparisons retain wrong proposals on reload and accept their chemical targets (22.3s)
+  ✓  45 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › polyester: all original comparisons retain wrong proposals on reload and accept their chemical targets (24.5s)
+  ✓  46 [mobile] › tests/polymerisation.browser.spec.ts:177:5 › all41 practice tasks, blank independent drawings and teacher references retain honest review (16.5s)
+  ✓  48 [mobile] › tests/polymerisation.browser.spec.ts:354:5 › raw numeric strings, repeated selection, Undo and reset preserve the exact original task (7.9s)
+  ✓  47 [mobile] › tests/polymerisation.browser.spec.ts:249:5 › both cold forms defer all drawing references and retain5 automatic marks plus3 self-reviews; review waits seven days (17.0s)
+  ✓  49 [mobile] › tests/polymerisation.browser.spec.ts:380:5 › 3D growth reload and Undo retain actual chosen crop and permit a real downloaded GLB (10.0s)
+  ✓  50 [mobile] › tests/polymerisation.browser.spec.ts:428:5 › mobile long structures retain readable labels and horizontal keyboard panning without page overflow (6.9s)
+  ✓  52 [mobile] › tests/polymerisation.browser.spec.ts:561:5 › unavailable WebGL preserves readable chemistry and the opening control fits a short mobile viewport (5.3s)
+  ✓  51 [mobile] › tests/polymerisation.browser.spec.ts:478:5 › wrong independent attachments remain visible beside the reference and Clear returns every choice to blank (10.6s)
+
+
+  1) [mobile] › tests/condensation-review.browser.spec.ts:565:7 › fonts-ready 320: edited chemical parts stay visible through wrong work, keyboard movement, repair and reload
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      177 |       }),
+      178 |     )
+    > 179 |     .toBe(true);
+          |      ^
+      180 |   return region;
+      181 | }
+      182 | for (const width of [320, 390, 1280]) {
+        at selectedPartVisible (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:179:6)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:614:5
+
+    Error Context: test-results/browser/condensation-review.browse-e6e2d--movement-repair-and-reload-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-e6e2d--movement-repair-and-reload-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-e6e2d--movement-repair-and-reload-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [mobile] › tests/condensation-review.browser.spec.ts:565:7 › fonts-ready 320: edited chemical parts stay visible through wrong work, keyboard movement, repair and reload
+  51 passed (10.5m)
