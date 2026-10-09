@@ -1,0 +1,246 @@
+{
+  "build": "jM1cS8ohKBe9PHyuPEvu9",
+  "note": "Controlled QA openings; native response entry retained after reload. Whole independent seven-item set completed through the UI; examples opened only after whole submission. Short-screen geometry checked after fonts ready.",
+  "captures": [
+    {
+      "file": "320-original-alloy-model-opening-viewport.png",
+      "width": 320,
+      "sha256": "b6c131295318dad7de7c545dca7418a13739fbc1e6cfdde4789c9c5449acff6c"
+    },
+    {
+      "file": "320-original-alloy-model-opening-full.png",
+      "width": 320,
+      "sha256": "e388625fa3e2468cd06652ddff6d8c7531ef694718dd1429c1f90df8ad9d3150"
+    },
+    {
+      "file": "320-original-alloy-model-retained-wrong-viewport.png",
+      "width": 320,
+      "sha256": "ec20f31ffee503117aa0b3358c8e4df3e814143fad0922ecb56fb3ba2c4b57a0"
+    },
+    {
+      "file": "320-original-alloy-model-retained-wrong-full.png",
+      "width": 320,
+      "sha256": "d59fedcf62ec8a785af14e91bdec3e16afac79d8083077122c34b779a37e9bce"
+    },
+    {
+      "file": "320-original-alloy-model-repaired-viewport.png",
+      "width": 320,
+      "sha256": "c9b8cc4039eff88f2b94d623adcfd99aaac6eaba420628d46b81af2873cb7e38"
+    },
+    {
+      "file": "320-original-alloy-model-repaired-full.png",
+      "width": 320,
+      "sha256": "d97717a9e1fd584417b8fdc16dab0279cb131ed9000652f9527b1177b1bd2344"
+    },
+    {
+      "file": "320-g-copper-retained-viewport.png",
+      "width": 320,
+      "sha256": "9c90dfed023aaef6fd3e5e60cebff74771f3af7ce39c4b850c275def28fe1e02"
+    },
+    {
+      "file": "320-g-copper-retained-full.png",
+      "width": 320,
+      "sha256": "b3fd04f32426b625caa699e17ed333c40ca2b2d727391e4fb132497346fb667f"
+    },
+    {
+      "file": "320-g-steels-retained-viewport.png",
+      "width": 320,
+      "sha256": "47759023910d0aa69ce8364a7fae52264288ea22fd7fa806bc0184a2dec8d8eb"
+    },
+    {
+      "file": "320-g-steels-retained-full.png",
+      "width": 320,
+      "sha256": "596d35236114d6a5523248e4b0e5c73670522db1f18b3959cfa7a44441d994ec"
+    },
+    {
+      "file": "320-p-brass-retained-viewport.png",
+      "width": 320,
+      "sha256": "724f842e42046e7bcf942eea40968e1dd7c53946291318c78a79ebc8d7369ca8"
+    },
+    {
+      "file": "320-p-brass-retained-full.png",
+      "width": 320,
+      "sha256": "7cd28098f8cd68752385750f802fcf4eb2b740ab2b02f2f843c92e97a0c45db3"
+    },
+    {
+      "file": "320-c-brass-retained-viewport.png",
+      "width": 320,
+      "sha256": "f576a07d18cecaf5616d1a060739124508c31effc992c7a1ad0d26aebf6d83f7"
+    },
+    {
+      "file": "320-c-brass-retained-full.png",
+      "width": 320,
+      "sha256": "1d3a833bd843e1f82583447b07df1813af76ae3e69832a777f0a7334d211402b"
+    },
+    {
+      "file": "320-independent-manual-examples-viewport.png",
+      "width": 320,
+      "sha256": "3c2d563abeaf56245d3fadabca85025b465c71db4a5e8bf6199dbf19b11a1e66"
+    },
+    {
+      "file": "320-independent-manual-examples-full.png",
+      "width": 320,
+      "sha256": "d6223f7a7d5d0e75d417dae58b793968c5d6750273776ab9012e5b2485a67d6d"
+    },
+    {
+      "file": "390-original-alloy-model-opening-viewport.png",
+      "width": 390,
+      "sha256": "246bd0fe7e198f016d095c76d5f2ee3c968e1032a57cc523773c9d2c68106be6"
+    },
+    {
+      "file": "390-original-alloy-model-opening-full.png",
+      "width": 390,
+      "sha256": "3534f4094b48e9224a5b91ead19265f612607056edef6f196b8b3919a7238159"
+    },
+    {
+      "file": "390-original-alloy-model-retained-wrong-viewport.png",
+      "width": 390,
+      "sha256": "daa31bbf8c8b4900e4be18560655a0d05c22288a22e4f48ddf8495fa9d13cb63"
+    },
+    {
+      "file": "390-original-alloy-model-retained-wrong-full.png",
+      "width": 390,
+      "sha256": "a0f37d0e93638bb87f835543eb709991c6f7f2ad6fba75e5158fb3f72c236b75"
+    },
+    {
+      "file": "390-original-alloy-model-repaired-viewport.png",
+      "width": 390,
+      "sha256": "fa521fd127f99c1881417fbe4b5a59d2568d60c5c9f8b698e4192f51ef4dc01c"
+    },
+    {
+      "file": "390-original-alloy-model-repaired-full.png",
+      "width": 390,
+      "sha256": "3e36ee9b1fbea288ba58e4634f488dd49095774484e24dbf7961e69a528e9f22"
+    },
+    {
+      "file": "390-g-copper-retained-viewport.png",
+      "width": 390,
+      "sha256": "41716b73575b4b596bd4e9ae03054d8ec6033b9fa02d10a85ad112ac7de51310"
+    },
+    {
+      "file": "390-g-copper-retained-full.png",
+      "width": 390,
+      "sha256": "2ac96ab0a3f19f5096806c8c031421ccdf120728c86ba871bcb430543ae69f83"
+    },
+    {
+      "file": "390-g-steels-retained-viewport.png",
+      "width": 390,
+      "sha256": "08f1b4a70ba1245febb26bc8ecf70d10dbb2e57acd758840ae98efaa21d3e113"
+    },
+    {
+      "file": "390-g-steels-retained-full.png",
+      "width": 390,
+      "sha256": "32e1f4de9fba0e28ac194a110c6ea4e7fb2d012aa9a6724b3e38c57dbe84fb04"
+    },
+    {
+      "file": "390-p-brass-retained-viewport.png",
+      "width": 390,
+      "sha256": "3807abd9170b89a5878a9168e6ab505870355afa3c1470e1089072daabd8692a"
+    },
+    {
+      "file": "390-p-brass-retained-full.png",
+      "width": 390,
+      "sha256": "ae87cf5379e0ad0ad8ba6c943617e84a555d67e76bad8b04c0e4f2a81fc16ec3"
+    },
+    {
+      "file": "390-c-brass-retained-viewport.png",
+      "width": 390,
+      "sha256": "075ad870a5041a4958fa7c416d0ba2981fd52114d0f2f3ae3d1e4f46295c823e"
+    },
+    {
+      "file": "390-c-brass-retained-full.png",
+      "width": 390,
+      "sha256": "3063353dda859ea77a9d47b133a438d06d30c4092b3995d0e60c3d1d26949aab"
+    },
+    {
+      "file": "390-independent-manual-examples-viewport.png",
+      "width": 390,
+      "sha256": "d9a12e479877c78d15e913b1ea2040ceb7a87f3e9877472e27c08efd6be31b0c"
+    },
+    {
+      "file": "390-independent-manual-examples-full.png",
+      "width": 390,
+      "sha256": "c65fc5fea649585e968998404c5b8007ba85cd0c9e628742316076002443457c"
+    },
+    {
+      "file": "1280-original-alloy-model-opening-viewport.png",
+      "width": 1280,
+      "sha256": "caf1584a9e9556642d809facd18996fb461fa069eaed69555f9c62571460f59d"
+    },
+    {
+      "file": "1280-original-alloy-model-opening-full.png",
+      "width": 1280,
+      "sha256": "450c088c9d6ba25f63bb814120c75e6d759f1c77c4573405b05c4fbda6963d5d"
+    },
+    {
+      "file": "1280-original-alloy-model-retained-wrong-viewport.png",
+      "width": 1280,
+      "sha256": "79dc6e68e40a5462688a66c449904a80d178dc811e09eabcfc696afbf8f710a0"
+    },
+    {
+      "file": "1280-original-alloy-model-retained-wrong-full.png",
+      "width": 1280,
+      "sha256": "3700af6b8b1c8cfaf6c299ffdc8d5f0d7f081318ecbeefe7c920c37f1eba1dfb"
+    },
+    {
+      "file": "1280-original-alloy-model-repaired-viewport.png",
+      "width": 1280,
+      "sha256": "cb22660a76e5014fcf5e16a72fd22357fc50e85f6dd67929dd04098e47bd9f40"
+    },
+    {
+      "file": "1280-original-alloy-model-repaired-full.png",
+      "width": 1280,
+      "sha256": "2ca9cecf7c1270d71c35039cda274af1819c0f2515bf5eeca17a0b3b9c3d9ecf"
+    },
+    {
+      "file": "1280-g-copper-retained-viewport.png",
+      "width": 1280,
+      "sha256": "324210a3c6d3f80cba9f5f30038ef3fd51736fcaf2dc2315c23725925ca69b60"
+    },
+    {
+      "file": "1280-g-copper-retained-full.png",
+      "width": 1280,
+      "sha256": "0f4cb74765f94e2e898b1da5a272542313d05b5560ef4a73bfb7fd0ac95d8e87"
+    },
+    {
+      "file": "1280-g-steels-retained-viewport.png",
+      "width": 1280,
+      "sha256": "8b9463243b13010f3b4f0c6d62b74eec24837c197be0bb80d379bb2795f34bf8"
+    },
+    {
+      "file": "1280-g-steels-retained-full.png",
+      "width": 1280,
+      "sha256": "1f65a47c0bf478b9ad1ac1a590e9e59f22ee668f9fbc53760c5e94c25e5af6aa"
+    },
+    {
+      "file": "1280-p-brass-retained-viewport.png",
+      "width": 1280,
+      "sha256": "5ee31b84fdd4b8cb21d69acf007a85e35f1cf0be56c6758e4cf08745e65b43df"
+    },
+    {
+      "file": "1280-p-brass-retained-full.png",
+      "width": 1280,
+      "sha256": "ff78cd2540cd150a02fe823bde3c883a7a48eb279fa0ca1890ba57912e413ad9"
+    },
+    {
+      "file": "1280-c-brass-retained-viewport.png",
+      "width": 1280,
+      "sha256": "0e9e6b670e14d5e3485182c6d77574157dbf455bd5ca84290ba8c70bceab9245"
+    },
+    {
+      "file": "1280-c-brass-retained-full.png",
+      "width": 1280,
+      "sha256": "7a1a3ee459bea1868daac00e133bd46e4dae4e41e58ac1767e3ae46ec5b8edaf"
+    },
+    {
+      "file": "1280-independent-manual-examples-viewport.png",
+      "width": 1280,
+      "sha256": "495f4bd6f15c6ef1783ff4af12e0d1a9558171741700aab4f9934c2e87d22a59"
+    },
+    {
+      "file": "1280-independent-manual-examples-full.png",
+      "width": 1280,
+      "sha256": "68d656858286f6c27b683ccfb669c7ea5cf449d858db853babfa47914aaca4b8"
+    }
+  ]
+}

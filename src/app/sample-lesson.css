@@ -8667,3 +8667,223 @@ body:has(.sample-lesson) .topic-number {
     height: 64px;
   }
 }
+
+.sample-task-panel[data-alloy-use],
+.assessment-session .question-panel[data-alloy-use] {
+  padding: 16px;
+}
+.sample-task-panel[data-alloy-use] > h2,
+.question-panel[data-alloy-use] h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.sample-task-panel[data-alloy-use] .sample-task-prompt {
+  font-size: 15px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.sample-task-panel[data-alloy-use] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-task-panel[data-alloy-use] .sample-mobile-tasks {
+  display: flex;
+  margin-top: 20px;
+}
+[data-alloy-use] .written-answer:not(.short-written-answer) textarea {
+  min-height: 104px;
+  height: 104px;
+}
+@media (max-width: 600px) {
+  .sample-lesson:has([data-alloy-use])
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+  .sample-task-panel[data-alloy-use],
+  .assessment-session .question-panel[data-alloy-use] {
+    padding: 12px;
+  }
+  .question-panel[data-alloy-use] h2 {
+    font-size: 18px;
+  }
+}
+
+/* Keep this lesson's expanding task list below the actual work. */
+.sample-lesson[data-lesson="materials-and-corrosion"] .sample-mobile-tasks {
+  display: flex;
+  margin-top: 20px;
+}
+@media (min-width: 601px) {
+  .sample-lesson[data-lesson="materials-and-corrosion"] .sample-task-panel {
+    padding: 20px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"] .sample-task-topline {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .sample-task-panel
+    > h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"] .sample-task-prompt {
+    margin-bottom: 12px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"] .materials-workbench {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 14px;
+    padding: 14px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .materials-workbench
+    > h3 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"] .materials-fields {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    margin-top: 0;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"] .materials-context {
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .materials-context
+    .materials-given {
+    margin-top: 0;
+    padding: 10px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .materials-context
+    dl
+    > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .materials-workbench
+    > :not(h3):not(.materials-fields):not(.materials-context) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 601px) {
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .materials-context
+    .materials-given {
+    display: flex;
+    flex-direction: column;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .materials-context
+    .materials-structure,
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .materials-context
+    .materials-carats {
+    order: -1;
+    margin-top: 0;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .sample-task-layout:not(.has-model)
+    .question-panel:has(> .materials-given):has(> .numeric-label) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.75fr);
+    gap: 16px;
+    align-items: start;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .sample-task-layout:not(.has-model)
+    .question-panel
+    > .materials-given {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    margin: 0;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .sample-task-layout:not(.has-model)
+    .question-panel:has(> .materials-given)
+    > .numeric-label {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .sample-task-layout:not(.has-model)
+    .question-panel:has(> .materials-given)
+    > .sample-check-answer {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .sample-task-layout:not(.has-model)
+    .question-panel:has(> .materials-given)
+    > .feedback {
+    grid-column: 1 / -1;
+  }
+}
+
+.materials-source > summary {
+  min-height: 44px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 700;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="materials-and-corrosion"] .sample-task-panel {
+    padding: 12px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .sample-task-panel
+    > h2 {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"] .sample-task-prompt {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"] .sample-task-topline {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"] .materials-workbench {
+    padding: 10px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .materials-workbench
+    > h3 {
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"] .materials-fields {
+    margin-top: 10px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .question-panel:has(> .materials-source) {
+    padding: 12px;
+  }
+  .sample-lesson[data-lesson="materials-and-corrosion"]
+    .question-panel
+    > .materials-source {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="materials-and-corrosion"] .sample-title-row,
+  .sample-lesson[data-lesson="materials-and-corrosion"] .sample-overview,
+  .sample-lesson[data-lesson="materials-and-corrosion"] .sample-stages {
+    margin-bottom: 8px;
+  }
+}

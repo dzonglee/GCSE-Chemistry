@@ -1,5 +1,12 @@
 import type { LearningTask, LessonJourney } from "../types";
 import {
+  alloyUseRecovery,
+  alloyUseGuided,
+  alloyUsePractice,
+  alloyUseCheck,
+  alloyUseReview,
+} from "./alloy-use-recall";
+import {
   materialsRecords as R,
   type MaterialsGiven,
 } from "../../lib/materials";
@@ -1366,6 +1373,35 @@ for (const g of groups)
     if (!q) throw Error("Unknown materials exposure " + s);
     q.exposureAliases = [...g].filter((o) => o !== s).map(id);
   }
+// Append after the original recovery/exposure wiring to preserve every v1
+// definition, original position and started form. New learning is conservative
+// about its equivalence to earlier named-alloy and jewellery work.
+const alloyUseAdditions = [
+  ...alloyUseRecovery,
+  ...alloyUseGuided,
+  ...alloyUsePractice,
+  ...alloyUseCheck,
+  ...alloyUseReview,
+];
+const alloyUseAliases = [
+  ...alloyUseAdditions.map((q) => q.id),
+  ...materialsExposureFamilies.alloyNames.map(id),
+  ...materialsExposureFamilies.gold.map(id),
+];
+for (const q of alloyUseAdditions)
+  q.exposureAliases = alloyUseAliases.filter((alias) => alias !== q.id);
+for (const q of alloyUsePractice) {
+  const recovery = q.id.replace("-p-", "-r-");
+  q.followUp = recovery;
+  materialsRecoveryRoutes[q.id] = recovery;
+}
+refresher.push(...alloyUseRecovery);
+guided.push(...alloyUseGuided);
+practice.push(...alloyUsePractice);
+checkForms.push(alloyUseCheck);
+reviewForms.push(alloyUseReview);
+allMaterialsTasks.push(...alloyUseAdditions);
+
 export const materialsJourney: LessonJourney = {
   version: 1,
   introduction:
@@ -1403,7 +1439,11 @@ export const materialsJourney: LessonJourney = {
     },
     {
       label: "Composites and quantitative choices",
-      taskIds: practice.slice(24).map((q) => q.id),
+      taskIds: practice.slice(24, 29).map((q) => q.id),
+    },
+    {
+      label: "Recall named alloy uses without choices",
+      taskIds: alloyUsePractice.map((q) => q.id),
     },
   ],
 };

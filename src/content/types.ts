@@ -25,6 +25,7 @@ export interface Question {
   };
   title?: string;
   writtenEquations?: boolean;
+  shortWritten?: boolean;
   conciseHeading?: boolean;
   elementReference?: boolean;
   alkaliReference?: boolean;

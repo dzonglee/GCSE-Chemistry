@@ -21,6 +21,19 @@ async function saved(p: Page) {
     )
     .toBeNull();
 }
+async function openSuppliedSources(p: Page) {
+  await p.evaluate(
+    () =>
+      new Promise<void>((r) =>
+        requestAnimationFrame(() => requestAnimationFrame(() => r())),
+      ),
+  );
+  for (const source of await p.locator(".materials-source").all()) {
+    if ((await source.getAttribute("open")) === null)
+      await source.locator(":scope > summary").click();
+    await expect(source.locator(".materials-given")).toBeVisible();
+  }
+}
 async function task(p: Page, i: number) {
   const pick = p.getByLabel("Choose a practice task", { exact: true });
   if (await pick.count()) await pick.selectOption(String(i));
@@ -42,7 +55,11 @@ async function answer(p: Page, q: Question) {
     for (const part of q.parts)
       await p.getByLabel(part.label, { exact: true }).fill(String(part.answer));
   } else if (q.rubric)
-    await p.getByLabel("Your explanation", { exact: true }).fill(q.answer);
+    await p
+      .getByLabel(q.shortWritten ? "Your answer" : "Your explanation", {
+        exact: true,
+      })
+      .fill(q.answer);
   else if (q.options)
     await p.getByRole("radio", { name: q.answer, exact: true }).check();
   else await p.getByLabel("Your answer", { exact: true }).fill(q.answer);
@@ -93,6 +110,7 @@ for (const mode of [
     await task(page, i);
     const m = j.guided[i].model!;
     if (m.kind !== "materials-investigation") throw Error("Missing model");
+    await openSuppliedSources(page);
     const root = page.locator(".materials-workbench"),
       original = await root.locator(".materials-context").innerText();
     await fill(root, m.record);
@@ -128,6 +146,7 @@ for (const mode of [
     await saved(page);
     await page.reload();
     await expect(control).toHaveValue(wrong);
+    await openSuppliedSources(page);
     await root.getByRole("button", { name: "Undo", exact: true }).click();
     await expect(control).toHaveValue(materialsRecords[m.record].expected[f]);
     await root
@@ -137,7 +156,7 @@ for (const mode of [
       await expect(root.locator(`[data-field="${f}"]`)).toHaveValue("");
     expect(await root.locator(".materials-context").innerText()).toBe(original);
   });
-test("all29 practice responses preserve supplied evidence and honest written feedback", async ({
+test("all36 practice responses preserve supplied evidence and honest written feedback", async ({
   page,
 }, info) => {
   test.setTimeout(120000);
@@ -171,7 +190,7 @@ test("all29 practice responses preserve supplied evidence and honest written fee
     }
   }
 });
-test("both reserved eight-question forms and delayed four-question forms seal marking and retain written criteria", async ({
+test("both original eight-question forms and delayed four-question forms seal marking and retain written criteria", async ({
   page,
 }, info) => {
   test.setTimeout(180000);
@@ -301,6 +320,7 @@ test("all25 records are reachable, checkable without changing the sources and ti
       await page.getByRole("button", { name: "Learn", exact: true }).click();
     for (let i = 0; i < j[stage].length; i++) {
       await task(page, i);
+      await openSuppliedSources(page);
       const m = j[stage][i].model;
       if (m?.kind !== "materials-investigation" || seen.has(m.record)) continue;
       const root = page.locator(".materials-workbench");
@@ -438,6 +458,7 @@ test("fixed chain and atom diagrams remain unchanged through wrong predictions a
     [4, "set"],
   ] as const) {
     await task(page, i);
+    await openSuppliedSources(page);
     const root = page.locator(".materials-workbench"),
       graph = root.locator(".materials-structure");
     await expect(root).toHaveAttribute("data-record", record);
@@ -454,6 +475,7 @@ test("fixed chain and atom diagrams remain unchanged through wrong predictions a
     expect(await graph.innerHTML()).toBe(original);
     for (const width of [320, 390]) {
       await page.setViewportSize({ width, height: 664 });
+      await openSuppliedSources(page);
       await accessible(page);
       const box = (await graph.locator("svg").boundingBox())!;
       expect(box.x).toBeGreaterThanOrEqual(0);
@@ -487,6 +509,7 @@ test("every rendered crosslink and branch actually joins its supplied polymer ch
         q.model.record === record,
     );
     await task(page, i);
+    await openSuppliedSources(page);
     const root = page.locator(".materials-workbench");
     await fill(root, record);
     await root

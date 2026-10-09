@@ -1,5 +1,5 @@
 "use client";
-import { useId, useState } from "react";
+import { useId, useState, useSyncExternalStore } from "react";
 import {
   materialsRecord,
   materialsFields,
@@ -13,6 +13,33 @@ import {
   type MaterialsBoard,
   type MaterialsGiven,
 } from "@/lib/materials";
+const subscribeSmallScreen = (update: () => void) => {
+  const media = matchMedia("(max-width: 600px)");
+  media.addEventListener("change", update);
+  return () => media.removeEventListener("change", update);
+};
+const isSmallScreen = () => matchMedia("(max-width: 600px)").matches;
+export function MaterialsSource({
+  data,
+  embedded = false,
+}: {
+  data: MaterialsGiven;
+  embedded?: boolean;
+}) {
+  const compact = useSyncExternalStore(
+    subscribeSmallScreen,
+    isSmallScreen,
+    () => false,
+  );
+  return compact ? (
+    <details className="materials-source">
+      <summary>View case and model</summary>
+      <MaterialsGivenFigure data={data} embedded={embedded} />
+    </details>
+  ) : (
+    <MaterialsGivenFigure data={data} embedded={embedded} />
+  );
+}
 export function MaterialsDiagram({
   kind,
 }: {
@@ -233,11 +260,7 @@ export function MaterialsWorkbench({
     >
       <h3>{r.title}</h3>
       <div className="materials-context">
-        {mode === "rust" ? (
-          <p>{r.rows![0].text}</p>
-        ) : (
-          <MaterialsGivenFigure data={r} embedded />
-        )}
+        <MaterialsSource data={r} embedded />
       </div>
       <div className="materials-fields">
         {materialsFields[mode].map((f) => (
@@ -277,12 +300,6 @@ export function MaterialsWorkbench({
         <p className="materials-input-note">
           Use decimal numbers in these model fields. Entries are kept as typed.
         </p>
-      )}
-      {mode === "rust" && (
-        <details>
-          <summary>Conditions and limits</summary>
-          <MaterialsGivenFigure data={r} embedded />
-        </details>
       )}
       <div className="materials-proposal" aria-label="Your materials proposal">
         <strong>Your proposal</strong>
@@ -340,12 +357,17 @@ export function MaterialsWorkbench({
         </p>
       )}
       {checked && (
-        <p
+        <div
           className={"feedback " + (checked.correct ? "good" : "bad")}
           role="status"
         >
-          {checked.message}
-        </p>
+          <strong>
+            {checked.correct
+              ? "Proposal matches the given case."
+              : "Reconsider your proposal."}
+          </strong>
+          <p>{checked.message}</p>
+        </div>
       )}
     </section>
   );

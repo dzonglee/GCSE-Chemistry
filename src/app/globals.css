@@ -2166,6 +2166,10 @@ progress {
   border-radius: 8px;
   resize: vertical;
 }
+.written-answer.short-written-answer textarea {
+  height: 64px;
+  min-height: 64px;
+}
 @media (max-width: 650px) {
   .particle-facts {
     font-size: 0.76rem;

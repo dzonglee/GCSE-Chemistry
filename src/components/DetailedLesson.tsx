@@ -59,9 +59,11 @@ export function DetailedLesson({
   const section = work.section;
   const saltLesson = lesson.slug === "making-soluble-salts";
   const organicLesson = lesson.slug === "organic-reactions";
+  const materialsLesson = lesson.slug === "materials-and-corrosion";
   const warmupAfterResponse =
     saltLesson ||
     organicLesson ||
+    materialsLesson ||
     (lesson.slug === "yield-and-atom-economy" &&
       (section === "check" || section === "review"));
   const stage: LearningStage =
@@ -78,6 +80,7 @@ export function DetailedLesson({
       )
     : savedPosition;
   const q = list[index];
+  const alloyUseTask = q.id.startsWith("materials-v1-alloy-use-");
   const answer = work.drafts[q.id] ?? "";
   const attempt = work.attempts[q.id]?.at(-1);
   const feedback = attempt?.answer === answer ? mark(q, answer) : undefined;
@@ -284,8 +287,12 @@ export function DetailedLesson({
   const minorAtmosphereRun = work.run?.ids.some((id) =>
     id.startsWith("early-atmosphere-v1-minor-"),
   );
+  const alloyUseRun = work.run?.ids.some((id) =>
+    id.startsWith("materials-v1-alloy-use-"),
+  );
   const compactReview =
-    (minorAtmosphereRun ||
+    (alloyUseRun ||
+      minorAtmosphereRun ||
       compactYieldReview ||
       saltLesson ||
       organicLesson ||
@@ -329,7 +336,8 @@ export function DetailedLesson({
   const ReviewContainer = compactReview ? "details" : "section";
   const reviewScheduleAfter =
     compactReview &&
-    (minorAtmosphereRun ||
+    (alloyUseRun ||
+      minorAtmosphereRun ||
       compactYieldReview ||
       saltLesson ||
       organicLesson ||
@@ -545,6 +553,7 @@ export function DetailedLesson({
             <AssessmentSession
               id={lesson.slug}
               navigationAfterResponse={
+                alloyUseRun ||
                 minorAtmosphereRun ||
                 saltLesson ||
                 organicLesson ||
@@ -670,6 +679,7 @@ export function DetailedLesson({
       ) : (
         <section
           className="sample-task-panel"
+          data-alloy-use={alloyUseTask || undefined}
           data-atmosphere-minor={
             q.id.startsWith("early-atmosphere-v1-minor-") || undefined
           }
@@ -696,9 +706,10 @@ export function DetailedLesson({
               lesson.slug !== "life-cycle-and-recycling" &&
               !organicLesson &&
               !q.id.startsWith("early-atmosphere-v1-minor-") &&
+              !alloyUseTask &&
               !q.polyesterDrawing &&
               practicePicker
-            ) : (
+            ) : !alloyUseTask && lesson.slug !== "materials-and-corrosion" ? (
               <div
                 ref={taskNavigation}
                 className="question-navigation"
@@ -716,7 +727,7 @@ export function DetailedLesson({
                   </button>
                 ))}
               </div>
-            )}
+            ) : null}
           </div>
           <h2 ref={heading} tabIndex={-1}>
             {q.title ?? q.prompt}
@@ -791,6 +802,7 @@ export function DetailedLesson({
                 <QuestionInput
                   question={q}
                   compactHistorical={lesson.slug === "atomic-models"}
+                  compactMaterials={lesson.slug === "materials-and-corrosion"}
                   value={answer}
                   onChange={(value) => {
                     setMessage("");
@@ -973,7 +985,8 @@ export function DetailedLesson({
           </div>
           {(lesson.slug === "life-cycle-and-recycling" ||
             organicLesson ||
-            q.id.startsWith("early-atmosphere-v1-minor-")) &&
+            q.id.startsWith("early-atmosphere-v1-minor-") ||
+            alloyUseTask) &&
             practicePicker}
           {(!(stage === "practice" && journey.practiceGroups) ||
             lesson.slug === "balancing-equations" ||
@@ -1030,7 +1043,7 @@ export function DetailedLesson({
           </details>
         </section>
       )}
-      {(saltLesson || organicLesson) &&
+      {(saltLesson || organicLesson || materialsLesson) &&
         section !== "check" &&
         section !== "review" && (
           <p className="sample-learning-note">

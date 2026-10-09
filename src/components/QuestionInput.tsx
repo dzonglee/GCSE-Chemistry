@@ -15,7 +15,7 @@ import {
   AssessmentRecyclingGiven,
 } from "./AssessmentGivens";
 import { HaberDrawingInput } from "./HaberDrawingInput";
-import { MaterialsGivenFigure } from "./MaterialsWorkbench";
+import { MaterialsGivenFigure, MaterialsSource } from "./MaterialsWorkbench";
 import { LcaGivenFigure } from "./LcaWorkbench";
 import { BioGivenFigure } from "./BioWorkbench";
 import { WasteGivenFigure } from "./WasteWorkbench";
@@ -95,6 +95,7 @@ type InputProps = {
   compactNatural?: boolean;
   naturalInstructions?: string;
   compactHistorical?: boolean;
+  compactMaterials?: boolean;
 };
 export function QuestionInput(props: InputProps) {
   return (
@@ -105,9 +106,13 @@ export function QuestionInput(props: InputProps) {
       {props.question.haberGiven && !props.question.parts && (
         <HaberGivenFigure data={props.question.haberGiven} />
       )}
-      {props.question.materialsGiven && !props.question.parts && (
-        <MaterialsGivenFigure data={props.question.materialsGiven} />
-      )}
+      {props.question.materialsGiven &&
+        !props.question.parts &&
+        (props.compactMaterials ? (
+          <MaterialsSource data={props.question.materialsGiven} />
+        ) : (
+          <MaterialsGivenFigure data={props.question.materialsGiven} />
+        ))}
       {props.question.lcaGiven && (
         <div className="lca-data-response">
           <ResponseInput {...props} />
@@ -823,26 +828,39 @@ function ResponseInput({
     );
   if (question.rubric)
     return (
-      <label className="written-answer">
-        {question.writtenEquations ? "Your equations" : "Your explanation"}
+      <label
+        className={`written-answer${question.shortWritten ? " short-written-answer" : ""}`}
+      >
+        {question.shortWritten
+          ? "Your answer"
+          : question.writtenEquations
+            ? "Your equations"
+            : "Your explanation"}
         <textarea
           aria-label={
-            question.writtenEquations ? "Your equations" : "Your explanation"
+            question.shortWritten
+              ? "Your answer"
+              : question.writtenEquations
+                ? "Your equations"
+                : "Your explanation"
           }
-          rows={5}
+          rows={question.shortWritten ? 2 : 5}
           value={value}
           disabled={disabled}
           onChange={(e) => onChange(e.target.value)}
         />
         <small>
-          {question.id.startsWith("ph-v1-method-") && question.writtenEquations
-            ? "Use ion charges and state symbols; type → or ->. Explain conservation and spectators separately. Scientific accuracy is reviewed manually."
-            : question.writtenEquations &&
-                question.id.startsWith("ion-tests-v1-write-")
-              ? "Use formulas and state symbols; type → or ->. Name spectator ions on a separate line. Scientific accuracy is reviewed manually."
-              : question.writtenEquations
-                ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
-                : "Write in your own words. Use the marking points for self-review when feedback appears."}
+          {question.shortWritten
+            ? "A short phrase is enough. Compare with the examples when feedback appears; other valid answers can be accepted in manual review."
+            : question.id.startsWith("ph-v1-method-") &&
+                question.writtenEquations
+              ? "Use ion charges and state symbols; type → or ->. Explain conservation and spectators separately. Scientific accuracy is reviewed manually."
+              : question.writtenEquations &&
+                  question.id.startsWith("ion-tests-v1-write-")
+                ? "Use formulas and state symbols; type → or ->. Name spectator ions on a separate line. Scientific accuracy is reviewed manually."
+                : question.writtenEquations
+                  ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
+                  : "Write in your own words. Use the marking points for self-review when feedback appears."}
         </small>
       </label>
     );

@@ -166,3 +166,15 @@
 .materials-given thead {
   background: #edf1f8;
 }
+
+.materials-workbench .feedback.good {
+  background: #edf8f1;
+  color: #14563d;
+}
+.materials-workbench .feedback.bad {
+  background: #fff0f0;
+  color: #7d2836;
+}
+.materials-workbench .feedback > p {
+  margin: 8px 0 0;
+}

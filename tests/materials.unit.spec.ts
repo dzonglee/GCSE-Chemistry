@@ -1,3 +1,4 @@
+import { exposureIds } from "../src/lib/progress";
 import { test, expect } from "@playwright/test";
 import {
   allMaterialsTasks as all,
@@ -23,18 +24,18 @@ import {
 } from "../src/lib/workbench";
 import { lessons } from "../src/content/curriculum";
 import { mark } from "../src/lib/marking";
-test("one93-task separate Chemistry lesson has eight specific activities and25 supplied cases", () => {
+test("one123-task separate Chemistry lesson retains eight specific activities and25 supplied cases", () => {
   const l = lessons.find((l) => l.slug === "materials-and-corrosion")!;
   expect(l.journey).toBe(j);
   expect(l.tier).toBe("foundation");
   expect(l.course).toBe("separate");
-  expect(all).toHaveLength(93);
-  expect(new Set(all.map((q) => q.id)).size).toBe(93);
-  expect(j.refresher).toHaveLength(28);
-  expect(j.guided).toHaveLength(8);
-  expect(j.practice).toHaveLength(29);
-  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8]);
-  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4]);
+  expect(all).toHaveLength(123);
+  expect(new Set(all.map((q) => q.id)).size).toBe(123);
+  expect(j.refresher).toHaveLength(35);
+  expect(j.guided).toHaveLength(10);
+  expect(j.practice).toHaveLength(36);
+  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8, 7]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4, 7]);
   expect(Object.keys(R)).toHaveLength(25);
   expect(j.practiceGroups!.flatMap((g) => g.taskIds)).toEqual(
     j.practice.map((q) => q.id),
@@ -279,9 +280,9 @@ test("recipes, composite roles and simultaneous constraints cannot be interchang
   expect(R.hot.expected).toEqual({ material: "a", property: "heat" });
   expect(R.cold.expected).toEqual({ material: "b", property: "impact" });
 });
-test("fourteen explanations are manual and reserved numerics are distinct from teaching", () => {
+test("thirty-seven written responses are manual and reserved numerics are distinct from teaching", () => {
   const written = all.filter((q) => q.rubric);
-  expect(written).toHaveLength(14);
+  expect(written).toHaveLength(37);
   for (const q of written) {
     expect(q.referenceResponse).toBe(q.answer);
     expect(mark(q, q.answer)).toMatchObject({
@@ -331,10 +332,18 @@ test("legacy and shared identical facts retain global reciprocal exposure closur
     expect(qa.exposureAliases).toContain(b);
     expect(qb.exposureAliases).toContain(a);
   }
+  const closures = new Map<string, string[]>();
+  const closure = (id: string) => {
+    if (!closures.has(id)) closures.set(id, exposureIds([id]));
+    return closures.get(id)!;
+  };
   for (const q of all)
     for (const alias of q.exposureAliases ?? []) {
       const target = candidates.find((o) => o.id === alias)!;
       expect(target, alias).toBeDefined();
-      expect(target.exposureAliases).toContain(q.id);
+      // Incoming aliases preserve original saved definitions. The actual
+      // progress engine must still close equivalence in BOTH directions.
+      expect(closure(alias)).toContain(q.id);
+      expect(closure(q.id)).toContain(alias);
     }
 });
