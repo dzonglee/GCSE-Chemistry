@@ -46,3 +46,7 @@ Aqueous practical follow-up accepted9 October; main next reviews natural polymer
 Natural-polymer Higher construction follow-up accepted9 October. Main retains remaining pH-method inspection and the exact whole-course qualification/statement/skills/practical and cumulative-assessment audit. Condensation remains exclusively reserved for the second worker.
 
 The pH individual follow-up is accepted9 October. Main now owns the exact whole-course coverage/qualification/skills/practical and cumulative-assessment audit and final regression. Condensation remains reserved for the external second worker.
+
+Resource order-of-magnitude follow-up accepted9 October:102tasks preserve original89; seven estimates and six significance judgements, all44 final production checks pass10.2m, sixteen verified/reviewed samples sent. See resource-magnitude-review.md. Wider exact MS/qualification mapping remains open.
+
+The condensation worker delivery868f764 has been fetched; main now owns its integration. The next exclusive second-worker scope is potable-water and RP8, on a new branch from the latest main-followups, as specified in PARALLEL-SCOPE-POTABLE.md. Main will not author that journey while the assignment is active; all other lessons/shared integration/final audit remain main-owned. This supersedes the earlier current condensation reservation once the worker starts the new assignment.

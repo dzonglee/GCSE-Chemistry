@@ -279,7 +279,8 @@ export function AssessmentSession({
                     {(q.writtenEquations ||
                       q.id.startsWith("aqp-v1-method-") ||
                       q.id.startsWith("natural-v1-h-") ||
-                      q.id.startsWith("ph-v1-method-")) &&
+                      q.id.startsWith("ph-v1-method-") ||
+                      q.id.startsWith("lca-v1-magnitude-")) &&
                       q.referenceResponse && (
                         <details className="sample-reference">
                           <summary>Compare a reference response</summary>
@@ -291,7 +292,9 @@ export function AssessmentSession({
                                 ? "Compare your functional groups, actual junctions and stated chain convention with this reference."
                                 : q.id.startsWith("ph-v1-method-")
                                   ? "Compare your sample, indicator, chart and approximate reporting method with this reference."
-                                  : "Compare your electrode predictions, labelled observations and suitable testing method with this reference."}{" "}
+                                  : q.id.startsWith("lca-v1-magnitude-")
+                                    ? "Compare your rounded quantities, approximate ratio, saving's fraction and limits with this reference."
+                                    : "Compare your electrode predictions, labelled observations and suitable testing method with this reference."}{" "}
                             This reference does not award an automatic mark.
                           </p>
                         </details>
@@ -472,6 +475,7 @@ export function AssessmentSession({
               "aqueous-electrolysis-products",
               "natural-polymers",
               "ph-scale-and-indicators",
+              "life-cycle-and-recycling",
             ].includes(id) &&
               q.rubric)) &&
           q.title
@@ -485,6 +489,7 @@ export function AssessmentSession({
             "aqueous-electrolysis-products",
             "natural-polymers",
             "ph-scale-and-indicators",
+            "life-cycle-and-recycling",
           ].includes(id) &&
             q.rubric)) &&
           q.title &&

@@ -179,17 +179,17 @@ function LcaEnergyChart({ rows }: { rows: NonNullable<LcaGiven["energy"]> }) {
                   x={35 + i * 125}
                   y="86"
                   textAnchor="middle"
-                  fontSize="15"
+                  fontSize="24"
                   fill="#26324d"
                 >
                   {v}
                 </text>
               </g>
             ))}
-            <text x="4" y="27" fontSize="16" fill="#26324d">
+            <text x="4" y="27" fontSize="24" fill="#26324d">
               A
             </text>
-            <text x="4" y="54" fontSize="16" fill="#26324d">
+            <text x="4" y="54" fontSize="24" fill="#26324d">
               B
             </text>
             <rect
@@ -339,46 +339,48 @@ export function LcaWorkbench({
       aria-label="Task model"
     >
       <h3>{r.title}</h3>
-      <div className="lca-context">
-        {mode === "stages" ? (
-          <p>{r.summary || r.note}</p>
-        ) : (
-          <LcaGivenFigure data={r} embedded />
-        )}
-      </div>
-      <div className="lca-fields">
-        {lcaFields[mode].map((f, i) => (
-          <label key={f} htmlFor={uid + f}>
-            {mode === "stages" ? `${i + 1}. ${r.events![i]}` : lcaLabels[f]}
-            {lcaNumeric.includes(f) ? (
-              <input
-                id={uid + f}
-                data-field={f}
-                value={b[f]}
-                inputMode="decimal"
-                maxLength={16}
-                autoComplete="off"
-                disabled={full}
-                onChange={(e) => edit(f, e.target.value)}
-              />
-            ) : (
-              <select
-                id={uid + f}
-                data-field={f}
-                value={b[f]}
-                disabled={full}
-                onChange={(e) => edit(f, e.target.value)}
-              >
-                <option value="">Choose…</option>
-                {lcaChoices[f].map((v) => (
-                  <option key={v} value={v}>
-                    {lcaLabels[v]}
-                  </option>
-                ))}
-              </select>
-            )}
-          </label>
-        ))}
+      <div className="lca-investigation-response">
+        <div className="lca-fields">
+          {lcaFields[mode].map((f, i) => (
+            <label key={f} htmlFor={uid + f}>
+              {mode === "stages" ? `${i + 1}. ${r.events![i]}` : lcaLabels[f]}
+              {lcaNumeric.includes(f) ? (
+                <input
+                  id={uid + f}
+                  data-field={f}
+                  value={b[f]}
+                  inputMode="decimal"
+                  maxLength={16}
+                  autoComplete="off"
+                  disabled={full}
+                  onChange={(e) => edit(f, e.target.value)}
+                />
+              ) : (
+                <select
+                  id={uid + f}
+                  data-field={f}
+                  value={b[f]}
+                  disabled={full}
+                  onChange={(e) => edit(f, e.target.value)}
+                >
+                  <option value="">Choose…</option>
+                  {lcaChoices[f].map((v) => (
+                    <option key={v} value={v}>
+                      {lcaLabels[v]}
+                    </option>
+                  ))}
+                </select>
+              )}
+            </label>
+          ))}
+        </div>
+        <div className="lca-context">
+          {mode === "stages" ? (
+            <p>{r.summary || r.note}</p>
+          ) : (
+            <LcaGivenFigure data={r} embedded />
+          )}
+        </div>
       </div>
       {mode === "stages" && (
         <details>

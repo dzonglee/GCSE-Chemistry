@@ -7909,3 +7909,239 @@ body:has(.sample-lesson) .topic-number {
     margin-bottom: 4px;
   }
 }
+
+/* Resource comparisons retain the first response above long task navigation. */
+/* pH reserved responses precede question navigation and supplied evidence. */
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .assessment-session
+  .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .assessment-session
+  .question-panel {
+  padding: 16px;
+  margin-top: 12px;
+}
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .assessment-session
+  .question-panel
+  h2 {
+  font-size: 20px;
+  line-height: 1.35;
+}
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .assessment-session
+  textarea {
+  height: 104px;
+  min-height: 104px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]
+    .assessment-session
+    .question-panel {
+    padding: 12px;
+  }
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]
+    .assessment-session
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+/* Keep every pH practice task reachable without pushing its response down. */
+@media (min-width: 601px) {
+  .sample-lesson[data-lesson="life-cycle-and-recycling"] .sample-task-topline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]
+    .sample-task-topline
+    .question-navigation {
+    flex: 1;
+    min-width: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 4px;
+    margin: 0;
+  }
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]
+    .sample-task-topline
+    .question-navigation
+    button {
+    flex: 0 0 auto;
+  }
+}
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .sample-task-panel:has(.written-answer)
+  > h2 {
+  font-size: 20px;
+  line-height: 1.35;
+}
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .sample-task-panel:has(.written-answer)
+  .sample-task-prompt {
+  font-size: 15px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .sample-task-answer
+  textarea {
+  height: 104px;
+  min-height: 104px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]
+    .sample-task-answer
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]
+    .sample-task-answer
+    .question-panel:has(.written-answer) {
+    padding: 12px;
+  }
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-topline {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]:has(
+      .sample-task-panel .written-answer
+    )
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+}
+
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .assessment-session
+  .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.35;
+  margin: 8px 0;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]:has(
+      .assessment-session > .question-panel
+    )
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]
+    .assessment-session
+    .question-panel
+    > .eyebrow {
+    margin-bottom: 8px;
+  }
+}
+
+.lca-data-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.lca-data-response .lca-given {
+  margin-top: 0;
+}
+@media (max-width: 600px) {
+  .lca-data-response {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.lca-investigation-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.lca-investigation-response .lca-fields,
+.lca-investigation-response .lca-given {
+  margin-top: 0;
+}
+@media (max-width: 600px) {
+  .lca-investigation-response {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .sample-task-panel:has(.multipart-answer)
+  > h2 {
+  font-size: 20px;
+  line-height: 1.35;
+}
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .sample-task-panel:has(.multipart-answer)
+  .sample-task-prompt {
+  font-size: 15px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]:has(
+      .sample-task-panel .multipart-answer
+    )
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]
+    .sample-task-answer
+    .question-panel:has(.multipart-answer) {
+    padding: 12px;
+  }
+}
+
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .sample-task-panel:has(.multipart-answer)
+  .sample-task-topline {
+  margin-bottom: 8px;
+}
+
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .sample-task-panel
+  > .practice-task-picker {
+  margin: 16px 0;
+}
+
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .sample-task-panel:has(.written-answer)
+  > h2 {
+  margin: 0 0 8px;
+}
+.sample-lesson[data-lesson="life-cycle-and-recycling"]
+  .sample-task-panel:has(.written-answer)
+  .sample-task-prompt {
+  margin: 0 0 8px;
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]
+    .sample-task-panel:has(.written-answer) {
+    padding: 10px;
+  }
+  .sample-lesson[data-lesson="life-cycle-and-recycling"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-topline {
+    margin-bottom: 0;
+  }
+}

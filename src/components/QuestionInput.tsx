@@ -108,8 +108,17 @@ export function QuestionInput(props: InputProps) {
       {props.question.materialsGiven && !props.question.parts && (
         <MaterialsGivenFigure data={props.question.materialsGiven} />
       )}
-      {props.question.lcaGiven && !props.question.parts && (
-        <LcaGivenFigure data={props.question.lcaGiven} />
+      {props.question.lcaGiven && (
+        <div className="lca-data-response">
+          <ResponseInput {...props} />
+          {props.compactAssessment && props.question.lcaGiven.recycling ? (
+            <AssessmentRecyclingGiven
+              data={props.question.lcaGiven.recycling}
+            />
+          ) : (
+            <LcaGivenFigure data={props.question.lcaGiven} />
+          )}
+        </div>
       )}
       {props.question.bioGiven && !props.question.parts && (
         <BioGivenFigure data={props.question.bioGiven} />
@@ -525,6 +534,7 @@ export function QuestionInput(props: InputProps) {
         </div>
       )}
       {!(props.question.naturalHelix && props.compactNatural) &&
+        !props.question.lcaGiven &&
         !props.question.phMeasurements &&
         !props.question.invertedGasScale &&
         !props.question.halogenResults &&
@@ -913,12 +923,6 @@ function ResponseInput({
         {question.materialsGiven && (
           <MaterialsGivenFigure data={question.materialsGiven} />
         )}
-        {question.lcaGiven &&
-          (compactAssessment && question.lcaGiven.recycling ? (
-            <AssessmentRecyclingGiven data={question.lcaGiven.recycling} />
-          ) : (
-            <LcaGivenFigure data={question.lcaGiven} />
-          ))}
         {question.bioGiven && <BioGivenFigure data={question.bioGiven} />}
         {question.wasteGiven && <WasteGivenFigure data={question.wasteGiven} />}
         {question.waterGiven &&

@@ -1,0 +1,2563 @@
+{
+  "tasks": [
+    {
+      "id": "lca-v1-w-divide",
+      "title": "Equal service",
+      "purpose": "Equal service",
+      "prompt": "A total of 300 kJ supplies six equivalent services. What is the energy per service?",
+      "answer": "50",
+      "unit": "kJ/service",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "300÷6=50 kJ/service. The denominator is the number of equivalent services.",
+      "hint": "Divide by the service count."
+    },
+    {
+      "id": "lca-v1-w-finite",
+      "title": "Finite feedstock",
+      "purpose": "Finite feedstock",
+      "prompt": "Which supplied raw material is finite on human timescales?",
+      "answer": "Crude oil",
+      "options": [
+        "Sunlight",
+        "Crude oil",
+        "Newly grown wood"
+      ],
+      "misconceptions": {
+        "Newly grown wood": "Wood can regrow under suitable management.",
+        "Sunlight": "Sunlight is not a finite material stock in this comparison."
+      },
+      "explanation": "Crude oil is a finite resource; recycling can reduce new demand without creating more oil.",
+      "hint": "Distinguish a stock from replenishment."
+    },
+    {
+      "id": "lca-v1-w-percent",
+      "title": "A recovery fraction",
+      "purpose": "A recovery fraction",
+      "prompt": "What is 75% of 80 kg?",
+      "answer": "60",
+      "unit": "kg",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "80×75/100=60 kg; the percentage applies to the given 80 kg.",
+      "hint": "Keep the stated whole."
+    },
+    {
+      "id": "lca-v1-w-units",
+      "title": "Compatible totals",
+      "purpose": "Compatible totals",
+      "prompt": "Which pair can be added directly to make an energy total?",
+      "answer": "40 kJ and 60 kJ",
+      "options": [
+        "40 L and 60 kJ",
+        "40 kg and 60 L",
+        "40 kJ and 60 kJ"
+      ],
+      "misconceptions": {
+        "40 L and 60 kJ": "Volume and energy have different units.",
+        "40 kg and 60 L": "Mass and volume are different quantities."
+      },
+      "explanation": "Add like energy units. Water, waste and energy cannot simply be combined into a physical total.",
+      "hint": "Check the quantity and units."
+    },
+    {
+      "id": "lca-v1-r-shopping",
+      "title": "Bag stages",
+      "purpose": "Bag stages",
+      "prompt": "Place each bag event. Which stage supplies the crude-oil feedstock?",
+      "answer": "Raw materials",
+      "options": [
+        "End of life",
+        "Raw materials",
+        "Use"
+      ],
+      "misconceptions": {
+        "Use": "Carrying shopping is use.",
+        "End of life": "Disposal happens after useful service."
+      },
+      "explanation": "Extraction supplies raw materials; forming/packaging is manufacture; carrying is use; end-of-life sorting is disposal/recycling. Transport must be considered at every relevant stage.",
+      "hint": "Start before manufacture.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "stages",
+        "record": "shopping"
+      },
+      "exposureAliases": [
+        "lca-v1-g-stages",
+        "lca-v1-p-stage",
+        "lca-v1-cA-end",
+        "life-cycle-and-recycling-0"
+      ]
+    },
+    {
+      "id": "lca-v1-r-bottle",
+      "title": "Bottle stages",
+      "purpose": "Bottle stages",
+      "prompt": "Construct the bottle sequence. Where does washing a returned bottle belong?",
+      "answer": "Use and operation",
+      "options": [
+        "End of life",
+        "Use and operation",
+        "Raw materials"
+      ],
+      "misconceptions": {
+        "Raw materials": "Washing is not quarrying new feedstock.",
+        "End of life": "This bottle is returning for use, not remelting."
+      },
+      "explanation": "Washing belongs to use/operation; collection for recycling is end of useful life; quarrying is raw-material supply; making/packaging a new bottle is manufacture. Reuse and remelting are different.",
+      "hint": "Distinguish reuse from recycling.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "stages",
+        "record": "bottle"
+      },
+      "exposureAliases": [
+        "lca-v1-r-building",
+        "lca-v1-p-transport",
+        "lca-v1-cB-transport"
+      ]
+    },
+    {
+      "id": "lca-v1-r-building",
+      "title": "Building-product stages",
+      "purpose": "Building-product stages",
+      "prompt": "Classify the four events. Where does recovery after demolition belong?",
+      "answer": "End of useful life",
+      "options": [
+        "End of useful life",
+        "Manufacture",
+        "Raw materials only"
+      ],
+      "misconceptions": {
+        "Manufacture": "A new product may later be manufactured from recovered material.",
+        "Raw materials only": "This recovery is at the existing product's end of life."
+      },
+      "explanation": "Mine clay: raw materials. Make/package: manufacture. Maintenance: use. Recover after demolition: end of useful life. A short assessment omitting one of these cannot claim every stage.",
+      "hint": "Follow the existing product.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "stages",
+        "record": "building"
+      },
+      "exposureAliases": [
+        "lca-v1-r-bottle",
+        "lca-v1-p-transport",
+        "lca-v1-cB-transport"
+      ]
+    },
+    {
+      "id": "lca-v1-r-full",
+      "title": "Full lifecycle boundary",
+      "purpose": "Full lifecycle boundary",
+      "prompt": "Include matching stages for both products. What is full product A energy?",
+      "answer": "400",
+      "unit": "kJ",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "Include all four supplied stages for both equal services. Transport is already included in each row. Full totals are A 400 and B 350 kJ; excluding inconvenient stages can change the apparent result.",
+      "hint": "Include all four rows once.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "boundary",
+        "record": "full"
+      },
+      "exposureAliases": [
+        "lca-v1-g-boundary",
+        "lca-v1-r-reversed",
+        "lca-v1-p-boundary",
+        "lca-v1-p-advert",
+        "lca-v1-vA-boundary",
+        "lca-v1-vB-full",
+        "life-cycle-and-recycling-4"
+      ]
+    },
+    {
+      "id": "lca-v1-r-reversed",
+      "title": "Selective boundary",
+      "purpose": "Selective boundary",
+      "prompt": "Repair the advert's boundary. What is full product A energy?",
+      "answer": "300",
+      "unit": "kJ",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "A 120 versus B 200 kJ for production alone makes A look better. All supplied stages give A 300 versus B 240 kJ, reversing that energy result. A partial claim must disclose its boundary; full environmental effects still require more data.",
+      "hint": "Production is only part of the life.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "boundary",
+        "record": "reversed"
+      },
+      "exposureAliases": [
+        "lca-v1-r-full",
+        "lca-v1-g-boundary",
+        "lca-v1-p-boundary",
+        "lca-v1-p-advert",
+        "lca-v1-vA-boundary",
+        "lca-v1-vB-full",
+        "life-cycle-and-recycling-4"
+      ]
+    },
+    {
+      "id": "lca-v1-r-totals",
+      "title": "Matched energy inventories",
+      "purpose": "Matched energy inventories",
+      "prompt": "Construct both totals and their signed difference. What is product B total?",
+      "answer": "350",
+      "unit": "kJ",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "A 240+100+20+40=400 kJ; B 150+90+80+30=350 kJ. A−B=50 kJ. These totals compare equal service and matched stages; they do not add water or judge every pollutant.",
+      "hint": "Add four B values.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "inventory",
+        "record": "totals"
+      },
+      "exposureAliases": [
+        "lca-v1-g-inventory"
+      ]
+    },
+    {
+      "id": "lca-v1-r-signed",
+      "title": "Signed difference",
+      "purpose": "Signed difference",
+      "prompt": "Construct A−B. What is the signed energy difference?",
+      "answer": "-60",
+      "unit": "kJ",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "A 200 and B 260 kJ: A−B=−60 kJ, so A uses 60 kJ less for this comparison. Preserve the sign and matched service; lower energy does not prove lower water use.",
+      "hint": "Keep the order A minus B.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "inventory",
+        "record": "signed"
+      }
+    },
+    {
+      "id": "lca-v1-r-short",
+      "title": "Short reuse lifetime",
+      "purpose": "Short reuse lifetime",
+      "prompt": "Compare 10 completed services. What is reusable energy per service?",
+      "answer": "108",
+      "unit": "kJ/service",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "Reusable:960+10×12=1080 kJ,108 kJ/service. Single-use:10×60=600 kJ. At 10 services single-use uses less supplied energy; reusable is not automatically better.",
+      "hint": "Fixed plus washing, then divide.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "reuse",
+        "record": "short"
+      },
+      "exposureAliases": [
+        "lca-v1-r-long",
+        "lca-v1-g-reuse",
+        "lca-v1-p-washRule",
+        "lca-v1-p-evaluateReuse",
+        "lca-v1-r-tie",
+        "life-cycle-and-recycling-3"
+      ]
+    },
+    {
+      "id": "lca-v1-r-tie",
+      "title": "Energy equality",
+      "purpose": "Energy equality",
+      "prompt": "Compare 20 completed services. What is reusable energy per service?",
+      "answer": "60",
+      "unit": "kJ/service",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "960+20×12=1200 kJ and 1200/20=60 kJ/service. Twenty single uses also need 1200 kJ. This is equality, not strictly lower reusable energy; other impacts may still differ.",
+      "hint": "An equal result is not strictly lower.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "reuse",
+        "record": "tie"
+      },
+      "exposureAliases": [
+        "lca-v1-r-long",
+        "lca-v1-g-reuse",
+        "lca-v1-p-washRule",
+        "lca-v1-p-evaluateReuse",
+        "lca-v1-r-short",
+        "life-cycle-and-recycling-3"
+      ]
+    },
+    {
+      "id": "lca-v1-r-long",
+      "title": "Longer reuse lifetime",
+      "purpose": "Longer reuse lifetime",
+      "prompt": "Compare 30 completed services. What is reusable energy per service?",
+      "answer": "44",
+      "unit": "kJ/service",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "960+30×12=1320 kJ,44 kJ/service, versus 1800 kJ for 30 single uses. Reuse lowers energy at this count under the stated assumptions; washing and return still consume resources.",
+      "hint": "Spread fixed energy over the stated lifetime.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "reuse",
+        "record": "long"
+      },
+      "exposureAliases": [
+        "lca-v1-g-reuse",
+        "lca-v1-p-washRule",
+        "lca-v1-p-evaluateReuse",
+        "lca-v1-r-short",
+        "lca-v1-r-tie",
+        "life-cycle-and-recycling-3"
+      ]
+    },
+    {
+      "id": "lca-v1-r-bags",
+      "title": "Bag trade-offs",
+      "purpose": "Bag trade-offs",
+      "prompt": "Compare energy, water and waste separately. Which overall conclusion is justified?",
+      "answer": "The ranking depends on effects and priorities",
+      "options": [
+        "Paper wins every measure",
+        "The ranking depends on effects and priorities",
+        "Plastic wins every measure"
+      ],
+      "misconceptions": {
+        "Plastic wins every measure": "Paper has lower stated residual waste.",
+        "Paper wins every measure": "Plastic has lower given energy and water."
+      },
+      "explanation": "A has lower given energy and water use; B has lower residual waste. MJ, L and kg cannot simply be added. Pollutant effects and relative importance require evidence and value judgements; one overall universal winner is unsupported.",
+      "hint": "A measured quantity is not a complete impact score.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "tradeoff",
+        "record": "bags"
+      },
+      "exposureAliases": [
+        "lca-v1-g-tradeoff",
+        "lca-v1-r-waterPriority",
+        "lca-v1-p-bagDecision",
+        "lca-v1-p-pollutants",
+        "lca-v1-cB-value",
+        "lca-v1-vB-judgement",
+        "life-cycle-and-recycling-1"
+      ]
+    },
+    {
+      "id": "lca-v1-r-waterPriority",
+      "title": "Different priorities",
+      "purpose": "Different priorities",
+      "prompt": "Compare the three measures. Why may a water-priority decision differ from an energy-priority decision?",
+      "answer": "Different measures favour different products",
+      "options": [
+        "Different measures favour different products",
+        "All measurements are false",
+        "Litres can be added to MJ"
+      ],
+      "misconceptions": {
+        "All measurements are false": "The supplied quantities can still be measured.",
+        "Litres can be added to MJ": "Different physical units cannot be added."
+      },
+      "explanation": "A uses less energy; B uses less water; waste masses tie. A water-scarcity priority may favour B, while an energy priority favours A. Allocating impact importance is not purely objective; different declared choices do not mean every assessment is dishonest.",
+      "hint": "State the priority and missing impact evidence.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "tradeoff",
+        "record": "waterPriority"
+      },
+      "exposureAliases": [
+        "lca-v1-r-bags",
+        "lca-v1-g-tradeoff",
+        "lca-v1-p-bagDecision",
+        "lca-v1-p-pollutants",
+        "lca-v1-cB-value",
+        "lca-v1-vB-judgement",
+        "life-cycle-and-recycling-1"
+      ]
+    },
+    {
+      "id": "lca-v1-r-glass",
+      "title": "Glass material inventory",
+      "purpose": "Glass material inventory",
+      "prompt": "Construct usable, rejected and new-input masses. What usable glass is recovered?",
+      "answer": "72",
+      "unit": "kg",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "80×90/100=72 kg recovered.100−72=28 kg collected material is outside the usable product;100−72=28 kg new suitable input is still needed. Other streams contain material, not vanished atoms; sorting and melting are not zero-energy.",
+      "hint": "Apply recovery to the sorted stream.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "recycle",
+        "record": "glass"
+      },
+      "exposureAliases": [
+        "lca-v1-g-recycle",
+        "lca-v1-p-reuseRecycle",
+        "lca-v1-p-separation",
+        "lca-v1-p-steel",
+        "lca-v1-p-materials",
+        "lca-v1-cB-collection",
+        "lca-v1-r-steel",
+        "lca-v1-r-polymer",
+        "life-cycle-and-recycling-5"
+      ]
+    },
+    {
+      "id": "lca-v1-r-polymer",
+      "title": "Polymer quality inventory",
+      "purpose": "Polymer quality inventory",
+      "prompt": "Construct the supplied material balance. What new suitable input is needed?",
+      "answer": "30",
+      "unit": "kg",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "80×.75=60 kg recovered;120−60=60 kg of collected material is in other streams.90−60=30 kg new input is needed. Collection mass is not automatically usable product mass; separation needs depend on the required properties.",
+      "hint": "Demand minus usable recovery.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "recycle",
+        "record": "polymer"
+      },
+      "exposureAliases": [
+        "lca-v1-r-glass",
+        "lca-v1-g-recycle",
+        "lca-v1-p-reuseRecycle",
+        "lca-v1-p-separation",
+        "lca-v1-p-steel",
+        "lca-v1-p-materials",
+        "lca-v1-cB-collection",
+        "lca-v1-r-steel",
+        "life-cycle-and-recycling-5"
+      ]
+    },
+    {
+      "id": "lca-v1-r-steel",
+      "title": "Suitable scrap inventory",
+      "purpose": "Suitable scrap inventory",
+      "prompt": "Construct the supplied material balance. What usable material is recovered?",
+      "answer": "144",
+      "unit": "kg",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "180×.8=144 kg usable material;200−144=56 kg collected material remains outside this product and 56 kg new material meets demand. Suitable scrap steel can supplement primary iron production; required separation depends on the final product.",
+      "hint": "Use the suitable sorted 180 kg.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "recycle",
+        "record": "steel"
+      },
+      "exposureAliases": [
+        "lca-v1-r-glass",
+        "lca-v1-g-recycle",
+        "lca-v1-p-reuseRecycle",
+        "lca-v1-p-separation",
+        "lca-v1-p-steel",
+        "lca-v1-p-materials",
+        "lca-v1-cB-collection",
+        "lca-v1-r-polymer",
+        "life-cycle-and-recycling-5"
+      ]
+    },
+    {
+      "id": "lca-v1-r-scale",
+      "title": "Scale energy by product mass",
+      "purpose": "Scale energy by product mass",
+      "prompt": "Original data: one product has mass 5 g and needs 320 kJ to produce. How much energy produces 1 kg of these identical products?",
+      "answer": "64000",
+      "unit": "kJ",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "1 kg=1000 g;1000/5=200 products.200×320=64000 kJ=6.4×10⁴ kJ. This is supplied production energy only, not a whole-life verdict.",
+      "hint": "Use matching mass units, find item count, then scale energy.",
+      "lcaGiven": {
+        "title": "Original production-energy source",
+        "note": "Identical 5 g products require 320 kJ each to produce. Required mass 1 kg. No losses or other stage data are supplied.",
+        "rows": [
+          {
+            "label": "One product mass",
+            "text": "5 g"
+          },
+          {
+            "label": "Production energy per product",
+            "text": "320 kJ"
+          },
+          {
+            "label": "Required total product mass",
+            "text": "1 kg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lca-v1-resource-r-needs",
+      "title": "Current and future needs",
+      "purpose": "Current and future needs",
+      "conciseHeading": true,
+      "prompt": "Sustainable development meets current needs without compromising future generations' ability to meet theirs. A town needs timber for homes. Which plan follows this principle?",
+      "answer": "Build needed homes and harvest within the forest's regrowth rate",
+      "options": [
+        "Stop building all homes",
+        "Build needed homes and harvest within the forest's regrowth rate",
+        "Cut all the forest now"
+      ],
+      "misconceptions": {
+        "Cut all the forest now": "That meets present demand but removes the future timber supply.",
+        "Stop building all homes": "The principle also includes meeting current needs."
+      },
+      "explanation": "Humans use resources for warmth, shelter, food and transport. Timber provides shelter now. Managed harvesting and regrowth preserve future supply. Other environmental effects still need investigation.",
+      "hint": "Check both today's need and tomorrow's ability to meet it."
+    },
+    {
+      "id": "lca-v1-resource-r-products",
+      "title": "Natural, agricultural and synthetic",
+      "purpose": "Natural, agricultural and synthetic",
+      "conciseHeading": true,
+      "prompt": "Natural products can be supplemented or replaced by farmed or synthetic products. Sheep farming supplies wool for clothing; synthetic polyester can supplement it. Name the synthetic product in this example. One name is enough.",
+      "answer": "Polyester",
+      "referenceResponse": "Polyester",
+      "rubric": [
+        "Name polyester, a manufactured synthetic fibre; wool is supplied by agriculture."
+      ],
+      "hint": "A synthetic product is made through chemical manufacture.",
+      "explanation": "Polyester Compare your short response with the criteria. Your original words remain saved; this is manual review, not an automatic examiner mark. Agriculture supplements natural supplies: orchards grow food, plantations grow timber, sheep/cotton farms supply clothing fibres and crops can supply fuels. Synthetic fibres can supplement or replace natural fibres. Chemistry can improve agricultural and industrial processes and develop useful substitutes; lower overall impact still needs evidence.",
+      "exposureAliases": [
+        "lca-v1-resource-g-products",
+        "lca-v1-resource-p-products",
+        "lca-v1-resource-cC-products",
+        "lca-v1-resource-vC-products"
+      ]
+    },
+    {
+      "id": "lca-v1-resource-r-renewable",
+      "title": "Replenishment is the distinction",
+      "purpose": "Replenishment is the distinction",
+      "conciseHeading": true,
+      "prompt": "A stock of mineral ore forms over millions of years. A timber crop regrows in decades under suitable management. Which classification follows this information?",
+      "answer": "Ore is finite; timber is renewable",
+      "options": [
+        "Both are renewable: both are natural",
+        "Both are finite because both can run out locally",
+        "Ore is finite; timber is renewable"
+      ],
+      "misconceptions": {
+        "Both are renewable: both are natural": "Natural origin does not establish replenishment on human timescales.",
+        "Both are finite because both can run out locally": "A renewable resource can still be depleted by excessive use."
+      },
+      "explanation": "Ore is not replenished on the timescale of use. Timber can regrow, so it is renewable; harvesting too quickly can still be unsustainable.",
+      "hint": "Compare replenishment with the timescale of use."
+    },
+    {
+      "id": "lca-v1-g-stages",
+      "title": "Place the events",
+      "purpose": "Place the events",
+      "prompt": "Place the first event in its stage.",
+      "answer": "Raw materials",
+      "options": [
+        "Raw materials",
+        "Manufacture",
+        "Use"
+      ],
+      "misconceptions": {
+        "Manufacture": "The crude oil is feedstock before bag manufacture.",
+        "Use": "Using a bag starts after it has been made."
+      },
+      "explanation": "Extraction supplies raw materials; forming/packaging is manufacture; carrying is use; end-of-life sorting is disposal/recycling. Transport must be considered at every relevant stage.",
+      "hint": "Read each event.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "stages",
+        "record": "shopping"
+      },
+      "exposureAliases": [
+        "lca-v1-r-shopping",
+        "lca-v1-p-stage",
+        "lca-v1-cA-end",
+        "life-cycle-and-recycling-0"
+      ]
+    },
+    {
+      "id": "lca-v1-g-boundary",
+      "title": "Choose the lifecycle boundary",
+      "purpose": "Choose the lifecycle boundary",
+      "prompt": "Include the matching lifecycle stages. What is the full A total?",
+      "answer": "400",
+      "unit": "kJ",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "Include all four supplied stages for both equal services. Transport is already included in each row. Full totals are A 400 and B 350 kJ; excluding inconvenient stages can change the apparent result.",
+      "hint": "Transport is already counted in the rows.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "boundary",
+        "record": "full"
+      },
+      "exposureAliases": [
+        "lca-v1-r-full",
+        "lca-v1-r-reversed",
+        "lca-v1-p-boundary",
+        "lca-v1-p-advert",
+        "lca-v1-vA-boundary",
+        "lca-v1-vB-full",
+        "life-cycle-and-recycling-4"
+      ]
+    },
+    {
+      "id": "lca-v1-g-inventory",
+      "title": "Construct energy inventories",
+      "purpose": "Construct energy inventories",
+      "prompt": "Add like quantities for the same service. What is A−B?",
+      "answer": "50",
+      "unit": "kJ",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "A 240+100+20+40=400 kJ; B 150+90+80+30=350 kJ. A−B=50 kJ. These totals compare equal service and matched stages; they do not add water or judge every pollutant.",
+      "hint": "Use the signed order A minus B.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "inventory",
+        "record": "totals"
+      },
+      "exposureAliases": [
+        "lca-v1-r-totals"
+      ]
+    },
+    {
+      "id": "lca-v1-g-reuse",
+      "title": "Compare repeated service",
+      "purpose": "Compare repeated service",
+      "prompt": "Build the energy comparison for 30 completed services. What is reusable energy per service?",
+      "answer": "44",
+      "unit": "kJ/service",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "960+30×12=1320 kJ,44 kJ/service, versus 1800 kJ for 30 single uses. Reuse lowers energy at this count under the stated assumptions; washing and return still consume resources.",
+      "hint": "Count fixed energy once.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "reuse",
+        "record": "long"
+      },
+      "exposureAliases": [
+        "lca-v1-r-long",
+        "lca-v1-p-washRule",
+        "lca-v1-p-evaluateReuse",
+        "lca-v1-r-short",
+        "lca-v1-r-tie",
+        "life-cycle-and-recycling-3"
+      ]
+    },
+    {
+      "id": "lca-v1-g-tradeoff",
+      "title": "Interpret conflicting measures",
+      "purpose": "Interpret conflicting measures",
+      "prompt": "Construct the three comparisons. What can be concluded overall?",
+      "answer": "A decision needs stated priorities and impact evidence",
+      "options": [
+        "Lower energy proves every impact is lower",
+        "Add all numbers into a universal score",
+        "A decision needs stated priorities and impact evidence"
+      ],
+      "misconceptions": {
+        "Lower energy proves every impact is lower": "The waste result favours B.",
+        "Add all numbers into a universal score": "Their units differ and no impact weighting is supplied."
+      },
+      "explanation": "A has lower given energy and water use; B has lower residual waste. MJ, L and kg cannot simply be added. Pollutant effects and relative importance require evidence and value judgements; one overall universal winner is unsupported.",
+      "hint": "Separate inventory from judgement.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "tradeoff",
+        "record": "bags"
+      },
+      "exposureAliases": [
+        "lca-v1-r-bags",
+        "lca-v1-r-waterPriority",
+        "lca-v1-p-bagDecision",
+        "lca-v1-p-pollutants",
+        "lca-v1-cB-value",
+        "lca-v1-vB-judgement",
+        "life-cycle-and-recycling-1"
+      ]
+    },
+    {
+      "id": "lca-v1-g-recycle",
+      "title": "Keep material streams separate",
+      "purpose": "Keep material streams separate",
+      "prompt": "Construct the glass recovery balance. How much new suitable input is needed?",
+      "answer": "28",
+      "unit": "kg",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "80×90/100=72 kg recovered.100−72=28 kg collected material is outside the usable product;100−72=28 kg new suitable input is still needed. Other streams contain material, not vanished atoms; sorting and melting are not zero-energy.",
+      "hint": "Compare usable recovery with demand.",
+      "model": {
+        "kind": "life-cycle-investigation",
+        "mode": "recycle",
+        "record": "glass"
+      },
+      "exposureAliases": [
+        "lca-v1-r-glass",
+        "lca-v1-p-reuseRecycle",
+        "lca-v1-p-separation",
+        "lca-v1-p-steel",
+        "lca-v1-p-materials",
+        "lca-v1-cB-collection",
+        "lca-v1-r-steel",
+        "lca-v1-r-polymer",
+        "life-cycle-and-recycling-5"
+      ]
+    },
+    {
+      "id": "lca-v1-resource-g-needs",
+      "title": "Sustainable timber",
+      "purpose": "Sustainable timber",
+      "conciseHeading": true,
+      "prompt": "A village needs 40 tonnes of timber/year; its forest regrows 50 tonnes/year. Which harvest meets current needs and protects future supply?",
+      "answer": "Harvest 40 tonnes/year; maintain regrowth",
+      "options": [
+        "Harvest 40 tonnes/year; maintain regrowth",
+        "Harvest 80 tonnes a year",
+        "Harvest none and provide no replacement supply"
+      ],
+      "misconceptions": {
+        "Harvest 80 tonnes a year": "This exceeds regrowth and reduces the future stock.",
+        "Harvest none and provide no replacement supply": "The village's current shelter and fuel needs remain unmet."
+      },
+      "explanation": "40 tonnes meets the stated need and does not exceed 50 tonnes of annual regrowth. Sustainable development considers present needs and future capacity; this supply comparison is not a complete LCA.",
+      "hint": "Compare the need, annual harvest and annual regrowth."
+    },
+    {
+      "id": "lca-v1-resource-g-products",
+      "title": "Product sources",
+      "purpose": "Product sources",
+      "conciseHeading": true,
+      "prompt": "Farmed cotton and manufactured polyester supply clothing. Classify these products.",
+      "answer": "Cotton is agricultural; polyester is synthetic",
+      "options": [
+        "Cotton is agricultural; polyester is synthetic",
+        "Cotton is synthetic; polyester is agricultural",
+        "Both are synthetic"
+      ],
+      "misconceptions": {
+        "Cotton is synthetic; polyester is agricultural": "Cotton is grown as a crop; polyester is manufactured chemically.",
+        "Both are synthetic": "Farming cotton supplies a natural fibre through agriculture."
+      },
+      "explanation": "Cotton is an agricultural product. Synthetic polyester can supplement or replace it. Useful substitutes do not automatically have a lower lifecycle impact.",
+      "hint": "Distinguish the grown crop from chemical manufacture.",
+      "exposureAliases": [
+        "lca-v1-resource-r-products",
+        "lca-v1-resource-p-products",
+        "lca-v1-resource-cC-products",
+        "lca-v1-resource-vC-products"
+      ]
+    },
+    {
+      "id": "lca-v1-resource-g-renewable",
+      "title": "Renewable, overused",
+      "purpose": "Renewable, overused",
+      "conciseHeading": true,
+      "prompt": "Reeds regrow yearly; oil forms over millions of years. A factory harvests reeds faster than regrowth. Which statement follows?",
+      "answer": "Reeds are renewable but this harvest is unsustainable; oil is finite",
+      "options": [
+        "Oil is renewable because it forms naturally",
+        "Reeds are renewable but this harvest is unsustainable; oil is finite",
+        "Reeds become a finite resource whenever harvesting is too fast"
+      ],
+      "misconceptions": {
+        "Reeds become a finite resource whenever harvesting is too fast": "The resource can renew; the chosen harvesting rate depletes its stock.",
+        "Oil is renewable because it forms naturally": "Its formation is too slow to replace use on human timescales."
+      },
+      "explanation": "Renewability describes replenishment, not a promise of unlimited supply. Harvesting faster than regrowth can compromise future generations' needs even for a renewable resource.",
+      "hint": "Separate the resource's replenishment from the way it is used.",
+      "exposureAliases": [
+        "lca-v1-resource-vC-renewable"
+      ]
+    },
+    {
+      "id": "lca-v1-p-stage",
+      "title": "Start before the shop",
+      "purpose": "Start before the shop",
+      "prompt": "Extraction and processing of raw materials belong in which assessment?",
+      "answer": "The product lifecycle",
+      "options": [
+        "Only disposal",
+        "The product lifecycle",
+        "Only shop price"
+      ],
+      "misconceptions": {
+        "Only shop price": "Price is not the complete environmental lifecycle.",
+        "Only disposal": "Raw materials are an earlier stage."
+      },
+      "explanation": "Start with raw materials, then manufacture/packaging, use/operation and end of life; transport belongs throughout.",
+      "hint": "Include the whole stated life.",
+      "followUp": "lca-v1-r-shopping",
+      "exposureAliases": [
+        "lca-v1-r-shopping",
+        "lca-v1-g-stages",
+        "lca-v1-cA-end",
+        "life-cycle-and-recycling-0"
+      ]
+    },
+    {
+      "id": "lca-v1-p-transport",
+      "title": "Transport throughout",
+      "purpose": "Transport throughout",
+      "prompt": "Explain why transport should not appear only as an afterthought at the product's disposal.",
+      "answer": "Feedstock may be transported to manufacture, finished products distributed, reusable products returned and waste collected. Include relevant transport at each lifecycle stage for both alternatives, using a matching boundary without double-counting the same journey.",
+      "rubric": [
+        "Transport can occur at more than one lifecycle stage.",
+        "Give at least two concrete journeys linked to stages.",
+        "Use a matching boundary and avoid double-counting."
+      ],
+      "referenceResponse": "Feedstock may be transported to manufacture, finished products distributed, reusable products returned and waste collected. Include relevant transport at each lifecycle stage for both alternatives, using a matching boundary without double-counting the same journey.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "Follow materials and products between stages.",
+      "followUp": "lca-v1-r-bottle",
+      "exposureAliases": [
+        "lca-v1-r-bottle",
+        "lca-v1-r-building",
+        "lca-v1-cB-transport"
+      ]
+    },
+    {
+      "id": "lca-v1-p-boundary",
+      "title": "Explain an honest boundary",
+      "purpose": "Explain an honest boundary",
+      "prompt": "Describe the four major lifecycle stages and explain why a manufacturing-only advert cannot claim the smallest whole-life environmental impact.",
+      "answer": "Assess extraction/processing of raw materials, manufacture/packaging, use/operation and end-of-life disposal or recycling, with relevant transport/distribution throughout. A manufacturing-only result omits other stages, which may change a comparison. State the limited boundary and compare equal service; do not present the abbreviated result as a complete environmental verdict.",
+      "rubric": [
+        "All four major stages.",
+        "Transport/distribution throughout.",
+        "Omitted stages can change the result.",
+        "Matching service and explicit claim limits."
+      ],
+      "referenceResponse": "Assess extraction/processing of raw materials, manufacture/packaging, use/operation and end-of-life disposal or recycling, with relevant transport/distribution throughout. A manufacturing-only result omits other stages, which may change a comparison. State the limited boundary and compare equal service; do not present the abbreviated result as a complete environmental verdict.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "Distinguish partial evidence from a whole-life claim.",
+      "followUp": "lca-v1-r-full",
+      "exposureAliases": [
+        "lca-v1-r-full",
+        "lca-v1-g-boundary",
+        "lca-v1-r-reversed",
+        "lca-v1-p-advert",
+        "lca-v1-vA-boundary",
+        "lca-v1-vB-full",
+        "life-cycle-and-recycling-4"
+      ]
+    },
+    {
+      "id": "lca-v1-p-total",
+      "title": "Construct independent energy totals",
+      "purpose": "Construct independent energy totals",
+      "prompt": "Calculate both matched totals and A−B.",
+      "answer": "{\"a\":\"200\",\"b\":\"180\",\"d\":\"20\"}",
+      "partLegend": "Construct the lifecycle quantities",
+      "parts": [
+        {
+          "id": "a",
+          "label": "A total / kJ",
+          "answer": 200,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "b",
+          "label": "B total / kJ",
+          "answer": 180,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "d",
+          "label": "A minus B / kJ",
+          "answer": 20,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        }
+      ],
+      "lcaGiven": {
+        "title": "Independent stage-energy source",
+        "note": "Original equal-service exercise. All four rows include their respective transport/distribution once. No other impact data are supplied.",
+        "energy": [
+          {
+            "stage": "Raw materials",
+            "a": 60,
+            "b": 80
+          },
+          {
+            "stage": "Make and pack",
+            "a": 120,
+            "b": 70
+          },
+          {
+            "stage": "Use",
+            "a": 15,
+            "b": 20
+          },
+          {
+            "stage": "End of life",
+            "a": 5,
+            "b": 10
+          }
+        ]
+      },
+      "explanation": "A 60+120+15+5=200; B 80+70+20+10=180 kJ. A−B=20 kJ. Transport already belongs in each row.",
+      "hint": "Add four like quantities for each product.",
+      "followUp": "lca-v1-r-totals"
+    },
+    {
+      "id": "lca-v1-p-graph",
+      "title": "Translate graph and table",
+      "purpose": "Translate graph and table",
+      "prompt": "Open the graph and compare its manufacture bars. How much greater is A's manufacturing energy than B's?",
+      "answer": "80",
+      "unit": "kJ",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "180−100=80 kJ. The same common axis compares this stage; it is not the complete lifecycle difference.",
+      "hint": "Read the manufacture pair.",
+      "lcaGiven": {
+        "title": "Independent graph source",
+        "note": "Original equal-service exercise. All four rows include their respective transport/distribution once. No other impact data are supplied.",
+        "energy": [
+          {
+            "stage": "Raw materials",
+            "a": 120,
+            "b": 140
+          },
+          {
+            "stage": "Make and pack",
+            "a": 180,
+            "b": 100
+          },
+          {
+            "stage": "Use",
+            "a": 40,
+            "b": 60
+          },
+          {
+            "stage": "End of life",
+            "a": 20,
+            "b": 30
+          }
+        ]
+      },
+      "followUp": "lca-v1-r-totals"
+    },
+    {
+      "id": "lca-v1-p-percent",
+      "title": "Relative energy reduction",
+      "purpose": "Relative energy reduction",
+      "prompt": "Using the independent matched totals, what percentage reduction occurs from A's total to B's?",
+      "answer": "10",
+      "unit": "%",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "(200−180)/200×100=10%. The original A total is the reference, not B or a single stage.",
+      "hint": "Divide the decrease by the original total.",
+      "lcaGiven": {
+        "title": "Independent stage-energy source",
+        "note": "Original equal-service exercise. All four rows include their respective transport/distribution once. No other impact data are supplied.",
+        "energy": [
+          {
+            "stage": "Raw materials",
+            "a": 60,
+            "b": 80
+          },
+          {
+            "stage": "Make and pack",
+            "a": 120,
+            "b": 70
+          },
+          {
+            "stage": "Use",
+            "a": 15,
+            "b": 20
+          },
+          {
+            "stage": "End of life",
+            "a": 5,
+            "b": 10
+          }
+        ]
+      },
+      "followUp": "lca-v1-r-totals"
+    },
+    {
+      "id": "lca-v1-p-reuse",
+      "title": "Construct an independent reuse comparison",
+      "purpose": "Construct an independent reuse comparison",
+      "prompt": "Calculate reusable total, reusable per service, total single-use energy and single-use minus reusable energy.",
+      "answer": "{\"total\":\"1140\",\"per\":\"38\",\"single\":\"1500\",\"saving\":\"360\"}",
+      "partLegend": "Construct the equivalent-service comparison",
+      "parts": [
+        {
+          "id": "total",
+          "label": "Reusable total / kJ",
+          "answer": 1140,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "per",
+          "label": "Reusable per service / kJ",
+          "answer": 38,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "single",
+          "label": "Single-use total / kJ",
+          "answer": 1500,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "saving",
+          "label": "Single-use minus reusable / kJ",
+          "answer": 360,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        }
+      ],
+      "lcaGiven": {
+        "title": "Independent repeated-service source",
+        "note": "Original equal-capacity packaging data. Count fixed production/end-of-life once. Wash/return energy applies to every completed service, including the first. Assume 30 services and no breakage; single-use figure covers its stated whole lifecycle.",
+        "service": {
+          "fixed": 840,
+          "wash": 10,
+          "single": 50,
+          "uses": 30
+        }
+      },
+      "explanation": "840+30×10=1140 kJ;1140/30=38 kJ/service.30×50=1500 kJ;1500−1140=360 kJ. Other impacts need separate data.",
+      "hint": "Count fixed energy once and washing every stipulated service.",
+      "followUp": "lca-v1-r-long"
+    },
+    {
+      "id": "lca-v1-p-crossover",
+      "title": "First strictly lower whole-use count",
+      "purpose": "First strictly lower whole-use count",
+      "prompt": "Keep the given 840 kJ fixed,10 kJ washing per service and 50 kJ single-use. What is the smallest whole number of completed services for which reusable energy is strictly lower?",
+      "answer": "22",
+      "unit": "services",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "840+10 n<50 n requires n>21. At 21 the energies tie; the first whole count with strictly lower reusable energy is 22. This threshold belongs only to these assumptions.",
+      "hint": "Compare totals and distinguish equality from lower.",
+      "lcaGiven": {
+        "title": "Independent repeated-service source",
+        "note": "Original equal-capacity packaging data. Count fixed production/end-of-life once. Wash/return energy applies to every completed service, including the first. Assume 30 services and no breakage; single-use figure covers its stated whole lifecycle.",
+        "service": {
+          "fixed": 840,
+          "wash": 10,
+          "single": 50,
+          "uses": 30
+        }
+      },
+      "followUp": "lca-v1-r-tie"
+    },
+    {
+      "id": "lca-v1-p-washRule",
+      "title": "Use the stated wash convention",
+      "purpose": "Use the stated wash convention",
+      "prompt": "The source explicitly charges washing/return for every completed service, including the first. At 30 services, which washing count applies?",
+      "answer": "30",
+      "options": [
+        "1",
+        "29",
+        "30"
+      ],
+      "misconceptions": {
+        "1": "The per-service process repeats, unlike fixed production.",
+        "29": "The supplied rule is per completed service including the first."
+      },
+      "explanation": "Use the explicit 30-service rule; different real logistics need different data. Do not silently substitute n−1.",
+      "hint": "Read the counting rule.",
+      "lcaGiven": {
+        "title": "Independent repeated-service source",
+        "note": "Original equal-capacity packaging data. Count fixed production/end-of-life once. Wash/return energy applies to every completed service, including the first. Assume 30 services and no breakage; single-use figure covers its stated whole lifecycle.",
+        "service": {
+          "fixed": 840,
+          "wash": 10,
+          "single": 50,
+          "uses": 30
+        }
+      },
+      "followUp": "lca-v1-r-long",
+      "exposureAliases": [
+        "lca-v1-r-long",
+        "lca-v1-g-reuse",
+        "lca-v1-p-evaluateReuse",
+        "lca-v1-r-short",
+        "lca-v1-r-tie",
+        "life-cycle-and-recycling-3"
+      ]
+    },
+    {
+      "id": "lca-v1-p-evaluateReuse",
+      "title": "Evaluate the reusable option",
+      "purpose": "Evaluate the reusable option",
+      "prompt": "Recommend an option using the given 30-service energy comparison, and explain the limits of that recommendation.",
+      "answer": "For 30 equivalent services I favour reusable packaging on the supplied energy criterion:1140 kJ or 38 kJ/service compared with 1500 kJ or 50 kJ/service, a 360 kJ saving. Production/end-of-life is counted once and washing/return every service. This assumes 30 completed uses, equal capacity and no breakage; fewer uses can alter the result. Water, pollution effects and actual return logistics are not supplied, so this is not a universal environmental ranking.",
+      "rubric": [
+        "A judgement tied to equivalent service and the energy criterion.",
+        "Correct numerical comparison and linked reason.",
+        "Fixed and repeated use processes recognised.",
+        "At least one assumption and missing environmental evidence."
+      ],
+      "referenceResponse": "For 30 equivalent services I favour reusable packaging on the supplied energy criterion:1140 kJ or 38 kJ/service compared with 1500 kJ or 50 kJ/service, a 360 kJ saving. Production/end-of-life is counted once and washing/return every service. This assumes 30 completed uses, equal capacity and no breakage; fewer uses can alter the result. Water, pollution effects and actual return logistics are not supplied, so this is not a universal environmental ranking.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "Make a supported judgement, then state its limits.",
+      "lcaGiven": {
+        "title": "Independent repeated-service source",
+        "note": "Original equal-capacity packaging data. Count fixed production/end-of-life once. Wash/return energy applies to every completed service, including the first. Assume 30 services and no breakage; single-use figure covers its stated whole lifecycle.",
+        "service": {
+          "fixed": 840,
+          "wash": 10,
+          "single": 50,
+          "uses": 30
+        }
+      },
+      "followUp": "lca-v1-r-short",
+      "exposureAliases": [
+        "lca-v1-r-long",
+        "lca-v1-g-reuse",
+        "lca-v1-p-washRule",
+        "lca-v1-r-short",
+        "lca-v1-r-tie",
+        "life-cycle-and-recycling-3"
+      ]
+    },
+    {
+      "id": "lca-v1-p-tradeNumbers",
+      "title": "Compare each physical quantity",
+      "purpose": "Compare each physical quantity",
+      "prompt": "Calculate B−A energy and the ratio of A water use to B water use.",
+      "answer": "{\"energy\":\"60\",\"ratio\":\"3\"}",
+      "partLegend": "Construct the lifecycle quantities",
+      "parts": [
+        {
+          "id": "energy",
+          "label": "B minus A energy / MJ",
+          "answer": 60,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "ratio",
+          "label": "A water divided by B water",
+          "answer": 3,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        }
+      ],
+      "lcaGiven": {
+        "title": "Independent equal-service impact quantities",
+        "note": "Original complete-boundary quantities for the same service. Pollutant effects and local water scarcity are not quantified.",
+        "impacts": [
+          {
+            "name": "Energy",
+            "unit": "MJ",
+            "a": 140,
+            "b": 200
+          },
+          {
+            "name": "Water",
+            "unit": "L",
+            "a": 90,
+            "b": 30
+          },
+          {
+            "name": "Residual waste",
+            "unit": "kg",
+            "a": 8,
+            "b": 8
+          }
+        ]
+      },
+      "explanation": "200−140=60 MJ;90/30=3. Energy and water comparisons are separate; litres cannot be added toMJ.",
+      "hint": "Compare matching units separately.",
+      "followUp": "lca-v1-r-waterPriority"
+    },
+    {
+      "id": "lca-v1-p-pollutants",
+      "title": "Inventory versus environmental effects",
+      "purpose": "Inventory versus environmental effects",
+      "prompt": "Use the supplied quantities to explain why a whole environmental choice is not purely objective.",
+      "answer": "A uses 60 MJ less energy; B uses less water (30 L versus 90 L), while waste masses tie. These physical quantities can be measured, but pollutant effects, water scarcity and relative importance need additional evidence and value judgements. An energy priority might favour A and a water priority B; the choice should disclose assumptions rather than add unlike units or claim every assessment is dishonest.",
+      "rubric": [
+        "Correct conflicting physical comparisons.",
+        "Measurable quantities distinguished from pollutant effects.",
+        "Missing context and value judgements identified.",
+        "Conditional, transparent judgement without adding unlike units."
+      ],
+      "referenceResponse": "A uses 60 MJ less energy; B uses less water (30 L versus 90 L), while waste masses tie. These physical quantities can be measured, but pollutant effects, water scarcity and relative importance need additional evidence and value judgements. An energy priority might favour A and a water priority B; the choice should disclose assumptions rather than add unlike units or claim every assessment is dishonest.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "State what was measured and what is still a judgement.",
+      "lcaGiven": {
+        "title": "Independent equal-service impact quantities",
+        "note": "Original complete-boundary quantities for the same service. Pollutant effects and local water scarcity are not quantified.",
+        "impacts": [
+          {
+            "name": "Energy",
+            "unit": "MJ",
+            "a": 140,
+            "b": 200
+          },
+          {
+            "name": "Water",
+            "unit": "L",
+            "a": 90,
+            "b": 30
+          },
+          {
+            "name": "Residual waste",
+            "unit": "kg",
+            "a": 8,
+            "b": 8
+          }
+        ]
+      },
+      "followUp": "lca-v1-r-waterPriority",
+      "exposureAliases": [
+        "lca-v1-r-bags",
+        "lca-v1-g-tradeoff",
+        "lca-v1-r-waterPriority",
+        "lca-v1-p-bagDecision",
+        "lca-v1-cB-value",
+        "lca-v1-vB-judgement",
+        "life-cycle-and-recycling-1"
+      ]
+    },
+    {
+      "id": "lca-v1-p-advert",
+      "title": "Repair a selective advert",
+      "purpose": "Repair a selective advert",
+      "prompt": "An advert calls A 'the best lifecycle choice' because its raw-material energy is 60 kJ versus B's 80 kJ. Evaluate the claim using all the supplied data.",
+      "answer": "The raw-material comparison favours A, but a full matched energy boundary gives A 200 kJ versus B 180 kJ, favouring B for total energy. The advert omits manufacture, use and end of life and overstates what a single row proves. State the complete service/boundary and show all stages. Even B's lower total energy does not establish the smallest overall environmental impact without water, resource, waste and pollutant-effect information.",
+      "rubric": [
+        "Advert's limited evidence identified.",
+        "Full totals compared with the changed result.",
+        "Omitted stages and matching boundary explained.",
+        "Energy result limited to energy, with further environmental evidence needed."
+      ],
+      "referenceResponse": "The raw-material comparison favours A, but a full matched energy boundary gives A 200 kJ versus B 180 kJ, favouring B for total energy. The advert omits manufacture, use and end of life and overstates what a single row proves. State the complete service/boundary and show all stages. Even B's lower total energy does not establish the smallest overall environmental impact without water, resource, waste and pollutant-effect information.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "A selected stage may reverse the full result.",
+      "lcaGiven": {
+        "title": "Independent stage-energy source",
+        "note": "Original equal-service exercise. All four rows include their respective transport/distribution once. No other impact data are supplied.",
+        "energy": [
+          {
+            "stage": "Raw materials",
+            "a": 60,
+            "b": 80
+          },
+          {
+            "stage": "Make and pack",
+            "a": 120,
+            "b": 70
+          },
+          {
+            "stage": "Use",
+            "a": 15,
+            "b": 20
+          },
+          {
+            "stage": "End of life",
+            "a": 5,
+            "b": 10
+          }
+        ]
+      },
+      "followUp": "lca-v1-r-reversed",
+      "exposureAliases": [
+        "lca-v1-r-full",
+        "lca-v1-g-boundary",
+        "lca-v1-r-reversed",
+        "lca-v1-p-boundary",
+        "lca-v1-vA-boundary",
+        "lca-v1-vB-full",
+        "life-cycle-and-recycling-4"
+      ]
+    },
+    {
+      "id": "lca-v1-p-renewable",
+      "title": "Renewable does not mean impact-free",
+      "purpose": "Renewable does not mean impact-free",
+      "prompt": "Which conclusion about paper-bag feedstock is justified?",
+      "answer": "Wood can regrow, while forestry and processing still have impacts",
+      "options": [
+        "Paper must always have less total impact",
+        "Wood can regrow, while forestry and processing still have impacts",
+        "Renewable means no water or land use"
+      ],
+      "misconceptions": {
+        "Renewable means no water or land use": "Forestry and processing use resources.",
+        "Paper must always have less total impact": "A lifecycle comparison needs actual data."
+      },
+      "explanation": "Wood may be replenished by regrowth, but land use, biodiversity, processing energy/water and disposal still matter. Crude-oil polymer feedstock is finite.",
+      "hint": "Distinguish replenishment from an environmental verdict.",
+      "followUp": "lca-v1-r-bags"
+    },
+    {
+      "id": "lca-v1-p-reduce",
+      "title": "Reduce before processing",
+      "purpose": "Reduce before processing",
+      "prompt": "Explain how avoiding an unnecessary new product differs from reusing and recycling one already made.",
+      "answer": "Reducing unnecessary demand avoids some new extraction, manufacture, packaging and resulting waste. Reuse supplies further service from the existing product but can need cleaning and return transport. Recycling processes suitable recovered material into products and can need separation, energy and new input. All can conserve limited resources; compare the actual required service and consequences rather than assuming zero impacts.",
+      "rubric": [
+        "Reduction avoids unnecessary new-product demand.",
+        "Reuse keeps a product in service with possible cleaning/transport.",
+        "Recycling processes recovered material with separation/energy.",
+        "Resource benefit distinguished from zero-impact claim."
+      ],
+      "referenceResponse": "Reducing unnecessary demand avoids some new extraction, manufacture, packaging and resulting waste. Reuse supplies further service from the existing product but can need cleaning and return transport. Recycling processes suitable recovered material into products and can need separation, energy and new input. All can conserve limited resources; compare the actual required service and consequences rather than assuming zero impacts.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "Follow the product and then the material.",
+      "followUp": "lca-v1-r-steel",
+      "exposureAliases": [
+        "lca-v1-cA-resources",
+        "lca-v1-vA-routes",
+        "life-cycle-and-recycling-2"
+      ]
+    },
+    {
+      "id": "lca-v1-p-reuseRecycle",
+      "title": "Distinguish glass routes",
+      "purpose": "Distinguish glass routes",
+      "prompt": "Which action is recycling rather than simply reusing a glass bottle?",
+      "answer": "Crush and melt glass to make another product",
+      "options": [
+        "Crush and melt glass to make another product",
+        "Wash and refill the same bottle",
+        "Leave the empty bottle unused"
+      ],
+      "misconceptions": {
+        "Wash and refill the same bottle": "The same product is reused.",
+        "Leave the empty bottle unused": "This supplies no further service."
+      },
+      "explanation": "Reuse keeps the product; crushing/melting transforms suitable glass into material for a new product, with processing energy.",
+      "hint": "Track whether the existing product is retained.",
+      "followUp": "lca-v1-r-bottle",
+      "exposureAliases": [
+        "lca-v1-r-glass",
+        "lca-v1-g-recycle",
+        "lca-v1-p-separation",
+        "lca-v1-p-steel",
+        "lca-v1-p-materials",
+        "lca-v1-cB-collection",
+        "lca-v1-r-steel",
+        "lca-v1-r-polymer",
+        "life-cycle-and-recycling-5"
+      ]
+    },
+    {
+      "id": "lca-v1-p-glass",
+      "title": "Construct an independent material inventory",
+      "purpose": "Construct an independent material inventory",
+      "prompt": "Calculate usable recovery, other collected streams and new suitable input.",
+      "answer": "{\"usable\":\"96\",\"other\":\"64\",\"new\":\"54\"}",
+      "partLegend": "Construct the material balance",
+      "parts": [
+        {
+          "id": "usable",
+          "label": "Recovered usable material / kg",
+          "answer": 96,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "other",
+          "label": "Collected material not recovered / kg",
+          "answer": 64,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "new",
+          "label": "New suitable material needed / kg",
+          "answer": 54,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        }
+      ],
+      "lcaGiven": {
+        "title": "Independent sorted material balance",
+        "note": "All 160 kg collected material is accounted for;120 kg is suitable sorted material.80% of the sorted stream is recovered as usable material. The specified new product needs 150 kg suitable material. No other recovered source is available.",
+        "recycling": {
+          "collected": 160,
+          "sorted": 120,
+          "yield": 80,
+          "demand": 150
+        }
+      },
+      "explanation": "120×.8=96 kg usable;160−96=64 kg in other streams;150−96=54 kg new input. Applying 80% to all collected material ignores sorting.",
+      "hint": "Recovery applies to the sorted mass, then compare with demand.",
+      "followUp": "lca-v1-r-glass"
+    },
+    {
+      "id": "lca-v1-p-yield",
+      "title": "Overall collection-to-product yield",
+      "purpose": "Overall collection-to-product yield",
+      "prompt": "What percentage of all collected material reaches the usable recovered product?",
+      "answer": "60",
+      "unit": "%",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "96/160×100=60%.80% is the sorted-stream recovery, not the collected-to-product fraction.",
+      "hint": "Use all collected material as the denominator.",
+      "lcaGiven": {
+        "title": "Independent sorted material balance",
+        "note": "All 160 kg collected material is accounted for;120 kg is suitable sorted material.80% of the sorted stream is recovered as usable material. The specified new product needs 150 kg suitable material. No other recovered source is available.",
+        "recycling": {
+          "collected": 160,
+          "sorted": 120,
+          "yield": 80,
+          "demand": 150
+        }
+      },
+      "followUp": "lca-v1-r-polymer"
+    },
+    {
+      "id": "lca-v1-p-separation",
+      "title": "Separation depends on use",
+      "purpose": "Separation depends on use",
+      "prompt": "Explain why the amount of separation required for recycling depends on the material and the properties needed in the final product.",
+      "answer": "Mixed polymers, coatings or contaminants can affect processing and final-product properties. A product needing a particular polymer, composition or quality can require more sorting than a use able to accept suitable mixed scrap. Collection does not guarantee usable recovery. Separation and processing themselves use resources; judge the supplied stream and required properties rather than claiming every material is fully recyclable.",
+      "rubric": [
+        "Mixture/contamination linked to processing or product properties.",
+        "Separation depends on final-use requirements.",
+        "Collection distinguished from usable recovery.",
+        "Processing costs or losses recognised."
+      ],
+      "referenceResponse": "Mixed polymers, coatings or contaminants can affect processing and final-product properties. A product needing a particular polymer, composition or quality can require more sorting than a use able to accept suitable mixed scrap. Collection does not guarantee usable recovery. Separation and processing themselves use resources; judge the supplied stream and required properties rather than claiming every material is fully recyclable.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "Ask what the next product must be like.",
+      "followUp": "lca-v1-r-polymer",
+      "exposureAliases": [
+        "lca-v1-r-glass",
+        "lca-v1-g-recycle",
+        "lca-v1-p-reuseRecycle",
+        "lca-v1-p-steel",
+        "lca-v1-p-materials",
+        "lca-v1-cB-collection",
+        "lca-v1-r-steel",
+        "lca-v1-r-polymer",
+        "life-cycle-and-recycling-5"
+      ]
+    },
+    {
+      "id": "lca-v1-p-steel",
+      "title": "Suitable scrap steel",
+      "purpose": "Suitable scrap steel",
+      "prompt": "Which specified use can reduce the amount of new iron extracted from ore?",
+      "answer": "Add suitable scrap steel to primary iron from a blast furnace",
+      "options": [
+        "All scrap must be chemically pure iron for every product",
+        "Add suitable scrap steel to primary iron from a blast furnace",
+        "Create new iron atoms by melting scrap"
+      ],
+      "misconceptions": {
+        "Create new iron atoms by melting scrap": "Melting does not create atoms.",
+        "All scrap must be chemically pure iron for every product": "Required separation depends on final-product properties."
+      },
+      "explanation": "Suitable scrap can supplement newly produced iron and reduce ore demand. The allowed composition depends on the specified final product.",
+      "hint": "Use the material for a suitable purpose.",
+      "followUp": "lca-v1-r-steel",
+      "exposureAliases": [
+        "lca-v1-r-glass",
+        "lca-v1-g-recycle",
+        "lca-v1-p-reuseRecycle",
+        "lca-v1-p-separation",
+        "lca-v1-p-materials",
+        "lca-v1-cB-collection",
+        "lca-v1-r-steel",
+        "lca-v1-r-polymer",
+        "life-cycle-and-recycling-5"
+      ]
+    },
+    {
+      "id": "lca-v1-p-materials",
+      "title": "Limited raw materials",
+      "purpose": "Limited raw materials",
+      "prompt": "Which statement fits the specified resource scope?",
+      "answer": "Metals, glass, building materials, clay ceramics and most plastics use limited raw materials",
+      "options": [
+        "Metals, glass, building materials, clay ceramics and most plastics use limited raw materials",
+        "Every raw material regrows each week",
+        "Recycling eliminates all mining immediately"
+      ],
+      "misconceptions": {
+        "Every raw material regrows each week": "Minerals and oil are finite stocks.",
+        "Recycling eliminates all mining immediately": "Recovered quantities/quality may not meet demand."
+      },
+      "explanation": "Reduction, reuse and recycling can reduce extraction from finite resources. Much processing energy also comes from limited resources; mining/quarrying changes land and can damage habitats or cause pollution. The given quantities and local effects are needed for a comparison.",
+      "hint": "Distinguish reduced demand from an unlimited stock.",
+      "followUp": "lca-v1-r-steel",
+      "exposureAliases": [
+        "lca-v1-r-glass",
+        "lca-v1-g-recycle",
+        "lca-v1-p-reuseRecycle",
+        "lca-v1-p-separation",
+        "lca-v1-p-steel",
+        "lca-v1-cB-collection",
+        "lca-v1-r-steel",
+        "lca-v1-r-polymer",
+        "life-cycle-and-recycling-5"
+      ]
+    },
+    {
+      "id": "lca-v1-p-bagDecision",
+      "title": "Evaluate paper and plastic shopping bags",
+      "purpose": "Evaluate paper and plastic shopping bags",
+      "prompt": "Compare the supplied plastic(A) and paper(B) options and make a justified, conditional recommendation.",
+      "answer": "For 1000 equal shopping services, plasticA uses 180 MJ and 25 L versus paperB 300 MJ and 70 L, so A has the lower measured energy and water demand. PaperB leaves 4 kg residual waste versus A 10 kg, favouring B on that criterion. Oil feedstock is finite; wood can regrow but forestry uses land and may affect biodiversity. I would choose A if energy/water are the declared priority, while B could be chosen for residual waste. Both require a matched full lifecycle including transport, and disposal/collection conditions and pollutant effects need evidence. No material wins universally.",
+      "rubric": [
+        "Equal service and matched lifecycle recognised.",
+        "Correct linked energy and water comparisons.",
+        "Opposing residual-waste result acknowledged.",
+        "Resource/processing/disposal context without universal material claims.",
+        "A clear conditional judgement and evidence limitations."
+      ],
+      "referenceResponse": "For 1000 equal shopping services, plasticA uses 180 MJ and 25 L versus paperB 300 MJ and 70 L, so A has the lower measured energy and water demand. PaperB leaves 4 kg residual waste versus A 10 kg, favouring B on that criterion. Oil feedstock is finite; wood can regrow but forestry uses land and may affect biodiversity. I would choose A if energy/water are the declared priority, while B could be chosen for residual waste. Both require a matched full lifecycle including transport, and disposal/collection conditions and pollutant effects need evidence. No material wins universally.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "Compare advantages and disadvantages, then justify a priority.",
+      "lcaGiven": {
+        "title": "Compare plastic and paper bags",
+        "note": "Original data for 1000 equivalent shopping services: A plastic bags, B paper bags, equal capacity/strength and matched stages. Residual waste means the stated unrecovered mass; no pollutant-effect score is supplied.",
+        "impacts": [
+          {
+            "name": "Energy",
+            "unit": "MJ",
+            "a": 180,
+            "b": 300
+          },
+          {
+            "name": "Water",
+            "unit": "L",
+            "a": 25,
+            "b": 70
+          },
+          {
+            "name": "Residual waste",
+            "unit": "kg",
+            "a": 10,
+            "b": 4
+          }
+        ]
+      },
+      "followUp": "lca-v1-r-bags",
+      "exposureAliases": [
+        "lca-v1-r-bags",
+        "lca-v1-g-tradeoff",
+        "lca-v1-r-waterPriority",
+        "lca-v1-p-pollutants",
+        "lca-v1-cB-value",
+        "lca-v1-vB-judgement",
+        "life-cycle-and-recycling-1"
+      ]
+    },
+    {
+      "id": "lca-v1-p-energyMass",
+      "title": "Scale a new production-energy source",
+      "purpose": "Scale a new production-energy source",
+      "prompt": "Using the supplied data, calculate the production energy for 2 kg of identical products. Scientific notation is accepted.",
+      "answer": "60000",
+      "unit": "kJ",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "2 kg=2000 g;2000/8=250 products;250×240=60000 kJ=6×10⁴ kJ. Keep production-energy scope separate from a whole environmental judgement.",
+      "hint": "Match mass units, count the products, then multiply their energy.",
+      "lcaGiven": {
+        "title": "Independent mass-to-energy source",
+        "note": "Original identical products and production-only energy. Assume no losses; other lifecycle stages are not supplied.",
+        "rows": [
+          {
+            "label": "Mass of one product",
+            "text": "8 g"
+          },
+          {
+            "label": "Energy to produce one product",
+            "text": "240 kJ"
+          },
+          {
+            "label": "Required product mass",
+            "text": "2 kg"
+          }
+        ]
+      },
+      "followUp": "lca-v1-r-scale"
+    },
+    {
+      "id": "lca-v1-resource-p-needs",
+      "title": "Give two sustainability reasons",
+      "purpose": "Give two sustainability reasons",
+      "conciseHeading": true,
+      "prompt": "A town still needs metal for water pipes. Recycling used copper reduces demand for newly mined ore. Give two short reasons why this helps sustainable development: one about current needs and one about future resources.",
+      "answer": "Recycled copper supplies pipes needed now; reduced extraction conserves finite copper ore for future generations.",
+      "referenceResponse": "Recycled copper supplies pipes needed now; reduced extraction conserves finite copper ore for future generations.",
+      "rubric": [
+        "Link the recycled material to meeting the town's current need for pipes.",
+        "Link lower extraction to conserving finite ore for future generations."
+      ],
+      "hint": "Address current needs and future resources separately.",
+      "explanation": "Recycled copper supplies pipes needed now; reduced extraction conserves finite copper ore for future generations. Compare your short response with the criteria. Your original words remain saved; this is manual review, not an automatic examiner mark.",
+      "followUp": "lca-v1-resource-r-needs"
+    },
+    {
+      "id": "lca-v1-resource-p-products",
+      "title": "Give a synthetic replacement",
+      "purpose": "Give a synthetic replacement",
+      "conciseHeading": true,
+      "prompt": "Wool from farmed sheep is used for clothing. Name one synthetic fibre that can replace or supplement wool. One name is enough; no environmental evaluation is needed.",
+      "answer": "Polyester (also accept nylon or acrylic)",
+      "referenceResponse": "Polyester (also accept nylon or acrylic)",
+      "rubric": [
+        "Name a suitable synthetic fibre, for example polyester, nylon or acrylic; cotton is agricultural, not synthetic."
+      ],
+      "hint": "Choose a manufactured fibre rather than another farmed fibre.",
+      "explanation": "Polyester (also accept nylon or acrylic) Compare your short response with the criteria. Your original words remain saved; this is manual review, not an automatic examiner mark.",
+      "followUp": "lca-v1-resource-r-products",
+      "exposureAliases": [
+        "lca-v1-resource-r-products",
+        "lca-v1-resource-g-products",
+        "lca-v1-resource-cC-products",
+        "lca-v1-resource-vC-products"
+      ]
+    },
+    {
+      "id": "lca-v1-resource-p-renewable",
+      "title": "Classify from supplied information",
+      "purpose": "Classify from supplied information",
+      "conciseHeading": true,
+      "prompt": "Willow for baskets regrows in a few years. A sand deposit forms much more slowly than it is extracted. Which classification follows this information?",
+      "answer": "Willow is renewable; this sand deposit is finite",
+      "options": [
+        "Willow is finite; sand is renewable",
+        "Willow is renewable; this sand deposit is finite",
+        "Both are renewable because they occur naturally"
+      ],
+      "misconceptions": {
+        "Both are renewable because they occur naturally": "The sand is not replaced on the extraction timescale.",
+        "Willow is finite; sand is renewable": "Willow regrowth replaces the resource; this deposit does not replenish fast enough."
+      },
+      "explanation": "The supplied rates support renewable willow and a finite sand deposit. Natural origin alone is insufficient; sustainable use also depends on harvest rate and other impacts.",
+      "hint": "Use the given replenishment times, not just natural origin.",
+      "followUp": "lca-v1-resource-r-renewable"
+    },
+    {
+      "id": "lca-v1-resource-p-lca",
+      "title": "A substitute needs evidence",
+      "purpose": "A substitute needs evidence",
+      "conciseHeading": true,
+      "prompt": "A synthetic fibre supplements farmed cotton. Which conclusion is justified before comparing their life cycles?",
+      "answer": "It provides an alternative supply, but its overall environmental impact needs LCA evidence",
+      "options": [
+        "Agricultural always means impact-free",
+        "It provides an alternative supply, but its overall environmental impact needs LCA evidence",
+        "Synthetic always means more sustainable"
+      ],
+      "misconceptions": {
+        "Synthetic always means more sustainable": "Manufacture, feedstock, use and disposal all matter.",
+        "Agricultural always means impact-free": "Farming can use land, water, energy and other inputs."
+      },
+      "explanation": "Chemistry can develop useful substitutes and improve agricultural or industrial processes. A substitute alone does not prove lower impact: preserve the existing LCA comparison across stages and equal service.",
+      "hint": "Distinguish meeting a need from proving a lower overall impact.",
+      "followUp": "lca-v1-resource-r-products"
+    },
+    {
+      "id": "lca-v1-cA-end",
+      "title": "Locate a lifecycle effect",
+      "purpose": "Locate a lifecycle effect",
+      "prompt": "A discarded product is collected for recycling. Which stage is this?",
+      "answer": "End of useful life",
+      "options": [
+        "Use and operation",
+        "Raw feedstock extraction",
+        "End of useful life"
+      ],
+      "misconceptions": {
+        "Use and operation": "It is no longer serving its original use.",
+        "Raw feedstock extraction": "Collection is from the existing discarded product."
+      },
+      "explanation": "Collection/disposal/recycling is at end of useful life; relevant transport is included there.",
+      "hint": "Follow the existing product.",
+      "exposureAliases": [
+        "lca-v1-r-shopping",
+        "lca-v1-g-stages",
+        "lca-v1-p-stage",
+        "life-cycle-and-recycling-0"
+      ]
+    },
+    {
+      "id": "lca-v1-cA-energy",
+      "title": "Build the reserved energy comparison",
+      "purpose": "Build the reserved energy comparison",
+      "prompt": "Calculate both complete totals and A−B.",
+      "answer": "{\"a\":\"500\",\"b\":\"420\",\"d\":\"80\"}",
+      "partLegend": "Construct the lifecycle quantities",
+      "parts": [
+        {
+          "id": "a",
+          "label": "A total / kJ",
+          "answer": 500,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "b",
+          "label": "B total / kJ",
+          "answer": 420,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "d",
+          "label": "A minus B / kJ",
+          "answer": 80,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        }
+      ],
+      "lcaGiven": {
+        "title": "Reserved energy source A",
+        "note": "Original equal-service exercise. All four rows include their respective transport/distribution once. No other impact data are supplied.",
+        "energy": [
+          {
+            "stage": "Raw materials",
+            "a": 280,
+            "b": 240
+          },
+          {
+            "stage": "Make and pack",
+            "a": 140,
+            "b": 90
+          },
+          {
+            "stage": "Use",
+            "a": 50,
+            "b": 60
+          },
+          {
+            "stage": "End of life",
+            "a": 30,
+            "b": 30
+          }
+        ]
+      },
+      "explanation": "A 500,B 420; A−B=80 kJ. Matching full stages include transport once.",
+      "hint": "Keep both products' complete boundary."
+    },
+    {
+      "id": "lca-v1-cA-reuse",
+      "title": "Compare the reserved repeated service",
+      "purpose": "Compare the reserved repeated service",
+      "prompt": "Calculate reusable total, reusable per service and single-use total.",
+      "answer": "{\"total\":\"990\",\"per\":\"33\",\"single\":\"1350\"}",
+      "partLegend": "Construct the equivalent-service comparison",
+      "parts": [
+        {
+          "id": "total",
+          "label": "Reusable total / kJ",
+          "answer": 990,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "per",
+          "label": "Reusable per service / kJ",
+          "answer": 33,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "single",
+          "label": "Single-use total / kJ",
+          "answer": 1350,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        }
+      ],
+      "lcaGiven": {
+        "title": "Reserved repeated-service source",
+        "note": "Original equal-capacity data. Fixed energy once; wash/return every completed service including the first. No breakage,30 equivalent services.",
+        "service": {
+          "fixed": 720,
+          "wash": 9,
+          "single": 45,
+          "uses": 30
+        }
+      },
+      "explanation": "720+30×9=990 kJ;990/30=33;30×45=1350 kJ. Washing is repeated under the given rule.",
+      "hint": "Count fixed and per-service energy separately."
+    },
+    {
+      "id": "lca-v1-cA-judgement",
+      "title": "Make a supported bag judgement",
+      "purpose": "Make a supported bag judgement",
+      "prompt": "Evaluate the two reserved bag options and state a conditional recommendation.",
+      "answer": "B needs 180 MJ versus A 240 MJ, favouring B for energy. A needs 40 L versus B 80 L and produces 6 kg versus 12 kg residual waste, favouring A for those measures. For a water/waste priority I choose A, acknowledging B's energy advantage; an energy priority could choose B. The quantities refer to equal service and matching boundaries, but pollutant effects, local scarcity and the importance assigned to each impact need evidence and value judgements. No overall universal winner follows.",
+      "rubric": [
+        "Correct evidence from at least two conflicting measures.",
+        "Reasons linked to a declared judgement.",
+        "Equal service/boundary and missing impact context.",
+        "Value judgement and conditional limit."
+      ],
+      "referenceResponse": "B needs 180 MJ versus A 240 MJ, favouring B for energy. A needs 40 L versus B 80 L and produces 6 kg versus 12 kg residual waste, favouring A for those measures. For a water/waste priority I choose A, acknowledging B's energy advantage; an energy priority could choose B. The quantities refer to equal service and matching boundaries, but pollutant effects, local scarcity and the importance assigned to each impact need evidence and value judgements. No overall universal winner follows.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "Use data to support a conclusion rather than list it.",
+      "lcaGiven": {
+        "title": "Reserved bag comparison",
+        "note": "Original data for 1000 equivalent shopping services and matching lifecycle boundaries; pollutant effects unspecified.",
+        "impacts": [
+          {
+            "name": "Energy",
+            "unit": "MJ",
+            "a": 240,
+            "b": 180
+          },
+          {
+            "name": "Water",
+            "unit": "L",
+            "a": 40,
+            "b": 80
+          },
+          {
+            "name": "Residual waste",
+            "unit": "kg",
+            "a": 6,
+            "b": 12
+          }
+        ]
+      }
+    },
+    {
+      "id": "lca-v1-cA-resources",
+      "title": "Explain resource savings",
+      "purpose": "Explain resource savings",
+      "prompt": "Explain how reduction, reuse and recycling can reduce finite-resource demand, and give a limitation.",
+      "answer": "Reducing unnecessary demand avoids some new production. Reusing keeps an existing product supplying further service, though cleaning/return may be needed. Recycling recovers suitable material, reducing new extraction and often primary-production energy and waste; collection, separation and processing still use resources and can lose usable material. The benefit depends on actual service, recovery and required properties.",
+      "rubric": [
+        "Distinct reduction/reuse/recycling reasoning.",
+        "Finite extraction, energy or waste benefit.",
+        "A specific processing/recovery/service limitation."
+      ],
+      "referenceResponse": "Reducing unnecessary demand avoids some new production. Reusing keeps an existing product supplying further service, though cleaning/return may be needed. Recycling recovers suitable material, reducing new extraction and often primary-production energy and waste; collection, separation and processing still use resources and can lose usable material. The benefit depends on actual service, recovery and required properties.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "Identify what new input is avoided.",
+      "exposureAliases": [
+        "lca-v1-p-reduce",
+        "lca-v1-vA-routes",
+        "life-cycle-and-recycling-2"
+      ]
+    },
+    {
+      "id": "lca-v1-cA-percent",
+      "title": "Calculate an energy reduction",
+      "purpose": "Calculate an energy reduction",
+      "prompt": "From the reserved A total to B, what is the percentage energy decrease?",
+      "answer": "16",
+      "unit": "%",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "(500−420)/500×100=16%. Use the original A total.",
+      "hint": "Decrease divided by the reference total.",
+      "lcaGiven": {
+        "title": "Reserved energy source A",
+        "note": "Original equal-service exercise. All four rows include their respective transport/distribution once. No other impact data are supplied.",
+        "energy": [
+          {
+            "stage": "Raw materials",
+            "a": 280,
+            "b": 240
+          },
+          {
+            "stage": "Make and pack",
+            "a": 140,
+            "b": 90
+          },
+          {
+            "stage": "Use",
+            "a": 50,
+            "b": 60
+          },
+          {
+            "stage": "End of life",
+            "a": 30,
+            "b": 30
+          }
+        ]
+      }
+    },
+    {
+      "id": "lca-v1-cB-transport",
+      "title": "Transport at each stage",
+      "purpose": "Transport at each stage",
+      "prompt": "Which transport treatment supports a fair lifecycle comparison?",
+      "answer": "Include relevant journeys consistently at each stage",
+      "options": [
+        "Include relevant journeys consistently at each stage",
+        "Only include transport for the less-liked option",
+        "Count the same journey twice"
+      ],
+      "misconceptions": {
+        "Only include transport for the less-liked option": "That gives inconsistent boundaries.",
+        "Count the same journey twice": "Double-counting distorts totals."
+      },
+      "explanation": "Use matched service and boundary, with relevant transport once at each stage.",
+      "hint": "Compare like functions with the same accounting rules.",
+      "exposureAliases": [
+        "lca-v1-r-bottle",
+        "lca-v1-r-building",
+        "lca-v1-p-transport"
+      ]
+    },
+    {
+      "id": "lca-v1-cB-energy",
+      "title": "Keep a reserved signed difference",
+      "purpose": "Keep a reserved signed difference",
+      "prompt": "Calculate both totals and A−B.",
+      "answer": "{\"a\":\"300\",\"b\":\"340\",\"d\":\"-40\"}",
+      "partLegend": "Construct the lifecycle quantities",
+      "parts": [
+        {
+          "id": "a",
+          "label": "A total / kJ",
+          "answer": 300,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "b",
+          "label": "B total / kJ",
+          "answer": 340,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "d",
+          "label": "A minus B / kJ",
+          "answer": -40,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        }
+      ],
+      "lcaGiven": {
+        "title": "Reserved energy source B",
+        "note": "Original equal-service exercise. All four rows include their respective transport/distribution once. No other impact data are supplied.",
+        "energy": [
+          {
+            "stage": "Raw materials",
+            "a": 90,
+            "b": 180
+          },
+          {
+            "stage": "Make and pack",
+            "a": 120,
+            "b": 100
+          },
+          {
+            "stage": "Use",
+            "a": 70,
+            "b": 40
+          },
+          {
+            "stage": "End of life",
+            "a": 20,
+            "b": 20
+          }
+        ]
+      },
+      "explanation": "A 300,B 340;A−B=−40 kJ. A uses 40 kJ less within this energy boundary.",
+      "hint": "Keep the stated subtraction order."
+    },
+    {
+      "id": "lca-v1-cB-recovery",
+      "title": "Balance reserved recovered material",
+      "purpose": "Balance reserved recovered material",
+      "prompt": "Calculate usable recovery, other collected streams and required new input.",
+      "answer": "{\"recovered\":\"180\",\"other\":\"70\",\"new\":\"40\"}",
+      "partLegend": "Construct the material balance",
+      "parts": [
+        {
+          "id": "recovered",
+          "label": "Recovered usable material / kg",
+          "answer": 180,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "other",
+          "label": "Collected material not recovered / kg",
+          "answer": 70,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        },
+        {
+          "id": "new",
+          "label": "New suitable material needed / kg",
+          "answer": 40,
+          "inputMode": "decimal",
+          "tolerance": 0.000001
+        }
+      ],
+      "lcaGiven": {
+        "title": "Reserved recycling source",
+        "note": "Collected 250 kg; suitable sorted 200 kg;90% usable recovery of that stream. New product requires 220 kg suitable material. Other collected material is accounted for outside the recovered product.",
+        "recycling": {
+          "collected": 250,
+          "sorted": 200,
+          "yield": 90,
+          "demand": 220
+        }
+      },
+      "explanation": "200×.9=180 kg;250−180=70 kg other collected streams;220−180=40 kg new input.",
+      "hint": "Apply recovery to sorted material first."
+    },
+    {
+      "id": "lca-v1-cB-value",
+      "title": "Explain disagreement between assessments",
+      "purpose": "Explain disagreement between assessments",
+      "prompt": "Two transparent assessments use the same measured energy and water data but favour different products. Explain how that can happen and how readers should evaluate it.",
+      "answer": "Different priorities or impact value judgements can weight energy demand, local water scarcity and pollutant effects differently. Shared measurements do not by themselves fix a universal environmental score. Readers should check service, stages/transport, data quality and the declared assumptions/importance given to impacts. An abbreviated boundary can bias an advert, but disagreement alone does not prove dishonesty.",
+      "rubric": [
+        "Measurements distinguished from impact priorities.",
+        "Value judgements or context explain disagreement.",
+        "Service/boundary/data checked.",
+        "No claim that every disagreement proves dishonesty."
+      ],
+      "referenceResponse": "Different priorities or impact value judgements can weight energy demand, local water scarcity and pollutant effects differently. Shared measurements do not by themselves fix a universal environmental score. Readers should check service, stages/transport, data quality and the declared assumptions/importance given to impacts. An abbreviated boundary can bias an advert, but disagreement alone does not prove dishonesty.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "Ask how each conclusion was reached.",
+      "exposureAliases": [
+        "lca-v1-r-bags",
+        "lca-v1-g-tradeoff",
+        "lca-v1-r-waterPriority",
+        "lca-v1-p-bagDecision",
+        "lca-v1-p-pollutants",
+        "lca-v1-vB-judgement",
+        "life-cycle-and-recycling-1"
+      ]
+    },
+    {
+      "id": "lca-v1-cB-collection",
+      "title": "Recyclable versus recycled",
+      "purpose": "Recyclable versus recycled",
+      "prompt": "A material can be recycled in a suitable process. Which conclusion still needs evidence?",
+      "answer": "How much is actually collected and recovered locally",
+      "options": [
+        "How much is actually collected and recovered locally",
+        "All of it must already be recycled",
+        "It must be biodegradable"
+      ],
+      "misconceptions": {
+        "All of it must already be recycled": "Technical possibility is not actual collection/recovery.",
+        "It must be biodegradable": "Recyclability and biological decomposition are different."
+      },
+      "explanation": "Check actual collection, sorting, infrastructure, product properties and recovery; labels alone do not quantify environmental results.",
+      "hint": "Distinguish possible treatment from actual outcome.",
+      "exposureAliases": [
+        "lca-v1-r-glass",
+        "lca-v1-g-recycle",
+        "lca-v1-p-reuseRecycle",
+        "lca-v1-p-separation",
+        "lca-v1-p-steel",
+        "lca-v1-p-materials",
+        "lca-v1-r-steel",
+        "lca-v1-r-polymer",
+        "life-cycle-and-recycling-5"
+      ]
+    },
+    {
+      "id": "lca-v1-cB-percent",
+      "title": "Overall reserved recovery",
+      "purpose": "Overall reserved recovery",
+      "prompt": "What percentage of all collected material becomes the recovered usable product?",
+      "answer": "72",
+      "unit": "%",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "180/250×100=72%;90% applies only to the suitable sorted 200 kg.",
+      "hint": "Use the full collected denominator.",
+      "lcaGiven": {
+        "title": "Reserved recycling source",
+        "note": "Collected 250 kg; suitable sorted 200 kg;90% usable recovery of that stream. New product requires 220 kg suitable material. Other collected material is accounted for outside the recovered product.",
+        "recycling": {
+          "collected": 250,
+          "sorted": 200,
+          "yield": 90,
+          "demand": 220
+        }
+      }
+    },
+    {
+      "id": "lca-v1-resource-cC-needs",
+      "title": "Recycled furniture",
+      "purpose": "Recycled furniture",
+      "conciseHeading": true,
+      "prompt": "Recycled aluminium supplies furniture and reduces bauxite mining. Give two sustainable-development reasons.",
+      "answer": "It supplies furniture needed now and conserves finite bauxite for future generations.",
+      "referenceResponse": "It supplies furniture needed now and conserves finite bauxite for future generations.",
+      "rubric": [
+        "Explain that recycled aluminium meets the current furniture need.",
+        "Explain that reduced extraction conserves finite bauxite for future generations; cost alone is insufficient."
+      ],
+      "hint": "Connect present needs and future supply.",
+      "explanation": "It supplies furniture needed now and conserves finite bauxite for future generations. Compare your short response with the criteria. Your original words remain saved; this is manual review, not an automatic examiner mark."
+    },
+    {
+      "id": "lca-v1-resource-cC-products",
+      "title": "Name a synthetic supplement",
+      "purpose": "Name a synthetic supplement",
+      "conciseHeading": true,
+      "prompt": "Cotton from agriculture provides clothing fibre. Name one synthetic fibre that can supplement cotton. One name is enough.",
+      "answer": "Nylon (also accept polyester or acrylic)",
+      "referenceResponse": "Nylon (also accept polyester or acrylic)",
+      "rubric": [
+        "Accept nylon, polyester, acrylic or another suitable synthetic clothing fibre; wool and cotton are not synthetic."
+      ],
+      "hint": "Recall a manufactured fibre.",
+      "explanation": "Nylon (also accept polyester or acrylic) Compare your short response with the criteria. Your original words remain saved; this is manual review, not an automatic examiner mark.",
+      "exposureAliases": [
+        "lca-v1-resource-r-products",
+        "lca-v1-resource-g-products",
+        "lca-v1-resource-p-products",
+        "lca-v1-resource-vC-products"
+      ]
+    },
+    {
+      "id": "lca-v1-resource-cC-renewable",
+      "title": "Compare replenishment times",
+      "purpose": "Compare replenishment times",
+      "conciseHeading": true,
+      "prompt": "Bamboo regrows in years; limestone forms over geological timescales. Classify them.",
+      "answer": "Bamboo is renewable; limestone is finite",
+      "options": [
+        "Both are finite: extraction removes them",
+        "Bamboo is renewable; limestone is finite",
+        "Both are renewable because they are natural"
+      ],
+      "misconceptions": {
+        "Both are renewable because they are natural": "Limestone replacement is too slow on human timescales.",
+        "Both are finite: extraction removes them": "Bamboo can regrow on the timescale of use."
+      },
+      "explanation": "Bamboo can replenish on human timescales; the limestone stock cannot. Renewable bamboo still requires suitable management.",
+      "hint": "Compare formation and use timescales."
+    },
+    {
+      "id": "lca-v1-resource-cD-needs",
+      "title": "Insulating homes",
+      "purpose": "Insulating homes",
+      "conciseHeading": true,
+      "prompt": "Insulation keeps homes warm using less finite natural gas. Give two sustainability reasons.",
+      "answer": "Homes still meet today's need for warmth, while lower gas use conserves a finite fuel supply for future generations.",
+      "referenceResponse": "Homes still meet today's need for warmth, while lower gas use conserves a finite fuel supply for future generations.",
+      "rubric": [
+        "Link insulation to meeting the current need for warmth.",
+        "Link lower gas use to conserving finite reserves for future generations."
+      ],
+      "hint": "Consider present warmth and future fuel supply.",
+      "explanation": "Homes still meet today's need for warmth, while lower gas use conserves a finite fuel supply for future generations. Compare your short response with the criteria. Your original words remain saved; this is manual review, not an automatic examiner mark."
+    },
+    {
+      "id": "lca-v1-resource-cD-products",
+      "title": "Supplementing timber",
+      "purpose": "Supplementing timber",
+      "conciseHeading": true,
+      "prompt": "Wild trees supply timber. Name one agricultural activity that supplements this supply.",
+      "answer": "Growing trees in managed plantations",
+      "referenceResponse": "Growing trees in managed plantations",
+      "rubric": [
+        "Accept cultivating/growing trees in plantations to supply timber; manufacturing plastic is a synthetic, not agricultural, supplement."
+      ],
+      "hint": "Think of deliberately growing a timber crop.",
+      "explanation": "Growing trees in managed plantations Compare your short response with the criteria. Your original words remain saved; this is manual review, not an automatic examiner mark."
+    },
+    {
+      "id": "lca-v1-resource-cD-renewable",
+      "title": "Natural does not mean renewable",
+      "purpose": "Natural does not mean renewable",
+      "conciseHeading": true,
+      "prompt": "Flax regrows each season; iron ore forms much more slowly than it is mined. Classify them.",
+      "answer": "Flax is renewable; iron ore is finite",
+      "options": [
+        "Flax is renewable; iron ore is finite",
+        "Both are renewable because both occur naturally",
+        "Both are finite: both are harvested"
+      ],
+      "misconceptions": {
+        "Both are renewable because both occur naturally": "Ore does not replenish on mining timescales.",
+        "Both are finite: both are harvested": "Flax can be replenished by growing another crop."
+      },
+      "explanation": "Flax can be grown again; the iron ore stock cannot be replenished on human timescales. Recycling iron reduces demand for new ore without renewing the deposit.",
+      "hint": "Compare replenishment with use."
+    },
+    {
+      "id": "lca-v1-vA-service",
+      "title": "New delayed service comparison",
+      "purpose": "New delayed service comparison",
+      "prompt": "What is reusable energy per completed service for the new source?",
+      "answer": "42",
+      "unit": "kJ/service",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "(540+15×6)/15=42 kJ/service, greater than the given 36. Reuse is conditional.",
+      "hint": "Apply the new data.",
+      "lcaGiven": {
+        "title": "Delayed new service data",
+        "note": "Original matching capacity. Fixed 540 kJ once, washing 6 kJ every completed service, single-use 36 kJ per service.15 completed services, no breakage.",
+        "service": {
+          "fixed": 540,
+          "wash": 6,
+          "single": 36,
+          "uses": 15
+        }
+      }
+    },
+    {
+      "id": "lca-v1-vA-boundary",
+      "title": "A partial advertising claim",
+      "purpose": "A partial advertising claim",
+      "prompt": "Which claim follows from a manufacturing-only comparison?",
+      "answer": "A limited manufacturing result, with its boundary stated",
+      "options": [
+        "The smallest total environmental impact is proved",
+        "No manufacturing data can ever be useful",
+        "A limited manufacturing result, with its boundary stated"
+      ],
+      "misconceptions": {
+        "The smallest total environmental impact is proved": "Other stages and impacts are omitted.",
+        "No manufacturing data can ever be useful": "Limited evidence can be useful when correctly described."
+      },
+      "explanation": "Disclose the limited scope; compare a full matched life for a whole-life claim.",
+      "hint": "Keep the claim within the evidence.",
+      "exposureAliases": [
+        "lca-v1-r-full",
+        "lca-v1-g-boundary",
+        "lca-v1-r-reversed",
+        "lca-v1-p-boundary",
+        "lca-v1-p-advert",
+        "lca-v1-vB-full",
+        "life-cycle-and-recycling-4"
+      ]
+    },
+    {
+      "id": "lca-v1-vA-routes",
+      "title": "Retrieve reduction and reuse",
+      "purpose": "Retrieve reduction and reuse",
+      "prompt": "Explain the distinction between reducing demand, reusing a product and recycling material, with one non-zero processing impact.",
+      "answer": "Reduce unnecessary new-product demand; reuse an existing product for more equivalent service; recycle suitable material into products. Reuse can need washing/return, and recycling needs collection, separation and processing energy. These can reduce finite extraction without eliminating every impact.",
+      "rubric": [
+        "Three distinct routes.",
+        "Finite-resource benefit.",
+        "A specific cleaning/transport/processing impact."
+      ],
+      "referenceResponse": "Reduce unnecessary new-product demand; reuse an existing product for more equivalent service; recycle suitable material into products. Reuse can need washing/return, and recycling needs collection, separation and processing energy. These can reduce finite extraction without eliminating every impact.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "Track product service versus material processing.",
+      "exposureAliases": [
+        "lca-v1-p-reduce",
+        "lca-v1-cA-resources",
+        "life-cycle-and-recycling-2"
+      ]
+    },
+    {
+      "id": "lca-v1-vB-newInput",
+      "title": "New delayed recovery demand",
+      "purpose": "New delayed recovery demand",
+      "prompt": "How much new suitable input is required for the supplied delayed product?",
+      "answer": "40",
+      "unit": "kg",
+      "inputMode": "decimal",
+      "tolerance": 0.000001,
+      "explanation": "150×.8=120 kg usable recovery;160−120=40 kg new input. Other collected streams contain 60 kg.",
+      "hint": "Recover from the sorted stream, then meet demand.",
+      "lcaGiven": {
+        "title": "Delayed new material data",
+        "note": "Collected 180 kg; suitable sorted 150 kg;80% usable recovery; new product demand 160 kg. All other streams retained.",
+        "recycling": {
+          "collected": 180,
+          "sorted": 150,
+          "yield": 80,
+          "demand": 160
+        }
+      }
+    },
+    {
+      "id": "lca-v1-vB-judgement",
+      "title": "Retrieve value judgements",
+      "purpose": "Retrieve value judgements",
+      "prompt": "Why is an environmental lifecycle ranking not always purely objective?",
+      "answer": "Pollutant effects and impact importance require judgements",
+      "options": [
+        "Every measured quantity must be false",
+        "MJ and litres are the same quantity",
+        "Pollutant effects and impact importance require judgements"
+      ],
+      "misconceptions": {
+        "Every measured quantity must be false": "Physical quantities can still be measured.",
+        "MJ and litres are the same quantity": "They cannot be added as a physical total."
+      },
+      "explanation": "Quantified inventory informs decisions; pollutant effects, priorities and missing context can still require value judgements.",
+      "hint": "Separate measured quantities from impact allocation.",
+      "exposureAliases": [
+        "lca-v1-r-bags",
+        "lca-v1-g-tradeoff",
+        "lca-v1-r-waterPriority",
+        "lca-v1-p-bagDecision",
+        "lca-v1-p-pollutants",
+        "lca-v1-cB-value",
+        "life-cycle-and-recycling-1"
+      ]
+    },
+    {
+      "id": "lca-v1-vB-full",
+      "title": "Retrieve a complete comparison",
+      "purpose": "Retrieve a complete comparison",
+      "prompt": "Describe what a fair paper/plastic bag assessment should compare before making an overall recommendation.",
+      "answer": "Use equal shopping service/capacity and consistent extraction/processing, manufacture/packaging, use/operation and end-of-life stages, including transport throughout. Compare supplied energy, water, resources and waste separately, consider actual reuse/collection/disposal and pollutant effects, and state priorities/data limitations. Renewable feedstock is not impact-free and recyclable is not automatically recycled; make a supported conditional judgement.",
+      "rubric": [
+        "Equivalent service and all four stages.",
+        "Relevant transport consistently included.",
+        "Separate physical quantities and actual disposal/reuse conditions.",
+        "Impact judgement and evidence limitations."
+      ],
+      "referenceResponse": "Use equal shopping service/capacity and consistent extraction/processing, manufacture/packaging, use/operation and end-of-life stages, including transport throughout. Compare supplied energy, water, resources and waste separately, consider actual reuse/collection/disposal and pollutant effects, and state priorities/data limitations. Renewable feedstock is not impact-free and recyclable is not automatically recycled; make a supported conditional judgement.",
+      "explanation": "Use the criteria to review your reasons and improve the saved response. This is manual review, not an automatic exam mark.",
+      "hint": "Build the boundary before the verdict.",
+      "exposureAliases": [
+        "lca-v1-r-full",
+        "lca-v1-g-boundary",
+        "lca-v1-r-reversed",
+        "lca-v1-p-boundary",
+        "lca-v1-p-advert",
+        "lca-v1-vA-boundary",
+        "life-cycle-and-recycling-4"
+      ]
+    },
+    {
+      "id": "lca-v1-resource-vC-needs",
+      "title": "Timber supply",
+      "purpose": "Timber supply",
+      "conciseHeading": true,
+      "prompt": "Timber need=30 t/year; regrowth=35 t/year. Why harvest 30 t/year? Give two sustainability reasons.",
+      "answer": "It meets the community's current timber need and does not harvest faster than regrowth, preserving supply for future generations.",
+      "referenceResponse": "It meets the community's current timber need and does not harvest faster than regrowth, preserving supply for future generations.",
+      "rubric": [
+        "Connect the 30-tonne harvest to the present 30-tonne need.",
+        "Connect harvest below regrowth to maintaining future supply; this is not a complete LCA."
+      ],
+      "hint": "Compare need, harvest and regrowth.",
+      "explanation": "It meets the community's current timber need and does not harvest faster than regrowth, preserving supply for future generations. Compare your short response with the criteria. Your original words remain saved; this is manual review, not an automatic examiner mark."
+    },
+    {
+      "id": "lca-v1-resource-vC-products",
+      "title": "Name a synthetic fibre",
+      "purpose": "Name a synthetic fibre",
+      "conciseHeading": true,
+      "prompt": "Farmed silkworms supply silk. Name one synthetic fibre that can supplement silk.",
+      "answer": "Polyester (also accept nylon or acrylic)",
+      "referenceResponse": "Polyester (also accept nylon or acrylic)",
+      "rubric": [
+        "Name a suitable synthetic fibre, for example polyester, nylon or acrylic; silk and cotton are not synthetic."
+      ],
+      "hint": "Recall a manufactured fibre.",
+      "explanation": "Polyester (also accept nylon or acrylic) Compare your short response with the criteria. Your original words remain saved; this is manual review, not an automatic examiner mark.",
+      "exposureAliases": [
+        "lca-v1-resource-r-products",
+        "lca-v1-resource-g-products",
+        "lca-v1-resource-p-products",
+        "lca-v1-resource-cC-products"
+      ]
+    },
+    {
+      "id": "lca-v1-resource-vC-renewable",
+      "title": "Renewable but overused",
+      "purpose": "Renewable but overused",
+      "conciseHeading": true,
+      "prompt": "Grass regrows yearly but is overharvested; oil forms over millions of years. Which statement follows?",
+      "answer": "Grass: renewable but overharvested. Oil: finite.",
+      "options": [
+        "Grass: renewable but overharvested. Oil: finite.",
+        "Both are finite: stocks can fall",
+        "Both are renewable: both form naturally"
+      ],
+      "misconceptions": {
+        "Both are finite: stocks can fall": "Grass can renew even though overharvesting depletes it.",
+        "Both are renewable: both form naturally": "Oil does not replenish on human timescales."
+      },
+      "explanation": "Grass is renewable; the rate of harvesting is unsustainable. Geological oil formation does not replenish current use.",
+      "hint": "Distinguish replenishment from harvesting rate.",
+      "exposureAliases": [
+        "lca-v1-resource-g-renewable"
+      ]
+    },
+    {
+      "id": "lca-v1-resource-vD-needs",
+      "title": "Repair wiring",
+      "purpose": "Repair wiring",
+      "conciseHeading": true,
+      "prompt": "Repairing copper wiring maintains electricity and reduces new mining. Give two sustainability reasons.",
+      "answer": "It meets the current need for electricity and conserves finite copper ore for future generations by reducing new extraction.",
+      "referenceResponse": "It meets the current need for electricity and conserves finite copper ore for future generations by reducing new extraction.",
+      "rubric": [
+        "Connect repair to maintaining the current electricity-supply need.",
+        "Connect lower new-copper demand to conserving finite ore for future generations."
+      ],
+      "hint": "Identify today's need and the resource saved for later.",
+      "explanation": "It meets the current need for electricity and conserves finite copper ore for future generations by reducing new extraction. Compare your short response with the criteria. Your original words remain saved; this is manual review, not an automatic examiner mark."
+    },
+    {
+      "id": "lca-v1-resource-vD-products",
+      "title": "Supplementing wild food",
+      "purpose": "Supplementing wild food",
+      "conciseHeading": true,
+      "prompt": "Wild fruit supplies food. Name one agricultural activity that supplements this supply.",
+      "answer": "Growing fruit in orchards",
+      "referenceResponse": "Growing fruit in orchards",
+      "rubric": [
+        "Accept growing fruit in orchards or cultivating a suitable food crop to supplement wild food; merely collecting wild fruit is not agriculture."
+      ],
+      "hint": "Think of deliberately cultivating food.",
+      "explanation": "Growing fruit in orchards Compare your short response with the criteria. Your original words remain saved; this is manual review, not an automatic examiner mark."
+    },
+    {
+      "id": "lca-v1-resource-vD-renewable",
+      "title": "A crop and a mineral stock",
+      "purpose": "A crop and a mineral stock",
+      "conciseHeading": true,
+      "prompt": "Rapeseed regrows yearly; coal forms over millions of years. Classify them.",
+      "answer": "Rapeseed is renewable; coal is finite",
+      "options": [
+        "Both are finite: both fuels are used up",
+        "Both are renewable: both came from plants",
+        "Rapeseed is renewable; coal is finite"
+      ],
+      "misconceptions": {
+        "Both are finite: both fuels are used up": "The rapeseed crop can be regrown.",
+        "Both are renewable: both came from plants": "Coal formation does not replace current extraction on human timescales."
+      },
+      "explanation": "Regrowing rapeseed replenishes its supply; coal is a finite stock on human timescales. Renewable fuel is not automatically impact-free or sustainably produced.",
+      "hint": "Use the supplied replenishment times."
+    }
+  ],
+  "stageIds": {
+    "warmup": [
+      "lca-v1-w-divide",
+      "lca-v1-w-finite",
+      "lca-v1-w-percent",
+      "lca-v1-w-units"
+    ],
+    "refresher": [
+      "lca-v1-r-shopping",
+      "lca-v1-r-bottle",
+      "lca-v1-r-building",
+      "lca-v1-r-full",
+      "lca-v1-r-reversed",
+      "lca-v1-r-totals",
+      "lca-v1-r-signed",
+      "lca-v1-r-short",
+      "lca-v1-r-tie",
+      "lca-v1-r-long",
+      "lca-v1-r-bags",
+      "lca-v1-r-waterPriority",
+      "lca-v1-r-glass",
+      "lca-v1-r-polymer",
+      "lca-v1-r-steel",
+      "lca-v1-r-scale",
+      "lca-v1-resource-r-needs",
+      "lca-v1-resource-r-products",
+      "lca-v1-resource-r-renewable"
+    ],
+    "guided": [
+      "lca-v1-g-stages",
+      "lca-v1-g-boundary",
+      "lca-v1-g-inventory",
+      "lca-v1-g-reuse",
+      "lca-v1-g-tradeoff",
+      "lca-v1-g-recycle",
+      "lca-v1-resource-g-needs",
+      "lca-v1-resource-g-products",
+      "lca-v1-resource-g-renewable"
+    ],
+    "practice": [
+      "lca-v1-p-stage",
+      "lca-v1-p-transport",
+      "lca-v1-p-boundary",
+      "lca-v1-p-total",
+      "lca-v1-p-graph",
+      "lca-v1-p-percent",
+      "lca-v1-p-reuse",
+      "lca-v1-p-crossover",
+      "lca-v1-p-washRule",
+      "lca-v1-p-evaluateReuse",
+      "lca-v1-p-tradeNumbers",
+      "lca-v1-p-pollutants",
+      "lca-v1-p-advert",
+      "lca-v1-p-renewable",
+      "lca-v1-p-reduce",
+      "lca-v1-p-reuseRecycle",
+      "lca-v1-p-glass",
+      "lca-v1-p-yield",
+      "lca-v1-p-separation",
+      "lca-v1-p-steel",
+      "lca-v1-p-materials",
+      "lca-v1-p-bagDecision",
+      "lca-v1-p-energyMass",
+      "lca-v1-resource-p-needs",
+      "lca-v1-resource-p-products",
+      "lca-v1-resource-p-renewable",
+      "lca-v1-resource-p-lca"
+    ]
+  },
+  "checkForms": [
+    [
+      "lca-v1-cA-end",
+      "lca-v1-cA-energy",
+      "lca-v1-cA-reuse",
+      "lca-v1-cA-judgement",
+      "lca-v1-cA-resources",
+      "lca-v1-cA-percent"
+    ],
+    [
+      "lca-v1-cB-transport",
+      "lca-v1-cB-energy",
+      "lca-v1-cB-recovery",
+      "lca-v1-cB-value",
+      "lca-v1-cB-collection",
+      "lca-v1-cB-percent"
+    ],
+    [
+      "lca-v1-resource-cC-needs",
+      "lca-v1-resource-cC-products",
+      "lca-v1-resource-cC-renewable"
+    ],
+    [
+      "lca-v1-resource-cD-needs",
+      "lca-v1-resource-cD-products",
+      "lca-v1-resource-cD-renewable"
+    ]
+  ],
+  "reviewForms": [
+    [
+      "lca-v1-vA-service",
+      "lca-v1-vA-boundary",
+      "lca-v1-vA-routes"
+    ],
+    [
+      "lca-v1-vB-newInput",
+      "lca-v1-vB-judgement",
+      "lca-v1-vB-full"
+    ],
+    [
+      "lca-v1-resource-vC-needs",
+      "lca-v1-resource-vC-products",
+      "lca-v1-resource-vC-renewable"
+    ],
+    [
+      "lca-v1-resource-vD-needs",
+      "lca-v1-resource-vD-products",
+      "lca-v1-resource-vD-renewable"
+    ]
+  ]
+}

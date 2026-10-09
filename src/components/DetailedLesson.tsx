@@ -105,6 +105,7 @@ export function DetailedLesson({
       !ready ||
       !(
         lesson.slug === "ph-scale-and-indicators" ||
+        lesson.slug === "life-cycle-and-recycling" ||
         (lesson.slug === "aqueous-electrolysis-products" && q.rubric)
       )
     )
@@ -264,6 +265,7 @@ export function DetailedLesson({
     "aqueous-electrolysis-products",
     "natural-polymers",
     "ph-scale-and-indicators",
+    "life-cycle-and-recycling",
   ].includes(lesson.slug);
   const compactReview =
     (compactIonReview ||
@@ -354,6 +356,30 @@ export function DetailedLesson({
       </p>
     </ReviewContainer>
   );
+  const practicePicker = stage === "practice" && journey.practiceGroups && (
+    <div className="practice-task-picker">
+      <label htmlFor="choose-practice-task">Choose a practice task</label>
+      <select
+        id="choose-practice-task"
+        value={index}
+        onChange={(e) => choose(stage, Number(e.target.value))}
+      >
+        {journey.practiceGroups.map((group) => (
+          <optgroup key={group.label} label={group.label}>
+            {group.taskIds.map((id) => {
+              const i = list.findIndex((t) => t.id === id),
+                t = list[i];
+              return t ? (
+                <option key={id} value={i}>
+                  {i + 1}. {t.title ?? t.prompt}
+                </option>
+              ) : null;
+            })}
+          </optgroup>
+        ))}
+      </select>
+    </div>
+  );
   return (
     <article className="sample-lesson" data-lesson={lesson.slug}>
       <div className="lesson-breadcrumb">
@@ -416,6 +442,7 @@ export function DetailedLesson({
           "aqueous-electrolysis-products",
           "natural-polymers",
           "ph-scale-and-indicators",
+          "life-cycle-and-recycling",
         ].includes(lesson.slug) ||
           (section === "explore" && stage === "guided")) && (
           <button className="text-button" onClick={() => choose("warmup")}>
@@ -492,6 +519,7 @@ export function DetailedLesson({
               navigationAfterResponse={
                 mixedNatural ||
                 lesson.slug === "ph-scale-and-indicators" ||
+                lesson.slug === "life-cycle-and-recycling" ||
                 lesson.slug === "aqueous-electrolysis-products" ||
                 lesson.slug === "ion-tests" ||
                 compactEquationForm ||
@@ -605,30 +633,7 @@ export function DetailedLesson({
               {index + 1} of {list.length}
             </span>
             {stage === "practice" && journey.practiceGroups ? (
-              <div className="practice-task-picker">
-                <label htmlFor="choose-practice-task">
-                  Choose a practice task
-                </label>
-                <select
-                  id="choose-practice-task"
-                  value={index}
-                  onChange={(e) => choose(stage, Number(e.target.value))}
-                >
-                  {journey.practiceGroups.map((group) => (
-                    <optgroup key={group.label} label={group.label}>
-                      {group.taskIds.map((id) => {
-                        const i = list.findIndex((t) => t.id === id),
-                          t = list[i];
-                        return t ? (
-                          <option key={id} value={i}>
-                            {i + 1}. {t.title ?? t.prompt}
-                          </option>
-                        ) : null;
-                      })}
-                    </optgroup>
-                  ))}
-                </select>
-              </div>
+              lesson.slug !== "life-cycle-and-recycling" && practicePicker
             ) : (
               <div
                 ref={taskNavigation}
@@ -901,6 +906,7 @@ export function DetailedLesson({
               </div>
             </div>
           </div>
+          {lesson.slug === "life-cycle-and-recycling" && practicePicker}
           {(!(stage === "practice" && journey.practiceGroups) ||
             lesson.slug === "balancing-equations" ||
             lesson.slug === "transition-metals" ||

@@ -1,0 +1,111 @@
+{
+  "build": "qHeOj6FLmfNRUkN9YgQB9",
+  "captures": [
+    {
+      "file": "320-estimate.png",
+      "width": 320,
+      "id": "lca-v1-magnitude-ca-scale",
+      "firstResponseBottom": 662.171875,
+      "sha256": "9111c4e04af3839feec8505593aa72cb9a5c767962514450d7525ebfd9b06cf5"
+    },
+    {
+      "file": "320-judgement.png",
+      "width": 320,
+      "id": "lca-v1-magnitude-ca-significance",
+      "firstResponseBottom": 639.921875,
+      "sha256": "8a8684db9086304226fdafecf398eb80b843aab8bea3e9a8f440b64abce7010c"
+    },
+    {
+      "file": "320-retained-wrong-judgement.png",
+      "width": 320,
+      "id": "lca-v1-magnitude-ca-significance",
+      "sha256": "08c0de3adbe3100ff80bed13894e0f451e3aef4db03f837dea921fd0626114e2"
+    },
+    {
+      "file": "320-separate-reference.png",
+      "width": 320,
+      "id": "lca-v1-magnitude-ca-significance",
+      "sha256": "fe1a6bb712461a51fb5a7bda0a285a6733baae9dab15082e8cbb9e3b3744a8f9"
+    },
+    {
+      "file": "320-delayed-estimate.png",
+      "width": 320,
+      "id": "lca-v1-magnitude-rb-scale",
+      "firstResponseBottom": 662.171875,
+      "sha256": "9b5e54bcf7ab31899ff38c4a28f72ced06256e3cc7e66dee4528af0039d4ed88"
+    },
+    {
+      "file": "320-guided-estimate.png",
+      "width": 320,
+      "id": "lca-v1-magnitude-g-scale",
+      "firstResponseBottom": 660.671875,
+      "sha256": "d091c27f8cb5d0a4d7960aeb2bbca108439414e1e8da8a7164f74b74c945afd4"
+    },
+    {
+      "file": "320-retained-recycling.png",
+      "width": 320,
+      "id": "lca-v1-g-recycle",
+      "firstResponseBottom": 660.203125,
+      "sha256": "2a5e92f7ab8f0f8f83ac8a871d64774ea2d64adfa4427a738c1d7727b76a7135"
+    },
+    {
+      "file": "1280-estimate.png",
+      "width": 1280,
+      "id": "lca-v1-magnitude-ca-scale",
+      "firstResponseBottom": 562.15625,
+      "sha256": "0868c4a663b477ce10b1a8c6d883139e651a88f0dc2534e7c57e94afe224d689"
+    },
+    {
+      "file": "1280-judgement.png",
+      "width": 1280,
+      "id": "lca-v1-magnitude-ca-significance",
+      "firstResponseBottom": 564.84375,
+      "sha256": "924601e3c1135bc0283ba1c0ca1e648d9fd1124c4650ed0e88bc7a549346eaf5"
+    },
+    {
+      "file": "1280-retained-wrong-judgement.png",
+      "width": 1280,
+      "id": "lca-v1-magnitude-ca-significance",
+      "sha256": "ccb826e113eb149a25bb72283273359294635a58aec80a0eaa2779b900124364"
+    },
+    {
+      "file": "1280-separate-reference.png",
+      "width": 1280,
+      "id": "lca-v1-magnitude-ca-significance",
+      "sha256": "9d5d003ad9187cd1da0786eb1d8fa8b72f8e5ddc8c5170e2c5dcc5e0b0b7df0b"
+    },
+    {
+      "file": "1280-delayed-estimate.png",
+      "width": 1280,
+      "id": "lca-v1-magnitude-rb-scale",
+      "firstResponseBottom": 562.15625,
+      "sha256": "a6a2b4461ae0fd65531f99fd73f940045445a9eb301ecd17d8cb06d700a36e66"
+    },
+    {
+      "file": "1280-guided-estimate.png",
+      "width": 1280,
+      "id": "lca-v1-magnitude-g-scale",
+      "firstResponseBottom": 607,
+      "sha256": "182925e197392c95903f4444ade4504aeb9ca9ab948a80e5714b4393c59d118c"
+    },
+    {
+      "file": "1280-retained-recycling.png",
+      "width": 1280,
+      "id": "lca-v1-g-recycle",
+      "firstResponseBottom": 603.171875,
+      "sha256": "5a1bb8ade726236609df13fe6ff1c534a5a72a257c45feb83be7046899b67263"
+    },
+    {
+      "file": "320-practice-judgement.png",
+      "width": 320,
+      "firstResponseBottom": 642.0625,
+      "sha256": "c2bec0476b321e9a97bbc1f0bd49f37474a1c693456dd24b19a7d4f811dc432a"
+    },
+    {
+      "file": "1280-practice-judgement.png",
+      "width": 1280,
+      "firstResponseBottom": 621.328125,
+      "sha256": "958a1f205c4bee924af90f4c10601191b0f6fd70a3c5fe8eb0dab6c482fe2633"
+    }
+  ]
+}

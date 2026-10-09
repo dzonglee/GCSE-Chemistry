@@ -349,6 +349,11 @@ export function mark(
       !values ||
       typeof values !== "object" ||
       Array.isArray(values) ||
+      Object.entries(values).some(
+        ([key, value]) =>
+          !q.parts!.some((part) => part.id === key) ||
+          typeof value !== "string",
+      ) ||
       q.parts.some(
         (part) =>
           typeof values[part.id] !== "string" ||

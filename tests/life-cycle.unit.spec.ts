@@ -24,18 +24,18 @@ import {
 } from "../src/lib/workbench";
 import { lessons } from "../src/content/curriculum";
 import { mark } from "../src/lib/marking";
-test("one89-task shared lifecycle/resource lesson has six deliberate activities and15 sources with faded independent support", () => {
+test("one102-task shared lifecycle/resource lesson has six deliberate activities and15 sources with faded independent support", () => {
   const l = lessons.find((l) => l.slug === "life-cycle-and-recycling")!;
   expect(l.journey).toBe(j);
   expect(l.tier).toBe("foundation");
   expect(l.course).toBe("combined");
-  expect(all).toHaveLength(89);
-  expect(new Set(all.map((q) => q.id)).size).toBe(89);
-  expect(j.refresher).toHaveLength(19);
-  expect(j.guided).toHaveLength(9);
-  expect(j.practice).toHaveLength(27);
-  expect(j.checkForms.map((f) => f.length)).toEqual([6, 6, 3, 3]);
-  expect(j.reviewForms.map((f) => f.length)).toEqual([3, 3, 3, 3]);
+  expect(all).toHaveLength(102);
+  expect(new Set(all.map((q) => q.id)).size).toBe(102);
+  expect(j.refresher).toHaveLength(21);
+  expect(j.guided).toHaveLength(10);
+  expect(j.practice).toHaveLength(29);
+  expect(j.checkForms.map((f) => f.length)).toEqual([6, 6, 3, 3, 2, 2]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([3, 3, 3, 3, 2, 2]);
   expect(Object.keys(R)).toHaveLength(15);
   expect(j.practiceGroups!.flatMap((g) => g.taskIds)).toEqual(
     j.practice.map((q) => q.id),
@@ -228,7 +228,9 @@ test("26 scalar answers and eight independent24-field constructions match separa
     "cB-energy": [300, 340, -40],
     "cB-recovery": [180, 70, 40],
   };
-  const cs = all.filter((q) => q.parts);
+  const cs = all.filter(
+    (q) => q.parts && !q.id.startsWith("lca-v1-magnitude-"),
+  );
   expect(cs).toHaveLength(8);
   expect(cs.flatMap((q) => q.parts!)).toHaveLength(24);
   for (const q of cs) {
@@ -270,7 +272,7 @@ test("paper/plastic trade-offs and extended and short resource responses preserv
     judgement: "conditional",
   });
   const written = all.filter((q) => q.rubric);
-  expect(written).toHaveLength(24);
+  expect(written).toHaveLength(30);
   for (const q of written) {
     expect(q.referenceResponse).toBe(q.answer);
     expect(mark(q, q.answer).selfReview).toBe(true);
@@ -314,7 +316,9 @@ test("six old facts and repeated theory are reciprocally exposed but fresh reser
     }
   }
   for (const q of [...j.checkForms.flat(), ...j.reviewForms.flat()].filter(
-    (q) => q.parts || (!q.options && !q.rubric),
+    (q) =>
+      !q.id.startsWith("lca-v1-magnitude-") &&
+      (q.parts || (!q.options && !q.rubric)),
   ))
     expect(q.exposureAliases ?? []).toEqual([]);
   expect(

@@ -1,6 +1,13 @@
 import type { LearningTask, LessonJourney } from "../types";
 import { lcaRecords as R, type LcaGiven } from "../../lib/life-cycle";
 import {
+  magnitudeRefresher,
+  magnitudeGuided,
+  magnitudePractice,
+  magnitudeCheckForms,
+  magnitudeReviewForms,
+} from "./resource-magnitude";
+import {
   resourceRefresher,
   resourceGuided,
   resourcePractice,
@@ -1110,6 +1117,12 @@ practice.push(...resourcePractice);
 checkForms.push(...resourceCheckForms);
 reviewForms.push(...resourceReviewForms);
 for (const q of resourcePractice) lcaRecoveryRoutes[q.id] = q.followUp!;
+refresher.push(...magnitudeRefresher);
+guided.push(...magnitudeGuided);
+practice.push(...magnitudePractice);
+checkForms.push(...magnitudeCheckForms);
+reviewForms.push(...magnitudeReviewForms);
+for (const q of magnitudePractice) lcaRecoveryRoutes[q.id] = q.followUp!;
 export const allLcaTasks = [
   ...warmup,
   ...refresher,
@@ -1194,6 +1207,7 @@ export const lcaJourney: LessonJourney = {
     "Distinguish measurable quantities from pollutant-effect/value judgements and evaluate paper/plastic shopping bags with declared priorities.",
     "Evaluate reduction, reuse and recycling of limited materials; account for sorting, usable recovery, other streams and new-input demand.",
     "Explain how resource use meets current needs without compromising future generations; give agricultural/synthetic supplements and classify finite/renewable resources using replenishment information.",
+    "Construct order-of-magnitude estimates in like units and use them to evaluate a saving's significance and the limits of a resource claim.",
   ],
   warmup,
   refresher,
@@ -1225,6 +1239,10 @@ export const lcaJourney: LessonJourney = {
     {
       label: "Resource use and sustainable development",
       taskIds: resourcePractice.map((q) => q.id),
+    },
+    {
+      label: "Orders of magnitude and significance",
+      taskIds: magnitudePractice.map((q) => q.id),
     },
   ],
 };
