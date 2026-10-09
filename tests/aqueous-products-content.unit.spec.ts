@@ -1,18 +1,18 @@
 import { test, expect } from "@playwright/test";
 import { aqueousProductsJourney as j } from "../src/content/journeys/aqueous-products";
 import { tasks } from "../src/content/journeys/helpers";
-test("51 authored tasks separate assisted practice, changed cold forms, delayed retrieval and six self-reviewed responses", () => {
+test("57 authored tasks separate assisted practice, changed cold forms, delayed retrieval and twelve self-reviewed responses", () => {
   const all = tasks(j);
-  expect(all).toHaveLength(51);
-  expect(new Set(all.map((q) => q.id)).size).toBe(51);
-  expect(j.practice).toHaveLength(21);
+  expect(all).toHaveLength(57);
+  expect(new Set(all.map((q) => q.id)).size).toBe(57);
+  expect(j.practice).toHaveLength(22);
   expect(j.refresher).toHaveLength(6);
-  expect(j.guided).toHaveLength(6);
+  expect(j.guided).toHaveLength(7);
   expect(j.guided[0].openingHint).toBe(true);
   expect(j.guided.slice(1).every((q) => !q.openingHint)).toBe(true);
-  expect(all.filter((q) => q.rubric)).toHaveLength(6);
-  for (const form of j.checkForms) expect(form).toHaveLength(5);
-  for (const form of j.reviewForms) expect(form).toHaveLength(3);
+  expect(all.filter((q) => q.rubric)).toHaveLength(12);
+  expect(j.checkForms.map((f) => f.length)).toEqual([5, 5, 1, 1]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([3, 3, 1, 1]);
   for (const q of j.practice)
     expect(
       j.refresher.some((r) => r.id === q.followUp),

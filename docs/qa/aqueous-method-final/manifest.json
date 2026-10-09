@@ -1,0 +1,42 @@
+[
+  {
+    "file": "320-guided-hypothesis.png",
+    "sha256": "cbe2e2b7cedbce5e97657edfc83788134cc7a10861991d9b2337844a68a37a6b"
+  },
+  {
+    "file": "320-practice-wrong.png",
+    "sha256": "25f604cc0175d2db7a6ab5c79bd30ff3a4f8fb626c88c6690dea6674da563617"
+  },
+  {
+    "file": "320-check-opening.png",
+    "sha256": "1b0627bcb046ab3453d74ffe51e85e5f4e252ac690f9103765da0d21de232db7"
+  },
+  {
+    "file": "320-review-opening.png",
+    "sha256": "eec4845d847bc2f911ba2bc6ed9a203437a53f1a7ec1762d35ea79fd76e9a20a"
+  },
+  {
+    "file": "320-reading-opening.png",
+    "sha256": "973065d3bf2ce4a8f129261ec9542b56accee01f5106b5b994b684a64ffdb874"
+  },
+  {
+    "file": "1280-guided-hypothesis.png",
+    "sha256": "c29c3d9c854a95b6024fd303f8ddd20f6f802463b3936557d774b0827ec95123"
+  },
+  {
+    "file": "1280-practice-wrong.png",
+    "sha256": "585ef6908b9fab65c7baef9bc603bbbd2617ad9a254763f6885dfeb6e28cc0e5"
+  },
+  {
+    "file": "1280-check-opening.png",
+    "sha256": "6c43f60861ae025aa18345b19c1834e4dfea337baf61a7f437585f9067a4c540"
+  },
+  {
+    "file": "1280-review-opening.png",
+    "sha256": "20b82e6f61f44d3cfc15aed7b325b66892af4efb6435ef563b6756c5e16a460c"
+  },
+  {
+    "file": "1280-reading-opening.png",
+    "sha256": "0d50c1a02438d8e1fca44f276b7227b5377dec55ddf30f319520c9c35196ffc8"
+  }
+]

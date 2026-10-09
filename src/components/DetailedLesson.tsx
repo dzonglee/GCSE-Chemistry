@@ -75,7 +75,8 @@ export function DetailedLesson({
   const [message, setMessage] = useState("");
   const heading = useRef<HTMLHeadingElement>(null),
     lastTask = useRef(""),
-    stages = useRef<HTMLElement>(null);
+    stages = useRef<HTMLElement>(null),
+    taskNavigation = useRef<HTMLDivElement>(null);
   const taskKey = `${section}:${q.id}`;
   useEffect(() => {
     if (ready && (section === "explore" || section === "practice"))
@@ -95,6 +96,32 @@ export function DetailedLesson({
     if (tab.left < frame.left) nav.scrollLeft += tab.left - frame.left;
     else if (tab.right > frame.right) nav.scrollLeft += tab.right - frame.right;
   }, [ready, section, stage]);
+  useEffect(() => {
+    if (!ready || lesson.slug !== "aqueous-electrolysis-products" || !q.rubric)
+      return;
+    const nav = taskNavigation.current;
+    if (!nav) return;
+    let cancelled = false;
+    const reveal = () => {
+      if (cancelled) return;
+      const active = nav.querySelector<HTMLElement>('[aria-current="step"]');
+      if (!active) return;
+      const frame = nav.getBoundingClientRect(),
+        tab = active.getBoundingClientRect();
+      if (tab.left < frame.left)
+        nav.scrollLeft += Math.floor(tab.left - frame.left);
+      else if (tab.right > frame.right)
+        nav.scrollLeft += Math.ceil(tab.right - frame.right);
+    };
+    const observer = new ResizeObserver(reveal);
+    observer.observe(nav);
+    void document.fonts.ready.then(reveal);
+    reveal();
+    return () => {
+      cancelled = true;
+      observer.disconnect();
+    };
+  }, [ready, lesson.slug, q.id, q.rubric, section, stage]);
   const choose = (next: LearningStage | "check" | "review", position = 0) => {
     setMessage("");
     setWork(lesson.slug, (w) =>
@@ -222,7 +249,10 @@ export function DetailedLesson({
     lesson.slug === "life-cycle-and-recycling" &&
     work.run?.kind === "review" &&
     work.run.ids.every((id) => id.startsWith("lca-v1-resource-"));
-  const compactIonReview = lesson.slug === "ion-tests";
+  const compactIonReview = [
+    "ion-tests",
+    "aqueous-electrolysis-products",
+  ].includes(lesson.slug);
   const compactReview =
     (compactIonReview ||
       lesson.slug === "inside-an-atom" ||
@@ -371,6 +401,7 @@ export function DetailedLesson({
           "acids-and-neutralisation",
           "electrolysis",
           "ion-tests",
+          "aqueous-electrolysis-products",
         ].includes(lesson.slug) ||
           (section === "explore" && stage === "guided")) && (
           <button className="text-button" onClick={() => choose("warmup")}>
@@ -445,6 +476,7 @@ export function DetailedLesson({
             <AssessmentSession
               id={lesson.slug}
               navigationAfterResponse={
+                lesson.slug === "aqueous-electrolysis-products" ||
                 lesson.slug === "ion-tests" ||
                 compactEquationForm ||
                 lesson.slug === "inside-an-atom" ||
@@ -578,6 +610,7 @@ export function DetailedLesson({
               </div>
             ) : (
               <div
+                ref={taskNavigation}
                 className="question-navigation"
                 aria-label="Learning task navigation"
               >

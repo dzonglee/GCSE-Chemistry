@@ -7414,3 +7414,194 @@ body:has(.sample-lesson) .topic-number {
   .question-panel:has(.written-answer) {
   padding-top: 12px;
 }
+
+/* Aqueous practical responses use the same readable response-first spacing. */
+.sample-lesson[data-lesson="aqueous-electrolysis-products"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="aqueous-electrolysis-products"]
+  .assessment-session
+  > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="aqueous-electrolysis-products"]
+  .assessment-session
+  .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="aqueous-electrolysis-products"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="aqueous-electrolysis-products"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="aqueous-electrolysis-products"]
+  .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+.sample-lesson[data-lesson="aqueous-electrolysis-products"]
+  .written-answer
+  textarea {
+  height: 104px;
+  min-height: 104px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .sample-task-panel
+    > h2,
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .written-answer
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+@media (min-width: 601px) {
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-topline {
+    display: block;
+  }
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-topline
+    .question-navigation {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    margin-top: 8px;
+    padding-bottom: 4px;
+    max-width: 100%;
+  }
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .sample-task-panel:has(.written-answer)
+    .question-navigation
+    button {
+    flex: 0 0 auto;
+  }
+}
+.sample-lesson[data-lesson="aqueous-electrolysis-products"]
+  .sample-task-panel:has(.written-answer)
+  .sample-task-prompt {
+  margin-bottom: 16px;
+}
+.sample-lesson[data-lesson="aqueous-electrolysis-products"]
+  .sample-task-answer
+  .question-panel:has(.written-answer) {
+  padding-top: 12px;
+}
+
+.sample-lesson[data-lesson="aqueous-electrolysis-products"]
+  .assessment-session
+  .question-panel
+  h2 {
+  font-size: 20px;
+  line-height: 1.35;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]:has(
+      .assessment-session > .question-panel
+    )
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+}
+
+.sample-lesson[data-lesson="aqueous-electrolysis-products"]
+  .assessment-session
+  .question-panel {
+  padding: 12px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]:has(
+      .sample-task-panel .written-answer
+    )
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-topline {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-prompt {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .sample-task-answer
+    .question-panel:has(.written-answer) {
+    padding-top: 8px;
+  }
+}
+
+/* Keep the reading control available before the complete, readable scale. */
+.aqueous-scale-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  gap: 16px;
+  align-items: start;
+}
+.aqueous-scale-response .aqueous-independent-scale {
+  margin-top: 0;
+}
+@media (max-width: 600px) {
+  .aqueous-scale-response {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (min-width: 601px) {
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-topline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-topline
+    .question-navigation {
+    flex: 1;
+    min-width: 0;
+    margin-top: 0;
+  }
+}
+.sample-lesson[data-lesson="aqueous-electrolysis-products"]
+  .assessment-session
+  .question-panel:has(.written-answer)
+  .written-equation-prompt {
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+@media (min-width: 601px) {
+  .sample-lesson[data-lesson="aqueous-electrolysis-products"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-topline
+    .question-navigation {
+    padding-inline: 4px;
+  }
+}

@@ -23,7 +23,7 @@ test("new Foundation route preserves the existing Higher route, all532 original 
   const p = emptyProgress(),
     work = emptyWork();
   work.taskModels = {};
-  for (const q of j.guided) {
+  for (const q of j.guided.filter((q) => q.model)) {
     const b = initialBoard(q.model!);
     expect(validHistory(q.model!, [b])).toBe(true);
     expect(validHistory(q.model!, [])).toBe(false);

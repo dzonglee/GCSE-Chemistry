@@ -211,7 +211,12 @@ export function QuestionInput(props: InputProps) {
         <BuretteScale {...props.question.buretteScale} />
       )}
       {props.question.invertedGasScale && (
-        <InvertedGasScale {...props.question.invertedGasScale} />
+        <div className="aqueous-scale-response">
+          <div>
+            <ResponseInput {...props} />
+          </div>
+          <InvertedGasScale {...props.question.invertedGasScale} />
+        </div>
       )}
       {props.question.massReadings && (
         <table className="isotope-data">
@@ -501,7 +506,8 @@ export function QuestionInput(props: InputProps) {
           <ResponseInput {...props} />
         </div>
       )}
-      {!props.question.halogenResults &&
+      {!props.question.invertedGasScale &&
+        !props.question.halogenResults &&
         !props.question.nobleBoilingPoints &&
         !props.question.shellDiagram &&
         !props.question.ionDotCross &&

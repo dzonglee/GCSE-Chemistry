@@ -1,0 +1,1014 @@
+{
+  "stageIds": {
+    "warmup": [
+      "aqp-v1-w-polarity",
+      "aqp-v1-w-ratio"
+    ],
+    "refresher": [
+      "aqp-v1-r-water",
+      "aqp-v1-r-anode",
+      "aqp-v1-r-electrode",
+      "aqp-v1-r-graph",
+      "aqp-v1-r-test",
+      "aqp-v1-r-mass"
+    ],
+    "guided": [
+      "aqp-v1-g-cathode",
+      "aqp-v1-g-products",
+      "aqp-v1-g-transfer",
+      "aqp-v1-g-graph",
+      "aqp-v1-g-hypothesis",
+      "aqp-v1-g-reading"
+    ],
+    "practice": [
+      "aqp-v1-p-sodium",
+      "aqp-v1-p-magnesium",
+      "aqp-v1-p-silver",
+      "aqp-v1-p-bromide",
+      "aqp-v1-p-explain-water",
+      "aqp-v1-p-sulfate",
+      "aqp-v1-p-copper-chloride",
+      "aqp-v1-p-acid",
+      "aqp-v1-p-inert",
+      "aqp-v1-p-colour",
+      "aqp-v1-p-mass",
+      "aqp-v1-p-purify",
+      "aqp-v1-p-explain-transfer",
+      "aqp-v1-p-graph",
+      "aqp-v1-p-correlation",
+      "aqp-v1-p-offset",
+      "aqp-v1-p-gas-ratio",
+      "aqp-v1-p-fair",
+      "aqp-v1-p-test",
+      "aqp-v1-p-limits",
+      "aqp-v1-p-reading"
+    ]
+  },
+  "checkForms": [
+    [
+      "aqp-v1-a-products",
+      "aqp-v1-a-nitrate",
+      "aqp-v1-a-reading",
+      "aqp-v1-a-graph",
+      "aqp-v1-a-evidence"
+    ],
+    [
+      "aqp-v1-b-products",
+      "aqp-v1-b-electrodes",
+      "aqp-v1-b-graph",
+      "aqp-v1-b-fair",
+      "aqp-v1-b-explain"
+    ]
+  ],
+  "reviewForms": [
+    [
+      "aqp-v1-ra-water",
+      "aqp-v1-ra-reading",
+      "aqp-v1-ra-electrode"
+    ],
+    [
+      "aqp-v1-rb-products",
+      "aqp-v1-rb-graph",
+      "aqp-v1-rb-evidence"
+    ]
+  ],
+  "tasks": [
+    {
+      "id": "aqp-v1-w-polarity",
+      "prompt": "During electrolysis, which electrode attracts positive ions?",
+      "answer": "Negative cathode",
+      "options": [
+        "Positive anode",
+        "Either electrode: ions are neutral",
+        "Negative cathode"
+      ],
+      "misconceptions": {
+        "Positive anode": "Positive ions migrate toward the negative electrode.",
+        "Either electrode: ions are neutral": "A positive ion is charged."
+      },
+      "explanation": "The cathode is negative in an electrolytic cell.",
+      "hint": "Use opposite charges.",
+      "purpose": "Recall electrode polarity",
+      "title": "Recall electrode polarity"
+    },
+    {
+      "id": "aqp-v1-w-ratio",
+      "prompt": "A supplied water-electrolysis record gives hydrogen:oxygen volumes 2:1 at the same temperature and pressure. If oxygen is 5 cm³, how much hydrogen is collected?",
+      "answer": "10",
+      "unit": "cm³",
+      "explanation": "Two equal hydrogen parts for one oxygen part: 2 × 5 = 10.",
+      "hint": "Use the supplied ratio.",
+      "purpose": "Recall a supplied gas ratio",
+      "misconceptions": {},
+      "title": "Recall a supplied gas ratio"
+    },
+    {
+      "id": "aqp-v1-r-water",
+      "prompt": "Why can aqueous sodium chloride give hydrogen rather than sodium at the cathode?",
+      "answer": "Water supplies competing species",
+      "options": [
+        "The solution contains no sodium ions",
+        "Water removes the need for electric current",
+        "Water supplies competing species"
+      ],
+      "misconceptions": {
+        "The solution contains no sodium ions": "Dissolved sodium ions remain present.",
+        "Water removes the need for electric current": "An external supply still drives electrolysis."
+      },
+      "explanation": "Water introduces species that can produce hydrogen; sodium is above hydrogen.",
+      "hint": "Aqueous is not molten.",
+      "purpose": "Remember the solvent",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "cathode",
+        "instruction": "Change the supplied metal or phase and predict the cathode product and reason."
+      },
+      "title": "Remember the solvent"
+    },
+    {
+      "id": "aqp-v1-r-anode",
+      "prompt": "In a supplied chlorine-producing aqueous chloride case, name the neutral anode product.",
+      "answer": "Chlorine",
+      "options": [
+        "Chlorine",
+        "Chloride",
+        "Sodium"
+      ],
+      "misconceptions": {
+        "Chloride": "Chloride is the starting ion, not the neutral product.",
+        "Sodium": "That is the salt's metal, not the anode halogen."
+      },
+      "explanation": "Chloride ions give neutral chlorine in this supplied case.",
+      "hint": "Name the element.",
+      "purpose": "Keep ion and product distinct",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "products",
+        "instruction": "Predict both products before checking; use the stated phase and electrodes."
+      },
+      "title": "Keep ion and product distinct"
+    },
+    {
+      "id": "aqp-v1-r-electrode",
+      "prompt": "What forms at the positive copper electrode in the supplied copper sulfate transfer case?",
+      "answer": "Copper ions enter the solution",
+      "options": [
+        "Copper ions enter the solution",
+        "Oxygen must form at every anode",
+        "Copper deposits at the positive electrode"
+      ],
+      "misconceptions": {
+        "Oxygen must form at every anode": "Copper can dissolve; the electrode is not inert.",
+        "Copper deposits at the positive electrode": "Copper deposits at the negative cathode."
+      },
+      "explanation": "The copper anode dissolves and replenishes copper ions.",
+      "hint": "An electrode can take part.",
+      "purpose": "Read electrode material",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "transfer",
+        "instruction": "Compare copper and inert electrodes; track the anode and solution."
+      },
+      "title": "Read electrode material"
+    },
+    {
+      "id": "aqp-v1-r-graph",
+      "prompt": "Which volume–time line represents direct proportion?",
+      "answer": "A straight line through (0, 0)",
+      "options": [
+        "A straight line with initial volume 2 cm³",
+        "A straight line through (0, 0)",
+        "Any line that increases"
+      ],
+      "misconceptions": {
+        "Any line that increases": "Positive correlation alone is insufficient.",
+        "A straight line with initial volume 2 cm³": "A nonzero intercept does not give volume proportional to time."
+      },
+      "explanation": "Direct proportion requires a constant volume/time ratio and zero intercept.",
+      "hint": "Check both shape and origin.",
+      "purpose": "Require the origin",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "graph",
+        "instruction": "Move the reading marker and classify the supplied lines."
+      },
+      "title": "Require the origin"
+    },
+    {
+      "id": "aqp-v1-r-test",
+      "prompt": "Colourless bubbles are seen at both electrodes. What can you conclude without supplied gas tests?",
+      "answer": "Gas is forming, but its identity is not established",
+      "options": [
+        "Both gases are hydrogen",
+        "One must be oxygen because there are bubbles",
+        "Gas is forming, but its identity is not established"
+      ],
+      "misconceptions": {
+        "Both gases are hydrogen": "Colourless bubbles do not identify hydrogen.",
+        "One must be oxygen because there are bubbles": "Many gases make bubbles."
+      },
+      "explanation": "A diagnostic observation is needed to identify each gas.",
+      "hint": "Separate observation from identification.",
+      "purpose": "Use diagnostic evidence",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "investigation",
+        "instruction": "Evaluate supplied supervised observations, not a home experiment."
+      },
+      "title": "Use diagnostic evidence"
+    },
+    {
+      "id": "aqp-v1-r-mass",
+      "prompt": "A pure copper anode changes from 8.00 g to 7.85 g. What mass of copper has left it?",
+      "answer": "0.15",
+      "unit": "g",
+      "explanation": "8.00 − 7.85 = 0.15 g.",
+      "hint": "Subtract final mass from initial mass.",
+      "purpose": "Subtract electrode readings",
+      "misconceptions": {},
+      "title": "Subtract electrode readings"
+    },
+    {
+      "id": "aqp-v1-g-cathode",
+      "prompt": "Aqueous copper sulfate; inert electrodes. Copper is below hydrogen. Which cathode product forms?",
+      "answer": "Copper",
+      "options": [
+        "Copper",
+        "Hydrogen",
+        "Oxygen"
+      ],
+      "misconceptions": {
+        "Hydrogen": "Copper is below hydrogen in this supplied series.",
+        "Oxygen": "Oxygen is the inert anode product."
+      },
+      "explanation": "Copper deposits at the negative cathode.",
+      "hint": "Compare copper with hydrogen.",
+      "purpose": "Predict the cathode",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "cathode",
+        "instruction": "Predict the product and its reason; changing to sodium or molten salt tests a different case."
+      },
+      "title": "Predict the cathode",
+      "openingHint": true
+    },
+    {
+      "id": "aqp-v1-g-products",
+      "prompt": "Initial model: concentrated sodium chloride solution with inert electrodes in the supplied chlorine-producing case. Which products form?",
+      "answer": "Hydrogen at cathode; chlorine at anode",
+      "options": [
+        "Hydrogen at cathode; chlorine at anode",
+        "Sodium at cathode; chlorine at anode",
+        "Hydrogen at cathode; chloride gas at anode"
+      ],
+      "misconceptions": {
+        "Sodium at cathode; chlorine at anode": "Water competes; aqueous sodium is not the molten case.",
+        "Hydrogen at cathode; chloride gas at anode": "The gas is neutral chlorine, not chloride."
+      },
+      "explanation": "Sodium is above hydrogen; hydrogen forms at cathode. The supplied halide case gives chlorine at anode.",
+      "hint": "Use water competition and the supplied halide condition.",
+      "purpose": "Predict both aqueous products",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "products",
+        "instruction": "Explore chloride, sulfate and nitrate cases without assuming all dissolved salts give their metal."
+      },
+      "title": "Predict both aqueous products"
+    },
+    {
+      "id": "aqp-v1-g-transfer",
+      "prompt": "Initial model: copper sulfate solution, copper electrodes, equal transfer and fixed solution volume. What happens to copper-ion concentration?",
+      "answer": "It remains approximately unchanged",
+      "options": [
+        "It remains approximately unchanged",
+        "It must fall because the cathode gains copper",
+        "It must increase because the anode dissolves"
+      ],
+      "misconceptions": {
+        "It must fall because the cathode gains copper": "The anode replenishes copper ions at the same rate in this supplied case.",
+        "It must increase because the anode dissolves": "The cathode removes the same amount."
+      },
+      "explanation": "Copper enters solution at anode and leaves at cathode; matched transfer keeps concentration approximately unchanged.",
+      "hint": "Track both electrodes, not only one.",
+      "purpose": "Follow copper into and out of solution",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "transfer",
+        "instruction": "Use the true 3D before/after inventory to trace copper, then compare the inert anode."
+      },
+      "title": "Follow copper into and out of solution"
+    },
+    {
+      "id": "aqp-v1-g-graph",
+      "prompt": "Initial illustrative graph: hydrogen increases from 0 to 8 cm³ over 16 minutes along a straight line. How much hydrogen is collected at 8 minutes?",
+      "answer": "4",
+      "unit": "cm³",
+      "explanation": "Half the time gives half the volume for this line through the origin: 4 cm³.",
+      "hint": "Read the supplied hydrogen line.",
+      "purpose": "Place a gas reading",
+      "misconceptions": {},
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "graph",
+        "instruction": "Move the gold marker to the hydrogen reading, then classify direct proportion and positive correlation separately."
+      },
+      "title": "Place a gas reading"
+    },
+    {
+      "id": "aqp-v1-g-hypothesis",
+      "prompt": "A supervised sodium sulfate investigation predicts hydrogen at cathode and oxygen at anode. Supplied tests: cathode gas gives a squeaky pop; anode gas relights a glowing splint. What does this support?",
+      "answer": "The predicted gas identities",
+      "options": [
+        "Both gases are oxygen",
+        "Bubbles alone proved the identities",
+        "The predicted gas identities"
+      ],
+      "misconceptions": {
+        "Both gases are oxygen": "The pop supports hydrogen, not oxygen.",
+        "Bubbles alone proved the identities": "The supplied diagnostic tests give the identifying evidence."
+      },
+      "explanation": "The supplied tests support hydrogen and oxygen in their predicted positions.",
+      "hint": "Match each test to a gas.",
+      "purpose": "Test a practical prediction",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "investigation",
+        "instruction": "Assess the given evidence and compare controlled and confounded electrode investigations."
+      },
+      "title": "Test a practical prediction"
+    },
+    {
+      "id": "aqp-v1-g-reading",
+      "prompt": "Initial inverted cylinder: the gas–water boundary is two 0.2 cm³ divisions below 4.0 cm³. What volume of gas is collected?",
+      "answer": "4.4",
+      "unit": "cm³",
+      "explanation": "4.0 + 2 × 0.2 = 4.4 cm³. Numbers increase downwards on this inverted gas scale.",
+      "hint": "Use the printed scale direction, not an upright-cylinder assumption.",
+      "purpose": "Read an inverted gas scale",
+      "misconceptions": {},
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "reading",
+        "instruction": "Move your gold reading to the visible gas–water boundary; the blue water level is the supplied observation."
+      },
+      "title": "Read an inverted gas scale"
+    },
+    {
+      "id": "aqp-v1-p-sodium",
+      "prompt": "Why does aqueous sodium chloride give hydrogen at cathode in the standard GCSE case, while molten sodium chloride gives sodium?",
+      "answer": "Water introduces competition only in the aqueous case",
+      "options": [
+        "Sodium ions exist only in the melt",
+        "Melting changes sodium's place in the reactivity series",
+        "Water introduces competition only in the aqueous case"
+      ],
+      "misconceptions": {
+        "Sodium ions exist only in the melt": "They also exist in solution.",
+        "Melting changes sodium's place in the reactivity series": "The key difference is water, not a changed reactivity order."
+      },
+      "explanation": "Water-derived species can produce hydrogen in solution; the binary melt has no water.",
+      "hint": "Read the phase.",
+      "purpose": "Contrast solution and melt",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "cathode",
+        "instruction": "Compare sodium solution with molten sodium chloride."
+      },
+      "title": "Contrast solution and melt",
+      "followUp": "aqp-v1-r-water"
+    },
+    {
+      "id": "aqp-v1-p-magnesium",
+      "prompt": "Magnesium is above hydrogen. Predict the cathode product from aqueous magnesium sulfate with inert electrodes.",
+      "answer": "Hydrogen",
+      "options": [
+        "Magnesium",
+        "Sulfur",
+        "Hydrogen"
+      ],
+      "misconceptions": {
+        "Magnesium": "The standard aqueous case gives hydrogen for a metal above hydrogen.",
+        "Sulfur": "Sulfate is not reduced to sulfur at cathode here."
+      },
+      "explanation": "Hydrogen forms rather than magnesium in the stated aqueous model.",
+      "hint": "Compare the metal with hydrogen.",
+      "purpose": "Transfer the reactivity rule",
+      "title": "Transfer the reactivity rule",
+      "followUp": "aqp-v1-r-water"
+    },
+    {
+      "id": "aqp-v1-p-silver",
+      "prompt": "Silver is below hydrogen. Predict the cathode product from aqueous silver nitrate with inert electrodes.",
+      "answer": "Silver",
+      "options": [
+        "Nitrogen",
+        "Silver",
+        "Hydrogen"
+      ],
+      "misconceptions": {
+        "Hydrogen": "Silver is the less reactive candidate in this model.",
+        "Nitrogen": "Nitrate does not give nitrogen at cathode."
+      },
+      "explanation": "Silver deposits at the cathode.",
+      "hint": "Use the supplied series.",
+      "purpose": "Use a less reactive metal",
+      "title": "Use a less reactive metal",
+      "followUp": "aqp-v1-r-water"
+    },
+    {
+      "id": "aqp-v1-p-bromide",
+      "prompt": "Aqueous potassium bromide is electrolysed using inert electrodes in a standard GCSE single-compound question. Choose both products.",
+      "answer": "Hydrogen at cathode; bromine at anode",
+      "options": [
+        "Potassium at cathode; bromine at anode",
+        "Hydrogen at cathode; bromide at anode",
+        "Hydrogen at cathode; bromine at anode"
+      ],
+      "misconceptions": {
+        "Potassium at cathode; bromine at anode": "Potassium is above hydrogen, so water competes.",
+        "Hydrogen at cathode; bromide at anode": "Bromide is an ion; bromine is the neutral element."
+      },
+      "explanation": "Hydrogen and bromine are the stated GCSE products.",
+      "hint": "Do not confuse bromine with bromide.",
+      "purpose": "Name the halogen",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "products",
+        "instruction": "Explore the bromide record."
+      },
+      "title": "Name the halogen",
+      "followUp": "aqp-v1-r-anode"
+    },
+    {
+      "id": "aqp-v1-p-explain-water",
+      "title": "Explain aqueous competition",
+      "prompt": "Explain why predicting the salt's metal at every aqueous cathode would be wrong. Use sodium chloride and copper sulfate with inert electrodes.",
+      "answer": "Water introduces competing species. Sodium is above hydrogen, so hydrogen forms rather than sodium; copper is below hydrogen, so copper deposits.",
+      "explanation": "Water introduces competing species. Sodium is above hydrogen, so hydrogen forms rather than sodium; copper is below hydrogen, so copper deposits.",
+      "hint": "Identify the water-derived competition.",
+      "rubric": [
+        "Identify the water-derived competition.",
+        "Use sodium above hydrogen and copper below hydrogen.",
+        "Name the cathode products."
+      ],
+      "purpose": "Explain aqueous competition",
+      "followUp": "aqp-v1-r-water"
+    },
+    {
+      "id": "aqp-v1-p-sulfate",
+      "prompt": "Predict both products from aqueous sodium sulfate with inert electrodes.",
+      "answer": "Hydrogen at cathode; oxygen at anode",
+      "options": [
+        "Sodium at cathode; sulfur at anode",
+        "Hydrogen at cathode; sulfate gas at anode",
+        "Hydrogen at cathode; oxygen at anode"
+      ],
+      "misconceptions": {
+        "Sodium at cathode; sulfur at anode": "Water competes at both electrodes; sulfate is not converted to sulfur here.",
+        "Hydrogen at cathode; sulfate gas at anode": "Sulfate remains dissolved; oxygen is the anode gas."
+      },
+      "explanation": "Sodium is above hydrogen and sulfate is not a halide; water supplies the gas products.",
+      "hint": "Use the standard aqueous rules.",
+      "purpose": "Avoid inventing sulfur",
+      "title": "Avoid inventing sulfur",
+      "followUp": "aqp-v1-r-anode"
+    },
+    {
+      "id": "aqp-v1-p-copper-chloride",
+      "prompt": "Copper is below hydrogen. In the supplied chlorine-producing copper chloride solution with inert electrodes, choose both products.",
+      "answer": "Copper at cathode; chlorine at anode",
+      "options": [
+        "Hydrogen at cathode; oxygen at anode",
+        "Chlorine at cathode; copper at anode",
+        "Copper at cathode; chlorine at anode"
+      ],
+      "misconceptions": {
+        "Hydrogen at cathode; oxygen at anode": "Copper can deposit and chloride gives chlorine in this supplied case.",
+        "Chlorine at cathode; copper at anode": "Those positions are reversed."
+      },
+      "explanation": "Copper deposits at cathode; chlorine forms at anode.",
+      "hint": "Decide each electrode separately.",
+      "purpose": "Combine two different decisions",
+      "title": "Combine two different decisions",
+      "followUp": "aqp-v1-r-anode"
+    },
+    {
+      "id": "aqp-v1-p-acid",
+      "prompt": "Water acidified with sulfuric acid is electrolysed using inert electrodes. Which gases are expected?",
+      "answer": "Hydrogen and oxygen",
+      "options": [
+        "Hydrogen and oxygen",
+        "Hydrogen and sulfur",
+        "Hydrogen only"
+      ],
+      "misconceptions": {
+        "Hydrogen and sulfur": "Sulfate is not converted into elemental sulfur.",
+        "Hydrogen only": "The anode also produces oxygen."
+      },
+      "explanation": "The acid improves conductivity; the supplied case decomposes water into hydrogen and oxygen.",
+      "hint": "Sulfuric acid does not imply sulfur gas.",
+      "purpose": "Interpret acidified water",
+      "title": "Interpret acidified water",
+      "followUp": "aqp-v1-r-anode"
+    },
+    {
+      "id": "aqp-v1-p-inert",
+      "prompt": "Copper sulfate solution is electrolysed with inert electrodes at fixed volume. Which change is expected?",
+      "answer": "Copper ions decrease and oxygen forms at anode",
+      "options": [
+        "Copper ions stay unchanged because every anode supplies copper",
+        "Copper ions increase while copper deposits",
+        "Copper ions decrease and oxygen forms at anode"
+      ],
+      "misconceptions": {
+        "Copper ions stay unchanged because every anode supplies copper": "An inert anode supplies no copper.",
+        "Copper ions increase while copper deposits": "The cathode removes copper ions; they are not replenished here."
+      },
+      "explanation": "Copper deposits while oxygen forms at the inert anode; copper-ion concentration decreases.",
+      "hint": "Identify whether the anode is copper.",
+      "purpose": "Contrast an inert anode",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "transfer",
+        "instruction": "Change from copper electrodes to inert electrodes."
+      },
+      "title": "Contrast an inert anode",
+      "followUp": "aqp-v1-r-electrode"
+    },
+    {
+      "id": "aqp-v1-p-colour",
+      "prompt": "A copper sulfate solution becomes paler during inert-electrode electrolysis. Which explanation matches the stated chemistry?",
+      "answer": "Copper ions are removed as copper deposits",
+      "options": [
+        "Sulfate becomes copper metal",
+        "Paler colour proves all copper ions have disappeared",
+        "Copper ions are removed as copper deposits"
+      ],
+      "misconceptions": {
+        "Sulfate becomes copper metal": "Copper ions supply the deposited copper.",
+        "Paler colour proves all copper ions have disappeared": "A colour change is not proof of zero concentration."
+      },
+      "explanation": "Decreasing copper-ion concentration can make the solution paler; colour alone does not quantify complete removal.",
+      "hint": "Connect the change with the cathode.",
+      "purpose": "Interpret solution colour carefully",
+      "title": "Interpret solution colour carefully",
+      "followUp": "aqp-v1-r-electrode"
+    },
+    {
+      "id": "aqp-v1-p-mass",
+      "prompt": "A pure copper anode falls from 15.00 g to 14.70 g. Equal copper transfer occurs with no losses. How much mass does the cathode gain?",
+      "answer": "0.3",
+      "unit": "g",
+      "explanation": "15.00 − 14.70 = 0.30 g; equal transfer gives a 0.30 g gain.",
+      "hint": "Use the supplied equal-transfer assumption.",
+      "purpose": "Use equal pure-copper transfer",
+      "misconceptions": {},
+      "title": "Use equal pure-copper transfer",
+      "followUp": "aqp-v1-r-mass"
+    },
+    {
+      "id": "aqp-v1-p-purify",
+      "prompt": "For the supplied copper purification case, which arrangement is correct?",
+      "answer": "Impure copper anode; pure copper cathode",
+      "options": [
+        "Impure copper anode; pure copper cathode",
+        "Pure copper anode; impure copper cathode",
+        "Two inert electrodes"
+      ],
+      "misconceptions": {
+        "Pure copper anode; impure copper cathode": "That places the impure copper at the receiving electrode.",
+        "Two inert electrodes": "An inert anode cannot supply copper from the impure metal."
+      },
+      "explanation": "Copper dissolves from impure anode and deposits onto pure cathode; supplied insoluble impurities form sludge.",
+      "hint": "Which electrode supplies the copper?",
+      "purpose": "Choose purification electrodes",
+      "title": "Choose purification electrodes",
+      "followUp": "aqp-v1-r-electrode"
+    },
+    {
+      "id": "aqp-v1-p-explain-transfer",
+      "title": "Explain replenishment",
+      "prompt": "Explain why copper sulfate concentration can remain approximately unchanged with copper electrodes but fall with inert electrodes at fixed volume.",
+      "answer": "A copper anode supplies copper ions while the cathode removes the same amount in the matched-transfer case. An inert anode supplies no copper ions; oxygen forms there, so deposition decreases copper-ion concentration.",
+      "explanation": "A copper anode supplies copper ions while the cathode removes the same amount in the matched-transfer case. An inert anode supplies no copper ions; oxygen forms there, so deposition decreases copper-ion concentration.",
+      "hint": "Describe both electrodes with copper electrodes.",
+      "rubric": [
+        "Describe both electrodes with copper electrodes.",
+        "Contrast oxygen formation at the inert anode.",
+        "Use fixed volume and matched copper transfer."
+      ],
+      "purpose": "Explain replenishment",
+      "followUp": "aqp-v1-r-electrode"
+    },
+    {
+      "id": "aqp-v1-p-graph",
+      "prompt": "The illustrative hydrogen line passes through (0 min, 0 cm³) and (16 min, 8 cm³). What is the volume at 12 minutes?",
+      "answer": "6",
+      "unit": "cm³",
+      "explanation": "8 ÷ 16 = 0.5 cm³ per minute; 12 × 0.5 = 6.",
+      "hint": "Find the volume for one minute.",
+      "purpose": "Scale a direct-proportion reading",
+      "misconceptions": {},
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "graph",
+        "instruction": "The model shows this supplied illustrative line, not measured results from an actual experiment."
+      },
+      "title": "Scale a direct-proportion reading",
+      "followUp": "aqp-v1-r-graph"
+    },
+    {
+      "id": "aqp-v1-p-correlation",
+      "prompt": "Both gas-volume lines rise with time, but chlorine initially curves. Which statement is supported?",
+      "answer": "Both show positive correlation; only the hydrogen line shows direct proportion",
+      "options": [
+        "Neither shows positive correlation because one curves",
+        "Both show positive correlation; only the hydrogen line shows direct proportion",
+        "Both must show direct proportion because both rise"
+      ],
+      "misconceptions": {
+        "Both must show direct proportion because both rise": "A rising curve can have a changing volume/time ratio.",
+        "Neither shows positive correlation because one curves": "Positive correlation does not require a straight line."
+      },
+      "explanation": "Increasing together supports positive correlation; direct proportion also requires a straight line through the origin.",
+      "hint": "Check the exact claim.",
+      "purpose": "Distinguish two graph claims",
+      "title": "Distinguish two graph claims",
+      "followUp": "aqp-v1-r-graph"
+    },
+    {
+      "id": "aqp-v1-p-offset",
+      "prompt": "A straight gas-volume line starts at 2 cm³ when time is zero. Is volume directly proportional to elapsed time?",
+      "answer": "No: it does not pass through the origin",
+      "options": [
+        "No: it does not pass through the origin",
+        "Yes: every straight line shows direct proportion",
+        "No: a rising line cannot show positive correlation"
+      ],
+      "misconceptions": {
+        "Yes: every straight line shows direct proportion": "A nonzero intercept breaks direct proportion between these stated variables.",
+        "No: a rising line cannot show positive correlation": "It can rise while failing direct proportion."
+      },
+      "explanation": "The recorded volume is not zero at zero time.",
+      "hint": "Use the actual axes and intercept.",
+      "purpose": "Test a nonzero intercept",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "graph",
+        "instruction": "Select the offset record; keep positive correlation separate."
+      },
+      "title": "Test a nonzero intercept",
+      "followUp": "aqp-v1-r-graph"
+    },
+    {
+      "id": "aqp-v1-p-gas-ratio",
+      "prompt": "For supplied complete water electrolysis with inert electrodes, gases are collected without loss at the same temperature and pressure. Hydrogen is 24 cm³. What is oxygen volume?",
+      "answer": "12",
+      "unit": "cm³",
+      "explanation": "The supplied hydrogen:oxygen ratio is 2:1, so 24 ÷ 2 = 12.",
+      "hint": "This ratio belongs to the stated water reaction, not every electrolyte.",
+      "purpose": "Use a qualified volume ratio",
+      "misconceptions": {},
+      "title": "Use a qualified volume ratio",
+      "followUp": "aqp-v1-r-graph"
+    },
+    {
+      "id": "aqp-v1-p-fair",
+      "prompt": "Which comparison best isolates electrode material in copper sulfate electrolysis?",
+      "answer": "Change only electrode material; keep solution, exposed area, current, duration and temperature comparable",
+      "options": [
+        "Use any concentration because the salt name is unchanged",
+        "Change only electrode material; keep solution, exposed area, current, duration and temperature comparable",
+        "Change electrode material and double current"
+      ],
+      "misconceptions": {
+        "Change electrode material and double current": "The current change could affect the result.",
+        "Use any concentration because the salt name is unchanged": "Concentration can affect observations and must be controlled."
+      },
+      "explanation": "The comparison changes electrode material while controlling the stated other variables.",
+      "hint": "Identify the independent variable.",
+      "purpose": "Isolate electrode material",
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "investigation",
+        "instruction": "Compare controlled and confounded records."
+      },
+      "title": "Isolate electrode material",
+      "followUp": "aqp-v1-r-test"
+    },
+    {
+      "id": "aqp-v1-p-test",
+      "prompt": "Supplied anode gas relights a glowing splint. Which identity does that support?",
+      "answer": "Oxygen",
+      "options": [
+        "Chlorine",
+        "Oxygen",
+        "Hydrogen"
+      ],
+      "misconceptions": {
+        "Hydrogen": "A squeaky pop is the supplied hydrogen test.",
+        "Chlorine": "The oxygen splint test does not identify chlorine."
+      },
+      "explanation": "Relighting a glowing splint supports oxygen.",
+      "hint": "Use the supplied diagnostic observation.",
+      "purpose": "Read gas-test results",
+      "title": "Read gas-test results",
+      "followUp": "aqp-v1-r-test"
+    },
+    {
+      "id": "aqp-v1-p-limits",
+      "title": "Avoid an unsupported mechanism",
+      "prompt": "The illustrative chlorine-volume line initially curves and less chlorine is collected than hydrogen. Does this graph alone prove one cause for the missing collected gas? Explain.",
+      "answer": "No. The graph reports collected volumes, not a unique cause. Solubility, collection losses or changing conditions would need additional evidence; the graph alone does not establish which occurred.",
+      "explanation": "No. The graph reports collected volumes, not a unique cause. Solubility, collection losses or changing conditions would need additional evidence; the graph alone does not establish which occurred.",
+      "hint": "Separate collected volume from total gas formed.",
+      "rubric": [
+        "Separate collected volume from total gas formed.",
+        "Identify the lack of unique causal evidence.",
+        "Do not turn a possible explanation into a proved cause."
+      ],
+      "purpose": "Avoid an unsupported mechanism",
+      "followUp": "aqp-v1-r-test"
+    },
+    {
+      "id": "aqp-v1-p-reading",
+      "prompt": "A supplied inverted gas scale increases downwards. The gas–water boundary is four 0.2 cm³ divisions below 6.0 cm³. What volume is collected?",
+      "answer": "6.8",
+      "unit": "cm³",
+      "explanation": "6.0 + 4 × 0.2 = 6.8 cm³.",
+      "hint": "Add divisions in the direction the printed numbers increase.",
+      "purpose": "Transfer an inverted reading",
+      "misconceptions": {},
+      "model": {
+        "kind": "aqueous-products",
+        "mode": "reading",
+        "instruction": "Explore low and high gas volumes; the model is a supplied observation, not a physical experiment."
+      },
+      "title": "Transfer an inverted reading",
+      "followUp": "aqp-v1-r-graph"
+    },
+    {
+      "id": "aqp-v1-a-products",
+      "prompt": "Aqueous calcium chloride is electrolysed using inert electrodes in a supplied chlorine-producing GCSE case. Calcium is above hydrogen. Choose both products.",
+      "answer": "Hydrogen at cathode; chlorine at anode",
+      "options": [
+        "Hydrogen at cathode; chlorine at anode",
+        "Calcium at cathode; chlorine at anode",
+        "Hydrogen at cathode; chloride gas at anode"
+      ],
+      "misconceptions": {
+        "Calcium at cathode; chlorine at anode": "Water competes; calcium is above hydrogen.",
+        "Hydrogen at cathode; chloride gas at anode": "The neutral gas is chlorine."
+      },
+      "explanation": "The stated case gives hydrogen and chlorine.",
+      "hint": "Use phase, reactivity and the supplied anode condition.",
+      "purpose": "Independent products",
+      "title": "Independent products"
+    },
+    {
+      "id": "aqp-v1-a-nitrate",
+      "prompt": "Silver is below hydrogen. Aqueous silver nitrate with inert electrodes gives which products?",
+      "answer": "Silver at cathode; oxygen at anode",
+      "options": [
+        "Hydrogen at cathode; nitrogen at anode",
+        "Silver at cathode; nitrate gas at anode",
+        "Silver at cathode; oxygen at anode"
+      ],
+      "misconceptions": {
+        "Hydrogen at cathode; nitrogen at anode": "Silver deposits and nitrate is not a halide.",
+        "Silver at cathode; nitrate gas at anode": "Oxygen is the anode product."
+      },
+      "explanation": "Silver deposits; water-derived oxygen forms at the inert anode.",
+      "hint": "Decide both electrodes.",
+      "purpose": "Independent non-halide",
+      "title": "Independent non-halide"
+    },
+    {
+      "id": "aqp-v1-a-reading",
+      "prompt": "Read the gas volume shown on this inverted cylinder. Each small interval is 0.2 cm³. Enter the volume in cm³.",
+      "answer": "5.2",
+      "unit": "cm³",
+      "explanation": "5.0 + 0.2 = 5.2 cm³.",
+      "hint": "Use the printed direction and division size.",
+      "purpose": "Independent inverted scale",
+      "misconceptions": {},
+      "title": "Independent inverted scale",
+      "invertedGasScale": {
+        "ticks": 26,
+        "boundaryDescription": "Gas–water boundary is one small division below the printed 5 cm³ mark."
+      }
+    },
+    {
+      "id": "aqp-v1-a-graph",
+      "prompt": "A gas-volume graph is an increasing straight line through (0 min, 3 cm³). Which claim is justified?",
+      "answer": "Positive correlation, but not direct proportion to time",
+      "options": [
+        "Positive correlation, but not direct proportion to time",
+        "Positive correlation and direct proportion",
+        "Neither: a positive intercept prevents correlation"
+      ],
+      "misconceptions": {
+        "Positive correlation and direct proportion": "The line misses the origin.",
+        "Neither: a positive intercept prevents correlation": "The increasing line still shows positive correlation."
+      },
+      "explanation": "The positive intercept prevents direct proportion, not positive correlation.",
+      "hint": "Check the origin separately.",
+      "purpose": "Independent graph claim",
+      "title": "Independent graph claim"
+    },
+    {
+      "id": "aqp-v1-a-evidence",
+      "title": "Independent evidence",
+      "prompt": "A student predicts hydrogen and oxygen from aqueous sodium sulfate with inert electrodes but reports only bubbles. Explain what the report establishes and what additional supplied evidence would identify the gases.",
+      "answer": "Bubbles support gas formation but do not identify the gases. A squeaky pop from cathode gas would support hydrogen and relighting a glowing splint from anode gas would support oxygen.",
+      "explanation": "Bubbles support gas formation but do not identify the gases. A squeaky pop from cathode gas would support hydrogen and relighting a glowing splint from anode gas would support oxygen.",
+      "hint": "Avoid identifying colourless bubbles alone.",
+      "rubric": [
+        "Avoid identifying colourless bubbles alone.",
+        "Match the pop with hydrogen at cathode.",
+        "Match relighting with oxygen at anode."
+      ],
+      "purpose": "Independent evidence"
+    },
+    {
+      "id": "aqp-v1-b-products",
+      "prompt": "Copper is below hydrogen. Aqueous copper chloride is electrolysed with inert electrodes in a supplied chlorine-producing case. Choose both products.",
+      "answer": "Copper at cathode; chlorine at anode",
+      "options": [
+        "Hydrogen at cathode; oxygen at anode",
+        "Copper ions as final deposit; chloride as final gas",
+        "Copper at cathode; chlorine at anode"
+      ],
+      "misconceptions": {
+        "Hydrogen at cathode; oxygen at anode": "Copper deposits; the supplied halide condition gives chlorine.",
+        "Copper ions as final deposit; chloride as final gas": "Final products are neutral elements."
+      },
+      "explanation": "Copper deposits and chlorine forms.",
+      "hint": "Use neutral product names.",
+      "purpose": "Independent chloride",
+      "title": "Independent chloride"
+    },
+    {
+      "id": "aqp-v1-b-electrodes",
+      "prompt": "Switch only from inert to copper electrodes in copper sulfate under matched transfer at fixed volume. What changes at anode?",
+      "answer": "Copper dissolves instead of oxygen forming",
+      "options": [
+        "Copper dissolves instead of oxygen forming",
+        "Copper deposits instead of oxygen forming",
+        "Nothing: all anodes are inert"
+      ],
+      "misconceptions": {
+        "Copper deposits instead of oxygen forming": "Copper deposits at cathode.",
+        "Nothing: all anodes are inert": "Copper electrodes can take part."
+      },
+      "explanation": "Copper enters solution from the active anode.",
+      "hint": "Read electrode material.",
+      "purpose": "Independent electrode contrast",
+      "title": "Independent electrode contrast"
+    },
+    {
+      "id": "aqp-v1-b-graph",
+      "prompt": "An illustrative hydrogen line passes through (0 min, 0 cm³) and (10 min, 5 cm³). What volume is collected at 6 minutes?",
+      "answer": "3",
+      "unit": "cm³",
+      "explanation": "5 ÷ 10 × 6 = 3 cm³.",
+      "hint": "Find the unit rate.",
+      "purpose": "Independent graph reading",
+      "misconceptions": {},
+      "title": "Independent graph reading"
+    },
+    {
+      "id": "aqp-v1-b-fair",
+      "prompt": "One run uses inert electrodes for 5 minutes at 0.2 A; another uses copper electrodes for 10 minutes at 0.4 A. Can the different result be attributed only to electrode material?",
+      "answer": "No: current and duration also changed",
+      "options": [
+        "No: current and duration also changed",
+        "Yes: electrode material was changed",
+        "No: copper sulfate cannot be electrolysed"
+      ],
+      "misconceptions": {
+        "Yes: electrode material was changed": "It was not the only changed variable.",
+        "No: copper sulfate cannot be electrolysed": "Both electrode cases are possible."
+      },
+      "explanation": "The comparison is confounded by two additional changes.",
+      "hint": "Identify all changed variables.",
+      "purpose": "Independent investigation",
+      "title": "Independent investigation"
+    },
+    {
+      "id": "aqp-v1-b-explain",
+      "title": "Independent transfer explanation",
+      "prompt": "Explain how an impure copper anode and pure copper cathode can purify copper in the supplied case where insoluble impurities form sludge.",
+      "answer": "Copper dissolves from the impure anode into solution and copper deposits onto the pure cathode. The supplied insoluble impurities fall as sludge rather than becoming the copper deposit.",
+      "explanation": "Copper dissolves from the impure anode into solution and copper deposits onto the pure cathode. The supplied insoluble impurities fall as sludge rather than becoming the copper deposit.",
+      "hint": "Use impure anode and pure cathode.",
+      "rubric": [
+        "Use impure anode and pure cathode.",
+        "Describe dissolution and deposition.",
+        "Account for the supplied insoluble impurities."
+      ],
+      "purpose": "Independent transfer explanation"
+    },
+    {
+      "id": "aqp-v1-ra-water",
+      "prompt": "For sodium chloride with inert electrodes, which pair of cathode products matches molten then aqueous GCSE cases?",
+      "answer": "Sodium, then hydrogen",
+      "options": [
+        "Sodium in both",
+        "Sodium, then hydrogen",
+        "Hydrogen, then sodium"
+      ],
+      "misconceptions": {
+        "Hydrogen, then sodium": "The order is reversed.",
+        "Sodium in both": "Water introduces competition in solution."
+      },
+      "explanation": "The melt has no water; the aqueous case gives hydrogen.",
+      "hint": "Read the order of phases.",
+      "purpose": "Delayed phase distinction",
+      "title": "Delayed phase distinction"
+    },
+    {
+      "id": "aqp-v1-ra-reading",
+      "prompt": "Read the gas volume shown on this inverted cylinder. Each small interval is 0.2 cm³. Enter the volume in cm³.",
+      "answer": "3.2",
+      "unit": "cm³",
+      "explanation": "3.0 + 0.2 = 3.2 cm³.",
+      "hint": "Read the actual scale direction.",
+      "purpose": "Delayed inverted scale",
+      "misconceptions": {},
+      "title": "Delayed inverted scale",
+      "invertedGasScale": {
+        "ticks": 16,
+        "boundaryDescription": "Gas–water boundary is one small division below the printed 3 cm³ mark."
+      }
+    },
+    {
+      "id": "aqp-v1-ra-electrode",
+      "prompt": "At fixed volume, inert-electrode copper sulfate electrolysis deposits copper at cathode. What happens to copper-ion concentration?",
+      "answer": "It decreases",
+      "options": [
+        "It stays unchanged because an inert anode replenishes copper",
+        "It increases because copper metal forms",
+        "It decreases"
+      ],
+      "misconceptions": {
+        "It stays unchanged because an inert anode replenishes copper": "An inert anode supplies no copper.",
+        "It increases because copper metal forms": "Metal formation removes copper ions."
+      },
+      "explanation": "Copper ions leave solution as a deposit without copper replenishment.",
+      "hint": "Track the dissolved copper inventory.",
+      "purpose": "Delayed electrode change",
+      "title": "Delayed electrode change"
+    },
+    {
+      "id": "aqp-v1-rb-products",
+      "prompt": "Magnesium is above hydrogen. Predict products from aqueous magnesium sulfate with inert electrodes.",
+      "answer": "Hydrogen at cathode; oxygen at anode",
+      "options": [
+        "Magnesium at cathode; sulfur at anode",
+        "Oxygen at cathode; hydrogen at anode",
+        "Hydrogen at cathode; oxygen at anode"
+      ],
+      "misconceptions": {
+        "Magnesium at cathode; sulfur at anode": "Water supplies both gas products in this case.",
+        "Oxygen at cathode; hydrogen at anode": "Those positions are reversed."
+      },
+      "explanation": "Hydrogen forms rather than magnesium; sulfate is not a halide.",
+      "hint": "Use the two aqueous decisions.",
+      "purpose": "Delayed sulfate prediction",
+      "title": "Delayed sulfate prediction"
+    },
+    {
+      "id": "aqp-v1-rb-graph",
+      "prompt": "A gas-volume curve rises with time but its slope changes. Which conclusion follows?",
+      "answer": "Positive correlation does not prove direct proportion",
+      "options": [
+        "Every positive correlation is direct proportion",
+        "A curve cannot show positive correlation",
+        "Positive correlation does not prove direct proportion"
+      ],
+      "misconceptions": {
+        "Every positive correlation is direct proportion": "A changing slope can break direct proportion.",
+        "A curve cannot show positive correlation": "It can still rise as time increases."
+      },
+      "explanation": "The two claims require different evidence.",
+      "hint": "Direct proportion needs a straight line through the origin.",
+      "purpose": "Delayed graph distinction",
+      "title": "Delayed graph distinction"
+    },
+    {
+      "id": "aqp-v1-rb-evidence",
+      "title": "Delayed practical reasoning",
+      "prompt": "Explain why changing electrode material, current and solution concentration together cannot isolate the effect of electrode material.",
+      "answer": "Several variables change, so any observed difference could result from current or concentration as well as electrode material. Change electrode material alone and keep the other stated conditions comparable.",
+      "explanation": "Several variables change, so any observed difference could result from current or concentration as well as electrode material. Change electrode material alone and keep the other stated conditions comparable.",
+      "hint": "Identify multiple changed variables.",
+      "rubric": [
+        "Identify multiple changed variables.",
+        "Explain alternative causes of the result.",
+        "State a controlled comparison."
+      ],
+      "purpose": "Delayed practical reasoning"
+    }
+  ]
+}

@@ -276,18 +276,20 @@ export function AssessmentSession({
                       Compare each point with your retained response. These
                       criteria do not award an automatic examiner mark.
                     </p>
-                    {q.writtenEquations && q.referenceResponse && (
-                      <details className="sample-reference">
-                        <summary>Compare a reference response</summary>
-                        <p>{q.referenceResponse}</p>
-                        <p>
-                          Compare the complete reaction direction, substance
-                          identities and atom counts with your retained
-                          equations. This reference does not award an automatic
-                          mark.
-                        </p>
-                      </details>
-                    )}
+                    {(q.writtenEquations ||
+                      q.id.startsWith("aqp-v1-method-")) &&
+                      q.referenceResponse && (
+                        <details className="sample-reference">
+                          <summary>Compare a reference response</summary>
+                          <p>{q.referenceResponse}</p>
+                          <p>
+                            {q.writtenEquations
+                              ? "Compare the complete reaction direction, substance identities and atom counts with your retained equations."
+                              : "Compare your electrode predictions, labelled observations and suitable testing method with this reference."}{" "}
+                            This reference does not award an automatic mark.
+                          </p>
+                        </details>
+                      )}
                   </section>
                 )}
                 {q.gasDrawing && (
@@ -459,14 +461,16 @@ export function AssessmentSession({
         <h2 ref={heading} tabIndex={-1}>
           {(q.writtenEquations ||
             q.conciseHeading ||
-            (id === "ion-tests" && q.rubric)) &&
+            (["ion-tests", "aqueous-electrolysis-products"].includes(id) &&
+              q.rubric)) &&
           q.title
             ? q.title
             : q.prompt}
         </h2>
         {(q.writtenEquations ||
           q.conciseHeading ||
-          (id === "ion-tests" && q.rubric)) &&
+          (["ion-tests", "aqueous-electrolysis-products"].includes(id) &&
+            q.rubric)) &&
           q.title && <p className="written-equation-prompt">{q.prompt}</p>}
         <QuestionInput
           compactAssessment={questions.length > 20}

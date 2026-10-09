@@ -1,3 +1,9 @@
+import {
+  aqueousMethodGuided,
+  aqueousMethodPractice,
+  aqueousMethodChecks,
+  aqueousMethodReviews,
+} from "./aqueous-method-writing";
 import type { LearningTask, LessonJourney, TaskModel } from "../types";
 import { choice, number } from "./helpers";
 const c = (
@@ -71,7 +77,7 @@ export const aqueousProductsJourney: LessonJourney = {
   introduction:
     "Use water competition to predict aqueous products, compare inert and copper electrodes, and test claims against practical observations.",
   scopeNote:
-    "Foundation/shared AQA Chemistry 4.4.3.4 and Combined Trilogy 5.4.3.4, including required practical 3 / Combined practical 9 hypotheses and interpretation; related plain Pearson Combined 3.25, 3.30 and core practical 3.31. Half equations and electron-defined redox remain in the separate Higher lesson. Aqueous means dissolved in water: water supplies competing species, conventionally H+ and OH− in the GCSE account. In the standard inert-electrode GCSE model, a metal below hydrogen is deposited at the negative cathode; a metal above hydrogen gives hydrogen instead. At the positive anode, the standard single-compound GCSE prediction gives a halogen from halide ions, otherwise oxygen from water-derived species. Sulfate and nitrate are not discharged as sulfur or nitrogen in these cases. Use neutral product names: chlorine is not chloride. These are specified GCSE cases, not a universal rule independent of concentration, electrode material or operating conditions. Concentrated sodium chloride records here supply the chlorine-producing case; real oxygen/chlorine competition and mixtures are possible. Aqueous copper sulfate with inert electrodes gives copper at cathode, oxygen at anode and decreasing copper-ion concentration at fixed volume. Copper electrodes change the anode reaction: copper dissolves there while copper deposits at cathode; equal copper transfer at fixed volume replenishes solution copper ions. Purification uses an impure copper anode and pure copper cathode; supplied insoluble impurities form sludge rather than necessarily depositing. Exact equal mass changes apply only to supplied pure-copper/no-loss records, not all impure anode mass. The true 3D reference preserves Cu7S1O4 and twelve atomic IDs per state, transferring one original solution copper to the cathode and one original anode copper into solution; the intact tetrahedral sulfate remains separate. Water, hydration shells, most electrode atoms and external current supply are omitted; this is a selected atomic inventory, not a CuSO4 molecule, full apparatus, complete liquid or microscopic mechanism. Inverted gas-cylinder scales here increase downwards, with 0.2 cm³ divisions; read the gas–water boundary and follow the printed scale, not an upright-cylinder assumption. Graphs are explicitly original illustrative data: increasing volumes can show positive correlation without direct proportion; direct proportion requires a straight line through the origin. Gas identity needs supplied diagnostic tests, not bubbles alone. Equal gas-volume ratios require the stated reaction, same temperature/pressure and complete collection. Real experiments require qualified school supervision; this lesson supplies observations and simulations, not unsupervised chemical instructions. Six written explanations remain self-reviewed, not automatic examiner marks or exam-readiness certification.",
+    "Foundation/shared AQA Chemistry 4.4.3.4 and Combined Trilogy 5.4.3.4, including required practical 3 / Combined practical 9 hypotheses and interpretation; related plain Pearson Combined 3.25, 3.30 and core practical 3.31. Half equations and electron-defined redox remain in the separate Higher lesson. Aqueous means dissolved in water: water supplies competing species, conventionally H+ and OH− in the GCSE account. In the standard inert-electrode GCSE model, a metal below hydrogen is deposited at the negative cathode; a metal above hydrogen gives hydrogen instead. At the positive anode, the standard single-compound GCSE prediction gives a halogen from halide ions, otherwise oxygen from water-derived species. Sulfate and nitrate are not discharged as sulfur or nitrogen in these cases. Use neutral product names: chlorine is not chloride. These are specified GCSE cases, not a universal rule independent of concentration, electrode material or operating conditions. Concentrated sodium chloride records here supply the chlorine-producing case; real oxygen/chlorine competition and mixtures are possible. Aqueous copper sulfate with inert electrodes gives copper at cathode, oxygen at anode and decreasing copper-ion concentration at fixed volume. Copper electrodes change the anode reaction: copper dissolves there while copper deposits at cathode; equal copper transfer at fixed volume replenishes solution copper ions. Purification uses an impure copper anode and pure copper cathode; supplied insoluble impurities form sludge rather than necessarily depositing. Exact equal mass changes apply only to supplied pure-copper/no-loss records, not all impure anode mass. The true 3D reference preserves Cu7S1O4 and twelve atomic IDs per state, transferring one original solution copper to the cathode and one original anode copper into solution; the intact tetrahedral sulfate remains separate. Water, hydration shells, most electrode atoms and external current supply are omitted; this is a selected atomic inventory, not a CuSO4 molecule, full apparatus, complete liquid or microscopic mechanism. Inverted gas-cylinder scales here increase downwards, with 0.2 cm³ divisions; read the gas–water boundary and follow the printed scale, not an upright-cylinder assumption. Graphs are explicitly original illustrative data: increasing volumes can show positive correlation without direct proportion; direct proportion requires a straight line through the origin. Gas identity needs supplied diagnostic tests, not bubbles alone. Equal gas-volume ratios require the stated reaction, same temperature/pressure and complete collection. Real experiments require qualified school supervision; this lesson supplies observations and simulations, not unsupervised chemical instructions. The original six written explanations remain self-reviewed, not automatic examiner marks or exam-readiness certification.",
   outcomes: [
     "Predict cathode competition using water and supplied reactivity.",
     "Predict both inert-electrode aqueous products and name neutral elements.",
@@ -829,4 +835,43 @@ for (const [id, ticks, boundaryDescription] of [
   q.invertedGasScale = { ticks, boundaryDescription };
   q.prompt =
     "Read the gas volume shown on this inverted cylinder. Each small interval is 0.2 cm³. Enter the volume in cm³.";
+}
+
+// Append only: all original stage positions and assessment forms remain valid.
+aqueousProductsJourney.guided.push(aqueousMethodGuided);
+aqueousProductsJourney.practice.push(aqueousMethodPractice);
+aqueousProductsJourney.checkForms.push(...aqueousMethodChecks);
+aqueousProductsJourney.reviewForms.push(...aqueousMethodReviews);
+aqueousProductsJourney.outcomes!.push(
+  "Develop a hypothesis and a labelled evidence-gathering plan for inert-electrode electrolysis.",
+);
+aqueousProductsJourney.scopeNote +=
+  " Six appended practical plans require independently developed hypotheses and suitable supervised methods. These are original skills practice, not replicas of a compulsory six-mark question. Combined practical9 uses AT3/7; Separate practical3 includes AT8 as well. All twelve written activities use manual self-review.";
+// Existing supplied predictions and tests also expose this reasoning.
+const gasPlanIds = [
+  aqueousMethodGuided.id,
+  aqueousMethodChecks[0][0].id,
+  ...aqueousMethodReviews.flat().map((q) => q.id),
+];
+const copperPlanIds = [aqueousMethodPractice.id, aqueousMethodChecks[1][0].id];
+for (const [oldId, ids] of [
+  ["aqp-v1-g-hypothesis", gasPlanIds],
+  ["aqp-v1-a-evidence", gasPlanIds],
+  ["aqp-v1-rb-products", gasPlanIds],
+  ["aqp-v1-p-inert", copperPlanIds],
+] as const) {
+  const all = [
+    ...aqueousProductsJourney.warmup,
+    ...aqueousProductsJourney.refresher,
+    ...aqueousProductsJourney.guided,
+    ...aqueousProductsJourney.practice,
+    ...aqueousProductsJourney.checkForms.flat(),
+    ...aqueousProductsJourney.reviewForms.flat(),
+  ];
+  const old = all.find((q) => q.id === oldId)!;
+  old.exposureAliases = [...new Set([...(old.exposureAliases ?? []), ...ids])];
+  for (const id of ids) {
+    const q = all.find((q) => q.id === id)!;
+    q.exposureAliases = [...new Set([...(q.exposureAliases ?? []), oldId])];
+  }
 }
