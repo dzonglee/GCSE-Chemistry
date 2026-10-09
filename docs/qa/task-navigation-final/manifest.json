@@ -1,0 +1,101 @@
+{
+  "build": "R8VFxpyJdtUhztOIggmc1",
+  "captures": [
+    {
+      "file": "320-guided-reversible-inventory-viewport.png",
+      "width": 320,
+      "id": "py-v1-reversible-g-inventory",
+      "firstResponseBottom": 581.28125,
+      "sha256": "710383c386410a7ac6a6766c31ac11d17079e4958a11ba940f4a5f7e5a335997"
+    },
+    {
+      "file": "320-guided-reversible-inventory-full.png",
+      "width": 320,
+      "id": "py-v1-reversible-g-inventory",
+      "firstResponseBottom": 581.28125,
+      "sha256": "dd3ad31540992afdcea3fa5c455be9f0c88a9883c698b6b724b32ae83730acd9"
+    },
+    {
+      "file": "320-three-causes-practice-viewport.png",
+      "width": 320,
+      "id": "py-v1-reversible-p-causes",
+      "firstResponseBottom": 660.8125,
+      "sha256": "9157e5385268f1c7829f49511360c4ce4ca71af6d8cf021889dc7a9a2b9b6ce8"
+    },
+    {
+      "file": "320-three-causes-practice-full.png",
+      "width": 320,
+      "id": "py-v1-reversible-p-causes",
+      "firstResponseBottom": 660.8125,
+      "sha256": "08954fc48c419c4668d44428d8b74c3e9834d0696ca94066a1c7843c3e422b18"
+    },
+    {
+      "file": "320-independent-wrong-explanation-viewport.png",
+      "width": 320,
+      "id": "py-v1-reversible-ca-reverse",
+      "firstResponseBottom": 619.828125,
+      "sha256": "2c57888d550abfd9d7ba093978cdfb0bbd9370e9d7865bc1036b94f851585181"
+    },
+    {
+      "file": "320-independent-wrong-explanation-full.png",
+      "width": 320,
+      "id": "py-v1-reversible-ca-reverse",
+      "firstResponseBottom": 619.828125,
+      "sha256": "630936e7de2b456c973bca9e80aad59f99615b07a538b6c1148a709252458057"
+    },
+    {
+      "file": "320-separate-reference.png",
+      "width": 320,
+      "id": "py-v1-reversible-ca-reverse",
+      "sha256": "942298140405b693a9bdd974c77b2e9546116e9ce806dc59e132c4c9f9f007e8"
+    },
+    {
+      "file": "1280-guided-reversible-inventory-viewport.png",
+      "width": 1280,
+      "id": "py-v1-reversible-g-inventory",
+      "firstResponseBottom": 536.53125,
+      "sha256": "f03760f29242be8cf3416acfe953e1c342f4e9af70678e3a2c675cb77e080a6b"
+    },
+    {
+      "file": "1280-guided-reversible-inventory-full.png",
+      "width": 1280,
+      "id": "py-v1-reversible-g-inventory",
+      "firstResponseBottom": 536.53125,
+      "sha256": "55c508b94f3312fcc1d6763a6e446d7dc12454ec51ea87536d8d250767c33c7a"
+    },
+    {
+      "file": "1280-three-causes-practice-viewport.png",
+      "width": 1280,
+      "id": "py-v1-reversible-p-causes",
+      "firstResponseBottom": 617.875,
+      "sha256": "e6e55820a7911119f4c751ba13beb6f9eeeb32c44881ad5d9f7ef8b8bc9619d5"
+    },
+    {
+      "file": "1280-three-causes-practice-full.png",
+      "width": 1280,
+      "id": "py-v1-reversible-p-causes",
+      "firstResponseBottom": 617.875,
+      "sha256": "dbcc2adad8214d0765c5e1abbf6e513bf1dd415e0129a85052aa78d91d3c2b06"
+    },
+    {
+      "file": "1280-independent-wrong-explanation-viewport.png",
+      "width": 1280,
+      "id": "py-v1-reversible-ca-reverse",
+      "firstResponseBottom": 621.546875,
+      "sha256": "2a34eb0cd031f6212af5c5bf1e42af5d58ced5caa00fc590f1952049301ff706"
+    },
+    {
+      "file": "1280-independent-wrong-explanation-full.png",
+      "width": 1280,
+      "id": "py-v1-reversible-ca-reverse",
+      "firstResponseBottom": 621.546875,
+      "sha256": "eccf5516b5a0a82ff0b40984925239a8604d6916b855f478374cce25049f7bb8"
+    },
+    {
+      "file": "1280-separate-reference.png",
+      "width": 1280,
+      "id": "py-v1-reversible-ca-reverse",
+      "sha256": "0034de8128af960857f31707fc8010839c8ed0d1474684d15225fcccc41239f0"
+    }
+  ]
+}

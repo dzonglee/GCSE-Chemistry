@@ -87,7 +87,8 @@ export function DetailedLesson({
   const heading = useRef<HTMLHeadingElement>(null),
     lastTask = useRef(""),
     stages = useRef<HTMLElement>(null),
-    taskNavigation = useRef<HTMLDivElement>(null);
+    taskNavigation = useRef<HTMLDivElement>(null),
+    mobileTaskNavigation = useRef<HTMLDivElement>(null);
   const taskKey = `${section}:${q.id}`;
   useEffect(() => {
     if (ready && (section === "explore" || section === "practice"))
@@ -108,33 +109,28 @@ export function DetailedLesson({
     else if (tab.right > frame.right) nav.scrollLeft += tab.right - frame.right;
   }, [ready, section, stage]);
   useEffect(() => {
-    if (
-      !ready ||
-      !(
-        lesson.slug === "ph-scale-and-indicators" ||
-        lesson.slug === "life-cycle-and-recycling" ||
-        (lesson.slug === "yield-and-atom-economy" &&
-          q.id.startsWith("py-v1-reversible-")) ||
-        (lesson.slug === "aqueous-electrolysis-products" && q.rubric)
-      )
-    )
-      return;
-    const nav = taskNavigation.current;
-    if (!nav) return;
+    if (!ready) return;
+    const navs = [taskNavigation.current, mobileTaskNavigation.current].filter(
+      (nav): nav is HTMLDivElement => nav !== null,
+    );
+    if (!navs.length) return;
     let cancelled = false;
     const reveal = () => {
       if (cancelled) return;
-      const active = nav.querySelector<HTMLElement>('[aria-current="step"]');
-      if (!active) return;
-      const frame = nav.getBoundingClientRect(),
-        tab = active.getBoundingClientRect();
-      if (tab.left < frame.left)
-        nav.scrollLeft += Math.floor(tab.left - frame.left);
-      else if (tab.right > frame.right)
-        nav.scrollLeft += Math.ceil(tab.right - frame.right);
+      for (const nav of navs) {
+        if (!nav.getClientRects().length) continue;
+        const active = nav.querySelector<HTMLElement>('[aria-current="step"]');
+        if (!active) continue;
+        const frame = nav.getBoundingClientRect(),
+          tab = active.getBoundingClientRect();
+        if (tab.left < frame.left)
+          nav.scrollLeft += Math.floor(tab.left - frame.left);
+        else if (tab.right > frame.right)
+          nav.scrollLeft += Math.ceil(tab.right - frame.right);
+      }
     };
     const observer = new ResizeObserver(reveal);
-    observer.observe(nav);
+    for (const nav of navs) observer.observe(nav);
     void document.fonts.ready.then(reveal);
     reveal();
     return () => {
@@ -984,6 +980,7 @@ export function DetailedLesson({
               "electrolysis",
             ].includes(lesson.slug)) && (
             <div
+              ref={mobileTaskNavigation}
               className="sample-mobile-tasks question-navigation"
               aria-label="Learning task navigation"
             >

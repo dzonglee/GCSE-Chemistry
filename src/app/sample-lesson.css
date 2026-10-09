@@ -255,6 +255,7 @@
   gap: 6px;
   flex-wrap: wrap;
   justify-content: flex-end;
+  padding-inline: 1px;
 }
 .sample-task-topline .question-navigation button {
   background: white;
@@ -1181,6 +1182,7 @@ body:has(.sample-lesson) .topic-number {
 }
 .sample-mobile-tasks {
   display: none;
+  padding-inline: 1px;
 }
 @media (max-width: 650px) {
   .sample-mobile-tasks {

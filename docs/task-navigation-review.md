@@ -1,0 +1,13 @@
+# Active task navigation review — 9 October 2026
+
+The visible task strip now reveals its selected task on initial load, reload, task changes and responsive resizing. Previously only the desktop strip was observed, and its final button could remain fractionally clipped after resizing. Both visible strips are observed; one pixel of horizontal end padding resolves actual integer scroll-position rounding. Hidden strips are ignored. Content, question IDs, saved-work schema, tier rules and assessment forms are unchanged.
+
+A new native browser review covers 320/390/1280 widths across both configured projects, the last guided/practice yield task and other long task sequences, exact retained unfinished writing, reload, responsive resizing, page position, full selected-button bounds, document overflow and accessibility. Its strict first run exposed a 0.296875px desktop end clip. The actual presentation was corrected; assertions and timeouts were retained.
+
+Validation: types, zero-warning full lint, production build and all1,023 unit checks passed before the final one-pixel CSS correction. Types/full lint/production build passed again afterward. All six final task-navigation browser cases passed in2.5minutes; ten affected shared storage/practice/assessment cases passed in a separate50.5second run. These are focused runs, not the entire current2,474-case/149-file browser inventory. Production fingerprints (2,265) were verified after actual runners completed and after the sample server stopped.
+
+All14 final desktop/phone captures were personally inspected, their build and SHA256 verified, and representative sample links explicitly sent before the next individual lesson research. Build R8VFxpyJdtUhztOIggmc1. First useful responses measured at most660.8125px, within the unchanged664px opening gate. Independent written responses remain sealed until whole-set submission and receive manual self-review rather than automatic examiner marks.
+
+See [capture manifest](qa/task-navigation-final/manifest.json), [phone practice](qa/task-navigation-final/320-three-causes-practice-full.png), [desktop practice](qa/task-navigation-final/1280-three-causes-practice-full.png) and [written-response review](qa/task-navigation-final/320-separate-reference.png).
+
+The separate [AQA skills evidence map](aqa-skills-evidence.md) records all27 WS/18 MS/eight AT code families against actual prompts/references. It does not certify complete content-clause coverage, physical practical competence or whole-course exam readiness. Exact qualification/content/practical and cumulative assessment reviews, the reserved potable-water delivery, final whole-app comparison and complete current frozen regression remain open.
