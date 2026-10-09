@@ -1,0 +1,105 @@
+{
+  "note": "Actual frozen production captures, personally inspected via full/viewport and unresized diagram close-ups. Correct manual paths retain four oxygen atoms and omit terminal groups. Wrong examples are deliberate retained ungraded proposals. Keyboard-focused raw full-page captures with sticky-header artifacts are retained externally, not selected as final opening samples. Final captures were refreshed from the build with distinct simultaneous-result landmarks and personally reinspected.",
+  "files": [
+    {
+      "file": "desktop-1280-guided-viewport.png",
+      "sha256": "26d13a1039fbfea40abb9cb2672a57958a2b2ca2d333e21a194a1f532061daab",
+      "personallyInspected": true
+    },
+    {
+      "file": "desktop-1280-guided-full.png",
+      "sha256": "49f2ef0a8834929d7ce1177be4fcbad5659fdb8242845d6c535057f38d3db5a2",
+      "personallyInspected": true
+    },
+    {
+      "file": "desktop-1280-manual-independent-correct-viewport.png",
+      "sha256": "d17f2797a9307b346b957c39ce9da88cb5b34834dd961c5b79ca54770ff2676d",
+      "personallyInspected": true
+    },
+    {
+      "file": "desktop-1280-manual-independent-correct-full.png",
+      "sha256": "14f5306112521dc965ec5460c3aaa4646a206816149844fbd35365390a0181bb",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-320-guided-viewport.png",
+      "sha256": "5250b38434a71fa1e81fcc836a3dd7a3507ccb4fb009aef919b8726831645fcf",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-320-guided-full.png",
+      "sha256": "563bbfdd85837381f739bee64174d6bc00c98cc0e8880d411ad4bc0e72c9faac",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-320-manual-independent-correct-viewport.png",
+      "sha256": "0becfc6649bdad3ad5c1a24b842596fb906982b691760875098d1a2817ee67f4",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-320-manual-independent-correct-full.png",
+      "sha256": "bf60570609aaf5ad792812f666fedda7b7022f610a16cbe24f2affd5a276b27e",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-390-guided-viewport.png",
+      "sha256": "78b94372b4007399248fa5926a454726f4a006a2591b6ff44e6aff265b1d75e5",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-390-guided-full.png",
+      "sha256": "60034b0c13c4242cdd052c296cfd2f367d534560e2139c9919470389d4d46803",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-390-manual-independent-correct-viewport.png",
+      "sha256": "675810f935596a063c517a096b4972096894d318d762f4602dc51d01f69296d0",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-390-manual-independent-correct-full.png",
+      "sha256": "84b3d4d59683ee1e729fff4c382fd3ecf9108e9ebccf1365258a081058f0486a",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-320-repeat-left.png",
+      "sha256": "ea14322d8612db74ed10de98e363515dc885072a47cdcef76d769e85535f83ff",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-320-repeat-ester-junction.png",
+      "sha256": "09727df216e282ab09bd6d32378baa70501b62fe079e549b186918b7cf6e719d",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-320-repeat-right-boundary.png",
+      "sha256": "2113963507d34b410be49bb515d95b15eb8da18fa5dc7e380a498924695c783e",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-390-repeat-left.png",
+      "sha256": "0e751104dd85007a657ad4865bf9266e7d3d457de2aa3ffa1dc49ccaf519948d",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-390-repeat-ester-junction.png",
+      "sha256": "b1406bf5c39771f6fd6ba622f55a266b6cfac3e664163514b7900854e0da98bb",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-390-repeat-right-boundary.png",
+      "sha256": "f41303177cbf3030cd6aec12d742e5f22881fcc2dbf6ee9eeb15c7686dc3d7ba",
+      "personallyInspected": true
+    },
+    {
+      "file": "desktop-1280-independent-repeat-full.png",
+      "sha256": "f9000c16f9c6840b1aeae56d9b7534aacd48978ab7e537dfd4a336a22f5eaefd",
+      "personallyInspected": true
+    },
+    {
+      "file": "mobile-320-independent-groups-viewport.png",
+      "sha256": "143c1f78fe31b42f8627e4baa121557b63b08d0c785e7fce87e21a223edfa5d5",
+      "personallyInspected": true
+    }
+  ]
+}

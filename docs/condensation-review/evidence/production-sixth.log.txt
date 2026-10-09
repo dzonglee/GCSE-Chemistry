@@ -1,0 +1,407 @@
+[WebServer] (node:98758) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 46 tests using 2 workers
+
+(node:98774) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:98775) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 [desktop] › tests/condensation-review.browser.spec.ts:144:7 › fonts-ready 320: original and new guided/practice construction controls, readable SVGs and axe (5.7s)
+  ✘   2 [desktop] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (5.6s)
+(node:99056) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:99063) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 [desktop] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (5.7s)
+(node:99339) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [desktop] › tests/condensation-review.browser.spec.ts:144:7 › fonts-ready 390: original and new guided/practice construction controls, readable SVGs and axe (15.6s)
+  ✓   5 [desktop] › tests/condensation-review.browser.spec.ts:144:7 › fonts-ready 1280: original and new guided/practice construction controls, readable SVGs and axe (15.8s)
+  ✘   6 [desktop] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (11.5s)
+(node:99778) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [desktop] › tests/condensation-review.browser.spec.ts:392:5 › wrong and unreadable constructions retain exact bytes; malformed work cannot record and scoped reset preserves siblings (15.3s)
+  ✓   8 [desktop] › tests/condensation-review.browser.spec.ts:439:5 › helped equivalent construction cannot be fresh in a reserved Higher form (10.6s)
+  ✓   9 [desktop] › tests/condensation-review.browser.spec.ts:466:5 › a started ORIGINAL addition form survives a Higher switch with answer bytes and reserved IDs intact (15.9s)
+  ✓  10 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › addition: all original comparisons retain wrong proposals on reload and accept their chemical targets (39.4s)
+  ✓  11 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › reverse: all original comparisons retain wrong proposals on reload and accept their chemical targets (30.0s)
+  ✓  12 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › segment: all original comparisons retain wrong proposals on reload and accept their chemical targets (24.4s)
+  ✓  13 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › inventory: all original comparisons retain wrong proposals on reload and accept their chemical targets (24.6s)
+  ✓  14 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › ester: all original comparisons retain wrong proposals on reload and accept their chemical targets (21.9s)
+  ✓  15 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › links: all original comparisons retain wrong proposals on reload and accept their chemical targets (21.3s)
+  ✓  17 [desktop] › tests/polymerisation.browser.spec.ts:177:5 › all41 practice tasks, blank independent drawings and teacher references retain honest review (17.0s)
+  ✓  16 [desktop] › tests/polymerisation.browser.spec.ts:96:7 › polyester: all original comparisons retain wrong proposals on reload and accept their chemical targets (23.5s)
+  ✓  19 [desktop] › tests/polymerisation.browser.spec.ts:354:5 › raw numeric strings, repeated selection, Undo and reset preserve the exact original task (7.3s)
+  ✓  20 [desktop] › tests/polymerisation.browser.spec.ts:380:5 › 3D growth reload and Undo retain actual chosen crop and permit a real downloaded GLB (8.4s)
+  ✘  18 [desktop] › tests/polymerisation.browser.spec.ts:249:5 › both cold forms defer all drawing references and retain5 automatic marks plus3 self-reviews; review waits seven days (19.0s)
+(node:100842) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  21 [desktop] › tests/polymerisation.browser.spec.ts:428:5 › mobile long structures retain readable labels and horizontal keyboard panning without page overflow (5.9s)
+  ✓  23 [desktop] › tests/polymerisation.browser.spec.ts:561:5 › unavailable WebGL preserves readable chemistry and the opening control fits a short mobile viewport (5.2s)
+(node:101024) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  22 [desktop] › tests/polymerisation.browser.spec.ts:478:5 › wrong independent attachments remain visible beside the reference and Clear returns every choice to blank (9.9s)
+(node:101164) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  24 [mobile] › tests/condensation-review.browser.spec.ts:144:7 › fonts-ready 320: original and new guided/practice construction controls, readable SVGs and axe (5.3s)
+(node:101303) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  25 [mobile] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (5.7s)
+(node:101444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  27 [mobile] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (5.4s)
+(node:101633) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  26 [mobile] › tests/condensation-review.browser.spec.ts:144:7 › fonts-ready 390: original and new guided/practice construction controls, readable SVGs and axe (15.6s)
+  ✘  29 [mobile] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval (11.3s)
+(node:101994) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  28 [mobile] › tests/condensation-review.browser.spec.ts:144:7 › fonts-ready 1280: original and new guided/practice construction controls, readable SVGs and axe (15.5s)
+  ✓  30 [mobile] › tests/condensation-review.browser.spec.ts:439:5 › helped equivalent construction cannot be fresh in a reserved Higher form (10.3s)
+  ✓  31 [mobile] › tests/condensation-review.browser.spec.ts:392:5 › wrong and unreadable constructions retain exact bytes; malformed work cannot record and scoped reset preserves siblings (16.1s)
+  ✓  32 [mobile] › tests/condensation-review.browser.spec.ts:466:5 › a started ORIGINAL addition form survives a Higher switch with answer bytes and reserved IDs intact (16.3s)
+  ✓  34 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › reverse: all original comparisons retain wrong proposals on reload and accept their chemical targets (28.6s)
+  ✓  33 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › addition: all original comparisons retain wrong proposals on reload and accept their chemical targets (38.7s)
+  ✓  35 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › segment: all original comparisons retain wrong proposals on reload and accept their chemical targets (23.4s)
+  ✓  36 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › inventory: all original comparisons retain wrong proposals on reload and accept their chemical targets (24.0s)
+  ✓  37 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › ester: all original comparisons retain wrong proposals on reload and accept their chemical targets (20.6s)
+  ✓  38 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › links: all original comparisons retain wrong proposals on reload and accept their chemical targets (20.8s)
+  ✓  40 [mobile] › tests/polymerisation.browser.spec.ts:177:5 › all41 practice tasks, blank independent drawings and teacher references retain honest review (15.9s)
+  ✓  39 [mobile] › tests/polymerisation.browser.spec.ts:96:7 › polyester: all original comparisons retain wrong proposals on reload and accept their chemical targets (22.9s)
+  ✓  42 [mobile] › tests/polymerisation.browser.spec.ts:354:5 › raw numeric strings, repeated selection, Undo and reset preserve the exact original task (7.7s)
+  ✘  41 [mobile] › tests/polymerisation.browser.spec.ts:249:5 › both cold forms defer all drawing references and retain5 automatic marks plus3 self-reviews; review waits seven days (18.7s)
+(node:102802) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  43 [mobile] › tests/polymerisation.browser.spec.ts:380:5 › 3D growth reload and Undo retain actual chosen crop and permit a real downloaded GLB (8.4s)
+  ✓  45 [mobile] › tests/polymerisation.browser.spec.ts:428:5 › mobile long structures retain readable labels and horizontal keyboard panning without page overflow (6.6s)
+  ✓  44 [mobile] › tests/polymerisation.browser.spec.ts:478:5 › wrong independent attachments remain visible beside the reference and Clear returns every choice to blank (10.6s)
+  ✓  46 [mobile] › tests/polymerisation.browser.spec.ts:561:5 › unavailable WebGL preserves readable chemistry and the opening control fits a short mobile viewport (5.1s)
+
+
+  1) [desktop] › tests/condensation-review.browser.spec.ts:144:7 › fonts-ready 320: original and new guided/practice construction controls, readable SVGs and axe
+
+    Error: guided-6
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 664
+    Received:    669.890625
+
+      53 |   const b = (await page.locator(first).first().boundingBox())!;
+      54 |   expect(b.height, label).toBeGreaterThanOrEqual(44);
+    > 55 |   expect(b.y + b.height, label).toBeLessThanOrEqual(664);
+         |                                 ^
+      56 |   expect(
+      57 |     await page.evaluate(
+      58 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at geometry (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:55:33)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:159:9
+
+    Error Context: test-results/browser/condensation-review.browse-62d91-trols-readable-SVGs-and-axe-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-62d91-trols-readable-SVGs-and-axe-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-62d91-trols-readable-SVGs-and-axe-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [desktop] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: pol-cond-v1-ca-groups
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 664
+    Received:    718.171875
+
+      53 |   const b = (await page.locator(first).first().boundingBox())!;
+      54 |   expect(b.height, label).toBeGreaterThanOrEqual(44);
+    > 55 |   expect(b.y + b.height, label).toBeLessThanOrEqual(664);
+         |                                 ^
+      56 |   expect(
+      57 |     await page.evaluate(
+      58 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at geometry (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:55:33)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:231:13
+
+    Error Context: test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [desktop] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: pol-cond-v1-ca-groups
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 664
+    Received:    690.328125
+
+      53 |   const b = (await page.locator(first).first().boundingBox())!;
+      54 |   expect(b.height, label).toBeGreaterThanOrEqual(44);
+    > 55 |   expect(b.y + b.height, label).toBeLessThanOrEqual(664);
+         |                                 ^
+      56 |   expect(
+      57 |     await page.evaluate(
+      58 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at geometry (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:55:33)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:231:13
+
+    Error Context: test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [desktop] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator:  getByRole('button', { name: 'Next question →', exact: true })
+    Expected: disabled
+    Received: enabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeDisabled" getByRole('button', { name: 'Next question →', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Next question →', exact: true })
+        14 × locator resolved to <button class="button primary">Next question →</button>
+           - unexpected value "enabled"
+
+
+      240 |           await expect(
+      241 |             page.getByRole("button", { name: "Next question →", exact: true }),
+    > 242 |           ).toBeDisabled();
+          |             ^
+      243 |           if (f === 0 && i === 0) {
+      244 |             await saved(page);
+      245 |             await page.evaluate(
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:242:13
+
+    Error Context: test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [desktop] › tests/polymerisation.browser.spec.ts:249:5 › both cold forms defer all drawing references and retain5 automatic marks plus3 self-reviews; review waits seven days
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('button', { name: 'Start review →', exact: true })
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('button', { name: 'Start review →', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Start review →', exact: true })
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      322 |   await expect(
+      323 |     page.getByRole("button", { name: "Start review →", exact: true }),
+    > 324 |   ).toHaveCount(0);
+          |     ^
+      325 |   await page.clock.setSystemTime(submitted + REVIEW_DELAY + 1000);
+      326 |   await page.reload();
+      327 |   await page
+        at /workspace/chemistry-condensation-runtime/tests/polymerisation.browser.spec.ts:324:5
+
+    Error Context: test-results/browser/polymerisation.browser-bot-d0695-ews-review-waits-seven-days-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/polymerisation.browser-bot-d0695-ews-review-waits-seven-days-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/polymerisation.browser-bot-d0695-ews-review-waits-seven-days-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [mobile] › tests/condensation-review.browser.spec.ts:144:7 › fonts-ready 320: original and new guided/practice construction controls, readable SVGs and axe
+
+    Error: guided-6
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 664
+    Received:    669.890625
+
+      53 |   const b = (await page.locator(first).first().boundingBox())!;
+      54 |   expect(b.height, label).toBeGreaterThanOrEqual(44);
+    > 55 |   expect(b.y + b.height, label).toBeLessThanOrEqual(664);
+         |                                 ^
+      56 |   expect(
+      57 |     await page.evaluate(
+      58 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at geometry (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:55:33)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:159:9
+
+    Error Context: test-results/browser/condensation-review.browse-62d91-trols-readable-SVGs-and-axe-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-62d91-trols-readable-SVGs-and-axe-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-62d91-trols-readable-SVGs-and-axe-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [mobile] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: pol-cond-v1-ca-groups
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 664
+    Received:    718.171875
+
+      53 |   const b = (await page.locator(first).first().boundingBox())!;
+      54 |   expect(b.height, label).toBeGreaterThanOrEqual(44);
+    > 55 |   expect(b.y + b.height, label).toBeLessThanOrEqual(664);
+         |                                 ^
+      56 |   expect(
+      57 |     await page.evaluate(
+      58 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at geometry (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:55:33)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:231:13
+
+    Error Context: test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-55ed8--actual-seven-day-retrieval-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [mobile] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: pol-cond-v1-ca-groups
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 664
+    Received:    690.328125
+
+      53 |   const b = (await page.locator(first).first().boundingBox())!;
+      54 |   expect(b.height, label).toBeGreaterThanOrEqual(44);
+    > 55 |   expect(b.y + b.height, label).toBeLessThanOrEqual(664);
+         |                                 ^
+      56 |   expect(
+      57 |     await page.evaluate(
+      58 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at geometry (/workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:55:33)
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:231:13
+
+    Error Context: test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-73645--actual-seven-day-retrieval-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [mobile] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator:  getByRole('button', { name: 'Next question →', exact: true })
+    Expected: disabled
+    Received: enabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeDisabled" getByRole('button', { name: 'Next question →', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Next question →', exact: true })
+        14 × locator resolved to <button class="button primary">Next question →</button>
+           - unexpected value "enabled"
+
+
+      240 |           await expect(
+      241 |             page.getByRole("button", { name: "Next question →", exact: true }),
+    > 242 |           ).toBeDisabled();
+          |             ^
+      243 |           if (f === 0 && i === 0) {
+      244 |             await saved(page);
+      245 |             await page.evaluate(
+        at /workspace/chemistry-condensation-runtime/tests/condensation-review.browser.spec.ts:242:13
+
+    Error Context: test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/condensation-review.browse-f910c--actual-seven-day-retrieval-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [mobile] › tests/polymerisation.browser.spec.ts:249:5 › both cold forms defer all drawing references and retain5 automatic marks plus3 self-reviews; review waits seven days
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('button', { name: 'Start review →', exact: true })
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('button', { name: 'Start review →', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Start review →', exact: true })
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      322 |   await expect(
+      323 |     page.getByRole("button", { name: "Start review →", exact: true }),
+    > 324 |   ).toHaveCount(0);
+          |     ^
+      325 |   await page.clock.setSystemTime(submitted + REVIEW_DELAY + 1000);
+      326 |   await page.reload();
+      327 |   await page
+        at /workspace/chemistry-condensation-runtime/tests/polymerisation.browser.spec.ts:324:5
+
+    Error Context: test-results/browser/polymerisation.browser-bot-d0695-ews-review-waits-seven-days-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/polymerisation.browser-bot-d0695-ews-review-waits-seven-days-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/polymerisation.browser-bot-d0695-ews-review-waits-seven-days-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10 failed
+    [desktop] › tests/condensation-review.browser.spec.ts:144:7 › fonts-ready 320: original and new guided/practice construction controls, readable SVGs and axe
+    [desktop] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [desktop] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [desktop] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [desktop] › tests/polymerisation.browser.spec.ts:249:5 › both cold forms defer all drawing references and retain5 automatic marks plus3 self-reviews; review waits seven days
+    [mobile] › tests/condensation-review.browser.spec.ts:144:7 › fonts-ready 320: original and new guided/practice construction controls, readable SVGs and axe
+    [mobile] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 320: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [mobile] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 390: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [mobile] › tests/condensation-review.browser.spec.ts:210:7 › fonts-ready 1280: both Higher cold forms, sealed criteria, manual marks, preserved history and actual seven-day retrieval
+    [mobile] › tests/polymerisation.browser.spec.ts:249:5 › both cold forms defer all drawing references and retain5 automatic marks plus3 self-reviews; review waits seven days
+  36 passed (6.5m)

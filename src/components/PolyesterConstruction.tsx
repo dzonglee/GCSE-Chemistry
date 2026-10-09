@@ -1,5 +1,6 @@
 "use client";
 import { useId } from "react";
+import { CondensationConstruction } from "./CondensationConstruction";
 import {
   blankPolyesterDrawing,
   readPolyesterDrawing,
@@ -131,8 +132,15 @@ export function PolyesterChoices({
   function choice(k: string, label: string, options: [string, string][]) {
     return (
       <div className="polymerisation-field" key={k}>
-        <label htmlFor={id + k}>{label}</label>
+        <label htmlFor={id + k}>
+          {k === "diolC"
+            ? "Diol CH₂ spacer carbons"
+            : k === "acidSpacerC"
+              ? "Diacid CH₂ spacer carbons"
+              : label}
+        </label>
         <select
+          aria-label={label}
           id={id + k}
           value={b[k]}
           disabled={disabled}
@@ -203,14 +211,22 @@ export function PolyesterDrawingInput({
   onChange,
   drawing,
   disabled = false,
-  compact = false,
 }: {
   value: string;
   onChange: (value: string) => void;
-  drawing: { note: string };
+  drawing: import("../lib/polyester").PolyesterDrawingData;
   disabled?: boolean;
   compact?: boolean;
 }) {
+  if (drawing.construction)
+    return (
+      <CondensationConstruction
+        value={value}
+        onChange={onChange}
+        drawing={drawing}
+        disabled={disabled}
+      />
+    );
   const saved = value ? readPolyesterDrawing(value) : null,
     b = saved ?? blankPolyesterDrawing();
   if (value && !saved)
@@ -231,24 +247,20 @@ export function PolyesterDrawingInput({
     );
   const atoms = polyesterRepeatAtoms(b);
   return (
-    <section className="polymerisation-drawing">
-      {!compact && <p>{drawing.note}</p>}
-      {!compact && (
-        <p>
-          Higher: construct both spacers, carbonyl O atoms, linking O atoms and
-          repeat notation from blank choices. Your response requires
-          self-review; no automatic examiner drawing mark.
-        </p>
-      )}
+    <section
+      className="polymerisation-drawing"
+      data-condensation-construction="legacy-repeat"
+    >
       <PolyesterChoices
         board={b}
         onChange={(k, v) => onChange(JSON.stringify({ ...b, [k]: v }))}
         disabled={disabled}
       />
       <PolyesterDisplayed board={b} />
-      {compact && (
-        <p>{drawing.note} Your construction is saved for manual review.</p>
-      )}
+      <p>
+        {drawing.note} Your construction is saved for manual review; no
+        automatic examiner drawing mark.
+      </p>
       <p>
         Your current repeat contributions: {atoms.C} C, {atoms.H} H and{" "}
         {atoms.O} O atoms. Incomplete bonds and wrong spacer counts are

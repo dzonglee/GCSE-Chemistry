@@ -1,0 +1,148 @@
+[
+  {
+    "label": "guided-6",
+    "b": {
+      "x": 333.1875,
+      "y": 532.03125,
+      "width": 272.15625,
+      "height": 44
+    },
+    "width": 1280,
+    "svgSizes": [
+      22,
+      22
+    ],
+    "touch": 1,
+    "dpr": 3
+  },
+  {
+    "label": "guided-8",
+    "b": {
+      "x": 339.1875,
+      "y": 513.5625,
+      "width": 861.625,
+      "height": 46
+    },
+    "width": 1280,
+    "svgSizes": [
+      18,
+      18,
+      18,
+      18,
+      18,
+      18
+    ],
+    "touch": 1,
+    "dpr": 3
+  },
+  {
+    "label": "pol-v1-p-polyester1",
+    "b": {
+      "x": 341.1875,
+      "y": 513.90625,
+      "width": 418.8125,
+      "height": 44
+    },
+    "width": 1280,
+    "svgSizes": [
+      22,
+      22
+    ],
+    "touch": 1,
+    "dpr": 3
+  },
+  {
+    "label": "pol-v1-p-polyester2",
+    "b": {
+      "x": 341.1875,
+      "y": 513.90625,
+      "width": 418.8125,
+      "height": 44
+    },
+    "width": 1280,
+    "svgSizes": [
+      22,
+      22
+    ],
+    "touch": 1,
+    "dpr": 3
+  },
+  {
+    "label": "pol-v1-p-polyester3",
+    "b": {
+      "x": 341.1875,
+      "y": 513.90625,
+      "width": 418.8125,
+      "height": 44
+    },
+    "width": 1280,
+    "svgSizes": [
+      22,
+      22
+    ],
+    "touch": 1,
+    "dpr": 3
+  },
+  {
+    "label": "pol-cond-v1-p-groups",
+    "b": {
+      "x": 339.1875,
+      "y": 500.625,
+      "width": 861.625,
+      "height": 46
+    },
+    "width": 1280,
+    "svgSizes": [
+      18,
+      18,
+      18,
+      18,
+      18,
+      18,
+      18
+    ],
+    "touch": 1,
+    "dpr": 3
+  },
+  {
+    "label": "pol-cond-v1-p-repeat",
+    "b": {
+      "x": 328.1875,
+      "y": 457.40625,
+      "width": 92.40625,
+      "height": 48.34375
+    },
+    "width": 1280,
+    "svgSizes": [
+      18
+    ],
+    "touch": 1,
+    "dpr": 3
+  },
+  {
+    "label": "wrong-repeat-built",
+    "b": {
+      "x": 328.1875,
+      "y": 457.40625,
+      "width": 92.40625,
+      "height": 48.34375
+    },
+    "width": 1280,
+    "svgSizes": [
+      18,
+      18,
+      18,
+      18,
+      18,
+      18,
+      18,
+      18,
+      18,
+      18,
+      18,
+      18
+    ],
+    "touch": 1,
+    "dpr": 3
+  }
+]

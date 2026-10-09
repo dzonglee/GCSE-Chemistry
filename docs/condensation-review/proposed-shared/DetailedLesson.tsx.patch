@@ -1,0 +1,105 @@
+--- a/src/components/DetailedLesson.tsx
++++ b/src/components/DetailedLesson.tsx
+@@ -30,0 +31 @@
++import { polymerisationForTier } from "@/content/journeys/condensation-writing";
+@@ -42 +43,2 @@
+-  const filteredLearning = mixedHaber || mixedAcid;
++  const mixedPolymer = lesson.slug === "polymers";
++  const filteredLearning = mixedHaber || mixedAcid || mixedPolymer;
+@@ -49 +51,3 @@
+-        : fullJourney;
++        : mixedPolymer
++          ? polymerisationForTier(fullJourney, data.preferences.tier)
++          : fullJourney;
+@@ -224,0 +229,4 @@
++  const compactCondensationReview =
++    mixedPolymer &&
++    work.run?.kind === "review" &&
++    work.run.ids.every((id) => id.startsWith("pol-cond-v1-"));
+@@ -227 +235,2 @@
+-    (compactIonReview ||
++    (compactCondensationReview ||
++      compactIonReview ||
+@@ -266 +275,2 @@
+-    (compactIonReview ||
++    (compactCondensationReview ||
++      compactIonReview ||
+@@ -314,0 +325,25 @@
++  const practicePicker =
++    stage === "practice" && journey.practiceGroups ? (
++      <div className="practice-task-picker">
++        <label htmlFor="choose-practice-task">Choose a practice task</label>
++        <select
++          id="choose-practice-task"
++          value={index}
++          onChange={(e) => choose(stage, Number(e.target.value))}
++        >
++          {journey.practiceGroups.map((group) => (
++            <optgroup key={group.label} label={group.label}>
++              {group.taskIds.map((id) => {
++                const i = list.findIndex((t) => t.id === id),
++                  t = list[i];
++                return t ? (
++                  <option key={id} value={i}>
++                    {i + 1}. {t.title ?? t.prompt}
++                  </option>
++                ) : null;
++              })}
++            </optgroup>
++          ))}
++        </select>
++      </div>
++    ) : null;
+@@ -447,0 +483 @@
++                mixedPolymer ||
+@@ -503 +539,2 @@
+-                (mixedHaber || mixedStates || mixedAcid) && !legacyRun
++                (mixedHaber || mixedStates || mixedAcid || mixedPolymer) &&
++                !legacyRun
+@@ -513 +550,6 @@
+-                              : haberForTier("foundation")
++                              : mixedPolymer
++                                ? polymerisationForTier(
++                                    fullJourney,
++                                    "foundation",
++                                  )
++                                : haberForTier("foundation")
+@@ -519 +561,6 @@
+-                              : haberForTier("foundation")
++                              : mixedPolymer
++                                ? polymerisationForTier(
++                                    fullJourney,
++                                    "foundation",
++                                  )
++                                : haberForTier("foundation")
+@@ -555,24 +602 @@
+-              <div className="practice-task-picker">
+-                <label htmlFor="choose-practice-task">
+-                  Choose a practice task
+-                </label>
+-                <select
+-                  id="choose-practice-task"
+-                  value={index}
+-                  onChange={(e) => choose(stage, Number(e.target.value))}
+-                >
+-                  {journey.practiceGroups.map((group) => (
+-                    <optgroup key={group.label} label={group.label}>
+-                      {group.taskIds.map((id) => {
+-                        const i = list.findIndex((t) => t.id === id),
+-                          t = list[i];
+-                        return t ? (
+-                          <option key={id} value={i}>
+-                            {i + 1}. {t.title ?? t.prompt}
+-                          </option>
+-                        ) : null;
+-                      })}
+-                    </optgroup>
+-                  ))}
+-                </select>
+-              </div>
++              !q.polyesterDrawing && practicePicker
+@@ -601 +625 @@
+-          {filteredLearning && q.tier === "higher" && (
++          {filteredLearning && !mixedPolymer && q.tier === "higher" && (
+@@ -784,0 +809 @@
++              {q.polyesterDrawing && practicePicker}

@@ -1,13 +1,25 @@
 import { test, expect, type Page, type Locator } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import { polymerisationJourney as j } from "../src/content/journeys/polymerisation";
+import { polymerisationJourney as fullJourney } from "../src/content/journeys/polymerisation";
 import {
   polymerisationRecords,
   type PolymerisationMode,
 } from "../src/lib/polymerisation";
 import { expectedPolymerisationBoard } from "../src/lib/polymerisation-board";
 import { STORAGE_KEY, REVIEW_DELAY } from "../src/lib/progress";
+import { captureCondensationNative } from "./condensation-native-capture";
+const j = {
+  ...fullJourney,
+  practice: fullJourney.practice.filter((q) => q.id.startsWith("pol-v1-")),
+  checkForms: fullJourney.checkForms.slice(0, 2),
+  reviewForms: fullJourney.reviewForms.slice(0, 2),
+};
 const route = "/lessons/polymers";
+test.beforeEach(async ({ page }) => {
+  await page.goto("/preferences");
+  await page.getByLabel("Tier", { exact: true }).selectOption("higher");
+  await saved(page);
+});
 async function saved(page: Page) {
   await expect
     .poll(() =>
@@ -151,11 +163,15 @@ for (const [, mode] of (
           () => document.documentElement.scrollWidth <= innerWidth,
         ),
       ).toBe(true);
-      await page.screenshot({
-        path: `docs/qa/polymers-${info.project.name}-${mode}.png`,
-        fullPage: true,
-        scale: "css",
-      });
+      await captureCondensationNative(page, () =>
+        page
+          .screenshot({
+            path: `test-results/qa/polymers-${info.project.name}-${mode}.png`,
+            fullPage: true,
+            scale: "css",
+          })
+          .then(() => {}),
+      );
     },
   );
 test("all41 practice tasks, blank independent drawings and teacher references retain honest review", async ({
@@ -217,10 +233,14 @@ test("all41 practice tasks, blank independent drawings and teacher references re
       await expect(page.locator(".polymerisation-review")).toBeVisible();
       if (q.polyesterDrawing) {
         await page.locator(".polymerisation-review").scrollIntoViewIfNeeded();
-        await page.screenshot({
-          path: `docs/qa/polymers-${info.project.name}-higher-reference.png`,
-          scale: "css",
-        });
+        await captureCondensationNative(page, () =>
+          page
+            .screenshot({
+              path: `test-results/qa/polymers-${info.project.name}-higher-reference.png`,
+              scale: "css",
+            })
+            .then(() => {}),
+        );
       }
     }
   }
@@ -230,6 +250,9 @@ test("both cold forms defer all drawing references and retain5 automatic marks p
   page,
 }, info) => {
   test.setTimeout(180000);
+  await page.goto("/preferences");
+  await page.getByLabel("Tier", { exact: true }).selectOption("foundation");
+  await saved(page);
   await page.goto(route);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   await answer(page, j.practice[0]);
@@ -270,10 +293,14 @@ test("both cold forms defer all drawing references and retain5 automatic marks p
       .locator(".assessment-results .polymerisation-drawing select")
       .all())
       await expect(el).toBeDisabled();
-    await page.screenshot({
-      path: `docs/qa/polymers-${info.project.name}-sealed-review.png`,
-      scale: "css",
-    });
+    await captureCondensationNative(page, () =>
+      page
+        .screenshot({
+          path: `test-results/qa/polymers-${info.project.name}-sealed-review.png`,
+          scale: "css",
+        })
+        .then(() => {}),
+    );
     await saved(page);
     if (f === 0)
       await page
@@ -285,20 +312,27 @@ test("both cold forms defer all drawing references and retain5 automatic marks p
     page.getByRole("button", { name: "Start review →", exact: true }),
   ).toHaveCount(0);
   await saved(page);
-  await page.evaluate(
-    ({ key, delay }) => {
-      const p = JSON.parse(localStorage.getItem(key)!);
-      for (const run of p.work.polymers.history)
-        run.submitted = Date.now() - delay - 1000;
-      p.work.polymers.run.submitted = Date.now() - delay - 1000;
-      localStorage.setItem(key, JSON.stringify(p));
-    },
-    { key: STORAGE_KEY, delay: REVIEW_DELAY },
+  const history = await page.evaluate(
+    (key) => JSON.parse(localStorage.getItem(key)!).work.polymers.history,
+    STORAGE_KEY,
   );
+  const submitted = history.at(-1).submitted;
+  await page.clock.setFixedTime(submitted + REVIEW_DELAY - 1);
+  await page.reload();
+  await expect(
+    page.getByRole("button", { name: "Start review →", exact: true }),
+  ).toHaveCount(0);
+  await page.clock.setFixedTime(submitted + REVIEW_DELAY + 1000);
   await page.reload();
   await page
     .getByRole("button", { name: "Start review →", exact: true })
     .click();
+  expect(
+    await page.evaluate(
+      (key) => JSON.parse(localStorage.getItem(key)!).work.polymers.history,
+      STORAGE_KEY,
+    ),
+  ).toEqual(history);
   for (let i = 0; i < 3; i++) {
     if (i)
       await page
@@ -367,7 +401,9 @@ test("3D growth reload and Undo retain actual chosen crop and permit a real down
     .click();
   await (
     await d
-  ).saveAs(`docs/qa/polymers-${info.project.name}-four-contributions.glb`);
+  ).saveAs(
+    `test-results/qa/polymers-${info.project.name}-four-contributions.glb`,
+  );
   await root.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(crop).toHaveValue("2");
   const d2 = page.waitForEvent("download");
@@ -376,12 +412,18 @@ test("3D growth reload and Undo retain actual chosen crop and permit a real down
     .click();
   await (
     await d2
-  ).saveAs(`docs/qa/polymers-${info.project.name}-two-contributions.glb`);
+  ).saveAs(
+    `test-results/qa/polymers-${info.project.name}-two-contributions.glb`,
+  );
   await root.locator(".polymerisation-canvas").scrollIntoViewIfNeeded();
-  await page.screenshot({
-    path: `docs/qa/polymers-${info.project.name}-3d.png`,
-    scale: "css",
-  });
+  await captureCondensationNative(page, () =>
+    page
+      .screenshot({
+        path: `test-results/qa/polymers-${info.project.name}-3d.png`,
+        scale: "css",
+      })
+      .then(() => {}),
+  );
 });
 test("mobile long structures retain readable labels and horizontal keyboard panning without page overflow", async ({
   page,
@@ -450,10 +492,14 @@ test("wrong independent attachments remain visible beside the reference and Clea
   ).toHaveValue("Cl");
   await expect(page.locator(".polymerisation-review")).toBeVisible();
   await root.scrollIntoViewIfNeeded();
-  await page.screenshot({
-    path: `docs/qa/polymers-${info.project.name}-retained-wrong-drawing.png`,
-    scale: "css",
-  });
+  await captureCondensationNative(page, () =>
+    page
+      .screenshot({
+        path: `test-results/qa/polymers-${info.project.name}-retained-wrong-drawing.png`,
+        scale: "css",
+      })
+      .then(() => {}),
+  );
   await root
     .getByRole("button", {
       name: "Clear this polymerisation construction",
@@ -544,8 +590,12 @@ test("unavailable WebGL preserves readable chemistry and the opening control fit
     "unavailable",
   );
   await root.locator(".polymerisation-scene").scrollIntoViewIfNeeded();
-  await page.screenshot({
-    path: `docs/qa/polymers-${info.project.name}-fallback.png`,
-    scale: "css",
-  });
+  await captureCondensationNative(page, () =>
+    page
+      .screenshot({
+        path: `test-results/qa/polymers-${info.project.name}-fallback.png`,
+        scale: "css",
+      })
+      .then(() => {}),
+  );
 });

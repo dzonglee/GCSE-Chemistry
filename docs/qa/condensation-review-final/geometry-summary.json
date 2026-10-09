@@ -1,0 +1,18 @@
+{
+  "recordedGeometryStates": 114,
+  "minimumControlHeightPx": 44,
+  "maximumFirstControlBottomPx": 663.890625,
+  "minimumRenderedSvgFontPx": 15.895877659574468,
+  "widths": [
+    320,
+    390,
+    1280
+  ],
+  "projects": [
+    "desktop",
+    "mobile"
+  ],
+  "nativeMobileDpr": 3,
+  "strictViewportComparison": true,
+  "axeViolations": 0
+}

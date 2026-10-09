@@ -1,0 +1,74 @@
+[
+  {
+    "name": "desktop",
+    "width": 1280,
+    "device": {
+      "touch": 0,
+      "dpr": 1,
+      "width": 1280,
+      "scrollWidth": 1280
+    },
+    "literalPath": [
+      "O",
+      "CH2",
+      "CH2",
+      "CH2",
+      "O",
+      "C(=O)",
+      "CH2",
+      "CH2",
+      "CH2",
+      "C(=O)"
+    ],
+    "manualStructuralCorrectFlag": false,
+    "rawDraftAndRecordedAnswerSurvivedReload": true
+  },
+  {
+    "name": "mobile",
+    "width": 320,
+    "device": {
+      "touch": 1,
+      "dpr": 3,
+      "width": 320,
+      "scrollWidth": 320
+    },
+    "literalPath": [
+      "O",
+      "CH2",
+      "CH2",
+      "CH2",
+      "O",
+      "C(=O)",
+      "CH2",
+      "CH2",
+      "CH2",
+      "C(=O)"
+    ],
+    "manualStructuralCorrectFlag": false,
+    "rawDraftAndRecordedAnswerSurvivedReload": true
+  },
+  {
+    "name": "mobile",
+    "width": 390,
+    "device": {
+      "touch": 1,
+      "dpr": 3,
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "literalPath": [
+      "O",
+      "CH2",
+      "CH2",
+      "CH2",
+      "O",
+      "C(=O)",
+      "CH2",
+      "CH2",
+      "CH2",
+      "C(=O)"
+    ],
+    "manualStructuralCorrectFlag": false,
+    "rawDraftAndRecordedAnswerSurvivedReload": true
+  }
+]

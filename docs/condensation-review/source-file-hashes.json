@@ -1,0 +1,130 @@
+{
+  "note": "Native downloads and personally inspected renderings are preserved externally under /workspace/course-audit/condensation-review/sources. Exact URLs and clauses are in research-and-design.md. Extra unused examined pages are retained as research, not evidence of a curricular gap.",
+  "files": [
+    {
+      "file": "june2018-h-ms.pdf",
+      "bytes": 267522,
+      "sha256": "bfbecf6a6c7c53347d4f655a082e79644253e08ea31d8f470bfaffda8f0118c0"
+    },
+    {
+      "file": "june2018-h-qp.pdf",
+      "bytes": 1502705,
+      "sha256": "3d2f9e259a9c5f65520a7d269a63ea5f0bdbd1dfb6bb31827e9db8a58025fe26"
+    },
+    {
+      "file": "june2022-h-ms.pdf",
+      "bytes": 397785,
+      "sha256": "96533f4750bc9348c01e823341ef3bd0e9616dce12af04e37ecd9d06b99012c1"
+    },
+    {
+      "file": "june2022-h-qp.pdf",
+      "bytes": 3042253,
+      "sha256": "01611208a1552bbe14bcabb55b0c8e99a72e0e0f8d8958a6de4981a8b783ad23"
+    },
+    {
+      "file": "june2023-h-ms.pdf",
+      "bytes": 551253,
+      "sha256": "44b55a549ce1490c41c31a54d57acb32c64f5368b29fa38e12b8fb7dfcedab53"
+    },
+    {
+      "file": "june2023-h-qp.pdf",
+      "bytes": 1225094,
+      "sha256": "8881c2ab53a769ac9eabb4968bc02227469ee37412779de2d498d2b90ddf29e5"
+    },
+    {
+      "file": "ms18-14.png",
+      "bytes": 124301,
+      "sha256": "511e4a829719ceff24a8cdc8c1ec30bf8a3ce313a788275ab37fcf0501991c7b"
+    },
+    {
+      "file": "ms20-17.png",
+      "bytes": 37373,
+      "sha256": "ce776be7e85b8d1df0dc0d7c1b640eaea69c2f56d4af5e9647ecaf56e7230b68"
+    },
+    {
+      "file": "ms21-15.png",
+      "bytes": 51387,
+      "sha256": "b03ec965303c90b0513a896a3119d7a16a420ef06e6d44dc17ca119ec5ef7ead"
+    },
+    {
+      "file": "ms23-10.png",
+      "bytes": 96602,
+      "sha256": "377eaa882bd1874e5b432c35581ade8e152f55040fe415e0fbc3b9b743858b97"
+    },
+    {
+      "file": "ms23-11.png",
+      "bytes": 149816,
+      "sha256": "23a7a14a0f1c9b7baa89acd48d3d36ac6da26ef4b10fdbdd51cd18fa85fab9e1"
+    },
+    {
+      "file": "nov2020-h-qp.pdf",
+      "bytes": 1688287,
+      "sha256": "21b1f6587609f6499d174c706b695cfca3b204e4952bdb26ff4dad50963e7682"
+    },
+    {
+      "file": "nov2020-h-w-ms.pdf",
+      "bytes": 453509,
+      "sha256": "636e67ad307fbb4c82b76b2f32862b877edfef3644f71c1c8775c35c5679a8fc"
+    },
+    {
+      "file": "nov2021-h-ms.pdf",
+      "bytes": 388278,
+      "sha256": "b619f00759ea90e8cc891c39eff68a26db0bffb52fb39b333df50c8fe7c8b6fa"
+    },
+    {
+      "file": "nov2021-h-qp.pdf",
+      "bytes": 2377787,
+      "sha256": "24a0f4f37ba8867f520b9a8141500d3335856751bbc2f1d82c6cbf9afa60d7a7"
+    },
+    {
+      "file": "qp18-15.png",
+      "bytes": 19157,
+      "sha256": "8c80f9be681a8ed17d04378cc4dd66ba55c1b3da864376e8aff3d17877baca01"
+    },
+    {
+      "file": "qp18-16.png",
+      "bytes": 90745,
+      "sha256": "b72ff46ac7055f4cc006f98285bcd6beddfe3f45a876769be2b6309ac09d3e26"
+    },
+    {
+      "file": "qp20-20.png",
+      "bytes": 79203,
+      "sha256": "35c363afe70579765c4b6b5f8af3baca645a1b877aa63b1e3839cc1f17a4f017"
+    },
+    {
+      "file": "qp21-14.png",
+      "bytes": 83663,
+      "sha256": "344d48cee388db49ac946e882c4b0f307e7879a438b20580f88a7a44a004452a"
+    },
+    {
+      "file": "qp23-9.png",
+      "bytes": 64209,
+      "sha256": "0f163a51fd2d8294d074a0cbdff6fd7f9153c5526b2a461ce12f4954f2ea6227"
+    },
+    {
+      "file": "rsc-3.png",
+      "bytes": 112232,
+      "sha256": "d59498336bada758f30646a5ae7f6f05cd6e64f126fce0fb4e726161485d9eec"
+    },
+    {
+      "file": "rsc-4.png",
+      "bytes": 147414,
+      "sha256": "3b687adbb7d8022a7b9bd6784946cb1ddc06e36c301bccbf6f9c396c97737901"
+    },
+    {
+      "file": "rsc-condensation-teacher.pdf",
+      "bytes": 808248,
+      "sha256": "4e854c815634d725157b449ddd162cd33295b54e8dc761163ba492680631a086"
+    },
+    {
+      "file": "spec-69.png",
+      "bytes": 151174,
+      "sha256": "0d49a48e264df7f8a0088f5da5cd694a10da9160aad0ce72ef26d16b926da742"
+    },
+    {
+      "file": "specification.pdf",
+      "bytes": 2700708,
+      "sha256": "ecd869d1874091a0a52abaeb8fce238a9c1cc207698713dfb66788eb0d448d43"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import type { FourGroups } from "../lib/polymerisation";
 import type { PolyesterDrawingData } from "../lib/polyester";
 import { PolymerisationDisplayed } from "./PolymerisationDisplayed";
 import { PolyesterDisplayed } from "./PolyesterConstruction";
+import { CondensationReference } from "./CondensationConstruction";
 export function PolymerisationReview({
   question: q,
 }: {
@@ -39,24 +40,29 @@ export function PolymerisationReview({
     return (
       <section className="polymerisation-review">
         <h3>Reference for your Higher self-review</h3>
-        <PolyesterDisplayed
-          reference
-          board={{
-            diolC: String(d.diolC),
-            acidSpacerC: String(d.acidSpacerC),
-            leftO: "1",
-            middleO: "1",
-            carbonyl1: "2",
-            carbonyl2: "2",
-            left: "1",
-            right: "1",
-            brackets: "1",
-            countMark: "n",
-          }}
-        />
+        {d.construction ? (
+          <CondensationReference data={d} />
+        ) : (
+          <PolyesterDisplayed
+            reference
+            board={{
+              diolC: String(d.diolC),
+              acidSpacerC: String(d.acidSpacerC),
+              leftO: "1",
+              middleO: "1",
+              carbonyl1: "2",
+              carbonyl2: "2",
+              left: "1",
+              right: "1",
+              brackets: "1",
+              countMark: "n",
+            }}
+          />
+        )}
         <p>
-          The reference retains both original spacers, both carbonyls and both
-          alcohol-derived linking oxygens. Equivalent repeat phases are valid.
+          {d.construction === "groups"
+            ? "Check both complete alcohol groups and both complete carboxylic-acid groups."
+            : "The reference retains both original spacers, both carbonyls and both alcohol-derived linking oxygens. Equivalent repeat phases are valid."}
           Compare your retained response and the criteria; no examiner drawing
           mark is awarded.
         </p>

@@ -1,0 +1,111 @@
+{
+  "baseline": "4d86f94963e09812847fcac076e9b99d9f1a02f6",
+  "note": "No-Git unified patches against preserved source copies are under /workspace/course-audit/condensation-review/final/owned-patches. These 15 source/test files plus docs/condensation-review and representative docs/qa images are the owned branch changes. Five shared application files remain unmodified in the branch; their proposed patches are separate.",
+  "files": [
+    {
+      "path": "src/components/PolyesterConstruction.tsx",
+      "newFile": false,
+      "beforeSha256": "47a3c25032db243edade0c6f9d3ce405052bae6aaf98c403feb70f09f8bad192",
+      "afterSha256": "683764d631a7547005f7808e81695be0f4653f34be8d66bcc388f5585d290588",
+      "unifiedPatch": "src__components__PolyesterConstruction.tsx.patch"
+    },
+    {
+      "path": "src/components/PolymerisationReview.tsx",
+      "newFile": false,
+      "beforeSha256": "1a26a3335ba8316e7f2ca1cb9fef2e5e57e937823df6e329fcb9e33b5c281e38",
+      "afterSha256": "81ba036225833e7c26c719ecf49e51f91b26c1f84a9dbfdb3c10a6c78119ff94",
+      "unifiedPatch": "src__components__PolymerisationReview.tsx.patch"
+    },
+    {
+      "path": "src/components/PolymerisationWorkbench.tsx",
+      "newFile": false,
+      "beforeSha256": "f871bf61f471b9d9e090b814164f97c2be8df13eab404007981e62faf4acaf51",
+      "afterSha256": "19a1955988e214fa8c71e6a422defd13fd56bd6fb2f8f034d7a9641a570aa4a8",
+      "unifiedPatch": "src__components__PolymerisationWorkbench.tsx.patch"
+    },
+    {
+      "path": "src/content/journeys/polymerisation.ts",
+      "newFile": false,
+      "beforeSha256": "fc6692a969e743c978078b3213a40e3ccdacd96a8181da1da56d5376632d70c4",
+      "afterSha256": "1e9ded9377a553273b772bcad62b2cebda3880b6581045e0d9f9ec0667f7ec86",
+      "unifiedPatch": "src__content__journeys__polymerisation.ts.patch"
+    },
+    {
+      "path": "src/lib/polyester.ts",
+      "newFile": false,
+      "beforeSha256": "cd507162235d12188b2251c4fdd0f3109c334dd30ea10c509ebb2c710272c00c",
+      "afterSha256": "d2233fda34cebcc87c5c25d1edc99cb5e559fee0599a0dded4f6ab9cab1128bf",
+      "unifiedPatch": "src__lib__polyester.ts.patch"
+    },
+    {
+      "path": "tests/polymerisation.browser.spec.ts",
+      "newFile": false,
+      "beforeSha256": "ccf89bba25509e8ecd4d0cccf736324d86582ba04e79d69bbdef0d9426b5ca6a",
+      "afterSha256": "94c2e19bc92304df6bc856f190bf66470ce16bc28b8b2579dc4b44c1302c4e49",
+      "unifiedPatch": "tests__polymerisation.browser.spec.ts.patch"
+    },
+    {
+      "path": "tests/polymerisation.unit.spec.ts",
+      "newFile": false,
+      "beforeSha256": "8da61c688adbc15f572a0c9f33a084f4add5175d9b84777ef1901cd2ddeb857f",
+      "afterSha256": "cedf0bd1e55476200e3579fc65b855668428c858a421473561fd10c51f5e412f",
+      "unifiedPatch": "tests__polymerisation.unit.spec.ts.patch"
+    },
+    {
+      "path": "src/app/condensation.css",
+      "newFile": true,
+      "beforeSha256": null,
+      "afterSha256": "d3d9ef79a003f1323476e2424a561aedfc562a9a9b637d92e83b6db064099f1a",
+      "unifiedPatch": "src__app__condensation.css.patch"
+    },
+    {
+      "path": "src/components/CondensationConstruction.tsx",
+      "newFile": true,
+      "beforeSha256": null,
+      "afterSha256": "451e10a4a703ac3fea9dea9fc0c6cbde7c477a5dea7a265f0f24e10f3f08db56",
+      "unifiedPatch": "src__components__CondensationConstruction.tsx.patch"
+    },
+    {
+      "path": "src/content/journeys/condensation-writing.ts",
+      "newFile": true,
+      "beforeSha256": null,
+      "afterSha256": "1b438e52dff30d799f6883a8ee4b60bd26bd1d9f3105608f9b3b38b7fcb89709",
+      "unifiedPatch": "src__content__journeys__condensation-writing.ts.patch"
+    },
+    {
+      "path": "src/lib/condensation-drawing.ts",
+      "newFile": true,
+      "beforeSha256": null,
+      "afterSha256": "07398a5bbbcce17965f0da42a8742ff0511a066952635bfdedd337c38994cab4",
+      "unifiedPatch": "src__lib__condensation-drawing.ts.patch"
+    },
+    {
+      "path": "tests/condensation-native-capture.ts",
+      "newFile": true,
+      "beforeSha256": null,
+      "afterSha256": "8c156a84a908444c86a000db6fcacae9999769470d64e0f6ae44525da4ab65cd",
+      "unifiedPatch": "tests__condensation-native-capture.ts.patch"
+    },
+    {
+      "path": "tests/condensation-review.browser.spec.ts",
+      "newFile": true,
+      "beforeSha256": null,
+      "afterSha256": "5f5aedbdc605cdf459e81d51a8238a7b94a6bc58d8742e5423c027c8b72833ad",
+      "unifiedPatch": "tests__condensation-review.browser.spec.ts.patch"
+    },
+    {
+      "path": "tests/condensation-review.unit.spec.ts",
+      "newFile": true,
+      "beforeSha256": null,
+      "afterSha256": "9865ad7552abf84519fcb931c990df32f05d24836ce0a3adbeb4445d703fae47",
+      "unifiedPatch": "tests__condensation-review.unit.spec.ts.patch"
+    },
+    {
+      "path": "tests/fixtures/polymerisation-v1-before-condensation.json",
+      "newFile": true,
+      "beforeSha256": null,
+      "afterSha256": "f7ac781d01af3cecb9ea9223a474e873b4953a1ba1355483cd69aae32899dae2",
+      "unifiedPatch": "tests__fixtures__polymerisation-v1-before-condensation.json.patch"
+    }
+  ]
+}

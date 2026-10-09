@@ -2,6 +2,7 @@ export interface PolyesterDrawingData {
   note: string;
   diolC: number;
   acidSpacerC: number;
+  construction?: "groups" | "sequence";
 }
 export const polyesterRecords: Record<
   string,

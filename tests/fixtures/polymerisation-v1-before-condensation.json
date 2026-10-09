@@ -1,0 +1,2964 @@
+{
+  "version": 1,
+  "introduction": "Construct an addition-polymer repeat, reconstruct its alkene monomer and preserve every original side group. Higher extensions build polyester repeats and distinguish actual condensation links from end-omitted notation.",
+  "scopeNote": "Separate Chemistry: actual AQA8462 4.7.3.1–2 and limited Pearson9.17C–24C, paired2023 Foundation02/Higher08 questions and mark schemes, and actual RSC addition/condensation worksheets informed this original lesson. Addition transformations require no mechanisms or conditions. PVC/PTFE names are supplied for structural deduction. Condensation is clearly labelled Higher; acid-chloride examples are provided extensions with no acid-chloride recall required. Independent checks cover the shared/Foundation addition and structure-change demands; Higher construction/explanation tasks require independent self-review in practice. Earlier Polymer structures teaches physical structure/state; natural polymers and waste/material decisions have their later lessons. Every written/drawn response requires self-review, with no automatic examiner mark. Whole-course coverage and exam readiness remain unfinished.",
+  "outcomes": [
+    "Represent alkene addition with single backbone bonds, original side groups, bracket continuations and lower-case n.",
+    "Deduce separate monomers from repeating units without losing or rearranging substituents.",
+    "Distinguish a monomer-derived repeat contribution, an equivalent phase, a crop and a complete molecule.",
+    "Conserve atom inventories and supplied relative-mass contributions without inventing end groups or addition by-products.",
+    "Distinguish covalent chemical changes from supplied intact-chain physical changes and use actual material evidence.",
+    "Higher: construct a diol/diacid-derived polyester repeat with both spacers, carbonyls and alcohol-derived linking oxygens.",
+    "Higher: explain functional-group requirements, small-molecule loss and context-specific finite-link versus idealised repeat counts."
+  ],
+  "warmup": [
+    {
+      "id": "pol-v1-w-double",
+      "title": "Recognise the reacting group",
+      "purpose": "Recognise the reacting group",
+      "prompt": "Which supplied bond permits ordinary alkene addition polymerisation?",
+      "answer": "C=C",
+      "options": [
+        "C–C only",
+        "C–H only",
+        "C=C"
+      ],
+      "misconceptions": {
+        "C–C only": "A saturated alkane lacks the required alkene double bond.",
+        "C–H only": "C–H is retained in the supplied alkene transformation."
+      },
+      "explanation": "The alkene C=C functional group reacts; the carbon skeleton and its side groups remain.",
+      "hint": "Look for carbon–carbon unsaturation.",
+      "exposureAliases": [
+        "pol-v1-r-double",
+        "pol-v1-p-bromine"
+      ]
+    },
+    {
+      "id": "pol-v1-w-carbon",
+      "title": "Recall carbon bonding",
+      "purpose": "Recall carbon bonding",
+      "prompt": "How many covalent bond orders does a neutral carbon normally have in these displayed structures?",
+      "answer": "Four",
+      "options": [
+        "Two",
+        "Five",
+        "Four"
+      ],
+      "misconceptions": {
+        "Two": "A double bond contributes two, but carbon needs four in total.",
+        "Five": "Five exceeds the normal carbon valence in these examples."
+      },
+      "explanation": "Count a single bond as one and a double bond as two.",
+      "hint": "Count bond orders rather than neighbouring atoms alone.",
+      "exposureAliases": [
+        "pol-v1-r-outward",
+        "pol-v1-p-bond",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond"
+      ]
+    }
+  ],
+  "refresher": [
+    {
+      "id": "pol-v1-r-monomer",
+      "title": "Small molecule to long chain",
+      "purpose": "Small molecule to long chain",
+      "prompt": "Which description distinguishes a monomer from its addition polymer?",
+      "answer": "A small molecule joins with many others into a very large chain molecule",
+      "options": [
+        "A small molecule joins with many others into a very large chain molecule",
+        "A monomer is an unchanged catalyst",
+        "The polymer must be a diamond-like network"
+      ],
+      "misconceptions": {
+        "A monomer is an unchanged catalyst": "Its atoms become part of the polymer.",
+        "The polymer must be a diamond-like network": "Ordinary addition polymer chains are large molecules, not automatically a three-dimensional covalent network."
+      },
+      "explanation": "Many separate monomer molecules become part of the same covalently bonded chain.",
+      "hint": "Track what joins.",
+      "exposureAliases": [
+        "pol-v1-p-molecules",
+        "pol-v1-a-explain",
+        "pol-v1-rb-change",
+        "polymers-2",
+        "path-v1-r-polymer",
+        "path-v1-p-addition-polymer",
+        "path-v1-d2-explain",
+        "ps-v1-r-chain",
+        "ps-v1-r-forces",
+        "ps-v1-r-phase",
+        "ps-v1-g-chain",
+        "ps-v1-g-separation",
+        "ps-v1-g-phase",
+        "ps-v1-p-recognise",
+        "ps-v1-p-bond",
+        "ps-v1-p-separation",
+        "ps-v1-p-state",
+        "ps-v1-p-physical",
+        "ps-v1-p-limits",
+        "ps-v1-p-compound",
+        "ps-v1-p-explain",
+        "ps-v1-p-compare",
+        "ps-write-v1-p-correction",
+        "ps-v1-ca-type",
+        "ps-v1-ca-force",
+        "ps-v1-ca-state",
+        "ps-v1-cb-recognise",
+        "ps-v1-cb-change",
+        "ps-v1-cb-limit",
+        "ps-write-v1-ca-state",
+        "ps-write-v1-ca-separate",
+        "ps-v1-ra-type",
+        "ps-v1-ra-state",
+        "ps-v1-rb-separation",
+        "ps-v1-rb-network",
+        "ps-write-v1-ra-model",
+        "ps-write-v1-ra-contrast",
+        "ps-write-v1-ra-evidence",
+        "polymers-5",
+        "pol-v1-r-forces",
+        "pol-v1-p-melt",
+        "pol-v1-b-explain",
+        "path-v1-g-polymer",
+        "materials-v1-w-bond",
+        "materials-v1-r-soft",
+        "materials-v1-r-set",
+        "materials-v1-g-polymer",
+        "materials-v1-p-thermal",
+        "materials-v1-cA-polymer",
+        "materials-v1-vA-thermal"
+      ]
+    },
+    {
+      "id": "pol-v1-r-double",
+      "title": "Find C=C",
+      "purpose": "Find C=C",
+      "prompt": "In chloroethene, which functional group enables addition polymerisation?",
+      "answer": "The carbon–carbon double bond",
+      "options": [
+        "The carbon–hydrogen bonds alone",
+        "The carbon–carbon double bond",
+        "The chlorine alone"
+      ],
+      "misconceptions": {
+        "The chlorine alone": "C–Cl remains; it is not the reacting alkene group.",
+        "The carbon–hydrogen bonds alone": "Those bonds are retained in the repeating unit."
+      },
+      "explanation": "Circle the C=C group when recognising the polymerising alkene.",
+      "hint": "Separate the reacting group from a substituent.",
+      "exposureAliases": [
+        "pol-v1-w-double",
+        "pol-v1-p-bromine"
+      ]
+    },
+    {
+      "id": "pol-v1-r-single",
+      "title": "Change the reacting bond",
+      "purpose": "Change the reacting bond",
+      "prompt": "What happens to C=C in the ordinary addition-polymer backbone?",
+      "answer": "It becomes a C–C single bond",
+      "options": [
+        "It becomes a C–C single bond",
+        "It stays C=C throughout the backbone",
+        "Both carbon atoms disappear"
+      ],
+      "misconceptions": {
+        "It stays C=C throughout the backbone": "That would leave insufficient valence for the two outward chain connections.",
+        "Both carbon atoms disappear": "They remain as backbone atoms."
+      },
+      "explanation": "Each former alkene carbon forms one new outward single bond to an adjacent unit.",
+      "hint": "Keep four bond orders at each carbon.",
+      "exposureAliases": [
+        "pol-v1-r-groups",
+        "pol-v1-g-addition",
+        "pol-v1-p-ethene",
+        "pol-v1-p-propene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but1",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-p-bond",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "polymers-1"
+      ]
+    },
+    {
+      "id": "pol-v1-r-groups",
+      "title": "Preserve substituents",
+      "purpose": "Preserve substituents",
+      "prompt": "When propene forms poly(propene), what happens to its CH3 group?",
+      "answer": "It remains a side group on the same original reacting carbon",
+      "options": [
+        "It remains a side group on the same original reacting carbon",
+        "It leaves as methane",
+        "Its carbon must become a third backbone carbon per unit"
+      ],
+      "misconceptions": {
+        "It leaves as methane": "No small molecule is eliminated in addition polymerisation.",
+        "Its carbon must become a third backbone carbon per unit": "The two reacting C=C carbons become the backbone pair."
+      },
+      "explanation": "The C3H6 inventory is retained; two C are in the backbone and one in the methyl substituent.",
+      "hint": "Trace the atoms rather than changing the formula.",
+      "exposureAliases": [
+        "pol-v1-r-single",
+        "pol-v1-g-addition",
+        "pol-v1-p-ethene",
+        "pol-v1-p-propene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but1",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-p-bond",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "pol-v1-g-segment",
+        "pol-v1-p-connectivity",
+        "pol-v1-p-equivalent",
+        "pol-v1-b-connectivity",
+        "polymers-1"
+      ]
+    },
+    {
+      "id": "pol-v1-r-outward",
+      "title": "Keep carbon valence",
+      "purpose": "Keep carbon valence",
+      "prompt": "After C=C becomes C–C, how many new outward chain bonds does EACH original alkene carbon form?",
+      "answer": "One",
+      "options": [
+        "One",
+        "Two",
+        "None"
+      ],
+      "misconceptions": {
+        "Two": "Two extra outward bonds per carbon would exceed carbon valence.",
+        "None": "The monomer-derived units must connect to neighbouring units."
+      },
+      "explanation": "One outward bond per carbon means two outward bonds for the two-carbon repeat altogether.",
+      "hint": "Distinguish each carbon from each two-carbon unit.",
+      "exposureAliases": [
+        "pol-v1-w-carbon",
+        "pol-v1-p-bond",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond"
+      ]
+    },
+    {
+      "id": "pol-v1-r-halogen",
+      "title": "Retain halogens",
+      "purpose": "Retain halogens",
+      "prompt": "In the supplied tetrafluoroethene-to-PTFE transformation, what leaves as a small product?",
+      "answer": "Nothing: all four F atoms remain in the repeat",
+      "options": [
+        "Hydrogen fluoride",
+        "Nothing: all four F atoms remain in the repeat",
+        "Four fluorine atoms"
+      ],
+      "misconceptions": {
+        "Four fluorine atoms": "That loses atoms from the addition product.",
+        "Hydrogen fluoride": "No H is present in this supplied monomer, and addition eliminates no small molecule."
+      },
+      "explanation": "A C2F4 repeat has the same atoms as the C2F4 monomer.",
+      "hint": "Check both atom identity and reaction type.",
+      "exposureAliases": [
+        "pol-v1-r-inventory",
+        "pol-v1-g-inventory",
+        "pol-v1-p-H",
+        "pol-v1-p-Cl",
+        "pol-v1-p-mass",
+        "pol-v1-a-products",
+        "pol-v1-a-Cl",
+        "pol-v1-b-product",
+        "pol-v1-ra-Cl",
+        "polymers-3"
+      ]
+    },
+    {
+      "id": "pol-v1-r-brackets",
+      "title": "Read a repeat",
+      "purpose": "Read a repeat",
+      "prompt": "What do outward bonds passing through repeat brackets mean?",
+      "answer": "The covalent chain continues beyond the shown unit",
+      "options": [
+        "Extra H atoms must cap both ends",
+        "The unit is disconnected from its neighbours",
+        "The covalent chain continues beyond the shown unit"
+      ],
+      "misconceptions": {
+        "Extra H atoms must cap both ends": "The brackets represent a repeating contribution, not a completed small alkane.",
+        "The unit is disconnected from its neighbours": "The continuation bonds mean the opposite."
+      },
+      "explanation": "Single bonds through both brackets connect repeated contributions.",
+      "hint": "A crop is not a complete molecule.",
+      "exposureAliases": [
+        "pol-v1-r-n",
+        "pol-v1-g-segment",
+        "pol-v1-p-n",
+        "pol-v1-p-end",
+        "pol-v1-p-monomer-unit",
+        "pol-v1-a-n",
+        "pol-v1-ra-n",
+        "ps-v1-p-crossing"
+      ]
+    },
+    {
+      "id": "pol-v1-r-n",
+      "title": "Use repeat notation",
+      "purpose": "Use repeat notation",
+      "prompt": "Which notation convention is appropriate for an addition-polymer repeat?",
+      "answer": "Lower-case n outside the brackets at the lower right",
+      "options": [
+        "A number written as an extra atom",
+        "Lower-case n outside the brackets at the lower right",
+        "Upper-case N inside the unit"
+      ],
+      "misconceptions": {
+        "Upper-case N inside the unit": "N is also the element symbol for nitrogen and is not the specified repeat-count convention.",
+        "A number written as an extra atom": "The repeat count is notation, not another atom."
+      },
+      "explanation": "The brackets enclose the unit; n indicates many repetitions.",
+      "hint": "Keep count notation separate from the atomic structure.",
+      "exposureAliases": [
+        "pol-v1-r-brackets",
+        "pol-v1-g-segment",
+        "pol-v1-p-n",
+        "pol-v1-p-end",
+        "pol-v1-p-monomer-unit",
+        "pol-v1-a-n",
+        "pol-v1-ra-n",
+        "ps-v1-p-n"
+      ]
+    },
+    {
+      "id": "pol-v1-r-reverse",
+      "title": "Recover a monomer",
+      "purpose": "Recover a monomer",
+      "prompt": "What change reconstructs a separate alkene from an addition-polymer-derived two-carbon repeat?",
+      "answer": "Restore C=C and retain its original side groups",
+      "options": [
+        "Keep both continuation bonds and n",
+        "Restore C=C and retain its original side groups",
+        "Delete halogens and add H"
+      ],
+      "misconceptions": {
+        "Delete halogens and add H": "That changes the original atom inventory.",
+        "Keep both continuation bonds and n": "Those belong to the polymer representation, not the separate monomer."
+      },
+      "explanation": "Remove polymer notation and continuation bonds; restore the alkene double bond.",
+      "hint": "Trace the same pair of carbons in reverse.",
+      "exposureAliases": [
+        "pol-v1-g-reverse",
+        "pol-v1-p-reverse-cl",
+        "pol-v1-p-reverse-fl",
+        "pol-v1-p-reverse-but1",
+        "pol-v1-p-reverse-cl12",
+        "pol-v1-a-reverse",
+        "pol-v1-b-reverse",
+        "pol-v1-rb-reverse"
+      ]
+    },
+    {
+      "id": "pol-v1-r-name",
+      "title": "Name poly(propene)",
+      "purpose": "Name poly(propene)",
+      "prompt": "Which name follows from addition polymerisation of propene?",
+      "answer": "Poly(propene)",
+      "options": [
+        "Poly(propene)",
+        "Poly(propane)",
+        "Propane"
+      ],
+      "misconceptions": {
+        "Poly(propane)": "The monomer was propene; changing the ending changes its identity.",
+        "Propane": "This names a small alkane, not the polymer."
+      },
+      "explanation": "Use poly followed by the unchanged monomer name in parentheses.",
+      "hint": "Keep the monomer name.",
+      "exposureAliases": [
+        "pol-v1-p-name",
+        "pol-v1-a-name"
+      ]
+    },
+    {
+      "id": "pol-v1-r-inventory",
+      "title": "Keep all atoms",
+      "purpose": "Keep all atoms",
+      "prompt": "Which comparison is true for an ordinary addition monomer and its monomer-derived repeat?",
+      "answer": "They contain the same atoms",
+      "options": [
+        "The repeat always loses H2O",
+        "The repeat always gains two terminal H",
+        "They contain the same atoms"
+      ],
+      "misconceptions": {
+        "The repeat always loses H2O": "That is not ordinary addition polymerisation.",
+        "The repeat always gains two terminal H": "Repeat ends indicate continuation, not capping atoms."
+      },
+      "explanation": "No other molecule is formed in addition polymerisation.",
+      "hint": "Compare repeat contributions, not hypothetical chain end groups.",
+      "exposureAliases": [
+        "pol-v1-r-halogen",
+        "pol-v1-g-inventory",
+        "pol-v1-p-H",
+        "pol-v1-p-Cl",
+        "pol-v1-p-mass",
+        "pol-v1-a-products",
+        "pol-v1-a-Cl",
+        "pol-v1-b-product",
+        "pol-v1-ra-Cl",
+        "polymers-3"
+      ]
+    },
+    {
+      "id": "pol-v1-r-mass",
+      "title": "Multiply a repeat contribution",
+      "purpose": "Multiply a repeat contribution",
+      "prompt": "A supplied C2H4 repeat contribution has relative mass28. What is the contribution from three such units, ignoring omitted ends?",
+      "answer": "84",
+      "unit": "relative-mass contribution",
+      "explanation": "3 × 28 = 84; this is a stated repeat contribution, not an exact whole-chain Mr.",
+      "hint": "Multiply the supplied per-unit contribution by three.",
+      "exposureAliases": [
+        "pol-v1-p-Mr",
+        "pol-v1-b-Mr"
+      ]
+    },
+    {
+      "id": "pol-v1-r-forces",
+      "title": "Separate melting from polymerisation",
+      "purpose": "Separate melting from polymerisation",
+      "prompt": "In a supplied thermoplastic melting comparison, what changes without cutting its polymer backbone?",
+      "answer": "Intermolecular attractions are overcome while chain covalent bonds remain",
+      "options": [
+        "Intermolecular attractions are overcome while chain covalent bonds remain",
+        "Every chain bond must break",
+        "No forces matter"
+      ],
+      "misconceptions": {
+        "Every chain bond must break": "That describes a chemical change, not this intact-chain physical change.",
+        "No forces matter": "Energy is needed to overcome attractions between the molecules."
+      },
+      "explanation": "Polymerisation forms covalent chain connections; this melting comparison separates intact molecules.",
+      "hint": "Distinguish within-chain from between-chain bonding.",
+      "exposureAliases": [
+        "pol-v1-p-melt",
+        "pol-v1-a-explain",
+        "pol-v1-b-explain",
+        "pol-v1-rb-change",
+        "polymers-5",
+        "ps-v1-r-forces",
+        "ps-v1-p-physical",
+        "ps-v1-r-chain",
+        "ps-v1-r-phase",
+        "ps-v1-g-chain",
+        "ps-v1-g-separation",
+        "ps-v1-g-phase",
+        "ps-v1-p-recognise",
+        "ps-v1-p-bond",
+        "ps-v1-p-separation",
+        "ps-v1-p-state",
+        "ps-v1-p-limits",
+        "ps-v1-p-compound",
+        "ps-v1-p-explain",
+        "ps-v1-p-compare",
+        "ps-write-v1-p-correction",
+        "ps-v1-ca-type",
+        "ps-v1-ca-force",
+        "ps-v1-ca-state",
+        "ps-v1-cb-recognise",
+        "ps-v1-cb-change",
+        "ps-v1-cb-limit",
+        "ps-write-v1-ca-state",
+        "ps-write-v1-ca-separate",
+        "ps-v1-ra-type",
+        "ps-v1-ra-state",
+        "ps-v1-rb-separation",
+        "ps-v1-rb-network",
+        "ps-write-v1-ra-model",
+        "ps-write-v1-ra-contrast",
+        "ps-write-v1-ra-evidence",
+        "polymers-2",
+        "pol-v1-r-monomer",
+        "pol-v1-p-molecules",
+        "path-v1-r-polymer",
+        "path-v1-g-polymer",
+        "path-v1-p-addition-polymer",
+        "path-v1-d2-explain",
+        "materials-v1-w-bond",
+        "materials-v1-r-soft",
+        "materials-v1-r-set",
+        "materials-v1-g-polymer",
+        "materials-v1-p-thermal",
+        "materials-v1-cA-polymer",
+        "materials-v1-vA-thermal"
+      ]
+    },
+    {
+      "id": "pol-v1-r-functional",
+      "title": "Higher: two reactive groups",
+      "purpose": "Higher: two reactive groups",
+      "prompt": "Why can the supplied diol and diacid continue forming a polyester chain?",
+      "answer": "Each molecule has two reactive functional groups",
+      "options": [
+        "Their names both contain carbon",
+        "Any alcohol with one OH must form an indefinitely alternating chain",
+        "Each molecule has two reactive functional groups"
+      ],
+      "misconceptions": {
+        "Their names both contain carbon": "Carbon alone does not provide the two functional groups.",
+        "Any alcohol with one OH must form an indefinitely alternating chain": "A monofunctional reagent cannot continue the chain in both directions."
+      },
+      "explanation": "Two reactive ends permit repeated ester-link formation.",
+      "hint": "Count the actual functional groups.",
+      "exposureAliases": [
+        "pol-v1-g-ester",
+        "pol-v1-p-stopper",
+        "pol-v1-p-condensation"
+      ]
+    },
+    {
+      "id": "pol-v1-r-water",
+      "title": "Higher: form one small molecule",
+      "purpose": "Higher: form one small molecule",
+      "prompt": "In a supplied diacid/diol ester link, which fragments form water?",
+      "answer": "Acid OH plus the H bonded to alcohol oxygen",
+      "options": [
+        "The entire acid COOH plus the entire alcohol OH",
+        "Both carbonyl oxygens",
+        "Acid OH plus the H bonded to alcohol oxygen"
+      ],
+      "misconceptions": {
+        "The entire acid COOH plus the entire alcohol OH": "That would remove the carbonyl carbon and linking oxygen.",
+        "Both carbonyl oxygens": "Carbonyl O is retained in the polyester."
+      },
+      "explanation": "The alcohol oxygen remains in the ester link; the acid OH and alcohol H form H2O.",
+      "hint": "Track O and H individually.",
+      "exposureAliases": [
+        "pol-v1-g-ester",
+        "pol-v1-p-water",
+        "pol-v1-p-condensation",
+        "alc-v1-r-ester",
+        "alc-v1-p-ester",
+        "alc-v1-b-ester"
+      ]
+    },
+    {
+      "id": "pol-v1-r-spacer",
+      "title": "Higher: include the carboxyl carbons",
+      "purpose": "Higher: include the carboxyl carbons",
+      "prompt": "HOOC–CH2–CH2–CH2–CH2–COOH has how many C atoms?",
+      "answer": "6",
+      "unit": "C atoms",
+      "explanation": "Four CH2 spacer carbons plus two carboxyl carbons give six.",
+      "hint": "Each COOH also contains a carbon.",
+      "exposureAliases": [
+        "pol-v1-g-polyester",
+        "pol-v1-p-polyester1",
+        "pol-v1-p-polyester2",
+        "pol-v1-p-polyester3",
+        "pol-v1-p-poly-C",
+        "pol-v1-p-poly-O"
+      ]
+    },
+    {
+      "id": "pol-v1-r-links",
+      "title": "Higher: count a finite open chain",
+      "purpose": "Higher: count a finite open chain",
+      "prompt": "Five supplied monomer-derived nodes form ONE open, unbranched chain. Each connecting condensation link releases one water. How many waters form?",
+      "answer": "4",
+      "unit": "water molecules",
+      "explanation": "A five-node open chain has four actual links. End groups are retained in this finite model.",
+      "hint": "Count the connections between nodes.",
+      "exposureAliases": [
+        "pol-v1-g-links",
+        "pol-v1-p-open",
+        "pol-v1-p-twochains"
+      ]
+    },
+    {
+      "id": "pol-v1-r-symbolic",
+      "title": "Higher: read the end-omitted repeat equation",
+      "purpose": "Higher: read the end-omitted repeat equation",
+      "prompt": "A standard idealised polyester repeat equation omits end groups and states two water losses PER repeat contribution. For n = 3 contributions, how many waters does THAT representation show?",
+      "answer": "6",
+      "unit": "water molecules",
+      "explanation": "The specified idealised representation shows 2n = 6 H2O. This is distinct from counting actual links in a finite open-chain diagram.",
+      "hint": "Use the stated two-per-repeat convention; do not change its scope.",
+      "exposureAliases": [
+        "pol-v1-p-symbolic"
+      ]
+    },
+    {
+      "id": "pol-v1-r-properties",
+      "title": "Link structure to different properties",
+      "purpose": "Link structure to different properties",
+      "prompt": "Which statement explains why polymers can have different properties despite each having covalent chain bonds?",
+      "answer": "Their chain structures and attractions between chains can differ",
+      "options": [
+        "Their chain structures and attractions between chains can differ",
+        "Every polymer must have identical properties",
+        "No polymer has intermolecular attractions"
+      ],
+      "misconceptions": {
+        "Every polymer must have identical properties": "Different monomers and chain arrangements can produce different behaviour.",
+        "No polymer has intermolecular attractions": "Large separate chain molecules can interact with one another."
+      },
+      "explanation": "Covalent bonding within chains alone does not specify every bulk property. Use the actual chain structure and supplied material evidence.",
+      "hint": "Distinguish the shared bond type from the full molecular structure.",
+      "exposureAliases": [
+        "pol-v1-p-properties",
+        "polymers-4"
+      ]
+    }
+  ],
+  "guided": [
+    {
+      "id": "pol-v1-g-addition",
+      "title": "Build a repeat",
+      "purpose": "Build a repeat",
+      "prompt": "Build the ethene repeat. Which bond joins its two backbone carbons?",
+      "answer": "Single C–C",
+      "options": [
+        "No bond",
+        "Single C–C",
+        "Double C=C"
+      ],
+      "misconceptions": {
+        "Double C=C": "A retained double plus both outward bonds overfills carbon valence.",
+        "No bond": "The two backbone carbons must remain covalently joined."
+      },
+      "explanation": "Keep all four H; replace C=C by C–C and show chain continuation through both brackets.",
+      "hint": "Count bond orders at each carbon.",
+      "model": {
+        "kind": "polymerisation",
+        "mode": "addition",
+        "record": "initial",
+        "instruction": "Build a repeat"
+      },
+      "exposureAliases": [
+        "pol-v1-r-single",
+        "pol-v1-r-groups",
+        "pol-v1-p-ethene",
+        "pol-v1-p-propene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but1",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-p-bond",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "polymers-0",
+        "polymers-1"
+      ]
+    },
+    {
+      "id": "pol-v1-g-reverse",
+      "title": "Reconstruct the alkene",
+      "purpose": "Reconstruct the alkene",
+      "prompt": "After reversing the supplied chlorine-containing repeat, what distinguishes the separate monomer?",
+      "answer": "C=C with original side groups and no repeat notation",
+      "options": [
+        "C=C with original side groups and no repeat notation",
+        "C–C with polymer brackets",
+        "A chlorine-free molecule with two extra H"
+      ],
+      "misconceptions": {
+        "C–C with polymer brackets": "That is still the polymer-derived representation.",
+        "A chlorine-free molecule with two extra H": "That changes the original substituents."
+      },
+      "explanation": "Restore the reacting double bond and retain three H and one Cl on their original carbons.",
+      "hint": "Keep the original attachment pattern.",
+      "model": {
+        "kind": "polymerisation",
+        "mode": "reverse",
+        "record": "initial",
+        "instruction": "Reconstruct the alkene"
+      },
+      "exposureAliases": [
+        "pol-v1-r-reverse",
+        "pol-v1-p-reverse-cl",
+        "pol-v1-p-reverse-fl",
+        "pol-v1-p-reverse-but1",
+        "pol-v1-p-reverse-cl12",
+        "pol-v1-a-reverse",
+        "pol-v1-b-reverse",
+        "pol-v1-rb-reverse"
+      ]
+    },
+    {
+      "id": "pol-v1-g-segment",
+      "title": "Select one monomer-derived repeat",
+      "purpose": "Select one monomer-derived repeat",
+      "prompt": "In the supplied poly(propene) crop, how many TOTAL C atoms belong to one two-backbone-carbon monomer-derived repeat?",
+      "answer": "3",
+      "unit": "C atoms",
+      "explanation": "Two backbone carbons plus one methyl side-group carbon give three.",
+      "hint": "Count side groups as well as the selected backbone.",
+      "model": {
+        "kind": "polymerisation",
+        "mode": "segment",
+        "record": "initial",
+        "instruction": "Select one monomer-derived repeat"
+      },
+      "exposureAliases": [
+        "pol-v1-r-groups",
+        "pol-v1-p-connectivity",
+        "pol-v1-p-equivalent",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-b-connectivity",
+        "pol-v1-r-brackets",
+        "pol-v1-r-n",
+        "pol-v1-p-n",
+        "pol-v1-p-end",
+        "pol-v1-p-monomer-unit",
+        "pol-v1-a-n",
+        "pol-v1-ra-n",
+        "pol-v1-p-C",
+        "pol-v1-a-C",
+        "pol-v1-rb-C"
+      ]
+    },
+    {
+      "id": "pol-v1-g-inventory",
+      "title": "Audit five repeat contributions",
+      "purpose": "Audit five repeat contributions",
+      "prompt": "Five original ethene-derived contributions contain how many H atoms, ignoring omitted chain ends?",
+      "answer": "20",
+      "unit": "H atoms",
+      "explanation": "5 × 4 = 20 H atoms. No H2 or H2O is eliminated.",
+      "hint": "Use the original per-unit inventory.",
+      "model": {
+        "kind": "polymerisation",
+        "mode": "inventory",
+        "record": "initial",
+        "instruction": "Audit five repeat contributions"
+      },
+      "exposureAliases": [
+        "pol-v1-r-inventory",
+        "pol-v1-r-halogen",
+        "pol-v1-p-H",
+        "pol-v1-p-Cl",
+        "pol-v1-p-mass",
+        "pol-v1-a-products",
+        "pol-v1-a-Cl",
+        "pol-v1-b-product",
+        "pol-v1-ra-Cl",
+        "polymers-3"
+      ]
+    },
+    {
+      "id": "pol-v1-g-ester",
+      "title": "Higher: explain repeated ester growth",
+      "purpose": "Higher: explain repeated ester growth",
+      "prompt": "Use the original diacid/diol evidence. What permits continued alternating chain growth?",
+      "answer": "Two reactive groups on each supplied monomer",
+      "options": [
+        "One reactive group on every molecule is enough",
+        "Two reactive groups on each supplied monomer",
+        "A gas bubble proves it"
+      ],
+      "misconceptions": {
+        "A gas bubble proves it": "This structural requirement is not established by bubbles.",
+        "One reactive group on every molecule is enough": "That limits further alternating growth."
+      },
+      "explanation": "Each ester link uses acid OH and alcohol H; the remaining reactive end can join another monomer.",
+      "hint": "Count functional groups on each original molecule.",
+      "model": {
+        "kind": "polymerisation",
+        "mode": "ester",
+        "record": "initial",
+        "instruction": "Higher: explain repeated ester growth"
+      },
+      "exposureAliases": [
+        "pol-v1-r-functional",
+        "pol-v1-p-stopper",
+        "pol-v1-p-condensation",
+        "pol-v1-r-water",
+        "pol-v1-p-water"
+      ]
+    },
+    {
+      "id": "pol-v1-g-polyester",
+      "title": "Higher: construct the actual repeat",
+      "purpose": "Higher: construct the actual repeat",
+      "prompt": "The supplied diol has two CH2 carbons and the diacid has two CH2 spacer carbons plus two COOH carbons. How many C atoms remain in one complete end-omitted repeat?",
+      "answer": "6",
+      "unit": "C atoms",
+      "explanation": "2 + 2 + 2 = 6 C atoms; water loss removes no carbon.",
+      "hint": "Keep both carboxyl carbons.",
+      "model": {
+        "kind": "polymerisation",
+        "mode": "polyester",
+        "record": "initial",
+        "instruction": "Higher: construct the actual repeat"
+      },
+      "exposureAliases": [
+        "pol-v1-r-spacer",
+        "pol-v1-p-polyester1",
+        "pol-v1-p-polyester2",
+        "pol-v1-p-polyester3",
+        "pol-v1-p-poly-C",
+        "pol-v1-p-poly-O"
+      ]
+    },
+    {
+      "id": "pol-v1-g-links",
+      "title": "Higher: count actual links",
+      "purpose": "Higher: count actual links",
+      "prompt": "In the supplied six-node ONE open chain, each drawn condensation link releases one water. How many waters have formed?",
+      "answer": "5",
+      "unit": "water molecules",
+      "explanation": "Six connected nodes have five actual links. This is the specified finite open diagram.",
+      "hint": "Count drawn links, not monomers.",
+      "model": {
+        "kind": "polymerisation",
+        "mode": "links",
+        "record": "initial",
+        "instruction": "Higher: count actual links"
+      },
+      "exposureAliases": [
+        "pol-v1-r-links",
+        "pol-v1-p-open",
+        "pol-v1-p-twochains"
+      ]
+    }
+  ],
+  "practice": [
+    {
+      "id": "pol-v1-p-ethene",
+      "title": "Construct poly(ethene)",
+      "purpose": "Construct poly(ethene)",
+      "prompt": "Draw one monomer-derived repeat from the supplied ethene, including bonds through brackets and n.",
+      "answer": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "rubric": [
+        "Change the original C=C to a single C–C bond.",
+        "Preserve every original side group on its reacting carbon; retain correct C4/H1/halogen1 valences.",
+        "Show both single continuation bonds through brackets and lower-case n outside lower right."
+      ],
+      "explanation": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "H",
+          "H",
+          "H",
+          "H"
+        ],
+        "polymer": false
+      },
+      "polymerisationDrawing": {
+        "kind": "repeat",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-single",
+      "exposureAliases": [
+        "pol-v1-r-single",
+        "pol-v1-r-groups",
+        "pol-v1-g-addition",
+        "pol-v1-p-propene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but1",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-p-bond",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "polymers-0",
+        "polymers-1",
+        "ps-v1-g-repeat",
+        "ps-v1-p-draw"
+      ]
+    },
+    {
+      "id": "pol-v1-p-propene",
+      "title": "Keep the methyl side group",
+      "purpose": "Keep the methyl side group",
+      "prompt": "Draw one monomer-derived repeat from the supplied propene. Keep the methyl carbon off the two-carbon backbone.",
+      "answer": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "rubric": [
+        "Change the original C=C to a single C–C bond.",
+        "Preserve every original side group on its reacting carbon; retain correct C4/H1/halogen1 valences.",
+        "Show both single continuation bonds through brackets and lower-case n outside lower right."
+      ],
+      "explanation": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "H",
+          "H",
+          "H",
+          "CH3"
+        ],
+        "polymer": false
+      },
+      "polymerisationDrawing": {
+        "kind": "repeat",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-single",
+      "exposureAliases": [
+        "pol-v1-r-single",
+        "pol-v1-r-groups",
+        "pol-v1-g-addition",
+        "pol-v1-p-ethene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but1",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-p-bond",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "polymers-1"
+      ]
+    },
+    {
+      "id": "pol-v1-p-chloro",
+      "title": "Keep the chlorine attachment",
+      "purpose": "Keep the chlorine attachment",
+      "prompt": "Draw one monomer-derived repeat from the supplied chloroethene. Do not replace Cl with H.",
+      "answer": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "rubric": [
+        "Change the original C=C to a single C–C bond.",
+        "Preserve every original side group on its reacting carbon; retain correct C4/H1/halogen1 valences.",
+        "Show both single continuation bonds through brackets and lower-case n outside lower right."
+      ],
+      "explanation": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "H",
+          "H",
+          "H",
+          "Cl"
+        ],
+        "polymer": false
+      },
+      "polymerisationDrawing": {
+        "kind": "repeat",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-single",
+      "exposureAliases": [
+        "pol-v1-r-single",
+        "pol-v1-r-groups",
+        "pol-v1-g-addition",
+        "pol-v1-p-ethene",
+        "pol-v1-p-propene",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but1",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-p-bond",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "polymers-1"
+      ]
+    },
+    {
+      "id": "pol-v1-p-fluoro",
+      "title": "Construct the fluorinated repeat",
+      "purpose": "Construct the fluorinated repeat",
+      "prompt": "Draw one monomer-derived repeat from the supplied tetrafluoroethene. Show every original F.",
+      "answer": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "rubric": [
+        "Change the original C=C to a single C–C bond.",
+        "Preserve every original side group on its reacting carbon; retain correct C4/H1/halogen1 valences.",
+        "Show both single continuation bonds through brackets and lower-case n outside lower right."
+      ],
+      "explanation": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "F",
+          "F",
+          "F",
+          "F"
+        ],
+        "polymer": false
+      },
+      "polymerisationDrawing": {
+        "kind": "repeat",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-single",
+      "exposureAliases": [
+        "pol-v1-r-single",
+        "pol-v1-r-groups",
+        "pol-v1-g-addition",
+        "pol-v1-p-ethene",
+        "pol-v1-p-propene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-but1",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-p-bond",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "polymers-1"
+      ]
+    },
+    {
+      "id": "pol-v1-p-but1",
+      "title": "Deduce a supplied unfamiliar repeat",
+      "purpose": "Deduce a supplied unfamiliar repeat",
+      "prompt": "The supplied alkene has an ethyl side group. Draw its monomer-derived addition repeat; no name recall is required.",
+      "answer": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "rubric": [
+        "Change the original C=C to a single C–C bond.",
+        "Preserve every original side group on its reacting carbon; retain correct C4/H1/halogen1 valences.",
+        "Show both single continuation bonds through brackets and lower-case n outside lower right."
+      ],
+      "explanation": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "H",
+          "H",
+          "H",
+          "C2H5"
+        ],
+        "polymer": false
+      },
+      "polymerisationDrawing": {
+        "kind": "repeat",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-single",
+      "exposureAliases": [
+        "pol-v1-r-single",
+        "pol-v1-r-groups",
+        "pol-v1-g-addition",
+        "pol-v1-p-ethene",
+        "pol-v1-p-propene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-p-bond",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "polymers-1"
+      ]
+    },
+    {
+      "id": "pol-v1-p-but2",
+      "title": "Retain two methyl attachments",
+      "purpose": "Retain two methyl attachments",
+      "prompt": "Draw the addition repeat from the supplied alkene with one CH3 on EACH reacting carbon.",
+      "answer": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "rubric": [
+        "Change the original C=C to a single C–C bond.",
+        "Preserve every original side group on its reacting carbon; retain correct C4/H1/halogen1 valences.",
+        "Show both single continuation bonds through brackets and lower-case n outside lower right."
+      ],
+      "explanation": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "H",
+          "CH3",
+          "H",
+          "CH3"
+        ],
+        "polymer": false
+      },
+      "polymerisationDrawing": {
+        "kind": "repeat",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-single",
+      "exposureAliases": [
+        "pol-v1-r-single",
+        "pol-v1-r-groups",
+        "pol-v1-g-addition",
+        "pol-v1-p-ethene",
+        "pol-v1-p-propene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but1",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-p-bond",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "polymers-1"
+      ]
+    },
+    {
+      "id": "pol-v1-p-cl11",
+      "title": "Retain both chlorines on one carbon",
+      "purpose": "Retain both chlorines on one carbon",
+      "prompt": "Draw the addition repeat from the supplied alkene whose two Cl are on the SAME reacting carbon.",
+      "answer": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "rubric": [
+        "Change the original C=C to a single C–C bond.",
+        "Preserve every original side group on its reacting carbon; retain correct C4/H1/halogen1 valences.",
+        "Show both single continuation bonds through brackets and lower-case n outside lower right."
+      ],
+      "explanation": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "H",
+          "H",
+          "Cl",
+          "Cl"
+        ],
+        "polymer": false
+      },
+      "polymerisationDrawing": {
+        "kind": "repeat",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-single",
+      "exposureAliases": [
+        "pol-v1-r-single",
+        "pol-v1-r-groups",
+        "pol-v1-g-addition",
+        "pol-v1-p-ethene",
+        "pol-v1-p-propene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but1",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl12",
+        "pol-v1-p-bond",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "pol-v1-g-segment",
+        "pol-v1-p-connectivity",
+        "pol-v1-p-equivalent",
+        "pol-v1-b-connectivity",
+        "polymers-1"
+      ]
+    },
+    {
+      "id": "pol-v1-p-cl12",
+      "title": "Retain one chlorine on each carbon",
+      "purpose": "Retain one chlorine on each carbon",
+      "prompt": "Draw the addition repeat from the supplied alkene with one Cl on EACH reacting carbon.",
+      "answer": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "rubric": [
+        "Change the original C=C to a single C–C bond.",
+        "Preserve every original side group on its reacting carbon; retain correct C4/H1/halogen1 valences.",
+        "Show both single continuation bonds through brackets and lower-case n outside lower right."
+      ],
+      "explanation": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "H",
+          "Cl",
+          "H",
+          "Cl"
+        ],
+        "polymer": false
+      },
+      "polymerisationDrawing": {
+        "kind": "repeat",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-single",
+      "exposureAliases": [
+        "pol-v1-r-single",
+        "pol-v1-r-groups",
+        "pol-v1-g-addition",
+        "pol-v1-p-ethene",
+        "pol-v1-p-propene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but1",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl11",
+        "pol-v1-p-bond",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "pol-v1-g-segment",
+        "pol-v1-p-connectivity",
+        "pol-v1-p-equivalent",
+        "pol-v1-b-connectivity",
+        "polymers-1"
+      ]
+    },
+    {
+      "id": "pol-v1-p-reverse-cl",
+      "title": "Recover a chlorine-containing monomer",
+      "purpose": "Recover a chlorine-containing monomer",
+      "prompt": "Draw the separate alkene monomer from the supplied chlorine-containing polymer-derived repeating unit.",
+      "answer": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+      "rubric": [
+        "Restore C=C between the two reacting carbons.",
+        "Preserve all side groups and their carbon attachments; rotated/reversed equivalents are valid.",
+        "No polymer brackets, n or continuation bonds on the separate monomer."
+      ],
+      "explanation": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "H",
+          "H",
+          "H",
+          "Cl"
+        ],
+        "polymer": true
+      },
+      "polymerisationDrawing": {
+        "kind": "monomer",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-reverse",
+      "exposureAliases": [
+        "pol-v1-r-reverse",
+        "pol-v1-g-reverse",
+        "pol-v1-p-reverse-fl",
+        "pol-v1-p-reverse-but1",
+        "pol-v1-p-reverse-cl12",
+        "pol-v1-a-reverse",
+        "pol-v1-b-reverse",
+        "pol-v1-rb-reverse"
+      ]
+    },
+    {
+      "id": "pol-v1-p-reverse-fl",
+      "title": "Recover a fluorinated monomer",
+      "purpose": "Recover a fluorinated monomer",
+      "prompt": "Draw the separate alkene monomer from the supplied fluorinated polymer-derived repeating unit.",
+      "answer": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+      "rubric": [
+        "Restore C=C between the two reacting carbons.",
+        "Preserve all side groups and their carbon attachments; rotated/reversed equivalents are valid.",
+        "No polymer brackets, n or continuation bonds on the separate monomer."
+      ],
+      "explanation": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "F",
+          "F",
+          "F",
+          "F"
+        ],
+        "polymer": true
+      },
+      "polymerisationDrawing": {
+        "kind": "monomer",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-reverse",
+      "exposureAliases": [
+        "pol-v1-r-reverse",
+        "pol-v1-g-reverse",
+        "pol-v1-p-reverse-cl",
+        "pol-v1-p-reverse-but1",
+        "pol-v1-p-reverse-cl12",
+        "pol-v1-a-reverse",
+        "pol-v1-b-reverse",
+        "pol-v1-rb-reverse"
+      ]
+    },
+    {
+      "id": "pol-v1-p-reverse-but1",
+      "title": "Reverse an unfamiliar supplied repeat",
+      "purpose": "Reverse an unfamiliar supplied repeat",
+      "prompt": "Draw the separate alkene from the supplied ethyl-substituted repeating unit; retain the original ethyl side group.",
+      "answer": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+      "rubric": [
+        "Restore C=C between the two reacting carbons.",
+        "Preserve all side groups and their carbon attachments; rotated/reversed equivalents are valid.",
+        "No polymer brackets, n or continuation bonds on the separate monomer."
+      ],
+      "explanation": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "H",
+          "H",
+          "H",
+          "C2H5"
+        ],
+        "polymer": true
+      },
+      "polymerisationDrawing": {
+        "kind": "monomer",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-reverse",
+      "exposureAliases": [
+        "pol-v1-r-reverse",
+        "pol-v1-g-reverse",
+        "pol-v1-p-reverse-cl",
+        "pol-v1-p-reverse-fl",
+        "pol-v1-p-reverse-cl12",
+        "pol-v1-a-reverse",
+        "pol-v1-b-reverse",
+        "pol-v1-rb-reverse"
+      ]
+    },
+    {
+      "id": "pol-v1-p-reverse-cl12",
+      "title": "Reverse without rearranging chlorine",
+      "purpose": "Reverse without rearranging chlorine",
+      "prompt": "Draw the separate alkene from the supplied repeat with one Cl on each backbone carbon.",
+      "answer": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+      "rubric": [
+        "Restore C=C between the two reacting carbons.",
+        "Preserve all side groups and their carbon attachments; rotated/reversed equivalents are valid.",
+        "No polymer brackets, n or continuation bonds on the separate monomer."
+      ],
+      "explanation": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+      "hint": "Trace the two original reacting carbons and keep their substituents.",
+      "polymerisationGiven": {
+        "groups": [
+          "H",
+          "Cl",
+          "H",
+          "Cl"
+        ],
+        "polymer": true
+      },
+      "polymerisationDrawing": {
+        "kind": "monomer",
+        "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+      },
+      "followUp": "pol-v1-r-reverse",
+      "exposureAliases": [
+        "pol-v1-r-reverse",
+        "pol-v1-g-reverse",
+        "pol-v1-p-reverse-cl",
+        "pol-v1-p-reverse-fl",
+        "pol-v1-p-reverse-but1",
+        "pol-v1-a-reverse",
+        "pol-v1-b-reverse",
+        "pol-v1-rb-reverse"
+      ]
+    },
+    {
+      "id": "pol-v1-p-bond",
+      "title": "Repair the retained double bond",
+      "purpose": "Repair the retained double bond",
+      "prompt": "A proposed addition repeat retains C=C AND has outward single continuation bonds from both reacting carbons. What repair preserves the original atoms?",
+      "answer": "Change that C=C to C–C",
+      "options": [
+        "Change that C=C to C–C",
+        "Delete one H from each carbon",
+        "Remove both continuation bonds permanently"
+      ],
+      "misconceptions": {
+        "Delete one H from each carbon": "That would change the original addition inventory.",
+        "Remove both continuation bonds permanently": "That leaves a monomer rather than the requested linked repeat."
+      },
+      "explanation": "One bond order is freed at each alkene carbon when C=C becomes C–C; each carbon forms one outward chain bond.",
+      "hint": "Audit local carbon valence.",
+      "followUp": "pol-v1-r-outward",
+      "exposureAliases": [
+        "pol-v1-w-carbon",
+        "pol-v1-r-outward",
+        "pol-v1-b-bond",
+        "pol-v1-ra-bond",
+        "pol-v1-r-single",
+        "pol-v1-r-groups",
+        "pol-v1-g-addition",
+        "pol-v1-p-ethene",
+        "pol-v1-p-propene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but1",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-a-draw",
+        "pol-v1-b-draw",
+        "polymers-1"
+      ]
+    },
+    {
+      "id": "pol-v1-p-connectivity",
+      "title": "Reject a same-formula rearrangement",
+      "purpose": "Reject a same-formula rearrangement",
+      "prompt": "The original repeat alternates CH2 and CCl2. A student draws CHCl and CHCl instead. Which judgement follows?",
+      "answer": "Wrong connectivity despite the same atom totals",
+      "options": [
+        "Correct because C2H2Cl2 totals agree",
+        "Only the lower-case n is wrong",
+        "Wrong connectivity despite the same atom totals"
+      ],
+      "misconceptions": {
+        "Correct because C2H2Cl2 totals agree": "The two original Cl were attached to one carbon, not one each.",
+        "Only the lower-case n is wrong": "The substituent attachment pattern itself changed."
+      },
+      "explanation": "Addition retains substituents on their original reacting carbons. Formula equality alone cannot verify this structure.",
+      "hint": "Trace which carbon each chlorine belongs to.",
+      "followUp": "pol-v1-r-groups",
+      "exposureAliases": [
+        "pol-v1-r-groups",
+        "pol-v1-g-segment",
+        "pol-v1-p-equivalent",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-b-connectivity"
+      ]
+    },
+    {
+      "id": "pol-v1-p-equivalent",
+      "title": "Accept a reversed repeating unit",
+      "purpose": "Accept a reversed repeating unit",
+      "prompt": "The same propene-derived repeat is written –CH2–CH(CH3)– or –CH(CH3)–CH2– with correct brackets/continuations. Which judgement follows?",
+      "answer": "Equivalent reversed/shifted repeat representations",
+      "options": [
+        "The second must lose its CH3",
+        "Only one direction is chemically valid",
+        "Equivalent reversed/shifted repeat representations"
+      ],
+      "misconceptions": {
+        "The second must lose its CH3": "Its side group is unchanged.",
+        "Only one direction is chemically valid": "Orientation on the page does not define a different connectivity here."
+      },
+      "explanation": "Either phase represents the same alternating two-carbon backbone pattern.",
+      "hint": "Follow the pattern beyond the brackets.",
+      "followUp": "pol-v1-r-groups",
+      "exposureAliases": [
+        "pol-v1-r-groups",
+        "pol-v1-g-segment",
+        "pol-v1-p-connectivity",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12",
+        "pol-v1-b-connectivity"
+      ]
+    },
+    {
+      "id": "pol-v1-p-n",
+      "title": "Repair repeat-count notation",
+      "purpose": "Repair repeat-count notation",
+      "prompt": "A correct repeat has single continuation bonds through brackets but an uppercase N at the lower right. What is the specified repair?",
+      "answer": "Use lower-case n outside at the lower right",
+      "options": [
+        "Use lower-case n outside at the lower right",
+        "Change a carbon to nitrogen",
+        "Put lower-case n in place of a hydrogen"
+      ],
+      "misconceptions": {
+        "Change a carbon to nitrogen": "N here was incorrect count notation, not an intended atom.",
+        "Put lower-case n in place of a hydrogen": "The count must remain outside the structural unit."
+      },
+      "explanation": "Use the conventional lower-case repeat count outside brackets.",
+      "hint": "Keep atoms separate from notation.",
+      "followUp": "pol-v1-r-brackets",
+      "exposureAliases": [
+        "pol-v1-r-brackets",
+        "pol-v1-r-n",
+        "pol-v1-g-segment",
+        "pol-v1-p-end",
+        "pol-v1-p-monomer-unit",
+        "pol-v1-a-n",
+        "pol-v1-ra-n",
+        "ps-v1-p-n"
+      ]
+    },
+    {
+      "id": "pol-v1-p-end",
+      "title": "Avoid inventing chain ends",
+      "purpose": "Avoid inventing chain ends",
+      "prompt": "A repeat crop shows –CH2–CH2– with outward bonds through both brackets. Which interpretation is justified?",
+      "answer": "An end-omitted contribution continuing into a longer chain",
+      "options": [
+        "An end-omitted contribution continuing into a longer chain",
+        "A complete C2H6 molecule with two added H",
+        "Two disconnected carbon atoms"
+      ],
+      "misconceptions": {
+        "A complete C2H6 molecule with two added H": "The outward bonds are chain continuations, not end caps.",
+        "Two disconnected carbon atoms": "The carbons are covalently connected."
+      },
+      "explanation": "The repeat inventory is C2H4; the complete polymer end groups are not specified.",
+      "hint": "Read the bonds through the brackets.",
+      "followUp": "pol-v1-r-brackets",
+      "exposureAliases": [
+        "pol-v1-r-brackets",
+        "pol-v1-r-n",
+        "pol-v1-g-segment",
+        "pol-v1-p-n",
+        "pol-v1-p-monomer-unit",
+        "pol-v1-a-n",
+        "pol-v1-ra-n",
+        "ps-v1-p-crossing"
+      ]
+    },
+    {
+      "id": "pol-v1-p-monomer-unit",
+      "title": "Respect the stated representation",
+      "purpose": "Respect the stated representation",
+      "prompt": "A task explicitly asks for the unit derived from ONE supplied ethene monomer. Which backbone contribution meets that instruction?",
+      "answer": "Two carbons with four H",
+      "options": [
+        "Four carbons from two monomers",
+        "Two carbons with four H",
+        "One CH2 group is always chemically impossible"
+      ],
+      "misconceptions": {
+        "One CH2 group is always chemically impossible": "A smaller CH2 translational motif can describe poly(ethene), but is not the stated one-monomer-derived representation.",
+        "Four carbons from two monomers": "That is a larger repeated block, not the requested one-monomer contribution."
+      },
+      "explanation": "The instruction requests C2H4 from one C2H4 monomer; distinguish representation scope from chemical impossibility.",
+      "hint": "Read what the stated unit represents.",
+      "followUp": "pol-v1-r-brackets",
+      "exposureAliases": [
+        "pol-v1-r-brackets",
+        "pol-v1-r-n",
+        "pol-v1-g-segment",
+        "pol-v1-p-n",
+        "pol-v1-p-end",
+        "pol-v1-a-n",
+        "pol-v1-ra-n"
+      ]
+    },
+    {
+      "id": "pol-v1-p-name",
+      "title": "Name the addition product",
+      "purpose": "Name the addition product",
+      "prompt": "What is the ordinary addition-polymer name formed from propene?",
+      "answer": "Poly(propene)",
+      "options": [
+        "Poly(propane)",
+        "Ethene",
+        "Poly(propene)"
+      ],
+      "misconceptions": {
+        "Poly(propane)": "The monomer name remains propene.",
+        "Ethene": "That is a different small alkene."
+      },
+      "explanation": "Poly plus the unchanged monomer name gives poly(propene).",
+      "hint": "Retain the monomer ending.",
+      "followUp": "pol-v1-r-name",
+      "exposureAliases": [
+        "pol-v1-r-name",
+        "pol-v1-a-name"
+      ]
+    },
+    {
+      "id": "pol-v1-p-C",
+      "title": "Count methyl-containing contributions",
+      "purpose": "Count methyl-containing contributions",
+      "prompt": "Seven propene-derived C3H6 contributions contain how many C atoms, ignoring omitted chain ends?",
+      "answer": "21",
+      "unit": "C atoms",
+      "explanation": "7 × 3 = 21, including the methyl side-group carbons.",
+      "hint": "Count all carbons in each contribution.",
+      "followUp": "pol-v1-r-inventory",
+      "exposureAliases": [
+        "pol-v1-g-segment",
+        "pol-v1-a-C",
+        "pol-v1-rb-C"
+      ]
+    },
+    {
+      "id": "pol-v1-p-H",
+      "title": "Avoid adding absent hydrogen",
+      "purpose": "Avoid adding absent hydrogen",
+      "prompt": "Four supplied C2F4 repeat contributions contain how many H atoms?",
+      "answer": "0",
+      "unit": "H atoms",
+      "explanation": "The supplied monomer contains no H; addition does not add it.",
+      "hint": "Read the actual original formula.",
+      "followUp": "pol-v1-r-inventory",
+      "exposureAliases": [
+        "pol-v1-r-inventory",
+        "pol-v1-r-halogen",
+        "pol-v1-g-inventory",
+        "pol-v1-p-Cl",
+        "pol-v1-p-mass",
+        "pol-v1-a-products",
+        "pol-v1-a-Cl",
+        "pol-v1-b-product",
+        "pol-v1-ra-Cl",
+        "polymers-3"
+      ]
+    },
+    {
+      "id": "pol-v1-p-Cl",
+      "title": "Conserve chlorine atoms",
+      "purpose": "Conserve chlorine atoms",
+      "prompt": "Five chloroethene-derived C2H3Cl contributions contain how many Cl atoms?",
+      "answer": "5",
+      "unit": "Cl atoms",
+      "explanation": "5 × 1 = 5 Cl; no HCl is lost in this addition reaction.",
+      "hint": "Keep each original chlorine.",
+      "followUp": "pol-v1-r-inventory",
+      "exposureAliases": [
+        "pol-v1-r-inventory",
+        "pol-v1-r-halogen",
+        "pol-v1-g-inventory",
+        "pol-v1-p-H",
+        "pol-v1-p-mass",
+        "pol-v1-a-products",
+        "pol-v1-a-Cl",
+        "pol-v1-b-product",
+        "pol-v1-ra-Cl",
+        "polymers-3"
+      ]
+    },
+    {
+      "id": "pol-v1-p-Mr",
+      "title": "Calculate a contribution",
+      "purpose": "Calculate a contribution",
+      "prompt": "A supplied ethene-derived contribution has relative mass28. What is the contribution from eight units, excluding omitted ends?",
+      "answer": "224",
+      "unit": "relative-mass contribution",
+      "explanation": "8 × 28 = 224. A precise full-chain Mr would require its actual end groups.",
+      "hint": "Multiply the supplied per-unit contribution.",
+      "followUp": "pol-v1-r-inventory",
+      "exposureAliases": [
+        "pol-v1-r-mass",
+        "pol-v1-b-Mr"
+      ]
+    },
+    {
+      "id": "pol-v1-p-mass",
+      "title": "Conserve an addition feed",
+      "purpose": "Conserve an addition feed",
+      "prompt": "An original closed-process report states that12.0g of monomer is entirely incorporated into its addition polymer, with no other product and no material loss. What mass of polymer is produced?",
+      "answer": "12",
+      "unit": "g",
+      "explanation": "Mass is conserved: all12.0g is incorporated under the explicitly stated conditions.",
+      "hint": "Use the stated complete conversion and absence of losses.",
+      "followUp": "pol-v1-r-inventory",
+      "exposureAliases": [
+        "pol-v1-r-inventory",
+        "pol-v1-r-halogen",
+        "pol-v1-g-inventory",
+        "pol-v1-p-H",
+        "pol-v1-p-Cl",
+        "pol-v1-a-products",
+        "pol-v1-a-Cl",
+        "pol-v1-b-product",
+        "pol-v1-ra-Cl",
+        "polymers-3"
+      ]
+    },
+    {
+      "id": "pol-v1-p-units",
+      "title": "Count units from the backbone",
+      "purpose": "Count units from the backbone",
+      "prompt": "An original crop contains18 BACKBONE carbons from a two-backbone-carbon alkene monomer. How many monomer-derived contributions are shown?",
+      "answer": "9",
+      "unit": "contributions",
+      "explanation": "18 ÷ 2 = 9. Side-group carbons would not belong in this stated backbone count.",
+      "hint": "Use two backbone carbons per contribution.",
+      "followUp": "pol-v1-r-inventory",
+      "exposureAliases": [
+        "pol-v1-b-units"
+      ]
+    },
+    {
+      "id": "pol-v1-p-molecules",
+      "title": "Distinguish atom and molecule counts",
+      "purpose": "Distinguish atom and molecule counts",
+      "prompt": "A supplied idealised report joins200 separate alkene molecules into ONE chain, with no other product. Which counts are conserved?",
+      "answer": "Atoms and total mass; the number of separate molecules changes",
+      "options": [
+        "All200 separate molecules remain disconnected",
+        "Carbon atoms are destroyed to reduce molecule count",
+        "Atoms and total mass; the number of separate molecules changes"
+      ],
+      "misconceptions": {
+        "All200 separate molecules remain disconnected": "The stated process joins them into one chain.",
+        "Carbon atoms are destroyed to reduce molecule count": "Joining changes connectivity, not atom inventory."
+      },
+      "explanation": "200 original monomer molecules become part of one large chain while their atoms remain.",
+      "hint": "Distinguish molecules from atoms.",
+      "followUp": "pol-v1-r-inventory",
+      "exposureAliases": [
+        "pol-v1-r-monomer",
+        "pol-v1-a-explain",
+        "pol-v1-rb-change",
+        "polymers-2",
+        "ps-v1-r-chain",
+        "ps-v1-r-forces",
+        "ps-v1-r-phase",
+        "ps-v1-g-chain",
+        "ps-v1-g-separation",
+        "ps-v1-g-phase",
+        "ps-v1-p-recognise",
+        "ps-v1-p-bond",
+        "ps-v1-p-separation",
+        "ps-v1-p-state",
+        "ps-v1-p-physical",
+        "ps-v1-p-limits",
+        "ps-v1-p-compound",
+        "ps-v1-p-explain",
+        "ps-v1-p-compare",
+        "ps-write-v1-p-correction",
+        "ps-v1-ca-type",
+        "ps-v1-ca-force",
+        "ps-v1-ca-state",
+        "ps-v1-cb-recognise",
+        "ps-v1-cb-change",
+        "ps-v1-cb-limit",
+        "ps-write-v1-ca-state",
+        "ps-write-v1-ca-separate",
+        "ps-v1-ra-type",
+        "ps-v1-ra-state",
+        "ps-v1-rb-separation",
+        "ps-v1-rb-network",
+        "ps-write-v1-ra-model",
+        "ps-write-v1-ra-contrast",
+        "ps-write-v1-ra-evidence",
+        "polymers-5",
+        "pol-v1-r-forces",
+        "pol-v1-p-melt",
+        "pol-v1-b-explain",
+        "path-v1-r-polymer",
+        "path-v1-g-polymer",
+        "path-v1-p-addition-polymer",
+        "path-v1-d2-explain",
+        "materials-v1-w-bond",
+        "materials-v1-r-soft",
+        "materials-v1-r-set",
+        "materials-v1-g-polymer",
+        "materials-v1-p-thermal",
+        "materials-v1-cA-polymer",
+        "materials-v1-vA-thermal"
+      ]
+    },
+    {
+      "id": "pol-v1-p-bromine",
+      "title": "Use the supplied saturated-chain comparison",
+      "purpose": "Use the supplied saturated-chain comparison",
+      "prompt": "The supplied addition-polymer backbone and side groups contain no C=C bonds. What bromine-water observation follows from this specified comparison?",
+      "answer": "It stays orange",
+      "options": [
+        "Every polymer must contain C=C",
+        "It stays orange",
+        "It becomes colourless merely because the molecule is large"
+      ],
+      "misconceptions": {
+        "It becomes colourless merely because the molecule is large": "Size alone does not provide a reacting C=C group.",
+        "Every polymer must contain C=C": "The supplied ordinary addition repeat is saturated."
+      },
+      "explanation": "The original alkene can decolourise bromine water; the specified saturated chain has no reacting C=C. This is not a universal statement about every possible polymer.",
+      "hint": "Use the actual supplied bond types.",
+      "followUp": "pol-v1-r-double",
+      "exposureAliases": [
+        "pol-v1-w-double",
+        "pol-v1-r-double",
+        "crk-v1-r-bromine",
+        "crk-v1-g-bromine"
+      ]
+    },
+    {
+      "id": "pol-v1-p-melt",
+      "title": "Explain physical versus chemical change",
+      "purpose": "Explain physical versus chemical change",
+      "prompt": "A supplied thermoplastic softens on heating without cutting its chains. Compare that change with forming the polymer from monomers.",
+      "answer": "Polymerisation changes covalent connectivity between monomer-derived units and is chemical. In the supplied softening/melting process, intermolecular attractions between intact chain molecules are overcome; strong covalent bonds within each chain remain.",
+      "rubric": [
+        "Polymerisation joins units covalently and changes molecular identity.",
+        "The stated physical change leaves the covalent backbone intact.",
+        "Between-chain attractions, rather than breaking every backbone bond, explain this softening."
+      ],
+      "explanation": "Polymerisation changes covalent connectivity between monomer-derived units and is chemical. In the supplied softening/melting process, intermolecular attractions between intact chain molecules are overcome; strong covalent bonds within each chain remain.",
+      "hint": "Distinguish within-chain and between-chain bonding.",
+      "followUp": "pol-v1-r-forces",
+      "exposureAliases": [
+        "pol-v1-r-forces",
+        "pol-v1-a-explain",
+        "pol-v1-b-explain",
+        "pol-v1-rb-change",
+        "polymers-5",
+        "ps-v1-r-forces",
+        "ps-v1-p-physical",
+        "ps-v1-r-chain",
+        "ps-v1-r-phase",
+        "ps-v1-g-chain",
+        "ps-v1-g-separation",
+        "ps-v1-g-phase",
+        "ps-v1-p-recognise",
+        "ps-v1-p-bond",
+        "ps-v1-p-separation",
+        "ps-v1-p-state",
+        "ps-v1-p-limits",
+        "ps-v1-p-compound",
+        "ps-v1-p-explain",
+        "ps-v1-p-compare",
+        "ps-write-v1-p-correction",
+        "ps-v1-ca-type",
+        "ps-v1-ca-force",
+        "ps-v1-ca-state",
+        "ps-v1-cb-recognise",
+        "ps-v1-cb-change",
+        "ps-v1-cb-limit",
+        "ps-write-v1-ca-state",
+        "ps-write-v1-ca-separate",
+        "ps-v1-ra-type",
+        "ps-v1-ra-state",
+        "ps-v1-rb-separation",
+        "ps-v1-rb-network",
+        "ps-write-v1-ra-model",
+        "ps-write-v1-ra-contrast",
+        "ps-write-v1-ra-evidence",
+        "polymers-2",
+        "pol-v1-r-monomer",
+        "pol-v1-p-molecules",
+        "path-v1-r-polymer",
+        "path-v1-g-polymer",
+        "path-v1-p-addition-polymer",
+        "path-v1-d2-explain",
+        "materials-v1-w-bond",
+        "materials-v1-r-soft",
+        "materials-v1-r-set",
+        "materials-v1-g-polymer",
+        "materials-v1-p-thermal",
+        "materials-v1-cA-polymer",
+        "materials-v1-vA-thermal"
+      ]
+    },
+    {
+      "id": "pol-v1-p-use",
+      "title": "Choose from original material evidence",
+      "purpose": "Choose from original material evidence",
+      "prompt": "An original material table gives A: flexible, water-resistant, shock-absorbing; B: rigid, water-absorbing; C: brittle, water-resistant. Which has the best supported combination for a flexible trainer insole that must resist water and cushion impacts?",
+      "answer": "A",
+      "options": [
+        "B",
+        "C",
+        "A"
+      ],
+      "misconceptions": {
+        "B": "Its supplied rigidity/water absorption fail the stated requirements.",
+        "C": "Its supplied brittleness fails flexibility and cushioning."
+      },
+      "explanation": "A meets the specifically stated combination. This is a decision from supplied evidence, not a claim that every formulation of one polymer has identical properties.",
+      "hint": "Compare every stated requirement.",
+      "followUp": "pol-v1-r-properties"
+    },
+    {
+      "id": "pol-v1-p-water",
+      "title": "Higher: preserve the ester oxygen",
+      "purpose": "Higher: preserve the ester oxygen",
+      "prompt": "When the supplied diacid and diol form one ester link, which fragment pair makes water?",
+      "answer": "Acid OH and alcohol H",
+      "options": [
+        "Both whole functional groups",
+        "Acid OH and alcohol H",
+        "Acid carbonyl O and alcohol O"
+      ],
+      "misconceptions": {
+        "Acid carbonyl O and alcohol O": "Both of these O atoms are retained in the ester-containing structure.",
+        "Both whole functional groups": "Removing both whole groups would lose the carbonyl carbon and linking O."
+      },
+      "explanation": "The alcohol O stays in the link and the acid OH leaves with alcohol H as H2O.",
+      "hint": "Account for the oxygen that remains.",
+      "followUp": "pol-v1-r-functional",
+      "exposureAliases": [
+        "pol-v1-r-water",
+        "pol-v1-g-ester",
+        "pol-v1-p-condensation",
+        "alc-v1-r-ester",
+        "alc-v1-p-ester",
+        "alc-v1-b-ester"
+      ]
+    },
+    {
+      "id": "pol-v1-p-stopper",
+      "title": "Higher: identify a growth limit",
+      "purpose": "Higher: identify a growth limit",
+      "prompt": "The only supplied reagents are a diacid and ethanol with ONE OH group. What is justified?",
+      "answer": "Ester formation is possible, but these reagents alone do not give an indefinitely alternating polyester chain",
+      "options": [
+        "No ester can form at all",
+        "Ester formation is possible, but these reagents alone do not give an indefinitely alternating polyester chain",
+        "Every ester reaction necessarily gives a long polymer"
+      ],
+      "misconceptions": {
+        "Every ester reaction necessarily gives a long polymer": "The monofunctional ethanol cannot continue the alternating chain at a second end.",
+        "No ester can form at all": "A carboxylic acid can react with an alcohol group."
+      },
+      "explanation": "Polymer growth needs continuing reactive groups, not merely one successful ester reaction.",
+      "hint": "Count reactive groups on each monomer.",
+      "followUp": "pol-v1-r-functional",
+      "exposureAliases": [
+        "pol-v1-r-functional",
+        "pol-v1-g-ester",
+        "pol-v1-p-condensation"
+      ]
+    },
+    {
+      "id": "pol-v1-p-polyester1",
+      "title": "Higher: construct the two-carbon/two-carbon repeat",
+      "purpose": "Higher: construct the two-carbon/two-carbon repeat",
+      "prompt": "Original diol: HO–CH2–CH2–OH. Original diacid: HOOC–CH2–CH2–COOH. Construct one end-omitted polyester repeat.",
+      "answer": "[–O–CH2–CH2–O–C(=O)–CH2–CH2–C(=O)–]n; both spacers, both carbonyls and both alcohol-derived linking O atoms remain.",
+      "rubric": [
+        "Both original spacers retained with their correct carbon counts.",
+        "Both carboxyl carbons retained with separate C=O groups.",
+        "Both alcohol-derived oxygen atoms retained as ester linking oxygens; no acid OH or terminal alcohol H in this end-omitted repeat.",
+        "Single continuation bonds through both brackets and lower-case n outside lower right."
+      ],
+      "explanation": "[–O–CH2–CH2–O–C(=O)–CH2–CH2–C(=O)–]n; both spacers, both carbonyls and both alcohol-derived linking O atoms remain.",
+      "hint": "Keep diol spacer carbons separate from acid spacer carbons and its two carboxyl carbons.",
+      "polyesterDrawing": {
+        "diolC": 2,
+        "acidSpacerC": 2,
+        "note": "Higher: construct a diol/diacid-derived repeat using the given CH2 spacer notation. No correct spacer or oxygen choices are prefilled."
+      },
+      "followUp": "pol-v1-r-spacer",
+      "exposureAliases": [
+        "pol-v1-r-spacer",
+        "pol-v1-g-polyester",
+        "pol-v1-p-polyester2",
+        "pol-v1-p-polyester3",
+        "pol-v1-p-poly-C",
+        "pol-v1-p-poly-O"
+      ]
+    },
+    {
+      "id": "pol-v1-p-polyester2",
+      "title": "Higher: preserve unequal spacer lengths",
+      "purpose": "Higher: preserve unequal spacer lengths",
+      "prompt": "Original diol: HO–CH2–CH2–CH2–OH. Original diacid: HOOC–CH2–COOH. Construct one end-omitted polyester repeat.",
+      "answer": "[–O–CH2–CH2–CH2–O–C(=O)–CH2–C(=O)–]n; the diol spacer has three C and the acid spacer one, with two additional carboxyl C.",
+      "rubric": [
+        "Both original spacers retained with their correct carbon counts.",
+        "Both carboxyl carbons retained with separate C=O groups.",
+        "Both alcohol-derived oxygen atoms retained as ester linking oxygens; no acid OH or terminal alcohol H in this end-omitted repeat.",
+        "Single continuation bonds through both brackets and lower-case n outside lower right."
+      ],
+      "explanation": "[–O–CH2–CH2–CH2–O–C(=O)–CH2–C(=O)–]n; the diol spacer has three C and the acid spacer one, with two additional carboxyl C.",
+      "hint": "Keep diol spacer carbons separate from acid spacer carbons and its two carboxyl carbons.",
+      "polyesterDrawing": {
+        "diolC": 3,
+        "acidSpacerC": 1,
+        "note": "Higher: construct a diol/diacid-derived repeat using the given CH2 spacer notation. No correct spacer or oxygen choices are prefilled."
+      },
+      "followUp": "pol-v1-r-spacer",
+      "exposureAliases": [
+        "pol-v1-r-spacer",
+        "pol-v1-g-polyester",
+        "pol-v1-p-polyester1",
+        "pol-v1-p-polyester3",
+        "pol-v1-p-poly-C",
+        "pol-v1-p-poly-O"
+      ]
+    },
+    {
+      "id": "pol-v1-p-polyester3",
+      "title": "Higher: retain the longer acid spacer",
+      "purpose": "Higher: retain the longer acid spacer",
+      "prompt": "Original diol: HO–CH2–CH2–OH. Original diacid: HOOC–CH2–CH2–CH2–CH2–COOH. Construct one end-omitted polyester repeat.",
+      "answer": "[–O–CH2–CH2–O–C(=O)–CH2–CH2–CH2–CH2–C(=O)–]n; four acid spacer carbons plus two carboxyl carbons and two diol carbons.",
+      "rubric": [
+        "Both original spacers retained with their correct carbon counts.",
+        "Both carboxyl carbons retained with separate C=O groups.",
+        "Both alcohol-derived oxygen atoms retained as ester linking oxygens; no acid OH or terminal alcohol H in this end-omitted repeat.",
+        "Single continuation bonds through both brackets and lower-case n outside lower right."
+      ],
+      "explanation": "[–O–CH2–CH2–O–C(=O)–CH2–CH2–CH2–CH2–C(=O)–]n; four acid spacer carbons plus two carboxyl carbons and two diol carbons.",
+      "hint": "Keep diol spacer carbons separate from acid spacer carbons and its two carboxyl carbons.",
+      "polyesterDrawing": {
+        "diolC": 2,
+        "acidSpacerC": 4,
+        "note": "Higher: construct a diol/diacid-derived repeat using the given CH2 spacer notation. No correct spacer or oxygen choices are prefilled."
+      },
+      "followUp": "pol-v1-r-spacer",
+      "exposureAliases": [
+        "pol-v1-r-spacer",
+        "pol-v1-g-polyester",
+        "pol-v1-p-polyester1",
+        "pol-v1-p-polyester2",
+        "pol-v1-p-poly-C",
+        "pol-v1-p-poly-O"
+      ]
+    },
+    {
+      "id": "pol-v1-p-poly-C",
+      "title": "Higher: audit repeat carbon",
+      "purpose": "Higher: audit repeat carbon",
+      "prompt": "A supplied polyester contribution contains two diol spacer C, four diacid spacer C and both carboxyl C. How many C atoms remain?",
+      "answer": "8",
+      "unit": "C atoms",
+      "explanation": "2 + 4 + 2 = 8. Water formation removes no carbon.",
+      "hint": "Count the carbon in each original COOH.",
+      "followUp": "pol-v1-r-spacer",
+      "exposureAliases": [
+        "pol-v1-r-spacer",
+        "pol-v1-g-polyester",
+        "pol-v1-p-polyester1",
+        "pol-v1-p-polyester2",
+        "pol-v1-p-polyester3",
+        "pol-v1-p-poly-O"
+      ]
+    },
+    {
+      "id": "pol-v1-p-poly-O",
+      "title": "Higher: audit repeat oxygen",
+      "purpose": "Higher: audit repeat oxygen",
+      "prompt": "A supplied end-omitted diol/diacid-derived polyester contribution retains two carbonyl O and two alcohol-derived linking O. How many O atoms does this contribution contain?",
+      "answer": "4",
+      "unit": "O atoms",
+      "explanation": "2 carbonyl O + 2 linking O = 4. This stated repeat inventory omits the separate finite-chain end groups.",
+      "hint": "Do not delete the alcohol linking oxygens.",
+      "followUp": "pol-v1-r-spacer",
+      "exposureAliases": [
+        "pol-v1-r-spacer",
+        "pol-v1-g-polyester",
+        "pol-v1-p-polyester1",
+        "pol-v1-p-polyester2",
+        "pol-v1-p-polyester3",
+        "pol-v1-p-poly-C"
+      ]
+    },
+    {
+      "id": "pol-v1-p-open",
+      "title": "Higher: count ten monomers in ONE open chain",
+      "purpose": "Higher: count ten monomers in ONE open chain",
+      "prompt": "Five diol and five diacid molecules form ONE finite open chain with all ten monomer-derived nodes connected. Each actual ester link releases one water. How many waters have formed?",
+      "answer": "9",
+      "unit": "water molecules",
+      "explanation": "Ten connected nodes in one open chain have nine links. This diagram retains its terminal functional groups.",
+      "hint": "Count actual finite connections, not a different end-omitted repeat equation.",
+      "followUp": "pol-v1-r-links",
+      "exposureAliases": [
+        "pol-v1-r-links",
+        "pol-v1-g-links",
+        "pol-v1-p-twochains"
+      ]
+    },
+    {
+      "id": "pol-v1-p-twochains",
+      "title": "Higher: distinguish two chains",
+      "purpose": "Higher: distinguish two chains",
+      "prompt": "Eight supplied monomer-derived nodes form TWO separate open chains. Each actual condensation link releases one water. How many waters form?",
+      "answer": "6",
+      "unit": "water molecules",
+      "explanation": "8 nodes − 2 connected open-chain components = 6 links and six waters.",
+      "hint": "Count components as well as nodes.",
+      "followUp": "pol-v1-r-links",
+      "exposureAliases": [
+        "pol-v1-r-links",
+        "pol-v1-g-links",
+        "pol-v1-p-open"
+      ]
+    },
+    {
+      "id": "pol-v1-p-symbolic",
+      "title": "Higher: use the specified repeat equation",
+      "purpose": "Higher: use the specified repeat equation",
+      "prompt": "An idealised end-omitted polyester equation specifies two water losses per repeating contribution. For n = 20, how many waters does this representation show?",
+      "answer": "40",
+      "unit": "water molecules",
+      "explanation": "2n = 40 in the explicitly stated repeat-equation convention. A finite open-chain diagram would require its actual links and end groups.",
+      "hint": "Use the given two-per-repeat representation.",
+      "followUp": "pol-v1-r-symbolic",
+      "exposureAliases": [
+        "pol-v1-r-symbolic"
+      ]
+    },
+    {
+      "id": "pol-v1-p-condensation",
+      "title": "Higher: explain why this is condensation",
+      "purpose": "Higher: explain why this is condensation",
+      "prompt": "For the supplied diol/diacid polyester, explain the role of two functional groups, an ester link and water formation.",
+      "answer": "Both monomers have two reactive functional groups, allowing repeated chain growth. Acid OH and the H on alcohol O form water at each ester link. Alcohol O and acid carbonyl C/O remain in the polyester link. The small-molecule loss distinguishes this condensation from ordinary alkene addition.",
+      "rubric": [
+        "Two reacting ends on each supplied diol/diacid enable repeated growth.",
+        "Each link is an ester linkage.",
+        "The actual acid OH/alcohol H form water, while the alcohol linking O and carbonyl atoms remain.",
+        "Ordinary addition retains the monomer atom inventory without a small-molecule by-product."
+      ],
+      "explanation": "Both monomers have two reactive functional groups, allowing repeated chain growth. Acid OH and the H on alcohol O form water at each ester link. Alcohol O and acid carbonyl C/O remain in the polyester link. The small-molecule loss distinguishes this condensation from ordinary alkene addition.",
+      "hint": "Explain the actual atoms at a single link before describing continued growth.",
+      "followUp": "pol-v1-r-functional",
+      "exposureAliases": [
+        "pol-v1-r-functional",
+        "pol-v1-g-ester",
+        "pol-v1-p-stopper",
+        "pol-v1-r-water",
+        "pol-v1-p-water"
+      ]
+    },
+    {
+      "id": "pol-v1-p-properties",
+      "title": "Reject identical-property reasoning",
+      "purpose": "Reject identical-property reasoning",
+      "prompt": "A student says all polymers have the same properties because each has strong covalent bonds. Which correction is supported?",
+      "answer": "Their different chain structures and between-chain interactions can give different properties",
+      "options": [
+        "Strong covalent bonds prove identical flexibility",
+        "All polymer chains must be diamond-like networks",
+        "Their different chain structures and between-chain interactions can give different properties"
+      ],
+      "misconceptions": {
+        "Strong covalent bonds prove identical flexibility": "The full molecular structure and interactions matter.",
+        "All polymer chains must be diamond-like networks": "Many polymers consist of large separate chain molecules."
+      },
+      "explanation": "Different chain structures can give different material behaviour. Decide a use from supplied properties, not the word polymer alone.",
+      "hint": "Keep within-chain bonds separate from whole-material behaviour.",
+      "followUp": "pol-v1-r-properties",
+      "exposureAliases": [
+        "pol-v1-r-properties",
+        "polymers-4"
+      ]
+    }
+  ],
+  "checkForms": [
+    [
+      {
+        "id": "pol-v1-a-draw",
+        "title": "Independent forward construction",
+        "purpose": "Independent forward construction",
+        "prompt": "Construct one monomer-derived addition repeat from the original supplied alkene, retaining every side group.",
+        "answer": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+        "rubric": [
+          "Change the original C=C to a single C–C bond.",
+          "Preserve every original side group on its reacting carbon; retain correct C4/H1/halogen1 valences.",
+          "Show both single continuation bonds through brackets and lower-case n outside lower right."
+        ],
+        "explanation": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+        "hint": "Trace the two original reacting carbons and keep their substituents.",
+        "polymerisationGiven": {
+          "groups": [
+            "H",
+            "Cl",
+            "H",
+            "CH3"
+          ],
+          "polymer": false
+        },
+        "polymerisationDrawing": {
+          "kind": "repeat",
+          "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+        },
+        "exposureAliases": [
+          "pol-v1-r-single",
+          "pol-v1-r-groups",
+          "pol-v1-g-addition",
+          "pol-v1-p-ethene",
+          "pol-v1-p-propene",
+          "pol-v1-p-chloro",
+          "pol-v1-p-fluoro",
+          "pol-v1-p-but1",
+          "pol-v1-p-but2",
+          "pol-v1-p-cl11",
+          "pol-v1-p-cl12",
+          "pol-v1-p-bond",
+          "pol-v1-b-draw",
+          "pol-v1-b-bond",
+          "pol-v1-ra-bond",
+          "polymers-1"
+        ]
+      },
+      {
+        "id": "pol-v1-a-reverse",
+        "title": "Independent reverse deduction",
+        "purpose": "Independent reverse deduction",
+        "prompt": "Construct the separate alkene monomer from the original supplied repeating unit.",
+        "answer": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+        "rubric": [
+          "Restore C=C between the two reacting carbons.",
+          "Preserve all side groups and their carbon attachments; rotated/reversed equivalents are valid.",
+          "No polymer brackets, n or continuation bonds on the separate monomer."
+        ],
+        "explanation": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+        "hint": "Trace the two original reacting carbons and keep their substituents.",
+        "polymerisationGiven": {
+          "groups": [
+            "H",
+            "Cl",
+            "H",
+            "Cl"
+          ],
+          "polymer": true
+        },
+        "polymerisationDrawing": {
+          "kind": "monomer",
+          "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+        },
+        "exposureAliases": [
+          "pol-v1-r-reverse",
+          "pol-v1-g-reverse",
+          "pol-v1-p-reverse-cl",
+          "pol-v1-p-reverse-fl",
+          "pol-v1-p-reverse-but1",
+          "pol-v1-p-reverse-cl12",
+          "pol-v1-b-reverse",
+          "pol-v1-rb-reverse"
+        ]
+      },
+      {
+        "id": "pol-v1-a-products",
+        "title": "Independent product distinction",
+        "purpose": "Independent product distinction",
+        "prompt": "An ordinary alkene addition polymerisation is specified. Which product statement is justified?",
+        "answer": "The polymer forms without a small-molecule by-product",
+        "options": [
+          "The polymer forms without a small-molecule by-product",
+          "Polymer and water necessarily form",
+          "Hydrogen chloride necessarily forms"
+        ],
+        "misconceptions": {
+          "Polymer and water necessarily form": "That imports condensation into the stated addition reaction.",
+          "Hydrogen chloride necessarily forms": "The addition inventory is retained, including any original halogens."
+        },
+        "explanation": "Ordinary addition joins monomers without eliminating a small molecule.",
+        "hint": "Use the specified reaction type.",
+        "exposureAliases": [
+          "pol-v1-r-inventory",
+          "pol-v1-r-halogen",
+          "pol-v1-g-inventory",
+          "pol-v1-p-H",
+          "pol-v1-p-Cl",
+          "pol-v1-p-mass",
+          "pol-v1-a-Cl",
+          "pol-v1-b-product",
+          "pol-v1-ra-Cl",
+          "polymers-3"
+        ]
+      },
+      {
+        "id": "pol-v1-a-Cl",
+        "title": "Independent chlorine inventory",
+        "purpose": "Independent chlorine inventory",
+        "prompt": "Eight supplied C2H3Cl contributions contain how many Cl atoms, ignoring omitted ends?",
+        "answer": "8",
+        "unit": "Cl atoms",
+        "explanation": "8 × 1 = 8 Cl. All original chlorine is retained.",
+        "hint": "Use the original repeat contribution.",
+        "exposureAliases": [
+          "pol-v1-r-inventory",
+          "pol-v1-r-halogen",
+          "pol-v1-g-inventory",
+          "pol-v1-p-H",
+          "pol-v1-p-Cl",
+          "pol-v1-p-mass",
+          "pol-v1-a-products",
+          "pol-v1-b-product",
+          "pol-v1-ra-Cl",
+          "polymers-3"
+        ]
+      },
+      {
+        "id": "pol-v1-a-C",
+        "title": "Independent side-group accounting",
+        "purpose": "Independent side-group accounting",
+        "prompt": "Five supplied propene-derived C3H6 contributions contain how many TOTAL C atoms?",
+        "answer": "15",
+        "unit": "C atoms",
+        "explanation": "5 × 3 = 15 C, including the methyl side groups.",
+        "hint": "Do not count backbone carbons alone.",
+        "exposureAliases": [
+          "pol-v1-g-segment",
+          "pol-v1-p-C",
+          "pol-v1-rb-C"
+        ]
+      },
+      {
+        "id": "pol-v1-a-n",
+        "title": "Independent continuation notation",
+        "purpose": "Independent continuation notation",
+        "prompt": "Which description completes the representation of a connected repeating unit?",
+        "answer": "Single bonds through both brackets, with lower-case n outside lower right",
+        "options": [
+          "Single bonds through both brackets, with lower-case n outside lower right",
+          "Two extra H instead of continuation bonds",
+          "A retained C=C and no outward bonds"
+        ],
+        "misconceptions": {
+          "Two extra H instead of continuation bonds": "That caps a small molecule instead of showing repetition.",
+          "A retained C=C and no outward bonds": "That represents the alkene monomer."
+        },
+        "explanation": "Brackets and n describe repeating contributions; continuation bonds connect them.",
+        "hint": "Read what continues beyond the brackets.",
+        "exposureAliases": [
+          "pol-v1-r-brackets",
+          "pol-v1-r-n",
+          "pol-v1-g-segment",
+          "pol-v1-p-n",
+          "pol-v1-p-end",
+          "pol-v1-p-monomer-unit",
+          "pol-v1-ra-n",
+          "ps-v1-p-n"
+        ]
+      },
+      {
+        "id": "pol-v1-a-name",
+        "title": "Independent polymer naming",
+        "purpose": "Independent polymer naming",
+        "prompt": "Which addition-polymer name keeps the supplied propene monomer identity?",
+        "answer": "Poly(propene)",
+        "options": [
+          "Poly(propane)",
+          "Poly(ethene)",
+          "Poly(propene)"
+        ],
+        "misconceptions": {
+          "Poly(propane)": "Propane is a different monomer identity.",
+          "Poly(ethene)": "That belongs to ethene rather than propene."
+        },
+        "explanation": "The unchanged monomer name is placed after poly.",
+        "hint": "Keep the supplied name.",
+        "exposureAliases": [
+          "pol-v1-r-name",
+          "pol-v1-p-name"
+        ]
+      },
+      {
+        "id": "pol-v1-a-explain",
+        "title": "Independent chemical-change explanation",
+        "purpose": "Independent chemical-change explanation",
+        "prompt": "An original diagram shows separate alkene molecules before and one covalently connected chain after. Explain why this is chemical, despite conservation of atoms.",
+        "answer": "The monomers gain covalent connections into a new very large chain molecule, changing molecular identity. Their original C=C bonds become C–C backbone bonds while the side groups and atoms are retained. Conserving atoms does not make a change physical.",
+        "rubric": [
+          "New covalent connectivity joins monomer-derived units.",
+          "The alkene double becomes a single backbone bond while outward chain bonds form.",
+          "Atoms/side groups remain, but molecular identities change."
+        ],
+        "explanation": "The monomers gain covalent connections into a new very large chain molecule, changing molecular identity. Their original C=C bonds become C–C backbone bonds while the side groups and atoms are retained. Conserving atoms does not make a change physical.",
+        "hint": "Distinguish atom conservation from molecular identity.",
+        "exposureAliases": [
+          "pol-v1-r-monomer",
+          "pol-v1-p-molecules",
+          "pol-v1-rb-change",
+          "pol-v1-r-forces",
+          "pol-v1-p-melt",
+          "pol-v1-b-explain",
+          "polymers-2",
+          "polymers-5",
+          "ps-v1-r-chain",
+          "ps-v1-r-forces",
+          "ps-v1-r-phase",
+          "ps-v1-g-chain",
+          "ps-v1-g-separation",
+          "ps-v1-g-phase",
+          "ps-v1-p-recognise",
+          "ps-v1-p-bond",
+          "ps-v1-p-separation",
+          "ps-v1-p-state",
+          "ps-v1-p-physical",
+          "ps-v1-p-limits",
+          "ps-v1-p-compound",
+          "ps-v1-p-explain",
+          "ps-v1-p-compare",
+          "ps-write-v1-p-correction",
+          "ps-v1-ca-type",
+          "ps-v1-ca-force",
+          "ps-v1-ca-state",
+          "ps-v1-cb-recognise",
+          "ps-v1-cb-change",
+          "ps-v1-cb-limit",
+          "ps-write-v1-ca-state",
+          "ps-write-v1-ca-separate",
+          "ps-v1-ra-type",
+          "ps-v1-ra-state",
+          "ps-v1-rb-separation",
+          "ps-v1-rb-network",
+          "ps-write-v1-ra-model",
+          "ps-write-v1-ra-contrast",
+          "ps-write-v1-ra-evidence",
+          "path-v1-r-polymer",
+          "path-v1-g-polymer",
+          "path-v1-p-addition-polymer",
+          "path-v1-d2-explain",
+          "materials-v1-w-bond",
+          "materials-v1-r-soft",
+          "materials-v1-r-set",
+          "materials-v1-g-polymer",
+          "materials-v1-p-thermal",
+          "materials-v1-cA-polymer",
+          "materials-v1-vA-thermal"
+        ]
+      }
+    ],
+    [
+      {
+        "id": "pol-v1-b-draw",
+        "title": "Independent substituted addition",
+        "purpose": "Independent substituted addition",
+        "prompt": "Construct one monomer-derived addition repeat from the original supplied fluorine-containing alkene.",
+        "answer": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+        "rubric": [
+          "Change the original C=C to a single C–C bond.",
+          "Preserve every original side group on its reacting carbon; retain correct C4/H1/halogen1 valences.",
+          "Show both single continuation bonds through brackets and lower-case n outside lower right."
+        ],
+        "explanation": "Two singly bonded backbone carbons, every supplied side group retained, single continuation bonds crossing both brackets and lower-case n outside at the lower right.",
+        "hint": "Trace the two original reacting carbons and keep their substituents.",
+        "polymerisationGiven": {
+          "groups": [
+            "H",
+            "F",
+            "H",
+            "F"
+          ],
+          "polymer": false
+        },
+        "polymerisationDrawing": {
+          "kind": "repeat",
+          "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+        },
+        "exposureAliases": [
+          "pol-v1-r-single",
+          "pol-v1-r-groups",
+          "pol-v1-g-addition",
+          "pol-v1-p-ethene",
+          "pol-v1-p-propene",
+          "pol-v1-p-chloro",
+          "pol-v1-p-fluoro",
+          "pol-v1-p-but1",
+          "pol-v1-p-but2",
+          "pol-v1-p-cl11",
+          "pol-v1-p-cl12",
+          "pol-v1-p-bond",
+          "pol-v1-a-draw",
+          "pol-v1-b-bond",
+          "pol-v1-ra-bond",
+          "polymers-1"
+        ]
+      },
+      {
+        "id": "pol-v1-b-reverse",
+        "title": "Independent unfamiliar reverse deduction",
+        "purpose": "Independent unfamiliar reverse deduction",
+        "prompt": "Construct the separate alkene from the original supplied ethyl-substituted repeating unit.",
+        "answer": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+        "rubric": [
+          "Restore C=C between the two reacting carbons.",
+          "Preserve all side groups and their carbon attachments; rotated/reversed equivalents are valid.",
+          "No polymer brackets, n or continuation bonds on the separate monomer."
+        ],
+        "explanation": "A separate C=C monomer with every original substituent on its original reacting carbon; no polymer brackets, n or continuation bonds.",
+        "hint": "Trace the two original reacting carbons and keep their substituents.",
+        "polymerisationGiven": {
+          "groups": [
+            "H",
+            "H",
+            "H",
+            "C2H5"
+          ],
+          "polymer": true
+        },
+        "polymerisationDrawing": {
+          "kind": "monomer",
+          "note": "The original supplied structure above stays fixed. Construct your requested response from blank attachments and bond/notation choices."
+        },
+        "exposureAliases": [
+          "pol-v1-r-reverse",
+          "pol-v1-g-reverse",
+          "pol-v1-p-reverse-cl",
+          "pol-v1-p-reverse-fl",
+          "pol-v1-p-reverse-but1",
+          "pol-v1-p-reverse-cl12",
+          "pol-v1-a-reverse",
+          "pol-v1-rb-reverse"
+        ]
+      },
+      {
+        "id": "pol-v1-b-bond",
+        "title": "Independent bond and valence check",
+        "purpose": "Independent bond and valence check",
+        "prompt": "A correct original alkene is converted to an ordinary connected addition repeat. Which change provides one outward bonding position on EACH reacting carbon?",
+        "answer": "C=C becomes C–C",
+        "options": [
+          "Each carbon gains two new outward bonds without changing C=C",
+          "Every side group is deleted",
+          "C=C becomes C–C"
+        ],
+        "misconceptions": {
+          "Each carbon gains two new outward bonds without changing C=C": "That exceeds the normal carbon valence.",
+          "Every side group is deleted": "That loses the original addition inventory."
+        },
+        "explanation": "The reduction from double to single frees one bond order on each reacting carbon.",
+        "hint": "Count four bond orders per carbon.",
+        "exposureAliases": [
+          "pol-v1-w-carbon",
+          "pol-v1-r-outward",
+          "pol-v1-p-bond",
+          "pol-v1-ra-bond",
+          "pol-v1-r-single",
+          "pol-v1-r-groups",
+          "pol-v1-g-addition",
+          "pol-v1-p-ethene",
+          "pol-v1-p-propene",
+          "pol-v1-p-chloro",
+          "pol-v1-p-fluoro",
+          "pol-v1-p-but1",
+          "pol-v1-p-but2",
+          "pol-v1-p-cl11",
+          "pol-v1-p-cl12",
+          "pol-v1-a-draw",
+          "pol-v1-b-draw",
+          "polymers-1"
+        ]
+      },
+      {
+        "id": "pol-v1-b-Mr",
+        "title": "Independent repeat contribution",
+        "purpose": "Independent repeat contribution",
+        "prompt": "A supplied repeat contribution has relative mass42. What is the contribution from six units, ignoring omitted ends?",
+        "answer": "252",
+        "unit": "relative-mass contribution",
+        "explanation": "6 × 42 = 252. End groups are not included.",
+        "hint": "Multiply the stated contribution.",
+        "exposureAliases": [
+          "pol-v1-r-mass",
+          "pol-v1-p-Mr"
+        ]
+      },
+      {
+        "id": "pol-v1-b-units",
+        "title": "Independent backbone-to-unit conversion",
+        "purpose": "Independent backbone-to-unit conversion",
+        "prompt": "A supplied alkene-derived crop contains14 backbone C atoms, with two backbone C per monomer-derived contribution. How many contributions are shown?",
+        "answer": "7",
+        "unit": "contributions",
+        "explanation": "14 ÷ 2 = 7. Side groups do not alter the stated two-carbon backbone contribution.",
+        "hint": "Count backbone pairs.",
+        "exposureAliases": [
+          "pol-v1-p-units"
+        ]
+      },
+      {
+        "id": "pol-v1-b-connectivity",
+        "title": "Independent connectivity comparison",
+        "purpose": "Independent connectivity comparison",
+        "prompt": "The original repeat has both Cl atoms on ONE backbone carbon. A proposed repeat puts one Cl on EACH. Which judgement follows?",
+        "answer": "Atom totals match but the original connectivity was changed",
+        "options": [
+          "Only the displayed direction changed",
+          "Atom totals match but the original connectivity was changed",
+          "Always correct because the formula agrees"
+        ],
+        "misconceptions": {
+          "Always correct because the formula agrees": "Connectivity, not formula alone, must be retained.",
+          "Only the displayed direction changed": "Distributing two Cl across both carbons changes their attachments."
+        },
+        "explanation": "A reversed/rotated drawing can be equivalent; rearranged chlorine attachments are not.",
+        "hint": "Trace each Cl to its carbon.",
+        "exposureAliases": [
+          "pol-v1-r-groups",
+          "pol-v1-g-segment",
+          "pol-v1-p-connectivity",
+          "pol-v1-p-equivalent",
+          "pol-v1-p-cl11",
+          "pol-v1-p-cl12"
+        ]
+      },
+      {
+        "id": "pol-v1-b-product",
+        "title": "Independent absence of a by-product",
+        "purpose": "Independent absence of a by-product",
+        "prompt": "For the stated ordinary addition transformation of a chlorine-containing alkene, what happens to its original Cl?",
+        "answer": "It remains in the polymer-derived repeat",
+        "options": [
+          "It remains in the polymer-derived repeat",
+          "It must leave as HCl",
+          "It is replaced with F"
+        ],
+        "misconceptions": {
+          "It must leave as HCl": "That is not ordinary addition polymerisation.",
+          "It is replaced with F": "No supplied reagent or reaction justifies that substitution."
+        },
+        "explanation": "Original substituents are retained during this addition transformation.",
+        "hint": "Use the original atom inventory.",
+        "exposureAliases": [
+          "pol-v1-r-inventory",
+          "pol-v1-r-halogen",
+          "pol-v1-g-inventory",
+          "pol-v1-p-H",
+          "pol-v1-p-Cl",
+          "pol-v1-p-mass",
+          "pol-v1-a-products",
+          "pol-v1-a-Cl",
+          "pol-v1-ra-Cl",
+          "polymers-3"
+        ]
+      },
+      {
+        "id": "pol-v1-b-explain",
+        "title": "Independent physical-change comparison",
+        "purpose": "Independent physical-change comparison",
+        "prompt": "A supplied thermoplastic melts while its chains remain intact. Explain why cutting the covalent backbone would be a different change.",
+        "answer": "The stated melting overcomes attractions between intact chain molecules and is physical. Cutting the covalent backbone breaks within-chain bonds and changes molecular identity, so it is chemical. Strong covalent backbone bonds do not all break in the stated melt.",
+        "rubric": [
+          "Physical melting separates intact chain molecules by overcoming intermolecular forces.",
+          "The covalent backbone remains intact in the specified physical change.",
+          "Cutting covalent chain bonds changes molecular identity and is chemical."
+        ],
+        "explanation": "The stated melting overcomes attractions between intact chain molecules and is physical. Cutting the covalent backbone breaks within-chain bonds and changes molecular identity, so it is chemical. Strong covalent backbone bonds do not all break in the stated melt.",
+        "hint": "Separate between-chain forces from within-chain bonds.",
+        "exposureAliases": [
+          "pol-v1-r-forces",
+          "pol-v1-p-melt",
+          "pol-v1-a-explain",
+          "pol-v1-rb-change",
+          "polymers-5",
+          "ps-v1-r-chain",
+          "ps-v1-r-forces",
+          "ps-v1-r-phase",
+          "ps-v1-g-chain",
+          "ps-v1-g-separation",
+          "ps-v1-g-phase",
+          "ps-v1-p-recognise",
+          "ps-v1-p-bond",
+          "ps-v1-p-separation",
+          "ps-v1-p-state",
+          "ps-v1-p-physical",
+          "ps-v1-p-limits",
+          "ps-v1-p-compound",
+          "ps-v1-p-explain",
+          "ps-v1-p-compare",
+          "ps-write-v1-p-correction",
+          "ps-v1-ca-type",
+          "ps-v1-ca-force",
+          "ps-v1-ca-state",
+          "ps-v1-cb-recognise",
+          "ps-v1-cb-change",
+          "ps-v1-cb-limit",
+          "ps-write-v1-ca-state",
+          "ps-write-v1-ca-separate",
+          "ps-v1-ra-type",
+          "ps-v1-ra-state",
+          "ps-v1-rb-separation",
+          "ps-v1-rb-network",
+          "ps-write-v1-ra-model",
+          "ps-write-v1-ra-contrast",
+          "ps-write-v1-ra-evidence",
+          "polymers-2",
+          "pol-v1-r-monomer",
+          "pol-v1-p-molecules",
+          "path-v1-r-polymer",
+          "path-v1-g-polymer",
+          "path-v1-p-addition-polymer",
+          "path-v1-d2-explain",
+          "materials-v1-w-bond",
+          "materials-v1-r-soft",
+          "materials-v1-r-set",
+          "materials-v1-g-polymer",
+          "materials-v1-p-thermal",
+          "materials-v1-cA-polymer",
+          "materials-v1-vA-thermal"
+        ]
+      }
+    ]
+  ],
+  "reviewForms": [
+    [
+      {
+        "id": "pol-v1-ra-bond",
+        "title": "Delayed bond retrieval",
+        "purpose": "Delayed bond retrieval",
+        "prompt": "For ordinary addition polymerisation of the supplied alkene, what happens to its reacting C=C?",
+        "answer": "It becomes C–C, with one outward chain bond per reacting carbon",
+        "options": [
+          "It becomes C–C, with one outward chain bond per reacting carbon",
+          "It stays C=C and each carbon gains two outward bonds",
+          "Both reacting carbons leave the polymer"
+        ],
+        "misconceptions": {
+          "It stays C=C and each carbon gains two outward bonds": "That exceeds normal carbon valence.",
+          "Both reacting carbons leave the polymer": "Those carbons form the backbone."
+        },
+        "explanation": "The backbone pair and all its side groups are retained.",
+        "hint": "Count bond orders at each carbon.",
+        "exposureAliases": [
+          "pol-v1-w-carbon",
+          "pol-v1-r-outward",
+          "pol-v1-p-bond",
+          "pol-v1-b-bond",
+          "pol-v1-r-single",
+          "pol-v1-r-groups",
+          "pol-v1-g-addition",
+          "pol-v1-p-ethene",
+          "pol-v1-p-propene",
+          "pol-v1-p-chloro",
+          "pol-v1-p-fluoro",
+          "pol-v1-p-but1",
+          "pol-v1-p-but2",
+          "pol-v1-p-cl11",
+          "pol-v1-p-cl12",
+          "pol-v1-a-draw",
+          "pol-v1-b-draw",
+          "polymers-1"
+        ]
+      },
+      {
+        "id": "pol-v1-ra-Cl",
+        "title": "Delayed halogen accounting",
+        "purpose": "Delayed halogen accounting",
+        "prompt": "Four supplied C2H3Cl repeat contributions contain how many Cl atoms?",
+        "answer": "4",
+        "unit": "Cl atoms",
+        "explanation": "Four contributions retain four Cl.",
+        "hint": "One Cl per original contribution.",
+        "exposureAliases": [
+          "pol-v1-r-inventory",
+          "pol-v1-r-halogen",
+          "pol-v1-g-inventory",
+          "pol-v1-p-H",
+          "pol-v1-p-Cl",
+          "pol-v1-p-mass",
+          "pol-v1-a-products",
+          "pol-v1-a-Cl",
+          "pol-v1-b-product",
+          "polymers-3"
+        ]
+      },
+      {
+        "id": "pol-v1-ra-n",
+        "title": "Delayed repeat notation",
+        "purpose": "Delayed repeat notation",
+        "prompt": "What does lower-case n outside repeat brackets represent?",
+        "answer": "Many covalently joined repeating contributions",
+        "options": [
+          "Many covalently joined repeating contributions",
+          "A nitrogen atom added to the unit",
+          "Two terminal hydrogen atoms"
+        ],
+        "misconceptions": {
+          "A nitrogen atom added to the unit": "The lower-case n is count notation, not element N.",
+          "Two terminal hydrogen atoms": "No end-group structure is specified by n."
+        },
+        "explanation": "The outward bonds and brackets show continuing repetition.",
+        "hint": "Read count notation separately from atoms.",
+        "exposureAliases": [
+          "pol-v1-r-brackets",
+          "pol-v1-r-n",
+          "pol-v1-g-segment",
+          "pol-v1-p-n",
+          "pol-v1-p-end",
+          "pol-v1-p-monomer-unit",
+          "pol-v1-a-n",
+          "ps-v1-p-n"
+        ]
+      }
+    ],
+    [
+      {
+        "id": "pol-v1-rb-reverse",
+        "title": "Delayed reverse reasoning",
+        "purpose": "Delayed reverse reasoning",
+        "prompt": "Recovering an alkene from an addition-polymer-derived repeat requires which change?",
+        "answer": "Restore C=C while retaining the original side groups",
+        "options": [
+          "Remove chlorine before changing the backbone",
+          "Keep n and both continuation bonds on the separate molecule",
+          "Restore C=C while retaining the original side groups"
+        ],
+        "misconceptions": {
+          "Remove chlorine before changing the backbone": "That changes the original inventory.",
+          "Keep n and both continuation bonds on the separate molecule": "Those are polymer notation."
+        },
+        "explanation": "A separate monomer has the reacting double bond and its original substituents.",
+        "hint": "Reverse the transformation without rearranging atoms.",
+        "exposureAliases": [
+          "pol-v1-r-reverse",
+          "pol-v1-g-reverse",
+          "pol-v1-p-reverse-cl",
+          "pol-v1-p-reverse-fl",
+          "pol-v1-p-reverse-but1",
+          "pol-v1-p-reverse-cl12",
+          "pol-v1-a-reverse",
+          "pol-v1-b-reverse"
+        ]
+      },
+      {
+        "id": "pol-v1-rb-C",
+        "title": "Delayed methyl-carbon accounting",
+        "purpose": "Delayed methyl-carbon accounting",
+        "prompt": "Four propene-derived C3H6 contributions contain how many TOTAL C atoms?",
+        "answer": "12",
+        "unit": "C atoms",
+        "explanation": "Four times three gives twelve, including side-group carbon.",
+        "hint": "Count every original carbon.",
+        "exposureAliases": [
+          "pol-v1-g-segment",
+          "pol-v1-p-C",
+          "pol-v1-a-C"
+        ]
+      },
+      {
+        "id": "pol-v1-rb-change",
+        "title": "Delayed chemical-change reasoning",
+        "purpose": "Delayed chemical-change reasoning",
+        "prompt": "Joining monomers covalently into a polymer is chemical because…",
+        "answer": "Covalent connectivity and molecular identity change",
+        "options": [
+          "Atoms are destroyed",
+          "Only intermolecular attractions are overcome",
+          "Covalent connectivity and molecular identity change"
+        ],
+        "misconceptions": {
+          "Atoms are destroyed": "Atoms are conserved in the reaction.",
+          "Only intermolecular attractions are overcome": "That would describe a physical separation of intact molecules."
+        },
+        "explanation": "The original small molecules become part of a new large chain molecule.",
+        "hint": "Follow covalent connectivity.",
+        "exposureAliases": [
+          "pol-v1-r-monomer",
+          "pol-v1-p-molecules",
+          "pol-v1-a-explain",
+          "pol-v1-r-forces",
+          "pol-v1-p-melt",
+          "pol-v1-b-explain",
+          "polymers-2",
+          "polymers-5",
+          "ps-v1-r-chain",
+          "ps-v1-r-forces",
+          "ps-v1-r-phase",
+          "ps-v1-g-chain",
+          "ps-v1-g-separation",
+          "ps-v1-g-phase",
+          "ps-v1-p-recognise",
+          "ps-v1-p-bond",
+          "ps-v1-p-separation",
+          "ps-v1-p-state",
+          "ps-v1-p-physical",
+          "ps-v1-p-limits",
+          "ps-v1-p-compound",
+          "ps-v1-p-explain",
+          "ps-v1-p-compare",
+          "ps-write-v1-p-correction",
+          "ps-v1-ca-type",
+          "ps-v1-ca-force",
+          "ps-v1-ca-state",
+          "ps-v1-cb-recognise",
+          "ps-v1-cb-change",
+          "ps-v1-cb-limit",
+          "ps-write-v1-ca-state",
+          "ps-write-v1-ca-separate",
+          "ps-v1-ra-type",
+          "ps-v1-ra-state",
+          "ps-v1-rb-separation",
+          "ps-v1-rb-network",
+          "ps-write-v1-ra-model",
+          "ps-write-v1-ra-contrast",
+          "ps-write-v1-ra-evidence",
+          "path-v1-r-polymer",
+          "path-v1-g-polymer",
+          "path-v1-p-addition-polymer",
+          "path-v1-d2-explain",
+          "materials-v1-w-bond",
+          "materials-v1-r-soft",
+          "materials-v1-r-set",
+          "materials-v1-g-polymer",
+          "materials-v1-p-thermal",
+          "materials-v1-cA-polymer",
+          "materials-v1-vA-thermal"
+        ]
+      }
+    ]
+  ],
+  "practiceGroups": [
+    {
+      "label": "Forward displayed construction",
+      "taskIds": [
+        "pol-v1-p-ethene",
+        "pol-v1-p-propene",
+        "pol-v1-p-chloro",
+        "pol-v1-p-fluoro",
+        "pol-v1-p-but1",
+        "pol-v1-p-but2",
+        "pol-v1-p-cl11",
+        "pol-v1-p-cl12"
+      ]
+    },
+    {
+      "label": "Reverse deduction and connectivity",
+      "taskIds": [
+        "pol-v1-p-reverse-cl",
+        "pol-v1-p-reverse-fl",
+        "pol-v1-p-reverse-but1",
+        "pol-v1-p-reverse-cl12",
+        "pol-v1-p-bond",
+        "pol-v1-p-connectivity",
+        "pol-v1-p-equivalent"
+      ]
+    },
+    {
+      "label": "Notation and naming",
+      "taskIds": [
+        "pol-v1-p-n",
+        "pol-v1-p-end",
+        "pol-v1-p-monomer-unit",
+        "pol-v1-p-name"
+      ]
+    },
+    {
+      "label": "Atoms, mass and molecule counts",
+      "taskIds": [
+        "pol-v1-p-C",
+        "pol-v1-p-H",
+        "pol-v1-p-Cl",
+        "pol-v1-p-Mr",
+        "pol-v1-p-mass",
+        "pol-v1-p-units",
+        "pol-v1-p-molecules"
+      ]
+    },
+    {
+      "label": "Chemical/physical change and supplied uses",
+      "taskIds": [
+        "pol-v1-p-bromine",
+        "pol-v1-p-melt",
+        "pol-v1-p-use",
+        "pol-v1-p-properties"
+      ]
+    },
+    {
+      "label": "Higher: polyester structure and functional groups",
+      "taskIds": [
+        "pol-v1-p-water",
+        "pol-v1-p-stopper",
+        "pol-v1-p-polyester1",
+        "pol-v1-p-polyester2",
+        "pol-v1-p-polyester3",
+        "pol-v1-p-poly-C",
+        "pol-v1-p-poly-O",
+        "pol-v1-p-condensation"
+      ]
+    },
+    {
+      "label": "Higher: actual links and repeat equations",
+      "taskIds": [
+        "pol-v1-p-open",
+        "pol-v1-p-twochains",
+        "pol-v1-p-symbolic"
+      ]
+    }
+  ]
+}
