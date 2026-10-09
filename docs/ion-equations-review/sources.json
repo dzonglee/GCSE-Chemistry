@@ -1,0 +1,65 @@
+[
+  {
+    "file": "spec.pdf",
+    "url": "https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF",
+    "bytes": 2700708,
+    "sha256": "ecd869d1874091a0a52abaeb8fce238a9c1cc207698713dfb66788eb0d448d43",
+    "fetched": "2026-10-09"
+  },
+  {
+    "file": "handbook.pdf",
+    "url": "https://filestore.aqa.org.uk/resources/chemistry/AQA-8462-PRACTICALS-HB.PDF",
+    "bytes": 2738084,
+    "sha256": "9cd54feda1daf1f4073177c2c205e9fe39b9b5c826e7522dc24b21da44fbc921",
+    "fetched": "2026-10-09"
+  },
+  {
+    "file": "cations.html",
+    "url": "https://www.chemguide.co.uk/14to16/analysis/cations.html",
+    "bytes": 20778,
+    "sha256": "49259a4402bdd6ad32c5ffefa33f16b94916dcb585bd876696ae5aa711274c03",
+    "fetched": "2026-10-09"
+  },
+  {
+    "file": "qp20hnov.pdf",
+    "url": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-84622H-QP-NOV20.PDF",
+    "bytes": 1688287,
+    "sha256": "21b1f6587609f6499d174c706b695cfca3b204e4952bdb26ff4dad50963e7682",
+    "fetched": "2026-10-09"
+  },
+  {
+    "file": "ms20h.pdf",
+    "url": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2020/november/AQA-84622H-W-MS-NOV20.PDF",
+    "bytes": 453509,
+    "sha256": "636e67ad307fbb4c82b76b2f32862b877edfef3644f71c1c8775c35c5679a8fc",
+    "fetched": "2026-10-09"
+  },
+  {
+    "file": "qp21fnov.pdf",
+    "url": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-84622F-QP-NOV21.PDF",
+    "bytes": 2272387,
+    "sha256": "2b8f09ed0b07f9817b7554a8f20a4754bd8002886868b8faff0bb5d7b22b5a73",
+    "fetched": "2026-10-09"
+  },
+  {
+    "file": "ms21f.pdf",
+    "url": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2021/november/AQA-84622F-MS-NOV21.PDF",
+    "bytes": 404241,
+    "sha256": "d34c1779333ff557621014443dd756f39e6eee5c4a738836317fe2cd6a81f24c",
+    "fetched": "2026-10-09"
+  },
+  {
+    "file": "qp23f.pdf",
+    "url": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-84622F-QP-JUN23.PDF",
+    "bytes": 1196912,
+    "sha256": "1844c2009c8918a7915e42ea5f46a47951f931df39ed903661aa52ece092cded",
+    "fetched": "2026-10-09"
+  },
+  {
+    "file": "ms23f.pdf",
+    "url": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-84622F-MS-JUN23.PDF",
+    "bytes": 489764,
+    "sha256": "7475167f349d239e94cc627d1f5e3767555854224d804073b95e5c8d9a4ad36a",
+    "fetched": "2026-10-09"
+  }
+]

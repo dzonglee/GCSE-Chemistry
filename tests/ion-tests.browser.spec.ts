@@ -44,7 +44,11 @@ async function answer(p: Page, q: Question) {
     for (const part of q.parts)
       await p.getByLabel(part.label, { exact: true }).fill(values[part.id]);
   } else if (q.rubric)
-    await p.getByLabel("Your explanation", { exact: true }).fill(q.answer);
+    await p
+      .getByLabel(q.writtenEquations ? "Your equations" : "Your explanation", {
+        exact: true,
+      })
+      .fill(q.answer);
   else await p.getByRole("radio", { name: q.answer, exact: true }).check();
 }
 async function accessible(p: Page) {
@@ -152,7 +156,7 @@ test("first ion control is usable on a short screen and long selected values sta
   await accessible(page);
   await shot(page, "opening-320", info.project.name);
 });
-test("all 32 practice responses use real answers, coefficient construction and honest written review", async ({
+test("all 35 practice responses use real answers, coefficient construction and honest written review", async ({
   page,
 }, info) => {
   test.setTimeout(120000);

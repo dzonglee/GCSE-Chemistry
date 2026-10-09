@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-09",
+  "images": {
+    "1280-check-form-2-opening.png": "48b8c67ef6acd30bb6df325144573f3fef5bdc34a9e4395ee2bca8f9d8f94c71",
+    "1280-guided-ironII.png": "94e10709c000954780e07e73ea02241776044b93a4d68954708f9c45dbd73481",
+    "1280-review-form-2-opening.png": "55fc9797100d0a6c38a3461d889a310c96064659d06f8c160d4a9377a65e03f8",
+    "320-check-form-2-opening.png": "5abd29a7b576641a93a3d4ee8fc883212094e75694be6683cc74481e01a7a7df",
+    "320-guided-ironII.png": "db9fc85b5844cb4e63aa492e1df1254dcd8544d60aa0102ec174138282a3cb6b",
+    "320-original-method.png": "138c4a4e0403cb326a5cacf824ea57fa66671602506d995ac889fc2220cbc12b",
+    "320-practice-calcium-wrong.png": "cd2b714fe298f5a8ed229e65d825f458f864aafecc0eb0659380c23f38f4b83f",
+    "320-review-form-3-opening.png": "a9c530d9755d7cf586869aecb5207bb4af29fd1653c9daba4928019e728f0bab"
+  },
+  "browser": "34 passed (6.1m)",
+  "units": "999 passed (57.5s)",
+  "freeze_files": 2235,
+  "original_task_records": 95,
+  "tasks": 104,
+  "practice": 35,
+  "written_review": "manual; no automatic examiner marks",
+  "whole_course_regression": "pending"
+}

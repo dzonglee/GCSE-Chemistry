@@ -37,8 +37,8 @@ const lesson = lessons.find((l) => l.slug === "ion-tests")!;
 test("one authored ion journey covers every source, specific recovery, groups and sealed forms", () => {
   expect(lesson.journey).toBe(j);
   expect(lesson.course).toBe("separate");
-  expect(allIonTasks).toHaveLength(95);
-  expect(new Set(allIonTasks.map((q) => q.id)).size).toBe(95);
+  expect(allIonTasks).toHaveLength(104);
+  expect(new Set(allIonTasks.map((q) => q.id)).size).toBe(104);
   const bindings = new Set(
     allIonTasks
       .filter((q) => q.model?.kind === "ion-test-investigation")
@@ -61,8 +61,8 @@ test("one authored ion journey covers every source, specific recovery, groups an
   }
   for (const q of [...j.checkForms.flat(), ...j.reviewForms.flat()])
     expect(q.model).toBeUndefined();
-  expect(j.checkForms.map((f) => f.length)).toEqual([10, 10]);
-  expect(j.reviewForms.map((f) => f.length)).toEqual([5, 5]);
+  expect(j.checkForms.map((f) => f.length)).toEqual([10, 10, 1, 1]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([5, 5, 1, 1]);
   expect([...lesson.questions, ...lesson.checks].map((q) => q.id)).toEqual(
     Array.from({ length: 6 }, (_, i) => "ion-tests-" + i),
   );

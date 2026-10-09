@@ -384,9 +384,11 @@ export function AssessmentSession({
     }
     if (checked.invalid) {
       setMessage(
-        q.parts
-          ? "Complete every part with a valid number before recording."
-          : "Enter a valid number only; use the unit shown beside the input.",
+        q.writtenEquations && q.id.startsWith("ion-tests-v1-write-")
+          ? checked.feedback
+          : q.parts
+            ? "Complete every part with a valid number before recording."
+            : "Enter a valid number only; use the unit shown beside the input.",
       );
       return;
     }
@@ -455,13 +457,17 @@ export function AssessmentSession({
           Question {run.index + 1} of {questions.length}
         </p>
         <h2 ref={heading} tabIndex={-1}>
-          {(q.writtenEquations || q.conciseHeading) && q.title
+          {(q.writtenEquations ||
+            q.conciseHeading ||
+            (id === "ion-tests" && q.rubric)) &&
+          q.title
             ? q.title
             : q.prompt}
         </h2>
-        {(q.writtenEquations || q.conciseHeading) && q.title && (
-          <p className="written-equation-prompt">{q.prompt}</p>
-        )}
+        {(q.writtenEquations ||
+          q.conciseHeading ||
+          (id === "ion-tests" && q.rubric)) &&
+          q.title && <p className="written-equation-prompt">{q.prompt}</p>}
         <QuestionInput
           compactAssessment={questions.length > 20}
           compactHistorical={id === "atomic-models"}

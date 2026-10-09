@@ -1,0 +1,236 @@
+--- a/src/lib/marking.ts
++++ b/src/lib/marking.ts
+@@ -1,3 +1,8 @@
++import {
++  readableIonEquation,
++  ionEquationDraftMessage,
++  ionWritingPrefix,
++} from "./ion-equation-writing";
+ import { markGasDrawing, describeGasDrawing } from "./gas-tests-drawing";
+ import {
+   markChromaDrawing,
+@@ -85,6 +90,17 @@
+       feedback: "Enter or choose an answer before checking.",
+       empty: true,
+     };
++  if (
++    q.writtenEquations &&
++    q.id.startsWith(ionWritingPrefix) &&
++    !readableIonEquation(raw)
++  )
++    return {
++      correct: false,
++      empty: false,
++      invalid: true,
++      feedback: ionEquationDraftMessage,
++    };
+   if (q.gasDrawing) return markGasDrawing(raw, q.gasDrawing);
+   if (q.tangentDrawing) {
+     const drawing = readTangentDrawing(raw);
+--- a/src/components/AssessmentSession.tsx
++++ b/src/components/AssessmentSession.tsx
+@@ -384,9 +384,11 @@
+     }
+     if (checked.invalid) {
+       setMessage(
+-        q.parts
+-          ? "Complete every part with a valid number before recording."
+-          : "Enter a valid number only; use the unit shown beside the input.",
++        q.writtenEquations && q.id.startsWith("ion-tests-v1-write-")
++          ? checked.feedback
++          : q.parts
++            ? "Complete every part with a valid number before recording."
++            : "Enter a valid number only; use the unit shown beside the input.",
+       );
+       return;
+     }
+--- a/src/components/QuestionInput.tsx
++++ b/src/components/QuestionInput.tsx
+@@ -795,9 +795,12 @@
+           onChange={(e) => onChange(e.target.value)}
+         />
+         <small>
+-          {question.writtenEquations
+-            ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
+-            : "Write in your own words. Use the marking points for self-review when feedback appears."}
++          {question.writtenEquations &&
++          question.id.startsWith("ion-tests-v1-write-")
++            ? "Use formulas and state symbols; type → or ->. Name spectator ions on a separate line. Scientific accuracy is reviewed manually."
++            : question.writtenEquations
++              ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
++              : "Write in your own words. Use the marking points for self-review when feedback appears."}
+         </small>
+       </label>
+     );
+--- a/src/components/DetailedLesson.tsx
++++ b/src/components/DetailedLesson.tsx
+@@ -215,8 +215,12 @@
+         : stage === "guided"
+           ? "Practise without the model →"
+           : "Return to learning →";
++  const ionWritingRun =
++    lesson.slug === "ion-tests" &&
++    work.run?.ids.every((id) => id.startsWith("ion-tests-v1-write-"));
+   const compactReview =
+-    (lesson.slug === "inside-an-atom" ||
++    (ionWritingRun ||
++      lesson.slug === "inside-an-atom" ||
+       lesson.slug === "balancing-equations" ||
+       lesson.slug === "transition-metals" ||
+       lesson.slug === "atomic-models" ||
+@@ -251,7 +255,8 @@
+   const ReviewContainer = compactReview ? "details" : "section";
+   const reviewScheduleAfter =
+     compactReview &&
+-    (lesson.slug === "balancing-equations" ||
++    (ionWritingRun ||
++      lesson.slug === "balancing-equations" ||
+       lesson.slug === "transition-metals" ||
+       lesson.slug === "atomic-models" ||
+       [
+@@ -515,6 +520,9 @@
+       ) : (
+         <section
+           className="sample-task-panel"
++          data-ion-equation-writing={
++            q.id.startsWith("ion-tests-v1-write-") || undefined
++          }
+           aria-label="Current learning task"
+         >
+           <div className="sample-task-topline">
+--- a/src/app/ion-tests.css
++++ b/src/app/ion-tests.css
+@@ -284,3 +284,133 @@
+     grid-row: 1/3;
+   }
+ }
++
++/* Only appended full-equation responses; existing ion tasks keep their layout. */
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your equations"]) {
++  display: flex;
++  flex-direction: column;
++  padding: 16px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your equations"])
++  .sample-task-topline:has(.practice-task-picker) {
++  order: 3;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your equations"])
++  .sample-task-topline {
++  margin-bottom: 8px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your equations"])
++  .question-navigation {
++  flex-wrap: nowrap;
++  justify-content: flex-start;
++  overflow-x: auto;
++  min-width: 0;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your equations"])
++  .question-navigation
++  button {
++  flex: 0 0 auto;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your equations"])
++  > h2,
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session:has([data-written-equations])
++  .question-panel
++  h2 {
++  font-size: 20px;
++  line-height: 1.35;
++  margin-bottom: 8px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your equations"])
++  .sample-task-prompt,
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session:has([data-written-equations])
++  .written-equation-prompt {
++  font-size: 15px;
++  line-height: 1.4;
++  margin: 0 0 8px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .sample-task-panel:has(textarea[aria-label="Your equations"])
++  .question-panel {
++  padding: 12px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session:has([data-written-equations]) {
++  display: flex;
++  flex-direction: column;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session:has([data-written-equations])
++  .session-heading {
++  margin: 8px 0;
++  gap: 8px;
++  flex-wrap: wrap;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session:has([data-written-equations])
++  > progress {
++  height: 6px;
++  margin: 4px 0;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session:has([data-written-equations])
++  .question-navigation {
++  order: 3;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session:has([data-written-equations])
++  .question-panel {
++  margin-top: 8px;
++  padding: 12px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  .assessment-session:has([data-written-equations])
++  .question-panel
++  > .eyebrow {
++  margin-bottom: 4px;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  :is(.sample-task-panel, .assessment-session):has(
++    textarea[aria-label="Your equations"]
++  )
++  .written-answer
++  textarea {
++  height: 104px;
++  min-height: 104px;
++}
++@media (max-width: 600px) {
++  .sample-lesson[data-lesson="ion-tests"]
++    :is(.sample-task-panel, .assessment-session):has(
++      textarea[aria-label="Your equations"]
++    )
++    .written-answer
++    textarea {
++    height: 84px;
++    min-height: 84px;
++  }
++}
++
++.sample-lesson[data-lesson="ion-tests"]
++  [data-ion-equation-writing]
++  .sample-task-topline
++  .question-navigation {
++  flex-wrap: nowrap;
++  justify-content: flex-start;
++  overflow-x: auto;
++  min-width: 0;
++}
++.sample-lesson[data-lesson="ion-tests"]
++  [data-ion-equation-writing]
++  .sample-task-topline
++  .question-navigation
++  button {
++  flex: 0 0 auto;
++}

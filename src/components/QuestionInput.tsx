@@ -795,9 +795,12 @@ function ResponseInput({
           onChange={(e) => onChange(e.target.value)}
         />
         <small>
-          {question.writtenEquations
-            ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
-            : "Write in your own words. Use the marking points for self-review when feedback appears."}
+          {question.writtenEquations &&
+          question.id.startsWith("ion-tests-v1-write-")
+            ? "Use formulas and state symbols; type → or ->. Name spectator ions on a separate line. Scientific accuracy is reviewed manually."
+            : question.writtenEquations
+              ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
+              : "Write in your own words. Use the marking points for self-review when feedback appears."}
         </small>
       </label>
     );

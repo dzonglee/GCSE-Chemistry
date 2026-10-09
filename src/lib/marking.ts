@@ -1,3 +1,8 @@
+import {
+  readableIonEquation,
+  ionEquationDraftMessage,
+  ionWritingPrefix,
+} from "./ion-equation-writing";
 import { markGasDrawing, describeGasDrawing } from "./gas-tests-drawing";
 import {
   markChromaDrawing,
@@ -84,6 +89,17 @@ export function mark(
       correct: false,
       feedback: "Enter or choose an answer before checking.",
       empty: true,
+    };
+  if (
+    q.writtenEquations &&
+    q.id.startsWith(ionWritingPrefix) &&
+    !readableIonEquation(raw)
+  )
+    return {
+      correct: false,
+      empty: false,
+      invalid: true,
+      feedback: ionEquationDraftMessage,
     };
   if (q.gasDrawing) return markGasDrawing(raw, q.gasDrawing);
   if (q.tangentDrawing) {

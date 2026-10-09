@@ -1,0 +1,3214 @@
+{
+  "commit": "60aea81aa0bd310f053bd89247b26aae5aeafe0b",
+  "course": "separate",
+  "stageIds": {
+    "warmup": [
+      "ion-tests-v1-w-solid",
+      "ion-tests-v1-w-charge",
+      "ion-tests-v1-w-co2",
+      "ion-tests-v1-w-ratio"
+    ],
+    "refresher": [
+      "ion-tests-v1-r-flame",
+      "ion-tests-v1-r-white",
+      "ion-tests-v1-r-excess",
+      "ion-tests-v1-r-halide",
+      "ion-tests-v1-r-sulfate",
+      "ion-tests-v1-r-carbonate",
+      "ion-tests-v1-r-charge",
+      "ion-tests-v1-r-portions",
+      "ion-tests-v1-r-li",
+      "ion-tests-v1-r-na",
+      "ion-tests-v1-r-ca",
+      "ion-tests-v1-r-cu",
+      "ion-tests-v1-r-fe2",
+      "ion-tests-v1-r-fe3",
+      "ion-tests-v1-r-br",
+      "ion-tests-v1-r-i",
+      "ion-tests-v1-r-compound"
+    ],
+    "guided": [
+      "ion-tests-v1-g-flame",
+      "ion-tests-v1-g-mask",
+      "ion-tests-v1-g-white",
+      "ion-tests-v1-g-al",
+      "ion-tests-v1-g-camg",
+      "ion-tests-v1-g-halide",
+      "ion-tests-v1-g-sulfate",
+      "ion-tests-v1-g-carbonate",
+      "ion-tests-v1-g-fault",
+      "ion-tests-v1-g-eq-cu",
+      "ion-tests-v1-g-eq-fe",
+      "ion-tests-v1-g-salt"
+    ],
+    "practice": [
+      "ion-tests-v1-p-li",
+      "ion-tests-v1-p-na",
+      "ion-tests-v1-p-ca",
+      "ion-tests-v1-p-cu-flame",
+      "ion-tests-v1-p-cu-oh",
+      "ion-tests-v1-p-fe2",
+      "ion-tests-v1-p-fe3",
+      "ion-tests-v1-p-al",
+      "ion-tests-v1-p-camg",
+      "ion-tests-v1-p-cl",
+      "ion-tests-v1-p-br",
+      "ion-tests-v1-p-i",
+      "ion-tests-v1-p-so4",
+      "ion-tests-v1-p-co3",
+      "ion-tests-v1-p-wire",
+      "ion-tests-v1-p-hcl",
+      "ion-tests-v1-p-h2so4",
+      "ion-tests-v1-p-portions",
+      "ion-tests-v1-p-white",
+      "ion-tests-v1-p-bubbles",
+      "ion-tests-v1-p-eq-mg",
+      "ion-tests-v1-p-eq-al",
+      "ion-tests-v1-p-k2so4",
+      "ion-tests-v1-p-cacl2",
+      "ion-tests-v1-p-incomplete",
+      "ion-tests-v1-p-plan",
+      "ion-tests-v1-p-molecular",
+      "ion-tests-v1-p-distinguish",
+      "ion-tests-v1-p-eq-fe2",
+      "ion-tests-v1-p-eq-ca",
+      "ion-tests-v1-p-cuso4",
+      "ion-tests-v1-p-na2co3"
+    ]
+  },
+  "checkForms": [
+    [
+      "ion-tests-v1-cA-pair",
+      "ion-tests-v1-cA-white",
+      "ion-tests-v1-cA-acid",
+      "ion-tests-v1-cA-iron",
+      "ion-tests-v1-cA-eq-fe2",
+      "ion-tests-v1-cA-sulfate",
+      "ion-tests-v1-cA-carbonate",
+      "ion-tests-v1-cA-mixture",
+      "ion-tests-v1-cA-plan",
+      "ion-tests-v1-cA-formula"
+    ],
+    [
+      "ion-tests-v1-cB-pair",
+      "ion-tests-v1-cB-excess",
+      "ion-tests-v1-cB-acid",
+      "ion-tests-v1-cB-green",
+      "ion-tests-v1-cB-eq-al",
+      "ion-tests-v1-cB-halide",
+      "ion-tests-v1-cB-gas",
+      "ion-tests-v1-cB-portions",
+      "ion-tests-v1-cB-plan",
+      "ion-tests-v1-cB-formula"
+    ]
+  ],
+  "reviewForms": [
+    [
+      "ion-tests-v1-vA-copper",
+      "ion-tests-v1-vA-white",
+      "ion-tests-v1-vA-eq-fe3",
+      "ion-tests-v1-vA-halide",
+      "ion-tests-v1-vA-limit"
+    ],
+    [
+      "ion-tests-v1-vB-lithium",
+      "ion-tests-v1-vB-al",
+      "ion-tests-v1-vB-eq-ca",
+      "ion-tests-v1-vB-gas",
+      "ion-tests-v1-vB-method"
+    ]
+  ],
+  "tasks": [
+    {
+      "id": "ion-tests-v1-w-solid",
+      "title": "Recognise a precipitate",
+      "purpose": "Recognise a precipitate",
+      "prompt": "An insoluble solid appears when two solutions are mixed. What is it?",
+      "answer": "A precipitate",
+      "options": [
+        "A flame",
+        "An aqueous ion",
+        "A precipitate"
+      ],
+      "misconceptions": {
+        "A flame": "The observation is in the solutions, not a flame.",
+        "An aqueous ion": "Aqueous ions are dissolved; this observation is an insoluble solid."
+      },
+      "explanation": "A precipitate is an insoluble solid formed in a reaction.",
+      "hint": "Distinguish solid, solution and gas.",
+      "followUp": "ion-tests-v1-r-white"
+    },
+    {
+      "id": "ion-tests-v1-w-charge",
+      "title": "Recall cations",
+      "purpose": "Recall cations",
+      "prompt": "Which ion is a cation?",
+      "answer": "Ca²⁺",
+      "options": [
+        "SO₄²⁻",
+        "Ca²⁺",
+        "Cl⁻"
+      ],
+      "misconceptions": {
+        "Cl⁻": "Chloride is a negatively charged anion.",
+        "SO₄²⁻": "Sulfate is a negatively charged anion."
+      },
+      "explanation": "A cation carries positive charge.",
+      "hint": "Read the charge sign.",
+      "followUp": "ion-tests-v1-r-charge"
+    },
+    {
+      "id": "ion-tests-v1-w-co2",
+      "title": "Confirm carbon dioxide",
+      "purpose": "Confirm carbon dioxide",
+      "prompt": "Which recorded result supports carbon dioxide?",
+      "answer": "The gas makes limewater cloudy",
+      "options": [
+        "Bubbles appear",
+        "A glowing splint relights",
+        "The gas makes limewater cloudy"
+      ],
+      "misconceptions": {
+        "Bubbles appear": "Bubbles show a gas evolved, not which gas.",
+        "A glowing splint relights": "Relighting supports oxygen."
+      },
+      "explanation": "Cloudy limewater is the positive carbon-dioxide test.",
+      "hint": "Use the gas test from Testing gases.",
+      "followUp": "ion-tests-v1-r-carbonate",
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-r-carbonate",
+        "ion-tests-v1-g-carbonate",
+        "ion-tests-v1-p-co3",
+        "ion-tests-v1-p-bubbles",
+        "ion-tests-v1-cA-carbonate",
+        "ion-tests-v1-cB-gas",
+        "ion-tests-v1-vB-gas",
+        "ion-tests-5",
+        "gas-tests-2",
+        "gas-tests-v1-r-co2",
+        "gas-tests-v1-g-wording",
+        "gas-tests-v1-p-cloudy",
+        "gas-tests-v1-p-identify-c",
+        "gas-tests-v1-p-explain-liquid",
+        "gas-tests-v1-cB-reagent-result"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-w-ratio",
+      "title": "Combine ion charges",
+      "purpose": "Combine ion charges",
+      "prompt": "Which neutral formula combines Ca²⁺ with Cl⁻?",
+      "answer": "CaCl₂",
+      "options": [
+        "Ca₂Cl",
+        "CaCl₂",
+        "CaCl"
+      ],
+      "misconceptions": {
+        "CaCl": "One chloride does not balance 2+.",
+        "Ca₂Cl": "Two calcium ions increase the positive imbalance."
+      },
+      "explanation": "Two chloride ions balance each calcium ion.",
+      "hint": "Match total positive and negative charge.",
+      "followUp": "ion-tests-v1-r-charge",
+      "exposureAliases": [
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-v1-cA-formula",
+        "if-v1-p-halide"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-flame",
+      "title": "Read a flame result",
+      "purpose": "Read a flame result",
+      "prompt": "The supplied clean-wire flame is lilac. Which cation is supported?",
+      "answer": "Potassium",
+      "options": [
+        "Sodium",
+        "Calcium",
+        "Potassium"
+      ],
+      "misconceptions": {
+        "Sodium": "Sodium's flame is yellow.",
+        "Calcium": "Calcium's flame is orange-red."
+      },
+      "explanation": "Potassium gives a lilac flame.",
+      "hint": "Name the observed flame colour first.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "flame",
+        "record": "flame-k"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-p-na",
+        "ion-tests-v1-cA-pair",
+        "ion-tests-v1-g-mask",
+        "ion-tests-v1-vA-limit",
+        "ion-tests-v1-cA-mixture",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-g-flame",
+        "ion-tests-v1-g-salt",
+        "ion-tests-v1-r-ca",
+        "ion-tests-v1-r-li",
+        "ion-tests-v1-p-ca",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-v1-cB-pair",
+        "ion-tests-v1-vB-lithium",
+        "ion-tests-v1-p-distinguish",
+        "ion-tests-0",
+        "ion-tests-1"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-white",
+      "title": "Keep unresolved candidates",
+      "purpose": "Keep unresolved candidates",
+      "prompt": "Only a white hydroxide precipitate is recorded. Which set remains possible?",
+      "answer": "Aluminium, calcium or magnesium",
+      "options": [
+        "Only copper(II)",
+        "Aluminium, calcium or magnesium",
+        "Only aluminium"
+      ],
+      "misconceptions": {
+        "Only aluminium": "Its excess-reagent dissolution was not observed.",
+        "Only copper(II)": "Copper(II) gives a blue hydroxide precipitate."
+      },
+      "explanation": "All three give white; excess reagent is a separate observation.",
+      "hint": "Do not invent a missing stage.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-white"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-g-white",
+        "ion-tests-v1-p-white",
+        "ion-tests-v1-cA-white"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-excess",
+      "title": "Use the excess result",
+      "purpose": "Use the excess result",
+      "prompt": "The white precipitate dissolves in excess sodium hydroxide. Which cation is supported within the specified set?",
+      "answer": "Aluminium",
+      "options": [
+        "Aluminium",
+        "Calcium",
+        "Magnesium"
+      ],
+      "misconceptions": {
+        "Calcium": "Its white precipitate remains.",
+        "Magnesium": "Its white precipitate remains."
+      },
+      "explanation": "Only aluminium's precipitate dissolves in excess among these candidates.",
+      "hint": "Compare before and excess.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-al"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-g-al",
+        "ion-tests-v1-p-al",
+        "ion-tests-v1-cB-excess",
+        "ion-tests-v1-vB-al"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-halide",
+      "title": "Keep reagents in order",
+      "purpose": "Keep reagents in order",
+      "prompt": "What precedes silver nitrate in the specified halide test?",
+      "answer": "Dilute nitric acid",
+      "options": [
+        "Dilute nitric acid",
+        "Dilute hydrochloric acid",
+        "Dilute sulfuric acid"
+      ],
+      "misconceptions": {
+        "Dilute hydrochloric acid": "This introduces chloride.",
+        "Dilute sulfuric acid": "Use the specified nitric acid, not sulfate-bearing acid."
+      },
+      "explanation": "Acidify with dilute nitric acid, then add silver nitrate.",
+      "hint": "Avoid adding a halide with the acid.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-cl"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-g-fault",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-hcl",
+        "ion-tests-v1-cA-acid",
+        "ion-tests-v1-vB-method",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-4"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-sulfate",
+      "title": "Choose the sulfate chain",
+      "purpose": "Choose the sulfate chain",
+      "prompt": "Which specified chain tests for sulfate?",
+      "answer": "Dilute hydrochloric acid, then barium chloride",
+      "options": [
+        "Dilute hydrochloric acid, then barium chloride",
+        "Dilute sulfuric acid, then barium chloride",
+        "Dilute nitric acid, then silver nitrate"
+      ],
+      "misconceptions": {
+        "Dilute sulfuric acid, then barium chloride": "The acid itself introduces sulfate.",
+        "Dilute nitric acid, then silver nitrate": "That is the halide chain."
+      },
+      "explanation": "A white barium sulfate precipitate is the positive result.",
+      "hint": "Match acid, test reagent and solid.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-so4"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-p-k2so4",
+        "ion-tests-v1-g-sulfate",
+        "ion-tests-v1-p-so4",
+        "ion-tests-v1-p-h2so4",
+        "ion-tests-v1-cA-sulfate",
+        "ion-tests-v1-cB-acid",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-carbonate",
+      "title": "Confirm the evolved gas",
+      "purpose": "Confirm the evolved gas",
+      "prompt": "Acid produces bubbles. Which further result supports carbonate?",
+      "answer": "The evolved gas makes limewater cloudy",
+      "options": [
+        "The solution is colourless",
+        "The gas was not tested",
+        "The evolved gas makes limewater cloudy"
+      ],
+      "misconceptions": {
+        "The solution is colourless": "That does not identify the gas.",
+        "The gas was not tested": "A missing test cannot confirm carbon dioxide."
+      },
+      "explanation": "Carbonate plus dilute acid evolves carbon dioxide, confirmed with limewater.",
+      "hint": "Bubbles alone are insufficient.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-co3"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-w-co2",
+        "ion-tests-v1-g-carbonate",
+        "ion-tests-v1-p-co3",
+        "ion-tests-v1-p-bubbles",
+        "ion-tests-v1-cA-carbonate",
+        "ion-tests-v1-cB-gas",
+        "ion-tests-v1-vB-gas",
+        "ion-tests-5"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-charge",
+      "title": "Balance charge as well as atoms",
+      "purpose": "Balance charge as well as atoms",
+      "prompt": "In Fe³⁺ + __ OH⁻ → Fe(OH)₃, how many hydroxide ions are required?",
+      "answer": "3",
+      "options": [
+        "3",
+        "1",
+        "2"
+      ],
+      "misconceptions": {
+        "1": "One leaves net 2+ and too few O/H.",
+        "2": "Two leaves net 1+ and too few O/H."
+      },
+      "explanation": "Three hydroxide ions balance Fe³⁺ and supply three OH groups.",
+      "hint": "Read the metal charge and product subscript.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "equation",
+        "record": "eq-fe3"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-g-eq-fe",
+        "ion-tests-v1-p-eq-al",
+        "ion-tests-v1-cB-eq-al",
+        "ion-tests-v1-vA-eq-fe3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-portions",
+      "title": "Protect the next test",
+      "purpose": "Protect the next test",
+      "prompt": "Why use separate fresh portions for different chemical tests?",
+      "answer": "Previous reagents can contaminate later results",
+      "options": [
+        "Previous reagents can contaminate later results",
+        "To change the original ion identities",
+        "To make every result positive"
+      ],
+      "misconceptions": {
+        "To change the original ion identities": "Each portion starts with the same original sample.",
+        "To make every result positive": "A test must retain its actual result."
+      },
+      "explanation": "Independent portions avoid introducing chloride, sulfate or other interfering reagents from an earlier test.",
+      "hint": "Track what has already been added.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "fault",
+        "record": "fault-portion"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-portions",
+        "ion-tests-v1-cB-portions",
+        "ion-tests-v1-vB-method"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-li",
+      "title": "Recover crimson",
+      "purpose": "Recover crimson",
+      "prompt": "Which cation matches a clean-wire crimson flame?",
+      "answer": "Lithium",
+      "options": [
+        "Lithium",
+        "Calcium",
+        "Potassium"
+      ],
+      "misconceptions": {
+        "Calcium": "Its specified flame is orange-red.",
+        "Potassium": "Its flame is lilac."
+      },
+      "explanation": "Lithium gives crimson; use the named distinction from calcium orange-red.",
+      "hint": "Read the controlled flame result.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "flame",
+        "record": "flame-li"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-ca",
+        "ion-tests-v1-p-li",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-vB-lithium",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-ca",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-v1-cB-pair",
+        "ion-tests-v1-p-distinguish"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-na",
+      "title": "Recover yellow flame",
+      "purpose": "Recover yellow flame",
+      "prompt": "Which cation matches a clean-wire yellow flame in a single-cation set?",
+      "answer": "Sodium",
+      "options": [
+        "Sodium",
+        "Potassium",
+        "Copper(II)"
+      ],
+      "misconceptions": {
+        "Potassium": "Potassium is lilac.",
+        "Copper(II)": "Copper flame is green."
+      },
+      "explanation": "Sodium gives yellow; distinguish a yellow flame from a yellow silver iodide precipitate.",
+      "hint": "Name the observed object.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "flame",
+        "record": "flame-na"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-na",
+        "ion-tests-v1-cA-pair",
+        "ion-tests-v1-g-mask",
+        "ion-tests-v1-vA-limit",
+        "ion-tests-v1-cA-mixture",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-r-cu",
+        "ion-tests-v1-p-cu-flame",
+        "ion-tests-v1-p-cu-oh",
+        "ion-tests-v1-vA-copper",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-0",
+        "ion-tests-2"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-ca",
+      "title": "Recover orange-red",
+      "purpose": "Recover orange-red",
+      "prompt": "Which cation matches a clean-wire orange-red flame?",
+      "answer": "Calcium",
+      "options": [
+        "Lithium",
+        "Sodium",
+        "Calcium"
+      ],
+      "misconceptions": {
+        "Lithium": "Lithium gives crimson.",
+        "Sodium": "Sodium gives yellow."
+      },
+      "explanation": "Calcium gives orange-red.",
+      "hint": "Keep the two red descriptions distinct.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "flame",
+        "record": "flame-ca"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-li",
+        "ion-tests-v1-p-li",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-vB-lithium",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-ca",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-v1-cB-pair",
+        "ion-tests-v1-p-distinguish"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-cu",
+      "title": "Recover copper's two tests",
+      "purpose": "Recover copper's two tests",
+      "prompt": "Which pair distinguishes copper observations?",
+      "answer": "Green flame; blue hydroxide precipitate",
+      "options": [
+        "Green flame; blue hydroxide precipitate",
+        "Blue flame; green hydroxide precipitate",
+        "Brown flame; white hydroxide precipitate"
+      ],
+      "misconceptions": {
+        "Blue flame; green hydroxide precipitate": "The colours are assigned to the wrong tests.",
+        "Brown flame; white hydroxide precipitate": "These are not the specified copper observations."
+      },
+      "explanation": "Copper gives green flame; copper(II) gives blue hydroxide precipitate.",
+      "hint": "Use both the test and observed object.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-cu"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-p-cu-flame",
+        "ion-tests-v1-p-cu-oh",
+        "ion-tests-v1-vA-copper",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-v1-r-fe2",
+        "ion-tests-v1-r-fe3",
+        "ion-tests-v1-p-fe2",
+        "ion-tests-v1-cB-green",
+        "ion-tests-2"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-fe2",
+      "title": "Recover iron(II)",
+      "purpose": "Recover iron(II)",
+      "prompt": "Which cation gives this immediate green hydroxide precipitate?",
+      "answer": "Iron(II)",
+      "options": [
+        "Iron(III)",
+        "Copper(II)",
+        "Iron(II)"
+      ],
+      "misconceptions": {
+        "Iron(III)": "Iron(III) gives brown.",
+        "Copper(II)": "Copper hydroxide is blue."
+      },
+      "explanation": "Immediate green precipitate supports iron(II).",
+      "hint": "Read the oxidation state.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-fe2"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-fe3",
+        "ion-tests-v1-r-cu",
+        "ion-tests-v1-p-fe2",
+        "ion-tests-v1-cB-green",
+        "ion-tests-v1-p-fe3",
+        "ion-tests-v1-cA-iron"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-fe3",
+      "title": "Recover iron(III)",
+      "purpose": "Recover iron(III)",
+      "prompt": "Which cation gives this brown hydroxide precipitate?",
+      "answer": "Iron(III)",
+      "options": [
+        "Magnesium",
+        "Iron(III)",
+        "Iron(II)"
+      ],
+      "misconceptions": {
+        "Iron(II)": "Iron(II)'s immediate result is green.",
+        "Magnesium": "Its hydroxide precipitate is white."
+      },
+      "explanation": "Brown hydroxide precipitate supports iron(III).",
+      "hint": "Read the charge distinction.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-fe3"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-fe2",
+        "ion-tests-v1-r-cu",
+        "ion-tests-v1-p-fe2",
+        "ion-tests-v1-cB-green",
+        "ion-tests-v1-p-fe3",
+        "ion-tests-v1-cA-iron"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-br",
+      "title": "Recover bromide",
+      "purpose": "Recover bromide",
+      "prompt": "Which halide produces a cream precipitate after nitric acid and silver nitrate?",
+      "answer": "Bromide",
+      "options": [
+        "Iodide",
+        "Bromide",
+        "Chloride"
+      ],
+      "misconceptions": {
+        "Chloride": "Its precipitate is white.",
+        "Iodide": "Its precipitate is yellow."
+      },
+      "explanation": "Silver bromide is cream.",
+      "hint": "Compare all three named solid colours.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-br"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-v1-r-i",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-g-salt",
+        "ion-tests-v1-cB-halide",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-pair",
+        "ion-tests-v1-vA-halide",
+        "ion-tests-4"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-i",
+      "title": "Recover iodide",
+      "purpose": "Recover iodide",
+      "prompt": "Which halide produces a yellow solid after nitric acid and silver nitrate?",
+      "answer": "Iodide",
+      "options": [
+        "Iodide",
+        "Sodium",
+        "Bromide"
+      ],
+      "misconceptions": {
+        "Sodium": "Sodium gives a yellow flame in a different test.",
+        "Bromide": "Silver bromide is cream."
+      },
+      "explanation": "Silver iodide is a yellow precipitate.",
+      "hint": "Keep flame and solid distinct.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-i"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-g-salt",
+        "ion-tests-v1-cB-halide",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-pair",
+        "ion-tests-v1-vA-halide"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-r-compound",
+      "title": "Recover both-ion reasoning",
+      "purpose": "Recover both-ion reasoning",
+      "prompt": "Only a calcium flame result is available. Which conclusion is possible?",
+      "answer": "Calcium is supported; the anion and compound remain unknown",
+      "options": [
+        "Calcium sulfate is confirmed",
+        "Calcium is supported; the anion and compound remain unknown",
+        "Calcium chloride is confirmed"
+      ],
+      "misconceptions": {
+        "Calcium chloride is confirmed": "No chloride test is recorded.",
+        "Calcium sulfate is confirmed": "No sulfate test is recorded."
+      },
+      "explanation": "A whole compound identity requires evidence for both ions.",
+      "hint": "Do not invent the missing anion test.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "compound",
+        "record": "salt-incomplete"
+      }
+    },
+    {
+      "id": "ion-tests-v1-g-flame",
+      "title": "Read the flame",
+      "purpose": "Read the flame",
+      "prompt": "Which cation is supported?",
+      "answer": "Potassium",
+      "options": [
+        "Lithium",
+        "Potassium",
+        "Sodium"
+      ],
+      "misconceptions": {
+        "Sodium": "Yellow belongs to sodium.",
+        "Lithium": "Crimson belongs to lithium."
+      },
+      "explanation": "Lilac supports potassium in the supplied single-cation set.",
+      "hint": "Separate flame observation from ion identity.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "flame",
+        "record": "flame-k"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-g-salt",
+        "ion-tests-1"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-g-mask",
+      "title": "Limit a mixture conclusion",
+      "purpose": "Limit a mixture conclusion",
+      "prompt": "A mixture gives only a strong yellow flame. What follows?",
+      "answer": "Sodium is present; other cations are not ruled out",
+      "options": [
+        "Sodium is present; other cations are not ruled out",
+        "The mixture is pure sodium salt",
+        "Potassium is absent"
+      ],
+      "misconceptions": {
+        "The mixture is pure sodium salt": "Sodium may mask another colour.",
+        "Potassium is absent": "No visible lilac does not establish absence in a masked mixture."
+      },
+      "explanation": "Flame colours can be masked in mixtures.",
+      "hint": "Presence is a narrower conclusion than purity.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "flame",
+        "record": "flame-mixture"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-na",
+        "ion-tests-v1-cA-pair",
+        "ion-tests-v1-vA-limit",
+        "ion-tests-v1-cA-mixture",
+        "ion-tests-v1-p-plan",
+        "ion-tests-0",
+        "instrumental-analysis-v1-r-mask",
+        "instrumental-analysis-v1-p-mask",
+        "instrumental-analysis-v1-cA-mask"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-g-white",
+      "title": "Stop before guessing",
+      "purpose": "Stop before guessing",
+      "prompt": "Only the first white result is recorded. What can you identify?",
+      "answer": "The cation remains among aluminium, calcium and magnesium",
+      "options": [
+        "The cation remains among aluminium, calcium and magnesium",
+        "Aluminium alone",
+        "Iron(III)"
+      ],
+      "misconceptions": {
+        "Aluminium alone": "No excess-reagent dissolution has been recorded.",
+        "Iron(III)": "Its specified hydroxide precipitate is brown."
+      },
+      "explanation": "Keep all compatible candidates until more evidence exists.",
+      "hint": "Read both recorded stages.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-white"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-white",
+        "ion-tests-v1-p-white",
+        "ion-tests-v1-cA-white"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-g-al",
+      "title": "Use a second stage",
+      "purpose": "Use a second stage",
+      "prompt": "Which cation matches white precipitate followed by dissolution in excess?",
+      "answer": "Aluminium",
+      "options": [
+        "Magnesium",
+        "Aluminium",
+        "Calcium"
+      ],
+      "misconceptions": {
+        "Calcium": "Its precipitate remains.",
+        "Magnesium": "Its precipitate remains."
+      },
+      "explanation": "The excess result distinguishes aluminium within this set.",
+      "hint": "The two observations belong to the same sodium-hydroxide test.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-al"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-excess",
+        "ion-tests-v1-p-al",
+        "ion-tests-v1-cB-excess",
+        "ion-tests-v1-vB-al"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-g-camg",
+      "title": "Retain two candidates",
+      "purpose": "Retain two candidates",
+      "prompt": "The white precipitate remains in excess. Which conclusion is warranted?",
+      "answer": "Calcium or magnesium; more evidence is needed",
+      "options": [
+        "Calcium alone",
+        "Aluminium",
+        "Calcium or magnesium; more evidence is needed"
+      ],
+      "misconceptions": {
+        "Calcium alone": "The same two-stage result is compatible with magnesium.",
+        "Aluminium": "Its precipitate dissolves in excess."
+      },
+      "explanation": "Sodium hydroxide alone does not separate calcium from magnesium here.",
+      "hint": "Eliminate only a candidate contradicted by the evidence.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-camg"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-camg",
+        "ion-tests-v1-p-distinguish",
+        "ion-tests-v1-vA-white"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-g-halide",
+      "title": "Build a halide chain",
+      "purpose": "Build a halide chain",
+      "prompt": "Which result is positive for the requested chloride test?",
+      "answer": "White precipitate after nitric acid then silver nitrate",
+      "options": [
+        "White precipitate after hydrochloric acid then silver nitrate",
+        "Lilac flame",
+        "White precipitate after nitric acid then silver nitrate"
+      ],
+      "misconceptions": {
+        "White precipitate after hydrochloric acid then silver nitrate": "That acid supplies chloride and contaminates the conclusion.",
+        "Lilac flame": "This supports potassium, not the chloride anion."
+      },
+      "explanation": "The method as well as the colour establishes the test meaning.",
+      "hint": "Choose the fresh portion and correct ordered reagents.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-cl"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-fault",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-hcl",
+        "ion-tests-v1-cA-acid",
+        "ion-tests-v1-vB-method",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-4"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-g-sulfate",
+      "title": "Build the sulfate chain",
+      "purpose": "Build the sulfate chain",
+      "prompt": "Which solid is the positive sulfate-test observation?",
+      "answer": "A white precipitate",
+      "options": [
+        "A green flame",
+        "A colourless gas",
+        "A white precipitate"
+      ],
+      "misconceptions": {
+        "A green flame": "A flame is a different test.",
+        "A colourless gas": "The specified sulfate test forms an insoluble solid."
+      },
+      "explanation": "Barium sulfate is a white precipitate after the specified acid/reagent chain.",
+      "hint": "Keep the solid and flame observations distinct.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-so4"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-p-k2so4",
+        "ion-tests-v1-r-sulfate",
+        "ion-tests-v1-p-so4",
+        "ion-tests-v1-p-h2so4",
+        "ion-tests-v1-cA-sulfate",
+        "ion-tests-v1-cB-acid",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-g-carbonate",
+      "title": "Include confirmation",
+      "purpose": "Include confirmation",
+      "prompt": "Which record confirms the gas in this carbonate test?",
+      "answer": "Cloudy limewater",
+      "options": [
+        "No gas test",
+        "Cloudy limewater",
+        "Bubbles alone"
+      ],
+      "misconceptions": {
+        "Bubbles alone": "Gas evolution does not identify the gas.",
+        "No gas test": "The confirming observation is missing."
+      },
+      "explanation": "Use the evolved gas's limewater result as well as acid effervescence.",
+      "hint": "Track the gas from the acid reaction.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-co3"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-w-co2",
+        "ion-tests-v1-r-carbonate",
+        "ion-tests-v1-p-co3",
+        "ion-tests-v1-p-bubbles",
+        "ion-tests-v1-cA-carbonate",
+        "ion-tests-v1-cB-gas",
+        "ion-tests-v1-vB-gas",
+        "ion-tests-5"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-g-fault",
+      "title": "Reject introduced chloride",
+      "purpose": "Reject introduced chloride",
+      "prompt": "Does this hydrochloric-acid/silver-nitrate result identify chloride originally in the sample?",
+      "answer": "No; the acid itself introduces chloride",
+      "options": [
+        "Yes; every white precipitate proves sample chloride",
+        "No; it proves sulfate instead",
+        "No; the acid itself introduces chloride"
+      ],
+      "misconceptions": {
+        "Yes; every white precipitate proves sample chloride": "The reagent chain contaminates that conclusion.",
+        "No; it proves sulfate instead": "An invalid chloride test does not identify a replacement ion."
+      },
+      "explanation": "Repeat on a fresh portion with dilute nitric acid.",
+      "hint": "Find the source of the ion in the reagent.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "fault",
+        "record": "fault-hcl"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-hcl",
+        "ion-tests-v1-cA-acid",
+        "ion-tests-v1-vB-method",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-plan"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-g-eq-cu",
+      "title": "Conserve atoms and charge",
+      "purpose": "Conserve atoms and charge",
+      "prompt": "Which smallest coefficient of OH⁻ balances this copper(II) equation?",
+      "answer": "2",
+      "options": [
+        "3",
+        "2",
+        "1"
+      ],
+      "misconceptions": {
+        "1": "Both charge and O/H fail.",
+        "3": "Three supplies too many OH groups."
+      },
+      "explanation": "Cu²⁺ needs two OH⁻ to form Cu(OH)₂.",
+      "hint": "Use the live atom/charge ledger.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "equation",
+        "record": "eq-cu"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-eq-fe2",
+        "ion-tests-v1-p-eq-ca",
+        "ion-tests-v1-p-eq-mg",
+        "ion-tests-v1-cA-eq-fe2",
+        "ion-tests-v1-vB-eq-ca",
+        "ion-tests-v1-p-molecular"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-g-eq-fe",
+      "title": "Distinguish iron charges",
+      "purpose": "Distinguish iron charges",
+      "prompt": "Which smallest coefficient of OH⁻ balances iron(III) hydroxide formation?",
+      "answer": "3",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "misconceptions": {
+        "1": "One OH⁻ does not neutralise Fe³⁺.",
+        "2": "That fits iron(II), not Fe³⁺."
+      },
+      "explanation": "Fe³⁺ + 3OH⁻ → Fe(OH)₃.",
+      "hint": "Do not change the fixed species to force a balance.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "equation",
+        "record": "eq-fe3"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-charge",
+        "ion-tests-v1-p-eq-al",
+        "ion-tests-v1-cB-eq-al",
+        "ion-tests-v1-vA-eq-fe3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-g-salt",
+      "title": "Use both portions",
+      "purpose": "Use both portions",
+      "prompt": "Which supplied single compound matches the paired evidence?",
+      "answer": "Potassium bromide, KBr",
+      "options": [
+        "Sodium bromide, NaBr",
+        "Potassium bromide, KBr",
+        "Potassium chloride, KCl"
+      ],
+      "misconceptions": {
+        "Potassium chloride, KCl": "The halide precipitate is cream, not white.",
+        "Sodium bromide, NaBr": "The flame is lilac, not yellow."
+      },
+      "explanation": "Use cation and anion evidence, then combine their charges.",
+      "hint": "Do not name a whole salt from one ion test.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "compound",
+        "record": "salt-kbr"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-g-flame",
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-r-i",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-cB-halide",
+        "ion-tests-1"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-li",
+      "title": "Distinguish red flame names",
+      "purpose": "Distinguish red flame names",
+      "prompt": "A controlled clean-wire flame is crimson. Which cation?",
+      "answer": "Lithium",
+      "options": [
+        "Calcium",
+        "Sodium",
+        "Lithium"
+      ],
+      "misconceptions": {
+        "Calcium": "Calcium is orange-red.",
+        "Sodium": "Sodium is yellow."
+      },
+      "explanation": "Lithium gives crimson.",
+      "hint": "Compare the named colours.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "flame",
+        "record": "flame-li"
+      },
+      "followUp": "ion-tests-v1-r-li",
+      "exposureAliases": [
+        "ion-tests-v1-r-li",
+        "ion-tests-v1-r-ca",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-vB-lithium"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-na",
+      "title": "Read yellow correctly",
+      "purpose": "Read yellow correctly",
+      "prompt": "A controlled single-cation sample gives a yellow flame. Which cation?",
+      "answer": "Sodium",
+      "options": [
+        "Potassium",
+        "Copper(II)",
+        "Sodium"
+      ],
+      "misconceptions": {
+        "Potassium": "Potassium is lilac.",
+        "Copper(II)": "Copper compounds give green flame."
+      },
+      "explanation": "Yellow flame supports sodium in this controlled record.",
+      "hint": "The flame is the observed object.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "flame",
+        "record": "flame-na"
+      },
+      "followUp": "ion-tests-v1-r-na",
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-cA-pair",
+        "ion-tests-v1-g-mask",
+        "ion-tests-v1-vA-limit",
+        "ion-tests-v1-cA-mixture",
+        "ion-tests-v1-p-plan",
+        "ion-tests-0"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-ca",
+      "title": "Use orange-red",
+      "purpose": "Use orange-red",
+      "prompt": "Which cation matches this controlled orange-red flame?",
+      "answer": "Calcium",
+      "options": [
+        "Copper(II)",
+        "Calcium",
+        "Lithium"
+      ],
+      "misconceptions": {
+        "Lithium": "Crimson is the lithium result.",
+        "Copper(II)": "Green is the copper flame result."
+      },
+      "explanation": "Calcium gives orange-red.",
+      "hint": "Do not collapse the two red descriptions.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "flame",
+        "record": "flame-ca"
+      },
+      "followUp": "ion-tests-v1-r-ca",
+      "exposureAliases": [
+        "ion-tests-v1-r-ca",
+        "ion-tests-v1-r-li",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-v1-cB-pair",
+        "ion-tests-v1-vB-lithium",
+        "ion-tests-v1-p-distinguish"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-cu-flame",
+      "title": "Separate two copper tests",
+      "purpose": "Separate two copper tests",
+      "prompt": "What is the copper flame result?",
+      "answer": "Green flame",
+      "options": [
+        "Brown precipitate",
+        "Green flame",
+        "Blue precipitate"
+      ],
+      "misconceptions": {
+        "Blue precipitate": "That is copper(II)'s hydroxide solid.",
+        "Brown precipitate": "That is iron(III)'s hydroxide solid."
+      },
+      "explanation": "Copper flame is green; its hydroxide precipitate is blue.",
+      "hint": "Read which test was used.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "flame",
+        "record": "flame-cu"
+      },
+      "followUp": "ion-tests-v1-r-cu",
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-r-cu",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-p-cu-oh",
+        "ion-tests-v1-vA-copper",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-2"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-cu-oh",
+      "title": "Identify a blue solid",
+      "purpose": "Identify a blue solid",
+      "prompt": "Which cation is supported by the supplied sodium-hydroxide record?",
+      "answer": "Copper(II)",
+      "options": [
+        "Copper(II)",
+        "Iron(II)",
+        "Aluminium"
+      ],
+      "misconceptions": {
+        "Iron(II)": "Its immediate precipitate is green.",
+        "Aluminium": "Its first precipitate is white."
+      },
+      "explanation": "Copper(II) gives a blue hydroxide precipitate.",
+      "hint": "Name the solid observation.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-cu"
+      },
+      "followUp": "ion-tests-v1-r-cu",
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-r-cu",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-p-cu-flame",
+        "ion-tests-v1-vA-copper",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-2"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-fe2",
+      "title": "Keep iron(II) distinct",
+      "purpose": "Keep iron(II) distinct",
+      "prompt": "Which cation gives the recorded immediate green hydroxide precipitate?",
+      "answer": "Iron(II)",
+      "options": [
+        "Copper(II)",
+        "Iron(II)",
+        "Iron(III)"
+      ],
+      "misconceptions": {
+        "Iron(III)": "Iron(III) gives brown.",
+        "Copper(II)": "Copper(II) gives blue."
+      },
+      "explanation": "The immediate green precipitate supports Fe²⁺.",
+      "hint": "Distinguish charge and precipitate colour.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-fe2"
+      },
+      "followUp": "ion-tests-v1-r-fe2",
+      "exposureAliases": [
+        "ion-tests-v1-r-fe2",
+        "ion-tests-v1-r-fe3",
+        "ion-tests-v1-r-cu",
+        "ion-tests-v1-cB-green"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-fe3",
+      "title": "Keep iron(III) distinct",
+      "purpose": "Keep iron(III) distinct",
+      "prompt": "Which cation gives the recorded brown hydroxide precipitate?",
+      "answer": "Iron(III)",
+      "options": [
+        "Iron(III)",
+        "Iron(II)",
+        "Magnesium"
+      ],
+      "misconceptions": {
+        "Iron(II)": "Its specified immediate result is green.",
+        "Magnesium": "Its hydroxide precipitate is white."
+      },
+      "explanation": "Brown supports Fe³⁺ in the specified candidate set.",
+      "hint": "Use the actual reagent/result pair.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-fe3"
+      },
+      "followUp": "ion-tests-v1-r-fe3",
+      "exposureAliases": [
+        "ion-tests-v1-r-fe3",
+        "ion-tests-v1-r-fe2",
+        "ion-tests-v1-cA-iron"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-al",
+      "title": "Use dissolution",
+      "purpose": "Use dissolution",
+      "prompt": "Which cation is supported by white precipitate that dissolves in excess sodium hydroxide?",
+      "answer": "Aluminium",
+      "options": [
+        "Magnesium",
+        "Aluminium",
+        "Calcium"
+      ],
+      "misconceptions": {
+        "Calcium": "Its precipitate remains.",
+        "Magnesium": "Its precipitate remains."
+      },
+      "explanation": "This excess result distinguishes aluminium within the specified set.",
+      "hint": "Use both observations.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-al"
+      },
+      "followUp": "ion-tests-v1-r-excess",
+      "exposureAliases": [
+        "ion-tests-v1-r-excess",
+        "ion-tests-v1-g-al",
+        "ion-tests-v1-cB-excess",
+        "ion-tests-v1-vB-al"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-camg",
+      "title": "Keep unresolved pairs",
+      "purpose": "Keep unresolved pairs",
+      "prompt": "White precipitate remains in excess. Which claim is justified?",
+      "answer": "Calcium or magnesium remains possible",
+      "options": [
+        "Calcium is uniquely confirmed",
+        "Aluminium is confirmed",
+        "Calcium or magnesium remains possible"
+      ],
+      "misconceptions": {
+        "Calcium is uniquely confirmed": "Magnesium shares this result.",
+        "Aluminium is confirmed": "Its precipitate dissolves in excess."
+      },
+      "explanation": "A further observation is needed to distinguish the pair.",
+      "hint": "Avoid a stronger conclusion than the record supports.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "hydroxide",
+        "record": "oh-camg"
+      },
+      "followUp": "ion-tests-v1-r-white",
+      "exposureAliases": [
+        "ion-tests-v1-g-camg",
+        "ion-tests-v1-p-distinguish",
+        "ion-tests-v1-vA-white"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-cl",
+      "title": "Match chloride conditions",
+      "purpose": "Match chloride conditions",
+      "prompt": "Which requested test chain supports chloride?",
+      "answer": "Nitric acid, silver nitrate, white precipitate",
+      "options": [
+        "Hydrochloric acid, silver nitrate, white precipitate",
+        "Nitric acid, silver nitrate, cream precipitate",
+        "Nitric acid, silver nitrate, white precipitate"
+      ],
+      "misconceptions": {
+        "Hydrochloric acid, silver nitrate, white precipitate": "The acid introduces chloride.",
+        "Nitric acid, silver nitrate, cream precipitate": "Cream supports bromide."
+      },
+      "explanation": "Chloride gives white silver chloride after the specified reagents.",
+      "hint": "The acid matters.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-cl"
+      },
+      "followUp": "ion-tests-v1-r-halide",
+      "exposureAliases": [
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-g-fault",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-hcl",
+        "ion-tests-v1-cA-acid",
+        "ion-tests-v1-vB-method",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-4"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-br",
+      "title": "Match bromide conditions",
+      "purpose": "Match bromide conditions",
+      "prompt": "Which precipitate supports bromide after nitric acid and silver nitrate?",
+      "answer": "Cream precipitate",
+      "options": [
+        "Cream precipitate",
+        "White precipitate",
+        "Yellow precipitate"
+      ],
+      "misconceptions": {
+        "White precipitate": "White supports chloride.",
+        "Yellow precipitate": "Yellow supports iodide."
+      },
+      "explanation": "Silver bromide is cream.",
+      "hint": "Compare the named halide colours.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-br"
+      },
+      "followUp": "ion-tests-v1-r-br",
+      "exposureAliases": [
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-g-fault",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-hcl",
+        "ion-tests-v1-cA-acid",
+        "ion-tests-v1-vB-method",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-r-i",
+        "ion-tests-v1-g-salt",
+        "ion-tests-v1-cB-halide"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-i",
+      "title": "Match iodide conditions",
+      "purpose": "Match iodide conditions",
+      "prompt": "Which precipitate supports iodide after the specified halide reagents?",
+      "answer": "Yellow precipitate",
+      "options": [
+        "Yellow flame",
+        "Cream precipitate",
+        "Yellow precipitate"
+      ],
+      "misconceptions": {
+        "Yellow flame": "That is a different test, supporting sodium.",
+        "Cream precipitate": "Cream supports bromide."
+      },
+      "explanation": "Silver iodide is a yellow solid precipitate.",
+      "hint": "Name colour and physical observation.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-i"
+      },
+      "followUp": "ion-tests-v1-r-i",
+      "exposureAliases": [
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-g-fault",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-p-hcl",
+        "ion-tests-v1-cA-acid",
+        "ion-tests-v1-vB-method",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-r-i",
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-cA-pair",
+        "ion-tests-v1-vA-halide"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-so4",
+      "title": "Protect sulfate evidence",
+      "purpose": "Protect sulfate evidence",
+      "prompt": "Which acid belongs before barium chloride in the specified sulfate test?",
+      "answer": "Dilute hydrochloric acid",
+      "options": [
+        "Dilute hydrochloric acid",
+        "Dilute sulfuric acid",
+        "No acid"
+      ],
+      "misconceptions": {
+        "Dilute sulfuric acid": "This supplies sulfate itself.",
+        "No acid": "Use the specified acidified test conditions."
+      },
+      "explanation": "Hydrochloric acid then barium chloride gives white barium sulfate if sulfate is present.",
+      "hint": "Avoid introducing the target ion.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-so4"
+      },
+      "followUp": "ion-tests-v1-r-sulfate",
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-p-k2so4",
+        "ion-tests-v1-r-sulfate",
+        "ion-tests-v1-g-sulfate",
+        "ion-tests-v1-p-h2so4",
+        "ion-tests-v1-cA-sulfate",
+        "ion-tests-v1-cB-acid",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-co3",
+      "title": "Require the gas result",
+      "purpose": "Require the gas result",
+      "prompt": "Which is a complete positive carbonate record in this context?",
+      "answer": "Acid effervescence; the gas makes limewater cloudy",
+      "options": [
+        "Acid effervescence only",
+        "Gas relights a glowing splint",
+        "Acid effervescence; the gas makes limewater cloudy"
+      ],
+      "misconceptions": {
+        "Acid effervescence only": "The evolved gas was not identified.",
+        "Gas relights a glowing splint": "That supports oxygen, not the carbonate reaction gas."
+      },
+      "explanation": "Carbon dioxide confirmation supports carbonate.",
+      "hint": "Combine the two observations.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "anion",
+        "record": "anion-co3"
+      },
+      "followUp": "ion-tests-v1-r-carbonate",
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-w-co2",
+        "ion-tests-v1-r-carbonate",
+        "ion-tests-v1-g-carbonate",
+        "ion-tests-v1-p-bubbles",
+        "ion-tests-v1-cA-carbonate",
+        "ion-tests-v1-cB-gas",
+        "ion-tests-v1-vB-gas",
+        "ion-tests-5"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-wire",
+      "title": "Repair a false flame conclusion",
+      "purpose": "Repair a false flame conclusion",
+      "prompt": "How should the contaminated-wire result be treated?",
+      "answer": "Repeat with a clean wire; do not identify from the contaminated result",
+      "options": [
+        "Report potassium absent",
+        "Repeat with a clean wire; do not identify from the contaminated result",
+        "Report pure sodium salt immediately"
+      ],
+      "misconceptions": {
+        "Report pure sodium salt immediately": "The earlier wire contamination prevents that inference.",
+        "Report potassium absent": "Sodium can mask its flame colour."
+      },
+      "explanation": "Cleanliness and known references protect flame interpretation.",
+      "hint": "Track the previous wire sample.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "fault",
+        "record": "fault-wire"
+      },
+      "followUp": "ion-tests-v1-r-flame"
+    },
+    {
+      "id": "ion-tests-v1-p-hcl",
+      "title": "Repair the chloride plan",
+      "purpose": "Repair the chloride plan",
+      "prompt": "What repairs this hydrochloric-acid/halide test?",
+      "answer": "Fresh portion, dilute nitric acid, then silver nitrate",
+      "options": [
+        "Fresh portion, dilute nitric acid, then silver nitrate",
+        "Add more silver nitrate to the same portion",
+        "Name sulfate from the same white precipitate"
+      ],
+      "misconceptions": {
+        "Add more silver nitrate to the same portion": "The introduced chloride remains.",
+        "Name sulfate from the same white precipitate": "The invalid test does not establish sulfate."
+      },
+      "explanation": "Do not try to recover an uncontaminated conclusion from a reagent-contaminated portion.",
+      "hint": "Start with the original sample in a fresh portion.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "fault",
+        "record": "fault-hcl"
+      },
+      "followUp": "ion-tests-v1-r-halide",
+      "exposureAliases": [
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-g-fault",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-cA-acid",
+        "ion-tests-v1-vB-method",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-plan"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-h2so4",
+      "title": "Repair the sulfate plan",
+      "purpose": "Repair the sulfate plan",
+      "prompt": "Why is the sulfuric-acid/barium result invalid for original sample sulfate?",
+      "answer": "Sulfuric acid introduces sulfate",
+      "options": [
+        "Barium chloride cannot precipitate sulfate",
+        "A white solid always identifies chloride",
+        "Sulfuric acid introduces sulfate"
+      ],
+      "misconceptions": {
+        "Barium chloride cannot precipitate sulfate": "Barium sulfate does precipitate.",
+        "A white solid always identifies chloride": "Colour alone without test conditions is insufficient."
+      },
+      "explanation": "The sulfate may have come from the acid.",
+      "hint": "Trace the target ion's source.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "fault",
+        "record": "fault-h2so4"
+      },
+      "followUp": "ion-tests-v1-r-sulfate",
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-p-k2so4",
+        "ion-tests-v1-r-sulfate",
+        "ion-tests-v1-g-sulfate",
+        "ion-tests-v1-p-so4",
+        "ion-tests-v1-cA-sulfate",
+        "ion-tests-v1-cB-acid",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-portions",
+      "title": "Keep fresh samples separate",
+      "purpose": "Keep fresh samples separate",
+      "prompt": "Which proposed plan prevents earlier-reagent interference?",
+      "answer": "Separate fresh portions of the original sample",
+      "options": [
+        "One tube receiving every reagent in succession",
+        "Keep adding chloride before every test",
+        "Separate fresh portions of the original sample"
+      ],
+      "misconceptions": {
+        "One tube receiving every reagent in succession": "Earlier reagents can interfere.",
+        "Keep adding chloride before every test": "That contaminates later halide conclusions."
+      },
+      "explanation": "Use independent samples for independent evidence.",
+      "hint": "A fresh portion has not received another test's reagents.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "fault",
+        "record": "fault-portion"
+      },
+      "followUp": "ion-tests-v1-r-portions",
+      "exposureAliases": [
+        "ion-tests-v1-r-portions",
+        "ion-tests-v1-cB-portions",
+        "ion-tests-v1-vB-method"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-white",
+      "title": "Reject a premature identity",
+      "purpose": "Reject a premature identity",
+      "prompt": "A white first precipitate alone proves which cation?",
+      "answer": "It does not uniquely identify aluminium, calcium or magnesium",
+      "options": [
+        "It does not uniquely identify aluminium, calcium or magnesium",
+        "Aluminium alone",
+        "Magnesium alone"
+      ],
+      "misconceptions": {
+        "Aluminium alone": "Excess dissolution is needed.",
+        "Magnesium alone": "Aluminium and calcium also produce white."
+      },
+      "explanation": "Keep the compatible candidate set.",
+      "hint": "A missing excess observation stays missing.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "fault",
+        "record": "fault-white"
+      },
+      "followUp": "ion-tests-v1-r-white",
+      "exposureAliases": [
+        "ion-tests-v1-r-white",
+        "ion-tests-v1-g-white",
+        "ion-tests-v1-cA-white"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-bubbles",
+      "title": "Keep observation and inference distinct",
+      "purpose": "Keep observation and inference distinct",
+      "prompt": "Bubbles appear with acid but no gas test is done. Is carbonate confirmed?",
+      "answer": "No; the gas identification is missing",
+      "options": [
+        "Yes; every gas bubble is carbon dioxide",
+        "No; oxygen is therefore confirmed",
+        "No; the gas identification is missing"
+      ],
+      "misconceptions": {
+        "Yes; every gas bubble is carbon dioxide": "Different reactions can evolve gases.",
+        "No; oxygen is therefore confirmed": "Missing evidence identifies no replacement gas."
+      },
+      "explanation": "Require the limewater observation.",
+      "hint": "Do not fill a gap by guessing.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "fault",
+        "record": "fault-bubbles"
+      },
+      "followUp": "ion-tests-v1-r-carbonate",
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-w-co2",
+        "ion-tests-v1-r-carbonate",
+        "ion-tests-v1-g-carbonate",
+        "ion-tests-v1-p-co3",
+        "ion-tests-v1-cA-carbonate",
+        "ion-tests-v1-cB-gas",
+        "ion-tests-v1-vB-gas",
+        "ion-tests-5"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-eq-mg",
+      "title": "Construct magnesium coefficients",
+      "purpose": "Construct magnesium coefficients",
+      "prompt": "Balance the fixed magnesium hydroxide equation using the smallest positive whole numbers.",
+      "answer": "{\"metal\":\"1\",\"hydroxide\":\"2\",\"product\":\"1\"}",
+      "explanation": "Mg²⁺(aq) + 2OH⁻(aq) → Mg(OH)₂(s). Atoms and net charge balance.",
+      "hint": "Keep the species fixed. Count metal, oxygen and hydrogen; match the net charge too. Use the smallest positive whole numbers.",
+      "partLegend": "Smallest positive whole-number coefficients",
+      "ionGiven": {
+        "title": "Fixed species",
+        "rows": [
+          {
+            "label": "Equation to balance",
+            "text": "__ Mg²⁺(aq) + __ OH⁻(aq) → __ Mg(OH)₂(s)"
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "metal",
+          "label": "Coefficient of metal ion",
+          "answer": 1,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "hydroxide",
+          "label": "Coefficient of hydroxide ion",
+          "answer": 2,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "product",
+          "label": "Coefficient of solid product",
+          "answer": 1,
+          "inputMode": "numeric"
+        }
+      ],
+      "followUp": "ion-tests-v1-r-charge",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "equation",
+        "record": "eq-mg"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-eq-fe2",
+        "ion-tests-v1-p-eq-ca",
+        "ion-tests-v1-g-eq-cu",
+        "ion-tests-v1-cA-eq-fe2",
+        "ion-tests-v1-vB-eq-ca",
+        "ion-tests-v1-p-molecular"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-eq-al",
+      "title": "Construct aluminium coefficients",
+      "purpose": "Construct aluminium coefficients",
+      "prompt": "Balance the fixed initial aluminium hydroxide formation equation.",
+      "answer": "{\"metal\":\"1\",\"hydroxide\":\"3\",\"product\":\"1\"}",
+      "explanation": "Al³⁺(aq) + 3OH⁻(aq) → Al(OH)₃(s). Atoms and net charge balance.",
+      "hint": "Keep the species fixed. Count metal, oxygen and hydrogen; match the net charge too. Use the smallest positive whole numbers.",
+      "partLegend": "Smallest positive whole-number coefficients",
+      "ionGiven": {
+        "title": "Fixed species",
+        "rows": [
+          {
+            "label": "Equation to balance",
+            "text": "__ Al³⁺(aq) + __ OH⁻(aq) → __ Al(OH)₃(s)"
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "metal",
+          "label": "Coefficient of metal ion",
+          "answer": 1,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "hydroxide",
+          "label": "Coefficient of hydroxide ion",
+          "answer": 3,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "product",
+          "label": "Coefficient of solid product",
+          "answer": 1,
+          "inputMode": "numeric"
+        }
+      ],
+      "followUp": "ion-tests-v1-r-charge",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "equation",
+        "record": "eq-al"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-r-charge",
+        "ion-tests-v1-g-eq-fe",
+        "ion-tests-v1-cB-eq-al",
+        "ion-tests-v1-vA-eq-fe3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-k2so4",
+      "title": "Use both ions and charges",
+      "purpose": "Use both ions and charges",
+      "prompt": "Which single compound matches the paired records?",
+      "answer": "Potassium sulfate, K₂SO₄",
+      "options": [
+        "Potassium sulfate, KSO₄",
+        "Potassium bromide, KBr",
+        "Potassium sulfate, K₂SO₄"
+      ],
+      "misconceptions": {
+        "Potassium sulfate, KSO₄": "That formula has net negative charge.",
+        "Potassium bromide, KBr": "The anion test is barium sulfate evidence, not silver bromide."
+      },
+      "explanation": "Two K⁺ balance one SO₄²⁻.",
+      "hint": "Infer both ions before writing the formula.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "compound",
+        "record": "salt-k2so4"
+      },
+      "followUp": "ion-tests-v1-r-sulfate",
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-r-sulfate",
+        "ion-tests-v1-g-sulfate",
+        "ion-tests-v1-p-so4",
+        "ion-tests-v1-p-h2so4",
+        "ion-tests-v1-cA-sulfate",
+        "ion-tests-v1-cB-acid",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-v1-cB-formula",
+        "ion-tests-3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-cacl2",
+      "title": "Use calcium's second evidence",
+      "purpose": "Use calcium's second evidence",
+      "prompt": "Which single compound matches these independent flame and halide records?",
+      "answer": "Calcium chloride, CaCl₂",
+      "options": [
+        "Calcium chloride, CaCl",
+        "Magnesium chloride, MgCl₂",
+        "Calcium chloride, CaCl₂"
+      ],
+      "misconceptions": {
+        "Calcium chloride, CaCl": "That ratio does not balance charge.",
+        "Magnesium chloride, MgCl₂": "The orange-red flame supports calcium."
+      },
+      "explanation": "Flame identifies calcium; the acidified silver precipitate identifies chloride.",
+      "hint": "Use both records and the ion charges.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "compound",
+        "record": "salt-cacl2"
+      },
+      "followUp": "ion-tests-v1-r-charge",
+      "exposureAliases": [
+        "ion-tests-v1-r-ca",
+        "ion-tests-v1-r-li",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-ca",
+        "ion-tests-v1-cB-pair",
+        "ion-tests-v1-vB-lithium",
+        "ion-tests-v1-p-distinguish",
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-w-ratio",
+        "ion-tests-v1-cA-formula",
+        "ion-tests-4",
+        "if-v1-p-halide"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-incomplete",
+      "title": "Leave the unknown anion unknown",
+      "purpose": "Leave the unknown anion unknown",
+      "prompt": "Only the orange-red flame is known. Can the whole compound be named?",
+      "answer": "No; calcium is supported but the anion is unknown",
+      "options": [
+        "Yes; it must be calcium sulfate",
+        "No; calcium is supported but the anion is unknown",
+        "Yes; it must be calcium chloride"
+      ],
+      "misconceptions": {
+        "Yes; it must be calcium chloride": "No chloride test was recorded.",
+        "Yes; it must be calcium sulfate": "No sulfate test was recorded."
+      },
+      "explanation": "One cation result does not identify the whole compound.",
+      "hint": "Ask which evidence supports the anion.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "compound",
+        "record": "salt-incomplete"
+      },
+      "followUp": "ion-tests-v1-r-compound"
+    },
+    {
+      "id": "ion-tests-v1-p-plan",
+      "title": "Write a sequenced two-ion method",
+      "purpose": "Write a sequenced two-ion method",
+      "prompt": "A school technician must test a soluble suspected sodium iodide sample using a burner, clean wire, distilled water, dilute nitric acid and silver nitrate. Describe the two tests, their positive results and conclusions. This is an interpretation task, not instructions to try an experiment at home.",
+      "answer": "For the cation, a clean wire carrying the sample is placed in a blue/non-luminous Bunsen flame; yellow supports sodium. For the anion, dissolve the sample in distilled water in a fresh test-tube portion, add dilute nitric acid and then silver nitrate solution with a dropping pipette. A yellow precipitate after silver nitrate supports iodide. Distinguish yellow flame from yellow solid and keep both test chains clear.",
+      "explanation": "For the cation, a clean wire carrying the sample is placed in a blue/non-luminous Bunsen flame; yellow supports sodium. For the anion, dissolve the sample in distilled water in a fresh test-tube portion, add dilute nitric acid and then silver nitrate solution with a dropping pipette. A yellow precipitate after silver nitrate supports iodide. Distinguish yellow flame from yellow solid and keep both test chains clear.",
+      "rubric": [
+        "Clean sample-bearing wire and blue/non-luminous flame.",
+        "Yellow flame linked to sodium.",
+        "Dissolve the soluble sample in distilled water in a separate portion.",
+        "Dilute nitric acid before silver nitrate solution; suitable dropping pipette.",
+        "Yellow precipitate linked to iodide, distinct from a yellow flame.",
+        "Two clearly linked, logically sequenced test/result/conclusion chains."
+      ],
+      "hint": "Write method → observation → conclusion for each ion.",
+      "followUp": "ion-tests-v1-r-halide",
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-na",
+        "ion-tests-v1-cA-pair",
+        "ion-tests-v1-g-mask",
+        "ion-tests-v1-vA-limit",
+        "ion-tests-v1-cA-mixture",
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-g-fault",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-hcl",
+        "ion-tests-v1-cA-acid",
+        "ion-tests-v1-vB-method",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-r-i",
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-vA-halide",
+        "ion-tests-0"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-molecular",
+      "title": "Write a balanced molecular equation",
+      "purpose": "Write a balanced molecular equation",
+      "prompt": "Write the balanced equation, with state symbols, for aqueous copper(II) chloride reacting with aqueous sodium hydroxide to form the hydroxide precipitate.",
+      "answer": "CuCl₂(aq) + 2NaOH(aq) → Cu(OH)₂(s) + 2NaCl(aq). The copper hydroxide is an insoluble solid; sodium and chloride remain in solution.",
+      "explanation": "CuCl₂(aq) + 2NaOH(aq) → Cu(OH)₂(s) + 2NaCl(aq). The copper hydroxide is an insoluble solid; sodium and chloride remain in solution.",
+      "rubric": [
+        "Correct fixed formulas CuCl₂, NaOH, Cu(OH)₂ and NaCl.",
+        "Smallest coefficients 1, 2, 1, 2 conserve Cu, Cl, Na, O and H.",
+        "Aqueous reactants and sodium chloride; solid copper hydroxide.",
+        "Do not change subscripts to balance the equation."
+      ],
+      "hint": "Count each atom on both sides; show the precipitate state.",
+      "followUp": "ion-tests-v1-r-charge",
+      "exposureAliases": [
+        "ion-tests-v1-p-eq-fe2",
+        "ion-tests-v1-p-eq-ca",
+        "ion-tests-v1-g-eq-cu",
+        "ion-tests-v1-p-eq-mg",
+        "ion-tests-v1-cA-eq-fe2",
+        "ion-tests-v1-vB-eq-ca"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-distinguish",
+      "title": "Explain the remaining pair",
+      "purpose": "Explain the remaining pair",
+      "prompt": "Explain why a white hydroxide precipitate remaining in excess cannot by itself distinguish calcium and magnesium. State what further recorded observation would support calcium within that pair.",
+      "answer": "Both calcium and magnesium form white hydroxide precipitates that remain in excess sodium hydroxide. A separate clean-wire orange-red flame result supports calcium within this pair. Without that further evidence, retain both candidates.",
+      "explanation": "Both calcium and magnesium form white hydroxide precipitates that remain in excess sodium hydroxide. A separate clean-wire orange-red flame result supports calcium within this pair. Without that further evidence, retain both candidates.",
+      "rubric": [
+        "Both candidates share the white/remaining hydroxide result.",
+        "The sodium-hydroxide result alone is not unique.",
+        "A separate clean-wire orange-red flame supports calcium.",
+        "No invented additional result."
+      ],
+      "hint": "Compare shared evidence with distinguishing evidence.",
+      "followUp": "ion-tests-v1-r-white",
+      "exposureAliases": [
+        "ion-tests-v1-r-ca",
+        "ion-tests-v1-r-li",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-ca",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-v1-cB-pair",
+        "ion-tests-v1-vB-lithium",
+        "ion-tests-v1-g-camg",
+        "ion-tests-v1-p-camg",
+        "ion-tests-v1-vA-white"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-eq-fe2",
+      "title": "Construct iron(II) coefficients",
+      "purpose": "Construct iron(II) coefficients",
+      "prompt": "Balance iron(II) hydroxide formation using smallest positive whole-number coefficients.",
+      "answer": "{\"metal\":\"1\",\"hydroxide\":\"2\",\"product\":\"1\"}",
+      "explanation": "Fe²⁺(aq) + 2OH⁻(aq) → Fe(OH)₂(s). Atoms and net charge balance.",
+      "hint": "Keep the species fixed. Count metal, oxygen and hydrogen; match the net charge too. Use the smallest positive whole numbers.",
+      "partLegend": "Smallest positive whole-number coefficients",
+      "ionGiven": {
+        "title": "Fixed species",
+        "rows": [
+          {
+            "label": "Equation to balance",
+            "text": "__ Fe²⁺(aq) + __ OH⁻(aq) → __ Fe(OH)₂(s)"
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "metal",
+          "label": "Coefficient of metal ion",
+          "answer": 1,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "hydroxide",
+          "label": "Coefficient of hydroxide ion",
+          "answer": 2,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "product",
+          "label": "Coefficient of solid product",
+          "answer": 1,
+          "inputMode": "numeric"
+        }
+      ],
+      "followUp": "ion-tests-v1-r-charge",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "equation",
+        "record": "eq-fe2"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-eq-ca",
+        "ion-tests-v1-g-eq-cu",
+        "ion-tests-v1-p-eq-mg",
+        "ion-tests-v1-cA-eq-fe2",
+        "ion-tests-v1-vB-eq-ca",
+        "ion-tests-v1-p-molecular"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-eq-ca",
+      "title": "Construct calcium coefficients",
+      "purpose": "Construct calcium coefficients",
+      "prompt": "Balance the fixed calcium hydroxide formation equation using smallest positive whole-number coefficients.",
+      "answer": "{\"metal\":\"1\",\"hydroxide\":\"2\",\"product\":\"1\"}",
+      "explanation": "Ca²⁺(aq) + 2OH⁻(aq) → Ca(OH)₂(s). Atoms and net charge balance.",
+      "hint": "Keep the species fixed. Count metal, oxygen and hydrogen; match the net charge too. Use the smallest positive whole numbers.",
+      "partLegend": "Smallest positive whole-number coefficients",
+      "ionGiven": {
+        "title": "Fixed species",
+        "rows": [
+          {
+            "label": "Equation to balance",
+            "text": "__ Ca²⁺(aq) + __ OH⁻(aq) → __ Ca(OH)₂(s)"
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "metal",
+          "label": "Coefficient of metal ion",
+          "answer": 1,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "hydroxide",
+          "label": "Coefficient of hydroxide ion",
+          "answer": 2,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "product",
+          "label": "Coefficient of solid product",
+          "answer": 1,
+          "inputMode": "numeric"
+        }
+      ],
+      "followUp": "ion-tests-v1-r-charge",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "equation",
+        "record": "eq-ca"
+      },
+      "exposureAliases": [
+        "ion-tests-v1-p-eq-fe2",
+        "ion-tests-v1-g-eq-cu",
+        "ion-tests-v1-p-eq-mg",
+        "ion-tests-v1-cA-eq-fe2",
+        "ion-tests-v1-vB-eq-ca",
+        "ion-tests-v1-p-molecular"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-cuso4",
+      "title": "Combine copper and sulfate",
+      "purpose": "Combine copper and sulfate",
+      "prompt": "Which single compound matches the separate hydroxide and sulfate records?",
+      "answer": "Copper(II) sulfate, CuSO₄",
+      "options": [
+        "Copper(II) sulfate, CuSO₄",
+        "Copper(II) chloride, CuCl₂",
+        "Potassium sulfate, K₂SO₄"
+      ],
+      "misconceptions": {
+        "Copper(II) chloride, CuCl₂": "The anion test supports sulfate, not chloride.",
+        "Potassium sulfate, K₂SO₄": "The blue hydroxide supports copper(II), not potassium."
+      },
+      "explanation": "Cu²⁺ and SO₄²⁻ balance in a 1:1 formula.",
+      "hint": "Use both test chains before combining charges.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "compound",
+        "record": "salt-cuso4"
+      },
+      "followUp": "ion-tests-v1-r-cu",
+      "exposureAliases": [
+        "ion-tests-v1-r-cu",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-p-cu-flame",
+        "ion-tests-v1-p-cu-oh",
+        "ion-tests-v1-vA-copper",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-v1-p-k2so4",
+        "ion-tests-v1-r-sulfate",
+        "ion-tests-v1-g-sulfate",
+        "ion-tests-v1-p-so4",
+        "ion-tests-v1-p-h2so4",
+        "ion-tests-v1-cA-sulfate",
+        "ion-tests-v1-cB-acid",
+        "ion-tests-2",
+        "ion-tests-3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-p-na2co3",
+      "title": "Combine sodium and carbonate",
+      "purpose": "Combine sodium and carbonate",
+      "prompt": "Which single compound matches the independent flame and confirmed-gas records?",
+      "answer": "Sodium carbonate, Na₂CO₃",
+      "options": [
+        "Sodium carbonate, Na₂CO₃",
+        "Sodium chloride, NaCl",
+        "Potassium sulfate, K₂SO₄"
+      ],
+      "misconceptions": {
+        "Sodium chloride, NaCl": "The gas evidence supports carbonate, not chloride.",
+        "Potassium sulfate, K₂SO₄": "The flame is yellow and the anion test is carbonate confirmation."
+      },
+      "explanation": "Two Na⁺ balance CO₃²⁻; confirmed carbon dioxide supports the carbonate test.",
+      "hint": "Read cation and anion evidence independently.",
+      "model": {
+        "kind": "ion-test-investigation",
+        "mode": "compound",
+        "record": "salt-na2co3"
+      },
+      "followUp": "ion-tests-v1-r-carbonate",
+      "exposureAliases": [
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-na",
+        "ion-tests-v1-cA-pair",
+        "ion-tests-v1-g-mask",
+        "ion-tests-v1-vA-limit",
+        "ion-tests-v1-cA-mixture",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-w-co2",
+        "ion-tests-v1-r-carbonate",
+        "ion-tests-v1-g-carbonate",
+        "ion-tests-v1-p-co3",
+        "ion-tests-v1-p-bubbles",
+        "ion-tests-v1-cA-carbonate",
+        "ion-tests-v1-cB-gas",
+        "ion-tests-v1-vB-gas",
+        "ion-tests-0",
+        "ion-tests-5"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cA-pair",
+      "title": "Read two fresh records",
+      "purpose": "Read two fresh records",
+      "prompt": "A single unknown gives a clean-wire yellow flame. A separate portion acidified with dilute nitric acid gives a yellow precipitate after silver nitrate. Which pair is supported?",
+      "answer": "Sodium and iodide",
+      "options": [
+        "Potassium and bromide",
+        "Sodium and chloride",
+        "Sodium and iodide"
+      ],
+      "misconceptions": {
+        "Potassium and bromide": "Lilac/cream would support those.",
+        "Sodium and chloride": "Chloride gives a white precipitate."
+      },
+      "explanation": "The observed object matters: yellow flame and yellow solid support different ions.",
+      "hint": "Separate the cation and anion test.",
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-na",
+        "ion-tests-v1-g-mask",
+        "ion-tests-v1-vA-limit",
+        "ion-tests-v1-cA-mixture",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-r-i",
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-vA-halide",
+        "ion-tests-0"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cA-white",
+      "title": "Keep three candidates",
+      "purpose": "Keep three candidates",
+      "prompt": "A new single-cation sample gives a white precipitate with sodium hydroxide. Excess was not tested. What follows?",
+      "answer": "Aluminium, calcium or magnesium remains possible",
+      "options": [
+        "Only aluminium",
+        "Only calcium",
+        "Aluminium, calcium or magnesium remains possible"
+      ],
+      "misconceptions": {
+        "Only aluminium": "Dissolution was not recorded.",
+        "Only calcium": "Magnesium and aluminium also give white."
+      },
+      "explanation": "The missing excess result cannot be invented.",
+      "hint": "Keep all compatible candidates.",
+      "exposureAliases": [
+        "ion-tests-v1-r-white",
+        "ion-tests-v1-g-white",
+        "ion-tests-v1-p-white"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cA-acid",
+      "title": "Protect the halide test",
+      "purpose": "Protect the halide test",
+      "prompt": "Why does the specified halide method use nitric acid rather than hydrochloric acid?",
+      "answer": "Hydrochloric acid would introduce chloride",
+      "options": [
+        "Nitric acid adds the needed bromide",
+        "Hydrochloric acid cannot be dilute",
+        "Hydrochloric acid would introduce chloride"
+      ],
+      "misconceptions": {
+        "Nitric acid adds the needed bromide": "Nitric acid is not a bromide source.",
+        "Hydrochloric acid cannot be dilute": "It can be dilute; the introduced ion is the problem."
+      },
+      "explanation": "The acid must not introduce the ion whose presence is inferred.",
+      "hint": "Trace reagent ions.",
+      "exposureAliases": [
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-g-fault",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-hcl",
+        "ion-tests-v1-vB-method",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-plan"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cA-iron",
+      "title": "Read the brown solid",
+      "purpose": "Read the brown solid",
+      "prompt": "A fresh sodium-hydroxide test gives a brown precipitate. Which specified cation is supported?",
+      "answer": "Iron(III)",
+      "options": [
+        "Iron(II)",
+        "Copper(II)",
+        "Iron(III)"
+      ],
+      "misconceptions": {
+        "Iron(II)": "Its immediate precipitate is green.",
+        "Copper(II)": "Its precipitate is blue."
+      },
+      "explanation": "Brown hydroxide supports Fe³⁺.",
+      "hint": "Name the correct test/result pair.",
+      "exposureAliases": [
+        "ion-tests-v1-r-fe3",
+        "ion-tests-v1-r-fe2",
+        "ion-tests-v1-p-fe3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cA-eq-fe2",
+      "title": "Balance iron(II)",
+      "purpose": "Balance iron(II)",
+      "prompt": "Independently balance the fixed iron(II) hydroxide equation in the smallest positive whole numbers.",
+      "answer": "{\"metal\":\"1\",\"hydroxide\":\"2\",\"product\":\"1\"}",
+      "explanation": "Fe²⁺(aq) + 2OH⁻(aq) → Fe(OH)₂(s). Atoms and net charge balance.",
+      "hint": "Keep the species fixed. Count metal, oxygen and hydrogen; match the net charge too. Use the smallest positive whole numbers.",
+      "partLegend": "Smallest positive whole-number coefficients",
+      "ionGiven": {
+        "title": "Fixed species",
+        "rows": [
+          {
+            "label": "Equation to balance",
+            "text": "__ Fe²⁺(aq) + __ OH⁻(aq) → __ Fe(OH)₂(s)"
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "metal",
+          "label": "Coefficient of metal ion",
+          "answer": 1,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "hydroxide",
+          "label": "Coefficient of hydroxide ion",
+          "answer": 2,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "product",
+          "label": "Coefficient of solid product",
+          "answer": 1,
+          "inputMode": "numeric"
+        }
+      ],
+      "exposureAliases": [
+        "ion-tests-v1-p-eq-fe2",
+        "ion-tests-v1-p-eq-ca",
+        "ion-tests-v1-g-eq-cu",
+        "ion-tests-v1-p-eq-mg",
+        "ion-tests-v1-vB-eq-ca",
+        "ion-tests-v1-p-molecular"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cA-sulfate",
+      "title": "Read a specified white result",
+      "purpose": "Read a specified white result",
+      "prompt": "A fresh portion receives dilute hydrochloric acid then barium chloride. A white precipitate forms. Which anion is supported?",
+      "answer": "Sulfate",
+      "options": [
+        "Carbonate",
+        "Sulfate",
+        "Chloride"
+      ],
+      "misconceptions": {
+        "Chloride": "The chloride test uses nitric acid then silver nitrate.",
+        "Carbonate": "Carbonate requires acid gas evolution and its confirmation."
+      },
+      "explanation": "The reagent conditions identify this as barium sulfate evidence.",
+      "hint": "White alone is not a test name.",
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-p-k2so4",
+        "ion-tests-v1-r-sulfate",
+        "ion-tests-v1-g-sulfate",
+        "ion-tests-v1-p-so4",
+        "ion-tests-v1-p-h2so4",
+        "ion-tests-v1-cB-acid",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cA-carbonate",
+      "title": "Require confirmation",
+      "purpose": "Require confirmation",
+      "prompt": "Acid causes bubbles, and the gas makes limewater cloudy. Which anion is supported?",
+      "answer": "Carbonate",
+      "options": [
+        "Carbonate",
+        "Sulfate",
+        "Iodide"
+      ],
+      "misconceptions": {
+        "Sulfate": "Its specified test forms barium sulfate.",
+        "Iodide": "Its halide precipitate is yellow."
+      },
+      "explanation": "Carbon dioxide from dilute-acid reaction supports carbonate.",
+      "hint": "Use both recorded observations.",
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-w-co2",
+        "ion-tests-v1-r-carbonate",
+        "ion-tests-v1-g-carbonate",
+        "ion-tests-v1-p-co3",
+        "ion-tests-v1-p-bubbles",
+        "ion-tests-v1-cB-gas",
+        "ion-tests-v1-vB-gas",
+        "ion-tests-5"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cA-mixture",
+      "title": "Limit a flame claim",
+      "purpose": "Limit a flame claim",
+      "prompt": "A known mixture gives an intense yellow flame with no lilac resolved. What is justified?",
+      "answer": "Sodium is present; potassium is not ruled out",
+      "options": [
+        "Potassium is absent",
+        "Only sodium ions are present",
+        "Sodium is present; potassium is not ruled out"
+      ],
+      "misconceptions": {
+        "Potassium is absent": "Its flame may be masked.",
+        "Only sodium ions are present": "Purity does not follow."
+      },
+      "explanation": "Mixture flame colours can be masked.",
+      "hint": "Presence differs from absence of other ions.",
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-na",
+        "ion-tests-v1-cA-pair",
+        "ion-tests-v1-g-mask",
+        "ion-tests-v1-vA-limit",
+        "ion-tests-v1-p-plan",
+        "ion-tests-0",
+        "instrumental-analysis-v1-r-mask",
+        "instrumental-analysis-v1-p-mask",
+        "instrumental-analysis-v1-cA-mask"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cA-plan",
+      "title": "Independent extended plan",
+      "purpose": "Independent extended plan",
+      "prompt": "Describe a logically sequenced school-test plan to establish lithium and chloride in a soluble suspected lithium chloride sample. Available: burner, clean wire, test tubes, distilled water, dilute nitric acid, silver nitrate and dropping pipette. Give both positive results and conclusions.",
+      "answer": "Sample on a clean wire in a blue/non-luminous Bunsen flame gives crimson, supporting lithium. Dissolve the soluble sample in distilled water in a separate fresh test tube portion; add dilute nitric acid, then silver nitrate solution with the dropping pipette. A white precipitate after silver nitrate supports chloride. Link each method, result and ion clearly.",
+      "explanation": "Sample on a clean wire in a blue/non-luminous Bunsen flame gives crimson, supporting lithium. Dissolve the soluble sample in distilled water in a separate fresh test tube portion; add dilute nitric acid, then silver nitrate solution with the dropping pipette. A white precipitate after silver nitrate supports chloride. Link each method, result and ion clearly.",
+      "rubric": [
+        "Clean sample-bearing wire in blue/non-luminous flame.",
+        "Crimson linked to lithium.",
+        "Sample dissolved in distilled water in a separate portion.",
+        "Dilute nitric acid then silver nitrate; dropping pipette.",
+        "White precipitate linked to chloride.",
+        "Coherent sequence and explicit separate ion conclusions."
+      ],
+      "hint": "Write two complete method/result chains.",
+      "exposureAliases": [
+        "ion-tests-v1-r-li",
+        "ion-tests-v1-r-ca",
+        "ion-tests-v1-p-li",
+        "ion-tests-v1-vB-lithium",
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-g-fault",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-hcl",
+        "ion-tests-v1-cA-acid",
+        "ion-tests-v1-vB-method",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-4"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cA-formula",
+      "title": "Combine both ion charges",
+      "purpose": "Combine both ion charges",
+      "prompt": "A supplied single salt's two tests support Ca²⁺ and Cl⁻. Which formula is neutral?",
+      "answer": "CaCl₂",
+      "options": [
+        "CaCl",
+        "Ca₂Cl",
+        "CaCl₂"
+      ],
+      "misconceptions": {
+        "CaCl": "This leaves net 1+.",
+        "Ca₂Cl": "This leaves net 3+."
+      },
+      "explanation": "Two chloride ions balance calcium's 2+ charge.",
+      "hint": "Count charge, not test-tube colour.",
+      "exposureAliases": [
+        "ion-tests-v1-w-ratio",
+        "ion-tests-v1-p-cacl2",
+        "if-v1-p-halide"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cB-pair",
+      "title": "Read an unfamiliar pair",
+      "purpose": "Read an unfamiliar pair",
+      "prompt": "A single unknown gives an orange-red clean-wire flame. A separate portion receives dilute HCl then barium chloride and gives a white precipitate. Which pair is supported?",
+      "answer": "Calcium and sulfate",
+      "options": [
+        "Magnesium and bromide",
+        "Calcium and sulfate",
+        "Lithium and chloride"
+      ],
+      "misconceptions": {
+        "Lithium and chloride": "Crimson plus acidified silver chloride would be different records.",
+        "Magnesium and bromide": "The recorded flame and reagents contradict this pair."
+      },
+      "explanation": "Orange-red supports calcium; specified barium precipitate supports sulfate.",
+      "hint": "Use conditions as well as colours.",
+      "exposureAliases": [
+        "ion-tests-v1-r-ca",
+        "ion-tests-v1-r-li",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-ca",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-v1-vB-lithium",
+        "ion-tests-v1-p-distinguish"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cB-excess",
+      "title": "Resolve the white group",
+      "purpose": "Resolve the white group",
+      "prompt": "A white hydroxide precipitate dissolves in excess sodium hydroxide. Which cation is supported among Al³⁺, Ca²⁺ and Mg²⁺?",
+      "answer": "Aluminium",
+      "options": [
+        "Aluminium",
+        "Calcium",
+        "Magnesium"
+      ],
+      "misconceptions": {
+        "Calcium": "Its precipitate remains.",
+        "Magnesium": "Its precipitate remains."
+      },
+      "explanation": "Dissolution distinguishes aluminium within this set.",
+      "hint": "Use the second stage.",
+      "exposureAliases": [
+        "ion-tests-v1-r-excess",
+        "ion-tests-v1-g-al",
+        "ion-tests-v1-p-al",
+        "ion-tests-v1-vB-al"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cB-acid",
+      "title": "Reject introduced sulfate",
+      "purpose": "Reject introduced sulfate",
+      "prompt": "A sulfate test used sulfuric acid before barium chloride. Why can a white precipitate not establish original sample sulfate?",
+      "answer": "The acid introduced sulfate",
+      "options": [
+        "White precipitates uniquely mean chloride",
+        "The acid introduced sulfate",
+        "Barium chloride has no reaction with sulfate"
+      ],
+      "misconceptions": {
+        "Barium chloride has no reaction with sulfate": "Barium sulfate is insoluble.",
+        "White precipitates uniquely mean chloride": "Reagents are needed to interpret colour."
+      },
+      "explanation": "A reagent-contaminated result cannot locate the original sulfate source.",
+      "hint": "Trace the target ion.",
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-p-k2so4",
+        "ion-tests-v1-r-sulfate",
+        "ion-tests-v1-g-sulfate",
+        "ion-tests-v1-p-so4",
+        "ion-tests-v1-p-h2so4",
+        "ion-tests-v1-cA-sulfate",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cB-green",
+      "title": "Read the immediate green solid",
+      "purpose": "Read the immediate green solid",
+      "prompt": "A sodium-hydroxide record gives an immediate green precipitate. Which cation?",
+      "answer": "Iron(II)",
+      "options": [
+        "Iron(III)",
+        "Copper(II)",
+        "Iron(II)"
+      ],
+      "misconceptions": {
+        "Iron(III)": "Its specified precipitate is brown.",
+        "Copper(II)": "Its hydroxide precipitate is blue, despite its green flame."
+      },
+      "explanation": "Immediate green hydroxide supports Fe²⁺.",
+      "hint": "Do not confuse a green flame with a green solid.",
+      "exposureAliases": [
+        "ion-tests-v1-r-fe2",
+        "ion-tests-v1-r-fe3",
+        "ion-tests-v1-r-cu",
+        "ion-tests-v1-p-fe2"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cB-eq-al",
+      "title": "Balance aluminium",
+      "purpose": "Balance aluminium",
+      "prompt": "Independently balance initial aluminium hydroxide precipitate formation.",
+      "answer": "{\"metal\":\"1\",\"hydroxide\":\"3\",\"product\":\"1\"}",
+      "explanation": "Al³⁺(aq) + 3OH⁻(aq) → Al(OH)₃(s). Atoms and net charge balance.",
+      "hint": "Keep the species fixed. Count metal, oxygen and hydrogen; match the net charge too. Use the smallest positive whole numbers.",
+      "partLegend": "Smallest positive whole-number coefficients",
+      "ionGiven": {
+        "title": "Fixed species",
+        "rows": [
+          {
+            "label": "Equation to balance",
+            "text": "__ Al³⁺(aq) + __ OH⁻(aq) → __ Al(OH)₃(s)"
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "metal",
+          "label": "Coefficient of metal ion",
+          "answer": 1,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "hydroxide",
+          "label": "Coefficient of hydroxide ion",
+          "answer": 3,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "product",
+          "label": "Coefficient of solid product",
+          "answer": 1,
+          "inputMode": "numeric"
+        }
+      ],
+      "exposureAliases": [
+        "ion-tests-v1-r-charge",
+        "ion-tests-v1-g-eq-fe",
+        "ion-tests-v1-p-eq-al",
+        "ion-tests-v1-vA-eq-fe3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cB-halide",
+      "title": "Read the cream solid",
+      "purpose": "Read the cream solid",
+      "prompt": "A fresh portion acidified with dilute nitric acid gives a cream precipitate after silver nitrate. Which anion?",
+      "answer": "Bromide",
+      "options": [
+        "Bromide",
+        "Chloride",
+        "Iodide"
+      ],
+      "misconceptions": {
+        "Chloride": "Its precipitate is white.",
+        "Iodide": "Its precipitate is yellow."
+      },
+      "explanation": "Cream silver bromide supports bromide.",
+      "hint": "Read the precipitate name and colour.",
+      "exposureAliases": [
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-r-i",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-g-salt"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cB-gas",
+      "title": "Reject an incomplete gas record",
+      "purpose": "Reject an incomplete gas record",
+      "prompt": "An unknown bubbles with dilute acid, but the gas is not tested. Is carbonate confirmed?",
+      "answer": "No; the gas identification is missing",
+      "options": [
+        "No; the gas identification is missing",
+        "Yes; bubbles always identify carbonate",
+        "No; chloride is therefore confirmed"
+      ],
+      "misconceptions": {
+        "Yes; bubbles always identify carbonate": "Effervescence alone is insufficient.",
+        "No; chloride is therefore confirmed": "Missing evidence does not identify another ion."
+      },
+      "explanation": "Obtain the limewater result to support carbon dioxide.",
+      "hint": "Keep unknown evidence unknown.",
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-w-co2",
+        "ion-tests-v1-r-carbonate",
+        "ion-tests-v1-g-carbonate",
+        "ion-tests-v1-p-co3",
+        "ion-tests-v1-p-bubbles",
+        "ion-tests-v1-cA-carbonate",
+        "ion-tests-v1-vB-gas",
+        "ion-tests-5"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cB-portions",
+      "title": "Track introduced chloride",
+      "purpose": "Track introduced chloride",
+      "prompt": "A barium-chloride-treated sample is reused for silver nitrate. Why is sample chloride identification unsafe?",
+      "answer": "The earlier reagent introduced chloride",
+      "options": [
+        "The earlier reagent introduced chloride",
+        "Fresh original portions contain no ions",
+        "Silver nitrate can never form a white solid"
+      ],
+      "misconceptions": {
+        "Fresh original portions contain no ions": "They contain the sample's ions.",
+        "Silver nitrate can never form a white solid": "It forms white silver chloride."
+      },
+      "explanation": "Separate fresh portions avoid contamination from earlier tests.",
+      "hint": "Track all reagents, not just the final one.",
+      "exposureAliases": [
+        "ion-tests-v1-r-portions",
+        "ion-tests-v1-p-portions",
+        "ion-tests-v1-vB-method"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cB-plan",
+      "title": "Independent extended plan",
+      "purpose": "Independent extended plan",
+      "prompt": "Describe a logically sequenced school-test plan to establish copper(II) and sulfate in a suspected soluble copper(II) sulfate sample, using sodium hydroxide, dilute hydrochloric acid and barium chloride. State the separate portions, observations and conclusions.",
+      "answer": "Use independent fresh aqueous portions. Add sodium hydroxide to one: a blue precipitate supports copper(II). Acidify a second portion with dilute hydrochloric acid, then add barium chloride solution: a white precipitate supports sulfate. Name each reagent/result/ion chain and do not reuse the first treated portion.",
+      "explanation": "Use independent fresh aqueous portions. Add sodium hydroxide to one: a blue precipitate supports copper(II). Acidify a second portion with dilute hydrochloric acid, then add barium chloride solution: a white precipitate supports sulfate. Name each reagent/result/ion chain and do not reuse the first treated portion.",
+      "rubric": [
+        "Separate fresh aqueous portions.",
+        "Sodium hydroxide on one portion.",
+        "Blue precipitate linked to copper(II).",
+        "Dilute hydrochloric acid then barium chloride on the second portion.",
+        "White precipitate linked to sulfate.",
+        "Clear sequence and no unsupported whole-sample purity claim."
+      ],
+      "hint": "Keep the two ion-test chains distinct.",
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-r-cu",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-p-cu-flame",
+        "ion-tests-v1-p-cu-oh",
+        "ion-tests-v1-vA-copper",
+        "ion-tests-v1-p-k2so4",
+        "ion-tests-v1-r-sulfate",
+        "ion-tests-v1-g-sulfate",
+        "ion-tests-v1-p-so4",
+        "ion-tests-v1-p-h2so4",
+        "ion-tests-v1-cA-sulfate",
+        "ion-tests-v1-cB-acid",
+        "ion-tests-2",
+        "ion-tests-3"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-cB-formula",
+      "title": "Combine a sulfate formula",
+      "purpose": "Combine a sulfate formula",
+      "prompt": "Two tests of a supplied single salt support K⁺ and SO₄²⁻. Which formula is neutral?",
+      "answer": "K₂SO₄",
+      "options": [
+        "K(SO₄)₂",
+        "K₂SO₄",
+        "KSO₄"
+      ],
+      "misconceptions": {
+        "KSO₄": "That has net 1−.",
+        "K(SO₄)₂": "That has net 3−."
+      },
+      "explanation": "Two potassium ions balance one sulfate ion.",
+      "hint": "Use both charges.",
+      "exposureAliases": [
+        "ion-tests-v1-p-k2so4"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-vA-copper",
+      "title": "Distinguish copper observations",
+      "purpose": "Distinguish copper observations",
+      "prompt": "Which pair correctly separates copper flame and copper(II) hydroxide observations?",
+      "answer": "Green flame; blue precipitate",
+      "options": [
+        "Blue flame; green precipitate",
+        "Brown flame; white precipitate",
+        "Green flame; blue precipitate"
+      ],
+      "misconceptions": {
+        "Blue flame; green precipitate": "Those colour assignments are reversed.",
+        "Brown flame; white precipitate": "Neither is the specified copper pair."
+      },
+      "explanation": "The test determines which physical observation is relevant.",
+      "hint": "Name flame and solid separately.",
+      "exposureAliases": [
+        "ion-tests-v1-p-cuso4",
+        "ion-tests-v1-r-cu",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-p-cu-flame",
+        "ion-tests-v1-p-cu-oh",
+        "ion-tests-v1-cB-plan",
+        "ion-tests-2"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-vA-white",
+      "title": "Keep the unresolved pair",
+      "purpose": "Keep the unresolved pair",
+      "prompt": "A new white hydroxide precipitate remains in excess. Which candidates remain among Al, Ca and Mg?",
+      "answer": "Calcium and magnesium",
+      "options": [
+        "Only calcium",
+        "Calcium and magnesium",
+        "Only aluminium"
+      ],
+      "misconceptions": {
+        "Only aluminium": "Its precipitate dissolves.",
+        "Only calcium": "Magnesium shares this result."
+      },
+      "explanation": "A separate distinguishing observation is needed.",
+      "hint": "Keep the evidence limit.",
+      "exposureAliases": [
+        "ion-tests-v1-g-camg",
+        "ion-tests-v1-p-camg",
+        "ion-tests-v1-p-distinguish"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-vA-eq-fe3",
+      "title": "Delayed iron(III) equation",
+      "purpose": "Delayed iron(III) equation",
+      "prompt": "Construct the smallest coefficients of the fixed iron(III) hydroxide equation.",
+      "answer": "{\"metal\":\"1\",\"hydroxide\":\"3\",\"product\":\"1\"}",
+      "explanation": "Fe³⁺(aq) + 3OH⁻(aq) → Fe(OH)₃(s). Atoms and net charge balance.",
+      "hint": "Keep the species fixed. Count metal, oxygen and hydrogen; match the net charge too. Use the smallest positive whole numbers.",
+      "partLegend": "Smallest positive whole-number coefficients",
+      "ionGiven": {
+        "title": "Fixed species",
+        "rows": [
+          {
+            "label": "Equation to balance",
+            "text": "__ Fe³⁺(aq) + __ OH⁻(aq) → __ Fe(OH)₃(s)"
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "metal",
+          "label": "Coefficient of metal ion",
+          "answer": 1,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "hydroxide",
+          "label": "Coefficient of hydroxide ion",
+          "answer": 3,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "product",
+          "label": "Coefficient of solid product",
+          "answer": 1,
+          "inputMode": "numeric"
+        }
+      ],
+      "exposureAliases": [
+        "ion-tests-v1-r-charge",
+        "ion-tests-v1-g-eq-fe",
+        "ion-tests-v1-p-eq-al",
+        "ion-tests-v1-cB-eq-al"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-vA-halide",
+      "title": "Recall iodide conditions",
+      "purpose": "Recall iodide conditions",
+      "prompt": "Which test/result pair supports iodide?",
+      "answer": "Dilute nitric acid then silver nitrate; yellow precipitate",
+      "options": [
+        "Dilute nitric acid then silver nitrate; yellow precipitate",
+        "Yellow flame only",
+        "Dilute HCl then barium chloride; white precipitate"
+      ],
+      "misconceptions": {
+        "Yellow flame only": "That is sodium evidence.",
+        "Dilute HCl then barium chloride; white precipitate": "That is sulfate evidence."
+      },
+      "explanation": "The specified silver iodide precipitate is yellow.",
+      "hint": "Recall both reagent order and observed solid.",
+      "exposureAliases": [
+        "ion-tests-v1-r-i",
+        "ion-tests-v1-r-br",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-pair"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-vA-limit",
+      "title": "Explain a masked result",
+      "purpose": "Explain a masked result",
+      "prompt": "A mixed school sample gives a strong yellow flame and no visible lilac. Explain what can and cannot be inferred.",
+      "answer": "The yellow flame supports sodium present. Sodium's intense emission can mask other flame colours, so absence of resolved lilac cannot rule out potassium and does not establish purity.",
+      "explanation": "The yellow flame supports sodium present. Sodium's intense emission can mask other flame colours, so absence of resolved lilac cannot rule out potassium and does not establish purity.",
+      "rubric": [
+        "Yellow supports sodium presence.",
+        "Mixture colours can be masked.",
+        "No visible lilac does not prove potassium absence.",
+        "No purity claim."
+      ],
+      "hint": "Distinguish presence, absence and purity.",
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-r-na",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-na",
+        "ion-tests-v1-cA-pair",
+        "ion-tests-v1-g-mask",
+        "ion-tests-v1-cA-mixture",
+        "ion-tests-v1-p-plan",
+        "ion-tests-0",
+        "instrumental-analysis-v1-r-mask",
+        "instrumental-analysis-v1-p-mask",
+        "instrumental-analysis-v1-cA-mask"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-vB-lithium",
+      "title": "Separate red flame names",
+      "purpose": "Separate red flame names",
+      "prompt": "Which pair gives the specified lithium/calcium flame colours?",
+      "answer": "Lithium crimson; calcium orange-red",
+      "options": [
+        "Lithium crimson; calcium orange-red",
+        "Lithium orange-red; calcium crimson",
+        "Both lilac"
+      ],
+      "misconceptions": {
+        "Lithium orange-red; calcium crimson": "These are reversed.",
+        "Both lilac": "Lilac supports potassium."
+      },
+      "explanation": "Keep the two specified red descriptions distinct.",
+      "hint": "Use the named reference colours.",
+      "exposureAliases": [
+        "ion-tests-v1-r-li",
+        "ion-tests-v1-r-ca",
+        "ion-tests-v1-p-li",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-r-flame",
+        "ion-tests-v1-p-ca",
+        "ion-tests-v1-p-cacl2",
+        "ion-tests-v1-cB-pair",
+        "ion-tests-v1-p-distinguish"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-vB-al",
+      "title": "Recall the excess result",
+      "purpose": "Recall the excess result",
+      "prompt": "Which recorded hydroxide sequence supports aluminium within the specified set?",
+      "answer": "White precipitate, dissolves in excess sodium hydroxide",
+      "options": [
+        "Blue precipitate, remains",
+        "White precipitate, dissolves in excess sodium hydroxide",
+        "White precipitate, remains in excess"
+      ],
+      "misconceptions": {
+        "White precipitate, remains in excess": "That leaves calcium or magnesium.",
+        "Blue precipitate, remains": "That supports copper(II)."
+      },
+      "explanation": "Both stages matter.",
+      "hint": "Do not identify from white alone.",
+      "exposureAliases": [
+        "ion-tests-v1-r-excess",
+        "ion-tests-v1-g-al",
+        "ion-tests-v1-p-al",
+        "ion-tests-v1-cB-excess"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-vB-eq-ca",
+      "title": "Delayed calcium equation",
+      "purpose": "Delayed calcium equation",
+      "prompt": "Construct the smallest coefficients of the fixed calcium hydroxide equation.",
+      "answer": "{\"metal\":\"1\",\"hydroxide\":\"2\",\"product\":\"1\"}",
+      "explanation": "Ca²⁺(aq) + 2OH⁻(aq) → Ca(OH)₂(s). Atoms and net charge balance.",
+      "hint": "Keep the species fixed. Count metal, oxygen and hydrogen; match the net charge too. Use the smallest positive whole numbers.",
+      "partLegend": "Smallest positive whole-number coefficients",
+      "ionGiven": {
+        "title": "Fixed species",
+        "rows": [
+          {
+            "label": "Equation to balance",
+            "text": "__ Ca²⁺(aq) + __ OH⁻(aq) → __ Ca(OH)₂(s)"
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "metal",
+          "label": "Coefficient of metal ion",
+          "answer": 1,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "hydroxide",
+          "label": "Coefficient of hydroxide ion",
+          "answer": 2,
+          "inputMode": "numeric"
+        },
+        {
+          "id": "product",
+          "label": "Coefficient of solid product",
+          "answer": 1,
+          "inputMode": "numeric"
+        }
+      ],
+      "exposureAliases": [
+        "ion-tests-v1-p-eq-fe2",
+        "ion-tests-v1-p-eq-ca",
+        "ion-tests-v1-g-eq-cu",
+        "ion-tests-v1-p-eq-mg",
+        "ion-tests-v1-cA-eq-fe2",
+        "ion-tests-v1-p-molecular"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-vB-gas",
+      "title": "Complete a carbonate record",
+      "purpose": "Complete a carbonate record",
+      "prompt": "Which acid-reaction record supports carbonate?",
+      "answer": "Effervescence; evolved gas makes limewater cloudy",
+      "options": [
+        "Effervescence only",
+        "Glowing splint relights",
+        "Effervescence; evolved gas makes limewater cloudy"
+      ],
+      "misconceptions": {
+        "Effervescence only": "The gas identity is untested.",
+        "Glowing splint relights": "That identifies oxygen instead."
+      },
+      "explanation": "Cloudy limewater confirms the carbon dioxide.",
+      "hint": "Recall the complete gas test.",
+      "exposureAliases": [
+        "ion-tests-v1-p-na2co3",
+        "ion-tests-v1-w-co2",
+        "ion-tests-v1-r-carbonate",
+        "ion-tests-v1-g-carbonate",
+        "ion-tests-v1-p-co3",
+        "ion-tests-v1-p-bubbles",
+        "ion-tests-v1-cA-carbonate",
+        "ion-tests-v1-cB-gas",
+        "ion-tests-5"
+      ]
+    },
+    {
+      "id": "ion-tests-v1-vB-method",
+      "title": "Explain fresh portions",
+      "purpose": "Explain fresh portions",
+      "prompt": "Explain why hydrochloric acid is inappropriate before silver nitrate in the halide test, and why repeating on the same treated portion does not repair the inference.",
+      "answer": "Hydrochloric acid supplies chloride, which can form a white silver chloride precipitate. The chloride remains in the treated portion, so the original sample's chloride cannot be established from it. Start with a fresh portion and dilute nitric acid before silver nitrate.",
+      "explanation": "Hydrochloric acid supplies chloride, which can form a white silver chloride precipitate. The chloride remains in the treated portion, so the original sample's chloride cannot be established from it. Start with a fresh portion and dilute nitric acid before silver nitrate.",
+      "rubric": [
+        "Hydrochloric acid introduces chloride.",
+        "Silver chloride can form a white precipitate from that introduced ion.",
+        "Same treated portion remains contaminated.",
+        "Fresh original portion with dilute nitric acid then silver nitrate."
+      ],
+      "hint": "Track where chloride comes from and whether it remains.",
+      "exposureAliases": [
+        "ion-tests-v1-r-halide",
+        "ion-tests-v1-g-halide",
+        "ion-tests-v1-g-fault",
+        "ion-tests-v1-p-cl",
+        "ion-tests-v1-p-br",
+        "ion-tests-v1-p-i",
+        "ion-tests-v1-p-hcl",
+        "ion-tests-v1-cA-acid",
+        "ion-tests-v1-p-plan",
+        "ion-tests-v1-cA-plan",
+        "ion-tests-v1-r-portions",
+        "ion-tests-v1-p-portions",
+        "ion-tests-v1-cB-portions"
+      ]
+    }
+  ]
+}

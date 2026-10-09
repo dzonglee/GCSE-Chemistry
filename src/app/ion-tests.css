@@ -284,3 +284,261 @@
     grid-row: 1/3;
   }
 }
+
+/* Only appended full-equation responses; existing ion tasks keep their layout. */
+.sample-lesson[data-lesson="ion-tests"]
+  .sample-task-panel:has(textarea[aria-label="Your equations"]) {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .sample-task-panel:has(textarea[aria-label="Your equations"])
+  .sample-task-topline:has(.practice-task-picker) {
+  order: 3;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .sample-task-panel:has(textarea[aria-label="Your equations"])
+  .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .sample-task-panel:has(textarea[aria-label="Your equations"])
+  .question-navigation {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  min-width: 0;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .sample-task-panel:has(textarea[aria-label="Your equations"])
+  .question-navigation
+  button {
+  flex: 0 0 auto;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .sample-task-panel:has(textarea[aria-label="Your equations"])
+  > h2,
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session:has([data-written-equations])
+  .question-panel
+  h2 {
+  font-size: 20px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .sample-task-panel:has(textarea[aria-label="Your equations"])
+  .sample-task-prompt,
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session:has([data-written-equations])
+  .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .sample-task-panel:has(textarea[aria-label="Your equations"])
+  .question-panel {
+  padding: 12px;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session:has([data-written-equations]) {
+  display: flex;
+  flex-direction: column;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session:has([data-written-equations])
+  .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session:has([data-written-equations])
+  > progress {
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session:has([data-written-equations])
+  .question-navigation {
+  order: 3;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session:has([data-written-equations])
+  .question-panel {
+  margin-top: 8px;
+  padding: 12px;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session:has([data-written-equations])
+  .question-panel
+  > .eyebrow {
+  margin-bottom: 4px;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  :is(.sample-task-panel, .assessment-session):has(
+    textarea[aria-label="Your equations"]
+  )
+  .written-answer
+  textarea {
+  height: 104px;
+  min-height: 104px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ion-tests"]
+    :is(.sample-task-panel, .assessment-session):has(
+      textarea[aria-label="Your equations"]
+    )
+    .written-answer
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+
+.sample-lesson[data-lesson="ion-tests"]
+  [data-ion-equation-writing]
+  .sample-task-topline
+  .question-navigation {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  min-width: 0;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  [data-ion-equation-writing]
+  .sample-task-topline
+  .question-navigation
+  button {
+  flex: 0 0 auto;
+}
+
+/* Original sealed ion forms also put the answer ahead of navigation. */
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ion-tests"]:has(.assessment-session > .question-panel)
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session
+  .question-panel:has(.written-answer)
+  .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 8px 0;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session
+  .question-panel:not([data-written-equations]):has(.written-answer)
+  .written-equation-prompt {
+  line-height: 1.35;
+}
+.sample-lesson[data-lesson="ion-tests"] .assessment-session .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="ion-tests"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="ion-tests"] .assessment-session .question-panel {
+  margin-top: 8px;
+  padding: 12px;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin-bottom: 4px;
+}
+.sample-lesson[data-lesson="ion-tests"] .assessment-session .question-panel h2 {
+  font-size: 20px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="ion-tests"]
+  .assessment-session
+  .written-answer
+  textarea {
+  height: 104px;
+  min-height: 104px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .written-answer
+    textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .question-panel:has(.multipart-answer)
+    h2 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .question-panel:has(.multipart-answer)
+    .ion-original {
+    padding: 6px;
+    margin-bottom: 6px;
+  }
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .question-panel:has(.multipart-answer)
+    .ion-original h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .question-panel:has(.multipart-answer)
+    .ion-original dl,
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .question-panel:has(.multipart-answer)
+    .ion-original dl div,
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .question-panel:has(.multipart-answer)
+    .ion-original dd {
+    margin: 0;
+  }
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .question-panel:has(.multipart-answer)
+    .ion-original dt {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .question-panel:has(.multipart-answer)
+    .ion-original dd {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .multipart-answer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .multipart-answer legend {
+    margin-bottom: 4px;
+  }
+  .sample-lesson[data-lesson="ion-tests"]
+    .assessment-session
+    .multipart-answer label {
+    grid-template-columns: minmax(0, 1fr) 64px;
+    align-items: center;
+  }
+}

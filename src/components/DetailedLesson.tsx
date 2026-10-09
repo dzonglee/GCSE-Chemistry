@@ -222,8 +222,10 @@ export function DetailedLesson({
     lesson.slug === "life-cycle-and-recycling" &&
     work.run?.kind === "review" &&
     work.run.ids.every((id) => id.startsWith("lca-v1-resource-"));
+  const compactIonReview = lesson.slug === "ion-tests";
   const compactReview =
-    (lesson.slug === "inside-an-atom" ||
+    (compactIonReview ||
+      lesson.slug === "inside-an-atom" ||
       lesson.slug === "balancing-equations" ||
       lesson.slug === "transition-metals" ||
       lesson.slug === "atomic-models" ||
@@ -261,7 +263,8 @@ export function DetailedLesson({
   const ReviewContainer = compactReview ? "details" : "section";
   const reviewScheduleAfter =
     compactReview &&
-    (lesson.slug === "balancing-equations" ||
+    (compactIonReview ||
+      lesson.slug === "balancing-equations" ||
       lesson.slug === "transition-metals" ||
       lesson.slug === "atomic-models" ||
       compactResourceReview ||
@@ -367,6 +370,7 @@ export function DetailedLesson({
           "metal-reactivity",
           "acids-and-neutralisation",
           "electrolysis",
+          "ion-tests",
         ].includes(lesson.slug) ||
           (section === "explore" && stage === "guided")) && (
           <button className="text-button" onClick={() => choose("warmup")}>
@@ -441,6 +445,7 @@ export function DetailedLesson({
             <AssessmentSession
               id={lesson.slug}
               navigationAfterResponse={
+                lesson.slug === "ion-tests" ||
                 compactEquationForm ||
                 lesson.slug === "inside-an-atom" ||
                 lesson.slug === "balancing-equations" ||
@@ -471,6 +476,7 @@ export function DetailedLesson({
                   "metal-reactivity",
                   "acids-and-neutralisation",
                   "electrolysis",
+                  "ion-tests",
                 ].includes(lesson.slug)
               }
               title={
@@ -531,6 +537,9 @@ export function DetailedLesson({
       ) : (
         <section
           className="sample-task-panel"
+          data-ion-equation-writing={
+            q.id.startsWith("ion-tests-v1-write-") || undefined
+          }
           aria-label="Current learning task"
         >
           <div className="sample-task-topline">

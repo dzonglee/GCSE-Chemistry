@@ -1,0 +1,27 @@
+[
+  {
+    "file": "src/lib/marking.ts",
+    "before": "06d9c6e4cce159dada5137ee9f1c36612768afcacf3af9f82cd1a28aae97c808",
+    "candidate": "181d05cee21d1a7d4f73a39e2cb685bc7443dc8f8edb8dd2afd1983f7f73f4e7"
+  },
+  {
+    "file": "src/components/AssessmentSession.tsx",
+    "before": "912baf3f5fd3c07075a1732aeeb7f0265f82a0463d4a9b6eab87622b7357545c",
+    "candidate": "261a08e275aae8ad80dcd7f410ba353eb87517ea634169adff3ba3658f9fa227"
+  },
+  {
+    "file": "src/components/QuestionInput.tsx",
+    "before": "85c13dac1d4c4568f31710df913faa1809a9951182496c6b8f80757c26e8842a",
+    "candidate": "aa4ef8c5bf5ac9e3836bd6db60c3eee915bddf26278061fc38e4b350022ea294"
+  },
+  {
+    "file": "src/components/DetailedLesson.tsx",
+    "before": "68bb24672eb02e906b5fe48d03a54bbc756cc1bc6a755a8c48012f7e2d1d3f34",
+    "candidate": "0f4d1f4ea0b9fd2a30ba6f8d6de366a2be92aeb178322ebff8b6a037f9f35e38"
+  },
+  {
+    "file": "src/app/ion-tests.css",
+    "before": "f93e6f7fb5dfa25f03a1eca7a85070bdebc91268dd6b63e4967a79f4999755da",
+    "candidate": "92628fc404ac02c8d2fa63937248d1f62dd04317748639ff54210b91291c5cc1"
+  }
+]
