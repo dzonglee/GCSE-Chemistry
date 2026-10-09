@@ -454,9 +454,40 @@ test("wrong signed energy persists and invalid raw entry never overwrites it", a
   await expect(field).toHaveValue("30");
   await field.fill("1/2");
   await expect(page.locator(".reversible-workbench")).toContainText(
-    "is not saved",
+    "retained as a draft",
   );
+  await saved(page);
+  const modelId = journey.guided[2].id;
+  const retained = await page.evaluate(
+    ({ key, modelId }) => {
+      const work = JSON.parse(localStorage.getItem(key)!).work[
+        "reversible-reactions"
+      ];
+      return {
+        board: work.taskModels[modelId].at(-1),
+        draft: work.drafts["model-input:" + modelId],
+      };
+    },
+    { key: STORAGE_KEY, modelId },
+  );
+  expect(retained.board.change).toBe("30");
+  expect(JSON.parse(retained.draft).change).toBe("1/2");
   await page.reload();
+  await expect(field).toHaveValue("1/2");
+  const restored = await page.evaluate(
+    ({ key, modelId }) => {
+      const work = JSON.parse(localStorage.getItem(key)!).work[
+        "reversible-reactions"
+      ];
+      return {
+        board: work.taskModels[modelId].at(-1),
+        draft: work.drafts["model-input:" + modelId],
+      };
+    },
+    { key: STORAGE_KEY, modelId },
+  );
+  expect(restored).toEqual(retained);
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(field).toHaveValue("30");
   await page.getByRole("button", { name: "Reset model", exact: true }).click();
   await expect(field).toHaveValue("0");

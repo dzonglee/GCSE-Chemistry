@@ -775,6 +775,7 @@ export function TaskWorkbench({
     return (
       <ReversibleWorkbench
         mode={model.mode}
+        yieldComparison={model.yieldComparison}
         record={model.record}
         instruction={model.instruction}
         history={history}

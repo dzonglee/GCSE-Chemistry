@@ -67,8 +67,8 @@ import { percentageYieldJourney as journey } from "../src/content/journeys/perce
 import { tasks } from "../src/content/journeys/helpers";
 import { mark } from "../src/lib/marking";
 test("48 original references and all stated misconceptions require correct product bases; explanations remain false", () => {
-  expect(tasks(journey)).toHaveLength(48);
-  expect(journey.practice).toHaveLength(21);
+  expect(tasks(journey)).toHaveLength(60);
+  expect(journey.practice).toHaveLength(23);
   for (const q of tasks(journey)) {
     expect(mark(q, q.answer).correct, q.id).toBe(!q.rubric);
     for (const wrong of Object.keys(q.misconceptions ?? {}))

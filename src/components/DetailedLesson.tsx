@@ -57,6 +57,9 @@ export function DetailedLesson({
             : fullJourney;
   const work = data.work[lesson.slug] ?? emptyWork();
   const section = work.section;
+  const warmupAfterResponse =
+    lesson.slug === "yield-and-atom-economy" &&
+    (section === "check" || section === "review");
   const stage: LearningStage =
     section === "practice" ? "practice" : (work.learning?.stage ?? "guided");
   const list = journey[stage];
@@ -110,6 +113,8 @@ export function DetailedLesson({
       !(
         lesson.slug === "ph-scale-and-indicators" ||
         lesson.slug === "life-cycle-and-recycling" ||
+        (lesson.slug === "yield-and-atom-economy" &&
+          q.id.startsWith("py-v1-reversible-")) ||
         (lesson.slug === "aqueous-electrolysis-products" && q.rubric)
       )
     )
@@ -268,6 +273,7 @@ export function DetailedLesson({
     mixedPolymer &&
     work.run?.kind === "review" &&
     work.run.ids.every((id) => id.startsWith("pol-cond-v1-"));
+  const compactYieldReview = lesson.slug === "yield-and-atom-economy";
   const compactIonReview = [
     "ion-tests",
     "aqueous-electrolysis-products",
@@ -276,7 +282,8 @@ export function DetailedLesson({
     "life-cycle-and-recycling",
   ].includes(lesson.slug);
   const compactReview =
-    (compactCondensationReview ||
+    (compactYieldReview ||
+      compactCondensationReview ||
       compactIonReview ||
       lesson.slug === "inside-an-atom" ||
       lesson.slug === "balancing-equations" ||
@@ -316,7 +323,8 @@ export function DetailedLesson({
   const ReviewContainer = compactReview ? "details" : "section";
   const reviewScheduleAfter =
     compactReview &&
-    (compactCondensationReview ||
+    (compactYieldReview ||
+      compactCondensationReview ||
       compactIonReview ||
       lesson.slug === "balancing-equations" ||
       lesson.slug === "transition-metals" ||
@@ -422,43 +430,44 @@ export function DetailedLesson({
             {tried} of {learningTasks.length} learning tasks tried
           </strong>
         </p>
-        {(![
-          "atomic-models",
-          "periodic-development",
-          "group-reactions",
-          "group-seven",
-          "group-zero",
-          "periodic-patterns",
-          "ionic-bonding",
-          "ionic-structures",
-          "states-of-matter",
-          "covalent-bonding",
-          "small-molecules-properties",
-          "structure-and-properties",
-          "carbon-structures",
-          "graphite",
-          "graphene",
-          "fullerenes",
-          "carbon-nanotubes",
-          "polymer-structures",
-          "particles-and-nanoparticles",
-          "conservation-of-mass",
-          "measurement-uncertainty",
-          "changing-concentration",
-          "metal-reactivity",
-          "acids-and-neutralisation",
-          "electrolysis",
-          "ion-tests",
-          "aqueous-electrolysis-products",
-          "natural-polymers",
-          "ph-scale-and-indicators",
-          "life-cycle-and-recycling",
-        ].includes(lesson.slug) ||
-          (section === "explore" && stage === "guided")) && (
-          <button className="text-button" onClick={() => choose("warmup")}>
-            Rusty? Try the warm-up first
-          </button>
-        )}
+        {!warmupAfterResponse &&
+          (![
+            "atomic-models",
+            "periodic-development",
+            "group-reactions",
+            "group-seven",
+            "group-zero",
+            "periodic-patterns",
+            "ionic-bonding",
+            "ionic-structures",
+            "states-of-matter",
+            "covalent-bonding",
+            "small-molecules-properties",
+            "structure-and-properties",
+            "carbon-structures",
+            "graphite",
+            "graphene",
+            "fullerenes",
+            "carbon-nanotubes",
+            "polymer-structures",
+            "particles-and-nanoparticles",
+            "conservation-of-mass",
+            "measurement-uncertainty",
+            "changing-concentration",
+            "metal-reactivity",
+            "acids-and-neutralisation",
+            "electrolysis",
+            "ion-tests",
+            "aqueous-electrolysis-products",
+            "natural-polymers",
+            "ph-scale-and-indicators",
+            "life-cycle-and-recycling",
+          ].includes(lesson.slug) ||
+            (section === "explore" && stage === "guided")) && (
+            <button className="text-button" onClick={() => choose("warmup")}>
+              Rusty? Try the warm-up first
+            </button>
+          )}
       </div>
       <nav ref={stages} className="sample-stages" aria-label="Lesson stages">
         {(
@@ -531,6 +540,7 @@ export function DetailedLesson({
                 mixedNatural ||
                 lesson.slug === "ph-scale-and-indicators" ||
                 lesson.slug === "life-cycle-and-recycling" ||
+                lesson.slug === "yield-and-atom-economy" ||
                 lesson.slug === "aqueous-electrolysis-products" ||
                 lesson.slug === "ion-tests" ||
                 compactEquationForm ||
@@ -632,6 +642,11 @@ export function DetailedLesson({
           )}
           {reviewScheduleAfter && reviewSchedule}
           <div className="button-row">
+            {warmupAfterResponse && (
+              <button className="text-button" onClick={() => choose("warmup")}>
+                Rusty? Try the warm-up first
+              </button>
+            )}
             <button className="button" onClick={() => choose("refresher")}>
               Revisit the key idea
             </button>
@@ -643,6 +658,9 @@ export function DetailedLesson({
       ) : (
         <section
           className="sample-task-panel"
+          data-yield-reversible={
+            q.id.startsWith("py-v1-reversible-") || undefined
+          }
           data-ion-equation-writing={
             q.id.startsWith("ion-tests-v1-write-") || undefined
           }

@@ -260,7 +260,9 @@ export function AssessmentSession({
                 <p>
                   Expected: <strong>{canonicalAnswer(q)}</strong>
                 </p>
-                <p>{q.explanation}</p>
+                {!(q.rubric && q.id.startsWith("py-v1-reversible-")) && (
+                  <p>{q.explanation}</p>
+                )}
                 {q.fuelDrawing && (
                   <TemperatureGraphReference drawing={q.fuelDrawing} />
                 )}
@@ -280,6 +282,7 @@ export function AssessmentSession({
                       q.id.startsWith("aqp-v1-method-") ||
                       q.id.startsWith("natural-v1-h-") ||
                       q.id.startsWith("ph-v1-method-") ||
+                      q.id.startsWith("py-v1-reversible-") ||
                       q.id.startsWith("lca-v1-magnitude-")) &&
                       q.referenceResponse && (
                         <details className="sample-reference">
@@ -292,9 +295,11 @@ export function AssessmentSession({
                                 ? "Compare your functional groups, actual junctions and stated chain convention with this reference."
                                 : q.id.startsWith("ph-v1-method-")
                                   ? "Compare your sample, indicator, chart and approximate reporting method with this reference."
-                                  : q.id.startsWith("lca-v1-magnitude-")
-                                    ? "Compare your rounded quantities, approximate ratio, saving's fraction and limits with this reference."
-                                    : "Compare your electrode predictions, labelled observations and suitable testing method with this reference."}{" "}
+                                  : q.id.startsWith("py-v1-reversible-")
+                                    ? "Compare the reverse reaction, incomplete conversion, separation losses and unwanted products with your retained explanation."
+                                    : q.id.startsWith("lca-v1-magnitude-")
+                                      ? "Compare your rounded quantities, approximate ratio, saving's fraction and limits with this reference."
+                                      : "Compare your electrode predictions, labelled observations and suitable testing method with this reference."}{" "}
                             This reference does not award an automatic mark.
                           </p>
                         </details>

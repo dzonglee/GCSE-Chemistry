@@ -1,5 +1,6 @@
 import type { LearningTask, LessonJourney, TaskModel } from "../types";
 import { choice, number } from "./helpers";
+import { addYieldReversibleWriting } from "./yield-reversible-writing";
 const c = (
   id: string,
   title: string,
@@ -662,3 +663,4 @@ percentageYieldJourney.practice.find((q) => q.id === "py-v1-p-wet")!.followUp =
 percentageYieldJourney.practice.find(
   (q) => q.id === "py-v1-p-sigfig",
 )!.rounding = { kind: "significant-figures", digits: 3 };
+addYieldReversibleWriting(percentageYieldJourney);

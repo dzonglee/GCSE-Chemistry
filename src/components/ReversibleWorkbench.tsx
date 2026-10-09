@@ -51,12 +51,14 @@ export function ReversibleWorkbench({
   onChange,
   record: originalRecord = "initial",
   instruction,
+  yieldComparison = false,
 }: {
   mode: ReversibleMode;
   history: SavedBoard[];
   onChange: (history: SavedBoard[]) => void;
   record?: string;
   instruction?: string;
+  yieldComparison?: boolean;
 }) {
   const uid = useId(),
     value = (history.at(-1) ??
@@ -68,6 +70,11 @@ export function ReversibleWorkbench({
     } | null>(null),
     b = raw ?? value,
     record = b.record;
+  const simpleYield =
+    yieldComparison &&
+    mode === "turnover" &&
+    originalRecord === "initial" &&
+    record === originalRecord;
   const append = (next: ReversibleBoard) => {
     if (
       history.length < 500 &&
@@ -141,11 +148,13 @@ export function ReversibleWorkbench({
     );
     visual = (
       <>
-        <p>
-          Each constructed interval: {r.forward} A → B events and {r.reverse} B
-          → A events. All events use different tokens present at the start of
-          that interval. Interval {step} of {turnoverMax(r)}.
-        </p>
+        {!simpleYield && (
+          <p>
+            Each constructed interval: {r.forward} A → B events and {r.reverse}{" "}
+            B → A events. All events use different tokens present at the start
+            of that interval. Interval {step} of {turnoverMax(r)}.
+          </p>
+        )}
         {step >= turnoverMax(r) && (
           <p role="status">
             {r.forward === r.reverse && r.forward > 0
@@ -153,7 +162,14 @@ export function ReversibleWorkbench({
               : "Only this supplied interval is shown; no later rate law is assumed."}
           </p>
         )}
-        <TurnoverMap record={r} step={step} />
+        <TurnoverMap record={r} step={step} yieldComparison={simpleYield} />
+        {simpleYield && (
+          <p>
+            Each displayed interval has {r.forward} A → B and {r.reverse} B → A
+            changes. Both directions continue while the desired-product amount
+            remains below its complete-conversion maximum.
+          </p>
+        )}
       </>
     );
     predictions = (
@@ -356,13 +372,18 @@ export function ReversibleWorkbench({
         {titles[mode]}
       </h3>
       <div className="reversible-fields">{controls}</div>
-      <p>
-        {
-          (reversibleRecords[mode] as Record<string, { label: string }>)[record]
-            .label
-        }
-      </p>
-      {instruction && record === originalRecord && <p>{instruction}</p>}
+      {!simpleYield && (
+        <p>
+          {
+            (reversibleRecords[mode] as Record<string, { label: string }>)[
+              record
+            ].label
+          }
+        </p>
+      )}
+      {!simpleYield && instruction && record === originalRecord && (
+        <p>{instruction}</p>
+      )}
       {record !== originalRecord && (
         <p role="status">
           You are exploring another supplied comparison. Check model applies to
@@ -376,20 +397,24 @@ export function ReversibleWorkbench({
       )}
       {raw && (
         <p role="status">
-          This unfinished entry is visible but is not saved. Enter a plain
-          number, undo it, or reset the model.
+          This unfinished entry is retained as a draft. It has not changed the
+          last valid model. Enter a plain number, undo it, or reset the model.
         </p>
       )}
       {visual}
-      <div className="reversible-fields">{predictions}</div>
+      {(!simpleYield || raw) && (
+        <div className="reversible-fields">{predictions}</div>
+      )}
       <div className="reversible-actions">
-        <button
-          type="button"
-          className="button"
-          onClick={() => setFeedback(reversibleBoardCheck(mode, b))}
-        >
-          Check model
-        </button>
+        {!simpleYield && (
+          <button
+            type="button"
+            className="button"
+            onClick={() => setFeedback(reversibleBoardCheck(mode, b))}
+          >
+            Check model
+          </button>
+        )}
         <button
           type="button"
           className="button"
@@ -422,26 +447,28 @@ export function ReversibleWorkbench({
           {feedback.message}
         </p>
       )}
-      <details>
-        <summary>Change the supplied teaching case</summary>
-        <label htmlFor={uid + "-record"}>Supplied comparison</label>
-        <select
-          id={uid + "-record"}
-          value={record}
-          onChange={(e) => {
-            setRaw(null);
-            setFeedback(null);
-            if (e.target.value !== value.record)
-              append(initialReversibleBoard(mode, e.target.value));
-          }}
-        >
-          {Object.entries(reversibleRecords[mode]).map(([id, r]) => (
-            <option key={id} value={id}>
-              {r.label}
-            </option>
-          ))}
-        </select>
-      </details>
+      {!simpleYield && (
+        <details>
+          <summary>Change the supplied teaching case</summary>
+          <label htmlFor={uid + "-record"}>Supplied comparison</label>
+          <select
+            id={uid + "-record"}
+            value={record}
+            onChange={(e) => {
+              setRaw(null);
+              setFeedback(null);
+              if (e.target.value !== value.record)
+                append(initialReversibleBoard(mode, e.target.value));
+            }}
+          >
+            {Object.entries(reversibleRecords[mode]).map(([id, r]) => (
+              <option key={id} value={id}>
+                {r.label}
+              </option>
+            ))}
+          </select>
+        </details>
+      )}
       <details>
         <summary>About this model</summary>
         <p>

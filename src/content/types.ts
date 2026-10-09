@@ -357,6 +357,7 @@ export type TaskModel =
   | {
       kind: "reversible-equilibrium";
       mode: import("../lib/reversible-equilibrium").ReversibleMode;
+      yieldComparison?: true;
       record?: string;
       instruction: string;
     }

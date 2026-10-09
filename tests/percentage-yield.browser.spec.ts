@@ -327,7 +327,7 @@ test("actual keyboard-rotatable recovery export preserves identified2-g markers 
     page.locator(".reaction-amounts-asset figcaption"),
   ).toContainText("12 g collected");
 });
-test("all 21 independent demands preserve product bases, final rounding and false written correctness", async ({
+test("all 23 practice demands preserve product bases, final rounding and false written correctness", async ({
   page,
 }, info) => {
   await page.goto(route);

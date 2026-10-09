@@ -1,0 +1,889 @@
+{
+  "tasks": [
+    {
+      "id": "py-v1-w-fraction",
+      "prompt": "What percentage is 3 out of 4?",
+      "answer": "75",
+      "unit": "%",
+      "explanation": "3/4×100=75%.",
+      "hint": "Make the fraction into hundredths.",
+      "purpose": "Recall a percentage fraction",
+      "misconceptions": {},
+      "title": "Recall a percentage fraction"
+    },
+    {
+      "id": "py-v1-w-unit",
+      "prompt": "Convert 1.5 kg to grams.",
+      "answer": "1500",
+      "unit": "g",
+      "explanation": "1.5×1000=1500 g.",
+      "hint": "Use the same units for both product masses.",
+      "purpose": "Recall kilogram conversion",
+      "misconceptions": {},
+      "title": "Recall kilogram conversion"
+    },
+    {
+      "id": "py-v1-r-denominator",
+      "prompt": "Which quantity is the denominator in percentage yield?",
+      "answer": "The maximum theoretical amount of the same product",
+      "options": [
+        "The maximum theoretical amount of the same product",
+        "The mass of starting reactant",
+        "The amount of product not collected"
+      ],
+      "misconceptions": {
+        "The mass of starting reactant": "Reactant and product masses can differ.",
+        "The amount of product not collected": "That is a shortfall, not the 100% reference."
+      },
+      "explanation": "Actual/theoretical×100; both quantities describe the same product.",
+      "hint": "Ask what represents 100% possible product.",
+      "purpose": "Choose the denominator",
+      "title": "Choose the denominator"
+    },
+    {
+      "id": "py-v1-r-definition",
+      "prompt": "A supplied calculation predicts 20 g product but only 15 g dry product is obtained. Which is the actual yield?",
+      "answer": "15 g",
+      "options": [
+        "20 g",
+        "5 g",
+        "15 g"
+      ],
+      "misconceptions": {
+        "20 g": "That is the theoretical maximum in this record.",
+        "5 g": "That is the difference, not actual product."
+      },
+      "explanation": "Actual means the measured product obtained; theoretical is the calculated maximum.",
+      "hint": "Distinguish obtained from possible.",
+      "purpose": "Separate actual and theoretical",
+      "title": "Separate actual and theoretical"
+    },
+    {
+      "id": "py-v1-r-units",
+      "prompt": "Actual product is 600 g and theoretical product is 0.8 kg. What must happen before division?",
+      "answer": "Convert both to the same mass unit",
+      "options": [
+        "Convert both to the same mass unit",
+        "Use 600/0.8 without conversion",
+        "Convert only the percentage"
+      ],
+      "misconceptions": {
+        "Use 600/0.8 without conversion": "That compares different unit scales.",
+        "Convert only the percentage": "The mismatch is in the masses."
+      },
+      "explanation": "Use 600/800 or .6/.8; both give the same fraction.",
+      "hint": "Either common unit is valid.",
+      "purpose": "Choose comparable units",
+      "title": "Choose comparable units"
+    },
+    {
+      "id": "py-v1-r-loss",
+      "prompt": "Some formed product remains in a filter and is not collected. What happens to its atoms?",
+      "answer": "They remain in the uncollected product",
+      "options": [
+        "They remain in the uncollected product",
+        "They are destroyed",
+        "They become additional reactant atoms automatically"
+      ],
+      "misconceptions": {
+        "They are destroyed": "Collection loss does not destroy atoms.",
+        "They become additional reactant atoms automatically": "The supplied scenario says formed product remains."
+      },
+      "explanation": "A collected sample can have less product while total material is still conserved.",
+      "hint": "Distinguish outside the sample from outside existence.",
+      "purpose": "Preserve atoms during collection loss",
+      "title": "Preserve atoms during collection loss",
+      "exposureAliases": [
+        "yield-and-atom-economy-1",
+        "py-v1-p-explain-loss"
+      ]
+    },
+    {
+      "id": "py-v1-r-bound",
+      "prompt": "A recorded pure dry product mass is greater than the stated theoretical maximum. What should be checked?",
+      "answer": "Purity, dryness, measurement and calculation assumptions",
+      "options": [
+        "Purity, dryness, measurement and calculation assumptions",
+        "Round the percentage down to 100 silently",
+        "Conclude atoms were created"
+      ],
+      "misconceptions": {
+        "Round the percentage down to 100 silently": "That hides the inconsistent record.",
+        "Conclude atoms were created": "The comparison assumptions or measurements require checking."
+      },
+      "explanation": "Calculate the apparent percentage honestly, then investigate the discrepancy.",
+      "hint": "Do not change inconvenient data without justification.",
+      "purpose": "Check a suspicious measurement",
+      "title": "Check a suspicious measurement"
+    },
+    {
+      "id": "py-v1-g-fraction",
+      "prompt": "15 g product is obtained; the theoretical maximum is 20 g. Find percentage yield.",
+      "answer": "75",
+      "unit": "%",
+      "explanation": "15/20×100=75%, not the 25% shortfall.",
+      "hint": "Use obtained product divided by possible product.",
+      "purpose": "Choose the product fraction",
+      "misconceptions": {},
+      "model": {
+        "kind": "percentage-yield",
+        "mode": "fraction",
+        "instruction": "Predict matching product masses and percentage yield."
+      },
+      "title": "Choose the product fraction",
+      "openingHint": true,
+      "exposureAliases": [
+        "yield-and-atom-economy-0",
+        "py-v1-p-shortfall"
+      ]
+    },
+    {
+      "id": "py-v1-g-actual",
+      "prompt": "The theoretical product mass is 20 g and yield 75%. Predict the actual product mass.",
+      "answer": "15",
+      "unit": "g",
+      "explanation": "20×.75=15 g.",
+      "hint": "Convert 75% to .75.",
+      "purpose": "Find product from a supplied yield",
+      "misconceptions": {},
+      "model": {
+        "kind": "percentage-yield",
+        "mode": "actual",
+        "instruction": "Predict the yield factor and actual mass."
+      },
+      "title": "Find product from a supplied yield"
+    },
+    {
+      "id": "py-v1-g-reverse",
+      "prompt": "18 g actual product represents 60% yield. Predict the theoretical product mass.",
+      "answer": "30",
+      "unit": "g",
+      "explanation": "18/.6=30 g; multiplying 18 by .6 would reduce the actual amount again.",
+      "hint": "Divide by the supplied yield factor.",
+      "purpose": "Recover the 100% reference",
+      "misconceptions": {},
+      "model": {
+        "kind": "percentage-yield",
+        "mode": "reverse",
+        "instruction": "Predict the factor and theoretical 100% mass."
+      },
+      "title": "Recover the 100% reference"
+    },
+    {
+      "id": "py-v1-g-collection",
+      "prompt": "All 20 g theoretical product forms, but 16 g is collected and 4 g stays in apparatus. Find collected percentage yield.",
+      "answer": "80",
+      "unit": "%",
+      "explanation": "16/20×100=80%; the missing collected 4 g still exists in apparatus.",
+      "hint": "Count collected product, not total formed material.",
+      "purpose": "Explain product collection loss",
+      "misconceptions": {},
+      "model": {
+        "kind": "percentage-yield",
+        "mode": "collection",
+        "instruction": "Change recovery; predict collected mass, retained mass and yield."
+      },
+      "title": "Explain product collection loss",
+      "exposureAliases": [
+        "yield-and-atom-economy-4"
+      ]
+    },
+    {
+      "id": "py-v1-p-select",
+      "prompt": "A supplied report uses 12 g reactant. The theoretical desired product mass is 18 g and the actual dry product mass 13.5 g. Enter numerator and denominator in grams.",
+      "answer": "{\"actual\":\"13.5\",\"theoretical\":\"18\"}",
+      "misconceptions": {},
+      "explanation": "Use 13.5/18, not 13.5/12.",
+      "hint": "Both entries must describe the product.",
+      "purpose": "Select a product denominator",
+      "title": "Select a product denominator",
+      "parts": [
+        {
+          "id": "actual",
+          "label": "Actual product / g",
+          "answer": 13.5
+        },
+        {
+          "id": "theoretical",
+          "label": "Theoretical product / g",
+          "answer": 18
+        }
+      ],
+      "partLegend": "Select a product denominator"
+    },
+    {
+      "id": "py-v1-p-yield",
+      "prompt": "Actual desired product 13.5 g; theoretical 18 g. Find percentage yield.",
+      "answer": "75",
+      "unit": "%",
+      "explanation": "13.5/18×100=75%.",
+      "hint": "Multiply the product fraction by 100.",
+      "purpose": "Calculate a different yield",
+      "misconceptions": {},
+      "title": "Calculate a different yield"
+    },
+    {
+      "id": "py-v1-p-shortfall",
+      "prompt": "Actual 15 g and theoretical 20 g product give 5 g shortfall. Which quantity is 75%?",
+      "answer": "The collected product yield",
+      "options": [
+        "The mass of reactant used",
+        "The collected product yield",
+        "The percentage shortfall"
+      ],
+      "misconceptions": {
+        "The percentage shortfall": "Shortfall5/20=25%.",
+        "The mass of reactant used": "Reactant mass is not supplied or needed."
+      },
+      "explanation": "Yield 15/20=75%; shortfall 5/20=25%.",
+      "hint": "Name the numerator in each comparison.",
+      "purpose": "Distinguish yield and shortfall",
+      "title": "Distinguish yield and shortfall",
+      "followUp": "py-v1-r-denominator",
+      "exposureAliases": [
+        "yield-and-atom-economy-0",
+        "py-v1-g-fraction"
+      ]
+    },
+    {
+      "id": "py-v1-p-mixed",
+      "prompt": "Actual product 1.05 kg; theoretical 1500 g. Enter actual mass in grams and percentage yield.",
+      "answer": "{\"actual\":\"1050\",\"percentage\":\"70\"}",
+      "misconceptions": {},
+      "explanation": "1.05kg=1050g; 1050/1500×100=70%.",
+      "hint": "Convert the actual mass to the denominator’s unit.",
+      "purpose": "Match units before calculation",
+      "title": "Match units before calculation",
+      "parts": [
+        {
+          "id": "actual",
+          "label": "Actual product / g",
+          "answer": 1050
+        },
+        {
+          "id": "percentage",
+          "label": "Yield / %",
+          "answer": 70
+        }
+      ],
+      "partLegend": "Match units before calculation"
+    },
+    {
+      "id": "py-v1-p-sigfig",
+      "prompt": "Actual dry product13.7 g; theoretical18.4 g. Find percentage yield to3 significant figures.",
+      "answer": "74.5",
+      "unit": "%",
+      "explanation": "13.7/18.4×100=74.4565…; round the final percentage to74.5% (3 significant figures).",
+      "hint": "Keep full precision until the final answer.",
+      "purpose": "Respect significant figures",
+      "misconceptions": {},
+      "title": "Respect significant figures",
+      "rounding": {
+        "kind": "significant-figures",
+        "digits": 3
+      }
+    },
+    {
+      "id": "py-v1-p-zero",
+      "prompt": "Theoretical desired product 8 g; actual product collected 0 g. Find percentage yield.",
+      "answer": "0",
+      "unit": "%",
+      "explanation": "0/8×100=0%.",
+      "hint": "Zero actual can be divided by a positive maximum.",
+      "purpose": "Interpret no collection",
+      "misconceptions": {},
+      "title": "Interpret no collection"
+    },
+    {
+      "id": "py-v1-p-undefined",
+      "prompt": "Both supplied product amounts are 0 g. Can a percentage yield be determined from actual/theoretical?",
+      "answer": "No; the ratio has a zero denominator",
+      "options": [
+        "No; the ratio has a zero denominator",
+        "Yes; it must be 0%",
+        "Yes; it must be 100%"
+      ],
+      "misconceptions": {
+        "Yes; it must be 0%": "0/0 is undefined.",
+        "Yes; it must be 100%": "Equal zero quantities do not define this ratio."
+      },
+      "explanation": "A positive theoretical reference is needed to calculate percentage yield.",
+      "hint": "Check the denominator before dividing.",
+      "purpose": "Reject a zero denominator",
+      "title": "Reject a zero denominator"
+    },
+    {
+      "id": "py-v1-p-complete",
+      "prompt": "Actual pure dry product 24 g and theoretical 24 g. Find percentage yield.",
+      "answer": "100",
+      "unit": "%",
+      "explanation": "24/24×100=100%.",
+      "hint": "Equal positive quantities represent the whole.",
+      "purpose": "Interpret full collection",
+      "misconceptions": {},
+      "title": "Interpret full collection"
+    },
+    {
+      "id": "py-v1-p-actual",
+      "prompt": "Theoretical product 40 g, yield 65%. Enter the decimal yield factor and actual product mass.",
+      "answer": "{\"factor\":\"0.65\",\"actual\":\"26\"}",
+      "misconceptions": {},
+      "explanation": "65/100=.65; 40×.65=26g.",
+      "hint": "Use a fraction of the theoretical amount.",
+      "purpose": "Construct a forward calculation",
+      "title": "Construct a forward calculation",
+      "parts": [
+        {
+          "id": "factor",
+          "label": "Yield factor",
+          "answer": 0.65
+        },
+        {
+          "id": "actual",
+          "label": "Actual product / g",
+          "answer": 26
+        }
+      ],
+      "partLegend": "Construct a forward calculation"
+    },
+    {
+      "id": "py-v1-p-actual-kg",
+      "prompt": "Theoretical product 2 kg, yield 85%. Find actual product mass in grams.",
+      "answer": "1700",
+      "unit": "g",
+      "explanation": "2000×.85=1700g.",
+      "hint": "Match the requested final unit.",
+      "purpose": "Return requested grams",
+      "misconceptions": {},
+      "title": "Return requested grams"
+    },
+    {
+      "id": "py-v1-p-reverse",
+      "prompt": "Actual 21 g product at 70% yield. Enter decimal factor and theoretical product mass.",
+      "answer": "{\"factor\":\"0.7\",\"theoretical\":\"30\"}",
+      "misconceptions": {},
+      "explanation": "21/.7=30g.",
+      "hint": "The actual mass is 70% of the unknown 100% amount.",
+      "purpose": "Construct the theoretical reference",
+      "title": "Construct the theoretical reference",
+      "parts": [
+        {
+          "id": "factor",
+          "label": "Yield factor",
+          "answer": 0.7
+        },
+        {
+          "id": "theoretical",
+          "label": "Theoretical product / g",
+          "answer": 30
+        }
+      ],
+      "partLegend": "Construct the theoretical reference"
+    },
+    {
+      "id": "py-v1-p-reverse-kg",
+      "prompt": "Actual 1.44 kg product at 80% yield. Find theoretical product mass in kg.",
+      "answer": "1.8",
+      "unit": "kg",
+      "explanation": "1.44/.8=1.8kg.",
+      "hint": "Divide by .8, not 1.8 or 80.",
+      "purpose": "Reverse with matching kg",
+      "misconceptions": {},
+      "title": "Reverse with matching kg"
+    },
+    {
+      "id": "py-v1-p-wrong-base",
+      "prompt": "Actual 18 g product represents 60% yield. Why does adding 40% of 18 g fail to find the theoretical mass?",
+      "answer": "The 40% shortfall is based on theoretical mass, not actual mass",
+      "options": [
+        "The percentage shortfall has no meaning",
+        "Theoretical mass is always smaller",
+        "The 40% shortfall is based on theoretical mass, not actual mass"
+      ],
+      "misconceptions": {
+        "The percentage shortfall has no meaning": "It does have a reference, the theoretical mass.",
+        "Theoretical mass is always smaller": "At 60% yield the theoretical mass is larger."
+      },
+      "explanation": "18 g is 60% of 30 g; 40% of 30 g is 12 g. Adding 40% of 18 g uses the wrong base.",
+      "hint": "Identify what 100% refers to.",
+      "purpose": "Reject adding the missing percentage",
+      "title": "Reject adding the missing percentage"
+    },
+    {
+      "id": "py-v1-p-collection",
+      "prompt": "All 30 g possible product forms .24 g is collected; 6 g remains in apparatus. Enter percentage collected yield and total formed product mass.",
+      "answer": "{\"percentage\":\"80\",\"total\":\"30\"}",
+      "misconceptions": {},
+      "explanation": "24/30=80%; 24+6=30 g formed product remains.",
+      "hint": "Collection and total formation are different boundaries.",
+      "purpose": "Account for product outside sample",
+      "title": "Account for product outside sample",
+      "parts": [
+        {
+          "id": "percentage",
+          "label": "Collected yield / %",
+          "answer": 80
+        },
+        {
+          "id": "total",
+          "label": "Total formed product / g",
+          "answer": 30
+        }
+      ],
+      "partLegend": "Account for product outside sample"
+    },
+    {
+      "id": "py-v1-p-incomplete",
+      "prompt": "A supplied record states that unreacted necessary reactant remains because the reaction has not completed. Why is actual product below the theoretical complete-conversion amount?",
+      "answer": "Some starting material has not converted to product",
+      "options": [
+        "Some starting material has not converted to product",
+        "All missing product must be trapped in a filter",
+        "Atoms have been destroyed"
+      ],
+      "misconceptions": {
+        "All missing product must be trapped in a filter": "No collection loss is specified.",
+        "Atoms have been destroyed": "Reactant atoms remain in unconverted material."
+      },
+      "explanation": "The supplied evidence supports incomplete conversion; do not invent a different cause.",
+      "hint": "Use the cause stated in the record.",
+      "purpose": "Use evidence of incomplete reaction",
+      "title": "Use evidence of incomplete reaction"
+    },
+    {
+      "id": "py-v1-p-side",
+      "prompt": "Analysis finds a second product from an unwanted side reaction. Why can this lower the desired-product yield?",
+      "answer": "Some starting material forms other products",
+      "options": [
+        "Some starting material forms other products",
+        "Other products contain new atoms created from nothing",
+        "Every side reaction increases desired product mass"
+      ],
+      "misconceptions": {
+        "Other products contain new atoms created from nothing": "They contain atoms from the reactants.",
+        "Every side reaction increases desired product mass": "It can divert material away from the desired route."
+      },
+      "explanation": "Competition changes which products form, not conservation of atoms.",
+      "hint": "Track where starting material goes.",
+      "purpose": "Use evidence of a competing reaction",
+      "title": "Use evidence of a competing reaction"
+    },
+    {
+      "id": "py-v1-p-wet",
+      "prompt": "A theoretical pure dry product mass is 20 g. The collected wet sample weighs 22 g, and its supplied dry mass is 18 g. Enter apparent wet percentage and dry-product percentage.",
+      "answer": "{\"apparent\":\"110\",\"dry\":\"90\"}",
+      "misconceptions": {},
+      "explanation": "22/20=110% apparent; 18/20=90% comparable dry yield. Extra wet mass is not additional pure dry product.",
+      "hint": "Compare the same product on the same basis.",
+      "purpose": "Interpret wet versus dry sample",
+      "title": "Interpret wet versus dry sample",
+      "parts": [
+        {
+          "id": "apparent",
+          "label": "Apparent wet value / %",
+          "answer": 110
+        },
+        {
+          "id": "dry",
+          "label": "Dry-product yield / %",
+          "answer": 90
+        }
+      ],
+      "partLegend": "Interpret wet versus dry sample",
+      "followUp": "py-v1-r-bound",
+      "exposureAliases": [
+        "py-v1-p-explain-suspect",
+        "py-v1-ca-proof"
+      ]
+    },
+    {
+      "id": "py-v1-p-atom-economy",
+      "prompt": "A reaction has one stated desired product but only 70% of its theoretical product mass is obtained. Must its atom economy also be 70%?",
+      "answer": "No; atom economy is an equation-based measure",
+      "options": [
+        "No; atom economy is an equation-based measure",
+        "Yes; both names mean the same calculation",
+        "No; yield only counts catalysts"
+      ],
+      "misconceptions": {
+        "Yes; both names mean the same calculation": "Yield compares actual recovery with theoretical amount.",
+        "No; yield only counts catalysts": "Yield compares desired product quantities."
+      },
+      "explanation": "A reaction can have high atom economy and lower actual yield. Atom-economy calculations are the next lesson.",
+      "hint": "Separate experimental recovery from equation-based allocation.",
+      "purpose": "Keep different efficiency measures separate",
+      "title": "Keep different efficiency measures separate",
+      "exposureAliases": [
+        "yield-and-atom-economy-5",
+        "yield-and-atom-economy-3",
+        "ae-v1-r-yield",
+        "ae-v1-g-contrast",
+        "ae-v1-p-addition",
+        "ae-v1-p-economy-yield",
+        "ae-v1-p-recovery",
+        "ae-v1-p-explain-two-measures",
+        "ae-v1-ca-measures",
+        "ae-v1-cb-measures"
+      ]
+    },
+    {
+      "id": "py-v1-p-rounding",
+      "prompt": "Actual product 7 g; theoretical 12 g. Find percentage yield to 1 decimal place.",
+      "answer": "58.3",
+      "unit": "%",
+      "explanation": "7/12×100=58.333…; round the final to 58.3%.",
+      "hint": "Do not round the fraction before multiplying.",
+      "purpose": "Round only the final percentage",
+      "misconceptions": {},
+      "title": "Round only the final percentage",
+      "rounding": {
+        "kind": "decimal-places",
+        "digits": 1
+      }
+    },
+    {
+      "id": "py-v1-p-explain-loss",
+      "prompt": "All 25 g theoretical product forms .20 g is collected and 5 g remains in transfer apparatus. Explain the 80% collected yield and what happened to the missing collected mass.",
+      "answer": "Collected yield 20/25×100=80%. The 5 g remaining in apparatus still consists of product; it was not recovered in the measured sample. No atoms were destroyed, and incomplete reaction is not the specified cause.",
+      "misconceptions": {},
+      "explanation": "Collected yield 20/25×100=80%. The 5 g remaining in apparatus still consists of product; it was not recovered in the measured sample. No atoms were destroyed, and incomplete reaction is not the specified cause.",
+      "hint": "Link the supplied evidence to the product actually obtained.",
+      "purpose": "Explain a loss without destroying atoms",
+      "title": "Explain a loss without destroying atoms",
+      "rubric": [
+        "Use actual collected mass over theoretical product mass.",
+        "Locate the 5 g outside the sample but within the apparatus inventory.",
+        "Distinguish collection loss from incomplete formation and atom destruction."
+      ],
+      "exposureAliases": [
+        "yield-and-atom-economy-1",
+        "py-v1-r-loss"
+      ]
+    },
+    {
+      "id": "py-v1-p-explain-suspect",
+      "prompt": "A student reports 110% yield from 22 g wet sample and 20 g theoretical pure dry product. The dry sample is 18 g. Explain the comparison problem and the appropriate dry yield.",
+      "answer": "22/20×100=110% is an apparent value from noncomparable wet and dry masses. Retained water adds measured mass but is not extra desired pure product. The dry-product yield is 18/20×100=90%. Measurements, purity and theoretical assumptions should be checked rather than capping a percentage silently.",
+      "misconceptions": {},
+      "explanation": "22/20×100=110% is an apparent value from noncomparable wet and dry masses. Retained water adds measured mass but is not extra desired pure product. The dry-product yield is 18/20×100=90%. Measurements, purity and theoretical assumptions should be checked rather than capping a percentage silently.",
+      "hint": "Link the supplied evidence to the product actually obtained.",
+      "purpose": "Explain a suspect measurement",
+      "title": "Explain a suspect measurement",
+      "rubric": [
+        "Identify the wet/dry basis mismatch.",
+        "Explain that water is not additional desired dry product.",
+        "Calculate 90% from 18 g/20 g and avoid silently changing 110%."
+      ],
+      "exposureAliases": [
+        "py-v1-p-wet",
+        "py-v1-ca-proof"
+      ]
+    },
+    {
+      "id": "py-v1-ca-units",
+      "prompt": "A report starts with 10 g reactant. Theoretical product .025 kg; actual product 17 g. Enter theoretical mass in grams and percentage yield.",
+      "answer": "{\"theoretical\":\"25\",\"percentage\":\"68\"}",
+      "misconceptions": {},
+      "explanation": "25 g reference; 17/25×100=68%.",
+      "hint": "Use the product maximum, with matching units.",
+      "purpose": "Independent denominator and units",
+      "title": "Independent denominator and units",
+      "parts": [
+        {
+          "id": "theoretical",
+          "label": "Theoretical product / g",
+          "answer": 25
+        },
+        {
+          "id": "percentage",
+          "label": "Yield / %",
+          "answer": 68
+        }
+      ],
+      "partLegend": "Independent denominator and units"
+    },
+    {
+      "id": "py-v1-ca-actual",
+      "prompt": "Theoretical product 45 g, yield 72%. Find actual product mass.",
+      "answer": "32.4",
+      "unit": "g",
+      "explanation": "45×.72=32.4g.",
+      "hint": "Convert percentage to a factor.",
+      "purpose": "Independent forward amount",
+      "misconceptions": {},
+      "title": "Independent forward amount"
+    },
+    {
+      "id": "py-v1-ca-reverse",
+      "prompt": "Actual product 27 g represents 60% yield. Find theoretical product mass.",
+      "answer": "45",
+      "unit": "g",
+      "explanation": "27/.6=45g.",
+      "hint": "Divide actual by yield factor.",
+      "purpose": "Independent 100% amount",
+      "misconceptions": {},
+      "title": "Independent 100% amount"
+    },
+    {
+      "id": "py-v1-ca-recovery",
+      "prompt": "All 36 g theoretical product forms; 31.5 g is collected and 4.5 g remains in apparatus. Enter collected percentage and total formed product g.",
+      "answer": "{\"percentage\":\"87.5\",\"total\":\"36\"}",
+      "misconceptions": {},
+      "explanation": "31.5/36×100=87.5%; total 36 g remains.",
+      "hint": "Keep both boundaries.",
+      "purpose": "Independent recovery inventory",
+      "title": "Independent recovery inventory",
+      "parts": [
+        {
+          "id": "percentage",
+          "label": "Collected yield / %",
+          "answer": 87.5
+        },
+        {
+          "id": "total",
+          "label": "Total formed product / g",
+          "answer": 36
+        }
+      ],
+      "partLegend": "Independent recovery inventory"
+    },
+    {
+      "id": "py-v1-ca-proof",
+      "prompt": "Theoretical pure dry product 25 g; wet sample 27.5 g; supplied dry mass 22.5 g. Explain apparent and comparable percentages.",
+      "answer": "Wet comparison 27.5/25×100=110% is apparent because water contributes to sample mass. Comparable dry yield 22.5/25×100=90%. The extra wet mass does not show more desired dry product or new atoms.",
+      "misconceptions": {},
+      "explanation": "Wet comparison 27.5/25×100=110% is apparent because water contributes to sample mass. Comparable dry yield 22.5/25×100=90%. The extra wet mass does not show more desired dry product or new atoms.",
+      "hint": "Link the supplied evidence to the product actually obtained.",
+      "purpose": "Independent comparable-product explanation",
+      "title": "Independent comparable-product explanation",
+      "rubric": [
+        "Compute apparent 110% and dry 90%.",
+        "Explain the wet/dry mismatch.",
+        "Do not silently cap or claim atoms created."
+      ],
+      "exposureAliases": [
+        "py-v1-p-wet",
+        "py-v1-p-explain-suspect"
+      ]
+    },
+    {
+      "id": "py-v1-cb-units",
+      "prompt": "A report starts with 16 g reactant. Theoretical product .04 kg; actual product 26 g. Enter theoretical grams and yield%.",
+      "answer": "{\"theoretical\":\"40\",\"percentage\":\"65\"}",
+      "misconceptions": {},
+      "explanation": "40 g reference; 26/40×100=65%.",
+      "hint": "Convert the theoretical product amount.",
+      "purpose": "Independent changed denominator",
+      "title": "Independent changed denominator",
+      "parts": [
+        {
+          "id": "theoretical",
+          "label": "Theoretical product / g",
+          "answer": 40
+        },
+        {
+          "id": "percentage",
+          "label": "Yield / %",
+          "answer": 65
+        }
+      ],
+      "partLegend": "Independent changed denominator"
+    },
+    {
+      "id": "py-v1-cb-actual",
+      "prompt": "Theoretical product .75 kg, yield 84%. Find actual product grams.",
+      "answer": "630",
+      "unit": "g",
+      "explanation": "750×.84=630g.",
+      "hint": "Use requested grams.",
+      "purpose": "Independent forward kg transfer",
+      "misconceptions": {},
+      "title": "Independent forward kg transfer"
+    },
+    {
+      "id": "py-v1-cb-reverse",
+      "prompt": "Actual product 33 g represents 75% yield. Find theoretical product grams.",
+      "answer": "44",
+      "unit": "g",
+      "explanation": "33/.75=44g.",
+      "hint": "Divide by .75.",
+      "purpose": "Independent reverse transfer",
+      "misconceptions": {},
+      "title": "Independent reverse transfer"
+    },
+    {
+      "id": "py-v1-cb-recovery",
+      "prompt": "All 50 g theoretical product forms; 41 g collected and 9 g remains in apparatus. Enter collected yield% and total formed grams.",
+      "answer": "{\"percentage\":\"82\",\"total\":\"50\"}",
+      "misconceptions": {},
+      "explanation": "41/50×100=82%; total 50 g remains.",
+      "hint": "Collected fraction and full inventory differ.",
+      "purpose": "Independent different recovery",
+      "title": "Independent different recovery",
+      "parts": [
+        {
+          "id": "percentage",
+          "label": "Collected yield / %",
+          "answer": 82
+        },
+        {
+          "id": "total",
+          "label": "Total formed product / g",
+          "answer": 50
+        }
+      ],
+      "partLegend": "Independent different recovery"
+    },
+    {
+      "id": "py-v1-cb-proof",
+      "prompt": "A supplied analysis says some reactants form an unwanted side product and desired-product actual yield is below theoretical. Explain why this does not violate conservation of atoms.",
+      "answer": "Some reactant atoms enter the unwanted side product rather than the desired product. The desired-product yield is lower, while total atoms remain distributed among all products and any unused reactants. No atoms are destroyed.",
+      "misconceptions": {},
+      "explanation": "Some reactant atoms enter the unwanted side product rather than the desired product. The desired-product yield is lower, while total atoms remain distributed among all products and any unused reactants. No atoms are destroyed.",
+      "hint": "Link the supplied evidence to the product actually obtained.",
+      "purpose": "Independent competing-reaction explanation",
+      "title": "Independent competing-reaction explanation",
+      "rubric": [
+        "Link lower desired yield to the supplied competing reaction.",
+        "Locate atoms in other products or unused reactants.",
+        "Do not invent collection loss as the established cause."
+      ]
+    },
+    {
+      "id": "py-v1-ra-yield",
+      "prompt": "Actual product 14 g; theoretical product 20 g. Find percentage yield.",
+      "answer": "70",
+      "unit": "%",
+      "explanation": "14/20×100=70%.",
+      "hint": "Use actual/theoretical.",
+      "purpose": "Retrieve yield fraction",
+      "misconceptions": {},
+      "title": "Retrieve yield fraction"
+    },
+    {
+      "id": "py-v1-ra-actual",
+      "prompt": "Theoretical product 60 g, yield 55%. Find actual grams.",
+      "answer": "33",
+      "unit": "g",
+      "explanation": "60×.55=33g.",
+      "hint": "Convert yield to a factor.",
+      "purpose": "Retrieve actual mass",
+      "misconceptions": {},
+      "title": "Retrieve actual mass"
+    },
+    {
+      "id": "py-v1-ra-reverse",
+      "prompt": "Actual product 24 g represents 80% yield. Find theoretical grams.",
+      "answer": "30",
+      "unit": "g",
+      "explanation": "24/.8=30g.",
+      "hint": "Divide by the yield factor.",
+      "purpose": "Retrieve theoretical reference",
+      "misconceptions": {},
+      "title": "Retrieve theoretical reference"
+    },
+    {
+      "id": "py-v1-rb-yield",
+      "prompt": "Actual product 18.2 g; theoretical 26 g. Find percentage yield.",
+      "answer": "70",
+      "unit": "%",
+      "explanation": "18.2/26×100=70%.",
+      "hint": "Keep the theoretical denominator.",
+      "purpose": "Retrieve changed fraction",
+      "misconceptions": {},
+      "title": "Retrieve changed fraction"
+    },
+    {
+      "id": "py-v1-rb-actual",
+      "prompt": "Theoretical product 1.25 kg, yield 64%. Find actual grams.",
+      "answer": "800",
+      "unit": "g",
+      "explanation": "1250×.64=800g.",
+      "hint": "Match requested units.",
+      "purpose": "Retrieve kg conversion",
+      "misconceptions": {},
+      "title": "Retrieve kg conversion"
+    },
+    {
+      "id": "py-v1-rb-reverse",
+      "prompt": "Actual product 28 g represents 70% yield. Find theoretical grams.",
+      "answer": "40",
+      "unit": "g",
+      "explanation": "28/.7=40g.",
+      "hint": "Divide by .7.",
+      "purpose": "Retrieve different 100% amount",
+      "misconceptions": {},
+      "title": "Retrieve different 100% amount"
+    }
+  ],
+  "stageIds": {
+    "warmup": [
+      "py-v1-w-fraction",
+      "py-v1-w-unit"
+    ],
+    "refresher": [
+      "py-v1-r-denominator",
+      "py-v1-r-definition",
+      "py-v1-r-units",
+      "py-v1-r-loss",
+      "py-v1-r-bound"
+    ],
+    "guided": [
+      "py-v1-g-fraction",
+      "py-v1-g-actual",
+      "py-v1-g-reverse",
+      "py-v1-g-collection"
+    ],
+    "practice": [
+      "py-v1-p-select",
+      "py-v1-p-yield",
+      "py-v1-p-shortfall",
+      "py-v1-p-mixed",
+      "py-v1-p-sigfig",
+      "py-v1-p-zero",
+      "py-v1-p-undefined",
+      "py-v1-p-complete",
+      "py-v1-p-actual",
+      "py-v1-p-actual-kg",
+      "py-v1-p-reverse",
+      "py-v1-p-reverse-kg",
+      "py-v1-p-wrong-base",
+      "py-v1-p-collection",
+      "py-v1-p-incomplete",
+      "py-v1-p-side",
+      "py-v1-p-wet",
+      "py-v1-p-atom-economy",
+      "py-v1-p-rounding",
+      "py-v1-p-explain-loss",
+      "py-v1-p-explain-suspect"
+    ]
+  },
+  "checkForms": [
+    [
+      "py-v1-ca-units",
+      "py-v1-ca-actual",
+      "py-v1-ca-reverse",
+      "py-v1-ca-recovery",
+      "py-v1-ca-proof"
+    ],
+    [
+      "py-v1-cb-units",
+      "py-v1-cb-actual",
+      "py-v1-cb-reverse",
+      "py-v1-cb-recovery",
+      "py-v1-cb-proof"
+    ]
+  ],
+  "reviewForms": [
+    [
+      "py-v1-ra-yield",
+      "py-v1-ra-actual",
+      "py-v1-ra-reverse"
+    ],
+    [
+      "py-v1-rb-yield",
+      "py-v1-rb-actual",
+      "py-v1-rb-reverse"
+    ]
+  ]
+}

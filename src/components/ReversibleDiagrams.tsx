@@ -7,9 +7,11 @@ import { tokenSnapshot } from "../lib/reversible-equilibrium";
 export function TurnoverMap({
   record,
   step,
+  yieldComparison = false,
 }: {
   record: TurnoverRecord;
   step: number;
+  yieldComparison?: boolean;
 }) {
   const tokens = tokenSnapshot(record, step),
     a = tokens.filter((x) => x.state === "A").length;
@@ -48,43 +50,70 @@ export function TurnoverMap({
         </p>
       )}
       <figcaption>
-        Constructed 1:1 A ⇌ B, fixed closed volume. Each numbered token retains
-        the same conserved material; its A/B identity can change. Outlined
-        tokens changed in the last interval. This is not a real molecule,
-        spatial trajectory or measured rate law.
+        {yieldComparison ? (
+          <>
+            Constructed 1:1 A ⇌ B: all {tokens.length} units remain in the
+            closed model. The highlighted units changed identity this interval;
+            their numbers track conserved material.
+          </>
+        ) : (
+          <>
+            Constructed 1:1 A ⇌ B, fixed closed volume. Each numbered token
+            retains the same conserved material; its A/B identity can change.
+            Outlined tokens changed in the last interval. This is not a real
+            molecule, spatial trajectory or measured rate law.
+          </>
+        )}
       </figcaption>
-      <table>
-        <caption>Amounts and gross reaction events</caption>
-        <thead>
-          <tr>
-            <th>Quantity</th>
-            <th>Initially</th>
-            <th>Now</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>A tokens</th>
-            <td>{record.a}</td>
-            <td>{a}</td>
-          </tr>
-          <tr>
-            <th>B tokens</th>
-            <td>{record.b}</td>
-            <td>{tokens.length - a}</td>
-          </tr>
-          <tr>
-            <th>A → B events</th>
-            <td>0</td>
-            <td>{record.forward * step}</td>
-          </tr>
-          <tr>
-            <th>B → A events</th>
-            <td>0</td>
-            <td>{record.reverse * step}</td>
-          </tr>
-        </tbody>
-      </table>
+      {yieldComparison ? (
+        <dl className="reversible-yield-summary">
+          <div>
+            <dt>Remaining A units</dt>
+            <dd>{a}</dd>
+          </div>
+          <div>
+            <dt>Desired B units</dt>
+            <dd>{tokens.length - a}</dd>
+          </div>
+          <div>
+            <dt>Complete-conversion B maximum</dt>
+            <dd>{tokens.length}</dd>
+          </div>
+        </dl>
+      ) : (
+        <table>
+          <caption>Amounts and gross reaction events</caption>
+          <thead>
+            <tr>
+              <th>Quantity</th>
+              <th>Initially</th>
+              <th>Now</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>A tokens</th>
+              <td>{record.a}</td>
+              <td>{a}</td>
+            </tr>
+            <tr>
+              <th>B tokens</th>
+              <td>{record.b}</td>
+              <td>{tokens.length - a}</td>
+            </tr>
+            <tr>
+              <th>A → B events</th>
+              <td>0</td>
+              <td>{record.forward * step}</td>
+            </tr>
+            <tr>
+              <th>B → A events</th>
+              <td>0</td>
+              <td>{record.reverse * step}</td>
+            </tr>
+          </tbody>
+        </table>
+      )}
     </figure>
   );
 }
