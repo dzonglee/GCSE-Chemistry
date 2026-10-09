@@ -1,3 +1,4 @@
+import { addElectrolysisWriting } from "./electrolysis-writing";
 import type { LearningTask, LessonJourney, TaskModel } from "../types";
 import { choice, number } from "./helpers";
 const c = (
@@ -765,3 +766,5 @@ const recovery: Record<string, string> = {
 };
 for (const task of electrolysisJourney.practice)
   task.followUp = "el-v1-" + recovery[task.id.replace("el-v1-", "")];
+
+addElectrolysisWriting(electrolysisJourney);

@@ -15,7 +15,7 @@ This is an implementation ledger, not a completion certificate. All95 original r
 |Changing concentration|Accepted:56 activities preserve original46; independent/delayed mass–volume causal comparisons and full sampling/dilution/solvent inventories, plus explicit seven-symbol guided reference. Final26 production checks pass; seven inspected samples delivered.|
 |Metal reactivity|Accepted:60 activities preserve original49; eight-metal water/HCl condition reference, independent/delayed positive-ion and reaction accounts, and valid investigation planning.22 existing plus8 final production checks pass; eight inspected samples delivered.|
 |Acids and metals|Accepted:66 activities preserve original50; all six metal–acid equation constructions, targeted method refresher/independent/delayed investigation and tier-filtered Higher electron accounts.24 existing plus10 final and6 caption/reference checks pass; ten inspected samples delivered.|
-|Electrolysis|Full cryolite-mixture/anode-replacement explanation and application-specific reactions.|
+|Electrolysis|Accepted9 October: full independent mixture/anode explanations and four complete reaction constructions; original49 tasks preserved, final inspected samples sent. See electrolysis-writing-review.md.|
 |Aqueous electrolysis products|Inert-electrode required-practical investigation/hypothesis independence; copper purification is a different demand.|
 |Condensation polymers|Higher-only reserved independent/delayed functional-group and repeat-unit construction beyond common forms.|
 |Natural polymers|Higher-only reserved independent/delayed peptide/end-group/repeating-unit reasoning beyond common forms.|

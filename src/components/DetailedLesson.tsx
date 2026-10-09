@@ -253,6 +253,7 @@ export function DetailedLesson({
         "changing-concentration",
         "metal-reactivity",
         "acids-and-neutralisation",
+        "electrolysis",
       ].includes(lesson.slug)) &&
     section === "review" &&
     work.run?.kind === "review" &&
@@ -289,6 +290,7 @@ export function DetailedLesson({
         "changing-concentration",
         "metal-reactivity",
         "acids-and-neutralisation",
+        "electrolysis",
       ].includes(lesson.slug));
   const reviewSchedule = (
     <ReviewContainer className={compactReview ? "review-schedule" : "panel"}>
@@ -364,6 +366,7 @@ export function DetailedLesson({
           "changing-concentration",
           "metal-reactivity",
           "acids-and-neutralisation",
+          "electrolysis",
         ].includes(lesson.slug) ||
           (section === "explore" && stage === "guided")) && (
           <button className="text-button" onClick={() => choose("warmup")}>
@@ -467,6 +470,7 @@ export function DetailedLesson({
                   "changing-concentration",
                   "metal-reactivity",
                   "acids-and-neutralisation",
+                  "electrolysis",
                 ].includes(lesson.slug)
               }
               title={
@@ -862,6 +866,7 @@ export function DetailedLesson({
               "changing-concentration",
               "metal-reactivity",
               "acids-and-neutralisation",
+              "electrolysis",
             ].includes(lesson.slug)) && (
             <div
               className="sample-mobile-tasks question-navigation"

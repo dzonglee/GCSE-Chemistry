@@ -1,17 +1,17 @@
 import { test, expect } from "@playwright/test";
 import { electrolysisJourney as j } from "../src/content/journeys/electrolysis";
 import { tasks } from "../src/content/journeys/helpers";
-test("49 individually authored demands reserve changed cold forms, delayed retrieval and six written explanations", () => {
+test("67 individually authored demands reserve full explanations, changed cold forms and delayed retrieval", () => {
   const all = tasks(j);
-  expect(all).toHaveLength(49);
-  expect(new Set(all.map((q) => q.id)).size).toBe(49);
-  expect(j.practice).toHaveLength(20);
-  expect(j.guided).toHaveLength(5);
+  expect(all).toHaveLength(67);
+  expect(new Set(all.map((q) => q.id)).size).toBe(67);
+  expect(j.practice).toHaveLength(22);
+  expect(j.guided).toHaveLength(7);
   expect(j.guided[0].openingHint).toBe(true);
   expect(j.guided.slice(1).every((q) => !q.openingHint)).toBe(true);
-  expect(j.refresher).toHaveLength(6);
-  expect(all.filter((q) => q.rubric)).toHaveLength(6);
-  for (const f of j.checkForms) expect(f).toHaveLength(5);
+  expect(j.refresher).toHaveLength(8);
+  expect(all.filter((q) => q.rubric)).toHaveLength(20);
+  expect(j.checkForms.map((f) => f.length)).toEqual([5, 5, 3, 3]);
   for (const f of j.reviewForms) expect(f).toHaveLength(3);
   for (const q of j.practice)
     expect(j.refresher.some((r) => r.id === q.followUp)).toBe(true);

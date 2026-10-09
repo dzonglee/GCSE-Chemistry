@@ -1,0 +1,40 @@
+# Electrolysis explanations — main review, 9 October 2026
+
+This is one lesson correction, not whole-course acceptance. Baseline main GitHub2f84232. All49 original definitions/indices and the original two cold/two delayed forms are hash-preserved; journey version1 remains. Added two recovery and two guided causal-chain tasks, two focused explanation practices, two three-question cold forms and two three-question delayed forms.67 tasks/22 practice/20 manually reviewed responses. Existing migration, conductivity, molten products, mixture, anode and conserved-atom3D interactions remain.
+
+## Actual research and decisions
+
+Fresh [AQA8462 specification](https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF),4.4.3.3 explicitly requires explanation of why the mixture is used and why the positive electrode is continually replaced. These demands are shared Foundation/Higher; Higher half equations remain the neighbouring lesson. Actual [June2019 Higher Paper1](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-84621H-QP-JUN19.PDF),07.1/QP20 and07.4/QP21 with [paired mark scheme](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2019/june/AQA-84621H-W-MS-JUN19.PDF),MS19 personally read and raster-inspected: two marks for lower melting point/less energy; catalyst rejected and cost alone ignored. Three points for carbon/graphite electrode, oxygen reaction, and carbon dioxide or consumption; physical wear alone ignored. Q07.5's supplied oxide-decomposition equation is inspected context for complete reaction construction, not an imported Higher mole calculation.
+
+Fresh [OpenStax actual source](https://raw.githubusercontent.com/openstax/osbooks-chemistry-bundle/main/modules/m68830/index.cnxml) Hall–Héroult teaching personally read: Al2O3 dissolved in a molten mixture and reduction at cathode; real anode oxygen/CO/CO2 possibilities prevent claiming industrial gas is exclusively CO2. New GCSE carbon-dioxide tasks explicitly describe their supplied simplified record. No experimental instructions or certification of supervised competence.
+
+Fresh real Maths `explaining-sample-limits.ts` source read and guided plus reserved independent320/1280 screens personally inspected. It uses visual manipulation for learning, short causal practice and deferred independent results. Its reserved opening is choice-based, so chemistry's written demand is justified by the actual chemistry command, not an invented Maths written check. Fresh actual Chemistry migration-guided and reserved products screens at320/1280 personally inspected; underlying working interactions retained.
+
+Before-authoring questions: the interesting chemistry is distinguishing benefit from a false catalyst/current claim, and chemical consumption from physical wear. Existing mixture/anode comparisons are useful assets; no duplicate3D asset is needed for written recall. This differs from ion movement and quantitative mass tasks: the response must join cause to consequence without offered answer choices. Existing task frame is appropriate with concise headings, stated conditions and genuinely manual writing; a choice-only template is insufficient.
+
+## Clause to task mapping
+
+| Demand | Tasks | Decision |
+| --- | --- | --- |
+|4.4.3.3 mixture explanation|el-write-v1-r/g/p-mixture and cA/cB/vA/vB-mixture|Lower melting point → lower required temperature → less heating energy; current/heating still needed.|
+|4.4.3.3 continual anode replacement|el-write-v1-r/g/p-anode and cA/cB/vA/vB-anode|Carbon/graphite + oxygen reaction + CO2/consumption; inert comparison explicitly stipulated.|
+|Complete equation transfer/4.1.1.1 balancing|cA-reaction C+O2→CO2; cB-reaction oxide decomposition; vA/vB moltenMgCl2/CaBr2|Original supporting transfer practice using supplied reactants/products/formulae; no automatic written mark, no new Higher half-equation requirement.|
+|Original process/product/model/practical prerequisites|All49 original tasks|Preserved, not replaced by this writing correction.|
+
+Equivalent factual explanations share exposure with each other and the old combined extraction practice. No claim that a changed wording makes the same theory fresh. Original task definitions are not rewritten to add aliases; new reciprocal alias references provide exposure links.
+
+## Validation in progress
+
+Types and affected lint passed. Initial16 affected units:15 pass and one capitalization-only rubric wording expectation failed; corrected to a case-insensitive content assertion. Final seven content/writing units passed6.8seconds; independent atom parser verifies actual reaction strings and rejects unbalanced oxide decomposition. Full-unit/build/production checks are underway. No final screenshot delivery or lesson acceptance claim yet.
+
+Full994 units passed1.1minutes, production build exited0, affected lint/types passed. Private six new guided-mode probes at320/390/1280 passed actual first-control44px/664px, axe and overflow; tightest anode control bottom657.9375px at320. Initial new practice harness incorrectly looked for accessible name Practice; actual aria-label is Practise. Both reserved written forms/delayed forms are being validated separately; fix only the locator after actual browser exit/frozen verification, and rerun. No app or assertion weakening justified.
+
+First combined browser run:24 pass (all22 original cases and both new reserved/delayed cases), two stale Practice accessible-name failures,4.5minutes. After locator correction, both reserved cases passed again but two practice cases exposed desktop field bottom673.15625px,9.15625 above the unchanged664px gate; both projects explicitly test all three widths. After actual process exits, private capture exits and2230-fingerprint verification, main reduced only written-task prompt bottom margin to16px and response-panel top padding to12px. Textarea size preserved104px desktop/84px mobile; no assertion weakened. Full clean lint exited0. Final build/affected checks are underway.
+
+After the margin correction, the first written practice passed all widths, but the longer second prompt put the desktop field at687.46875px. All four other selected cases passed (both original practice and both new full reserved forms),2.5minutes. Actual exit and2230 fingerprints verified before shortening only the new anode-practice prompt to the direct explanation demand. The new prompt now requires oxygen recall instead of supplying it; answer/criteria unchanged and original49 hash-preservation maintained. Final checks are pending.
+
+## Accepted individual correction
+
+Final two practice cases passed35.2seconds with retained wrong bytes/reload/manual feedback and strict44px/664px/axe/overflow at320/390/1280. Earlier final-layout runs passed both original written-practice cases and both new complete cold/delayed cases (all12 reserved items at all three widths); the initial combined run passed all22 original cases. This is26 affected cases covered across the documented runs, not a26/26 first-run claim. Final seven affected units8.6seconds, prior full994 units1.1minutes, types, full clean lint/affected lint, real final build and2230 fingerprints verified after actual process exits. Six guided probes/eight private opening captures passed; final guided, practice, independent and delayed samples personally inspected and explicit links SENT before next-lesson research.
+
+After-authoring review: no mismatched carbon/oxygen/ion products or automatic examiner marks found. Shared Foundation explanations match4.4.3.3; complete reactions are supporting transfer practice, not an invented mandatory RP. Distinct challenge/corrective claims and honest criteria help a student construct reasons rather than recognise choices. Existing conserved-atom3D and schematic ion interactions retained. Whole-app active-stage restoration, final statement/tier/WS/MS/AT maps, cumulative assessment breadth and full frozen course regression remain open. Current inventory95 routes/5733 tasks/2152 practice/832 manual responses does not establish exam readiness.

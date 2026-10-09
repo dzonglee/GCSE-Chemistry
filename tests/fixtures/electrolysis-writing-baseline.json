@@ -1,0 +1,125 @@
+{
+  "commit": "2f84232",
+  "tasks": {
+    "el-v1-w-charge": "2bd18fc4ce864231aeaad688d46b218b7a8c8061562f8ec9932aa4b0d0a98492",
+    "el-v1-w-attract": "68651d3258f16d10d5be8ed3de5bceef79e085e9f61ac04f82bcefb4988b7630",
+    "el-v1-r-mobile": "7ca8670b0b99a7acc34b822ea1423822dd7d1446821e23b7884b2506eeb3d8a9",
+    "el-v1-r-direction": "1464b42de42817b877a3399dd88815e0a86a9b257241230ba80143a81bfa37a7",
+    "el-v1-r-products": "bf75ddf49d357c147194ca270293167cc12fa96a23eb03e2608e7c55a2a46fed",
+    "el-v1-r-mixture": "567459f1314ae23d6280b443709617b1ffb807140ef7262956d5f161fd280867",
+    "el-v1-r-anode": "1d39726b590771be93487f8d2c821fae9d372a9726d218bdfa92898021dc1414",
+    "el-v1-r-pairs": "dc8414cd044a25cb91ca17dc0ce8b7de7959b4ef8baf3005bf8e41c8976e7c5b",
+    "el-v1-g-move": "dadf00e73a6b3c17a26edd2564eafd796e8d5921ff2e823c3566732acd334c4d",
+    "el-v1-g-phase": "d05c78d69a9e2417c24bc38bf4c63203adf407314a1139f330072f9c54d8f344",
+    "el-v1-g-products": "e8e694bc88ecf140899270c74b6defda19df2ada5a04d6342955be3325d94616",
+    "el-v1-g-mixture": "29e7474fceeeff954a8bb836ba3475f6999d64413945099f8335f650decbec90",
+    "el-v1-g-anode": "cb66aa4561c55a3ed783e1393bc07da22af01f3962bb427cb79262f5d6b535ae",
+    "el-v1-p-electrolyte": "ad697e170036a01c16a3248b7a0fdfc0a2bcf796df9a2f8ac3bb452a3a51b4e6",
+    "el-v1-p-source": "c63d905e82ac4fd4609e27726c29ccaa306bed4f84247ea87ddb99224fca56ad",
+    "el-v1-p-solid": "c4c46da4e3198b2674199c157a12dbb04cc48dc52145715435cd8f9fc77e8c42",
+    "el-v1-p-wire": "be680972bf3693edb8f28597fd32a74fe192227956832d59b9155dce2710cf98",
+    "el-v1-p-carrier-write": "b335a3cca4632817b7a23d6dd57f0d5a841a71f937abe78eacc42a7b13bfeac6",
+    "el-v1-p-cation": "8b42089168a11a3ef33e83e2b1102385aeede650ae4013e1bcda06752ea21303",
+    "el-v1-p-anion": "70fd105d2752a1219364133367bb7dd7f542781e9b0b4e80b636cffc896e3578",
+    "el-v1-p-reversed": "368299e7e1d24f687d6d5ba11a29a7e7d35f432d23fab3dc9ce136cb1b71b821",
+    "el-v1-p-move-write": "69b473646e396466c7b0f5c6e7a0bf5725f21c1cd40b1b697efe5cf027eb05bc",
+    "el-v1-p-lead": "a5436eaae492ba5c8b91d82dd296a1bd7f66602f1b08c6ac11f6e62fcebb2d2d",
+    "el-v1-p-sodium": "7719c79fa65f58ea617dca463ec8113edceaa96ba4a824582f5f791070a73480",
+    "el-v1-p-chlorine": "916d937fd2569cdc5774fbd5359d35d9f0c53ec3cca60b9b242ce9771fad9356",
+    "el-v1-p-pairs": "2cc169cae0010338ee606cbe59f07f0859adb24b6d7ed4207d188d7907a8fd58",
+    "el-v1-p-products-write": "bcc73ac8b52feab8713ed365e4984fb22b58d2d4279fba8f5158d3696318a7ff",
+    "el-v1-p-reactivity": "ea708d94cf2502b642f13b34c0975a6deb991c751bf858db27b3b740a61bd016",
+    "el-v1-p-cryolite": "2812d532fb877a2a2ebbc52d521fa83bdb09e0314d8c471f1d4fc1a757172bf5",
+    "el-v1-p-energy": "2e5d1899ce90cd1fc9b98a7197c3f4a045e68b6f8fc1e7dcf0bdf09819517515",
+    "el-v1-p-carbon": "4f42f59e682fde021c490d85ba360a90ab4a2dc78f4b6aedadae904fa5490a7c",
+    "el-v1-p-mass": "735e5755d8406ef0ffd064284b0fd534f03f628a229ed6e919f2d663851ceb15",
+    "el-v1-p-extraction-write": "038844f7350faa8bc402aa107662d60a44f4d1826c89202bea69c5f953dc60e8",
+    "el-v1-a-products": "d658496799961b43d7190cddda6053c3b61359618fa312c4690a3f5f3e1bddc5",
+    "el-v1-a-layout": "b2e4718414e9d9b41259a107188641af3c1b256f20ec11f0f44ea09b8a890928",
+    "el-v1-a-pairs": "207fa6a32d7fe5d92bf2fbeb2bb809eaed08a2a8d1267b6af31ca28171483a0b",
+    "el-v1-a-anode": "94f2f18128899f545cb8a30b6a6dc533161b748a4f16df49d231911143e2059e",
+    "el-v1-a-write": "d18aa3b6423ca5b35cfbec14cab1dd8a83ea60cee4b87c6aca8f5d8c647e21ee",
+    "el-v1-b-products": "da648a14725cb4b3b6f23f3d65c96ba675e5e8a2f6721ec5a50a3e162d08d45f",
+    "el-v1-b-layout": "1dc27843059ada8d5be30bcbfd319bc837b2f422876a8cc675f474b2ed2645a7",
+    "el-v1-b-mass": "5c2ba3ceebef56c7ff59c6b8e63061720f558eac2b840b8211b862a74915507f",
+    "el-v1-b-mixture": "0e58267731f59bf1918757e5690c53556fbd4914a27d5c322656fdc84db2e39e",
+    "el-v1-b-write": "e11499f25c895610288f5df0e9bdc1daf2e10105963e071233f43f707781dcb2",
+    "el-v1-ra-phase": "da717315c2969eceb2eb27154d206d7bd359ec2d4f56c25442000f4b0e9d3830",
+    "el-v1-ra-pairs": "0ec1c6a0302aff45e7f4a95c474e466e074ee74801432996c7a0f77ad969dc47",
+    "el-v1-ra-anode": "acd9a9fea91fed3c7f17b4e5e94d81a589f2a8eee3073964c066b223301596d7",
+    "el-v1-rb-side": "008a1b319dc60ce54496ee5a10cfcf107df7e0528f570e468a73d10b15f701fa",
+    "el-v1-rb-mass": "13a087de7d28d620efe6377b3385c231db98d46980ca5ad1ca1dca5eff8ae500",
+    "el-v1-rb-cryolite": "ca5565f2d46dbd9dcd9bce4d250663ba9ab93b17965bafc10508958086a0a39a"
+  },
+  "stages": {
+    "warmup": [
+      "el-v1-w-charge",
+      "el-v1-w-attract"
+    ],
+    "refresher": [
+      "el-v1-r-mobile",
+      "el-v1-r-direction",
+      "el-v1-r-products",
+      "el-v1-r-mixture",
+      "el-v1-r-anode",
+      "el-v1-r-pairs"
+    ],
+    "guided": [
+      "el-v1-g-move",
+      "el-v1-g-phase",
+      "el-v1-g-products",
+      "el-v1-g-mixture",
+      "el-v1-g-anode"
+    ],
+    "practice": [
+      "el-v1-p-electrolyte",
+      "el-v1-p-source",
+      "el-v1-p-solid",
+      "el-v1-p-wire",
+      "el-v1-p-carrier-write",
+      "el-v1-p-cation",
+      "el-v1-p-anion",
+      "el-v1-p-reversed",
+      "el-v1-p-move-write",
+      "el-v1-p-lead",
+      "el-v1-p-sodium",
+      "el-v1-p-chlorine",
+      "el-v1-p-pairs",
+      "el-v1-p-products-write",
+      "el-v1-p-reactivity",
+      "el-v1-p-cryolite",
+      "el-v1-p-energy",
+      "el-v1-p-carbon",
+      "el-v1-p-mass",
+      "el-v1-p-extraction-write"
+    ]
+  },
+  "checkForms": [
+    [
+      "el-v1-a-products",
+      "el-v1-a-layout",
+      "el-v1-a-pairs",
+      "el-v1-a-anode",
+      "el-v1-a-write"
+    ],
+    [
+      "el-v1-b-products",
+      "el-v1-b-layout",
+      "el-v1-b-mass",
+      "el-v1-b-mixture",
+      "el-v1-b-write"
+    ]
+  ],
+  "reviewForms": [
+    [
+      "el-v1-ra-phase",
+      "el-v1-ra-pairs",
+      "el-v1-ra-anode"
+    ],
+    [
+      "el-v1-rb-side",
+      "el-v1-rb-mass",
+      "el-v1-rb-cryolite"
+    ]
+  ]
+}

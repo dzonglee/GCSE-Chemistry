@@ -7330,3 +7330,87 @@ body:has(.sample-lesson) .topic-number {
   line-height: 1.4;
   margin: 0 0 8px;
 }
+
+.sample-lesson[data-lesson="electrolysis"] .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sample-lesson[data-lesson="electrolysis"] .assessment-session > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.sample-lesson[data-lesson="electrolysis"] .assessment-session .question-panel {
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.sample-lesson[data-lesson="electrolysis"]
+  .assessment-session
+  .question-panel
+  > .eyebrow {
+  margin: 0 0 4px;
+}
+.sample-lesson[data-lesson="electrolysis"]
+  .assessment-session
+  .question-panel
+  h2 {
+  margin-bottom: 8px;
+}
+.sample-lesson[data-lesson="electrolysis"] .written-equation-prompt {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+.sample-lesson[data-lesson="electrolysis"] .written-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="electrolysis"] .sample-task-panel > h2,
+  .sample-lesson[data-lesson="electrolysis"]
+    .assessment-session
+    .question-panel
+    h2 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-lesson="electrolysis"] .written-answer textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+}
+@media (min-width: 601px) {
+  .sample-lesson[data-lesson="electrolysis"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-topline {
+    display: block;
+  }
+  .sample-lesson[data-lesson="electrolysis"]
+    .sample-task-panel:has(.written-answer)
+    .sample-task-topline
+    .question-navigation {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    margin-top: 8px;
+    padding-bottom: 4px;
+    max-width: 100%;
+  }
+  .sample-lesson[data-lesson="electrolysis"]
+    .sample-task-panel:has(.written-answer)
+    .question-navigation
+    button {
+    flex: 0 0 auto;
+  }
+}
+.sample-lesson[data-lesson="electrolysis"]
+  .sample-task-panel:has(.written-answer)
+  .sample-task-prompt {
+  margin-bottom: 16px;
+}
+.sample-lesson[data-lesson="electrolysis"]
+  .sample-task-answer
+  .question-panel:has(.written-answer) {
+  padding-top: 12px;
+}
