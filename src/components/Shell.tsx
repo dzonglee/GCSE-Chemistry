@@ -7,10 +7,12 @@ import { useProgress } from "@/lib/progress";
 export function Shell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const sidebar = useRef<HTMLElement>(null);
+  const navigation = useRef<HTMLElement>(null);
   useEffect(() => {
-    const frame = requestAnimationFrame(() => {
-      const panel = sidebar.current;
+    let cancelled = false;
+    const reveal = () => {
+      if (cancelled) return;
+      const panel = navigation.current;
       const current = panel?.querySelector<HTMLElement>(
         '.topic-lesson-links [aria-current="page"]',
       );
@@ -21,8 +23,16 @@ export function Shell({ children }: { children: React.ReactNode }) {
         panel.scrollTop += link.bottom - bounds.bottom + 16;
       else if (link.top < bounds.top + 16)
         panel.scrollTop += link.top - bounds.top - 16;
-    });
-    return () => cancelAnimationFrame(frame);
+    };
+    const frame = requestAnimationFrame(reveal);
+    const observer = new ResizeObserver(reveal);
+    if (navigation.current) observer.observe(navigation.current);
+    void document.fonts.ready.then(reveal);
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
   }, [pathname, open]);
   const { warning, data, ready } = useProgress();
   const active = lessonBySlug(pathname.split("/")[2] ?? "")?.topic;
@@ -52,7 +62,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           {open ? "Close map" : "Course map"}
         </button>
       </header>
-      <aside ref={sidebar} className={`sidebar ${open ? "is-open" : ""}`}>
+      <aside className={`sidebar ${open ? "is-open" : ""}`}>
         <Link className="brand" href="/" onClick={() => setOpen(false)}>
           <span className="brand-mark" aria-hidden="true">
             <svg viewBox="0 0 40 40" aria-hidden="true">
@@ -70,7 +80,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             Atelier Academy<small>GCSE Chemistry</small>
           </span>
         </Link>
-        <nav id="course-navigation" aria-label="Course map">
+        <nav ref={navigation} id="course-navigation" aria-label="Course map">
           <div className="nav-main">
             {links.slice(0, 2).map(([href, label]) => (
               <Link

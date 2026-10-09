@@ -135,7 +135,7 @@ small,
   position: fixed;
   inset: 0 auto 0 0;
   width: 260px;
-  overflow-y: auto;
+  overflow-y: hidden;
   border-right: 1px solid var(--border);
   background: var(--card);
   padding: 30px 20px;
@@ -148,6 +148,16 @@ small,
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+.sidebar > .brand,
+.sidebar > .sidebar-note {
+  flex-shrink: 0;
+}
+.sidebar > #course-navigation {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 }
 main {
   max-width: 1240px;
@@ -1433,7 +1443,7 @@ progress {
     justify-content: space-between;
     background: var(--card);
     border-bottom: 1px solid var(--border);
-    padding: 10px 22px;
+    padding: 9px 22px;
     min-height: 64px;
   }
   .mobile-bar > a {

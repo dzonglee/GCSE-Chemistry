@@ -1,0 +1,45 @@
+{
+  "build": "MLwFngZII5cgJxPF9Zq04",
+  "captures": [
+    {
+      "file": "1280-yield-viewport.png",
+      "width": 1280,
+      "kind": "yield",
+      "firstResponseBottom": 536.53125,
+      "sha256": "12f6ec6f6ea1d5d8d8f20f66d24e4ceea64cafe429f5376fcf1637601280884f"
+    },
+    {
+      "file": "1280-yield-full.png",
+      "width": 1280,
+      "kind": "yield",
+      "firstResponseBottom": 536.53125,
+      "sha256": "44ca3ce733628dc3d87598f6f2aa035c560d02d084d09a9719257a19bf95d53f"
+    },
+    {
+      "file": "320-yield-viewport.png",
+      "width": 320,
+      "kind": "yield",
+      "firstResponseBottom": 581.28125,
+      "sha256": "710383c386410a7ac6a6766c31ac11d17079e4958a11ba940f4a5f7e5a335997"
+    },
+    {
+      "file": "320-yield-full.png",
+      "width": 320,
+      "kind": "yield",
+      "firstResponseBottom": 581.28125,
+      "sha256": "c2760935c587bffa355f55b1a25055badf0a86e542d6536a417cceb76a5983f9"
+    },
+    {
+      "file": "1280-haber-viewport.png",
+      "width": 1280,
+      "kind": "haber",
+      "sha256": "2981e25e007057068c6af3dc2ea1fda7e1f987e1034bd0cf72e3562978f46c8e"
+    },
+    {
+      "file": "320-map-viewport.png",
+      "width": 320,
+      "kind": "map",
+      "sha256": "84e9da56030f484e9a1f6ab10f49bf753bec3a83039e54f4ed71c1e8d31063c0"
+    }
+  ]
+}

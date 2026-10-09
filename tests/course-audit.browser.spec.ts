@@ -194,21 +194,23 @@ test("active late lesson is visible in its navigation; progress updates preserve
     .poll(() =>
       current.evaluate((el) => {
         const link = el.getBoundingClientRect(),
-          panel = el.closest(".sidebar")!.getBoundingClientRect();
+          panel = el.closest("#course-navigation")!.getBoundingClientRect();
         return link.top >= panel.top && link.bottom <= panel.bottom;
       }),
     )
     .toBe(true);
   expect(await page.evaluate(() => scrollY)).toBe(0);
   await shot(page, "late-sidebar", info.project.name);
-  await page.locator(".sidebar").evaluate((el) => {
+  await page.locator("#course-navigation").evaluate((el) => {
     el.scrollTop = 0;
   });
   await page
     .locator('.haber-workbench [data-field="nitrogenSource"]')
     .selectOption("Air");
   await saved(page);
-  expect(await page.locator(".sidebar").evaluate((el) => el.scrollTop)).toBe(0);
+  expect(
+    await page.locator("#course-navigation").evaluate((el) => el.scrollTop),
+  ).toBe(0);
 });
 test("coverage describes all current journeys and the eight practical preparations accessibly", async ({
   page,
