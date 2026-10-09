@@ -495,6 +495,93 @@ footer > div {
 .search-label input {
   width: 240px;
 }
+.paper-mark-decision {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+}
+.assessment-page.full-paper:not(.working) h1 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 12px;
+}
+.full-paper-intro h2 {
+  margin-bottom: 8px;
+}
+.full-paper-intro > details {
+  margin-top: 16px;
+}
+.full-paper-intro > details > summary {
+  min-height: 44px;
+  padding: 12px 0;
+}
+.paper-review-lattice figure {
+  width: 208px;
+  max-width: 100%;
+  margin: 8px 0;
+}
+.paper-review-lattice svg {
+  display: block;
+  width: 100%;
+}
+.paper-retained-response {
+  white-space: pre-wrap;
+}
+.question-panel[data-full-paper] .written-equation-prompt {
+  margin: 8px 0;
+}
+.question-panel[data-full-paper] .isotope-data {
+  margin: 8px 0 12px;
+}
+.question-panel[data-full-paper] .isotope-data th,
+.question-panel[data-full-paper] .isotope-data td {
+  padding: 6px 8px;
+}
+.question-panel[data-full-paper] .ionic-slice-response figure {
+  width: 208px;
+  max-width: 100%;
+  margin: 8px 0;
+}
+.question-panel[data-full-paper] .ionic-slice-response svg {
+  display: block;
+  width: 100%;
+}
+.question-panel[data-full-paper] .ionic-slice-response figcaption {
+  font-size: 14px;
+  line-height: 20px;
+}
+@media (min-width: 601px) {
+  .question-panel[data-full-paper] .written-answer textarea {
+    height: 104px;
+    min-height: 104px;
+  }
+  .question-panel[data-full-paper] .ionic-slice-response {
+    display: grid;
+    grid-template-columns: 208px minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+}
+.paper-mark-decision select {
+  width: min(100%, 240px);
+}
+.paper-criterion {
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+}
+.full-paper-results .assessment-working-review p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.full-paper-results .result-body {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.full-paper-results .results-list {
+  grid-template-columns: minmax(0, 1fr);
+}
+.full-paper-results .result-question {
+  min-width: 0;
+}
 input[type="search"],
 input:not([type]),
 input[type="text"],
@@ -5168,5 +5255,17 @@ progress {
     align-self: start;
     position: sticky;
     top: 24px;
+  }
+  .assessment-page.full-paper.working
+    .question-panel
+    > .covalent-construction-controls,
+  .assessment-page.full-paper.working
+    .question-panel
+    > .ion-construction-controls,
+  .assessment-page.full-paper.working .question-panel > .covalent-diagram,
+  .assessment-page.full-paper.working
+    .question-panel
+    > .ion-construction-preview {
+    grid-row: 4;
   }
 }

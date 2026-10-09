@@ -1,4 +1,5 @@
 import type { Course, Question, Tier } from "./types";
+import type { ExamPaper } from "./exam-paper-types";
 export interface Assessment {
   slug: string;
   title: string;
@@ -6,7 +7,8 @@ export interface Assessment {
   description: string;
   tier: Tier;
   course?: Course;
-  structure?: "short" | "extended";
+  structure?: "short" | "extended" | "full";
+  examPaper?: ExamPaper;
   kind: "diagnostic" | "paper";
   minutes: number;
   questions: Question[];

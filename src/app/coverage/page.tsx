@@ -76,6 +76,18 @@ export default function Page() {
       </p>
       <h2>Assessment and review</h2>
       <p>
+        The original{" "}
+        <Link href="/exams/paper-1-foundation-full">
+          full Foundation Paper 1
+        </Link>{" "}
+        has 100 allocated marks and a 105-minute practice timer, with an untimed
+        option. Its ten question groups include calculation working, native
+        drawings, practical methods and graph construction. Submit the whole
+        paper before reviewing method credit, drawings and extended writing.
+        Automatic answer points and your own review decisions remain distinct;
+        this is not an official paper or a predicted grade.
+      </p>
+      <p>
         Each lesson reserves alternate checks and delayed-review questions.
         Helped or previously seen questions count as practice rather than fresh
         independent evidence. Written explanations, extended responses and full

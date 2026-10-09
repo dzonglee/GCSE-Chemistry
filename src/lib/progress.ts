@@ -434,9 +434,20 @@ export function expose(ids: string[]) {
     },
   }));
 }
-export function startRun(id: string, kind: Run["kind"], ids: string[]) {
+export function startRun(
+  id: string,
+  kind: Run["kind"],
+  ids: string[],
+  timerMinutes?: number,
+) {
   update((p) => {
     const w = p.work[id] ?? emptyWork();
+    // Full-paper callers pass 0 for untimed practice. Keep their per-attempt
+    // review keys distinct even when a clock is frozen or moves backwards.
+    const started =
+      timerMinutes === undefined
+        ? Date.now()
+        : Math.max(Date.now(), (w.run?.started ?? 0) + 1);
     // Starting another delayed form must respect the latest actual submission.
     // Guard before recording exposure or replacing the current run/drafts.
     if (kind === "review" && !dueReview(w)) return p;
@@ -465,6 +476,11 @@ export function startRun(id: string, kind: Run["kind"], ids: string[]) {
           section: kind === "review" ? "review" : "check",
           drafts: {
             ...w.drafts,
+            ...(timerMinutes !== undefined &&
+            Number.isInteger(timerMinutes) &&
+            timerMinutes > 0
+              ? { ["paper-timer:" + started]: String(timerMinutes) }
+              : {}),
             ...draftMarkers,
             ...Object.fromEntries(
               ids.flatMap((q) => [
@@ -473,7 +489,7 @@ export function startRun(id: string, kind: Run["kind"], ids: string[]) {
               ]),
             ),
           },
-          run: { kind, ids, index: 0, responses: {}, started: Date.now() },
+          run: { kind, ids, index: 0, responses: {}, started },
           updated: Date.now(),
         },
       },

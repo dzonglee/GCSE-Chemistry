@@ -20,10 +20,12 @@ export function ProfileDrawingInput({
   value,
   onChange,
   disabled = false,
+  compact = false,
 }: {
   value: string;
   onChange: (v: string) => void;
   disabled?: boolean;
+  compact?: boolean;
 }) {
   const b = readProfileDrawing(value) ?? emptyProfileDrawing(),
     levels = drawingLevels(b);
@@ -31,10 +33,13 @@ export function ProfileDrawingInput({
     onChange(JSON.stringify({ ...b, [key]: v }));
   return (
     <fieldset className="profile-drawing-input" disabled={disabled}>
-      <legend>Your constructed energy diagram</legend>
+      <legend>
+        {compact ? "Your energy diagram" : "Your constructed energy diagram"}
+      </legend>
       <p>
-        Enter your three levels and choose both arrow spans. The curve and
-        labels follow your entries. No answer is checked here.
+        {compact
+          ? "Enter three levels and both arrows. The preview shows your entries."
+          : "Enter your three levels and choose both arrow spans. The curve and labels follow your entries. No answer is checked here."}
       </p>
       {(["reactant", "product", "peak"] as const).map((k) => (
         <label key={k}>

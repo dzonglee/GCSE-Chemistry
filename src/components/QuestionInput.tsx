@@ -780,6 +780,7 @@ function ResponseInput({
   if (question.profileDrawing)
     return (
       <ProfileDrawingInput
+        compact={question.compactProfileInstructions}
         value={value}
         onChange={onChange}
         disabled={disabled}
@@ -870,6 +871,11 @@ function ResponseInput({
             {counts ? (
               <ShellDiagram
                 counts={counts}
+                tightView={question.readableShellDiagram}
+                textLegend={question.readableShellDiagram}
+                omitCentreLabel={question.readableShellDiagram}
+                omitShellLabels={question.readableShellDiagram}
+                labelFontSize={question.readableShellDiagram ? 14 : undefined}
                 label="Your answer diagram, not marked yet"
               />
             ) : (

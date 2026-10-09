@@ -4,6 +4,7 @@ import Link from "next/link";
 import { lessons, topics, questionById } from "@/content/curriculum";
 import { diagnostics, papers, type Assessment } from "@/content/assessments";
 import { extendedPapers } from "@/content/extended-assessments";
+import { fullPapers } from "@/content/full-assessments";
 import {
   useProgress,
   update,
@@ -18,7 +19,9 @@ export function AssessmentCatalogue({
   kind: "diagnostic" | "paper";
 }) {
   const items =
-    kind === "diagnostic" ? diagnostics : [...extendedPapers, ...papers];
+    kind === "diagnostic"
+      ? diagnostics
+      : [...fullPapers, ...extendedPapers, ...papers];
   const { data } = useProgress();
   return (
     <>
@@ -31,7 +34,7 @@ export function AssessmentCatalogue({
       <p className="lede">
         {kind === "diagnostic"
           ? "Try twenty questions across the course. Use the results to choose what to study next, without a predicted grade."
-          : "Choose a longer cumulative set or a short topic mix. Work independently, then review the reasoning after submitting the whole set."}
+          : "Choose a full 100-mark paper, a cumulative set or a short topic mix. Work independently, then review the reasoning after submitting the whole paper or set."}
       </p>
       <div className="assessment-cards">
         {items.map((item) => (
@@ -48,6 +51,7 @@ export function AssessmentCatalogue({
               {item.tier === "higher" ? "Higher" : "Foundation"} ·{" "}
               {item.course === "separate" && "Chemistry only · "}
               {item.minutes} minutes suggested
+              {item.examPaper && ` · ${item.examPaper.totalMarks} marks`}
             </span>
             <h2>{item.title}</h2>
             <p>{item.description}</p>
@@ -69,8 +73,9 @@ export function AssessmentCatalogue({
         <p>
           A response is evidence about one question under these conditions. It
           is not an exam-board grade, a diagnosis of a misconception, or proof
-          of mastery. These are original practice sets with different lengths,
-          not full official mocks with exam-board mark allocations or grades.
+          of mastery. The full paper has original questions and allocated marks;
+          cumulative sets and short mixes have different lengths. None is an
+          official exam-board paper or a source of predicted grades.
         </p>
         <p>
           Automatic results count checked questions only. Written responses and
@@ -87,7 +92,9 @@ export function AssessmentPage({ assessment }: { assessment: Assessment }) {
   const run = data.work[`assessment-${assessment.slug}`]?.run;
   const working = !!run && run.submitted === undefined;
   return (
-    <div className={`assessment-page${working ? " working" : ""}`}>
+    <div
+      className={`assessment-page${working ? " working" : ""}${assessment.examPaper ? " full-paper" : ""}`}
+    >
       <Link
         className="breadcrumb"
         href={assessment.kind === "diagnostic" ? "/diagnostics" : "/exams"}
@@ -98,13 +105,17 @@ export function AssessmentPage({ assessment }: { assessment: Assessment }) {
           : "Practice papers"}
       </Link>
       <h1>
-        {working
+        {working || assessment.examPaper
           ? (assessment.shortTitle ?? assessment.title)
           : assessment.title}
       </h1>
-      {!working && <p className="lede">{assessment.description}</p>}
+      {!working && !assessment.examPaper && (
+        <p className="lede">{assessment.description}</p>
+      )}
       {assessment.course === "separate" && (
-        <p className="sample-course-scope">Chemistry only</p>
+        <p className="sample-course-scope">
+          Chemistry only{assessment.examPaper ? " · AQA 8462" : ""}
+        </p>
       )}
       {!working && assessment.structure === "extended" && (
         <details>
@@ -118,7 +129,13 @@ export function AssessmentPage({ assessment }: { assessment: Assessment }) {
           </p>
         </details>
       )}
-      {!working && (
+      {!working && assessment.examPaper && (
+        <p>
+          {assessment.examPaper.totalMarks} marks · {assessment.minutes} minutes
+          · Calculator allowed · Original practice paper
+        </p>
+      )}
+      {!working && !assessment.examPaper && (
         <p>
           {assessment.minutes} minutes suggested ·{" "}
           {assessment.kind === "paper" ? "Calculator allowed · " : ""}No time
@@ -131,6 +148,7 @@ export function AssessmentPage({ assessment }: { assessment: Assessment }) {
         kind={assessment.kind}
         questions={assessment.questions}
         topicIds={assessment.topics}
+        examPaper={assessment.examPaper}
       />
     </div>
   );

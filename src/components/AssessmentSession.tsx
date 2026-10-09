@@ -9,6 +9,9 @@ import { PolymerisationReview } from "./PolymerisationReview";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import type { Question } from "@/content/types";
+import type { ExamPaper } from "@/content/exam-paper-types";
+import { ExamPaperReview } from "./ExamPaperReview";
+import { PaperClock } from "./PaperClock";
 import { QuestionInput } from "./QuestionInput";
 import { mark, canonicalAnswer, displayResponse } from "@/lib/marking";
 import {
@@ -29,6 +32,7 @@ export function AssessmentSession({
   topicIds,
   independent = true,
   navigationAfterResponse = false,
+  examPaper,
   onExit,
 }: {
   id: string;
@@ -40,6 +44,7 @@ export function AssessmentSession({
   topicIds?: string[];
   independent?: boolean;
   navigationAfterResponse?: boolean;
+  examPaper?: ExamPaper;
   onExit?: () => void;
 }) {
   const { data, ready } = useProgress();
@@ -77,6 +82,61 @@ export function AssessmentSession({
     if (ready) lastTask.current = taskKey;
   }, [ready, taskKey]);
   if (!ready) return <p role="status">Loading your saved session…</p>;
+  if (!same && examPaper)
+    return (
+      <section className="panel assessment-intro full-paper-intro">
+        <h2>Start your paper</h2>
+        <p>
+          Ten question groups · {questions.length} parts · Work saved on this
+          device.
+        </p>
+        <div className="button-row">
+          <button
+            className="button primary"
+            onClick={() =>
+              startRun(
+                id,
+                kind,
+                questions.map((q) => q.id),
+                0,
+              )
+            }
+          >
+            Start without a timer →
+          </button>
+          <button
+            className="button"
+            onClick={() =>
+              startRun(
+                id,
+                kind,
+                questions.map((q) => q.id),
+                examPaper.minutes,
+              )
+            }
+          >
+            Start with a {examPaper.minutes}-minute practice timer
+          </button>
+        </div>
+        <details>
+          <summary>How this paper works</summary>
+          <p>
+            Work independently. Models and hints are hidden; feedback and
+            reference answers appear after whole-paper submission.
+          </p>
+          <p>
+            Revisit and edit recorded responses before submitting, and resume
+            after a refresh. Calculation working, drawings and writing need
+            review; the result is not a predicted grade.
+          </p>
+          <p>
+            The practice timer permits a labelled overrun and retains your work.
+            Submit the whole paper yourself. Trying again retains previous
+            exposure.
+          </p>
+        </details>
+      </section>
+    );
   if (!same)
     return (
       <section className="panel assessment-intro">
@@ -89,7 +149,9 @@ export function AssessmentSession({
         </span>
         <h2>{title}</h2>
         <p>
-          {questions.length} questions.{" "}
+          {examPaper
+            ? `${examPaper.totalMarks} marks across ten question groups (${questions.length} parts).`
+            : `${questions.length} questions.`}{" "}
           {independent
             ? "Models and hints are hidden."
             : "These questions may have been seen in lessons."}{" "}
@@ -120,6 +182,7 @@ export function AssessmentSession({
               id,
               kind,
               questions.map((q) => q.id),
+              examPaper ? 0 : undefined,
             )
           }
         >
@@ -133,9 +196,28 @@ export function AssessmentSession({
                 : "starting check"}{" "}
           →
         </button>
+        {examPaper && (
+          <button
+            className="button"
+            onClick={() =>
+              startRun(
+                id,
+                kind,
+                questions.map((q) => q.id),
+                examPaper.minutes,
+              )
+            }
+          >
+            Start with a {examPaper.minutes}-minute practice timer
+          </button>
+        )}
       </section>
     );
   if (run.submitted) {
+    if (examPaper)
+      return (
+        <ExamPaperReview id={id} paper={examPaper} run={run} work={work} />
+      );
     const results = questions.map((q) => ({
       q,
       r: run.responses[q.id],
@@ -441,16 +523,19 @@ export function AssessmentSession({
     setMessage("");
   };
   const questionNavigation = (
-    <div className="question-navigation" aria-label="Question navigation">
+    <div
+      className="question-navigation"
+      aria-label={examPaper ? "Paper part navigation" : "Question navigation"}
+    >
       {questions.map((item, i) => (
         <button
           key={item.id}
           className={i === run.index ? "current" : ""}
-          aria-label={`Question ${i + 1}${run.responses[item.id] ? ", recorded" : ""}`}
+          aria-label={`${examPaper ? `Part ${examPaper.parts[i].number}` : `Question ${i + 1}`}${run.responses[item.id] ? ", recorded" : ""}`}
           aria-current={i === run.index ? "step" : undefined}
           onClick={() => navigate(i)}
         >
-          {i + 1}
+          {examPaper?.parts[i].number ?? i + 1}
           {run.responses[item.id] && <span aria-hidden="true"> ✓</span>}
         </button>
       ))}
@@ -460,7 +545,15 @@ export function AssessmentSession({
     <section className="assessment-session">
       <div className="session-heading">
         <p className="eyebrow">
-          {questions.length > 20 ? "Independent response" : title}
+          {examPaper &&
+          work.drafts["paper-timer:" + run.started] ===
+            String(examPaper.minutes) ? (
+            <PaperClock started={run.started} minutes={examPaper.minutes} />
+          ) : questions.length > 20 ? (
+            "Independent response"
+          ) : (
+            title
+          )}
         </p>
         <span>
           {answered} / {questions.length} recorded
@@ -474,6 +567,8 @@ export function AssessmentSession({
       {questions.length <= 20 && !navigationAfterResponse && questionNavigation}
       <form
         className="question-panel"
+        data-full-paper={examPaper ? "true" : undefined}
+        data-paper-part={examPaper?.parts[run.index].number}
         data-salt-heating={id === "making-soluble-salts" || undefined}
         data-alkene-combustion={id === "organic-reactions" || undefined}
         data-written-equations={q.writtenEquations || undefined}
@@ -486,7 +581,9 @@ export function AssessmentSession({
         }}
       >
         <p className="eyebrow">
-          Question {run.index + 1} of {questions.length}
+          {examPaper
+            ? `${examPaper.parts[run.index].number} · ${examPaper.parts[run.index].marks} ${examPaper.parts[run.index].marks === 1 ? "mark" : "marks"}`
+            : `Question ${run.index + 1} of ${questions.length}`}
           {q.id.startsWith("pol-cond-v1-") ? " · Higher" : ""}
         </p>
         <h2 ref={heading} tabIndex={-1}>
@@ -556,8 +653,9 @@ export function AssessmentSession({
               }}
             />
             <p className="caption">
-              Optional: record your steps, units and reasoning. Your working is
-              saved, but receives no automatic method mark.
+              {examPaper
+                ? "Show steps, units and reasoning for method credit. Your working is saved for review after whole-paper submission."
+                : "Optional: record your steps, units and reasoning. Your working is saved, but receives no automatic method mark."}
             </p>
           </details>
         )}
@@ -600,10 +698,44 @@ export function AssessmentSession({
         ) : (
           <p className="recorded-note" role="status">
             {recorded.answer.trim()
-              ? "Answer recorded and locked."
+              ? examPaper
+                ? "Answer recorded. You can edit it before submitting the paper."
+                : "Answer recorded and locked."
               : "Question recorded as unanswered."}{" "}
             Feedback appears after submission.
           </p>
+        )}
+        {recorded && examPaper && (
+          <button
+            type="button"
+            className="button"
+            onClick={() => {
+              setWork(id, (w) => {
+                const original = w.run?.responses[q.id];
+                if (
+                  !w.run ||
+                  !original ||
+                  w.run.submitted !== undefined ||
+                  w.run.started !== run.started
+                )
+                  return w;
+                const responses = { ...w.run.responses };
+                delete responses[q.id];
+                const key = `paper-original:${w.run.started}:${q.id}`;
+                return {
+                  ...w,
+                  drafts: {
+                    ...w.drafts,
+                    [key]: w.drafts[key] ?? JSON.stringify(original),
+                  },
+                  run: { ...w.run, responses },
+                };
+              });
+              setMessage("");
+            }}
+          >
+            Edit recorded answer
+          </button>
         )}
         {message && (
           <p className="feedback" role="status">
@@ -615,7 +747,8 @@ export function AssessmentSession({
       {questions.length > 20 && (
         <details className="assessment-question-jump">
           <summary>
-            Jump to a question · {answered} of {questions.length} recorded
+            Jump to {examPaper ? "a part" : "a question"} · {answered} of{" "}
+            {questions.length} recorded
           </summary>
           {questionNavigation}
         </details>
@@ -632,7 +765,7 @@ export function AssessmentSession({
             onClick={() => navigate(run.index + 1)}
             disabled={q.id.startsWith("pol-cond-v1-") && !recorded}
           >
-            Next question →
+            Next {examPaper ? "part" : "question"} →
           </button>
         ) : (
           <button
@@ -650,7 +783,7 @@ export function AssessmentSession({
               })
             }
           >
-            Submit whole set
+            Submit whole {examPaper ? "paper" : "set"}
           </button>
         )}
       </div>

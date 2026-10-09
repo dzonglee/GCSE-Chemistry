@@ -1,0 +1,382 @@
+{
+  "build": "W8GIrU2U_WLUHD1I6Y7xy",
+  "note": "Controlled QA openings; constructions filled through their native UI and retained after reload. Full 50-part unseeded flow verified separately.",
+  "captures": [
+    {
+      "file": "320-intro-viewport.png",
+      "width": 320,
+      "number": null,
+      "firstResponseBottom": 478.453125,
+      "sha256": "1b4eb32b6a9a29f9c79437d2811bea6005cf8b50f5d380a869e5497751bc5b1d"
+    },
+    {
+      "file": "320-intro-full.png",
+      "width": 320,
+      "number": null,
+      "firstResponseBottom": 478.453125,
+      "sha256": "effa22da7b7c59d3a313d7760db1c9e65bb5a522250dcdfa0738d9ad5c545578"
+    },
+    {
+      "file": "320-1c-viewport.png",
+      "width": 320,
+      "number": "1(c)",
+      "firstResponseBottom": 456.03125,
+      "sha256": "7b216378e5789e0d483bc9eca28efeae3973fd7d5558e83ef33460d977892185"
+    },
+    {
+      "file": "320-1c-full.png",
+      "width": 320,
+      "number": "1(c)",
+      "firstResponseBottom": 456.03125,
+      "sha256": "fcfb40e2516f537a515364748723e10b37ed02561165701f0c22c65fa43093aa"
+    },
+    {
+      "file": "320-1e-viewport.png",
+      "width": 320,
+      "number": "1(e)",
+      "firstResponseBottom": 631.625,
+      "sha256": "151e13f30e4a359c024600c2e971a5d1a3faf793d5d30018814b04e4f8ef7325"
+    },
+    {
+      "file": "320-3a-viewport.png",
+      "width": 320,
+      "number": "3(a)",
+      "firstResponseBottom": 587.546875,
+      "sha256": "033e56f02fc7cd74ac2e87cfc5ab3a53cbbb364a201a78d12e04c203b5f28447"
+    },
+    {
+      "file": "320-3a-full.png",
+      "width": 320,
+      "number": "3(a)",
+      "firstResponseBottom": 587.546875,
+      "sha256": "5ed82dac30b522e39887c6bf805c65b9fc1b57ad96b6dcf515a9ac7e55a5cd6f"
+    },
+    {
+      "file": "320-3e-viewport.png",
+      "width": 320,
+      "number": "3(e)",
+      "firstResponseBottom": 660.640625,
+      "sha256": "1870ebec9391a030f59f2f84b3e5028c0af05c3de6198b8546fe0aa503b795f0"
+    },
+    {
+      "file": "320-3e-full.png",
+      "width": 320,
+      "number": "3(e)",
+      "firstResponseBottom": 660.640625,
+      "sha256": "32d9acca6e4481ad12bc22e7fffaca86e6446bec3e7b4743e0ece93ca83deb9b"
+    },
+    {
+      "file": "320-4a-viewport.png",
+      "width": 320,
+      "number": "4(a)",
+      "firstResponseBottom": 641.546875,
+      "sha256": "608246949cc170afbc08f02df455404371a3827f83000b3ac4247aa47fcbc110"
+    },
+    {
+      "file": "320-4a-full.png",
+      "width": 320,
+      "number": "4(a)",
+      "firstResponseBottom": 641.546875,
+      "sha256": "814aac8392ed9bfda7095e4a05f916475fe87df86873732070126fb126c1026d"
+    },
+    {
+      "file": "320-7b-viewport.png",
+      "width": 320,
+      "number": "7(b)",
+      "firstResponseBottom": 606.8125,
+      "sha256": "a2db6b0b16126bcfdee44c6c094cfe70225cf7ab7e299db091553ea0e6d8bce6"
+    },
+    {
+      "file": "320-7b-full.png",
+      "width": 320,
+      "number": "7(b)",
+      "firstResponseBottom": 606.8125,
+      "sha256": "1be73bbdb49efcc61e1b535fd855fd91b1780cf157e6f0de1839b8af0a46a2d7"
+    },
+    {
+      "file": "320-9b-viewport.png",
+      "width": 320,
+      "number": "9(b)",
+      "firstResponseBottom": 609.609375,
+      "sha256": "a08ec9a977ce10655a9f241bd6b28736095659ffcb080dce196408939495a0fa"
+    },
+    {
+      "file": "320-9b-full.png",
+      "width": 320,
+      "number": "9(b)",
+      "firstResponseBottom": 609.609375,
+      "sha256": "3bb44855b225576d0c4940b84b53f9939d77ac99372ba43ac88adc615da7c6fd"
+    },
+    {
+      "file": "320-9e-viewport.png",
+      "width": 320,
+      "number": "9(e)",
+      "firstResponseBottom": 563.421875,
+      "sha256": "ebc96ec473185dc611cc2df2e6fbfc83ef7bec19539ac1456d099d93b7aced68"
+    },
+    {
+      "file": "320-9e-full.png",
+      "width": 320,
+      "number": "9(e)",
+      "firstResponseBottom": 563.421875,
+      "sha256": "eb455b1715044edd95bf5bedc5babc490d193f706d8ea305e21534f01081e126"
+    },
+    {
+      "file": "320-10e-viewport.png",
+      "width": 320,
+      "number": "10(e)",
+      "firstResponseBottom": 582.015625,
+      "sha256": "fff0ddab641d3e29bc31f690c5313be67a3aff4674bbc14b4cd73396be8dd317"
+    },
+    {
+      "file": "1280-intro-viewport.png",
+      "width": 1280,
+      "number": null,
+      "firstResponseBottom": 409.265625,
+      "sha256": "c2082527d5b59a6e5268ff45f0aac5f9fe6483f3bd716c5b286cb543404bd3f8"
+    },
+    {
+      "file": "1280-intro-full.png",
+      "width": 1280,
+      "number": null,
+      "firstResponseBottom": 409.265625,
+      "sha256": "c2082527d5b59a6e5268ff45f0aac5f9fe6483f3bd716c5b286cb543404bd3f8"
+    },
+    {
+      "file": "1280-1c-viewport.png",
+      "width": 1280,
+      "number": "1(c)",
+      "firstResponseBottom": 500.25,
+      "sha256": "aaa334d39e0cda1267c9fd0ac66c2da8ca6f45a428dd89838e3c4c6c65aa2dde"
+    },
+    {
+      "file": "1280-1c-full.png",
+      "width": 1280,
+      "number": "1(c)",
+      "firstResponseBottom": 500.25,
+      "sha256": "9ddf8030681d04baddba9ae3647475af6d5e518a068a43173ba6bf51ba36f65b"
+    },
+    {
+      "file": "1280-1e-viewport.png",
+      "width": 1280,
+      "number": "1(e)",
+      "firstResponseBottom": 651.96875,
+      "sha256": "1f9d2f65515244477759c8f22246d620edaf2f258eb1bbc6d350c72d2e7073ad"
+    },
+    {
+      "file": "1280-3a-viewport.png",
+      "width": 1280,
+      "number": "3(a)",
+      "firstResponseBottom": 591.71875,
+      "sha256": "3b82881445cac61bb04082493adedc57db5a0c1619cadc9fa84b0bbc7788eb96"
+    },
+    {
+      "file": "1280-3a-full.png",
+      "width": 1280,
+      "number": "3(a)",
+      "firstResponseBottom": 591.71875,
+      "sha256": "7548e858354cffa85da0ac90b119a5510d6e5562f1057ac5794e306740260f31"
+    },
+    {
+      "file": "1280-3e-viewport.png",
+      "width": 1280,
+      "number": "3(e)",
+      "firstResponseBottom": 553.90625,
+      "sha256": "d579bd8252cb40f7ecfea7fc299d19efa3f22df23677d9291146e377bccf6929"
+    },
+    {
+      "file": "1280-3e-full.png",
+      "width": 1280,
+      "number": "3(e)",
+      "firstResponseBottom": 553.90625,
+      "sha256": "e769925543b26b671503df5ee762943dce463289ba9bd27a75326d72fda9a009"
+    },
+    {
+      "file": "1280-4a-viewport.png",
+      "width": 1280,
+      "number": "4(a)",
+      "firstResponseBottom": 598.375,
+      "sha256": "876971d1ef90be3f8f0e2bd1a9cd81bdf4df1e79c0587e7d04532d5a8d5690dd"
+    },
+    {
+      "file": "1280-4a-full.png",
+      "width": 1280,
+      "number": "4(a)",
+      "firstResponseBottom": 598.375,
+      "sha256": "599437964e5e3d01951c966df18b63ed0f8b9f0689acf179fe612fd0cc7da986"
+    },
+    {
+      "file": "1280-7b-viewport.png",
+      "width": 1280,
+      "number": "7(b)",
+      "firstResponseBottom": 606.59375,
+      "sha256": "cd69eae20391356412d41d8a6101509025d8b17ef78f0d15654128675e87b644"
+    },
+    {
+      "file": "1280-7b-full.png",
+      "width": 1280,
+      "number": "7(b)",
+      "firstResponseBottom": 606.59375,
+      "sha256": "bb0f94df0bff498d1901fba8910f2b127443b147077efcb0b01210b69df61f89"
+    },
+    {
+      "file": "1280-9b-viewport.png",
+      "width": 1280,
+      "number": "9(b)",
+      "firstResponseBottom": 582.53125,
+      "sha256": "08edc27775b907a2015d06d9086a3d5e17da64dbcc7ecc76cfb9150addd9994f"
+    },
+    {
+      "file": "1280-9b-full.png",
+      "width": 1280,
+      "number": "9(b)",
+      "firstResponseBottom": 582.53125,
+      "sha256": "61472dc2ec278392be14818cf35011e76e94dc00608af3e46eff722f79ac441b"
+    },
+    {
+      "file": "1280-9e-viewport.png",
+      "width": 1280,
+      "number": "9(e)",
+      "firstResponseBottom": 581.640625,
+      "sha256": "2e13986f4c940e083884a00e1612222efa582b9f8f570fada2b15ead22e27b7f"
+    },
+    {
+      "file": "1280-9e-full.png",
+      "width": 1280,
+      "number": "9(e)",
+      "firstResponseBottom": 581.640625,
+      "sha256": "e009d475b05cf1a551f44ca55d8b1280910e71b4d7f22c296508aa2209edf6d2"
+    },
+    {
+      "file": "1280-10e-viewport.png",
+      "width": 1280,
+      "number": "10(e)",
+      "firstResponseBottom": 580.25,
+      "sha256": "0c18df9e67ccade889ea76371e591bed58c06140b012080cc389db320a6f0480"
+    },
+    {
+      "file": "320-review-5b.png",
+      "width": 320,
+      "number": "5(b)",
+      "kind": "Actual full fifty-part UI submission; controlled partial/manual decisions",
+      "sha256": "a79eae067269b295596faa34b63cfe8118be7336c6e216f413ea6ee59ce7198d"
+    },
+    {
+      "file": "320-review-7b.png",
+      "width": 320,
+      "number": "7(b)",
+      "kind": "Actual full fifty-part UI submission; controlled partial/manual decisions",
+      "sha256": "a442eb59f47572de50a70f72045464ddcae99b615b3c5539cfbf2fefe1e14d64"
+    },
+    {
+      "file": "320-review-9e.png",
+      "width": 320,
+      "number": "9(e)",
+      "kind": "Actual full fifty-part UI submission; controlled partial/manual decisions",
+      "sha256": "1b6037f31a003a6b13eae27ad6524d0cdeac20f07a1767cff30f4730484c679f"
+    },
+    {
+      "file": "320-reviewed-result-viewport.png",
+      "width": 320,
+      "kind": "Self-reviewed total, not examiner grade",
+      "sha256": "73bcc947ded24d1ab337c81ad11eb203be87285c8bffe8e8153575f22c512385"
+    },
+    {
+      "file": "1280-review-5b.png",
+      "width": 1280,
+      "number": "5(b)",
+      "kind": "Actual full fifty-part UI submission; controlled partial/manual decisions",
+      "sha256": "632ae386733773cd8ef33443c8ffcdc263ee2ff8d313938789cd2f5b59c1668a"
+    },
+    {
+      "file": "1280-review-7b.png",
+      "width": 1280,
+      "number": "7(b)",
+      "kind": "Actual full fifty-part UI submission; controlled partial/manual decisions",
+      "sha256": "3a8ac27c1ed46a87c0ed66e26b806b29a41c5b36855be6143361e7d2dd601e7b"
+    },
+    {
+      "file": "1280-review-9e.png",
+      "width": 1280,
+      "number": "9(e)",
+      "kind": "Actual full fifty-part UI submission; controlled partial/manual decisions",
+      "sha256": "b882744575b2090c4c836e6a1d7833687b6919fc79b85942bd33c5786a2956aa"
+    },
+    {
+      "file": "1280-reviewed-result-viewport.png",
+      "width": 1280,
+      "kind": "Self-reviewed total, not examiner grade",
+      "sha256": "b3afd4453c15f441502026a976def4f38b8ef7a53f7a1a27edb7b4fe682cb82e"
+    }
+  ],
+  "personallyInspected": [
+    "320-intro-viewport.png",
+    "320-intro-full.png",
+    "320-1c-viewport.png",
+    "320-1c-full.png",
+    "320-1e-viewport.png",
+    "320-3a-viewport.png",
+    "320-3a-full.png",
+    "320-3e-viewport.png",
+    "320-3e-full.png",
+    "320-4a-viewport.png",
+    "320-4a-full.png",
+    "320-7b-viewport.png",
+    "320-7b-full.png",
+    "320-9b-viewport.png",
+    "320-9b-full.png",
+    "320-9e-viewport.png",
+    "320-9e-full.png",
+    "320-10e-viewport.png",
+    "1280-intro-viewport.png",
+    "1280-intro-full.png",
+    "1280-1c-viewport.png",
+    "1280-1c-full.png",
+    "1280-1e-viewport.png",
+    "1280-3a-viewport.png",
+    "1280-3a-full.png",
+    "1280-3e-viewport.png",
+    "1280-3e-full.png",
+    "1280-4a-viewport.png",
+    "1280-4a-full.png",
+    "1280-7b-viewport.png",
+    "1280-7b-full.png",
+    "1280-9b-viewport.png",
+    "1280-9b-full.png",
+    "1280-9e-viewport.png",
+    "1280-9e-full.png",
+    "1280-10e-viewport.png",
+    "320-review-5b.png",
+    "320-review-7b.png",
+    "320-review-9e.png",
+    "320-reviewed-result-viewport.png",
+    "1280-review-5b.png",
+    "1280-review-7b.png",
+    "1280-review-9e.png",
+    "1280-reviewed-result-viewport.png"
+  ],
+  "accepted": true,
+  "validation": "V6 final types, lint, 14 affected units and production build actual exit 0. Corrected fresh eight browser cases passed 1.4m actual exit 0; earlier V5 20 affected cases passed 5.7m. Whole 2648-case regression remains pending.",
+  "sourceHashes": {
+    "src/lib/progress.ts": "cabff0cc99dd295daf9eebf46e9f5cef64575e805d9b430dcadad60ff3733f49",
+    "src/lib/exam-paper-review.ts": "cfc56fa9c643cfd6f14b2dc8a39cb59ed0befdec2920b2ea6062630b919048ca",
+    "src/content/full-assessments.ts": "fb033cd4fdc219ac45f966c183d7c5cadb1f81cbb2152a4c7faa22724f83978f",
+    "src/content/assessments.ts": "faf0492249808a06a78a5f68a9ce02c2d6271d3d18678fd23df17e9617eb20dc",
+    "src/content/curriculum.ts": "9e9b3607f548b0ca56b5078302774bec0b227b66e89aa9315c4ae0dd4f1a1b8a",
+    "src/content/types.ts": "68733ccf085938f0e5901568904e321c1405bcc96004e9a835b271e392b4a8b3",
+    "src/content/exam-paper-types.ts": "7897f2704cd58874dbb8825d2789ba7476e838e5202e0562fe94c8c21d947fca",
+    "src/content/paper1-foundation-full.ts": "0b43f9b776db96eddd56670d8b84ffd6ae5ffdb8ed736e1cffc42632565474ee",
+    "src/components/ShellDiagram.tsx": "69740bb0a7b1ece01745cc6176761aeca761c05356eaff71e989743b4ebc5590",
+    "src/components/QuestionInput.tsx": "cbf1b7d0f5b7e1c2692a8452f4f6304f1cb842f575061030726117e4409b9a39",
+    "src/components/ProfileDrawingInput.tsx": "c35072cf39f2b80535558cfffca1d2681caf9bd8cf7024ccd97ed173a350b1e9",
+    "src/components/PaperClock.tsx": "fe970552db8e3693b04d3362c8eb89851c6d5e0b6266352595ec9d04306a97fe",
+    "src/components/ExamPaperReview.tsx": "373508c0d5302a8305ac2345d1056e420d4a265249b613344a265fb8be090c3b",
+    "src/components/AssessmentSession.tsx": "31db3668edb7615b26cbcd5c3681ea3ba52028af4c22c9647efce638cdb5ae65",
+    "src/components/StudyTools.tsx": "8be3cff244b0892e8fb52f4dd9527b32ed8ce291096ab5e4f9f70a66ae86ebcc",
+    "src/app/globals.css": "13cd5ee78725ea2bf7f1fa1014e22e650fc097534de36341296232f2b1ee8f50",
+    "src/app/coverage/page.tsx": "539a23fb2b49197bb1bb1deb750ac23ff2e5b94b5b405715510655153e35cbe7",
+    "src/app/exams/[slug]/page.tsx": "910a479fce72148f4936319d76d5770831ffaa766ea1ff59acf299fcc57bfb32",
+    "tests/full-paper1-foundation.browser.spec.ts": "473c78ba25d7c735684d5be034a7d7734791908c6d52ae47084a8ea2d83cd2c7",
+    "tests/full-paper1-foundation.unit.spec.ts": "c59dfaf6ed7e0d7e6d3aeb19227e63dea5b6927b8f1a4d09c9278fb4f37e38a7"
+  }
+}

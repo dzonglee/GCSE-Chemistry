@@ -111,6 +111,8 @@ export interface Question {
   cellsComparison?: import("../components/CellsComparison").CellsComparisonData;
   bondReaction?: string;
   profileDrawing?: boolean;
+  compactProfileInstructions?: boolean;
+  readableShellDiagram?: boolean;
   reactionProfile?: {
     reactant: number;
     product: number;

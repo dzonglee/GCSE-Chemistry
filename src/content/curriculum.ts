@@ -1,3 +1,4 @@
+import { paper1FoundationFull } from "./paper1-foundation-full";
 import {
   haberJourney,
   haberExposureFamilies,
@@ -4196,7 +4197,8 @@ export const questionById = (id: string) =>
       ...l.checks,
       ...(l.journey ? tasks(l.journey) : []),
     ])
-    .find((q) => q.id === id);
+    .find((q) => q.id === id) ??
+  paper1FoundationFull.parts.find((part) => part.question.id === id)?.question;
 
 const nanoLesson = lessons.find(
   (l) => l.slug === "particles-and-nanoparticles",

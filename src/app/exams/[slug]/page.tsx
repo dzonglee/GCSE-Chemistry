@@ -1,9 +1,12 @@
 import { notFound } from "next/navigation";
 import { papers } from "@/content/assessments";
 import { extendedPapers } from "@/content/extended-assessments";
+import { fullPapers } from "@/content/full-assessments";
 import { AssessmentPage } from "@/components/StudyTools";
 export function generateStaticParams() {
-  return [...extendedPapers, ...papers].map((a) => ({ slug: a.slug }));
+  return [...fullPapers, ...extendedPapers, ...papers].map((a) => ({
+    slug: a.slug,
+  }));
 }
 export default async function Page({
   params,
@@ -11,7 +14,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const assessment = [...extendedPapers, ...papers].find(
+  const assessment = [...fullPapers, ...extendedPapers, ...papers].find(
     (a) => a.slug === slug,
   );
   if (!assessment) notFound();

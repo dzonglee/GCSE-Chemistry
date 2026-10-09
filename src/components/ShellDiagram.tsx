@@ -7,6 +7,8 @@ export function ShellDiagram({
   textLegend = false,
   tightView = false,
   viewRings = counts.length,
+  omitCentreLabel = false,
+  omitShellLabels = false,
 }: {
   counts: readonly number[];
   label?: string;
@@ -15,6 +17,8 @@ export function ShellDiagram({
   textLegend?: boolean;
   tightView?: boolean;
   viewRings?: number;
+  omitCentreLabel?: boolean;
+  omitShellLabels?: boolean;
 }) {
   const rings = guides ? 4 : Math.max(1, counts.length);
   const radius = 42 + (Math.max(rings, viewRings) - 1) * 36;
@@ -33,15 +37,17 @@ export function ShellDiagram({
         data-shells={counts.join(",")}
       >
         <circle cx="170" cy="170" r="21" fill="#edf0ff" stroke="#cbd4ee" />
-        <text
-          x="170"
-          y="174"
-          textAnchor="middle"
-          fill="#283784"
-          fontSize={labelFontSize}
-        >
-          nucleus
-        </text>
+        {!omitCentreLabel && (
+          <text
+            x="170"
+            y="174"
+            textAnchor="middle"
+            fill="#283784"
+            fontSize={labelFontSize}
+          >
+            nucleus
+          </text>
+        )}
         {Array.from({ length: rings }, (_, shell) => {
           const radius = 42 + shell * 36;
           const count = counts[shell] ?? 0;
@@ -56,14 +62,16 @@ export function ShellDiagram({
                 strokeWidth="1.5"
                 strokeDasharray={count ? undefined : "4 4"}
               />
-              <text
-                x="174"
-                y={170 - radius + 13}
-                fontSize={labelFontSize}
-                fill="#4b5563"
-              >
-                {shell + 1}
-              </text>
+              {!omitShellLabels && (
+                <text
+                  x="174"
+                  y={170 - radius + 13}
+                  fontSize={labelFontSize}
+                  fill="#4b5563"
+                >
+                  {shell + 1}
+                </text>
+              )}
               {Array.from({ length: count }, (_, i) => {
                 const angle = (i * 2 * Math.PI) / count - Math.PI / 2 + 0.2;
                 return (
