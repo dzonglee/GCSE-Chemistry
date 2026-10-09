@@ -1,0 +1,32 @@
+
+> gcse-chemistry@0.1.0 test:unit
+> playwright test --config=playwright.unit.config.ts ion-tests.unit.spec.ts ion-equations.unit.spec.ts
+
+
+Running 14 tests using 2 workers
+
+(node:55502) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:55546) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55545) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55546) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+  ✓   2 tests/ion-tests.unit.spec.ts:37:5 › one authored ion journey covers every source, specific recovery, groups and sealed forms (38ms)
+  ✓   3 tests/ion-tests.unit.spec.ts:70:5 › literal independent specification contracts cover flame, hydroxide and anion methods (5ms)
+  ✓   1 tests/ion-equations.unit.spec.ts:30:5 › all95 original ion definitions, stage indices and reserved forms survive the append (123ms)
+  ✓   5 tests/ion-equations.unit.spec.ts:63:5 › independent literal chemistry contracts conserve every element and retain correct states and spectators (25ms)
+  ✓   6 tests/ion-equations.unit.spec.ts:104:5 › syntax distinguishes malformed bytes from readable wrong chemistry without imposing an automatic examiner mark (12ms)
+  ✓   7 tests/ion-equations.unit.spec.ts:136:5 › raw malformed and scientifically wrong drafts remain byte-exact through saved decoding (2ms)
+  ✓   8 tests/ion-equations.unit.spec.ts:147:5 › shown copper and helped equivalent iron/aluminium writing cannot become fresh on another form (27ms)
+  ✓   4 tests/ion-tests.unit.spec.ts:124:5 › all actual board adapters retain scientific wrong choices and enforce single-edit anchored histories (677ms)
+  ✓   9 tests/ion-tests.unit.spec.ts:162:5 › a same-mode foreign original cannot pass the active model or progress decoder (2ms)
+  ✓  10 tests/ion-tests.unit.spec.ts:190:5 › six hydroxide equations independently conserve metal, oxygen, hydrogen and charge (4ms)
+  ✓  11 tests/ion-tests.unit.spec.ts:232:5 › reagent contamination and incomplete records never identify a replacement ion (2ms)
+  ✓  12 tests/ion-tests.unit.spec.ts:260:5 › authored numeric constructions mark actual coefficients; extended plans remain honest self-review (48ms)
+  ✓  13 tests/ion-tests.unit.spec.ts:279:5 › legacy exposure and direct related reasoning remain globally conservative (21ms)
+  ✓  14 tests/ion-tests.unit.spec.ts:302:5 › actual 3D portions keep unchosen and wrong selection states without fabricated observations (2.2s)
+
+  14 passed (9.6s)

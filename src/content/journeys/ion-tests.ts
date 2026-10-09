@@ -1,5 +1,12 @@
 import type { LearningTask, LessonJourney } from "../types";
 import type { IonMode } from "../../lib/ion-tests";
+import {
+  ionWritingRefresher,
+  ionWritingGuided,
+  ionWritingPractice,
+  ionWritingChecks,
+  ionWritingReviews,
+} from "./ion-equation-writing";
 export type IonGiven = {
   title: string;
   rows: { label: string; text: string }[];
@@ -1548,3 +1555,61 @@ export const ionTestsJourney: LessonJourney = {
     ),
   ],
 };
+
+// Append after original task construction/exposure composition. Saved indices,
+// original forms, native records and version1 are unchanged.
+refresher.push(ionWritingRefresher);
+guided.push(ionWritingGuided);
+practice.push(...ionWritingPractice);
+checkForms.push(...ionWritingChecks);
+reviewForms.push(...ionWritingReviews);
+allIonTasks.push(
+  ionWritingRefresher,
+  ionWritingGuided,
+  ...ionWritingPractice,
+  ...ionWritingChecks.flat(),
+  ...ionWritingReviews.flat(),
+);
+// Keep the existing conservative valence families across representations: a
+// supplied hydroxide formula is prior help for constructing that same family.
+for (const q of [
+  ionWritingRefresher,
+  ionWritingGuided,
+  ...ionWritingPractice,
+  ...ionWritingChecks.flat(),
+  ...ionWritingReviews.flat(),
+]) {
+  const trivalent = [
+    ionWritingPractice[1].id,
+    ionWritingChecks[0][0].id,
+    ionWritingReviews[1][0].id,
+  ].includes(q.id);
+  q.exposureAliases = [
+    ...new Set([
+      ...(q.exposureAliases ?? []),
+      ...(trivalent
+        ? ionExposureFamilies.trivalentEq
+        : ionExposureFamilies.divalentEq
+      ).map(id),
+    ]),
+  ];
+}
+for (const q of ionWritingPractice)
+  ionRecoveryRoutes[q.id] = [ionWritingRefresher.id];
+const originalMolecular = practice.find((q) => q.id === id("p-molecular"))!;
+originalMolecular.exposureAliases = [
+  ...new Set([
+    ...(originalMolecular.exposureAliases ?? []),
+    ionWritingRefresher.id,
+    ionWritingChecks[1][0].id,
+  ]),
+];
+ionTestsJourney.practiceGroups!.push({
+  label: "Complete precipitation equations",
+  taskIds: ionWritingPractice.map((q) => q.id),
+});
+ionTestsJourney.outcomes!.push(
+  "Construct complete hydroxide precipitation equations from named solutions and identify unchanged aqueous spectator ions.",
+);
+ionTestsJourney.scopeNote +=
+  " The balanced-equation and state-symbol demands are mandatory; complete molecular forms and spectator-ion interpretation provide supporting transfer. This common-tier supplement does not require independent Higher-only ionic-equation writing. New written forms enter the third/fourth rotation; original saved forms are preserved.";
