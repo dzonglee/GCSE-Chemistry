@@ -20,7 +20,9 @@ test("existing Foundation shared lesson retains532 legacy identities and canonic
   const p = emptyProgress(),
     work = emptyWork();
   work.taskModels = {};
-  for (const q of j.guided) {
+  const native = j.guided.filter((q) => q.model);
+  expect(native).toHaveLength(5);
+  for (const q of native) {
     const b = initialBoard(q.model!);
     expect(validHistory(q.model!, [b])).toBe(true);
     expect(validHistory(q.model!, [])).toBe(false);

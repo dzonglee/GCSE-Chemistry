@@ -57,9 +57,11 @@ export function DetailedLesson({
             : fullJourney;
   const work = data.work[lesson.slug] ?? emptyWork();
   const section = work.section;
+  const saltLesson = lesson.slug === "making-soluble-salts";
   const warmupAfterResponse =
-    lesson.slug === "yield-and-atom-economy" &&
-    (section === "check" || section === "review");
+    saltLesson ||
+    (lesson.slug === "yield-and-atom-economy" &&
+      (section === "check" || section === "review"));
   const stage: LearningStage =
     section === "practice" ? "practice" : (work.learning?.stage ?? "guided");
   const list = journey[stage];
@@ -279,6 +281,7 @@ export function DetailedLesson({
   ].includes(lesson.slug);
   const compactReview =
     (compactYieldReview ||
+      saltLesson ||
       compactCondensationReview ||
       compactIonReview ||
       lesson.slug === "inside-an-atom" ||
@@ -320,6 +323,7 @@ export function DetailedLesson({
   const reviewScheduleAfter =
     compactReview &&
     (compactYieldReview ||
+      saltLesson ||
       compactCondensationReview ||
       compactIonReview ||
       lesson.slug === "balancing-equations" ||
@@ -532,6 +536,7 @@ export function DetailedLesson({
             <AssessmentSession
               id={lesson.slug}
               navigationAfterResponse={
+                saltLesson ||
                 mixedPolymer ||
                 mixedNatural ||
                 lesson.slug === "ph-scale-and-indicators" ||
@@ -654,6 +659,7 @@ export function DetailedLesson({
       ) : (
         <section
           className="sample-task-panel"
+          data-salt-heating={saltLesson || undefined}
           data-yield-reversible={
             q.id.startsWith("py-v1-reversible-") || undefined
           }
@@ -1003,6 +1009,13 @@ export function DetailedLesson({
             <p>{journey.introduction}</p>
           </details>
         </section>
+      )}
+      {saltLesson && section !== "check" && section !== "review" && (
+        <p className="sample-learning-note">
+          <button className="text-button" onClick={() => choose("warmup", 0)}>
+            Rusty? Try the warm-up first
+          </button>
+        </p>
       )}
       <div className="sample-extras">
         <details>

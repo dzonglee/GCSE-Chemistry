@@ -8385,3 +8385,103 @@ body:has(.sample-lesson) .topic-number {
     font-size: 22px;
   }
 }
+
+/* Soluble-salt heater transfer: reach the writing before supporting review notes. */
+.sample-task-panel[data-salt-heating],
+.assessment-session > .question-panel[data-salt-heating] {
+  padding: 16px;
+}
+.sample-task-panel[data-salt-heating] > h2,
+.question-panel[data-salt-heating] h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.sample-task-panel[data-salt-heating] textarea,
+.question-panel[data-salt-heating] textarea {
+  height: 104px;
+  min-height: 104px;
+}
+.assessment-session:has(> .question-panel[data-salt-heating]) .session-heading {
+  margin: 8px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.assessment-session:has(> .question-panel[data-salt-heating]) > progress {
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+}
+.question-panel[data-salt-heating] > .eyebrow {
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="making-soluble-salts"]:has([data-salt-heating])
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+  .sample-task-panel[data-salt-heating],
+  .assessment-session > .question-panel[data-salt-heating] {
+    padding: 12px;
+  }
+  .sample-task-panel[data-salt-heating] > h2,
+  .question-panel[data-salt-heating] h2 {
+    font-size: 20px;
+  }
+  .sample-task-panel[data-salt-heating] textarea,
+  .question-panel[data-salt-heating] textarea {
+    height: 84px;
+    min-height: 84px;
+  }
+  .question-panel[data-salt-heating] .written-equation-prompt {
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 8px 0;
+  }
+}
+
+.sample-task-panel[data-salt-heating] .question-navigation {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+}
+.sample-task-panel[data-salt-heating] .question-navigation button {
+  flex: 0 0 auto;
+}
+.sample-task-panel[data-salt-heating] .sample-task-topline {
+  margin-bottom: 8px;
+}
+.sample-task-panel[data-salt-heating] .sample-task-prompt {
+  margin-bottom: 12px;
+}
+
+.assessment-session > .question-panel[data-salt-heating] {
+  margin-top: 4px;
+}
+
+/* The original five salt workbenches share the same readable preparation layout. */
+.sample-lesson[data-lesson="making-soluble-salts"] .salt-workbench h3 {
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0 0 10px;
+}
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="making-soluble-salts"] .salt-workbench {
+    padding: 12px;
+  }
+  .sample-lesson[data-lesson="making-soluble-salts"]
+    .salt-workbench
+    .metal-predictions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sample-lesson[data-lesson="making-soluble-salts"] .salt-workbench h3 {
+    font-size: 18px;
+  }
+  .sample-task-panel[data-salt-heating] .sample-task-prompt {
+    font-size: 15px;
+    line-height: 1.35;
+  }
+  .sample-task-panel[data-salt-heating] .sample-task-answer .question-panel {
+    padding: 12px;
+  }
+}

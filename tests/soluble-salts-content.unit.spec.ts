@@ -1,16 +1,16 @@
 import { test, expect } from "@playwright/test";
 import { solubleSaltsJourney as j } from "../src/content/journeys/making-soluble-salts";
 import { tasks } from "../src/content/journeys/helpers";
-test("49 authored demands reserve both independent forms, genuine retrieval and six written self-reviews", () => {
+test("original49 demands retain their forms; eight heater transfers add deferred manual review", () => {
   const all = tasks(j);
-  expect(all).toHaveLength(49);
-  expect(new Set(all.map((q) => q.id)).size).toBe(49);
-  expect(j.refresher).toHaveLength(6);
-  expect(j.guided).toHaveLength(5);
-  expect(j.practice).toHaveLength(20);
-  expect(all.filter((q) => q.rubric)).toHaveLength(6);
-  for (const f of j.checkForms) expect(f).toHaveLength(5);
-  for (const f of j.reviewForms) expect(f).toHaveLength(3);
+  expect(all).toHaveLength(57);
+  expect(new Set(all.map((q) => q.id)).size).toBe(57);
+  expect(j.refresher).toHaveLength(7);
+  expect(j.guided).toHaveLength(6);
+  expect(j.practice).toHaveLength(22);
+  expect(all.filter((q) => q.rubric)).toHaveLength(12);
+  expect(j.checkForms.map((f) => f.length)).toEqual([5, 5, 1, 1]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([3, 3, 1, 1]);
   for (const q of j.practice)
     expect(j.refresher.some((r) => r.id === q.followUp)).toBe(true);
 });

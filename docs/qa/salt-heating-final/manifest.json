@@ -1,0 +1,129 @@
+{
+  "build": "2mZz17b2nZShC_VzhiQDf",
+  "captures": [
+    {
+      "file": "320-heater-choice-viewport.png",
+      "width": 320,
+      "id": "ss-v1-heating-g-devices",
+      "firstResponseBottom": 511.171875,
+      "sha256": "ee3202f6dc599090a40882468f9fd7b906355fb8f93c6c0b95b19e66e84032e4"
+    },
+    {
+      "file": "320-heater-choice-full.png",
+      "width": 320,
+      "id": "ss-v1-heating-g-devices",
+      "firstResponseBottom": 511.171875,
+      "sha256": "e0fe2c938d539e29ba563a38f3c5f1351ada319a93a8ed401987240675b2af2f"
+    },
+    {
+      "file": "320-full-method-practice-viewport.png",
+      "width": 320,
+      "id": "ss-v1-heating-p-copper",
+      "firstResponseBottom": 632.8125,
+      "sha256": "a81be5c2de29c9e91892e8894db23e2ae4f7644c496d6d54f0e0752035779c30"
+    },
+    {
+      "file": "320-full-method-practice-full.png",
+      "width": 320,
+      "id": "ss-v1-heating-p-copper",
+      "firstResponseBottom": 632.8125,
+      "sha256": "238b895238f57b417221928a7f7bc1514f870a59f2b8549f786b731cdfdb0bd6"
+    },
+    {
+      "file": "320-independent-wrong-method-viewport.png",
+      "width": 320,
+      "id": "ss-v1-heating-ca-magnesium",
+      "firstResponseBottom": 642.6875,
+      "sha256": "a65ba7a137fa57d32d1edafd2192a270db7957e3004796c9663d0a970c22dde6"
+    },
+    {
+      "file": "320-independent-wrong-method-full.png",
+      "width": 320,
+      "id": "ss-v1-heating-ca-magnesium",
+      "firstResponseBottom": 642.6875,
+      "sha256": "71a74b96ad6b4cc2715440b45e53e11f4fded491ff72990b1d84ea083b1e10e4"
+    },
+    {
+      "file": "320-separate-reference.png",
+      "width": 320,
+      "id": "ss-v1-heating-ca-magnesium",
+      "sha256": "78b08e719f5372bc45ffc5a0f996baccc1e2e99be7f4f87f1030dc6d8d39a0c9"
+    },
+    {
+      "file": "320-original-filtration-3d-viewport.png",
+      "width": 320,
+      "id": "ss-v1-g-filter",
+      "firstResponseBottom": 570.703125,
+      "sha256": "69fc0c2954f9b370abfcf9f4d76b04d427560d9f9b523e2aedf3f98712b9e892"
+    },
+    {
+      "file": "320-original-filtration-3d-full.png",
+      "width": 320,
+      "id": "ss-v1-g-filter",
+      "firstResponseBottom": 570.703125,
+      "sha256": "6a0ef9bb64865de915765e981d8d0c3c263df4eb8e9d9b9f98280f471b04024f"
+    },
+    {
+      "file": "1280-heater-choice-viewport.png",
+      "width": 1280,
+      "id": "ss-v1-heating-g-devices",
+      "firstResponseBottom": 505.078125,
+      "sha256": "346eaaf74b3eab75750afaaed083d5955bb78cf2a571846e74a45bfe28c27abd"
+    },
+    {
+      "file": "1280-heater-choice-full.png",
+      "width": 1280,
+      "id": "ss-v1-heating-g-devices",
+      "firstResponseBottom": 505.078125,
+      "sha256": "7396e100b80b446c143f5bcb2c9ed713c3ec20101bef7797cf89eee7f0e6b903"
+    },
+    {
+      "file": "1280-full-method-practice-viewport.png",
+      "width": 1280,
+      "id": "ss-v1-heating-p-copper",
+      "firstResponseBottom": 613.734375,
+      "sha256": "f746e0d7008d8552a05adef12f0423230d4340f710a93ee93dbd0b9fbbcc3da5"
+    },
+    {
+      "file": "1280-full-method-practice-full.png",
+      "width": 1280,
+      "id": "ss-v1-heating-p-copper",
+      "firstResponseBottom": 613.734375,
+      "sha256": "a9ed0720d7c606a54f6b53d15d5571c192ceecee5220abc13b9df645abdc3b76"
+    },
+    {
+      "file": "1280-independent-wrong-method-viewport.png",
+      "width": 1280,
+      "id": "ss-v1-heating-ca-magnesium",
+      "firstResponseBottom": 621.546875,
+      "sha256": "63a0a7b5d09a2b833c63a9569f70e5e21e18480eca66c1900179c238b1201326"
+    },
+    {
+      "file": "1280-independent-wrong-method-full.png",
+      "width": 1280,
+      "id": "ss-v1-heating-ca-magnesium",
+      "firstResponseBottom": 621.546875,
+      "sha256": "69aed75d5df460ae6bf2c9d23ba9e753a9b9bbbf2befd318d5b8753646cd800d"
+    },
+    {
+      "file": "1280-separate-reference.png",
+      "width": 1280,
+      "id": "ss-v1-heating-ca-magnesium",
+      "sha256": "a458fe51c0fe87fc5d06506a7ca81ebe2bb2f6584b32346e571dd7afbe9541c2"
+    },
+    {
+      "file": "1280-original-filtration-3d-viewport.png",
+      "width": 1280,
+      "id": "ss-v1-g-filter",
+      "firstResponseBottom": 578.421875,
+      "sha256": "374a3606360394e6fb0733ad89ada4c17807f77b039122abe1d3fb2e4aeafd53"
+    },
+    {
+      "file": "1280-original-filtration-3d-full.png",
+      "width": 1280,
+      "id": "ss-v1-g-filter",
+      "firstResponseBottom": 578.421875,
+      "sha256": "86ffd875e6292e29d3cb35cef5e7d0358a6503df4ecea7284229706ad8c0c6e0"
+    }
+  ]
+}

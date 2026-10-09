@@ -1,3 +1,4 @@
+import { extendSaltHeating } from "./salt-heating-writing";
 import type { LearningTask, LessonJourney, TaskModel } from "../types";
 import { choice, number } from "./helpers";
 const c = (
@@ -753,3 +754,6 @@ const recovery: Record<string, string> = {
 };
 for (const task of solubleSaltsJourney.practice)
   task.followUp = `ss-v1-${recovery[task.id.replace("ss-v1-", "")]}`;
+
+// Append practical heater transfer without changing original task identities/forms.
+extendSaltHeating(solubleSaltsJourney);
