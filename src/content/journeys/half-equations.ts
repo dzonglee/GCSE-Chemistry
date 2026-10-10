@@ -94,7 +94,7 @@ export const halfEquationsJourney: LessonJourney = {
   introduction:
     "Track electron gain and loss, then balance fixed chemical species using both atom counts and signed charge.",
   scopeNote:
-    "Higher/shared AQA4.4.1.4, the specified metal/acid redox in4.4.2.1 and electrode half equations4.4.3.5; related visibly bold Pearson Combined3.27–3.29. Foundation aqueous products and active/inert electrode practical reasoning are taught separately in the preceding lesson. Oxidation is electron loss; reduction is electron gain. Electrons have charge−1 and are not new atoms or protons. Gaining electrons makes the represented species charge more negative; losing electrons makes it more positive, with nuclear identity unchanged. A positive ion can be oxidised, as Fe2+ → Fe3+ +e−: charge sign alone does not name oxidation or reduction. In electrolytic cells cathode is negative/reduction and anode positive/oxidation. Mobile ions carry charge through electrolyte; electrons flow through the external circuit and electrodes, not as the ionic current carrier in solution. Half equations must retain each element and total charge; balance fixed formulas using coefficients, not by changing subscripts or ionic charges. Diatomic H2/Cl2/Br2/O2 products require two atoms per molecule. Hydroxide oxidation needs water:4OH− → O2 +2H2O +4e− retains O4H4, charge−4 including electrons. The true selected-atom asset shows four hydroxide ions before and O2 plus two bent104.5° water molecules afterwards; eight atomic IDs retained. Background solvent and hydration shells are omitted. Product atoms have charge0; four electrons leave into the external circuit, retaining total charge−4 when external transfer is included. Electrons are separately accounted charge, not atomic meshes or dissolved classical spheres. Comparison positions and frames are not migration paths, kinetics or a complete apparatus. Atom and charge balance can fail independently. Positive balanced multiples are accepted, as actual AQA2019Higher07.3 explicitly allows; only tasks explicitly requiring smallest integers reject an unsimplified multiple. Typed equations accept common charged ASCII/caret and Unicode forms, reordered terms, appropriate optional states and AQA’s equivalent oxidation notation subtracting charged electrons on the left; an uncharged e is not accepted. This is specific equation checking, not automatic partial examiner marks or readiness evidence. Full ionic redox equations cancel electron transfer; spectators retain their species and are omitted from the net ionic equation. Zinc/copper sulfate and copper/silver nitrate cases are supplied; Mg/Zn/Fe acid redox is limited to the stated HCl/H2SO4 GCSE cases, with Fe2+ supplied rather than invented Fe3+. Six written explanations remain self-reviewed.",
+    "Higher/shared AQA 4.4.1.4, the specified metal/acid redox in 4.4.2.1 and electrode half equations 4.4.3.5; related visibly bold Pearson Combined 3.27–3.29. Foundation aqueous products and active/inert electrode practical reasoning are taught separately in the preceding lesson. Oxidation is electron loss; reduction is electron gain. Electrons have charge −1 and are not new atoms or protons. Gaining electrons makes the represented species charge more negative; losing electrons makes it more positive, with nuclear identity unchanged. A positive ion can be oxidised, as Fe2+ → Fe3+ +e−: charge sign alone does not name oxidation or reduction. In electrolytic cells cathode is negative/reduction and anode positive/oxidation. Mobile ions carry charge through electrolyte; electrons flow through the external circuit and electrodes, not as the ionic current carrier in solution. Half equations must retain each element and total charge; balance fixed formulas using coefficients, not by changing subscripts or ionic charges. Diatomic H2/Cl2/Br2/O2 products require two atoms per molecule. Hydroxide oxidation needs water: 4OH− → O2 +2H2O +4e− retains O4H4, charge −4 including electrons. The true selected-atom asset shows four hydroxide ions before and O2 plus two bent 104.5° water molecules afterwards; eight atomic IDs retained. Background solvent and hydration shells are omitted. Product atoms have charge 0; four electrons leave into the external circuit, retaining total charge −4 when external transfer is included. Electrons are separately accounted charge, not atomic meshes or dissolved classical spheres. Comparison positions and frames are not migration paths, kinetics or a complete apparatus. Atom and charge balance can fail independently. Positive balanced multiples are accepted, as actual AQA 2019 Higher 07.3 explicitly allows; only tasks explicitly requiring smallest integers reject an unsimplified multiple. Typed equations accept common charged ASCII/caret and Unicode forms, reordered terms, appropriate optional states and AQA’s equivalent oxidation notation subtracting charged electrons on the left; an uncharged e is not accepted. This is specific equation checking, not automatic partial examiner marks or readiness evidence. Full ionic redox equations cancel electron transfer; spectators retain their species and are omitted from the net ionic equation. Zinc/copper sulfate and copper/silver nitrate cases are supplied; Mg/Zn/Fe acid redox is limited to the stated HCl/H2SO4 GCSE cases, with Fe2+ supplied rather than invented Fe3+. Six written explanations remain self-reviewed.",
   outcomes: [
     "Use electron gain/loss to explain signed charge change without changing protons.",
     "Write charged half equations that conserve atoms and total charge.",
@@ -106,7 +106,7 @@ export const halfEquationsJourney: LessonJourney = {
     n(
       "w-charge",
       "Recall total signed charge",
-      "A Cu2+ ion combines with two electrons of charge−1 each. What is the resulting total charge?",
+      "A Cu2+ ion combines with two electrons of charge −1 each. What is the resulting total charge?",
       0,
       "",
       "2 + 2 × (−1) = 0.",
@@ -118,7 +118,7 @@ export const halfEquationsJourney: LessonJourney = {
       "How many hydrogen atoms are represented by one H2 molecule?",
       2,
       "atoms",
-      "The subscript2 counts two H atoms.",
+      "The subscript 2 counts two H atoms.",
       "Keep the product formula fixed.",
     ),
   ],
@@ -129,12 +129,12 @@ export const halfEquationsJourney: LessonJourney = {
       "What happens to a species' charge when it gains one electron, with its nucleus unchanged?",
       "The charge decreases by 1",
       {
-        "The charge increases by 1": "An electron contributes−1.",
+        "The charge increases by 1": "An electron contributes −1.",
         "Its proton count decreases by 1":
           "Electron gain does not remove a proton.",
       },
       "Adding negative charge decreases the signed total.",
-      "Electrons have charge−1.",
+      "Electrons have charge −1.",
       m(
         "electrons",
         "Gain or lose one electron at a time; follow charge and classify redox.",
@@ -146,7 +146,7 @@ export const halfEquationsJourney: LessonJourney = {
       "How many electrons must Cu2+ gain to become neutral Cu?",
       2,
       "electrons",
-      "Two−1 electron charges balance+2.",
+      "Two −1 electron charges balance +2.",
       "Keep the nuclear identity.",
     ),
     n(
@@ -164,7 +164,7 @@ export const halfEquationsJourney: LessonJourney = {
       "Write the balanced oxidation half equation for OH− giving O2, H2O and electrons.",
       "hydroxide",
       "4OH- -> O2 + 2H2O + 4e-",
-      "Four oxygen and four hydrogen atoms are retained; both sides have total charge−4.",
+      "Four oxygen and four hydrogen atoms are retained; both sides have total charge −4.",
       "Balance H and O, then charge.",
       m(
         "anion",
@@ -177,10 +177,10 @@ export const halfEquationsJourney: LessonJourney = {
       "Cu2+ + e− → Cu has which balance?",
       "Atoms only",
       {
-        "Charge only": "Copper atoms match, but+2−1 does not equal0.",
-        "Both atoms and charge": "The left charge is+1, not0.",
+        "Charge only": "Copper atoms match, but+2−1 does not equal 0.",
+        "Both atoms and charge": "The left charge is +1, not 0.",
       },
-      "One Cu is on each side; charges+1 and0 differ.",
+      "One Cu is on each side; charges +1 and 0 differ.",
       "Compute both totals.",
       m("diagnose", "Classify atom and charge balance independently."),
     ),
@@ -209,8 +209,8 @@ export const halfEquationsJourney: LessonJourney = {
         "Cu2+ → Cu: how many electrons are gained?",
         2,
         "electrons",
-        "Cu2+ gains two electrons to reach charge0; this is reduction.",
-        "Each gained electron lowers the charge by1.",
+        "Cu2+ gains two electrons to reach charge 0; this is reduction.",
+        "Each gained electron lowers the charge by 1.",
         m("electrons", "Gain or lose one electron per step."),
       ),
       openingHint: true,
@@ -234,7 +234,7 @@ export const halfEquationsJourney: LessonJourney = {
       "Write the oxidation half equation for hydroxide ions producing O2 and H2O at a positive inert anode.",
       "hydroxide",
       "4OH- -> O2 + 2H2O + 4e-",
-      "O4H4 is conserved and both sides have charge−4.",
+      "O4H4 is conserved and both sides have charge −4.",
       "Water retains the H atoms.",
       m(
         "anion",
@@ -248,8 +248,8 @@ export const halfEquationsJourney: LessonJourney = {
       "Atoms balance but charge does not",
       {
         "Charge balances but atoms do not":
-          "One Cu is on each side, while left charge+1 differs from0.",
-        "Both balance": "One electron is insufficient to balance+2.",
+          "One Cu is on each side, while left charge +1 differs from 0.",
+        "Both balance": "One electron is insufficient to balance +2.",
       },
       "Atom balance alone is insufficient.",
       "Compare element totals and signed charge separately.",
@@ -289,7 +289,7 @@ export const halfEquationsJourney: LessonJourney = {
       "Write the cathode half equation for Ag+ becoming Ag.",
       "silver",
       "Ag+ + e- -> Ag",
-      "One+1 charge is balanced by one−1 electron.",
+      "One +1 charge is balanced by one −1 electron.",
       "Retain one Ag atom.",
     ),
     e(
@@ -298,7 +298,7 @@ export const halfEquationsJourney: LessonJourney = {
       "Write the half equation for Al3+ becoming Al in the supplied molten extraction cell.",
       "aluminium",
       "Al3+ + 3e- -> Al",
-      "Three electrons balance+3.",
+      "Three electrons balance +3.",
       "The starting species is an ion.",
       m(
         "cation",
@@ -311,7 +311,7 @@ export const halfEquationsJourney: LessonJourney = {
       "Write the supplied GCSE half equation for H+ producing H2 at cathode.",
       "hydrogen",
       "2H+ + 2e- -> H2",
-      "Two H atoms and total charge0 on each side.",
+      "Two H atoms and total charge 0 on each side.",
       "Do not change H2 into H.",
       m("cation", "A diatomic product changes the required ion coefficient."),
     ),
@@ -322,7 +322,7 @@ export const halfEquationsJourney: LessonJourney = {
       "Aluminium ions gain electrons",
       {
         "Aluminium atoms gain electrons to form Al3+":
-          "Gain makes charge more negative, not+3.",
+          "Gain makes charge more negative, not +3.",
         "Aluminium ions lose electrons":
           "That would be oxidation, not the cathode reduction.",
       },
@@ -345,16 +345,16 @@ export const halfEquationsJourney: LessonJourney = {
       "Write the half equation for Br− producing Br2 at anode.",
       "bromide",
       "2Br- -> Br2 + 2e-",
-      "Two Br atoms and charge−2 on each side.",
+      "Two Br atoms and charge −2 on each side.",
       "Keep Br2 and electron charge.",
     ),
     e(
       "p-oxide",
       "Distinguish oxide from oxygen",
-      "Monatomic oxide ions have charge2−. Write their oxidation half equation producing O2.",
+      "Monatomic oxide ions have charge 2−. Write their oxidation half equation producing O2.",
       "oxide",
       "2O^2- -> O2 + 4e-",
-      "Two oxide ions supply two O atoms and charge−4; four electrons retain that charge.",
+      "Two oxide ions supply two O atoms and charge −4; four electrons retain that charge.",
       "O^2- is monatomic oxide; O2 is the neutral molecule.",
       m(
         "anion",
@@ -367,7 +367,7 @@ export const halfEquationsJourney: LessonJourney = {
       "Write the oxidation half equation for OH− producing O2 and water.",
       "hydroxide",
       "4OH- -> O2 + 2H2O + 4e-",
-      "The four H atoms remain in two water molecules; four O atoms and charge−4 are retained.",
+      "The four H atoms remain in two water molecules; four O atoms and charge −4 are retained.",
       "Do not discard H atoms.",
       m(
         "anion",
@@ -392,7 +392,7 @@ export const halfEquationsJourney: LessonJourney = {
       "Sodium atoms become Na+ in a supplied displacement reaction. Write the oxidation half equation.",
       "sodiumOxidation",
       "Na -> Na+ + e-",
-      "Losing one electron gives+1; right-side charges+1−1=0.",
+      "Losing one electron gives +1; right-side charges +1−1=0.",
       "Use charged e−, not uncharged e.",
     ),
     e(
@@ -419,7 +419,7 @@ export const halfEquationsJourney: LessonJourney = {
         "No: its electrons should be reactants":
           "Chloride oxidation releases electrons.",
       },
-      "Four Cl atoms and charge−4 are on each side.",
+      "Four Cl atoms and charge −4 are on each side.",
       "Check totals before simplifying.",
     ),
     e(
@@ -428,7 +428,7 @@ export const halfEquationsJourney: LessonJourney = {
       "Write Cu2+ → Cu reduction using the smallest whole-number coefficients.",
       "copper",
       "Cu2+ + 2e- -> Cu",
-      "Coefficients1,2,1 are the simplest; an unsimplified multiple is balanced but does not meet this explicit demand.",
+      "Coefficients 1, 2, 1 are the simplest; an unsimplified multiple is balanced but does not meet this explicit demand.",
       "Balance first, then simplify.",
       undefined,
       true,
@@ -442,7 +442,7 @@ export const halfEquationsJourney: LessonJourney = {
         "Atoms only": "There is one Cu before and two after.",
         Both: "Charge balance cannot fix the extra Cu atom.",
       },
-      "Both charges are0, but copper counts1 and2 differ.",
+      "Both charges are 0, but copper counts 1 and 2 differ.",
       "Do not stop after checking charge.",
       m("diagnose", "Select the charge-only record."),
     ),
@@ -456,7 +456,7 @@ export const halfEquationsJourney: LessonJourney = {
         "Sulfate oxidised; Zn reduced":
           "Sulfate is unchanged in the supplied solution reaction.",
       },
-      "Zn goes0→+2 through loss; Cu2+ goes+2→0 through gain.",
+      "Zn goes 0→+2 through loss; Cu2+ goes +2→0 through gain.",
       "Follow electron transfer.",
       m("ionic", "Separate reactive species from the sulfate spectator."),
     ),
@@ -466,7 +466,7 @@ export const halfEquationsJourney: LessonJourney = {
       "Magnesium reacts with hydrochloric acid, giving Mg2+ and H2. Write the net ionic equation; chloride is unchanged.",
       "netMagnesium",
       "Mg + 2H+ -> Mg2+ + H2",
-      "Mg loses two electrons, two H+ gain them; charge+2 and Mg1H2 remain.",
+      "Mg loses two electrons, two H+ gain them; charge +2 and Mg1H2 remain.",
       "Keep the diatomic gas and omit chloride.",
     ),
     e(
@@ -475,7 +475,7 @@ export const halfEquationsJourney: LessonJourney = {
       "Iron reacts with sulfuric acid in this GCSE case, forming Fe2+ and H2. Write the net ionic equation.",
       "netIron",
       "Fe + 2H+ -> Fe2+ + H2",
-      "Fe2+ is supplied; one Fe and two H atoms remain, charge+2 each side.",
+      "Fe2+ is supplied; one Fe and two H atoms remain, charge +2 each side.",
       "Do not invent Fe3+.",
       m("ionic", "Explore the iron/acid record."),
     ),
@@ -510,7 +510,7 @@ export const halfEquationsJourney: LessonJourney = {
         "Given Ni2+ gains electrons to become Ni, write that reduction half equation. This is a supplied reaction, not a request to predict aqueous products.",
         "nickel",
         "Ni2+ +2e- -> Ni",
-        "One Ni atom and total charge0 remain.",
+        "One Ni atom and total charge 0 remain.",
         "Keep the supplied species and balance charge.",
       ),
       e(
@@ -519,7 +519,7 @@ export const halfEquationsJourney: LessonJourney = {
         "Write the supplied oxidation half equation for I− producing I2.",
         "iodide",
         "2I- -> I2 +2e-",
-        "Two I atoms and charge−2 remain.",
+        "Two I atoms and charge −2 remain.",
         "Keep the neutral diatomic product.",
       ),
       c(
@@ -529,7 +529,7 @@ export const halfEquationsJourney: LessonJourney = {
         "Atoms only",
         {
           "Charge only": "There is one Al each side.",
-          "Both atoms and charge": "Left charge+1 differs from0.",
+          "Both atoms and charge": "Left charge +1 differs from 0.",
         },
         "Al counts match; charge does not.",
         "Check both constraints.",
@@ -565,7 +565,7 @@ export const halfEquationsJourney: LessonJourney = {
         "Write the half equation for Zn2+ producing Zn at the cathode in supplied molten zinc chloride.",
         "zincReduction",
         "Zn2+ +2e- -> Zn",
-        "One Zn atom and charge0 remain.",
+        "One Zn atom and charge 0 remain.",
         "Use the supplied molten case.",
       ),
       n(
@@ -574,7 +574,7 @@ export const halfEquationsJourney: LessonJourney = {
         "In 8OH− → 2O2 +4H2O +n e−, what value of n balances the total charge?",
         8,
         "electrons",
-        "Left charge−8 requires eight−1 electrons on the right.",
+        "Left charge −8 requires eight −1 electrons on the right.",
         "Water and oxygen are neutral.",
       ),
       e(
@@ -583,7 +583,7 @@ export const halfEquationsJourney: LessonJourney = {
         "In a supplied acid reaction, Fe becomes Fe2+. Write its oxidation half equation.",
         "ironMetalOxidation",
         "Fe -> Fe2+ +2e-",
-        "Charges0 and+2−2 agree.",
+        "Charges 0 and +2−2 agree.",
         "Keep the supplied iron-ion charge.",
       ),
       e(
@@ -592,7 +592,7 @@ export const halfEquationsJourney: LessonJourney = {
         "Zinc reacts with hydrochloric acid, forming Zn2+ and H2. Write the net ionic equation; chloride remains unchanged.",
         "netZincAcid",
         "Zn +2H+ -> Zn2+ +H2",
-        "Zn1H2 and charge+2 remain.",
+        "Zn1H2 and charge +2 remain.",
         "Omit the unchanged chloride.",
       ),
       w(
@@ -601,7 +601,7 @@ export const halfEquationsJourney: LessonJourney = {
         "Explain why 4OH− → O2 +4e− is not a balanced half equation even though its charges match.",
         "The starting ions contain four O and four H atoms. O2 contains only two O and no H. Adding two H2O retains the missing two O and four H; charge must also be checked.",
         [
-          "Identify matching charge−4.",
+          "Identify matching charge −4.",
           "Count O and H independently.",
           "Explain the required two water molecules.",
         ],
@@ -616,7 +616,7 @@ export const halfEquationsJourney: LessonJourney = {
         "Write the half equation for Na+ forming Na in supplied molten sodium chloride.",
         "sodium",
         "Na+ +e- -> Na",
-        "One Na atom and charge0 remain.",
+        "One Na atom and charge 0 remain.",
         "This supplied melt has no water.",
       ),
       c(
@@ -636,7 +636,7 @@ export const halfEquationsJourney: LessonJourney = {
         "ra-explain",
         "Delayed dual constraint",
         "Explain why balancing element counts alone cannot guarantee a correct half equation.",
-        "Element counts can match while the electron coefficient or electron side leaves unequal total charge. Each electron contributes−1, so atom conservation and charge conservation must both be checked.",
+        "Element counts can match while the electron coefficient or electron side leaves unequal total charge. Each electron contributes −1, so atom conservation and charge conservation must both be checked.",
         [
           "Check each element.",
           "Check signed total charge including electrons.",
@@ -651,7 +651,7 @@ export const halfEquationsJourney: LessonJourney = {
         "Given Fe3+ becomes Fe2+, write the supplied reduction half equation.",
         "ironReduction",
         "Fe3+ +e- -> Fe2+",
-        "An electron lowers+3 to+2; Fe remains Fe.",
+        "An electron lowers +3 to +2; Fe remains Fe.",
         "Keep both supplied ionic charges.",
       ),
       e(
@@ -660,16 +660,16 @@ export const halfEquationsJourney: LessonJourney = {
         "In the supplied copper/silver nitrate displacement, Cu becomes Cu2+ and Ag+ becomes Ag. Write the net ionic equation.",
         "netSilver",
         "Cu + 2Ag+ -> Cu2+ + 2Ag",
-        "One Cu and two Ag atoms remain; total charge+2 each side.",
+        "One Cu and two Ag atoms remain; total charge +2 each side.",
         "Match the transferred electrons and omit nitrate.",
       ),
       w(
         "rb-explain",
         "Delayed external charge account",
-        "The selected hydroxide model has charge−4 before and neutral molecular products after. Explain how charge is retained when electron transfer is included.",
-        "Four electrons of total charge−4 leave the anode into the external circuit. Neutral O2 and two H2O have charge0, so products plus that external electron transfer retain total−4; the electrons are not additional atoms.",
+        "The selected hydroxide model has charge −4 before and neutral molecular products after. Explain how charge is retained when electron transfer is included.",
+        "Four electrons of total charge −4 leave the anode into the external circuit. Neutral O2 and two H2O have charge 0, so products plus that external electron transfer retain total −4; the electrons are not additional atoms.",
         [
-          "Account for four electrons and their−4 charge.",
+          "Account for four electrons and their −4 charge.",
           "Include the external circuit rather than dissolved electrons.",
           "Retain all O4H4 atomic identities.",
         ],

@@ -149,7 +149,7 @@ test("reserved checks defer marking, retain drafts and separate actual seven-day
 
 test("all original practice works while two written explanations remain self-reviewed", async ({
   page,
-}) => {
+}, info) => {
   await page.goto(route);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   for (let i = 0; i < journey.practice.length; i++) {
@@ -181,6 +181,12 @@ test("all original practice works while two written explanations remain self-rev
       await expect(
         page.locator(".sample-task-answer [role=status]"),
       ).toContainText("That’s right.");
+    if (["he-v1-p-charge-only", "he-v1-p-minimum", "he-v1-p-carriers"].includes(q.id)) {
+      await page.locator("textarea").evaluateAll((fields) => {
+        for (const field of fields) field.scrollTop = 0;
+      });
+      await capture(page, `test-results/qa/half-equations-prose/${info.project.name}-${q.id}.png`);
+    }
   }
 });
 test("native electron changes preserve wrong direction, keyboard use, undo, atomic record reset and reload", async ({

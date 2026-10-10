@@ -1,0 +1,184 @@
+{
+  "source": "src/content/journeys/half-equations.ts",
+  "beforeSHA256": "5e1c7cb85f01c96ad83b6b54237de6cc26022eb96c57ac7451cd8180317499ff",
+  "afterSHA256": "aa4132b564dc4bbec9f5df1b1cd4b12353c2b3fec8b45449776afe5b23551228",
+  "edits": {
+    "AQA4.4": {
+      "to": "AQA 4.4",
+      "count": 1
+    },
+    "in4.4": {
+      "to": "in 4.4",
+      "count": 1
+    },
+    "equations4.4": {
+      "to": "equations 4.4",
+      "count": 1
+    },
+    "Combined3.27": {
+      "to": "Combined 3.27",
+      "count": 1
+    },
+    "water:4OH": {
+      "to": "water: 4OH",
+      "count": 1
+    },
+    "bent104.5": {
+      "to": "bent 104.5",
+      "count": 1
+    },
+    "AQA2019Higher07.3": {
+      "to": "AQA 2019 Higher 07.3",
+      "count": 1
+    },
+    "subscript2": {
+      "to": "subscript 2",
+      "count": 1
+    },
+    "contributes\u22121": {
+      "to": "contributes \u22121",
+      "count": 2
+    },
+    "Two\u22121": {
+      "to": "Two \u22121",
+      "count": 1
+    },
+    "balance+2": {
+      "to": "balance +2",
+      "count": 2
+    },
+    "equal0": {
+      "to": "equal 0",
+      "count": 1
+    },
+    "not0": {
+      "to": "not 0",
+      "count": 1
+    },
+    "charges+1": {
+      "to": "charges +1",
+      "count": 2
+    },
+    "and0": {
+      "to": "and 0",
+      "count": 1
+    },
+    "by1": {
+      "to": "by 1",
+      "count": 1
+    },
+    "from0": {
+      "to": "from 0",
+      "count": 2
+    },
+    "One+1": {
+      "to": "One +1",
+      "count": 1
+    },
+    "one\u22121": {
+      "to": "one \u22121",
+      "count": 1
+    },
+    "balance+3": {
+      "to": "balance +3",
+      "count": 1
+    },
+    "not+3": {
+      "to": "not +3",
+      "count": 1
+    },
+    "gives+1": {
+      "to": "gives +1",
+      "count": 1
+    },
+    "Coefficients1,2,1": {
+      "to": "Coefficients 1, 2, 1",
+      "count": 1
+    },
+    "are0": {
+      "to": "are 0",
+      "count": 1
+    },
+    "counts1": {
+      "to": "counts 1",
+      "count": 1
+    },
+    "and2": {
+      "to": "and 2",
+      "count": 1
+    },
+    "goes0": {
+      "to": "goes 0",
+      "count": 1
+    },
+    "goes+2": {
+      "to": "goes +2",
+      "count": 1
+    },
+    "eight\u22121": {
+      "to": "eight \u22121",
+      "count": 1
+    },
+    "Charges0": {
+      "to": "Charges 0",
+      "count": 1
+    },
+    "and+2": {
+      "to": "and +2",
+      "count": 1
+    },
+    "lowers+3": {
+      "to": "lowers +3",
+      "count": 1
+    },
+    "to+2": {
+      "to": "to +2",
+      "count": 1
+    },
+    "their\u22124": {
+      "to": "their \u22124",
+      "count": 1
+    },
+    "total\u22124": {
+      "to": "total \u22124",
+      "count": 1
+    },
+    "charge\u22121": {
+      "to": "charge \u22121",
+      "count": 3
+    },
+    "charge\u22124": {
+      "to": "charge \u22124",
+      "count": 10
+    },
+    "charge\u22122": {
+      "to": "charge \u22122",
+      "count": 2
+    },
+    "charge\u22128": {
+      "to": "charge \u22128",
+      "count": 1
+    },
+    "charge0": {
+      "to": "charge 0",
+      "count": 7
+    },
+    "charge+1": {
+      "to": "charge +1",
+      "count": 2
+    },
+    "charge+2": {
+      "to": "charge +2",
+      "count": 4
+    },
+    "charge2\u2212": {
+      "to": "charge 2\u2212",
+      "count": 1
+    },
+    "is+1": {
+      "to": "is +1",
+      "count": 1
+    }
+  },
+  "nonSpaceBytesIdentical": true
+}
