@@ -904,7 +904,7 @@ const practice = [
       ["afterNet", "Signed change after / g of carbon", 19],
     ],
     forestGiven,
-    "Before22−27=−5 g;after22+7−10=+19 g. Reduced uptake and added burn both change the budget.",
+    "Before 22−27=−5 g;after 22+7−10=+19 g. Reduced uptake and added burn both change the budget.",
     "Use entering minus leaving in each matched interval.",
   ),
   written(
@@ -934,7 +934,7 @@ const practice = [
     "Matched budgets have 40 g of returns. Uptake rises from 28 g to 35 g of carbon per interval. By how much does the positive atmospheric gain decrease?",
     7,
     "g of carbon",
-    "Before40−28=12 g;after40−35=5 g;decrease12−5=7 g. The new gain is still positive.",
+    "Before 40−28=12 g;after 40−35=5 g;decrease 12−5=7 g. The new gain is still positive.",
     "Find both gains, then their difference.",
   ),
   written(
@@ -968,7 +968,7 @@ const practice = [
     "Using the supplied original series, what is the summer-to-summer increase from Y1 to Y3?",
     4,
     "arbitrary units",
-    "204−200=+4 arbitrary units. The endpoint increase16 includes a summer-to-winter difference, so it answers a different question.",
+    "204−200=+4 arbitrary units. The endpoint increase 16 includes a summer-to-winter difference, so it answers a different question.",
     "Choose Y1 summer and Y3 summer.",
     undefined,
     originalSeries,
@@ -979,11 +979,11 @@ const practice = [
     "Which statement fits the supplied series?",
     "Winter is higher each year; both same-season series rise",
     {
-      "Summer dips prove no longer rise": "Summer values rise200→202→204.",
+      "Summer dips prove no longer rise": "Summer values rise 200→202→204.",
       "One curve proves every cause":
         "A trend alone cannot identify every causal contribution.",
     },
-    "Winter peaks and summer troughs can coexist with a longer rise. In this invented series both season-specific values rise4 units from Y1 to Y3.",
+    "Winter peaks and summer troughs can coexist with a longer rise. In this invented series both season-specific values rise 4 units from Y1 to Y3.",
     "Compare within each year and then like seasons.",
     undefined,
     originalSeries,
@@ -1053,7 +1053,7 @@ const checkForms = [
           ],
         ),
       ),
-      "24+12=36;25+4=29;net+7;final207 g of carbon.",
+      "24+12=36;25+4=29;net+7;final 207 g of carbon.",
       "Sum transfers by direction.",
     ),
     written(
@@ -1120,7 +1120,7 @@ const checkForms = [
           ),
         },
       },
-      "Before20−24=−4 g;after20+5−10=+15 g.",
+      "Before 20−24=−4 g;after 20+5−10=+15 g.",
       "Separate the burn release and uptake change.",
     ),
     numeric(

@@ -154,6 +154,10 @@ test("all30 practice responses preserve supplied evidence and honest written fee
       { key: STORAGE_KEY, id: q.id },
     );
     expect(result.correct).toBe(!q.rubric);
+    if (["cycle-v1-p-forest", "cycle-v1-p-sameSeason"].includes(q.id)) {
+      await accessible(page);
+      await shot(page, "prose-" + q.id, info.project.name);
+    }
     if ([1, 2, 5, 10, 11, 17, 19, 21, 23, 25, 26].includes(i)) {
       await accessible(page);
       await shot(page, "practice-" + i, info.project.name);
@@ -351,7 +355,7 @@ test("wrong independent inventory stays faded and recovers to its specific sourc
     .fill("999");
   await page.locator(".sample-check-answer").click();
   await expect(page.locator(".question-panel .feedback")).toContainText(
-    "Revisit signed change",
+    "Revisit Signed change / g of carbon.",
   );
   await expect(page.locator(".cycle-workbench,.cycle-proposal")).toHaveCount(0);
   await saved(page);
