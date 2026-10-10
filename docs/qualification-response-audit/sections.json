@@ -2238,11 +2238,23 @@
     "trilogyCandidate": "5.8.1.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Stationary/mobile distribution, separation/identification/purity, centre-spot Rf and appropriate precision; Separate RP6 = Trilogy RP12. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read all32 chromatography practice and28 reserved responses against actual4.8.1.3/RP6. Origin-to-centre/front distances, common units, forward/inverse Rf and explicit2sf/2dp reporting, phase distribution, controlled reference matches, unresolved co-elution and minimum detected components are tested. Native setup and blank independently constructed chromatography diagrams include solvent below origin while contacting paper, pencil baseline, clean small spots and visible-front recording. Same-condition proportions/run-distance changes do not alter Rf. Existing lesson review retains original source/QA; no new browser run claimed.",
+    "responseEvidenceIds": [
+      "chromatography-v1-p-two-sf",
+      "chromatography-v1-p-explain",
+      "chromatography-v1-p-coelution",
+      "chromatography-v1-p-draw-setup",
+      "chromatography-v1-cA-round",
+      "chromatography-v1-cA-drawing",
+      "chromatography-v1-cB-mechanism",
+      "chromatography-v1-vB-drawing"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.2.1",
@@ -2251,11 +2263,21 @@
     "trilogyCandidate": "5.8.2.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Burning splint at gas-tube opening; hydrogen pop. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read all26 gas-test practice and24 reserved responses against actual four gas-test bodies. Hydrogen uses burning splint at tube mouth and pop; method/start state are distinguished from oxygen. Independent drawn and written methods retain raw work; loss of sample limits negative inference. Tests establish presence in the stated GCSE context, not complete mixture purity.",
+    "responseEvidenceIds": [
+      "gas-tests-v1-p-hydrogen-state",
+      "gas-tests-v1-p-word-h",
+      "gas-tests-v1-p-explain-lost",
+      "gas-tests-v1-cA-written",
+      "gas-tests-v1-cA-drawing",
+      "gas-tests-v1-vB-method"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.2.2",
@@ -2264,11 +2286,20 @@
     "trilogyCandidate": "5.8.2.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Glowing splint inserted; oxygen relights. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Gas practice/reserved responses personally read. Oxygen uses inserted glowing splint and relighting; oxygen supports combustion rather than being fuel or spontaneously igniting cold wood. Blank diagram and written evaluation of a faulty cold-splint method provide independent responses, with separate delayed diagram.",
+    "responseEvidenceIds": [
+      "gas-tests-v1-p-oxygen-state",
+      "gas-tests-v1-p-explain-oxygen",
+      "gas-tests-v1-p-draw-oxygen",
+      "gas-tests-v1-cB-written",
+      "gas-tests-v1-vB-drawing"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.2.3",
@@ -2277,11 +2308,21 @@
     "trilogyCandidate": "5.8.2.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Limewater shaken/bubbled; carbon dioxide cloudy. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Gas practice/reserved responses personally read. Limewater is aqueous calcium hydroxide, shaken with or bubbled through gas; milky/cloudy liquid or white precipitate is positive, not gas colour or bubbles alone. Independent delayed bubbling diagram supplies reagent/outlet/result/limited-mixture conclusion. Wrong liquid/contact and mixture purity claims are separately evaluated.",
+    "responseEvidenceIds": [
+      "gas-tests-v1-p-shaken",
+      "gas-tests-v1-p-explain-liquid",
+      "gas-tests-v1-p-draw-co2",
+      "gas-tests-v1-cA-reagent",
+      "gas-tests-v1-cB-shaking",
+      "gas-tests-v1-vA-drawing"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.2.4",
@@ -2290,11 +2331,21 @@
     "trilogyCandidate": "5.8.2.4",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Damp litmus bleached white by chlorine. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Gas practice/reserved responses personally read. Chlorine bleaches damp litmus white; red alone is an acidic response and missing later observation neither identifies nor rules out chlorine. Dry paper is an invalid negative test. Reserved blank litmus construction and delayed written evidence-limit response test complete method/result independently; no sniffing test is required.",
+    "responseEvidenceIds": [
+      "gas-tests-v1-p-identify-cl",
+      "gas-tests-v1-p-word-red",
+      "gas-tests-v1-cA-dry",
+      "gas-tests-v1-cB-drawing",
+      "gas-tests-v1-vA-chlorine",
+      "gas-tests-v1-vB-litmus-limit"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.3.1",
