@@ -1,0 +1,13 @@
+{
+  "replacements": {
+    "1000g equals1kg.": "1000 g equals 1 kg.",
+    "40kWh": "40 kWh",
+    "0.25kg": "0.25 kg",
+    "10kg CO\u2082e": "10 kg CO\u2082e"
+  },
+  "whitespaceOnly": true,
+  "beforeSHA256": "653bba2f7ea2a0567db8b5f7b6323baeac9fd595863e18fe515f0ef0e4e4b30e",
+  "afterSHA256": "0de0082770b9a7b8e8a5ca368ded2581073a3257b709790c0e54c68b95e31e3e",
+  "exactEnumeratedSubstitutions": true,
+  "answersOptionsIdsVersionAndExposureUnchanged": true
+}

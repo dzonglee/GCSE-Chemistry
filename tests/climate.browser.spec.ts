@@ -72,6 +72,28 @@ async function shot(p: Page, name: string, device: string) {
     scale: "css",
   });
 }
+async function proseShot(p: Page, name: string, device: string) {
+  await accessible(p);
+  const out = path.join(process.cwd(), "docs/qa/climate-prose");
+  fs.mkdirSync(out, { recursive: true });
+  await p.evaluate(async () => {
+    if (document.activeElement instanceof HTMLElement)
+      document.activeElement.blur();
+    await document.fonts.ready;
+    document.querySelectorAll("textarea").forEach((e) => {
+      e.scrollTop = 0;
+    });
+    scrollTo(0, 0);
+    await new Promise<void>((r) =>
+      requestAnimationFrame(() => requestAnimationFrame(() => r())),
+    );
+  });
+  await p.screenshot({
+    path: path.join(out, `${device}-${name}.png`),
+    fullPage: true,
+    scale: "css",
+  });
+}
 for (const mode of [
   "trend",
   "report",
@@ -100,6 +122,8 @@ for (const mode of [
     await expect(root.locator(".feedback")).toHaveClass(/good/);
     await accessible(page);
     await shot(page, "correct-" + mode, info.project.name);
+    if (mode === "comparison")
+      await proseShot(page, "comparison", info.project.name);
     const f = climateFields[mode][0],
       wrong = climateNumeric.includes(f)
         ? "999"
@@ -134,6 +158,20 @@ test("all27 practice responses preserve supplied evidence and honest written fee
 }, info) => {
   test.setTimeout(120000);
   await page.goto(route);
+  await page.getByRole("button", { name: "Warm-up", exact: true }).click();
+  await task(page, 1);
+  await answer(page, j.warmup[1]);
+  await page
+    .getByRole("button", { name: "Give me a hint", exact: true })
+    .click();
+  await expect(page.locator(".question-panel")).toContainText(
+    "1000 g equals 1 kg.",
+  );
+  await page.locator(".sample-check-answer").click();
+  await expect(page.locator(".question-panel .feedback")).toContainText(
+    "right",
+  );
+  await proseShot(page, "mass-conversion", info.project.name);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   for (let i = 0; i < j.practice.length; i++) {
     await task(page, i);
@@ -153,6 +191,8 @@ test("all27 practice responses preserve supplied evidence and honest written fee
       { key: STORAGE_KEY, id: q.id },
     );
     expect(result.correct).toBe(!q.rubric);
+    if (q.id === "climate-v1-p-graph")
+      await proseShot(page, "independent-graph", info.project.name);
     if ([2, 5, 10, 11, 17, 19, 21, 23, 25, 26].includes(i)) {
       await accessible(page);
       await shot(page, "practice-" + i, info.project.name);

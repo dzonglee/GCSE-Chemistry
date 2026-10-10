@@ -241,7 +241,7 @@ const warmup: LearningTask[] = [
     0.5,
     "kg",
     "500/1000=0.5 kg. Apply warming factors only after using consistent mass units.",
-    "1000g equals1kg.",
+    "1000 g equals 1 kg.",
   ),
   numeric(
     "w-change",
@@ -445,10 +445,10 @@ const refresher: LearningTask[] = [
   numeric(
     "r-efficiency",
     "Calculate a supplied intensity",
-    "Saving 40kWh at a supplied 0.25kg CO₂e/kWh avoids how many kg CO₂e?",
+    "Saving 40 kWh at a supplied 0.25 kg CO₂e/kWh avoids how many kg CO₂e?",
     10,
     "kg CO₂e",
-    "40×0.25=10kg CO₂e under the supplied full-boundary intensity. A different electricity source or boundary can change the intensity.",
+    "40×0.25=10 kg CO₂e under the supplied full-boundary intensity. A different electricity source or boundary can change the intensity.",
     "Multiply energy saved by the supplied emissions per kWh.",
   ),
 ];
