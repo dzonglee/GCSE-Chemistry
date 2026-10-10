@@ -114,7 +114,7 @@ export const gasVolumesJourney: LessonJourney = {
     c(
       "r-rtp",
       "Choose the applicable conditions",
-      "When is the supplied GCSE24 dm³/mol used?",
+      "When is the supplied GCSE 24 dm³/mol used?",
       "At the stated room temperature and pressure",
       {
         "At any temperature and pressure":
@@ -153,7 +153,7 @@ export const gasVolumesJourney: LessonJourney = {
           "Those are not the gaseous coefficients; mass ratios differ.",
         "1:1:1": "Different gases do not all react in equal amounts.",
       },
-      "Matching gas conditions make volume proportional to amount; coefficients give1: 3: 2.",
+      "Matching gas conditions make volume proportional to amount; coefficients give 1: 3: 2.",
       "Use coefficients, not atomic masses.",
     ),
     c(
@@ -274,7 +274,7 @@ export const gasVolumesJourney: LessonJourney = {
       0.0375,
       "mol",
       "900 cm³=0.900 dm³; n=0.900/24=0.0375.",
-      "Do not divide 900by24 and call the answer moles.",
+      "Do not divide 900 by 24 and call the answer moles.",
     ),
     n(
       "p-formula",
@@ -336,7 +336,7 @@ export const gasVolumesJourney: LessonJourney = {
     n(
       "p-nitrogen",
       "Scale known nitrogen volume",
-      "N2(g)+3H2(g)→2NH3(g), complete conversion.5 cm³ N2 with enough H2. All gas volumes at matching T/P. Find NH3 volume.",
+      "N2(g)+3H2(g)→2NH3(g), complete conversion. 5 cm³ N2 with enough H2. All gas volumes at matching T/P. Find NH3 volume.",
       10,
       "cm³",
       "5×2/1=10 cm³.",
@@ -349,7 +349,7 @@ export const gasVolumesJourney: LessonJourney = {
       20,
       "cm³",
       "60/3×1=20 cm³.",
-      "Known gas volume is 3equation parts.",
+      "Known gas volume is 3 equation parts.",
     ),
     c(
       "p-liquid",
@@ -389,7 +389,7 @@ export const gasVolumesJourney: LessonJourney = {
       "CH4(g)+2O2(g)→CO2(g)+2H2O(l). Initially 12 cm³ CH4 and 40 cm³ O2; complete conversion of the limiting reactant, all water collected as liquid, and initial/final dry gases measured at RTP. Find final dry gas cm³.",
       28,
       "cm³",
-      "O2 used 24, left 16; CO2 formed12; total 12+16=28.",
+      "O2 used 24, left 16; CO2 formed 12; total 12+16=28.",
       "Unused oxygen remains a gas.",
     ),
     n(
@@ -407,7 +407,7 @@ export const gasVolumesJourney: LessonJourney = {
       "CH4(g)+2O2(g)→CO2(g)+2H2O(l). Initially 5 cm³ CH4 and 10 cm³ O2; complete conversion of both reactants, all water collected as liquid, and initial/final dry gases measured at RTP. Find final dry gas cm³.",
       5,
       "cm³",
-      "Both reactants are in the 1: 2ratio; CO2=5 and no unused gas remains.",
+      "Both reactants are in the 1: 2 ratio; CO2=5 and no unused gas remains.",
       "Water is collected liquid, not final dry gas.",
     ),
     n(
@@ -416,7 +416,7 @@ export const gasVolumesJourney: LessonJourney = {
       "2Si2H6(g)+7O2(g)→4SiO2(s)+6H2O(g). 12 cm³ Si2H6 reacts with 60 cm³ O2; water remains vapour; gas volumes at one common supplied T/P. Find final total gas.",
       54,
       "cm³",
-      "One part 6 cm³; O2used42, left18; steam36; total54.",
+      "One part 6 cm³; O2 used 42, left 18; steam 36; total 54.",
       "Include steam and unused oxygen; exclude solid SiO2.",
     ),
     n(
@@ -443,7 +443,7 @@ export const gasVolumesJourney: LessonJourney = {
       "p-conservation",
       "Explain volume versus conserved mass",
       "In the methane model, initial 7 gas molecules become 3 dry-gas molecules plus 4 water molecules collected as liquid. Explain why the dry gas volume falls although all atoms remain.",
-      "At the matching initial/final gas T/P, dry gas volume tracks gas amount, which falls from 7to3illustrative units. Four intact water molecules are retained as liquid and excluded from gas amount. All C, H, O atoms and total mass remain in the complete inventory; gas volume and gas-only mass need not be conserved.",
+      "At the matching initial/final gas T/P, dry gas volume tracks gas amount, which falls from 7 to 3 illustrative units. Four intact water molecules are retained as liquid and excluded from gas amount. All C, H, O atoms and total mass remain in the complete inventory; gas volume and gas-only mass need not be conserved.",
       [
         "Count only gaseous species for gas volume.",
         "Retain the collected liquid water in atom/mass accounting.",
@@ -488,7 +488,7 @@ export const gasVolumesJourney: LessonJourney = {
         "CH4(g)+2O2(g)→CO2(g)+2H2O(l). Initially 8 cm³ CH4 and 22 cm³ O2; complete conversion of the limiting reactant, all water collected as liquid, and initial/final dry gases measured at RTP. Find total final dry gas.",
         14,
         "cm³",
-        "O2used16,left6;CO2=8;total14.",
+        "O2 used 16, left 6;CO2=8;total 14.",
         "Add every final gas, not just CO2.",
       ),
       w(
@@ -497,8 +497,8 @@ export const gasVolumesJourney: LessonJourney = {
         "Equal 0.24 dm³ volumes of CH4 and O2 are measured at RTP. M values 16 and 32 g/mol; 24 dm³/mol. Explain their amounts, masses and why equal volume does not mean equal mass.",
         "Each gas has n=0.24/24=0.010 mol. CH4 mass=0.010×16=0.160 g; O2 mass=0.010×32=0.320 g. Equal volume under matching T/P ensures equal gas amount, but mass also depends on molar mass.",
         [
-          "Show both gas amounts are.010 mol.",
-          "Find.160 g and.320 g.",
+          "Show both gas amounts are .010 mol.",
+          "Find .160 g and .320 g.",
           "Explain the condition and molar-mass distinction.",
         ],
       ),
@@ -539,7 +539,7 @@ export const gasVolumesJourney: LessonJourney = {
         "2Si2H6(g) + 7O2(g) → 4SiO2(s) + 6H2O(g). 16 cm³ Si2H6 reacts completely with 70 cm³ O2; water remains gas; all gas volumes measured at one common supplied T/P. Find final total gas.",
         62,
         "cm³",
-        "One part 8; O2used56, left14; steam48; total62.",
+        "One part 8; O2 used 56, left 14; steam 48; total 62.",
         "SiO2 is solid; steam and unused oxygen are gases.",
       ),
       w(
@@ -572,7 +572,7 @@ export const gasVolumesJourney: LessonJourney = {
         "4.48 g SO2 at RTP; M=64 g/mol; 24 dm³/mol. Find gas volume.",
         1.68,
         "dm³",
-        "4.48/64=.07mol;V=1.68.",
+        "4.48/64=.07 mol;V=1.68.",
         "Use mass→amount→gas volume.",
       ),
       n(

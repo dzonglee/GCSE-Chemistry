@@ -319,7 +319,7 @@ test("steam contributes to final gas while solid silica is excluded without assu
 });
 test("every original practice item works and explanations remain honest self-review", async ({
   page,
-}) => {
+}, info) => {
   await page.goto(route);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   for (let i = 0; i < journey.practice.length; i++) {
@@ -351,6 +351,15 @@ test("every original practice item works and explanations remain honest self-rev
       await expect(
         page.locator(".sample-task-answer .feedback[role=status]"),
       ).toHaveClass(/correct/);
+    if (q.id === "gv-v1-p-steam" || q.id === "gv-v1-p-conservation") {
+      await page.locator(".question-panel textarea").evaluateAll((nodes) => {
+        for (const node of nodes) node.scrollTop = 0;
+      });
+      await capture(
+        page,
+        `test-results/qa/gas-prose/${info.project.name}-${q.id}.png`,
+      );
+    }
   }
 });
 test("fresh multipart independent task has aligned fields and no model or pre-submit answers", async ({

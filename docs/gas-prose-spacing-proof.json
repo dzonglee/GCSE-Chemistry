@@ -1,0 +1,123 @@
+{
+  "spacesAdded": 30,
+  "individuallyReviewedReplacements": [
+    {
+      "old": "GCSE24",
+      "new": "GCSE 24",
+      "occurrences": 1
+    },
+    {
+      "old": "give1:",
+      "new": "give 1:",
+      "occurrences": 1
+    },
+    {
+      "old": "formed12",
+      "new": "formed 12",
+      "occurrences": 1
+    },
+    {
+      "old": "left18",
+      "new": "left 18",
+      "occurrences": 1
+    },
+    {
+      "old": "steam36",
+      "new": "steam 36",
+      "occurrences": 1
+    },
+    {
+      "old": "total54",
+      "new": "total 54",
+      "occurrences": 1
+    },
+    {
+      "old": "left6",
+      "new": "left 6",
+      "occurrences": 1
+    },
+    {
+      "old": "total14",
+      "new": "total 14",
+      "occurrences": 1
+    },
+    {
+      "old": "left14",
+      "new": "left 14",
+      "occurrences": 1
+    },
+    {
+      "old": "steam48",
+      "new": "steam 48",
+      "occurrences": 1
+    },
+    {
+      "old": "total62",
+      "new": "total 62",
+      "occurrences": 1
+    },
+    {
+      "old": "900by24",
+      "new": "900 by 24",
+      "occurrences": 1
+    },
+    {
+      "old": "conversion.5",
+      "new": "conversion. 5",
+      "occurrences": 1
+    },
+    {
+      "old": "3equation",
+      "new": "3 equation",
+      "occurrences": 1
+    },
+    {
+      "old": "2ratio",
+      "new": "2 ratio",
+      "occurrences": 1
+    },
+    {
+      "old": "O2used42",
+      "new": "O2 used 42",
+      "occurrences": 1
+    },
+    {
+      "old": "O2used16,left",
+      "new": "O2 used 16, left",
+      "occurrences": 1
+    },
+    {
+      "old": "O2used56",
+      "new": "O2 used 56",
+      "occurrences": 1
+    },
+    {
+      "old": "7to3illustrative",
+      "new": "7 to 3 illustrative",
+      "occurrences": 1
+    },
+    {
+      "old": "are.010",
+      "new": "are .010",
+      "occurrences": 1
+    },
+    {
+      "old": "Find.160",
+      "new": "Find .160",
+      "occurrences": 1
+    },
+    {
+      "old": "and.320",
+      "new": "and .320",
+      "occurrences": 1
+    },
+    {
+      "old": ".07mol",
+      "new": ".07 mol",
+      "occurrences": 1
+    }
+  ],
+  "wholeSourceIdenticalAfterRemovingOnlyAsciiSpaces": true,
+  "beforeSHA256": "6119e30a8dbde176df5e546c691c0d2cf8709d7b5cc0fc1fc7c4d5f765a297a9",
+  "afterSHA256": "c379103d30a3db4b1abb43c4174336547eeedfa3b18aff32e93c76259555efa8"
+}
