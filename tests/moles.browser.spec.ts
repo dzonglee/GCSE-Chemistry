@@ -290,6 +290,15 @@ test("all twenty-two independent tasks construct quantities and keep written rev
           ),
         )
         .toBe(false);
+    if (q.id === "mo-v1-p-explain" || q.id === "mo-v1-p-justify") {
+      await page.locator(".question-panel textarea").evaluateAll((nodes) => {
+        for (const node of nodes) node.scrollTop = 0;
+      });
+      await capture(
+        page,
+        `test-results/qa/moles-prose/${info.project.name}-${q.id}.png`,
+      );
+    }
   }
 });
 test("unnormalized but equal-value working returns from recovery without replacement", async ({

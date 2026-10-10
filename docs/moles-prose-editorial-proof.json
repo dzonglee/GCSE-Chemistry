@@ -1,0 +1,101 @@
+{
+  "spaceReplacements": [
+    {
+      "old": "are12",
+      "new": "are 12",
+      "occurrences": 1
+    },
+    {
+      "old": "or6.02",
+      "new": "or 6.02",
+      "occurrences": 1
+    },
+    {
+      "old": "than16",
+      "new": "than 16",
+      "occurrences": 1
+    },
+    {
+      "old": "or2N\u2090",
+      "new": "or 2N\u2090",
+      "occurrences": 1
+    },
+    {
+      "old": "least1 and below10",
+      "new": "least 1 and below 10",
+      "occurrences": 1
+    },
+    {
+      "old": "least10",
+      "new": "least 10",
+      "occurrences": 1
+    },
+    {
+      "old": "requires70",
+      "new": "requires 70",
+      "occurrences": 1
+    },
+    {
+      "old": "why9",
+      "new": "why 9",
+      "occurrences": 1
+    },
+    {
+      "old": "why18",
+      "new": "why 18",
+      "occurrences": 1
+    },
+    {
+      "old": "while18",
+      "new": "while 18",
+      "occurrences": 1
+    },
+    {
+      "old": "mass18 g/mol",
+      "new": "mass 18 g/mol",
+      "occurrences": 1
+    },
+    {
+      "old": "divides9",
+      "new": "divides 9",
+      "occurrences": 1
+    },
+    {
+      "old": "why1 mol",
+      "new": "why 1 mol",
+      "occurrences": 1
+    },
+    {
+      "old": "but2N\u2090",
+      "new": "but 2N\u2090",
+      "occurrences": 1
+    },
+    {
+      "old": "obtain2N\u2090",
+      "new": "obtain 2N\u2090",
+      "occurrences": 1
+    },
+    {
+      "old": "If2 mol",
+      "new": "If 2 mol",
+      "occurrences": 2
+    },
+    {
+      "old": "Obtains.5 mol",
+      "new": "Obtains .5 mol",
+      "occurrences": 1
+    },
+    {
+      "old": "M\u1d6318",
+      "new": "M\u1d63 18",
+      "occurrences": 2
+    }
+  ],
+  "boundaryHintCorrection": {
+    "old": "A coefficient above10 needs normalization.",
+    "new": "A coefficient of 10 or more needs normalization."
+  },
+  "wholeSourceIdenticalAfterSpacesAndExplicitHintCorrection": true,
+  "beforeSHA256": "1cf6dafe55e7842cf4425e056c5cf2091a8f3c12e2198f900f52d30b0bb54574",
+  "afterSHA256": "95a322c978820c330f601d6cedd2446b1284b363abaa18fb8e3d1e2ac125daf8"
+}

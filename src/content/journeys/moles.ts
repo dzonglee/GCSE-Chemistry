@@ -157,7 +157,7 @@ export const molesJourney: LessonJourney = {
     c(
       "r-unit",
       "Separate relative and molar mass",
-      "Water has Mᵣ18. Which gives its molar mass under the supplied GCSE values?",
+      "Water has Mᵣ 18. Which gives its molar mass under the supplied GCSE values?",
       "18 g/mol",
       {
         "18 g": "That is a specified sample mass, not grams per mole.",
@@ -184,7 +184,7 @@ export const molesJourney: LessonJourney = {
       "One mole C atoms and one mole CO₂ molecules have what in common?",
       "The number of specified entities",
       {
-        "The same mass in grams": "Their molar masses are12 and 44 g/mol.",
+        "The same mass in grams": "Their molar masses are 12 and 44 g/mol.",
         "The same total atom count": "Each CO₂ molecule contains three atoms.",
       },
       "Each has Nₐ specified entities, but masses and constituent atom totals differ.",
@@ -197,10 +197,10 @@ export const molesJourney: LessonJourney = {
       "1.204×10²⁴",
       {
         "12.04×10²³":
-          "Same numerical value, but the coefficient is at least10.",
+          "Same numerical value, but the coefficient is at least 10.",
         "1.204×10²³": "That is ten times smaller.",
       },
-      "Use a coefficient at least1 and below10; changing its size requires the matching exponent change.",
+      "Use a coefficient at least 1 and below 10; changing its size requires the matching exponent change.",
       "Preserve value while normalizing.",
     ),
   ],
@@ -333,7 +333,7 @@ export const molesJourney: LessonJourney = {
       "Find number of Cl⁻ ions in 1 mol NaCl formula units. Use Nₐ=6.02×10²³ mol⁻¹ and enter e notation.",
       6.02e23,
       "Cl⁻ ions",
-      "One Cl⁻ per formula-unit ratio gives 1 mol Cl⁻, or6.02×10²³ ions.",
+      "One Cl⁻ per formula-unit ratio gives 1 mol Cl⁻, or 6.02×10²³ ions.",
       "Do not count Na⁺ as Cl⁻.",
     ),
     {
@@ -344,7 +344,7 @@ export const molesJourney: LessonJourney = {
         JSON.stringify({ coefficient: "1.204", power: "24" }),
         {},
         "2×6.02×10²³=12.04×10²³=1.204×10²⁴ ions.",
-        "A coefficient above10 needs normalization.",
+        "A coefficient of 10 or more needs normalization.",
       ),
       options: undefined,
       partLegend: "Write total-ion count in standard form",
@@ -374,17 +374,17 @@ export const molesJourney: LessonJourney = {
     n(
       "p-cage-amount",
       "Distinguish atoms from C₇₀ molecules",
-      "If2 mol C atoms form only C₇₀ molecules, what amount of C₇₀ molecules forms? Enter a fraction or decimal.",
+      "If 2 mol C atoms form only C₇₀ molecules, what amount of C₇₀ molecules forms? Enter a fraction or decimal.",
       1 / 35,
       "mol",
-      "Each molecule requires70 C atoms:2/70=1/35 mol C₇₀ molecules.",
+      "Each molecule requires 70 C atoms:2/70=1/35 mol C₇₀ molecules.",
       "Divide the atom amount by atoms per molecule.",
     ),
     {
       ...c(
         "p-cage-count",
         "Construct a large-molecule count",
-        "If2 mol C atoms form only C₇₀ molecules, find their molecule count in normalized standard form. Use Nₐ=6.02×10²³ mol⁻¹. Enter coefficient and power.",
+        "If 2 mol C atoms form only C₇₀ molecules, find their molecule count in normalized standard form. Use Nₐ=6.02×10²³ mol⁻¹. Enter coefficient and power.",
         JSON.stringify({ coefficient: "1.72", power: "22" }),
         {},
         "(2/70)×6.02×10²³=1.72×10²² C₇₀ molecules.",
@@ -405,7 +405,7 @@ export const molesJourney: LessonJourney = {
       {
         "They contain equal molecule counts":
           "Equal mass does not mean equal amount for different molar masses.",
-        "The CO₂ sample": "16/44 is less than16/32.",
+        "The CO₂ sample": "16/44 is less than 16/32.",
       },
       "O₂ amount=.5 mol;CO₂ amount=16/44 mol. Molecule count follows mol, so O₂ has more.",
       "Compare mass divided by molar mass.",
@@ -437,7 +437,7 @@ export const molesJourney: LessonJourney = {
       ...c(
         "p-explain",
         "Explain quantity and units",
-        "Explain why9 g H₂O is 0.5 mol and why18 g/mol is molar mass, while18 is the dimensionless relative formula mass. Use Aᵣ H=1,O=16.",
+        "Explain why 9 g H₂O is 0.5 mol and why 18 g/mol is molar mass, while 18 is the dimensionless relative formula mass. Use Aᵣ H=1,O=16.",
         "Mᵣ=2×1+16=18 without units. Under these GCSE values, M=18 g/mol. n=m/M=9 g/(18 g/mol)=.5 mol. Multiplying mass by M or inverting the quotient has the wrong units for amount.",
         {},
         "Compare the units, not just the shared numerical value.",
@@ -445,17 +445,17 @@ export const molesJourney: LessonJourney = {
       ),
       options: undefined,
       rubric: [
-        "Counts both H atoms and obtains dimensionless Mᵣ18.",
-        "Identifies molar mass18 g/mol and divides9 g by it.",
-        "Obtains.5 mol with correct quantity/unit reasoning.",
+        "Counts both H atoms and obtains dimensionless Mᵣ 18.",
+        "Identifies molar mass 18 g/mol and divides 9 g by it.",
+        "Obtains .5 mol with correct quantity/unit reasoning.",
       ],
     },
     {
       ...c(
         "p-justify",
         "Explain the specified entity",
-        "Explain why1 mol O₂ contains Nₐ molecules but2Nₐ O atoms, and why saying 'one mole contains Nₐ particles' needs the particle type stated.",
-        "One mole O₂ molecules counts Nₐ complete molecules. Two O atoms per molecule gives 2 mol O atoms, or2Nₐ atoms. A mole of molecules and a mole of atoms describe different entities, so the particle type must be named.",
+        "Explain why 1 mol O₂ contains Nₐ molecules but 2Nₐ O atoms, and why saying 'one mole contains Nₐ particles' needs the particle type stated.",
+        "One mole O₂ molecules counts Nₐ complete molecules. Two O atoms per molecule gives 2 mol O atoms, or 2Nₐ atoms. A mole of molecules and a mole of atoms describe different entities, so the particle type must be named.",
         {},
         "Name the counted entity before applying its formula.",
         "Use two atoms per molecule without relabelling molecules as atoms.",
@@ -463,7 +463,7 @@ export const molesJourney: LessonJourney = {
       options: undefined,
       rubric: [
         "Counts Nₐ complete O₂ molecules.",
-        "Uses two O atoms per molecule to obtain2Nₐ atoms.",
+        "Uses two O atoms per molecule to obtain 2Nₐ atoms.",
         "Explains why the stated entity matters.",
       ],
     },
