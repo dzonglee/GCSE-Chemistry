@@ -1,0 +1,19 @@
+{
+  "beforeSHA256": "2ee954d8e4615605ec47944ed1d40017e3d055da57fd7fd07eb47a320d3a6991",
+  "afterSHA256": "6cf0c1f70a9a14a855349b27656840681ed685d5674ec5ad1d364ecf2711310c",
+  "explicitSpaceEdits": [
+    [
+      "Magnitude30points/30s=1point/s;rate=0.00003mol/s.",
+      "Magnitude 30 points/30 s=1 point/s; rate=0.00003 mol/s."
+    ],
+    [
+      "Magnitude12/40=0.3point/s;rate=0.3\u00d70.00005=0.000015mol/s.",
+      "Magnitude 12/40=0.3 point/s; rate=0.3\u00d70.00005=0.000015 mol/s."
+    ],
+    [
+      "tangent at45s.",
+      "tangent at 45 s."
+    ]
+  ],
+  "nonSpaceBytesIdentical": true
+}

@@ -798,7 +798,7 @@ export const tangentJourney: LessonJourney = {
         "A supplied tangent falls from 70 % at 15 s to 40 % at 45 s. Each percentage-point decrease maps to 3×10⁻⁵mol product. Calculate mol/s.",
         0.00003,
         "mol/s",
-        "Magnitude30points/30s=1point/s;rate=0.00003mol/s.",
+        "Magnitude 30 points/30 s=1 point/s; rate=0.00003 mol/s.",
         "Use the stated calibration, not one from another case.",
       ),
       c(
@@ -921,7 +921,7 @@ export const tangentJourney: LessonJourney = {
         "A supplied light tangent decreases 12 percentage-points over 40 s. Each point maps to 5×10⁻⁵mol product. Calculate mol/s.",
         0.000015,
         "mol/s",
-        "Magnitude12/40=0.3point/s;rate=0.3×0.00005=0.000015mol/s.",
+        "Magnitude 12/40=0.3 point/s; rate=0.3×0.00005=0.000015 mol/s.",
         "Multiply slope magnitude by the stated per-point calibration.",
       ),
       n(
@@ -1009,7 +1009,7 @@ const reservedMassTangent: TangentGraph = {
     { t: 65, q: 2.4 },
   ],
   label:
-    "Supplied original constructed tangent at45s. Calculate its gradient from the stated coordinates.",
+    "Supplied original constructed tangent at 45 s. Calculate its gradient from the stated coordinates.",
 };
 all.find((q) => q.id === "tr-v1-A-gradient")!.tangentGraph =
   reservedMassTangent;

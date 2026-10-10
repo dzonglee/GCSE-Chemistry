@@ -40,6 +40,23 @@ async function capture(page: Page, path: string) {
   });
   await page.screenshot({ path, fullPage: true });
 }
+async function captureProse(page: Page, path: string) {
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+    (document.activeElement as HTMLElement)?.blur();
+    scrollTo(0, 0);
+    await new Promise<void>((resolve) =>
+      requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+    );
+  });
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.screenshot({ path, fullPage: true, scale: "css" });
+}
 async function draw(page: Page, unit: string, coords: readonly number[]) {
   for (let i = 0; i < 2; i++) {
     await page
@@ -146,10 +163,19 @@ test("reserved checks defer marking, retain drafts and separate actual seven-day
     await expect(
       page.getByRole("heading", { name: "4 of 4 correct", exact: true }),
     ).toBeVisible();
-    if (form === 0)
+    if (form === 0) {
+      const row = page.locator(".results-list > details").nth(2);
+      await row.locator(":scope > summary").click();
+      await expect(row).toContainText("Magnitude 30 points/30 s=1 point/s");
+      await captureProse(
+        page,
+        `docs/qa/tangents-prose/${info.project.name}-reserved-calibration.png`,
+      );
+      await row.locator(":scope > summary").click();
       await page
         .getByRole("button", { name: "Try the next form", exact: true })
         .click();
+    }
   }
   await page.getByRole("button", { name: "Review", exact: true }).click();
   await expect(
@@ -327,6 +353,11 @@ for (const mode of Object.keys(modeTasks) as TangentMode[])
         await capture(
           page,
           `docs/qa/rates-from-tangents-${info.project.name}-${mode}.png`,
+        );
+      if (key === "initial" && ["construct", "calibration"].includes(mode))
+        await captureProse(
+          page,
+          `docs/qa/tangents-prose/${info.project.name}-${mode}.png`,
         );
     }
   });
