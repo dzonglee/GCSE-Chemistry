@@ -12,7 +12,7 @@ Original sources: [8462 specification](https://filestore.aqa.org.uk/resources/ch
 
 Original page inspection supplements extracted text where equations/figures are omitted: charge/mass tables; neutralisation in8462p47/8464p92;8462organicp65/68/69/70;photosynthesis in8462p77/8464p111. Previously inspected catalyst/reversible source pages support their diagram demands. Source text is not bulk lesson authoring.
 
-Open course gates: remaining response evidence and any resulting individual corrections, reserved external RP8 integration, shared UI parity, final unified frozen regression. Four original full papers are delivered on the working GitHub branch,400 marks/191parts;95lesson inventory is5916tasks/2190practice/973manual activities. The individual moles standard-form presentation correction is complete; see [review](../moles-standard-form-review.md). Remaining paper-reference spacing and final unified regression are separate open gates.
+Open course gates: remaining response evidence and any resulting individual corrections, reserved external RP8 integration, shared UI parity, final unified frozen regression. Four original full papers are delivered on the working GitHub branch,400 marks/191parts;95lesson inventory is5916tasks/2190practice/973manual activities. The individual moles standard-form presentation correction is complete; see [review](../moles-standard-form-review.md). Paper-reference spacing is also corrected; final unified regression remains open.
 
 ## Historical audit trail
 

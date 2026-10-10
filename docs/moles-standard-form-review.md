@@ -20,4 +20,4 @@ Production build `AW4_gzM1iEIdEvjAChinE` and all30 relevant browser cases passed
 
 Four selected actual browser captures were personally inspected and explicitly sent: [320px opening](qa/moles-standard-form/desktop-320-representation-viewport.png), [full320px feedback](qa/moles-standard-form/desktop-320-representation.png), [desktop lesson](qa/moles-standard-form/desktop-1280-representation.png), [390px phone feedback](qa/moles-standard-form/mobile-390-representation.png). The deliberately wrong-form answer is retained in these samples. Original images and SHA256 manifest remain in the gallery; long images were resized by the inspection viewer.
 
-This closes this individual presentation defect. External potable-water integration, the remaining paper-reference spacing and final unified course regression remain open. It does not establish whole-course exam readiness.
+This closes this individual presentation defect. Paper-reference spacing was subsequently corrected; external potable-water integration and final unified course regression remain open. It does not establish whole-course exam readiness.

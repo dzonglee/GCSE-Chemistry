@@ -28,11 +28,11 @@ For production serving, run `npm run build` followed by `npm run start` (3001). 
 
 ## Learning product
 
-The course has **95 individually researched lesson journeys across ten topics**, with samples explicitly delivered one lesson at a time. The authored journeys contain 2,089 independent practice tasks; counts represent activities, not distinct assessed skills. The [current rebuild status](docs/rebuild-status.md) links to dated individual reviews and the remaining whole-course audit.
+The course has **95 individually researched lesson journeys across ten topics**, with samples explicitly delivered one lesson at a time. The authored journeys contain 2,190 independent practice tasks; counts represent activities, not distinct assessed skills. The [current rebuild status](docs/rebuild-status.md) links to dated individual reviews and the remaining whole-course audit.
 
 Each journey combines concept-specific teaching, purposeful models, unsupported independent practice, targeted recovery, alternate sealed checks and delayed review. Models include real interactive and exportable 3D structures where they help the chemical reasoning, alongside accessible diagrams, tables and text interpretations. Wrong constructions and raw input drafts remain available for repair.
 
-The application includes two 20-question starting checks, eight original15-question short practice sets, two individually curated30-question Foundation cumulative sets (Paper1 and Paper2 individually reviewed and delivered), mixed retrieval, a visible curriculum, saved local work, course/tier/board context and scoped export/deletion. Cumulative assessment breadth and the final statement-level coverage/tier audit remain open; short sets are not official full mocks.
+The application includes two 20-question starting checks, eight original15-question short practice sets, two individually curated30-question Foundation cumulative sets (Paper1 and Paper2 individually reviewed and delivered), mixed retrieval, a visible curriculum, saved local work, course/tier/board context and scoped export/deletion. It also includes four original 100-mark full papers covering Foundation/Higher Papers 1 and 2:400 marks across191 parts, with sealed submission and manual method/extended-response review. Qualification/tier mapping covers all124 AQA Chemistry sections; response evidence is confirmed for123, with potable water reserved for the external review. Final unified regression remains open; these are original practice papers, not official exams.
 
 Routes include `/`, `/topics/[slug]`, `/lessons/[slug]`, `/learn`, `/practice`, `/diagnostics`, `/exams`, `/preferences`, `/coverage` and legal/accessibility notices.
 
