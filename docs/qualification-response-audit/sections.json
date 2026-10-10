@@ -65,7 +65,7 @@
       "am-v1-p-proton",
       "am-write-v1-p-scattering"
     ],
-    "responseEvidenceReview": "Historical models plus generated observation\u2192inference\u2192model-change explanation; no unnecessary experimental procedural recall. Actual listed prompts, answers and written rubrics personally read; existing independently reviewed native journeys supply representation.",
+    "responseEvidenceReview": "Historical models plus generated observation→inference→model-change explanation; no unnecessary experimental procedural recall. Actual listed prompts, answers and written rubrics personally read; existing independently reviewed native journeys supply representation.",
     "responseReviewDate": "2026-10-10"
   },
   {
@@ -723,7 +723,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
-    "actualBodyReview": "Chemistry-only parent scope; nano1\u2013100nm, fine100\u20132500nm, coarse2500\u201310000nm; tenfold cube-side quotient, size comparison, area/volume/standard form. Actual8462 body read including continued next-page maths;8464 carbon section goes directly to quantitative, no nanoparticle clauses.",
+    "actualBodyReview": "Chemistry-only parent scope; nano1–100nm, fine100–2500nm, coarse2500–10000nm; tenfold cube-side quotient, size comparison, area/volume/standard form. Actual8462 body read including continued next-page maths;8464 carbon section goes directly to quantitative, no nanoparticle clauses.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "np-v1-p-range",
@@ -908,7 +908,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
-    "actualBodyReview": "Use supplied reactant/product masses\u2192moles\u2192whole-number coefficients; rearrangement. Actual8462 complete quantitative body read; corresponding8464 bodies read through5.3.2.5 and next5.4 heading. Separate-only parent/inherited Higher qualifiers checked.",
+    "actualBodyReview": "Use supplied reactant/product masses→moles→whole-number coefficients; rearrangement. Actual8462 complete quantitative body read; corresponding8464 bodies read through5.3.2.5 and next5.4 heading. Separate-only parent/inherited Higher qualifiers checked.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "bm-v1-p-amounts",
@@ -967,7 +967,7 @@
       "sc-v1-p-explain",
       "sc-v1-p-evaluate"
     ],
-    "responseEvidenceReview": "Personally read all practice prompts, answers, fields and rubrics. Generated concentration calculations rearrange dissolved mass/final solution volume with unit conversions. Higher written relationship uses mass=concentration\u00d7volume with units; concentration and density use different mass numerators.",
+    "responseEvidenceReview": "Personally read all practice prompts, answers, fields and rubrics. Generated concentration calculations rearrange dissolved mass/final solution volume with unit conversions. Higher written relationship uses mass=concentration×volume with units; concentration and density use different mass numerators.",
     "responseReviewDate": "2026-10-10"
   },
   {
@@ -1056,7 +1056,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "Higher only",
-    "actualBodyReview": "Equal gas moles equal volumes same conditions;24dm3 RTP20C1atm; mass\u2192volume, balanced gaseous volumes and rearrangement. Actual8462 complete quantitative body read; corresponding8464 bodies read through5.3.2.5 and next5.4 heading. Separate-only parent/inherited Higher qualifiers checked.",
+    "actualBodyReview": "Equal gas moles equal volumes same conditions;24dm3 RTP20C1atm; mass→volume, balanced gaseous volumes and rearrangement. Actual8462 complete quantitative body read; corresponding8464 bodies read through5.3.2.5 and next5.4 heading. Separate-only parent/inherited Higher qualifiers checked.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceReview": "All gas-volume practice prompts, answers and written rubrics personally read: forward/reverse mass and volume, generated equation ratios, excess dry gases, phase and matching temperature/pressure restrictions. gv-v1-p-round precision corrected individually; three significant figures enforced. Wrong raw answer persists after reload. Three final production viewport checks and20 existing desktop/mobile lesson browser checks pass; six final frames personally inspected and samples sent.",
     "responseEvidenceIds": [
@@ -1259,7 +1259,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
-    "actualBodyReview": "H+/OH-, pH/probe/indicatorapproximation; neutralisationH+(aq)+OH-(aq)\u2192H2O(l); missing text-extracted equation personally viewed inboth47/92 pages. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
+    "actualBodyReview": "H+/OH-, pH/probe/indicatorapproximation; neutralisationH+(aq)+OH-(aq)→H2O(l); missing text-extracted equation personally viewed inboth47/92 pages. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "an-v1-p-acid-ion",
@@ -1473,7 +1473,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
-    "actualBodyReview": "Conserved energy; surrounding temperature and exo/endo examples/application evaluation; temperature practical RP4 versus TrilogyRP10. No calorimetry/\u0394H calculation required by this clause. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Conserved energy; surrounding temperature and exo/endo examples/application evaluation; temperature practical RP4 versus TrilogyRP10. No calorimetry/ΔH calculation required by this clause. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "heat-v1-p-explain-warming",
@@ -1499,7 +1499,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
-    "actualBodyReview": "Draw curved profiles with relative reactant/product energy, activation energy and overall change; identify exo/endo and explain activation threshold. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Draw curved profiles with relative reactant/product energy, activation energy and overall change; identify exo/endo and explain activation threshold. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "profile-v1-p-definition",
@@ -1524,7 +1524,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
-    "actualBodyReview": "Energy required for breaking/released by forming; supplied bond-energy sum difference and exo/endo comparison. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Energy required for breaking/released by forming; supplied bond-energy sum difference and exo/endo comparison. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "bond-v1-p-water-change",
@@ -1551,7 +1551,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
-    "actualBodyReview": "Separate-only parent: simple electrodes/electrolyte, cells series batteries, reactant depletion, alkaline nonrechargeable, recharge reverses by externalcurrent; supplied reactivity/data evaluation. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Separate-only parent: simple electrodes/electrolyte, cells series batteries, reactant depletion, alkaline nonrechargeable, recharge reverses by externalcurrent; supplied reactivity/data evaluation. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "cf-v1-g-restore",
@@ -1577,7 +1577,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both; Higher half-equation sub-demand",
-    "actualBodyReview": "Separate-only parent: externalfuel/H2+oxygen supply, electrochemical oxidation voltage/water, compare rechargeable; electrode half-equations Higheronly. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Separate-only parent: externalfuel/H2+oxygen supply, electrochemical oxidation voltage/water, compare rechargeable; electrode half-equations Higheronly. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "cf-v1-p-hydrogen",
@@ -1608,7 +1608,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both; Higher molar-rate and tangent-gradient sub-demands",
-    "actualBodyReview": "Mass/volume mean rates, draw/interpret quantity-time graphs and draw/use tangent slope both; mol/s and numerical tangent gradient Higheronly. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Mass/volume mean rates, draw/interpret quantity-time graphs and draw/use tangent slope both; mol/s and numerical tangent gradient Higheronly. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "rr-v1-p-whole",
@@ -1636,7 +1636,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
-    "actualBodyReview": "Recall concentration/pressure/surface/temperature/catalyst rate effects; RP5gasvolume ANDcolour/turbidity withhypothesis=TrilogyRP11. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Recall concentration/pressure/surface/temperature/catalyst rate effects; RP5gasvolume ANDcolour/turbidity withhypothesis=TrilogyRP11. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "ct-v1-p-fair-test",
@@ -1660,7 +1660,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
-    "actualBodyReview": "Collision frequency/energy threshold; concentration/pressure/surface collisionfrequency;temperaturefrequency+energy; solid size/area-volume and proportionality explanations. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Collision frequency/energy threshold; concentration/pressure/surface collisionfrequency;temperaturefrequency+energy; solid size/area-volume and proportionality explanations. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "ct-v1-p-frequency-explain",
@@ -1684,7 +1684,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
-    "actualBodyReview": "Not consumed, reaction-specific and enzyme catalysts; alternative lowerEA pathway/profile, identify catalyst omitted fromnetequation; no unspecified catalyst-name recall. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Not consumed, reaction-specific and enzyme catalysts; alternative lowerEA pathway/profile, identify catalyst omitted fromnetequation; no unspecified catalyst-name recall. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "tc-v1-p-not-inert",
@@ -1708,7 +1708,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
-    "actualBodyReview": "Products return to original reactants; reversible arrow and conditions change direction. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Products return to original reactants; reversible arrow and conditions change direction. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "re-v1-g-direction",
@@ -1729,7 +1729,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
-    "actualBodyReview": "Reverse direction opposite exo/endo, same amount energy for same reversed reaction basis. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Reverse direction opposite exo/endo, same amount energy for same reversed reaction basis. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "re-v1-p-energy-endo",
@@ -1752,7 +1752,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
-    "actualBodyReview": "Closed apparatus, continuing forward/reverse equal rates at equilibrium. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Closed apparatus, continuing forward/reverse equal rates at equilibrium. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "re-v1-p-dynamic-written",
@@ -1774,7 +1774,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
-    "actualBodyReview": "LeChatelier qualitative response to counteract conditionchanges with appropriate giveninformation. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "LeChatelier qualitative response to counteract conditionchanges with appropriate giveninformation. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "es-v1-p-partial-written",
@@ -1795,7 +1795,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
-    "actualBodyReview": "Changed reactant/product concentrations reach newequilibrium; supplied data predicts direction. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Changed reactant/product concentrations reach newequilibrium; supplied data predicts direction. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "es-v1-p-add-product",
@@ -1819,7 +1819,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
-    "actualBodyReview": "Heatingfavours endodirection/coolingexodirection;given data qualitativeprediction. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Heatingfavours endodirection/coolingexodirection;given data qualitativeprediction. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "es-v1-p-temperature-written",
@@ -1842,7 +1842,7 @@
     "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
-    "actualBodyReview": "Gaspressure shifts smaller/larger gasparticle counts frombalanced equation; supplied data interpretation. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3\u21925.6.",
+    "actualBodyReview": "Gaspressure shifts smaller/larger gasparticle counts frombalanced equation; supplied data interpretation. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
     "sourceReviewDate": "2026-10-10",
     "responseEvidenceIds": [
       "es-v1-p-phase",
@@ -2085,11 +2085,24 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
-    "actualBodyReview": "Separate-only parent, additionmonomer\u2192repeat sameatoms/noothermolecule, C=C recognition, construction andreversemonomer relation. Complete8462bodies read duringindividualHigherP2research/recheckedmatrix; allfour8464organicbodies nowreadandnext5.8headingconfirmsSeparateparentsabsence. Original8462pages65/68/69/70personallyviewed.",
-    "sourceReviewDate": "2026-10-10"
+    "actualBodyReview": "Separate-only parent, additionmonomer→repeat sameatoms/noothermolecule, C=C recognition, construction andreversemonomer relation. Complete8462bodies read duringindividualHigherP2research/recheckedmatrix; allfour8464organicbodies nowreadandnext5.8headingconfirmsSeparateparentsabsence. Original8462pages65/68/69/70personallyviewed.",
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Both-tier Separate Chemistry: personally read all 43 polymer practice responses and all 32 cold/delayed responses, including the Higher-only condensation subset. Blank forward/reverse addition constructions preserve substituents, change C=C to C–C, require continuation/brackets/n, and distinguish atom totals from connectivity. Atom inventories and absence of a small-molecule product are tested; finite crops do not invent end hydrogens.",
+    "responseEvidenceIds": [
+      "pol-v1-p-ethene",
+      "pol-v1-p-propene",
+      "pol-v1-p-cl11",
+      "pol-v1-p-reverse-cl12",
+      "pol-v1-p-connectivity",
+      "pol-v1-p-end",
+      "pol-v1-a-draw",
+      "pol-v1-b-reverse",
+      "pol-v1-a-products"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.7.3.2",
@@ -2098,11 +2111,23 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "Higher only",
     "actualBodyReview": "Separate-only parent, twofunctionalgroup monomers, usuallysmallmoleculeloss, functionalgroup/repeat principles; actualdiol/diacid/polyesterdiagram seen. Complete8462bodies read duringindividualHigherP2research/recheckedmatrix; allfour8464organicbodies nowreadandnext5.8headingconfirmsSeparateparentsabsence. Original8462pages65/68/69/70personallyviewed.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Separate Higher only: personally read functional-group and blank polyester practice/cold/delayed construction responses. Diol/diacid spacers, both carbonyls and alcohol-derived oxygens remain; ester connectivity and water formation are distinct criteria. Finite open-chain actual links are distinguished from the supplied end-omitted 2n-water equation. The supplied diol/diacid reaction produces water; the explanation does not assert every condensation must do so.",
+    "responseEvidenceIds": [
+      "pol-cond-v1-p-groups",
+      "pol-cond-v1-p-repeat",
+      "pol-v1-p-condensation",
+      "pol-v1-p-open",
+      "pol-v1-p-symbolic",
+      "pol-cond-v1-ca-groups",
+      "pol-cond-v1-cb-repeat",
+      "pol-cond-v1-ra-repeat"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.7.3.3",
@@ -2111,11 +2136,24 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "Higher only",
     "actualBodyReview": "Separate-only parent, aminocarbox dualgroups/condensationpolypeptides/proteins; actualglycine/repeatdiagram seen. Complete8462bodies read duringindividualHigherP2research/recheckedmatrix; allfour8464organicbodies nowreadandnext5.8headingconfirmsSeparateparentsabsence. Original8462pages65/68/69/70personallyviewed.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Separate Higher only: personally read all 45 natural-polymer practice responses and all 32 cold/delayed responses. Amino/carboxyl groups, one-type condensation, glycine and unfamiliar amino-acid repeats, mixed sequences, peptide C–N links and water origin are tested. Independent structures retain finite terminal groups or end-omitted bracket/n notation as requested; written responses distinguish junction counts and repeat shorthand.",
+    "responseEvidenceIds": [
+      "natural-v1-p-groups",
+      "natural-v1-p-one-type",
+      "natural-v1-p-peptide-draw",
+      "natural-v1-p-amino-repeat-draw",
+      "natural-v1-h-ca-repeat",
+      "natural-v1-h-ca-explain",
+      "natural-v1-h-cb-peptide",
+      "natural-v1-h-cb-explain",
+      "natural-v1-h-ra-repeat"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.7.3.4",
@@ -2124,11 +2162,24 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Separate-only parent, DNAgeneinstructions/twochains/fournucleotidetypes/doublehelix; proteins/starch/cellulose andmonomertypes. Complete8462bodies read duringindividualHigherP2research/recheckedmatrix; allfour8464organicbodies nowreadandnext5.8headingconfirmsSeparateparentsabsence. Original8462pages65/68/69/70personallyviewed.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Both-tier Separate Chemistry: personally read all natural-polymer practice and reserved responses. DNA genetic instructions, usual two-chain double helix, four possible nucleotide types versus the types shown, one complete strand nucleotide versus a whole rung, and proteins/amino acids and starch/cellulose/glucose are tested. Common-tier forms are separate from Higher peptide forms; supplied pairing labels are information, not added recall. Ambiguous glucose-derived crops are not forced to a unique polymer name.",
+    "responseEvidenceIds": [
+      "natural-v1-p-dna-information",
+      "natural-v1-p-dna-types",
+      "natural-v1-p-dna-draw",
+      "natural-v1-p-dna-most",
+      "natural-v1-p-starch-cellulose",
+      "natural-v1-p-protein",
+      "natural-v1-c-a-draw",
+      "natural-v1-c-b-draw",
+      "natural-v1-v-b-draw"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.1.1",
@@ -2491,7 +2542,7 @@
     "responseEvidenceConfirmed": false,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
-    "actualBodyReview": "Scarce ores, phytomining plants\u2192harvest/burn compounds ash; bioleaching compound leachate; scrapiron/electrolysis metal recovery; supplied evaluation. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
+    "actualBodyReview": "Scarce ores, phytomining plants→harvest/burn compounds ash; bioleaching compound leachate; scrapiron/electrolysis metal recovery; supplied evaluation. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
     "sourceReviewDate": "2026-10-10"
   },
   {
