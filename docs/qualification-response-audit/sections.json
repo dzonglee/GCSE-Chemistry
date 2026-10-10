@@ -2188,11 +2188,23 @@
     "trilogyCandidate": "5.8.1.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Chemical pure single element/compound versus everyday pure; use melting/boiling data. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read all25 original purity/separation practice and22 original reserved responses against actual4.8.1.1. Chemical purity versus everyday labels, complete element/compound/mixture composition, controlled melting intervals, boiling-pressure comparisons and limitations are tested. Written label interpretation complements native composition/temperature models; numerical uncertainty does not prove unique identity.",
+    "responseEvidenceIds": [
+      "purity-v1-p-element",
+      "purity-v1-p-compound",
+      "purity-v1-p-water-label",
+      "purity-v1-p-melt-broad",
+      "purity-v1-p-boil-missing",
+      "purity-v1-cA-label",
+      "purity-v1-cB-interval",
+      "purity-v1-rA-pressure"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.1.2",
@@ -2201,11 +2213,23 @@
     "trilogyCandidate": "5.8.1.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Designed mixtures, component purposes and measured quantities; recognise formulations; proprietary component names excluded. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read all original formulation native records, practice and reserved arithmetic responses. Individually corrected reserved identification/explanation gap with five full written responses: supplied ingredient roles, deliberate useful-product design, measured quantities, accidental-mixture counterexample and useful-pure-compound counterexample. Original forms preserved; new cold/delayed form independently sealed. Actual2020F2 Q04.4–6/paired scheme freshly read and original pages inspected. See formulation-explanation-review.md for final scoped QA and inspected samples; shared opening-field placement remains open.",
+    "responseEvidenceIds": [
+      "purity-v1-p-ingredient-ratio",
+      "purity-v1-p-pigment",
+      "purity-v1-p-accidental",
+      "formulation-write-v1-p-paint",
+      "formulation-write-v1-ca-cleaner",
+      "formulation-write-v1-cb-spill",
+      "formulation-write-v1-ra-ink",
+      "formulation-write-v1-rb-pure"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.1.3",

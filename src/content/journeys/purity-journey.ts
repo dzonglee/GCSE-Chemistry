@@ -2,6 +2,7 @@ import { purityWarmup, purityRefreshers } from "./purity-recovery-tasks";
 import { purityGuided } from "./purity-guided";
 import { purityPractice } from "./purity-practice";
 import { purityCheckForms, purityReviewForms } from "./purity-assessments";
+import { extendFormulationExplanation } from "./formulation-explanation";
 const id = (s: string) => "purity-v1-" + s;
 export const purityRecovery: Record<string, string[]> = {};
 const routes: [string[], string[]][] = [
@@ -154,3 +155,4 @@ export const purityJourney = {
     ]),
   ],
 };
+extendFormulationExplanation(purityJourney, purityRecovery);

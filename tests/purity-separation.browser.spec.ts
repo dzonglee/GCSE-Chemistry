@@ -425,3 +425,135 @@ test("current real filtration asset downloads a wrong proposal and stays optiona
   );
   await expect(downloadButton).toBeDisabled();
 });
+
+test("formulation writing survives reload and its new cold and delayed form stays sealed", async ({
+  page,
+}, info) => {
+  test.setTimeout(240000);
+  await page.goto(route);
+  await page.getByRole("button", { name: "Practise", exact: true }).click();
+  await task(page, j.practice.length - 1);
+  const wrong =
+    "It is a pure compound because all ingredient amounts are measured.";
+  await page.getByLabel("Your explanation", { exact: true }).fill(wrong);
+  await page
+    .getByRole("button", { name: "Save and review explanation", exact: true })
+    .click();
+  await saved(page);
+  await page.reload();
+  await expect(
+    page.getByLabel("Your explanation", { exact: true }),
+  ).toHaveValue(wrong);
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  await page.evaluate(() => {
+    (document.activeElement as HTMLElement)?.blur();
+    scrollTo(0, 0);
+  });
+  await page.screenshot({
+    path: `test-results/qa/formulation-${info.project.name}-retained-writing.png`,
+    fullPage: true,
+    scale: "css",
+  });
+  await page.getByRole("button", { name: "Check", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Start understanding check →", exact: true })
+    .click();
+  for (let f = 0; f < j.checkForms.length; f++) {
+    if (f)
+      await page
+        .getByRole("button", { name: "Try the next form", exact: true })
+        .click();
+    for (let i = 0; i < j.checkForms[f].length; i++) {
+      if (i)
+        await page
+          .getByRole("button", { name: "Next question →", exact: true })
+          .click();
+      const q = j.checkForms[f][i];
+      if (f === 2) {
+        await page.getByLabel("Your explanation", { exact: true }).fill(wrong);
+        await saved(page);
+        await page.reload();
+        await expect(
+          page.getByLabel("Your explanation", { exact: true }),
+        ).toHaveValue(wrong);
+        await expect(page.getByText(q.answer, { exact: true })).toHaveCount(0);
+      } else await answer(page, q);
+      await page
+        .getByRole("button", { name: "Record answer", exact: true })
+        .click();
+      if (f === 2)
+        await expect(page.getByText(q.answer, { exact: true })).toHaveCount(0);
+    }
+    await page
+      .getByRole("button", { name: "Submit whole set", exact: true })
+      .click();
+  }
+  await expect(
+    page.getByRole("heading", {
+      name: "Responses ready for self-review",
+      exact: true,
+    }),
+  ).toBeVisible();
+  for (const d of await page.locator(".assessment-results details").all())
+    await d.locator("summary").click();
+  await expect(page.getByText(wrong, { exact: true }).first()).toBeVisible();
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  await page.evaluate(() => {
+    (document.activeElement as HTMLElement)?.blur();
+    scrollTo(0, 0);
+  });
+  await page.screenshot({
+    path: `test-results/qa/formulation-${info.project.name}-reserved-review.png`,
+    fullPage: true,
+    scale: "css",
+  });
+  for (let f = 0; f < j.reviewForms.length; f++) {
+    await page.getByRole("button", { name: "Review", exact: true }).click();
+    await expect(
+      page.getByRole("button", { name: "Start review →", exact: true }),
+    ).toHaveCount(0);
+    await saved(page);
+    await page.evaluate(
+      ({ key, delay }) => {
+        const p = JSON.parse(localStorage.getItem(key)!);
+        for (const r of p.work["purity-and-separation"].history)
+          r.submitted = Date.now() - delay - 1000;
+        p.work["purity-and-separation"].run.submitted =
+          Date.now() - delay - 1000;
+        localStorage.setItem(key, JSON.stringify(p));
+      },
+      { key: STORAGE_KEY, delay: REVIEW_DELAY },
+    );
+    await page.reload();
+    await page
+      .getByRole("button", {
+        name: f === 0 ? "Start review →" : "Try the next form",
+        exact: true,
+      })
+      .click();
+    for (let i = 0; i < j.reviewForms[f].length; i++) {
+      if (i)
+        await page
+          .getByRole("button", { name: "Next question →", exact: true })
+          .click();
+      const q = j.reviewForms[f][i];
+      if (f === 2)
+        await page.getByLabel("Your explanation", { exact: true }).fill(wrong);
+      else await answer(page, q);
+      if (f === 2)
+        await expect(page.getByText(q.answer, { exact: true })).toHaveCount(0);
+      await page
+        .getByRole("button", { name: "Record answer", exact: true })
+        .click();
+    }
+    await page
+      .getByRole("button", { name: "Submit whole set", exact: true })
+      .click();
+  }
+  await expect(
+    page.getByRole("heading", {
+      name: "Responses ready for self-review",
+      exact: true,
+    }),
+  ).toBeVisible();
+});

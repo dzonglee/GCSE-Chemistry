@@ -1,0 +1,5 @@
+# Individually inspected formulation samples
+
+Production build CtY45IheB_9Zh2d9l1jFa. Four final images personally inspected in ten contiguous crops. Three earlier inspected frames were pixel-compared with their final recaptures and are identical. Retained wrong writing stays separate from references and criteria. Desktop1280px and phone390px; no new320px writing-fit claim. Axe checks passed for both sampled practice and reserved review states. Task-picker placement still pushes the complete writing field below the opening viewport and remains a shared UI correction.
+
+24 existing browser checks passed in the first26-case run; its two new checks failed because the test counted its own exact-answer textarea as a reference disclosure. The test now uses a deliberately wrong delayed response. Both final new cases passed in34.8s on the unchanged production app/build. The actual seven-day gate and whole-set reference sealing remain asserted.2342 frozen fingerprints verified after each run. This is scoped lesson evidence, not whole-course readiness.

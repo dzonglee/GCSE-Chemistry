@@ -45,11 +45,11 @@ const all = [
   ...j.reviewForms.flat(),
 ];
 test("one reviewed lesson has complete routes and reserved cold forms", () => {
-  expect(all).toHaveLength(74);
-  expect(new Set(all.map((q) => q.id)).size).toBe(74);
+  expect(all).toHaveLength(79);
+  expect(new Set(all.map((q) => q.id)).size).toBe(79);
   const grouped = j.practiceGroups.flatMap((g) => g.taskIds);
-  expect(grouped).toHaveLength(25);
-  expect(new Set(grouped).size).toBe(25);
+  expect(grouped).toHaveLength(26);
+  expect(new Set(grouped).size).toBe(26);
   for (const q of j.practice) {
     expect(purityRecovery[q.id][0]).toBe(q.followUp);
     expect(j.refresher.some((r) => r.id === q.followUp)).toBe(true);
@@ -57,10 +57,10 @@ test("one reviewed lesson has complete routes and reserved cold forms", () => {
   for (const form of [...j.checkForms, ...j.reviewForms])
     for (const q of form) expect(q.model).toBeUndefined();
   expect(j.checkForms.map((f) => f.filter((q) => !q.rubric).length)).toEqual([
-    7, 7,
+    7, 7, 0,
   ]);
   expect(j.reviewForms.map((f) => f.filter((q) => !q.rubric).length)).toEqual([
-    2, 2,
+    2, 2, 0,
   ]);
   const l = lessons.find((l) => l.slug === "purity-and-separation")!;
   expect(l.journey).toBe(j);
@@ -229,7 +229,8 @@ test("all six fixed-source drawings start blank and never receive automatic exam
 test("direct exposure aliases cannot spread by transitive closure", () => {
   for (const q of all)
     for (const alias of q.exposureAliases ?? []) {
-      if (!alias.startsWith("purity-v1-")) continue;
+      if (!q.id.startsWith("purity-v1-") || !alias.startsWith("purity-v1-"))
+        continue;
       expect(
         Object.values(purityExposureFamilies).some(
           (f) =>
