@@ -1,5 +1,12 @@
 import type { LearningTask, LessonJourney } from "../types";
 import {
+  rustDesignRecovery,
+  rustDesignGuided,
+  rustDesignPractice,
+  rustDesignCheck,
+  rustDesignReview,
+} from "./rust-experiment-design";
+import {
   alloyUseRecovery,
   alloyUseGuided,
   alloyUsePractice,
@@ -1402,6 +1409,36 @@ checkForms.push(alloyUseCheck);
 reviewForms.push(alloyUseReview);
 allMaterialsTasks.push(...alloyUseAdditions);
 
+// Append only: original conditions, raw answers, indices and reserved forms stay valid.
+const rustDesignAdditions = [
+  ...rustDesignRecovery,
+  ...rustDesignGuided,
+  ...rustDesignPractice,
+  ...rustDesignCheck,
+  ...rustDesignReview,
+];
+const originalRustIds = materialsExposureFamilies.rust.map((suffix) =>
+  id(suffix),
+);
+for (const task of rustDesignAdditions) {
+  task.exposureAliases = [
+    ...originalRustIds,
+    ...rustDesignAdditions
+      .filter((other) => other !== task)
+      .map((other) => other.id),
+  ];
+}
+for (const task of rustDesignPractice) {
+  task.followUp = rustDesignRecovery[task.id.endsWith("p-flaw") ? 1 : 2].id;
+  materialsRecoveryRoutes[task.id] = task.followUp;
+}
+refresher.push(...rustDesignRecovery);
+guided.push(...rustDesignGuided);
+practice.push(...rustDesignPractice);
+checkForms.push(rustDesignCheck);
+reviewForms.push(rustDesignReview);
+allMaterialsTasks.push(...rustDesignAdditions);
+
 export const materialsJourney: LessonJourney = {
   version: 1,
   introduction:
@@ -1409,7 +1446,7 @@ export const materialsJourney: LessonJourney = {
   scopeNote:
     "Separate GCSE Chemistry, Foundation/Higher: AQA8462 4.10.3.1–3. Original controlled investigations, diagrams and property datasets address actual paired examination demands. Shared bonding/polymer prerequisites remain relevant. Practical investigations here are simulations/data interpretation; written explanations require manual review and do not certify exam readiness.",
   outcomes: [
-    "Interpret controlled rust experiments and quantitative mass changes; distinguish water/oxygen necessity from accelerated corrosion.",
+    "Describe controlled rust experiments and interpret quantitative mass changes; distinguish water/oxygen necessity from accelerated corrosion.",
     "Explain intact barriers, scratched coatings, remaining reactive-metal sacrificial protection and aluminium oxide protection.",
     "Recall bronze/brass/gold/steel/aluminium alloy composition, properties and uses; calculate carat fractions and unfamiliar mass compositions.",
     "Explain pure-metal shaping and alloy hardness through layer sliding and atom sizes.",
@@ -1444,6 +1481,10 @@ export const materialsJourney: LessonJourney = {
     {
       label: "Recall named alloy uses without choices",
       taskIds: alloyUsePractice.map((q) => q.id),
+    },
+    {
+      label: "Describe and evaluate rust experiment designs",
+      taskIds: rustDesignPractice.map((q) => q.id),
     },
   ],
 };

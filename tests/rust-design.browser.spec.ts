@@ -1,6 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import original from "./fixtures/materials-alloy-use-original.json";
 import { materialsJourney as j } from "../src/content/journeys/materials-and-corrosion";
 import {
   emptyProgress,
@@ -10,7 +9,7 @@ import {
 } from "../src/lib/progress";
 const slug = "materials-and-corrosion",
   route = `/lessons/${slug}`,
-  prefix = "materials-v1-alloy-use-";
+  prefix = "materials-v1-rust-design-";
 async function settled(p: Page) {
   await expect
     .poll(() =>
@@ -36,7 +35,7 @@ async function layout(p: Page, selector: string) {
   expect((await new AxeBuilder({ page: p }).analyze()).violations).toEqual([]);
 }
 for (const width of [320, 390, 1280])
-  test(`fonts-ready ${width}: every new alloy-use response fits and retains raw writing`, async ({
+  test(`fonts-ready ${width}: every new rust-design response fits and retains raw writing`, async ({
     page,
   }) => {
     test.setTimeout(180000);
@@ -76,7 +75,7 @@ for (const width of [320, 390, 1280])
           w.section = stage === "practice" ? "practice" : "explore";
           w.learning = { version: 1, stage, index: i };
         }
-        const raw = "Unfinished: paper\nbag.  ";
+        const raw = "Oil alone removes oxygen.\nUse different nails.  ";
         if (q.rubric) w.drafts[q.id] = raw;
         p.work[slug] = w;
         await settled(page);
@@ -87,13 +86,18 @@ for (const width of [320, 390, 1280])
         await page.reload();
         await page
           .getByRole("heading", {
-            name: stage === "check" || stage === "review" ? q.prompt : q.title,
+            name:
+              (stage === "check" || stage === "review") && !q.conciseHeading
+                ? q.prompt
+                : q.title,
             exact: true,
           })
           .waitFor();
         await layout(
           page,
-          q.rubric ? ".written-answer textarea" : ".answer-option",
+          q.rubric
+            ? ".written-answer textarea"
+            : ".materials-workbench [data-field]",
         );
         if (q.rubric) {
           await expect(page.locator(".written-answer textarea")).toHaveValue(
@@ -101,7 +105,10 @@ for (const width of [320, 390, 1280])
           );
           if (q.shortWritten)
             await expect(
-              page.getByRole("textbox", { name: "Your answer", exact: true }),
+              page.getByRole("textbox", {
+                name: "Your explanation",
+                exact: true,
+              }),
             ).toBeVisible();
         }
         if (stage === "check" || stage === "review")
@@ -112,19 +119,19 @@ for (const width of [320, 390, 1280])
     }
   });
 
-test("actual new alloy-use check seals all seven references, retains wrong phrases and requires seven real days", async ({
+test("actual experiment-design check seals references, retains wrong plans and requires seven real days", async ({
   page,
 }, info) => {
   test.setTimeout(120000);
   const p = emptyProgress(),
     w = emptyWork();
   p.preferences.course = "separate";
-  p.seen["materials-v1-p-brass"] = Date.now();
+  p.seen["materials-v1-p-rust"] = Date.now();
   w.section = "check";
   // Completed original forms are fixture history, not replacement content.
   w.history = [];
-  for (const [i, form] of j.checkForms.slice(0, 2).entries()) {
-    const at = Date.now() - (30 - i * 14) * 24 * 60 * 60 * 1000;
+  for (const [i, form] of j.checkForms.slice(0, 3).entries()) {
+    const at = Date.now() - (60 - i * 14) * 24 * 60 * 60 * 1000;
     w.history.push({
       kind: "check",
       ids: form.map((q) => q.id),
@@ -194,20 +201,20 @@ test("actual new alloy-use check seals all seven references, retains wrong phras
   await tap("Record answer");
   await settled(page);
   expect((await work()).run.responses[form[0].id]).toBeUndefined();
-  const wrong = "a paper\nbag",
+  const wrong = "Oil alone removes oxygen.\nUse different nails.  ",
     answers: Record<string, string> = {};
   for (const [i, q] of form.entries()) {
-    await page.getByRole("heading", { name: q.prompt, exact: true }).waitFor();
+    await page.getByRole("heading", { name: q.title, exact: true }).waitFor();
     const raw = i === 0 ? wrong : q.answer;
     answers[q.id] = raw;
     await page
-      .getByRole("textbox", { name: "Your answer", exact: true })
+      .getByRole("textbox", { name: "Your explanation", exact: true })
       .fill(raw);
     await settled(page);
     if (i === 0) {
       await page.reload();
       await expect(
-        page.getByRole("textbox", { name: "Your answer", exact: true }),
+        page.getByRole("textbox", { name: "Your explanation", exact: true }),
       ).toHaveValue(wrong);
     }
     await expect(
@@ -229,10 +236,10 @@ test("actual new alloy-use check seals all seven references, retains wrong phras
   await settled(page);
   const row = page.locator(".results-list > details").first();
   await row.locator(":scope > summary").click();
-  await expect(row).toContainText("door knob");
-  await expect(row).toContainText("valid");
+  await expect(row).toContainText("wet-air positive comparison");
+  await expect(row).toContainText("Scientifically valid alternative");
   const history = (await work()).history;
-  expect(JSON.stringify(history.slice(0, 4))).toBe(original);
+  expect(JSON.stringify(history.slice(0, 6))).toBe(original);
   for (const q of form)
     expect(history.at(-1).responses[q.id]).toMatchObject({
       answer: answers[q.id],
@@ -259,18 +266,23 @@ test("actual new alloy-use check seals all seven references, retains wrong phras
     page.locator(".assessment-review-criteria,.sample-reference"),
   ).toHaveCount(0);
   await page
-    .getByRole("textbox", { name: "Your answer", exact: true })
-    .fill("spoons");
+    .getByRole("textbox", { name: "Your explanation", exact: true })
+    .fill("Keep suitable oxygen-free water under an oxygen-free atmosphere.");
   await settled(page);
   await page.reload();
   await expect(
-    page.getByRole("textbox", { name: "Your answer", exact: true }),
-  ).toHaveValue("spoons");
+    page.getByRole("textbox", { name: "Your explanation", exact: true }),
+  ).toHaveValue(
+    "Keep suitable oxygen-free water under an oxygen-free atmosphere.",
+  );
   for (const [i, q] of delayed.entries()) {
-    await page.getByRole("heading", { name: q.prompt, exact: true }).waitFor();
-    const raw = i === 0 ? "spoons" : q.answer;
+    await page.getByRole("heading", { name: q.title, exact: true }).waitFor();
+    const raw =
+      i === 0
+        ? "Keep suitable oxygen-free water under an oxygen-free atmosphere."
+        : q.answer;
     await page
-      .getByRole("textbox", { name: "Your answer", exact: true })
+      .getByRole("textbox", { name: "Your explanation", exact: true })
       .fill(raw);
     await expect(
       page.locator(".assessment-review-criteria,.sample-reference"),
@@ -288,64 +300,9 @@ test("actual new alloy-use check seals all seven references, retains wrong phras
   await settled(page);
   const delayedRow = page.locator(".results-list > details").first();
   await delayedRow.locator(":scope > summary").click();
-  await expect(delayedRow).toContainText("cutlery");
+  await expect(delayedRow).toContainText("genuinely dry air");
   expect((await work()).history.at(-1).responses[delayed[0].id].answer).toBe(
-    "spoons",
+    "Keep suitable oxygen-free water under an oxygen-free atmosphere.",
   );
-  expect(JSON.stringify((await work()).history.slice(0, 4))).toBe(original);
+  expect(JSON.stringify((await work()).history.slice(0, 6))).toBe(original);
 });
-
-for (const width of [320, 390, 1280])
-  for (const stage of ["refresher", "guided"] as const)
-    test(`all original ${stage} tasks keep their first response on a short ${width}px screen`, async ({
-      page,
-    }) => {
-      test.setTimeout(210000);
-      await page.setViewportSize({ width, height: 664 });
-      await page.goto(route);
-      await page.locator(".sample-task-panel").waitFor();
-      for (const task of original.tasks.filter((t) => t.stage === stage)) {
-        const q = j[stage][task.index],
-          p = emptyProgress(),
-          w = emptyWork();
-        p.preferences.course = "separate";
-        w.section = "explore";
-        w.learning = { version: 1, stage, index: task.index };
-        p.work[slug] = w;
-        await settled(page);
-        await page.evaluate(({ key, raw }) => localStorage.setItem(key, raw), {
-          key: STORAGE_KEY,
-          raw: JSON.stringify(p),
-        });
-        await page.reload();
-        await page
-          .getByRole("heading", { name: q.title ?? q.prompt, exact: true })
-          .waitFor();
-        const selector = q.model
-          ? ".materials-fields select, .materials-fields input"
-          : q.options
-            ? ".answer-option"
-            : q.rubric
-              ? ".written-answer textarea"
-              : ".sample-task-panel input:not([type=radio])";
-        await layout(page, selector);
-        const source = page.locator(".materials-source");
-        if (await source.count()) {
-          const summary = source.locator(":scope > summary");
-          await summary.focus();
-          await summary.press("Enter");
-          await expect(source.locator(".materials-given")).toBeVisible();
-          if (q.materialsGiven)
-            await expect(source).toContainText(q.materialsGiven.note);
-          expect((await new AxeBuilder({ page }).analyze()).violations).toEqual(
-            [],
-          );
-        }
-        await expect(
-          page.getByRole("button", {
-            name: `Task ${task.index + 1}`,
-            exact: true,
-          }),
-        ).toBeVisible();
-      }
-    });

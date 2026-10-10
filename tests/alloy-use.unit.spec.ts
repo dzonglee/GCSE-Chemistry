@@ -35,8 +35,8 @@ test("all93 original material definitions and positions, v1 and legacy identitie
   expect([...l.questions, ...l.checks].map((q) => q.id)).toEqual(
     original.legacy,
   );
-  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8, 7]);
-  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4, 7]);
+  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8, 7, 2]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4, 7, 2]);
 });
 
 test("all seven named alloy uses require actual short recall with valid alternatives reviewed manually", () => {

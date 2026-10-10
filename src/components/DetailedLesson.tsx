@@ -80,7 +80,9 @@ export function DetailedLesson({
       )
     : savedPosition;
   const q = list[index];
-  const alloyUseTask = q.id.startsWith("materials-v1-alloy-use-");
+  const materialsRecallTask =
+    q.id.startsWith("materials-v1-alloy-use-") ||
+    q.id.startsWith("materials-v1-rust-design-");
   const answer = work.drafts[q.id] ?? "";
   const attempt = work.attempts[q.id]?.at(-1);
   const feedback = attempt?.answer === answer ? mark(q, answer) : undefined;
@@ -287,11 +289,13 @@ export function DetailedLesson({
   const minorAtmosphereRun = work.run?.ids.some((id) =>
     id.startsWith("early-atmosphere-v1-minor-"),
   );
-  const alloyUseRun = work.run?.ids.some((id) =>
-    id.startsWith("materials-v1-alloy-use-"),
+  const materialsRecallRun = work.run?.ids.some(
+    (id) =>
+      id.startsWith("materials-v1-alloy-use-") ||
+      id.startsWith("materials-v1-rust-design-"),
   );
   const compactReview =
-    (alloyUseRun ||
+    (materialsRecallRun ||
       minorAtmosphereRun ||
       compactYieldReview ||
       saltLesson ||
@@ -336,7 +340,7 @@ export function DetailedLesson({
   const ReviewContainer = compactReview ? "details" : "section";
   const reviewScheduleAfter =
     compactReview &&
-    (alloyUseRun ||
+    (materialsRecallRun ||
       minorAtmosphereRun ||
       compactYieldReview ||
       saltLesson ||
@@ -553,7 +557,7 @@ export function DetailedLesson({
             <AssessmentSession
               id={lesson.slug}
               navigationAfterResponse={
-                alloyUseRun ||
+                materialsRecallRun ||
                 minorAtmosphereRun ||
                 saltLesson ||
                 organicLesson ||
@@ -679,7 +683,7 @@ export function DetailedLesson({
       ) : (
         <section
           className="sample-task-panel"
-          data-alloy-use={alloyUseTask || undefined}
+          data-materials-recall={materialsRecallTask || undefined}
           data-atmosphere-minor={
             q.id.startsWith("early-atmosphere-v1-minor-") || undefined
           }
@@ -706,10 +710,11 @@ export function DetailedLesson({
               lesson.slug !== "life-cycle-and-recycling" &&
               !organicLesson &&
               !q.id.startsWith("early-atmosphere-v1-minor-") &&
-              !alloyUseTask &&
+              !materialsRecallTask &&
               !q.polyesterDrawing &&
               practicePicker
-            ) : !alloyUseTask && lesson.slug !== "materials-and-corrosion" ? (
+            ) : !materialsRecallTask &&
+              lesson.slug !== "materials-and-corrosion" ? (
               <div
                 ref={taskNavigation}
                 className="question-navigation"
@@ -986,7 +991,7 @@ export function DetailedLesson({
           {(lesson.slug === "life-cycle-and-recycling" ||
             organicLesson ||
             q.id.startsWith("early-atmosphere-v1-minor-") ||
-            alloyUseTask) &&
+            materialsRecallTask) &&
             practicePicker}
           {(!(stage === "practice" && journey.practiceGroups) ||
             lesson.slug === "balancing-equations" ||

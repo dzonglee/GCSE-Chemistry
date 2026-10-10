@@ -7067,11 +7067,15 @@ for (const ids0 of [
   ...materialsShared,
 ]) {
   const ids = new Set(ids0),
-    candidates = lessons.flatMap((l) => [
-      ...l.questions,
-      ...l.checks,
-      ...(l.journey ? tasks(l.journey) : []),
-    ]);
+    // New-only aliases are read in both directions by the exposure engine.
+    // Keep the legacy closure byte-exact instead of rewriting old task records.
+    candidates = lessons
+      .flatMap((l) => [
+        ...l.questions,
+        ...l.checks,
+        ...(l.journey ? tasks(l.journey) : []),
+      ])
+      .filter((q) => !q.id.startsWith("materials-v1-rust-design-"));
   let changed = true;
   while (changed) {
     changed = false;

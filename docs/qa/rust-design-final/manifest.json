@@ -1,0 +1,186 @@
+{
+  "build": "r-9w7ethOHBQcDXBElknD",
+  "note": "Controlled QA entries through actual UI; wrong native and multiline plans retained after reload. References opened only after two-item whole submission. Fonts-ready first-response geometry checked at320/390/1280 before expansion.",
+  "captures": [
+    {
+      "file": "320-dry-control-retained-wrong-viewport.png",
+      "width": 320,
+      "sha256": "a96b7861c9d45ff70816b3bd9ea3dcf0c38ae12828cac8f4ec68a73d8adf23dd"
+    },
+    {
+      "file": "320-dry-control-retained-wrong-full.png",
+      "width": 320,
+      "sha256": "c5863df2e94c90b7fb872516dec859fb0219a7c9a83173cc3af100d8fae4b071"
+    },
+    {
+      "file": "320-dry-control-repaired-method-viewport.png",
+      "width": 320,
+      "sha256": "b202bfdeec78f1947106e7057ef67421073c72b3652314905dc5c3f2fde3e932"
+    },
+    {
+      "file": "320-dry-control-repaired-method-full.png",
+      "width": 320,
+      "sha256": "3897212cb86547333a06093c09a2d62354d4a96f6118717f47cf96dd5e2a6405"
+    },
+    {
+      "file": "320-g-plan-retained-viewport.png",
+      "width": 320,
+      "sha256": "e625fdce58e72f9feb235a34f23e568a521c929077cf730181873873fc4c8e7a"
+    },
+    {
+      "file": "320-g-plan-retained-full.png",
+      "width": 320,
+      "sha256": "cb0df2d76b025c98e1e89b74f3d870818991fc7b16bf4cb6c76bf9289b5ecf72"
+    },
+    {
+      "file": "320-p-flaw-retained-viewport.png",
+      "width": 320,
+      "sha256": "422a25831bb6f77fdce25e0fc75221bc7057f034689a13e1d6dbfe4935e3f7d2"
+    },
+    {
+      "file": "320-p-flaw-retained-full.png",
+      "width": 320,
+      "sha256": "930b1bb2c31054b9a4535cb2ccd4e00a1f2b28e80eff71525f9e67ab146c2efe"
+    },
+    {
+      "file": "320-c-plan-retained-viewport.png",
+      "width": 320,
+      "sha256": "75370bbed236991a568a3f3d9672781131e782364415e7c464c6626b0cbac813"
+    },
+    {
+      "file": "320-c-plan-retained-full.png",
+      "width": 320,
+      "sha256": "af2d92ff4d0fb2d1ae3fea0090e4cba516a1d6b8b15c35be6897a547d10815cc"
+    },
+    {
+      "file": "320-whole-set-manual-examples-viewport.png",
+      "width": 320,
+      "sha256": "fc385262f1d9802102646d5c05d32bb9c269f07ff7c708277563700378f1ce1b"
+    },
+    {
+      "file": "320-whole-set-manual-examples-full.png",
+      "width": 320,
+      "sha256": "eac2af463dde5f229636514445a40ae9bde324a9016ed5b8e41ea94808bf4d16"
+    },
+    {
+      "file": "390-dry-control-retained-wrong-viewport.png",
+      "width": 390,
+      "sha256": "2fd9cd3f5109de484c15858f53f8fda2ef1af2dc3b7ec2b4aeab6309b9a67e59"
+    },
+    {
+      "file": "390-dry-control-retained-wrong-full.png",
+      "width": 390,
+      "sha256": "524b236fc3e361e8255f17587c1348b8bd8d7e50dbc8b17c8b3b305b2a470595"
+    },
+    {
+      "file": "390-dry-control-repaired-method-viewport.png",
+      "width": 390,
+      "sha256": "2707aac3eef1e608ea092337270ac79cdc4c5c9f432e50568764416c14dc9ac7"
+    },
+    {
+      "file": "390-dry-control-repaired-method-full.png",
+      "width": 390,
+      "sha256": "2eb8cbd3b5eecac6852b085b4f2b84c6dd5c44b8e5a8ffe0d4980c59937eee25"
+    },
+    {
+      "file": "390-g-plan-retained-viewport.png",
+      "width": 390,
+      "sha256": "c3b53c735ad68d451e2e814329ef91135f98332848c93c27f71621e35a52cd9e"
+    },
+    {
+      "file": "390-g-plan-retained-full.png",
+      "width": 390,
+      "sha256": "6b85400e6707fa1d3c8745b2a83a9828088f2d31eaf81a26e245f1fa8e4faa83"
+    },
+    {
+      "file": "390-p-flaw-retained-viewport.png",
+      "width": 390,
+      "sha256": "6c5cc683744acb1e5d1e7d7808c37bbb7914c4fdf8b02081e31be23dae84a783"
+    },
+    {
+      "file": "390-p-flaw-retained-full.png",
+      "width": 390,
+      "sha256": "cce89fd5a8bc7fffe98fa8fa101493cff4346610231f379a036ca4e43cbf621c"
+    },
+    {
+      "file": "390-c-plan-retained-viewport.png",
+      "width": 390,
+      "sha256": "c94112bdaef8f75ce538d271ad5e75a4ffb122415c01875fc61326ac335eb74e"
+    },
+    {
+      "file": "390-c-plan-retained-full.png",
+      "width": 390,
+      "sha256": "824d4902004b48564565c26b154098c2f87d4a97fa15d1545ba5d931f1faac01"
+    },
+    {
+      "file": "390-whole-set-manual-examples-viewport.png",
+      "width": 390,
+      "sha256": "2a019dd59ddbd3d38530e0def8f83a7174cb8ea56c89a0e11d9054c7dbdbedcf"
+    },
+    {
+      "file": "390-whole-set-manual-examples-full.png",
+      "width": 390,
+      "sha256": "6043a58ff4156c3aedc70cca5ad78af19ef4e9e75fc23cae250876ea653cdb73"
+    },
+    {
+      "file": "1280-dry-control-retained-wrong-viewport.png",
+      "width": 1280,
+      "sha256": "acd2067ba73c0ef10b201a3609d03fdcefad2fd797ecbfc43cb07a456c1e90ed"
+    },
+    {
+      "file": "1280-dry-control-retained-wrong-full.png",
+      "width": 1280,
+      "sha256": "2a4ea8a309a322eb488d5f76867fcb41ca3843153d434ffac99f5cc86af0f7d1"
+    },
+    {
+      "file": "1280-dry-control-repaired-method-viewport.png",
+      "width": 1280,
+      "sha256": "11b19cd8aac035406c381473b5b519cbb9ad2b21f141d62e8fc519cb44e23976"
+    },
+    {
+      "file": "1280-dry-control-repaired-method-full.png",
+      "width": 1280,
+      "sha256": "9e9a1ded45c90e37b5f43fb28ebed869a60f561877036cce1a91212c2b641ace"
+    },
+    {
+      "file": "1280-g-plan-retained-viewport.png",
+      "width": 1280,
+      "sha256": "35ba436ef871ed0e81ea45d51c5b4ff18e80773d7a14dd2fc6bf08a24e098b29"
+    },
+    {
+      "file": "1280-g-plan-retained-full.png",
+      "width": 1280,
+      "sha256": "628c02297f191e5e2f9231a1cb5269ad448b6b1bbce678906e223d81344767aa"
+    },
+    {
+      "file": "1280-p-flaw-retained-viewport.png",
+      "width": 1280,
+      "sha256": "19e53947f443ba659ced1b06e4f3f27295b0b99e0be7061daa97e12d9e2fa2fc"
+    },
+    {
+      "file": "1280-p-flaw-retained-full.png",
+      "width": 1280,
+      "sha256": "463f3c1a730c9f75283a063cbd35b1b278205c136db14dfb5ae9d6267b576989"
+    },
+    {
+      "file": "1280-c-plan-retained-viewport.png",
+      "width": 1280,
+      "sha256": "6cab3f913e8bee6d6468a57c9b3fd048cb917a7a78f4d5bcb932a5ac87460e9a"
+    },
+    {
+      "file": "1280-c-plan-retained-full.png",
+      "width": 1280,
+      "sha256": "9d7d8f93f8f445769afa47107cd29d5d9ac0f184104591301d6687f1201fd1ac"
+    },
+    {
+      "file": "1280-whole-set-manual-examples-viewport.png",
+      "width": 1280,
+      "sha256": "5adf4b4e177630c2a02d3c581756d40a47c7039d657108e7d3aa294a5d9ebbdc"
+    },
+    {
+      "file": "1280-whole-set-manual-examples-full.png",
+      "width": 1280,
+      "sha256": "c9f9d9c9807191e2d2412ede977e53ff88e1c0cdb6cabd0b6a1e1da2d2bbff62"
+    }
+  ]
+}

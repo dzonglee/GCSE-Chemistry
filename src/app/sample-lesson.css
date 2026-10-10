@@ -8668,47 +8668,61 @@ body:has(.sample-lesson) .topic-number {
   }
 }
 
-.sample-task-panel[data-alloy-use],
-.assessment-session .question-panel[data-alloy-use] {
+.sample-task-panel[data-materials-recall],
+.assessment-session .question-panel[data-materials-recall] {
   padding: 16px;
 }
-.sample-task-panel[data-alloy-use] > h2,
-.question-panel[data-alloy-use] h2 {
+.sample-task-panel[data-materials-recall] > h2,
+.question-panel[data-materials-recall] h2 {
   font-size: 22px;
   line-height: 1.3;
   margin-bottom: 8px;
 }
-.sample-task-panel[data-alloy-use] .sample-task-prompt {
+.sample-task-panel[data-materials-recall] .sample-task-prompt {
   font-size: 15px;
   line-height: 1.35;
   margin-bottom: 8px;
 }
-.sample-task-panel[data-alloy-use] .sample-task-topline {
+.sample-task-panel[data-materials-recall] .sample-task-topline {
   margin-bottom: 8px;
 }
-.sample-task-panel[data-alloy-use] .sample-mobile-tasks {
+.sample-task-panel[data-materials-recall] .sample-mobile-tasks {
   display: flex;
   margin-top: 20px;
 }
-[data-alloy-use] .written-answer:not(.short-written-answer) textarea {
+[data-materials-recall] .written-answer:not(.short-written-answer) textarea {
   min-height: 104px;
   height: 104px;
 }
 @media (max-width: 600px) {
-  .sample-lesson:has([data-alloy-use])
+  .sample-lesson:has([data-materials-recall])
     :is(.sample-title-row, .sample-overview, .sample-stages) {
     margin-bottom: 4px;
   }
-  .sample-task-panel[data-alloy-use],
-  .assessment-session .question-panel[data-alloy-use] {
+  .sample-task-panel[data-materials-recall],
+  .assessment-session .question-panel[data-materials-recall] {
     padding: 12px;
   }
-  .question-panel[data-alloy-use] h2 {
+  .question-panel[data-materials-recall] h2 {
     font-size: 18px;
   }
 }
 
 /* Keep this lesson's expanding task list below the actual work. */
+.assessment-session:has([data-rust-design]) .session-heading {
+  margin: 4px 0;
+}
+.assessment-session .question-panel[data-rust-design] {
+  margin-top: 4px;
+}
+.question-panel[data-rust-design] > .eyebrow {
+  margin: 0 0 4px;
+}
+.question-panel[data-rust-design] .written-equation-prompt {
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 1.35;
+}
 .sample-lesson[data-lesson="materials-and-corrosion"] .sample-mobile-tasks {
   display: flex;
   margin-top: 20px;
