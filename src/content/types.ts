@@ -61,6 +61,8 @@ export interface Question {
   id: string;
   prompt: string;
   options?: string[];
+  /** Exact historical option text mapped to its current editorial wording. */
+  optionAliases?: Record<string, string>;
   answer: string;
   explanation: string;
   hint: string;

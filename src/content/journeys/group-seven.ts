@@ -1,6 +1,22 @@
 import type { LearningTask, LessonJourney } from "../types";
 import { choice as c, number as n } from "./helpers";
 import { extendGroupSevenWriting } from "./group-seven-writing";
+const legacyOptions: Record<string, Record<string, string>> = {
+  "r-species": {
+    "The2 means two negative charges": "The 2 means two negative charges",
+  },
+  "r-state": {
+    "Gas because150 exceeds room temperature":
+      "Gas because 150 exceeds room temperature",
+  },
+  "r-gain": {
+    "It gains one electron to form1−": "It gains one electron to form 1−",
+  },
+  "r-relative": { "Its charge must become2−": "Its charge must become 2−" },
+  "ra-molecule": {
+    "A bromide ion with charge2−": "A bromide ion with charge 2−",
+  },
+};
 const q = (
   id: string,
   prompt: string,
@@ -8,8 +24,8 @@ const q = (
   errors: Record<string, string>,
   explanation: string,
   hint: string,
-): LearningTask =>
-  c(
+): LearningTask => {
+  const task = c(
     `g7-v1-${id}`,
     prompt,
     answer,
@@ -18,6 +34,9 @@ const q = (
     hint,
     `Halogen reasoning: ${id}.`,
   );
+  if (legacyOptions[id]) task.optionAliases = legacyOptions[id];
+  return task;
+};
 const molecule = q(
   "g-molecule",
   "Which formula represents an elemental chlorine molecule?",
@@ -158,7 +177,7 @@ export const groupSevenJourney: LessonJourney = {
       {
         "Both are identical neutral molecules":
           "The atom count and charge differ.",
-        "The2 means two negative charges":
+        "The 2 means two negative charges":
           "A subscript counts atoms; a superscript shows charge.",
       },
       "A formula's subscript and charge superscript communicate different quantities. Bromine/iodine follow the same diatomic/halide distinction.",
@@ -166,12 +185,12 @@ export const groupSevenJourney: LessonJourney = {
     ),
     q(
       "r-state",
-      "Using supplied melting114 °C and boiling184 °C, what is iodine at 150 °C?",
+      "Using supplied melting point 114 °C and boiling point 184 °C, what is iodine at 150 °C?",
       "Liquid",
       {
         "Solid because iodine is always solid":
           "Room state is not a universal state.",
-        "Gas because150 exceeds room temperature":
+        "Gas because 150 exceeds room temperature":
           "It is still below the supplied boiling point.",
       },
       "Between melting and boiling the substance is liquid. Physical state changes do not break I₂ into isolated atoms.",
@@ -193,7 +212,7 @@ export const groupSevenJourney: LessonJourney = {
     q(
       "r-gain",
       "How does a halogen atom form its usual halide ion?",
-      "It gains one electron to form1−",
+      "It gains one electron to form 1−",
       {
         "It loses seven electrons":
           "Halogens usually gain one in forming simple halide ions.",
@@ -259,7 +278,7 @@ export const groupSevenJourney: LessonJourney = {
       {
         "Its atomic number doubles in every atom":
           "Each nucleus keeps its own proton count.",
-        "Its charge must become2−": "The elemental molecule is neutral.",
+        "Its charge must become 2−": "The elemental molecule is neutral.",
       },
       "Two atoms contribute to the molecular total. The subscript changes atom count, not individual atomic identity or charge.",
       "Add the masses of the two atoms.",
@@ -273,7 +292,7 @@ export const groupSevenJourney: LessonJourney = {
         "Bromine has supplied relative atomic mass 80. Calculate the relative molecular mass of Br₂.",
         160,
         "",
-        "Two bromine atoms give2×80=160. Relative molecular mass has no unit.",
+        "Two bromine atoms give 2×80=160. Relative molecular mass has no unit.",
         "Count both atoms in the formula.",
         "Independent formula-to-relative-mass calculation.",
         {
@@ -594,8 +613,8 @@ export const groupSevenJourney: LessonJourney = {
         "What does Br₂ represent?",
         "A neutral molecule containing two bromine atoms",
         {
-          "A bromide ion with charge2−":
-            "The2 subscript counts atoms, not charge.",
+          "A bromide ion with charge 2−":
+            "The 2 subscript counts atoms, not charge.",
           "Two positively charged nuclei with no electrons anywhere":
             "The neutral molecule contains electrons.",
         },

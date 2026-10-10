@@ -83,7 +83,11 @@ import { BondModelDiagram } from "./BondModelDiagram";
 import { Nuclide } from "./Nuclide";
 import { ShellDiagram } from "./ShellDiagram";
 import { AtomicModelDiagram } from "./AtomicModelDiagram";
-import { roundingLabel, standardFormInstruction } from "@/lib/marking";
+import {
+  canonicalChoice,
+  roundingLabel,
+  standardFormInstruction,
+} from "@/lib/marking";
 import { readArrangement } from "@/lib/shells";
 import { FrequencyDisplay } from "./FrequencyDisplay";
 import { NanoSizeRangeDisplay } from "./NanoSizeRangeDisplay";
@@ -1085,13 +1089,13 @@ function ResponseInput({
       {question.options.map((option, i) => (
         <label
           key={option}
-          className={`answer-option ${value === option ? "selected" : ""}`}
+          className={`answer-option ${canonicalChoice(question, value) === option ? "selected" : ""}`}
         >
           <input
             type="radio"
             name={question.id}
             value={option}
-            checked={value === option}
+            checked={canonicalChoice(question, value) === option}
             onChange={() => onChange(option)}
           />
           <span className="answer-letter" aria-hidden="true">

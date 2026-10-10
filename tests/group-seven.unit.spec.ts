@@ -6,7 +6,7 @@ import {
   halogenPhase,
   displacement,
 } from "../src/lib/halogens";
-import { mark } from "../src/lib/marking";
+import { canonicalChoice, mark } from "../src/lib/marking";
 import {
   initialBoard,
   validBoard,
@@ -14,6 +14,31 @@ import {
   checkBoard,
 } from "../src/lib/workbench";
 import { decode, emptyProgress, emptyWork } from "../src/lib/progress";
+test("editorial option corrections preserve exact historical correct and wrong halogen selections", () => {
+  const corrected = tasks(journey).filter((q) => q.optionAliases);
+  expect(corrected).toHaveLength(5);
+  for (const q of corrected) {
+    for (const [old, current] of Object.entries(q.optionAliases!)) {
+      expect(canonicalChoice(q, old)).toBe(current);
+      expect(mark(q, old)).toEqual(mark(q, current));
+      const data = emptyProgress();
+      data.work["group-seven"] = { ...emptyWork(), drafts: { [q.id]: old } };
+      expect(
+        decode(JSON.stringify(data))?.work["group-seven"].drafts[q.id],
+      ).toBe(old);
+    }
+  }
+  const gain = corrected.find((q) => q.id === "g7-v1-r-gain")!;
+  expect(mark(gain, "It gains one electron to form1−").correct).toBe(true);
+  expect(mark(gain, "It gains one electron to form2−").correct).toBe(false);
+  expect(
+    canonicalChoice(
+      { ...gain, optionAliases: { old: "Absent option" } },
+      "old",
+    ),
+  ).toBe("old");
+  expect(canonicalChoice(gain, "constructor")).toBe("constructor");
+});
 test("neutral halogen pairs, atoms and halide ions have different counts, charges and notation", () => {
   expect(halogenParticle("chlorine", "atom")).toEqual({
     atomCount: 1,

@@ -80,6 +80,14 @@ export function reviewSubject(q: Question) {
             ? "structure"
             : "explanation";
 }
+export function canonicalChoice(q: Question, raw: string): string {
+  const alias =
+    q.optionAliases && Object.hasOwn(q.optionAliases, raw)
+      ? q.optionAliases[raw]
+      : undefined;
+  return alias && q.options?.includes(alias) ? alias : raw;
+}
+
 export function mark(
   q: Question,
   raw: string,
@@ -388,8 +396,9 @@ export function mark(
     };
   }
   const value = q.options ? null : readNumber(raw);
+  const choice = q.options ? canonicalChoice(q, raw) : raw;
   const numericCorrect = q.options
-    ? raw === q.answer
+    ? choice === q.answer
     : value !== null &&
       (q.acceptedRange
         ? Number.isFinite(q.acceptedRange.min) &&
@@ -435,7 +444,7 @@ export function mark(
     };
   const feedback = correct
     ? q.explanation
-    : (q.misconceptions?.[raw] ??
+    : (q.misconceptions?.[choice] ??
       (!q.options && value !== null
         ? Object.entries(q.misconceptions ?? {}).find(
             ([candidate]) => readNumber(candidate) === value,
