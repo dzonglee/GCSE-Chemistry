@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { lessons } from "../src/content/curriculum";
-import before from "./fixtures/polymerisation-v1-before-condensation.json";
+import archivedBefore from "./fixtures/polymerisation-v1-before-condensation.json";
 import { polymerisationJourney as j } from "../src/content/journeys/polymerisation";
 import {
   condensationAdditions as added,
@@ -18,6 +18,29 @@ import {
   blankPolyesterDrawing,
   readPolyesterDrawing,
 } from "../src/lib/polyester";
+// Preserve the archived source fixture; apply only the individually reviewed
+// spacing fixes and exact retained-choice alias to the comparison copy.
+const editorialFixes = [
+  ["mass28", "mass 28"],
+  ["that12.0g", "that 12.0 g"],
+  ["all12.0g", "all 12.0 g"],
+  ["contains18", "contains 18"],
+  ["joins200", "joins 200"],
+  ["All200", "All 200"],
+  ["mass42", "mass 42"],
+  ["contains14", "contains 14"],
+];
+let expectedJSON = JSON.stringify(archivedBefore);
+for (const [old, updated] of editorialFixes)
+  expectedJSON = expectedJSON.replaceAll(old, updated);
+const before: typeof archivedBefore = JSON.parse(expectedJSON);
+const molecules = before.practice.find((q) => q.id === "pol-v1-p-molecules")!;
+Object.assign(molecules, {
+  optionAliases: {
+    "All200 separate molecules remain disconnected":
+      "All 200 separate molecules remain disconnected",
+  },
+});
 const all = [
   ...j.warmup,
   ...j.refresher,
@@ -27,7 +50,7 @@ const all = [
   ...j.reviewForms.flat(),
 ];
 
-test("all 91 original identities, positions, forms, answers and addition content survive unchanged", () => {
+test("all 91 original definitions and positions survive apart from explicit editorial corrections", () => {
   expect(lessons.find((l) => l.slug === "polymers")!.journey).toBe(j);
   expect(j.version).toBe(1);
   const baseAll = [

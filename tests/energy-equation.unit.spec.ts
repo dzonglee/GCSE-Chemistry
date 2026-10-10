@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { createHash } from "node:crypto";
 import baseline from "./fixtures/energy-equation-baseline.json";
+import editorialAmendments from "./fixtures/energy-editorial-amendments.json";
 import { practicalJourney as j } from "../src/content/journeys/energy-practical";
 import {
   energyEquationGuided as g,
@@ -19,7 +20,7 @@ import {
   exposureIds,
 } from "../src/lib/progress";
 
-test("all 59 original energy tasks, positions and both reserved pairs remain unchanged", () => {
+test("all 59 original energy tasks retain archived hashes apart from explicit editorial amendments", () => {
   const all = [
     ...j.warmup,
     ...j.refresher,
@@ -29,13 +30,27 @@ test("all 59 original energy tasks, positions and both reserved pairs remain unc
     ...j.reviewForms.flat(),
   ];
   expect(Object.keys(baseline.tasks)).toHaveLength(59);
-  for (const [id, hash] of Object.entries(baseline.tasks))
+  // Keep the archived hashes intact. Permit only the independently verified
+  // field amendments from the individual editorial review, then compare every
+  // other field against the original SHA256.
+  const amendments: Record<
+    string,
+    Record<string, { before: unknown; after: unknown }>
+  > = editorialAmendments;
+  for (const [id, hash] of Object.entries(baseline.tasks)) {
+    const q: Record<string, unknown> = JSON.parse(
+      JSON.stringify(all.find((q) => q.id === id)),
+    );
+    for (const [field, change] of Object.entries(amendments[id] ?? {})) {
+      expect(q[field], `${id}/${field}`).toEqual(change.after);
+      if (change.before === null) delete q[field];
+      else q[field] = change.before;
+    }
     expect(
-      createHash("sha256")
-        .update(JSON.stringify(all.find((q) => q.id === id)))
-        .digest("hex"),
+      createHash("sha256").update(JSON.stringify(q)).digest("hex"),
       id,
     ).toBe(hash);
+  }
   for (const stage of ["warmup", "refresher", "guided", "practice"] as const)
     expect(
       j[stage].slice(0, baseline.stages[stage].length).map((q) => q.id),

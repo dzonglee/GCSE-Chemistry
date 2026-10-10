@@ -1,0 +1,192 @@
+{
+  "ep-v1-warm-difference": {
+    "prompt": {
+      "before": "Calculate29.5−21.0.",
+      "after": "Calculate 29.5−21.0."
+    }
+  },
+  "ep-v1-warm-mean": {
+    "hint": {
+      "before": "Sum then divide by3.",
+      "after": "Sum then divide by 3."
+    },
+    "prompt": {
+      "before": "Calculate the mean of 8,9 and 10.",
+      "after": "Calculate the mean of 8, 9 and 10."
+    }
+  },
+  "ep-v1-r-mean": {
+    "prompt": {
+      "before": "Three matched rises are 8.2,8.6 and 8.4 °C. No procedural failure is recorded. Find their mean.",
+      "after": "Three matched rises are 8.2, 8.6 and 8.4 °C. No procedural failure is recorded. Find their mean."
+    }
+  },
+  "ep-v1-r-gradient": {
+    "explanation": {
+      "before": "(31−23)/(5−1)=8/4=2°C/g.",
+      "after": "(31−23)/(5−1)=8/4=2 °C/g."
+    },
+    "prompt": {
+      "before": "A best-fit line passes through(1 g,23 °C) and(5 g,31 °C). Find its gradient.",
+      "after": "A best-fit line passes through (1 g, 23 °C) and (5 g, 31 °C). Find its gradient."
+    }
+  },
+  "ep-v1-g-observe": {
+    "explanation": {
+      "before": "28.6−20.4=8.2°C.",
+      "after": "28.6−20.4=8.2 °C."
+    }
+  },
+  "ep-v1-g-repeat": {
+    "prompt": {
+      "before": "Rises 7.8,7.9,2.0 °C; trial 3 had a recorded probe-removal failure. Find the mean of the two valid trials.",
+      "after": "Rises 7.8, 7.9, 2.0 °C; trial 3 had a recorded probe-removal failure. Find the mean of the two valid trials."
+    }
+  },
+  "ep-v1-g-graph": {
+    "explanation": {
+      "before": "6.0/4.0=1.5°C/g.",
+      "after": "6.0/4.0=1.5 °C/g."
+    }
+  },
+  "ep-v1-p-rise": {
+    "explanation": {
+      "before": "30.1−22.4=7.7°C.",
+      "after": "30.1−22.4=7.7 °C."
+    }
+  },
+  "ep-v1-p-cooling": {
+    "explanation": {
+      "before": "17.5−24.0=−6.5°C.",
+      "after": "17.5−24.0=−6.5 °C."
+    }
+  },
+  "ep-v1-p-mean": {
+    "explanation": {
+      "before": "16.2/3=5.4°C.",
+      "after": "16.2/3=5.4 °C."
+    },
+    "prompt": {
+      "before": "Matched rises 5.2,5.6,5.4 °C; no recorded failure. Find the mean.",
+      "after": "Matched rises 5.2, 5.6, 5.4 °C; no recorded failure. Find the mean."
+    }
+  },
+  "ep-v1-p-failure": {
+    "prompt": {
+      "before": "Rises 6.2,6.4,1.0 °C. A recorded spill invalidated trial 3. Find the mean of valid trials.",
+      "after": "Rises 6.2, 6.4, 1.0 °C. A recorded spill invalidated trial 3. Find the mean of valid trials."
+    }
+  },
+  "ep-v1-p-gradient": {
+    "explanation": {
+      "before": "(28.6−23.8)/(5−1)=1.2°C/g.",
+      "after": "(28.6−23.8)/(5−1)=1.2 °C/g."
+    }
+  },
+  "ep-v1-p-tie": {
+    "answer": {
+      "before": "25 and30cm³",
+      "after": "25 and 30 cm³"
+    },
+    "misconceptions": {
+      "before": {
+        "Only30cm³": "25cm³ has the same mean.",
+        "Only35cm³": "31.7°C is lower."
+      },
+      "after": {
+        "Only 30 cm³": "25 cm³ has the same mean.",
+        "Only 35 cm³": "31.7 °C is lower."
+      }
+    },
+    "optionAliases": {
+      "before": null,
+      "after": {
+        "25 and30cm³": "25 and 30 cm³",
+        "Only30cm³": "Only 30 cm³",
+        "Only35cm³": "Only 35 cm³"
+      }
+    },
+    "options": {
+      "before": ["Only30cm³", "Only35cm³", "25 and30cm³"],
+      "after": ["Only 30 cm³", "Only 35 cm³", "25 and 30 cm³"]
+    },
+    "prompt": {
+      "before": "Added volumes 20,25,30,35 cm³ give mean peaks 31.0,32.3,32.3,31.7 °C. Which sampled volumes have the highest mean peak?",
+      "after": "Added volumes 20, 25, 30, 35 cm³ give mean peaks 31.0, 32.3, 32.3, 31.7 °C. Which sampled volumes have the highest mean peak?"
+    }
+  },
+  "ep-v1-a-rise": {
+    "explanation": {
+      "before": "29.6−20.8=8.8°C.",
+      "after": "29.6−20.8=8.8 °C."
+    }
+  },
+  "ep-v1-a-mean": {
+    "explanation": {
+      "before": "13.5/3=4.5°C.",
+      "after": "13.5/3=4.5 °C."
+    },
+    "prompt": {
+      "before": "Matched rises 4.3,4.7,4.5 °C with no recorded failures. Find the mean.",
+      "after": "Matched rises 4.3, 4.7, 4.5 °C with no recorded failures. Find the mean."
+    }
+  },
+  "ep-v1-a-gradient": {
+    "explanation": {
+      "before": "(28.4−22.8)/(5−1)=1.4°C/g.",
+      "after": "(28.4−22.8)/(5−1)=1.4 °C/g."
+    }
+  },
+  "ep-v1-b-change": {
+    "explanation": {
+      "before": "18.6−25.4=−6.8°C.",
+      "after": "18.6−25.4=−6.8 °C."
+    }
+  },
+  "ep-v1-b-validmean": {
+    "explanation": {
+      "before": "18.4/2=9.2°C.",
+      "after": "18.4/2=9.2 °C."
+    },
+    "prompt": {
+      "before": "Rises 9.0,9.4,3.0 °C. Trial 3 has a documented measurement failure. Find the mean of the valid trials.",
+      "after": "Rises 9.0, 9.4, 3.0 °C. Trial 3 has a documented measurement failure. Find the mean of the valid trials."
+    }
+  },
+  "ep-v1-d-a-rise": {
+    "explanation": {
+      "before": "31.4−22.2=9.2°C.",
+      "after": "31.4−22.2=9.2 °C."
+    }
+  },
+  "ep-v1-d-a-gradient": {
+    "explanation": {
+      "before": "5/4=1.25°C/g.",
+      "after": "5/4=1.25 °C/g."
+    },
+    "prompt": {
+      "before": "A fitted line goes through(2 g,24 °C) and(6 g,29 °C). Find its gradient.",
+      "after": "A fitted line goes through (2 g, 24 °C) and (6 g,29 °C). Find its gradient."
+    }
+  },
+  "ep-v1-d-b-mean": {
+    "explanation": {
+      "before": "18.9/3=6.3°C.",
+      "after": "18.9/3=6.3 °C."
+    },
+    "prompt": {
+      "before": "Three valid matched rises 6.1,6.5,6.3 °C. Find their mean.",
+      "after": "Three valid matched rises 6.1, 6.5, 6.3 °C. Find their mean."
+    }
+  },
+  "ep-v1-d-b-intercept": {
+    "explanation": {
+      "before": "24.8−2×1.3=22.2°C.",
+      "after": "24.8−2×1.3=22.2 °C."
+    },
+    "prompt": {
+      "before": "A fitted line has gradient 1.3 °C/g and passes through(2 g,24.8 °C). Estimate temperature at 0 g.",
+      "after": "A fitted line has gradient 1.3 °C/g and passes through (2 g, 24.8 °C). Estimate temperature at 0 g."
+    }
+  }
+}
