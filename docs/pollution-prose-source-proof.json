@@ -1,0 +1,20 @@
+{
+  "replacements": {
+    "1kg=1000g;1/100\u00d71000=10g.": "1 kg=1000 g;1/100\u00d71000=10 g.",
+    "20\u22125=15mg/min.": "20\u22125=15 mg/min.",
+    "There is oneS atom on each side.": "There is one S atom on each side.",
+    "2kg=2000g;0.004\u00d72000=8g.": "2 kg=2000 g;0.004\u00d72000=8 g.",
+    "60\u221215=45mg/min;45/60\u00d7100=75%.": "60\u221215=45 mg/min;45/60\u00d7100=75%.",
+    "3kg=3000g;0.007\u00d73000=21g.": "3 kg=3000 g;0.007\u00d73000=21 g.",
+    "90\u221218=72g/hour;72/90\u00d7100=80%.": "90\u221218=72 g/hour;72/90\u00d7100=80%.",
+    "0.5kg=500g;0.008\u00d7500=4g.": "0.5 kg=500 g;0.008\u00d7500=4 g.",
+    "Decrease30mg/min;30/50\u00d7100=60%.": "Decrease 30 mg/min;30/50\u00d7100=60%.",
+    "4kg=4000g;0.003\u00d74000=12g.": "4 kg=4000 g;0.003\u00d74000=12 g.",
+    "Decrease18g/hour;18/30\u00d7100=60%.": "Decrease 18 g/hour;18/30\u00d7100=60%."
+  },
+  "exactEnumeratedSubstitutions": true,
+  "whitespaceOnly": true,
+  "beforeSHA256": "8804a6e43720771683f75ed7d4f3c65b0f059f4d4eefd379587c8f1c7d7b6722",
+  "afterSHA256": "eac94f36b6c59e71073e529891c234d209473fc5ed62e824149e7be5b5e3a04f",
+  "answersOptionsIdsVersionAndExposureUnchanged": true
+}

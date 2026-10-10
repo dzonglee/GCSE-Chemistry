@@ -181,7 +181,7 @@ const warmup = [
     "A 1 kg fuel sample contains 1% sulfur by mass. How many grams of sulfur are present?",
     10,
     "g",
-    "1kg=1000g;1/100×1000=10g.",
+    "1 kg=1000 g;1/100×1000=10 g.",
     "Convert kilograms to grams first.",
   ),
   numeric(
@@ -190,7 +190,7 @@ const warmup = [
     "A rate falls from 20 to 5 mg/min. What is the decrease?",
     15,
     "mg/min",
-    "20−5=15mg/min.",
+    "20−5=15 mg/min.",
     "Subtract the new value from the original.",
   ),
 ];
@@ -317,7 +317,7 @@ const refresher = [
     "In S +O₂ →SO₂, how many sulfur atoms are on each side?",
     1,
     "atom",
-    "There is oneS atom on each side.",
+    "There is one S atom on each side.",
     "Count sulfur separately from oxygen.",
     "balanceSulfur",
   ),
@@ -973,7 +973,7 @@ const checkForms = [
       "A 2 kg fuel sample contains 0.4% sulfur by mass. How many grams of sulfur are burned?",
       8,
       "g",
-      "2kg=2000g;0.004×2000=8g.",
+      "2 kg=2000 g;0.004×2000=8 g.",
       "Convert mass units and use the percentage as a fraction.",
     ),
     construct(
@@ -992,7 +992,7 @@ const checkForms = [
         "mg/min",
         "This test does not measure gaseous pollutants.",
       ),
-      "60−15=45mg/min;45/60×100=75%.",
+      "60−15=45 mg/min;45/60×100=75%.",
       "Use the original rate, not the new rate.",
     ),
     choice(
@@ -1072,7 +1072,7 @@ const checkForms = [
       "A 3 kg fuel sample contains 0.7% sulfur by mass. How many grams of sulfur are present?",
       21,
       "g",
-      "3kg=3000g;0.007×3000=21g.",
+      "3 kg=3000 g;0.007×3000=21 g.",
       "Convert to grams and calculate a fraction of the total.",
     ),
     construct(
@@ -1091,7 +1091,7 @@ const checkForms = [
         "g/hour",
         "No information about the other pollutants is supplied.",
       ),
-      "90−18=72g/hour;72/90×100=80%.",
+      "90−18=72 g/hour;72/90×100=80%.",
       "Use the original SO₂ rate as denominator.",
     ),
     choice(
@@ -1141,7 +1141,7 @@ const reviewForms = [
       "A 0.5 kg fuel sample contains 0.8% sulfur. What sulfur mass is present?",
       4,
       "g",
-      "0.5kg=500g;0.008×500=4g.",
+      "0.5 kg=500 g;0.008×500=4 g.",
       "Convert to grams first.",
     ),
     written(
@@ -1162,7 +1162,7 @@ const reviewForms = [
       "A matched particle rate falls from 50 to 20 mg/min. What is its percentage reduction?",
       60,
       "%",
-      "Decrease30mg/min;30/50×100=60%.",
+      "Decrease 30 mg/min;30/50×100=60%.",
       "Divide the decrease by the original.",
     ),
   ],
@@ -1187,7 +1187,7 @@ const reviewForms = [
       "A 4 kg fuel sample contains 0.3% sulfur. What sulfur mass is present?",
       12,
       "g",
-      "4kg=4000g;0.003×4000=12g.",
+      "4 kg=4000 g;0.003×4000=12 g.",
       "Use consistent units.",
     ),
     written(
@@ -1208,7 +1208,7 @@ const reviewForms = [
       "A matched CO rate falls from 30 to 12 g/hour. What is the percentage reduction?",
       60,
       "%",
-      "Decrease18g/hour;18/30×100=60%.",
+      "Decrease 18 g/hour;18/30×100=60%.",
       "Use the original rate as denominator.",
     ),
   ],

@@ -72,6 +72,28 @@ async function shot(p: Page, name: string, device: string) {
     scale: "css",
   });
 }
+async function proseShot(p: Page, name: string, device: string) {
+  await accessible(p);
+  const out = path.join(process.cwd(), "docs/qa/pollution-prose");
+  fs.mkdirSync(out, { recursive: true });
+  await p.evaluate(async () => {
+    if (document.activeElement instanceof HTMLElement)
+      document.activeElement.blur();
+    await document.fonts.ready;
+    document.querySelectorAll("textarea").forEach((e) => {
+      e.scrollTop = 0;
+    });
+    scrollTo(0, 0);
+    await new Promise<void>((r) =>
+      requestAnimationFrame(() => requestAnimationFrame(() => r())),
+    );
+  });
+  await p.screenshot({
+    path: path.join(out, `${device}-${name}.png`),
+    fullPage: true,
+    scale: "css",
+  });
+}
 for (const mode of [
   "products",
   "source",
@@ -109,6 +131,8 @@ for (const mode of [
     await expect(root.locator(".feedback")).toHaveClass(/good/);
     await accessible(page);
     await shot(page, "correct-" + mode, info.project.name);
+    if (mode === "products")
+      await proseShot(page, "products", info.project.name);
     const f = pollutionFields[mode][0],
       wrong = pollutionNumeric.includes(f)
         ? "999"
@@ -267,6 +291,13 @@ test("both reserved eight-question forms and delayed four-question forms seal ma
         exact: true,
       }),
     ).toBeVisible();
+    const review = page.locator(".assessment-results details").nth(3);
+    await review.locator("summary").click();
+    await expect(review).toContainText(
+      f ? "Decrease 18 g/hour" : "Decrease 30 mg/min",
+    );
+    await proseShot(page, `delayed-${f}`, info.project.name);
+    await review.locator("summary").click();
   }
 });
 test("all20 records are reachable, scientifically checkable and tied to their task", async ({
@@ -363,7 +394,7 @@ test("wrong independent construction is retained, faded and recovers to the spec
   await page.getByLabel("CO coefficient", { exact: true }).fill("3");
   await page.locator(".sample-check-answer").click();
   await expect(page.locator(".question-panel .feedback")).toContainText(
-    "Revisit co coefficient",
+    "Revisit CO coefficient.",
   );
   await expect(
     page.locator(".pollution-tally,.pollution-workbench"),
