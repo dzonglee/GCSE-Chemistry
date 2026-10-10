@@ -96,154 +96,167 @@ async function comparison(root: Locator, id: string) {
 for (const [mode, index] of (
   ["rearrange", "structure", "balance", "bromine", "process"] as CrackingMode[]
 ).map((m, i) => [m, i + 1] as const))
-  test(
-    mode +
-      " retains individually supplied wrong proposals across reload and has readable accessible controls",
-    async ({ page }, info) => {
-      await page.goto(route);
-      await page.getByRole("button", { name: "Learn", exact: true }).click();
-      await task(page, index);
-      const root = page.getByRole("region", { name: "Task model" });
-      for (const id of Object.keys(crackingRecords[mode])) {
-        await comparison(root, id);
-        const e = expectedCrackingBoard(mode, id);
-        for (const [k, v] of Object.entries(e)) {
-          if (k === "record") continue;
-          if (k === "phase") {
-            await root
-              .getByRole("button", {
-                name: "Compare " + v.toUpperCase(),
-                exact: true,
-              })
-              .click();
-          } else if (k.startsWith("show")) {
-            await root
-              .getByRole("button", {
-                name: (
-                  {
-                    showBlank: "Reveal no-sample blank observation",
-                    showPositive: "Reveal known alkene reference observation",
-                    showSample: "Reveal original sample observation",
-                  } as Record<string, string>
-                )[k],
-                exact: true,
-              })
-              .click();
-          } else if (/^h\d+$/.test(k)) {
-            const button = root.locator(`[data-h-slot="${k}"]`);
-            if (
-              (await button.getAttribute("aria-pressed")) !==
-              (v === "yes" ? "true" : "false")
-            )
-              await button.click();
-          } else {
-            const input = root.locator(`[id$="-${k}"]`);
-            if (await input.evaluate((x) => x.tagName === "SELECT"))
-              await input.selectOption(v);
-            else await input.fill(v);
+  for (const artifactsOnly of ["rearrange", "structure"].includes(mode)
+    ? [false, true]
+    : [false])
+    test(
+      mode +
+        (artifactsOnly
+          ? " initial screenshots and exports preserve checked construction"
+          : " retains individually supplied wrong proposals across reload and has readable accessible controls"),
+      async ({ page }, info) => {
+        await page.goto(route);
+        await page.getByRole("button", { name: "Learn", exact: true }).click();
+        await task(page, index);
+        const root = page.getByRole("region", { name: "Task model" });
+        for (const id of artifactsOnly
+          ? ["initial"]
+          : Object.keys(crackingRecords[mode])) {
+          await comparison(root, id);
+          const e = expectedCrackingBoard(mode, id);
+          for (const [k, v] of Object.entries(e)) {
+            if (k === "record") continue;
+            if (k === "phase") {
+              await root
+                .getByRole("button", {
+                  name: "Compare " + v.toUpperCase(),
+                  exact: true,
+                })
+                .click();
+            } else if (k.startsWith("show")) {
+              await root
+                .getByRole("button", {
+                  name: (
+                    {
+                      showBlank: "Reveal no-sample blank observation",
+                      showPositive: "Reveal known alkene reference observation",
+                      showSample: "Reveal original sample observation",
+                    } as Record<string, string>
+                  )[k],
+                  exact: true,
+                })
+                .click();
+            } else if (/^h\d+$/.test(k)) {
+              const button = root.locator(`[data-h-slot="${k}"]`);
+              if (
+                (await button.getAttribute("aria-pressed")) !==
+                (v === "yes" ? "true" : "false")
+              )
+                await button.click();
+            } else {
+              const input = root.locator(`[id$="-${k}"]`);
+              if (await input.evaluate((x) => x.tagName === "SELECT"))
+                await input.selectOption(v);
+              else await input.fill(v);
+            }
           }
-        }
-        const key =
-            mode === "rearrange"
-              ? "hydrogen"
-              : mode === "structure"
-                ? "hydrogens"
-                : mode === "balance"
-                  ? crackingBalances[id].kind === "formula"
-                    ? "hydrogens"
-                    : "feed"
-                  : mode === "bromine"
-                    ? "verdict"
-                    : "heat",
-          wrong =
-            mode === "bromine"
-              ? e.verdict === "alkaneSupported"
-                ? "alkeneSupported"
-                : "alkaneSupported"
-              : mode === "process"
-                ? "room"
-                : "99",
-          input = root.locator(`[id$="-${key}"]`);
-        if (["bromine", "process"].includes(mode))
-          await input.selectOption(wrong);
-        else await input.fill(wrong);
-        await root
-          .getByRole("button", { name: "Check model", exact: true })
-          .click();
-        await expect(root.locator(".feedback.incorrect")).toBeVisible();
-        await saved(page);
-        await page.reload();
-        await expect(input).toHaveValue(wrong);
-        await comparison(root, id);
-        await expect(input).toHaveValue(wrong);
-        if (["bromine", "process"].includes(mode))
-          await input.selectOption(e[key]);
-        else await input.fill(e[key]);
-        await root
-          .getByRole("button", { name: "Check model", exact: true })
-          .click();
-        await expect(root.locator(".feedback.correct")).toBeVisible();
-        expect(
-          await page.evaluate(
-            () => document.documentElement.scrollWidth <= innerWidth,
-          ),
-        ).toBe(true);
-        for (const button of await root.getByRole("button").all())
-          expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(
-            44,
-          );
-        if (mode === "rearrange")
-          await expect(
-            root.locator('.cracking-canvas[data-state="ready"]'),
-          ).toBeVisible();
-        if (id === "initial") {
-          await capture(
-            page,
-            `docs/qa/cracking-${info.project.name}-${mode}.png`,
-          );
-          await page.screenshot({
-            fullPage: true,
-            clip: (await root.boundingBox())!,
-            path: `docs/qa/cracking-${info.project.name}-${mode}-model.png`,
-            scale: "css",
-          });
-          if (mode === "rearrange") {
-            const download = page.waitForEvent("download");
-            await root
-              .getByRole("button", { name: "Download 3D asset", exact: true })
-              .click();
-            await (
-              await download
-            ).saveAs(`docs/qa/cracking-${info.project.name}-after.glb`);
-            await root
-              .getByRole("button", { name: "Compare BEFORE", exact: true })
-              .click();
+          const key =
+              mode === "rearrange"
+                ? "hydrogen"
+                : mode === "structure"
+                  ? "hydrogens"
+                  : mode === "balance"
+                    ? crackingBalances[id].kind === "formula"
+                      ? "hydrogens"
+                      : "feed"
+                    : mode === "bromine"
+                      ? "verdict"
+                      : "heat",
+            wrong =
+              mode === "bromine"
+                ? e.verdict === "alkaneSupported"
+                  ? "alkeneSupported"
+                  : "alkaneSupported"
+                : mode === "process"
+                  ? "room"
+                  : "99",
+            input = root.locator(`[id$="-${key}"]`);
+          if (["bromine", "process"].includes(mode))
+            await input.selectOption(wrong);
+          else await input.fill(wrong);
+          await root
+            .getByRole("button", { name: "Check model", exact: true })
+            .click();
+          await expect(root.locator(".feedback.incorrect")).toBeVisible();
+          await saved(page);
+          await page.reload({ waitUntil: "domcontentloaded" });
+          await expect(input).toHaveValue(wrong);
+          await comparison(root, id);
+          await expect(input).toHaveValue(wrong);
+          if (["bromine", "process"].includes(mode))
+            await input.selectOption(e[key]);
+          else await input.fill(e[key]);
+          await root
+            .getByRole("button", { name: "Check model", exact: true })
+            .click();
+          await expect(root.locator(".feedback.correct")).toBeVisible();
+          expect(
+            await page.evaluate(
+              () => document.documentElement.scrollWidth <= innerWidth,
+            ),
+          ).toBe(true);
+          const buttonHeights = await root
+            .getByRole("button")
+            .evaluateAll((buttons) =>
+              buttons.map((button) => button.getBoundingClientRect().height),
+            );
+          for (const height of buttonHeights)
+            expect(height).toBeGreaterThanOrEqual(44);
+          if (mode === "rearrange")
             await expect(
               root.locator('.cracking-canvas[data-state="ready"]'),
             ).toBeVisible();
-            const before = page.waitForEvent("download");
-            await root
-              .getByRole("button", { name: "Download 3D asset", exact: true })
-              .click();
-            await (
-              await before
-            ).saveAs(`docs/qa/cracking-${info.project.name}-before.glb`);
-            await root
-              .getByRole("button", { name: "Compare AFTER", exact: true })
-              .click();
+          if (
+            id === "initial" &&
+            (artifactsOnly || !["rearrange", "structure"].includes(mode))
+          ) {
+            await capture(
+              page,
+              `docs/qa/cracking-${info.project.name}-${mode}.png`,
+            );
+            await page.screenshot({
+              fullPage: true,
+              clip: (await root.boundingBox())!,
+              path: `docs/qa/cracking-${info.project.name}-${mode}-model.png`,
+              scale: "css",
+            });
+            if (mode === "rearrange") {
+              const download = page.waitForEvent("download");
+              await root
+                .getByRole("button", { name: "Download 3D asset", exact: true })
+                .click();
+              await (
+                await download
+              ).saveAs(`docs/qa/cracking-${info.project.name}-after.glb`);
+              await root
+                .getByRole("button", { name: "Compare BEFORE", exact: true })
+                .click();
+              await expect(
+                root.locator('.cracking-canvas[data-state="ready"]'),
+              ).toBeVisible();
+              const before = page.waitForEvent("download");
+              await root
+                .getByRole("button", { name: "Download 3D asset", exact: true })
+                .click();
+              await (
+                await before
+              ).saveAs(`docs/qa/cracking-${info.project.name}-before.glb`);
+              await root
+                .getByRole("button", { name: "Compare AFTER", exact: true })
+                .click();
+            }
           }
         }
-      }
-      await root
-        .getByRole("button", { name: "Reset model", exact: true })
-        .click();
-      await saved(page);
-      await page.reload();
-      await expect(
-        root.getByLabel("Supplied comparison", { exact: true }),
-      ).toHaveValue("initial");
-    },
-  );
+        await root
+          .getByRole("button", { name: "Reset model", exact: true })
+          .click();
+        await saved(page);
+        await page.reload({ waitUntil: "domcontentloaded" });
+        await expect(
+          root.getByLabel("Supplied comparison", { exact: true }),
+        ).toHaveValue("initial");
+      },
+    );
 test("all 36 practice demands retain honest structure and written review", async ({
   page,
 }) => {
