@@ -2525,11 +2525,22 @@
     "trilogyCandidate": "5.9.1.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Modern approximate80/20, minor CO2/water/noble gases and200million-year stability. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Same-whole percentage/volume calculations and appropriate 80/20 versus 78/21/1 rounding are distinct. Modern minor CO2/water/noble-gas groups and dry-air humidity are generated in practice, a separate cold response and delayed recall. About200million-year stability is taught in p-approx; it is not a new unaided-date recall claim.",
+    "responseEvidenceIds": [
+      "early-atmosphere-v1-p-composition",
+      "early-atmosphere-v1-p-approx",
+      "early-atmosphere-v1-p-volume",
+      "early-atmosphere-v1-p-dry",
+      "early-atmosphere-v1-minor-p-components",
+      "early-atmosphere-v1-minor-c-description",
+      "early-atmosphere-v1-minor-v-recall"
+    ],
+    "responseSourceReview": "Actual8462p76–77 bodies and p77 equation image reread; fresh2022F2 Q03.1–8/paired final scheme and QP14/MS12 images read. All25 early-atmosphere practice/26 reserved and current teaching responses personally inspected. No new app change or QA certificate."
   },
   {
     "section": "4.9.1.2",
@@ -2538,11 +2549,27 @@
     "trilogyCandidate": "5.9.1.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Limited ancient evidence/4.6billion years; volcanic mainlyCO2/water, nitrogen/smallmethane/ammonia, ocean dissolution/carbonate precipitation; supplied theory evaluation. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Qualified volcanic-origin theory, little/no oxygen, possible methane/ammonia, cooling/condensation/ocean collection, CO2 dissolution/carbonate precipitation and nitrogen accumulation have actual response evidence. Extended writing evaluates indirect rock/planet evidence, limited ancient records and revisable theory; exact ancient percentages are not claimed.",
+    "responseEvidenceIds": [
+      "early-atmosphere-v1-p-volcano",
+      "early-atmosphere-v1-p-minor",
+      "early-atmosphere-v1-p-ocean",
+      "early-atmosphere-v1-p-dissolve",
+      "early-atmosphere-v1-p-nitrogen",
+      "early-atmosphere-v1-p-evidence",
+      "early-atmosphere-v1-cA-origin",
+      "early-atmosphere-v1-cA-ocean",
+      "early-atmosphere-v1-cA-evidence",
+      "early-atmosphere-v1-cB-minor",
+      "early-atmosphere-v1-vA-ocean",
+      "early-atmosphere-v1-vB-evidence"
+    ],
+    "responseSourceReview": "Actual8462p76–77 bodies and p77 equation image reread; fresh2022F2 Q03.1–8/paired final scheme and QP14/MS12 images read. All25 early-atmosphere practice/26 reserved and current teaching responses personally inspected. No new app change or QA certificate."
   },
   {
     "section": "4.9.1.3",
@@ -2551,11 +2578,27 @@
     "trilogyCandidate": "5.9.1.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Algae/plants photosynthesis oxygen,2.7billion-year onset and gradual increase enabling animals; actual photosynthesis equation previously read in both source pages. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Generated word and balanced symbol photosynthesis equations include both products and light as energy rather than a reagent. Algae/plant CO2 use, oxygen release and gradual oxygen increase have cold writing. About2.7billion-year context is taught; million/billion conversion, descending-age graph readings and first plateaus are separately answered. The original supplied reconstruction graphs do not claim exact historical gas measurements.",
+    "responseEvidenceIds": [
+      "early-atmosphere-v1-p-photo",
+      "early-atmosphere-v1-p-equation",
+      "early-atmosphere-v1-p-billion",
+      "early-atmosphere-v1-p-graph",
+      "early-atmosphere-v1-p-interpolate",
+      "early-atmosphere-v1-p-plateau",
+      "early-atmosphere-v1-p-axis",
+      "early-atmosphere-v1-cA-photo",
+      "early-atmosphere-v1-cA-graph",
+      "early-atmosphere-v1-cB-graph",
+      "early-atmosphere-v1-cB-synthesis",
+      "early-atmosphere-v1-vB-photo"
+    ],
+    "responseSourceReview": "Actual8462p76–77 bodies and p77 equation image reread; fresh2022F2 Q03.1–8/paired final scheme and QP14/MS12 images read. All25 early-atmosphere practice/26 reserved and current teaching responses personally inspected. No new app change or QA certificate."
   },
   {
     "section": "4.9.1.4",
@@ -2564,11 +2607,24 @@
     "trilogyCandidate": "5.9.1.4",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Photosynthesis CO2 loss; explain limestone/coal/oil/gas formation and main changes. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "CO2 use in photosynthesis is distinguished from ocean dissolution and carbonate sediment/limestone storage. Generated whole explanations distinguish buried land-plant coal from marine/plankton oil/gas, limited decay, heat/pressure/geological time and retained carbon. Cold carbonate/synthesis and delayed full origin comparison preserve this breadth.",
+    "responseEvidenceIds": [
+      "early-atmosphere-v1-p-limestone",
+      "early-atmosphere-v1-p-coal",
+      "early-atmosphere-v1-p-fuels",
+      "early-atmosphere-v1-p-synthesis",
+      "early-atmosphere-v1-cA-store",
+      "early-atmosphere-v1-cB-carbonate",
+      "early-atmosphere-v1-cB-coal",
+      "early-atmosphere-v1-cB-synthesis",
+      "early-atmosphere-v1-vA-stores"
+    ],
+    "responseSourceReview": "Actual8462p76–77 bodies and p77 equation image reread; fresh2022F2 Q03.1–8/paired final scheme and QP14/MS12 images read. All25 early-atmosphere practice/26 reserved and current teaching responses personally inspected. No new app change or QA certificate."
   },
   {
     "section": "4.9.2.1",
