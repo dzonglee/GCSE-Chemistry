@@ -98,9 +98,21 @@ test("the first extended paper renders all thirty formats, retains responses and
     .click();
   for (let i = 0; i < paper.questions.length; i++) {
     const q = paper.questions[i];
+    const hasSeparatePrompt = !!(
+      (q.writtenEquations || q.conciseHeading) &&
+      q.title
+    );
     await expect(
-      page.getByRole("heading", { name: q.prompt, exact: true }),
+      page.getByRole("heading", {
+        name: hasSeparatePrompt ? q.title : q.prompt,
+        exact: true,
+      }),
     ).toBeVisible();
+    if (hasSeparatePrompt) {
+      const prompt = page.locator(".question-panel .written-equation-prompt");
+      await expect(prompt).toBeVisible();
+      await expect(prompt).toHaveText(q.prompt);
+    }
     if (i === 0) {
       await expect(
         page.locator(".assessment-question-jump"),

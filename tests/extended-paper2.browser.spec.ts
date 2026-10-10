@@ -141,9 +141,21 @@ test("Paper2 renders all thirty responses with concealed criteria, retained cons
     .click();
   for (let i = 0; i < paper.questions.length; i++) {
     const q = paper.questions[i];
+    const hasSeparatePrompt = !!(
+      (q.writtenEquations || q.conciseHeading) &&
+      q.title
+    );
     await expect(
-      page.getByRole("heading", { name: q.prompt, exact: true }),
+      page.getByRole("heading", {
+        name: hasSeparatePrompt ? q.title : q.prompt,
+        exact: true,
+      }),
     ).toBeVisible();
+    if (hasSeparatePrompt) {
+      const prompt = page.locator(".question-panel .written-equation-prompt");
+      await expect(prompt).toBeVisible();
+      await expect(prompt).toHaveText(q.prompt);
+    }
     await expect(
       page.getByRole("region", { name: "Task model", exact: true }),
     ).toHaveCount(0);
