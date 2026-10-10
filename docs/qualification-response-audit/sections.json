@@ -821,11 +821,12 @@
     "trilogyCandidate": "5.3.1.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Open-system gas gain/loss using given balanced equations and particle model. Actual8462 complete quantitative body read; corresponding8464 bodies read through5.3.2.5 and next5.4 heading. Separate-only parent/inherited Higher qualifiers checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseSourceReview": "Actual8462 printed37 body and exact mass-writing review reread. Current mc-write-v1-p-molecules/ca-loss/ca-gain/ra-carbonate/ra-collector complete prompts/answers/rubrics personally read. Supplied balanced-equation gas escape, outside oxygen incorporation and complete particle inventories have actual generated independent/delayed evidence; gas formation alone is not mass loss. Actual2019F1Q05.1–2/paired scheme text reread: examined gas-loss item is recognition, broader particle-account requirement comes from specification. No new app authoring or browser certification."
   },
   {
     "section": "4.3.1.4",
