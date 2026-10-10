@@ -84,110 +84,119 @@ for (const [mode, index] of (
     "oxygen",
     "evidence",
   ] as AlkaneMode[]
-).map((m, i) => [m, i + 1] as const))
-  test(
-    mode +
-      " retains individually supplied wrong proposals across reload and has readable accessible controls",
-    async ({ page }, info) => {
-      await page.goto(route);
-      await page.getByRole("button", { name: "Learn", exact: true }).click();
-      await task(page, index);
-      const root = page.getByRole("region", { name: "Task model" });
-      for (const id of Object.keys(alkaneRecords[mode])) {
-        await comparison(root, id);
-        const e = expectedAlkaneBoard(mode, id);
-        for (const [k, v] of Object.entries(e)) {
-          if (k === "record") continue;
-          if (/^h\d+$/.test(k)) {
-            const button = root.locator(`[data-h-slot="${k}"]`);
-            if (
-              (await button.getAttribute("aria-pressed")) !==
-              (v === "yes" ? "true" : "false")
-            )
-              await button.click();
-          } else {
-            const input = root.locator(`[id$="-${k}"]`);
-            if (await input.evaluate((x) => x.tagName === "SELECT"))
-              await input.selectOption(v);
-            else await input.fill(v);
+).map((m, i) => [m, i + 1] as const)) {
+  const records = Object.keys(alkaneRecords[mode]);
+  const chunks = Array.from({ length: Math.ceil(records.length / 3) }, (_, i) =>
+    records.slice(i * 3, i * 3 + 3),
+  );
+  for (const [chunkIndex, recordIds] of chunks.entries())
+    test(
+      mode +
+        (chunks.length > 1
+          ? ` records ${chunkIndex * 3 + 1}–${chunkIndex * 3 + recordIds.length}`
+          : "") +
+        " retains individually supplied wrong proposals across reload and has readable accessible controls",
+      async ({ page }, info) => {
+        await page.goto(route);
+        await page.getByRole("button", { name: "Learn", exact: true }).click();
+        await task(page, index);
+        const root = page.getByRole("region", { name: "Task model" });
+        for (const id of recordIds) {
+          await comparison(root, id);
+          const e = expectedAlkaneBoard(mode, id);
+          for (const [k, v] of Object.entries(e)) {
+            if (k === "record") continue;
+            if (/^h\d+$/.test(k)) {
+              const button = root.locator(`[data-h-slot="${k}"]`);
+              if (
+                (await button.getAttribute("aria-pressed")) !==
+                (v === "yes" ? "true" : "false")
+              )
+                await button.click();
+            } else {
+              const input = root.locator(`[id$="-${k}"]`);
+              if (await input.evaluate((x) => x.tagName === "SELECT"))
+                await input.selectOption(v);
+              else await input.fill(v);
+            }
+          }
+          const key =
+              mode === "kit"
+                ? "hydrogens"
+                : mode === "formula"
+                  ? "twice"
+                  : mode === "classify"
+                    ? "carbons"
+                    : mode === "equation"
+                      ? "oxygen"
+                      : mode === "oxygen"
+                        ? "used"
+                        : "coEffect",
+            wrong = mode === "evidence" ? "smellWarns" : "99",
+            input = root.locator(`[id$="-${key}"]`);
+          if (mode === "evidence") await input.selectOption(wrong);
+          else await input.fill(wrong);
+          await root
+            .getByRole("button", { name: "Check model", exact: true })
+            .click();
+          await expect(root.locator(".feedback.incorrect")).toBeVisible();
+          await saved(page);
+          await page.reload();
+          await expect(input).toHaveValue(wrong);
+          await comparison(root, id);
+          await expect(input).toHaveValue(wrong);
+          if (mode === "evidence") await input.selectOption(e[key]);
+          else await input.fill(e[key]);
+          await root
+            .getByRole("button", { name: "Check model", exact: true })
+            .click();
+          await expect(root.locator(".feedback.correct")).toBeVisible();
+          expect(
+            await page.evaluate(
+              () => document.documentElement.scrollWidth <= innerWidth,
+            ),
+          ).toBe(true);
+          for (const button of await root.getByRole("button").all())
+            expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(
+              44,
+            );
+          if (mode === "kit")
+            await expect(
+              root.locator('.alkane-canvas[data-state="ready"]'),
+            ).toBeVisible();
+          if (id === "initial") {
+            await capture(
+              page,
+              `docs/qa/alkanes-${info.project.name}-${mode}.png`,
+            );
+            await page.screenshot({
+              fullPage: true,
+              clip: (await root.boundingBox())!,
+              path: `docs/qa/alkanes-${info.project.name}-${mode}-model.png`,
+              scale: "css",
+            });
+            if (mode === "kit") {
+              const download = page.waitForEvent("download");
+              await root
+                .getByRole("button", { name: "Download 3D asset", exact: true })
+                .click();
+              await (
+                await download
+              ).saveAs(`docs/qa/alkanes-${info.project.name}.glb`);
+            }
           }
         }
-        const key =
-            mode === "kit"
-              ? "hydrogens"
-              : mode === "formula"
-                ? "twice"
-                : mode === "classify"
-                  ? "carbons"
-                  : mode === "equation"
-                    ? "oxygen"
-                    : mode === "oxygen"
-                      ? "used"
-                      : "coEffect",
-          wrong = mode === "evidence" ? "smellWarns" : "99",
-          input = root.locator(`[id$="-${key}"]`);
-        if (mode === "evidence") await input.selectOption(wrong);
-        else await input.fill(wrong);
         await root
-          .getByRole("button", { name: "Check model", exact: true })
+          .getByRole("button", { name: "Reset model", exact: true })
           .click();
-        await expect(root.locator(".feedback.incorrect")).toBeVisible();
         await saved(page);
         await page.reload();
-        await expect(input).toHaveValue(wrong);
-        await comparison(root, id);
-        await expect(input).toHaveValue(wrong);
-        if (mode === "evidence") await input.selectOption(e[key]);
-        else await input.fill(e[key]);
-        await root
-          .getByRole("button", { name: "Check model", exact: true })
-          .click();
-        await expect(root.locator(".feedback.correct")).toBeVisible();
-        expect(
-          await page.evaluate(
-            () => document.documentElement.scrollWidth <= innerWidth,
-          ),
-        ).toBe(true);
-        for (const button of await root.getByRole("button").all())
-          expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(
-            44,
-          );
-        if (mode === "kit")
-          await expect(
-            root.locator('.alkane-canvas[data-state="ready"]'),
-          ).toBeVisible();
-        if (id === "initial") {
-          await capture(
-            page,
-            `docs/qa/alkanes-${info.project.name}-${mode}.png`,
-          );
-          await page.screenshot({
-            fullPage: true,
-            clip: (await root.boundingBox())!,
-            path: `docs/qa/alkanes-${info.project.name}-${mode}-model.png`,
-            scale: "css",
-          });
-          if (mode === "kit") {
-            const download = page.waitForEvent("download");
-            await root
-              .getByRole("button", { name: "Download 3D asset", exact: true })
-              .click();
-            await (
-              await download
-            ).saveAs(`docs/qa/alkanes-${info.project.name}.glb`);
-          }
-        }
-      }
-      await root
-        .getByRole("button", { name: "Reset model", exact: true })
-        .click();
-      await saved(page);
-      await page.reload();
-      await expect(
-        root.getByLabel("Supplied comparison", { exact: true }),
-      ).toHaveValue("initial");
-    },
-  );
+        await expect(
+          root.getByLabel("Supplied comparison", { exact: true }),
+        ).toHaveValue("initial");
+      },
+    );
+}
 test("all 38 practice demands retain honest structure and written review", async ({
   page,
 }) => {
