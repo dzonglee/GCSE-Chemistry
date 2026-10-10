@@ -1,0 +1,178 @@
+{
+  "publishedLessons": [
+    "graphene",
+    "fullerenes",
+    "group-seven",
+    "percentage-composition",
+    "changing-concentration",
+    "moles-and-reacting-masses",
+    "molar-concentration",
+    "gas-volumes-and-solutions",
+    "titration-calculations",
+    "oxidation-and-reduction",
+    "making-soluble-salts",
+    "aqueous-electrolysis",
+    "energy-practical",
+    "fuel-cell-half-equations",
+    "interpreting-cell-voltages",
+    "polymers",
+    "greenhouse-effect",
+    "carbon-cycle",
+    "conservation-and-concentration",
+    "balancing-from-masses",
+    "yield-and-atom-economy",
+    "cells-and-fuel-cells",
+    "rates-from-tangents",
+    "climate-evidence",
+    "air-pollutants"
+  ],
+  "currentLesson": null,
+  "remainingLessonCount": 0,
+  "sharedLayout": {
+    "commit": "c28bdd31dce3003bc5078845f4273d1c78eeac71",
+    "browserCases": 190,
+    "assessmentStates": 380,
+    "exitCode": 0,
+    "frozenFingerprints": 2356
+  },
+  "changingConcentration": {
+    "publishedShortCommit": "af7d12e",
+    "unitChecksPassed": 8,
+    "browserCasesPassed": 26,
+    "finalCaptureRepeatCasesPassed": 2,
+    "freshCloneVerification": "ten files exact SHA256; clean checkout",
+    "commit": "af7d12edb8942ca509bf3651a7fe8d1e1f78956e"
+  },
+  "externalPotableWater": "reserved; last GitHub probe found no matching published branch",
+  "wholeCourseAcceptance": "pending",
+  "moles": {
+    "commit": "29a869a68762bd9a66e9e05c55563bd593c73f7c",
+    "unitChecksPassed": 10,
+    "initialBrowserCasesPassed": 20,
+    "finalFocusedRepeatCasesPassed": 4,
+    "freshCloneVerification": "eight exact SHA256; clean checkout"
+  },
+  "molarConcentration": {
+    "commit": "0e708d82abbef9d290f4d97a8a09c3a1d84b5701",
+    "unitChecksPassed": 10,
+    "browserCasesPassed": 24,
+    "finalHistoricalRepeatCasesPassed": 2,
+    "freshCloneVerification": "eleven exact SHA256; clean checkout"
+  },
+  "gasVolumes": {
+    "commit": "f12b653290ce8fd89397ac9b4bb95a822c04e6da",
+    "unitChecksPassed": 11,
+    "browserCasesPassed": 20,
+    "freshCloneVerification": "eight exact SHA256; clean checkout"
+  },
+  "titrationCalculations": {
+    "commit": "006313eaad0c67de0be0b9811bf2f4f86b314090",
+    "unitChecksPassed": 8,
+    "browserCasesPassed": 24,
+    "freshCloneVerification": "eleven exact SHA256; clean checkout"
+  },
+  "oxygenRedox": {
+    "commit": "ec52adb3ee94dabdfaa08bb028a62b419339cfd4",
+    "unitChecksPassed": 10,
+    "browserCasesPassed": 22,
+    "freshCloneVerification": "eight exact SHA256; clean checkout"
+  },
+  "solubleSalts": {
+    "commit": "f1a217e3de7cb76eb436db9099ec187622e309c1",
+    "unitChecksPassed": 10,
+    "mainBrowserCasesPassed": 24,
+    "heatingBrowserCasesPassed": 38,
+    "freshCloneVerification": "eleven exact SHA256; clean checkout"
+  },
+  "halfEquations": {
+    "commit": "516fb8df552d44bce241b2fb51c492adcb61e292",
+    "unitChecksPassed": 14,
+    "initialBrowserCasesPassed": 20,
+    "finalFocusedRepeatCasesPassed": 4,
+    "freshCloneVerification": "ten exact SHA256; clean checkout"
+  },
+  "energyPractical": {
+    "commit": "defd4639beb4fb6f083b85a7fc113dbf6d52fdcd",
+    "unitChecksPassed": 19,
+    "browserCasesPassed": 24,
+    "freshCloneVerification": "twelve exact SHA256; clean checkout"
+  },
+  "fuelHalf": {
+    "commit": "7642245a2827fab1454bb1ff53a40d5de0f5b36e",
+    "unitChecksPassed": 13,
+    "browserCasesPassed": 26,
+    "freshCloneVerification": "eight exact SHA256; clean checkout"
+  },
+  "cellVoltage": {
+    "commit": "af71ce893890870055529fa5c39fa1288785a269",
+    "unitChecksPassed": 12,
+    "browserCasesPassed": 32,
+    "freshCloneVerification": "eleven exact SHA256; clean checkout"
+  },
+  "polymers": {
+    "commit": "32dbd07b579560e7ccdfbfd04b80e7a60b66cc55",
+    "unitChecksPassed": 13,
+    "browserCasesPassed": 30,
+    "finalCaptureRepeatCasesPassed": 4,
+    "freshCloneVerification": "eleven exact SHA256; clean checkout"
+  },
+  "greenhouse": {
+    "commit": "1f1da0f65daae907e870c14b7efba7268526764e",
+    "unitChecksPassed": 10,
+    "browserCasesPassed": 30,
+    "finalCaptureRepeatCasesPassed": 2,
+    "freshCloneVerification": "eight exact SHA256; clean checkout"
+  },
+  "carbonCycle": {
+    "commit": "75c7ce30b47f984a333959515bdc25abf3bd6355",
+    "unitChecksPassed": 7,
+    "initialBrowserPassed": 30,
+    "initialBrowserFailed": 2,
+    "finalBrowserCasesPassed": 32,
+    "freshCloneVerification": "eight exact SHA256; clean checkout"
+  },
+  "concentrationCore": {
+    "commit": "fe299aa717cf38292f916cc67df8b1ac8ed826a3",
+    "unitChecksPassed": 5,
+    "browserCasesPassed": 18,
+    "freshCloneVerification": "eight exact SHA256; clean checkout"
+  },
+  "balancingMasses": {
+    "commit": "c638748d908811ec92cdb6e41887bd74b2ff3885",
+    "unitChecksPassed": 5,
+    "browserCasesPassed": 20,
+    "freshCloneVerification": "eight exact SHA256; clean checkout"
+  },
+  "percentageYield": {
+    "commit": "9a0f0a1aaec593e1711edf751c8ee17b165db743",
+    "unitChecksPassed": 11,
+    "browserCasesPassed": 30,
+    "freshCloneVerification": "eleven exact SHA256; clean checkout"
+  },
+  "cells": {
+    "commit": "adb2f44d21d35a81a277086e4050ed36512f68c7",
+    "unitChecksPassed": 18,
+    "browserCasesPassed": 28,
+    "freshCloneVerification": "eleven exact SHA256; clean checkout"
+  },
+  "tangents": {
+    "commit": "edc126e196c5695f42b6726ba63b9bd5f7b21fd6",
+    "unitChecksPassed": 12,
+    "browserCasesPassed": 26,
+    "freshCloneVerification": "ten exact SHA256; clean checkout"
+  },
+  "climate": {
+    "commit": "1e31aeb396137fb1fa37870267bf33ee4088aaa8",
+    "unitChecksPassed": 9,
+    "browserCasesPassed": 38,
+    "freshCloneVerification": "ten exact SHA256; clean checkout"
+  },
+  "pollution": {
+    "commit": "0bda57e3c2d09064ba639658d95ee38ea76dfb0c",
+    "unitChecksPassed": 9,
+    "initialBrowserPassed": 28,
+    "initialBrowserFailed": 2,
+    "finalBrowserCasesPassed": 30,
+    "freshCloneVerification": "ten exact SHA256; clean checkout"
+  }
+}

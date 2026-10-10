@@ -1,9 +1,19 @@
-# GitHub handoff
+# Current GitHub handoff — 10 October 2026
 
-The source in this branch is the main session’s current Chemistry application. It resolves the separate chat’s empty onboarding checkout. Pull this branch before working; do not start from the empty main checkout.
+Use `origin/codex/chemistry-main-followups-20261008` from dzonglee/GCSE-Chemistry. This branch contains the main Chemistry application; the old onboarding main checkout was empty. Separate sessions have separate workspaces: fetch GitHub before starting. Read AGENTS.md and the current assignment below.
 
-Read AGENTS.md and PARALLEL-SCOPE.md. The user explicitly requires GitHub for coordination, overriding earlier no-Git handoff instructions. Own only life-cycle-and-recycling/resource use (AQA4.10.1.1) and energy-practical explicit MS4b y=mx+c review. Work on each lesson individually with actual authoritative research, Maths comparison, screenshots and tests. Use a separate feature branch for your changes, and return its URL plus evidence. Do not merge, deploy or edit other lessons/global shared components. Main session owns integration and whole-course regression.
+## Ownership
 
-Node24; npm ci; typecheck before lint/unit/build. Own Chemistry port3202 and Maths3300 if needed. Keep your local port-only Playwright config changes out of returned lesson commits. Preserve all original IDs, version1, indices, forms and saved-work semantics. SOURCE-MANIFEST.json records the baseline SHA-256 values.
+The separate worker exclusively owns [potable water and Separate RP8 / Trilogy RP13](PARALLEL-SCOPE-POTABLE.md), starting a new feature branch from the latest main follow-up branch. Its returned branch/commit is not yet visible in the latest remote-head check. Do not request files or tokens from the user. Preserve its exclusive scope. All other lessons, shared UI/storage/marking, integration, qualification ledgers and final regression belong to the main session. PARALLEL-SCOPE.md and PARALLEL-SCOPE-NEXT.md describe historical completed assignments and do not authorize new overlapping work.
 
-Snapshot validation:972 unit checks, types/lint/production build, and26 changing-concentration browser checks passed. Whole-course final regression and specification audit remain open. This branch is a handoff snapshot, not a claim of whole-course completion.
+## Verified current checkpoint
+
+95 individually authored lesson journeys / 5,916 activities / 2,190 practice activities / 973 manual-review responses. Four original full papers: 400 marks / 191 parts. Qualification/tier mapping covers 124 sections; response evidence is confirmed for 123, with potable water pending external review/integration. All 25 follow-up editorial reviews have individual screenshot delivery and publication evidence in docs/editorial-publications.json.
+
+Final type checking, clean full lint, production build and all 1,100 units pass. A unified 3,164-case / 171-file browser run is in progress against one frozen production build; completion is not claimed. See docs/validation.md for current receipts and clearly separate historical partial/stopped runs. The existing SOURCE-MANIFEST.json is an obsolete historical snapshot until regenerated after the active owner finishes; it must not be treated as the current asset/config baseline.
+
+## Setup and verification
+
+Node 24 and npm; `npm ci`, then `npm run typecheck`, `npm run lint`, `npm run test:unit`, `npm run build`, `npm run test:e2e`. System Chromium is `/usr/bin/chromium`; set CHROMIUM_PATH only if needed. Main owns Chemistry 3201 and Maths 3000. External worker owns Chemistry 3202 and separately started Maths 3300; exclude port-only test-config changes from its delivery.
+
+Preserve original IDs, content version, stage positions, assessment forms, retained raw work, conservative help/exposure and seven-day review. Work one lesson at a time with real materials, purposeful interactions and screenshots sent before proceeding. Freeze source/tests/assets/config/build during production QA; wait for actual runner/server exits and verify fingerprints before edits. Source changes, deployed service or merged branches require separate evidence; nothing here claims deployment or exam-readiness certification.
