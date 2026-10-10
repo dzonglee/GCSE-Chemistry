@@ -334,7 +334,7 @@ test("evidence distinguishes colour, neutralisation and broader oxygen-model lim
 });
 test("all original practice works while four written explanations remain self-reviewed", async ({
   page,
-}) => {
+}, info) => {
   await page.goto(route);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   for (let i = 0; i < journey.practice.length; i++) {
@@ -366,6 +366,12 @@ test("all original practice works while four written explanations remain self-re
       await expect(
         page.locator(".sample-task-answer [role=status]"),
       ).toContainText("That’s right.");
+    if (["or-v1-p-apparatus", "or-v1-p-mass-explain"].includes(q.id)) {
+      await page.locator("textarea").evaluateAll((fields) => {
+        for (const field of fields) field.scrollTop = 0;
+      });
+      await capture(page, `docs/qa/oxygen-redox-prose/${info.project.name}-${q.id}.png`);
+    }
   }
 });
 

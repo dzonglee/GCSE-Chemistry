@@ -374,10 +374,10 @@ export const oxygenRedoxJourney: LessonJourney = {
     n(
       "p-apparatus",
       "Retain the apparatus contribution",
-      "A sealed complete apparatus has mass42.50 g before a chemical reaction and retains all products. What is its final total mass?",
+      "A sealed complete apparatus has mass 42.50 g before a chemical reaction and retains all products. What is its final total mass?",
       42.5,
       "g",
-      "All material is retained, so42.50 g remains the total.",
+      "All material is retained, so 42.50 g remains the total.",
       "No external mass crosses this boundary.",
     ),
     c(
@@ -420,8 +420,8 @@ export const oxygenRedoxJourney: LessonJourney = {
     w(
       "p-mass-explain",
       "Explain a mass decrease",
-      "Only oxide/metal is weighed: 1.60 g CuO becomes 1.28 g Cu. A student claims0.32 g oxygen has been destroyed. Explain the mistake.",
-      "The tracked sample loses0.32 g oxygen, but that oxygen goes into another product outside this sample boundary. A complete closed system would retain total mass. Oxygen atoms are not destroyed.",
+      "Only oxide/metal is weighed: 1.60 g CuO becomes 1.28 g Cu. A student claims 0.32 g oxygen has been destroyed. Explain the mistake.",
+      "The tracked sample loses 0.32 g oxygen, but that oxygen goes into another product outside this sample boundary. A complete closed system would retain total mass. Oxygen atoms are not destroyed.",
       [
         "Identify the sample boundary.",
         "Transfer rather than destroy oxygen.",
