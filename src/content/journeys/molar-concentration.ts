@@ -94,7 +94,7 @@ export const molarConcentrationJourney: LessonJourney = {
     n(
       "w-volume",
       "Recall cubic units",
-      "Convert400 cm³ to dm³.",
+      "Convert 400 cm³ to dm³.",
       0.4,
       "dm³",
       "400/1000=0.400 dm³.",
@@ -114,7 +114,7 @@ export const molarConcentrationJourney: LessonJourney = {
     c(
       "r-volume",
       "Choose the denominator",
-      "A solute is dissolved in water and the final solution is250 cm³. Which volume belongs in c=n/V?",
+      "A solute is dissolved in water and the final solution is 250 cm³. Which volume belongs in c=n/V?",
       "0.250 dm³ of final solution",
       {
         "250 dm³": "Convert cubic centimetres by dividing by 1000.",
@@ -136,7 +136,7 @@ export const molarConcentrationJourney: LessonJourney = {
     n(
       "r-n",
       "Find a sample amount",
-      "100 cm³ solution has concentration0.30 mol/dm³. Find solute moles.",
+      "100 cm³ solution has concentration 0.30 mol/dm³. Find solute moles.",
       0.03,
       "mol",
       "n=0.30×0.100=0.030 mol.",
@@ -218,7 +218,7 @@ export const molarConcentrationJourney: LessonJourney = {
       "Initial record: 11.7 g/dm³ NaCl; molar mass 58.5 g/mol. Find mol/dm³.",
       0.2,
       "mol/dm³",
-      "Each dm³ contains 11.7 g, or11.7/58.5=0.20 mol. The denominator volume stays one dm³.",
+      "Each dm³ contains 11.7 g, or 11.7/58.5=0.20 mol. The denominator volume stays one dm³.",
       "Convert grams to moles using the named solute.",
       model(
         "units",
@@ -233,7 +233,7 @@ export const molarConcentrationJourney: LessonJourney = {
         { id: "n", label: "Sample amount / mol", answer: 0.05 },
         { id: "c", label: "Final concentration / mol/dm³", answer: 0.2 },
       ],
-      "Sampling:n=0.40×0.125=0.050 mol and sample c remains0.40. Dilution retains0.050 mol;final c=0.050/0.250=0.20.",
+      "Sampling:n=0.40×0.125=0.050 mol and sample c remains 0.40. Dilution retains 0.050 mol;final c=0.050/0.250=0.20.",
       "Sampling and adding solvent retain different quantities.",
       model(
         "sampling",
@@ -245,7 +245,7 @@ export const molarConcentrationJourney: LessonJourney = {
     n(
       "p-c1",
       "Concentration with cubic conversion",
-      "0.15 mol solute occupies300 cm³ final solution. Find concentration.",
+      "0.15 mol solute occupies 300 cm³ final solution. Find concentration.",
       0.5,
       "mol/dm³",
       "0.15/0.300=0.50.",
@@ -254,7 +254,7 @@ export const molarConcentrationJourney: LessonJourney = {
     n(
       "p-c2",
       "A larger final volume",
-      "0.08 mol solute occupies800 cm³ solution. Find concentration.",
+      "0.08 mol solute occupies 800 cm³ solution. Find concentration.",
       0.1,
       "mol/dm³",
       "0.08/0.800=0.10.",
@@ -263,8 +263,8 @@ export const molarConcentrationJourney: LessonJourney = {
     c(
       "p-conversion",
       "Diagnose a missing conversion",
-      "A student divides 0.15 mol by 300 cm³ and reports0.0005 mol/dm³. What must be corrected?",
-      "Use0.300 dm³ before dividing",
+      "A student divides 0.15 mol by 300 cm³ and reports 0.0005 mol/dm³. What must be corrected?",
+      "Use 0.300 dm³ before dividing",
       {
         "Multiply amount by 300": "c=n/V, not nV.",
         "The answer needs no correction":
@@ -294,7 +294,7 @@ export const molarConcentrationJourney: LessonJourney = {
     n(
       "p-volume",
       "Find required solution volume",
-      "A0.60 mol/dm³ solution must supply0.09 mol. Find required volume in cm³.",
+      "A 0.60 mol/dm³ solution must supply 0.09 mol. Find required volume in cm³.",
       150,
       "cm³",
       "V=0.09/0.60=0.15 dm³=150 cm³.",
@@ -348,7 +348,7 @@ export const molarConcentrationJourney: LessonJourney = {
     n(
       "p-g-to-mol",
       "Convert mass concentration",
-      "NaOH is8 g/dm³, M = 40 g/mol. Find mol/dm³.",
+      "NaOH is 8 g/dm³, M = 40 g/mol. Find mol/dm³.",
       0.2,
       "mol/dm³",
       "8/40=0.20.",
@@ -357,7 +357,7 @@ export const molarConcentrationJourney: LessonJourney = {
     n(
       "p-mol-to-g",
       "Convert molar concentration",
-      "KCl is0.40 mol/dm³, M=74.5 g/mol. Find g/dm³.",
+      "KCl is 0.40 mol/dm³, M=74.5 g/mol. Find g/dm³.",
       29.8,
       "g/dm³",
       "0.40×74.5=29.8.",
@@ -366,7 +366,7 @@ export const molarConcentrationJourney: LessonJourney = {
     c(
       "p-same-moles",
       "Compare equal concentrations",
-      "Equal volumes of 0.20 mol/dm³ NaCl and NaOH are compared. M values58.5 and40 g/mol. What follows?",
+      "Equal volumes of 0.20 mol/dm³ NaCl and NaOH are compared. M values 58.5 and 40 g/mol. What follows?",
       "Equal solute moles; NaCl has greater solute mass",
       {
         "Equal solute mass": "Mass also depends on molar mass.",
@@ -405,12 +405,12 @@ export const molarConcentrationJourney: LessonJourney = {
       0.15,
       "mol/dm³",
       "n=0.60×0.050=0.030 mol;final c=0.030/0.200=0.15.",
-      "Final volume is200, not250 cm³.",
+      "Final volume is 200, not 250 cm³.",
     ),
     n(
       "p-added",
       "Final versus added volume",
-      "100 cm³ of 0.50 mol/dm³ solution receives water until its final volume is250 cm³. Find final concentration.",
+      "100 cm³ of 0.50 mol/dm³ solution receives water until its final volume is 250 cm³. Find final concentration.",
       0.2,
       "mol/dm³",
       "Retained n=0.050 mol;final V=0.250 dm³;c=0.20.",
@@ -442,7 +442,7 @@ export const molarConcentrationJourney: LessonJourney = {
     w(
       "p-ions",
       "Explain the representation",
-      "A dilution asset shows four Na+ and four Cl− ions before and after. Explain why it does not depict four NaCl molecules or0.40 mol as four particles.",
+      "A dilution asset shows four Na+ and four Cl− ions before and after. Explain why it does not depict four NaCl molecules or 0.40 mol as four particles.",
       "NaCl is ionic and dissolves as separate Na+ and Cl− ions. The asset is a small illustrative inventory of equal ion amounts; actual molar quantities contain Avogadro-scale numbers. Water, hydration and actual trajectories are omitted. NaCl solute concentration is not the sum of both ion concentrations.",
       [
         "Identify separate ions rather than molecules.",
@@ -476,7 +476,7 @@ export const molarConcentrationJourney: LessonJourney = {
       n(
         "ca-units",
         "Independent numerator conversion",
-        "MgCl2 concentration19 g/dm³; M=95 g/mol. Find mol/dm³.",
+        "MgCl2 concentration 19 g/dm³; M=95 g/mol. Find mol/dm³.",
         0.2,
         "mol/dm³",
         "19/95=0.20.",
@@ -495,9 +495,9 @@ export const molarConcentrationJourney: LessonJourney = {
         "ca-proof",
         "Independent dilution explanation",
         "A homogeneous 120 cm³ sample at 0.50 mol/dm³ is diluted to 300 cm³. Explain the retained amount, final concentration and why this is not just removing a sample.",
-        "Initial sample n=0.50×0.120=0.060 mol. Dilution retains0.060 mol while final V=0.300 dm³, giving c=0.20 mol/dm³. Taking a homogeneous portion would reduce n and V together and preserve0.50 mol/dm³.",
+        "Initial sample n=0.50×0.120=0.060 mol. Dilution retains 0.060 mol while final V=0.300 dm³, giving c=0.20 mol/dm³. Taking a homogeneous portion would reduce n and V together and preserve 0.50 mol/dm³.",
         [
-          "Show0.060 mol retained.",
+          "Show 0.060 mol retained.",
           "Use final 0.300 dm³ to obtain 0.20 mol/dm³.",
           "Explain how homogeneous sampling differs.",
         ],
@@ -527,7 +527,7 @@ export const molarConcentrationJourney: LessonJourney = {
       n(
         "cb-units",
         "Independent changed units",
-        "KBr solution is0.15 mol/dm³; M=119 g/mol. Find g/dm³.",
+        "KBr solution is 0.15 mol/dm³; M=119 g/mol. Find g/dm³.",
         17.85,
         "g/dm³",
         "0.15×119=17.85.",
@@ -545,11 +545,11 @@ export const molarConcentrationJourney: LessonJourney = {
       w(
         "cb-proof",
         "Independent mass comparison",
-        "Equal50 cm³ volumes of 0.30 mol/dm³ NaOH and NaCl have molar masses40 and58.5 g/mol. Explain their amounts and why their dissolved masses differ.",
+        "Equal 50 cm³ volumes of 0.30 mol/dm³ NaOH and NaCl have molar masses 40 and 58.5 g/mol. Explain their amounts and why their dissolved masses differ.",
         "Each contains 0.30×0.050=0.015 mol of its named solute. NaOH mass=0.015×40=0.600 g;NaCl mass=0.015×58.5=0.8775 g. Equal c and V ensure equal amount, not equal mass; mass depends on molar mass.",
         [
-          "Show both solute amounts are0.015 mol.",
-          "Find0.600 g and0.8775 g using the correct M.",
+          "Show both solute amounts are 0.015 mol.",
+          "Find 0.600 g and 0.8775 g using the correct M.",
           "Explain that equal amount is not equal mass.",
         ],
       ),
@@ -578,7 +578,7 @@ export const molarConcentrationJourney: LessonJourney = {
       n(
         "ra-units",
         "Retrieve numerator conversion",
-        "NaCl solution is17.55 g/dm³, M = 58.5 g/mol. Find mol/dm³.",
+        "NaCl solution is 17.55 g/dm³, M = 58.5 g/mol. Find mol/dm³.",
         0.3,
         "mol/dm³",
         "17.55/58.5=0.30.",
@@ -607,7 +607,7 @@ export const molarConcentrationJourney: LessonJourney = {
       n(
         "rb-units",
         "Retrieve mass concentration",
-        "NaOH solution is0.35 mol/dm³, M = 40 g/mol. Find g/dm³.",
+        "NaOH solution is 0.35 mol/dm³, M = 40 g/mol. Find g/dm³.",
         14,
         "g/dm³",
         "0.35×40=14.",
@@ -626,3 +626,9 @@ molarConcentrationJourney.practice.find(
 molarConcentrationJourney.practice.find(
   (q) => q.id === "mc-v1-p-portion-c",
 )!.followUp = "mc-v1-r-n";
+
+molarConcentrationJourney.practice.find(
+  (q) => q.id === "mc-v1-p-conversion",
+)!.optionAliases = {
+  "Use0.300 dm³ before dividing": "Use 0.300 dm³ before dividing",
+};

@@ -34,6 +34,14 @@ test("49 deliberately separate tasks have distinct identities and conservative w
     expect(q.options).toBeUndefined();
   expect(j.checkForms.flat().some((q) => q.model)).toBe(false);
   expect(j.reviewForms.flat().some((q) => q.model || q.rubric)).toBe(false);
+  const conversion = all.find((q) => q.id === "mc-v1-p-conversion")!;
+  expect(mark(conversion, "Use0.300 dm³ before dividing")).toEqual(
+    mark(conversion, "Use 0.300 dm³ before dividing"),
+  );
+  expect(mark(conversion, "Use0.300 dm³ before dividing").correct).toBe(true);
+  expect(mark(conversion, "The answer needs no correction").correct).toBe(
+    false,
+  );
 });
 test("every numeric response has an independently recomputed chemical reference", () => {
   const refs: Record<string, number | Record<string, number>> = {

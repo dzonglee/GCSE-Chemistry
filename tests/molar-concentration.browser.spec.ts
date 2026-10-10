@@ -2,7 +2,12 @@ import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { writeFile } from "node:fs/promises";
 import { molarConcentrationJourney as journey } from "../src/content/journeys/molar-concentration";
-import { STORAGE_KEY, REVIEW_DELAY } from "../src/lib/progress";
+import {
+  STORAGE_KEY,
+  REVIEW_DELAY,
+  emptyProgress,
+  emptyWork,
+} from "../src/lib/progress";
 async function task(page: Page, n: number) {
   await page
     .getByRole("button", { name: `Task ${n}`, exact: true })
@@ -403,7 +408,7 @@ test("actual separate-ion GLB rotates, doubles volume and retains identified cha
 });
 test("all original practice demands keep accurate units and written self-review", async ({
   page,
-}) => {
+}, info) => {
   await page.goto(route);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   for (let i = 0; i < journey.practice.length; i++) {
@@ -419,6 +424,15 @@ test("all original practice demands keep accurate units and written self-review"
     await expect(
       page.locator(".sample-task-answer .feedback[role=status]"),
     ).toContainText(q.rubric ? "Compare your explanation" : "That’s right");
+    if (q.rubric) {
+      await page.locator(".question-panel textarea").evaluateAll((nodes) => {
+        for (const node of nodes) node.scrollTop = 0;
+      });
+      await capture(
+        page,
+        `test-results/qa/molar-prose/${info.project.name}-${q.id}.png`,
+      );
+    }
   }
   for (const q of journey.practice.filter((q) => q.rubric))
     await expect
@@ -432,6 +446,68 @@ test("all original practice demands keep accurate units and written self-review"
         ),
       )
       .toBe(false);
+});
+
+test("historical volume-conversion choice stays selected and raw after correction and reload", async ({
+  page,
+}, info) => {
+  if (info.project.name === "mobile")
+    await page.setViewportSize({ width: 320, height: 720 });
+  const q = journey.practice.find((q) => q.id === "mc-v1-p-conversion")!;
+  const raw = "Use0.300 dm³ before dividing";
+  const original = {
+    answer: raw,
+    correct: true,
+    helped: true,
+    fresh: false,
+    at: Date.now() - 1000,
+  };
+  const data = emptyProgress();
+  data.preferences.tier = "higher";
+  data.preferences.course = "separate";
+  data.work["molar-concentration"] = {
+    ...emptyWork(),
+    section: "practice",
+    learning: {
+      version: 1,
+      stage: "practice",
+      index: journey.practice.indexOf(q),
+    },
+    drafts: { [q.id]: raw },
+    attempts: { [q.id]: [original] },
+  };
+  await page.addInitScript(
+    ({ key, data }) => {
+      if (!localStorage.getItem(key))
+        localStorage.setItem(key, JSON.stringify(data));
+    },
+    { key: STORAGE_KEY, data },
+  );
+  await page.goto(route);
+  const selected = page.getByRole("radio", {
+    name: "Use 0.300 dm³ before dividing",
+    exact: true,
+  });
+  await expect(selected).toBeChecked();
+  await expect(
+    page.locator(".sample-task-answer .feedback[role=status]"),
+  ).toContainText("That’s right");
+  await page.reload();
+  await expect(selected).toBeChecked();
+  const stored = await page.evaluate(
+    ({ key, id }) => {
+      const work = JSON.parse(localStorage.getItem(key)!).work[
+        "molar-concentration"
+      ];
+      return { draft: work.drafts[id], attempts: work.attempts[id] };
+    },
+    { key: STORAGE_KEY, id: q.id },
+  );
+  expect(stored).toEqual({ draft: raw, attempts: [original] });
+  await capture(
+    page,
+    `test-results/qa/molar-prose/${info.project.name}-legacy-conversion.png`,
+  );
 });
 test("independent answers align without model assistance or revealed answers", async ({
   page,

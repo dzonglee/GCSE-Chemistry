@@ -1,0 +1,170 @@
+{
+  "spaceReplacements": [
+    {
+      "old": "Convert400",
+      "new": "Convert 400",
+      "occurrences": 1
+    },
+    {
+      "old": "is250",
+      "new": "is 250",
+      "occurrences": 2
+    },
+    {
+      "old": "concentration0.30",
+      "new": "concentration 0.30",
+      "occurrences": 1
+    },
+    {
+      "old": "or11.7",
+      "new": "or 11.7",
+      "occurrences": 1
+    },
+    {
+      "old": "remains0.40",
+      "new": "remains 0.40",
+      "occurrences": 1
+    },
+    {
+      "old": "retains0.050",
+      "new": "retains 0.050",
+      "occurrences": 1
+    },
+    {
+      "old": "occupies300",
+      "new": "occupies 300",
+      "occurrences": 1
+    },
+    {
+      "old": "occupies800",
+      "new": "occupies 800",
+      "occurrences": 1
+    },
+    {
+      "old": "reports0.0005",
+      "new": "reports 0.0005",
+      "occurrences": 1
+    },
+    {
+      "old": "Use0.300",
+      "new": "Use 0.300",
+      "occurrences": 1
+    },
+    {
+      "old": "A0.60",
+      "new": "A 0.60",
+      "occurrences": 1
+    },
+    {
+      "old": "supply0.09",
+      "new": "supply 0.09",
+      "occurrences": 1
+    },
+    {
+      "old": "is8 g",
+      "new": "is 8 g",
+      "occurrences": 1
+    },
+    {
+      "old": "is0.40",
+      "new": "is 0.40",
+      "occurrences": 1
+    },
+    {
+      "old": "values58.5",
+      "new": "values 58.5",
+      "occurrences": 1
+    },
+    {
+      "old": "and40",
+      "new": "and 40",
+      "occurrences": 1
+    },
+    {
+      "old": "is200",
+      "new": "is 200",
+      "occurrences": 1
+    },
+    {
+      "old": "not250",
+      "new": "not 250",
+      "occurrences": 1
+    },
+    {
+      "old": "or0.40",
+      "new": "or 0.40",
+      "occurrences": 1
+    },
+    {
+      "old": "concentration19",
+      "new": "concentration 19",
+      "occurrences": 1
+    },
+    {
+      "old": "retains0.060",
+      "new": "retains 0.060",
+      "occurrences": 1
+    },
+    {
+      "old": "preserve0.50",
+      "new": "preserve 0.50",
+      "occurrences": 1
+    },
+    {
+      "old": "Show0.060",
+      "new": "Show 0.060",
+      "occurrences": 1
+    },
+    {
+      "old": "is0.15",
+      "new": "is 0.15",
+      "occurrences": 1
+    },
+    {
+      "old": "Equal50",
+      "new": "Equal 50",
+      "occurrences": 1
+    },
+    {
+      "old": "masses40",
+      "new": "masses 40",
+      "occurrences": 1
+    },
+    {
+      "old": "and58.5",
+      "new": "and 58.5",
+      "occurrences": 1
+    },
+    {
+      "old": "are0.015",
+      "new": "are 0.015",
+      "occurrences": 1
+    },
+    {
+      "old": "Find0.600",
+      "new": "Find 0.600",
+      "occurrences": 1
+    },
+    {
+      "old": "and0.8775",
+      "new": "and 0.8775",
+      "occurrences": 1
+    },
+    {
+      "old": "is17.55",
+      "new": "is 17.55",
+      "occurrences": 1
+    },
+    {
+      "old": "is0.35",
+      "new": "is 0.35",
+      "occurrences": 1
+    }
+  ],
+  "wholeSourceIdenticalAfterRemovingSpacesBeforeAliasAppend": true,
+  "explicitCompatibilityAlias": {
+    "Use0.300 dm\u00b3 before dividing": "Use 0.300 dm\u00b3 before dividing"
+  },
+  "beforeSHA256": "9b46fc5b171bbe7519b9435adb679189713ce1d841b1ce749de45fb2fdf7b4a0",
+  "afterSHA256": "8d3ef7831ef55bad33fa8b20798030d76fa89b3d26cef8b04f82dea3a0434b20"
+}
