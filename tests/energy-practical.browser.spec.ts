@@ -1,7 +1,12 @@
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { practicalJourney as journey } from "../src/content/journeys/energy-practical";
-import { STORAGE_KEY, REVIEW_DELAY } from "../src/lib/progress";
+import {
+  STORAGE_KEY,
+  REVIEW_DELAY,
+  emptyProgress,
+  emptyWork,
+} from "../src/lib/progress";
 async function task(page: Page, n: number) {
   await page
     .getByRole("button", { name: `Task ${n}`, exact: true })
@@ -189,7 +194,7 @@ test("reserved checks defer marking, retain drafts and separate actual seven-day
 
 test("all original practice works while explanations and the appended graph remain self-reviewed", async ({
   page,
-}) => {
+}, info) => {
   await page.goto(route);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   for (let i = 0; i < journey.practice.length; i++) {
@@ -227,6 +232,15 @@ test("all original practice works while explanations and the appended graph rema
       await expect(
         page.locator(".sample-task-answer [role=status]"),
       ).toContainText("That’s right.");
+    if (["ep-v1-p-gradient", "ep-v1-p-energy"].includes(q.id)) {
+      await page.locator("textarea").evaluateAll((fields) => {
+        for (const field of fields) field.scrollTop = 0;
+      });
+      await capture(
+        page,
+        `test-results/qa/energy-practical-prose/${info.project.name}-${q.id}.png`,
+      );
+    }
   }
 });
 async function learn(page: Page, n: number) {
@@ -731,4 +745,65 @@ test("unavailable WebGL keeps the apparatus explanation and working method choic
     await select(page, l, v);
   await check(page, true);
   await capture(page, prefix + info.project.name + "-fallback.png");
+});
+
+test("historical tied-maximum answer remains selected and correct with untouched raw history", async ({
+  page,
+}, info) => {
+  if (info.project.name === "mobile")
+    await page.setViewportSize({ width: 320, height: 720 });
+  const q = journey.practice.find((q) => q.id === "ep-v1-p-tie")!;
+  const raw = "25 and30cm³";
+  const original = {
+    answer: raw,
+    correct: true,
+    helped: true,
+    fresh: false,
+    at: Date.now() - 1000,
+  };
+  const data = emptyProgress();
+  data.work["energy-practical"] = {
+    ...emptyWork(),
+    section: "practice",
+    learning: {
+      version: 1,
+      stage: "practice",
+      index: journey.practice.indexOf(q),
+    },
+    drafts: { [q.id]: raw },
+    attempts: { [q.id]: [original] },
+  };
+  await page.addInitScript(
+    ({ key, data }) => {
+      if (!localStorage.getItem(key))
+        localStorage.setItem(key, JSON.stringify(data));
+    },
+    { key: STORAGE_KEY, data },
+  );
+  await page.goto(route);
+  const selected = page.getByRole("radio", {
+    name: "25 and 30 cm³",
+    exact: true,
+  });
+  await expect(selected).toBeChecked();
+  await expect(page.locator(".sample-task-answer [role=status]")).toContainText(
+    "That’s right.",
+  );
+  await page.reload();
+  await expect(selected).toBeChecked();
+  await expect(page.locator(".sample-task-answer [role=status]")).toContainText(
+    "maximum 32.3",
+  );
+  const stored = await page.evaluate(
+    ({ key, id }) => {
+      const w = JSON.parse(localStorage.getItem(key)!).work["energy-practical"];
+      return { draft: w.drafts[id], attempts: w.attempts[id] };
+    },
+    { key: STORAGE_KEY, id: q.id },
+  );
+  expect(stored).toEqual({ draft: raw, attempts: [original] });
+  await capture(
+    page,
+    `test-results/qa/energy-practical-prose/${info.project.name}-legacy-tie.png`,
+  );
 });

@@ -99,7 +99,7 @@ export const practicalJourney: LessonJourney = {
     n(
       "warm-difference",
       "Find the difference",
-      "Calculate29.5−21.0.",
+      "Calculate 29.5−21.0.",
       8.5,
       "",
       "29.5−21.0=8.5.",
@@ -108,11 +108,11 @@ export const practicalJourney: LessonJourney = {
     n(
       "warm-mean",
       "Calculate a mean",
-      "Calculate the mean of 8,9 and 10.",
+      "Calculate the mean of 8, 9 and 10.",
       9,
       "",
       "(8+9+10)/3=9.",
-      "Sum then divide by3.",
+      "Sum then divide by 3.",
     ),
   ],
   refresher: [
@@ -146,7 +146,7 @@ export const practicalJourney: LessonJourney = {
     n(
       "r-mean",
       "Mean the retained data",
-      "Three matched rises are 8.2,8.6 and 8.4 °C. No procedural failure is recorded. Find their mean.",
+      "Three matched rises are 8.2, 8.6 and 8.4 °C. No procedural failure is recorded. Find their mean.",
       8.4,
       "°C",
       "25.2/3=8.4 °C; ordinary spread does not justify deleting a trial.",
@@ -159,10 +159,10 @@ export const practicalJourney: LessonJourney = {
     n(
       "r-gradient",
       "Use matching differences",
-      "A best-fit line passes through(1 g,23 °C) and(5 g,31 °C). Find its gradient.",
+      "A best-fit line passes through (1 g, 23 °C) and (5 g, 31 °C). Find its gradient.",
       2,
       "°C/g",
-      "(31−23)/(5−1)=8/4=2°C/g.",
+      "(31−23)/(5−1)=8/4=2 °C/g.",
       "Change in temperature divided by change in mass.",
       m(
         "graph",
@@ -277,7 +277,7 @@ export const practicalJourney: LessonJourney = {
       "A reaction starts at 20.4 °C and peaks at 28.6 °C before cooling. Find the rise.",
       8.2,
       "°C",
-      "28.6−20.4=8.2°C.",
+      "28.6−20.4=8.2 °C.",
       "Peak minus initial.",
       m(
         "observe",
@@ -288,7 +288,7 @@ export const practicalJourney: LessonJourney = {
     n(
       "g-repeat",
       "Justify retained trials",
-      "Rises 7.8,7.9,2.0 °C; trial 3 had a recorded probe-removal failure. Find the mean of the two valid trials.",
+      "Rises 7.8, 7.9, 2.0 °C; trial 3 had a recorded probe-removal failure. Find the mean of the two valid trials.",
       7.85,
       "°C",
       "(7.8+7.9)/2=7.85 °C. The exclusion follows a documented measurement failure.",
@@ -305,7 +305,7 @@ export const practicalJourney: LessonJourney = {
       "The supplied fitted line rises from 22.7 °C at 1 g to 28.7 °C at 5 g. Find its gradient.",
       1.5,
       "°C/g",
-      "6.0/4.0=1.5°C/g.",
+      "6.0/4.0=1.5 °C/g.",
       "Use matching coordinate differences.",
       m(
         "graph",
@@ -356,7 +356,7 @@ export const practicalJourney: LessonJourney = {
       "Initial 22.4 °C; peak 30.1 °C; final 26.0 °C. Find the rise at the reaction peak.",
       7.7,
       "°C",
-      "30.1−22.4=7.7°C.",
+      "30.1−22.4=7.7 °C.",
       "Ignore subsequent cooling.",
     ),
     n(
@@ -365,7 +365,7 @@ export const practicalJourney: LessonJourney = {
       "Initial 24.0 °C; reaction-stage minimum 17.5 °C. Find the signed temperature change.",
       -6.5,
       "°C",
-      "17.5−24.0=−6.5°C.",
+      "17.5−24.0=−6.5 °C.",
       "Minimum minus initial.",
     ),
     c(
@@ -448,16 +448,16 @@ export const practicalJourney: LessonJourney = {
     n(
       "p-mean",
       "Calculate a repeat mean",
-      "Matched rises 5.2,5.6,5.4 °C; no recorded failure. Find the mean.",
+      "Matched rises 5.2, 5.6, 5.4 °C; no recorded failure. Find the mean.",
       5.4,
       "°C",
-      "16.2/3=5.4°C.",
+      "16.2/3=5.4 °C.",
       "Retain all three ordinary readings.",
     ),
     n(
       "p-failure",
       "Use evidence for exclusion",
-      "Rises 6.2,6.4,1.0 °C. A recorded spill invalidated trial 3. Find the mean of valid trials.",
+      "Rises 6.2, 6.4, 1.0 °C. A recorded spill invalidated trial 3. Find the mean of valid trials.",
       6.3,
       "°C",
       "(6.2+6.4)/2=6.3 °C. Exclusion is justified by the recorded spill.",
@@ -493,7 +493,7 @@ export const practicalJourney: LessonJourney = {
         "Use two labelled points on the supplied fitted line. Find the gradient.",
         1.2,
         "°C/g",
-        "(28.6−23.8)/(5−1)=1.2°C/g.",
+        "(28.6−23.8)/(5−1)=1.2 °C/g.",
         "Use matching differences.",
       ),
       practicalGraph: graph(
@@ -560,11 +560,11 @@ export const practicalJourney: LessonJourney = {
     c(
       "p-tie",
       "Recognise tied sampled maxima",
-      "Added volumes 20,25,30,35 cm³ give mean peaks 31.0,32.3,32.3,31.7 °C. Which sampled volumes have the highest mean peak?",
-      "25 and30cm³",
+      "Added volumes 20, 25, 30, 35 cm³ give mean peaks 31.0, 32.3, 32.3, 31.7 °C. Which sampled volumes have the highest mean peak?",
+      "25 and 30 cm³",
       {
-        "Only30cm³": "25cm³ has the same mean.",
-        "Only35cm³": "31.7°C is lower.",
+        "Only 30 cm³": "25 cm³ has the same mean.",
+        "Only 35 cm³": "31.7 °C is lower.",
       },
       "Both sampled values share the maximum 32.3 °C. A fit may estimate a different location.",
       "Compare all supplied means.",
@@ -653,16 +653,16 @@ export const practicalJourney: LessonJourney = {
         "Initial 20.8 °C; reaction-stage peak 29.6 °C; final 25.0 °C. Determine the reaction-stage rise.",
         8.8,
         "°C",
-        "29.6−20.8=8.8°C.",
+        "29.6−20.8=8.8 °C.",
         "Use the reaction peak.",
       ),
       n(
         "a-mean",
         "Independent repeat mean",
-        "Matched rises 4.3,4.7,4.5 °C with no recorded failures. Find the mean.",
+        "Matched rises 4.3, 4.7, 4.5 °C with no recorded failures. Find the mean.",
         4.5,
         "°C",
-        "13.5/3=4.5°C.",
+        "13.5/3=4.5 °C.",
         "Sum and divide.",
       ),
       {
@@ -672,7 +672,7 @@ export const practicalJourney: LessonJourney = {
           "Find the gradient of the supplied best-fit line.",
           1.4,
           "°C/g",
-          "(28.4−22.8)/(5−1)=1.4°C/g.",
+          "(28.4−22.8)/(5−1)=1.4 °C/g.",
           "Use two fitted points.",
         ),
         practicalGraph: graph(
@@ -720,16 +720,16 @@ export const practicalJourney: LessonJourney = {
         "Initial 25.4 °C; reaction-stage minimum 18.6 °C. Determine the signed temperature change.",
         -6.8,
         "°C",
-        "18.6−25.4=−6.8°C.",
+        "18.6−25.4=−6.8 °C.",
         "Final reaction-stage extremum minus initial.",
       ),
       n(
         "b-validmean",
         "Independent evidence-based mean",
-        "Rises 9.0,9.4,3.0 °C. Trial 3 has a documented measurement failure. Find the mean of the valid trials.",
+        "Rises 9.0, 9.4, 3.0 °C. Trial 3 has a documented measurement failure. Find the mean of the valid trials.",
         9.2,
         "°C",
-        "18.4/2=9.2°C.",
+        "18.4/2=9.2 °C.",
         "Use the valid trials.",
       ),
       {
@@ -790,16 +790,16 @@ export const practicalJourney: LessonJourney = {
         "Initial 22.2 °C; reaction-stage peak 31.4 °C. Find the rise.",
         9.2,
         "°C",
-        "31.4−22.2=9.2°C.",
+        "31.4−22.2=9.2 °C.",
         "Peak minus initial.",
       ),
       n(
         "d-a-gradient",
         "Delayed gradient",
-        "A fitted line goes through(2 g,24 °C) and(6 g,29 °C). Find its gradient.",
+        "A fitted line goes through (2 g, 24 °C) and (6 g,29 °C). Find its gradient.",
         1.25,
         "°C/g",
-        "5/4=1.25°C/g.",
+        "5/4=1.25 °C/g.",
         "Use matching differences.",
       ),
       w(
@@ -817,19 +817,19 @@ export const practicalJourney: LessonJourney = {
       n(
         "d-b-mean",
         "Delayed repeat mean",
-        "Three valid matched rises 6.1,6.5,6.3 °C. Find their mean.",
+        "Three valid matched rises 6.1, 6.5, 6.3 °C. Find their mean.",
         6.3,
         "°C",
-        "18.9/3=6.3°C.",
+        "18.9/3=6.3 °C.",
         "Sum and divide.",
       ),
       n(
         "d-b-intercept",
         "Delayed intercept",
-        "A fitted line has gradient 1.3 °C/g and passes through(2 g,24.8 °C). Estimate temperature at 0 g.",
+        "A fitted line has gradient 1.3 °C/g and passes through (2 g, 24.8 °C). Estimate temperature at 0 g.",
         22.2,
         "°C",
-        "24.8−2×1.3=22.2°C.",
+        "24.8−2×1.3=22.2 °C.",
         "Subtract the fitted change for 2 g.",
       ),
       w(
@@ -1014,3 +1014,9 @@ practicalJourney.reviewForms.push(...energyEquationReviewForms);
 practicalJourney.outcomes!.push(
   "Interpret y=mx+c as a linear fitted relationship: m is its constant gradient and c is the extrapolated value at x=0.",
 );
+
+practicalJourney.practice.find((q) => q.id === "ep-v1-p-tie")!.optionAliases = {
+  "25 and30cm³": "25 and 30 cm³",
+  "Only30cm³": "Only 30 cm³",
+  "Only35cm³": "Only 35 cm³",
+};

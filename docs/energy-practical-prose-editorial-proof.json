@@ -1,0 +1,173 @@
+{
+  "sources": {
+    "src/content/journeys/energy-practical.ts": {
+      "beforeSHA256": "537faed4f6c7864ebf927ce19f439d3e974974d2ae401f08f9ae16218529a795",
+      "afterSHA256": "837e7321ea677e009a729e43bc2a2cf30c6a9e373f11af5ff7949dcec79430b3",
+      "edits": {
+        "31.0,32.3,32.3,31.7": {
+          "to": "31.0, 32.3, 32.3, 31.7",
+          "count": 1
+        },
+        "Calculate29.5": {
+          "to": "Calculate 29.5",
+          "count": 1
+        },
+        "8.2,8.6 and": {
+          "to": "8.2, 8.6 and",
+          "count": 1
+        },
+        "7.8,7.9,2.0": {
+          "to": "7.8, 7.9, 2.0",
+          "count": 1
+        },
+        "5.2,5.6,5.4": {
+          "to": "5.2, 5.6, 5.4",
+          "count": 1
+        },
+        "6.2,6.4,1.0": {
+          "to": "6.2, 6.4, 1.0",
+          "count": 1
+        },
+        "20,25,30,35": {
+          "to": "20, 25, 30, 35",
+          "count": 1
+        },
+        "25 and30cm\u00b3": {
+          "to": "25 and 30 cm\u00b3",
+          "count": 1
+        },
+        "4.3,4.7,4.5": {
+          "to": "4.3, 4.7, 4.5",
+          "count": 1
+        },
+        "9.0,9.4,3.0": {
+          "to": "9.0, 9.4, 3.0",
+          "count": 1
+        },
+        "6.1,6.5,6.3": {
+          "to": "6.1, 6.5, 6.3",
+          "count": 1
+        },
+        "Only30cm\u00b3": {
+          "to": "Only 30 cm\u00b3",
+          "count": 1
+        },
+        "Only35cm\u00b3": {
+          "to": "Only 35 cm\u00b3",
+          "count": 1
+        },
+        "through(": {
+          "to": "through (",
+          "count": 3
+        },
+        "1.25\u00b0C/g": {
+          "to": "1.25 \u00b0C/g",
+          "count": 1
+        },
+        "8,9 and": {
+          "to": "8, 9 and",
+          "count": 1
+        },
+        "1.5\u00b0C/g": {
+          "to": "1.5 \u00b0C/g",
+          "count": 1
+        },
+        "1.2\u00b0C/g": {
+          "to": "1.2 \u00b0C/g",
+          "count": 1
+        },
+        "1.4\u00b0C/g": {
+          "to": "1.4 \u00b0C/g",
+          "count": 1
+        },
+        "31.7\u00b0C": {
+          "to": "31.7 \u00b0C",
+          "count": 1
+        },
+        "\u22126.5\u00b0C": {
+          "to": "\u22126.5 \u00b0C",
+          "count": 1
+        },
+        "\u22126.8\u00b0C": {
+          "to": "\u22126.8 \u00b0C",
+          "count": 1
+        },
+        "22.2\u00b0C": {
+          "to": "22.2 \u00b0C",
+          "count": 1
+        },
+        "25cm\u00b3": {
+          "to": "25 cm\u00b3",
+          "count": 1
+        },
+        "2\u00b0C/g": {
+          "to": "2 \u00b0C/g",
+          "count": 1
+        },
+        "8.2\u00b0C": {
+          "to": "8.2 \u00b0C",
+          "count": 1
+        },
+        "7.7\u00b0C": {
+          "to": "7.7 \u00b0C",
+          "count": 1
+        },
+        "5.4\u00b0C": {
+          "to": "5.4 \u00b0C",
+          "count": 1
+        },
+        "8.8\u00b0C": {
+          "to": "8.8 \u00b0C",
+          "count": 1
+        },
+        "4.5\u00b0C": {
+          "to": "4.5 \u00b0C",
+          "count": 1
+        },
+        "9.2\u00b0C": {
+          "to": "9.2 \u00b0C",
+          "count": 2
+        },
+        "6.3\u00b0C": {
+          "to": "6.3 \u00b0C",
+          "count": 1
+        },
+        "and(": {
+          "to": "and (",
+          "count": 2
+        },
+        "g,23": {
+          "to": "g, 23",
+          "count": 1
+        },
+        "g,31": {
+          "to": "g, 31",
+          "count": 1
+        },
+        "g,24": {
+          "to": "g, 24",
+          "count": 2
+        },
+        "by3": {
+          "to": "by 3",
+          "count": 1
+        }
+      },
+      "nonSpaceBytesIdenticalBeforeExplicitAliases": true
+    },
+    "src/content/journeys/energy-linear-equation.ts": {
+      "beforeSHA256": "1fea33f436bf2492bbdababa2d63a8d0ea3fb2a750e7f832a853c499fe316409",
+      "afterSHA256": "7624c0ac4b62349513c5a06b25dc2d6895f1c157af76f1db38062f328eb6fed7",
+      "nonSpaceBytesIdentical": true,
+      "edits": [
+        "g,22.7 \u2192 g, 22.7",
+        "g,28.7 \u2192 g, 28.7"
+      ]
+    }
+  },
+  "explicitAliases": {
+    "25 and30cm\u00b3": "25 and 30 cm\u00b3",
+    "Only30cm\u00b3": "Only 30 cm\u00b3",
+    "Only35cm\u00b3": "Only 35 cm\u00b3"
+  }
+}

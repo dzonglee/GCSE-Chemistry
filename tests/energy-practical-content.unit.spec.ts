@@ -149,3 +149,16 @@ test("legacy, model-assisted and repeated fitted-line reasoning share global exp
   expect(exposureIds(["ep-v1-g-evidence"])).toContain("ep-v1-b-written");
   expect(exposureIds(["ep-v1-p-gradient"])).toContain("ep-v1-p-intercept");
 });
+
+test("historical sampled-maximum choices retain correct and incorrect scientific marking", () => {
+  const q = j.practice.find((q) => q.id === "ep-v1-p-tie")!;
+  for (const [old, current, correct] of [
+    ["25 and30cm³", "25 and 30 cm³", true],
+    ["Only30cm³", "Only 30 cm³", false],
+    ["Only35cm³", "Only 35 cm³", false],
+  ] as const) {
+    expect(mark(q, old)).toEqual(mark(q, current));
+    expect(mark(q, old).correct).toBe(correct);
+  }
+  expect(mark(q, "Only30cm³").feedback).toContain("same mean");
+});

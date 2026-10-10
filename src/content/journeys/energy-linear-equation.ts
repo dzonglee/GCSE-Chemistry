@@ -18,7 +18,7 @@ function interpret(suffix: "guided" | "recovery"): LearningTask {
         "The positive coefficient means the fitted temperature rises as mass increases.",
     },
     explanation:
-      "y=mx+c represents a straight line with constant gradient m and y-intercept c. This is the existing fitted line through (1 g,22.7 °C) and (5 g,28.7 °C): m=1.5 °C/g, so each extra gram increases its predicted temperature by 1.5 °C. c=21.2 °C is its estimated temperature at zero mass. Here x is mass; m means gradient, not mass. The fit does not create a measured zero-mass trial or imply every temperature response is linear at all masses.",
+      "y=mx+c represents a straight line with constant gradient m and y-intercept c. This is the existing fitted line through (1 g, 22.7 °C) and (5 g, 28.7 °C): m=1.5 °C/g, so each extra gram increases its predicted temperature by 1.5 °C. c=21.2 °C is its estimated temperature at zero mass. Here x is mass; m means gradient, not mass. The fit does not create a measured zero-mass trial or imply every temperature response is linear at all masses.",
     hint: "m multiplies x; setting x=0 leaves c. Compare with your gradient and extrapolated intercept.",
     exposureAliases: [
       `ep-v1-equation-${suffix === "guided" ? "recovery" : "guided"}`,
