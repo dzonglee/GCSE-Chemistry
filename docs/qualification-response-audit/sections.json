@@ -6,7 +6,7 @@
     "trilogyCandidate": "5.1.1.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both; Higher sub-demand",
     "actualBodyReview": "Core atoms/elements/compounds, supplied symbol breadth and complete word/formula equations apply to both tiers; balanced half/ionic equations are Higher only. Symbol/reaction breadth response audit remains open.",
@@ -17,7 +17,8 @@
       "atom-found-v1-p-count",
       "atom-found-v1-p-reaction",
       "atom-found-v1-p-boiling"
-    ]
+    ],
+    "responseSourceReview": "Complete actual8462 printed18 body, current first20 reference/elements, selected core atom/name/word/whole-symbol and Higher half/net-ion prompts personally reread. Read-only complete reaction-family map reviewed against prior individual clause audits and current plain equation input dispatch. Names use supplied periodic table, not invented unaided20symbol recall. Family-specific given-formula balancing, displayed product constructions and explicit alcohol/carboxylic exclusions honored; no bothforms/everyfamily/everyassessmentstage requirement invented. Separate Foundation state-symbol USE gate remains open4.2.2.2. This is response-source review, not a new browser certificate."
   },
   {
     "section": "4.1.1.2",
