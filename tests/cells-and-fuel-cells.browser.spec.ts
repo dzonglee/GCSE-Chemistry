@@ -1,7 +1,12 @@
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { cellsJourney as journey } from "../src/content/journeys/cells-and-fuel-cells";
-import { STORAGE_KEY, REVIEW_DELAY } from "../src/lib/progress";
+import {
+  STORAGE_KEY,
+  REVIEW_DELAY,
+  emptyProgress,
+  emptyWork,
+} from "../src/lib/progress";
 import { cellsRecords, type CellsMode } from "../src/lib/cells-and-fuel-cells";
 async function task(page: Page, n: number) {
   await page
@@ -30,6 +35,26 @@ async function capture(page: Page, path: string) {
     scrollTo(0, 0);
   });
   await page.screenshot({ path, fullPage: true });
+}
+async function captureProse(page: Page, path: string) {
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+    (document.activeElement as HTMLElement)?.blur();
+    document.querySelectorAll("textarea").forEach((el) => {
+      el.scrollTop = 0;
+    });
+    scrollTo(0, 0);
+    await new Promise<void>((resolve) =>
+      requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+    );
+  });
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.screenshot({ path, fullPage: true, scale: "css" });
 }
 async function answer(page: Page, q: (typeof journey.practice)[number]) {
   if (q.options)
@@ -269,6 +294,11 @@ for (const [index, mode] of [
       page,
       `docs/qa/cells-and-fuel-cells-${info.project.name}-${mode}.png`,
     );
+    if (mode === "compare")
+      await captureProse(
+        page,
+        `docs/qa/cells-prose/${info.project.name}-comparison-model.png`,
+      );
   });
 }
 test("series keeps a scientific wrong voltage across reload, undo and reset without silently fixing polarity", async ({
@@ -493,5 +523,72 @@ test("unavailable WebGL retains cell constituents, text diagram and working pred
   await capture(
     page,
     `docs/qa/cells-and-fuel-cells-${info.project.name}-fallback.png`,
+  );
+});
+
+test("historical wrong range choice remains selected with exact raw history on reload", async ({
+  page,
+}, info) => {
+  if (info.project.name === "mobile")
+    await page.setViewportSize({ width: 320, height: 720 });
+  const q = journey.refresher.find((q) => q.id === "cf-v1-r-constraints")!;
+  const raw = "The450km source",
+    current = "The 450 km source";
+  const original = {
+    answer: raw,
+    correct: false,
+    helped: true,
+    fresh: false,
+    at: Date.now() - 1000,
+  };
+  const data = emptyProgress();
+  data.work["cells-and-fuel-cells"] = {
+    ...emptyWork(),
+    section: "explore",
+    learning: {
+      version: 1,
+      stage: "refresher",
+      index: journey.refresher.indexOf(q),
+    },
+    drafts: { [q.id]: raw },
+    attempts: { [q.id]: [original] },
+  };
+  await page.addInitScript(
+    ({ key, data }) => {
+      if (!localStorage.getItem(key))
+        localStorage.setItem(key, JSON.stringify(data));
+    },
+    { key: STORAGE_KEY, data },
+  );
+  await page.goto(route);
+  const selected = page.getByRole("radio", { name: current, exact: true });
+  await expect(selected).toBeChecked();
+  await expect(page.locator(".sample-task-answer [role=status]")).toContainText(
+    q.misconceptions![current],
+  );
+  await page.reload();
+  await expect(selected).toBeChecked();
+  const stored = await page.evaluate(
+    ({ key, id }) => {
+      const w = JSON.parse(localStorage.getItem(key)!).work[
+        "cells-and-fuel-cells"
+      ];
+      return { draft: w.drafts[id], attempts: w.attempts[id] };
+    },
+    { key: STORAGE_KEY, id: q.id },
+  );
+  expect(stored).toEqual({ draft: raw, attempts: [original] });
+  await captureProse(
+    page,
+    `docs/qa/cells-prose/${info.project.name}-retained-range.png`,
+  );
+  await page.getByRole("radio", { name: "Neither", exact: true }).check();
+  await page.getByRole("button", { name: "Check answer", exact: true }).click();
+  await expect(page.locator(".sample-task-answer [role=status]")).toContainText(
+    "That’s right.",
+  );
+  await captureProse(
+    page,
+    `docs/qa/cells-prose/${info.project.name}-correct-range.png`,
   );
 });

@@ -151,3 +151,20 @@ test("saved wrong models decode, reload and atomically switch records while reje
   w.taskModels[q.id] = [a, { ...a, left: "copper", right: "zinc" }];
   expect(decode(JSON.stringify(p))).toBeNull();
 });
+
+test("saved pre-editorial wrong range choice preserves grading, feedback and raw draft bytes", () => {
+  const q = j.refresher.find((q) => q.id === "cf-v1-r-constraints")!;
+  const old = "The450km source",
+    current = "The 450 km source";
+  expect(mark(q, old)).toEqual(mark(q, current));
+  expect(mark(q, old).correct).toBe(false);
+  expect(mark(q, old).feedback).toContain("450 km is still less than 500 km.");
+  expect(mark(q, q.answer).correct).toBe(true);
+  const p = emptyProgress(),
+    w = emptyWork();
+  w.drafts[q.id] = old;
+  p.work["cells-and-fuel-cells"] = w;
+  expect(
+    decode(JSON.stringify(p))!.work["cells-and-fuel-cells"].drafts[q.id],
+  ).toBe(old);
+});

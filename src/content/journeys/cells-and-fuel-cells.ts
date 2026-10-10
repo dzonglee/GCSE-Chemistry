@@ -92,7 +92,7 @@ export const cellsJourney: LessonJourney = {
     n(
       "warm-series",
       "Add equal voltages",
-      "Calculate1.5×4.",
+      "Calculate 1.5×4.",
       6,
       "",
       "Four equal 1.5 values total 6.",
@@ -201,7 +201,7 @@ export const cellsJourney: LessonJourney = {
       "A 450 km source and a 300 km source must complete 500 km without a stop. Which meets the supplied range requirement?",
       "Neither",
       {
-        "The450km source": "450 km is still less than 500 km.",
+        "The 450 km source": "450 km is still less than 500 km.",
         Both: "Both supplied ranges are below the requirement.",
       },
       "A relatively larger range does not necessarily meet an absolute requirement.",
@@ -280,7 +280,7 @@ export const cellsJourney: LessonJourney = {
       {
         "Y, Z, X":
           "This reverses the supplied voltage–reactivity relationship.",
-        "X, Y, Z": "1.1V exceeds0.5V.",
+        "X, Y, Z": "1.1 V exceeds 0.5 V.",
       },
       "Use the stated relationship under matching conditions:1.8>1.1>0.5 gives X>Z>Y. Do not derive universal voltage values from this order.",
       "Order the given readings and apply the stated relationship.",
@@ -405,7 +405,7 @@ export const cellsJourney: LessonJourney = {
     n(
       "p-mg",
       "Interpret measured voltages",
-      "Copper sulfate comparison: fixedCu with Mg 2.71 V, Zn 1.10 V or Co 0.62 V. What is the largest supplied reading?",
+      "Copper sulfate comparison: fixed Cu with Mg 2.71 V, Zn 1.10 V or Co 0.62 V. What is the largest supplied reading?",
       2.71,
       "V",
       "2.71 V is the largest of the supplied matched measurements.",
@@ -462,7 +462,7 @@ export const cellsJourney: LessonJourney = {
       "Six supplied 1.2 V cells face the same way in the ideal series model. Predict the voltage.",
       7.2,
       "V",
-      "6×1.2=7.2V.",
+      "6×1.2=7.2 V.",
       "Use the supplied 1.2 V, not 1.5 V.",
       m(
         "series",
@@ -615,7 +615,7 @@ export const cellsJourney: LessonJourney = {
       "Neither",
       {
         "Fuel cell": "450 km remains below 500 km.",
-        "Rechargeable battery": "300km is below500km.",
+        "Rechargeable battery": "300 km is below 500 km.",
       },
       "Neither supplied range reaches the required distance.",
       "A larger value can still be insufficient.",
@@ -632,7 +632,7 @@ export const cellsJourney: LessonJourney = {
         "The fuel-cell reaction itself must form methane":
           "The specified overall cell reaction forms water.",
       },
-      "A water-forming cell reaction can use hydrogen whose production causesCO₂ emissions.",
+      "A water-forming cell reaction can use hydrogen whose production causes CO₂ emissions.",
       "Separate reaction products from supply-chain effects.",
       m(
         "evidence",
@@ -727,7 +727,7 @@ export const cellsJourney: LessonJourney = {
       "p-evaluation",
       "Write a supported comparison",
       "Original data: fuel 450 km/5 min/£60; battery 300 km/40 min/£9. The user needs 400 km without a stop and restoration within 10 min. Evaluate both, make a judgement and identify one limitation of extending that judgement.",
-      "Choose the supplied fuel system:450 km exceeds 400 km and 5 min is below 10 min. The battery fails both with 300 km and 40 min, although its£9 cost is lower than£60. The judgement depends on these supplied requirements, measurements and compatible hydrogen infrastructure; it does not prove universal superiority or a current market price.",
+      "Choose the supplied fuel system: 450 km exceeds 400 km and 5 min is below 10 min. The battery fails both with 300 km and 40 min, although its£9 cost is lower than£60. The judgement depends on these supplied requirements, measurements and compatible hydrogen infrastructure; it does not prove universal superiority or a current market price.",
       [
         "Compare both sources with both required limits.",
         "Recognise the battery's cost advantage without ignoring the requirements.",
@@ -738,7 +738,7 @@ export const cellsJourney: LessonJourney = {
       "p-environment",
       "Explain a conditional environmental claim",
       "Explain why water as the only new reaction product does not by itself make a hydrogen fuel-cell system carbon-free overall. Compare specified fossil production with renewable-powered electrolysis.",
-      "The hydrogen–oxygen cell forms water, but hydrogen production and transport also matter. A supplied fossil-production process releasesCO₂. Renewable-powered water electrolysis can avoid that specified fossil energy route, but electricity origin and manufacturing/transport evidence are needed before claiming a full carbon-free lifecycle.",
+      "The hydrogen–oxygen cell forms water, but hydrogen production and transport also matter. A supplied fossil-production process releases CO₂. Renewable-powered water electrolysis can avoid that specified fossil energy route, but electricity origin and manufacturing/transport evidence are needed before claiming a full carbon-free lifecycle.",
       [
         "Distinguish the cell product from supply-chain effects.",
         "Compare the two stated production routes conditionally.",
@@ -774,7 +774,7 @@ export const cellsJourney: LessonJourney = {
         {
           "Source F":
             "Its range and faster restoration are unnecessary for the stated requirement, and its cost is higher.",
-          Neither: "Both ranges exceed240km.",
+          Neither: "Both ranges exceed 240 km.",
         },
         "B meets 240 km, allows overnight restoration and costs£8 instead of£44.",
         "Check constraints before cost.",
@@ -795,8 +795,8 @@ export const cellsJourney: LessonJourney = {
       w(
         "A-impact",
         "Evaluate an emission statement",
-        "An air-fed hydrogen fuel-cell outlet contains water and unused nitrogen. Its hydrogen supplier reports fossil-processCO₂. Evaluate 'every outlet substance is water and the full system is carbon-free'.",
-        "Both parts overstate the evidence. Water is the new chemical reaction product; unused nitrogen from the inlet can leave unchanged. Reported hydrogen-productionCO₂ means the supplied full system is not carbon-free.",
+        "An air-fed hydrogen fuel-cell outlet contains water and unused nitrogen. Its hydrogen supplier reports fossil-process CO₂. Evaluate 'every outlet substance is water and the full system is carbon-free'.",
+        "Both parts overstate the evidence. Water is the new chemical reaction product; unused nitrogen from the inlet can leave unchanged. Reported hydrogen-production CO₂ means the supplied full system is not carbon-free.",
         [
           "Separate new product from unused inlet gas.",
           "Include reported production emissions in the overall judgement.",
@@ -903,7 +903,7 @@ export const cellsJourney: LessonJourney = {
         "For 12 H₂+xO₂→12 H₂O, calculate x.",
         6,
         "",
-        "12O atoms require6O₂.",
+        "12 O atoms require 6 O₂.",
         "Count both sides using fixed formulas.",
       ),
       c(
@@ -942,6 +942,10 @@ const allTasks = [
   ...cellsJourney.reviewForms.flat(),
 ];
 const byId = new Map(allTasks.map((t) => [t.id, t]));
+// Preserve the exact saved wrong choice while displaying the corrected spacing.
+byId.get("cf-v1-r-constraints")!.optionAliases = {
+  "The450km source": "The 450 km source",
+};
 byId.get("cf-v1-A-use")!.cellsComparison = {
   sources: [
     {

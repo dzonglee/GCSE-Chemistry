@@ -1,0 +1,63 @@
+{
+  "beforeSHA256": "3132b678bd5878d5c22a969fa579cbbbd214a9a2af399c5de08488f59ec1fd12",
+  "afterCopySHA256": "699123d9637b286bd2d84f2c07839bc87662200e2ecf4d3e42cc154a6c99b536",
+  "afterSHA256": "6f09c1d867db04e60a507b3f61eb303332e9b8da7bf2bc7f41c4b68402b355d3",
+  "explicitSpaceEdits": [
+    [
+      "Calculate1.5",
+      "Calculate 1.5"
+    ],
+    [
+      "The450km",
+      "The 450 km"
+    ],
+    [
+      "1.1V exceeds0.5V",
+      "1.1 V exceeds 0.5 V"
+    ],
+    [
+      "300km is below500km",
+      "300 km is below 500 km"
+    ],
+    [
+      "Both ranges exceed240km",
+      "Both ranges exceed 240 km"
+    ],
+    [
+      "12O atoms require6O\u2082",
+      "12 O atoms require 6 O\u2082"
+    ],
+    [
+      "6\u00d71.2=7.2V",
+      "6\u00d71.2=7.2 V"
+    ],
+    [
+      "fixedCu",
+      "fixed Cu"
+    ],
+    [
+      "causesCO\u2082",
+      "causes CO\u2082"
+    ],
+    [
+      "releasesCO\u2082",
+      "releases CO\u2082"
+    ],
+    [
+      "fossil-processCO\u2082",
+      "fossil-process CO\u2082"
+    ],
+    [
+      "hydrogen-productionCO\u2082",
+      "hydrogen-production CO\u2082"
+    ],
+    [
+      "system:450",
+      "system: 450"
+    ]
+  ],
+  "copyPhaseNonSpaceBytesIdentical": true,
+  "oldWrongOptionAlias": {
+    "The450km source": "The 450 km source"
+  }
+}
