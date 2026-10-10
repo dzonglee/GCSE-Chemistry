@@ -67,8 +67,8 @@ const recall = written(
 const contrast = written(
   "ra-contrast",
   "Compare cage and sheet",
-  "Compare a complete C₆₀ molecule with a 32-carbon graphene drawing. Why is32 not graphene’s molecular formula?",
-  "C₆₀ is a complete closed sixty-carbon molecule with covalent bonds. Graphene is an extended single-sheet covalent network;32 is only the drawing inventory and connections continue outside the crop. Both contain strong covalent bonds, but an extended sheet has no fixed molecular size like C₆₀.",
+  "Compare a complete C₆₀ molecule with a 32-carbon graphene drawing. Why is 32 not graphene’s molecular formula?",
+  "C₆₀ is a complete closed sixty-carbon molecule with covalent bonds. Graphene is an extended single-sheet covalent network; 32 is only the drawing inventory and connections continue outside the crop. Both contain strong covalent bonds, but an extended sheet has no fixed molecular size like C₆₀.",
   [
     "Describe complete finite C₆₀ molecule versus extended graphene sheet.",
     "Explain cropped continuation and drawing count rather than inventing C₃₂ molecules; retain covalent bonding in both.",
