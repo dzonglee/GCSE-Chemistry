@@ -468,7 +468,9 @@ test("all 49 responses stay sealed; contradictory working, native graphs and hol
         .fill("31.4");
     }
     if (part.number === "1(b)") {
-      await page.getByText("Show your working", { exact: true }).click();
+      await expect(
+        page.getByLabel("Working for this question", { exact: true }),
+      ).toBeVisible();
       await page
         .getByLabel("Working for this question", { exact: true })
         .fill("31 × 0.62 = 50\nDeliberately contradictory working.");

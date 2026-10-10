@@ -285,7 +285,9 @@ for (const width of [320, 1280])
               .fill(value);
         if (part.number === "1(b)") {
           await page.locator(".numeric-label input").fill("63.60");
-          await page.getByText("Show your working", { exact: true }).click();
+          await expect(
+            page.getByLabel("Working for this question", { exact: true }),
+          ).toBeVisible();
           await page
             .getByLabel("Working for this question", { exact: true })
             .fill(
@@ -294,7 +296,9 @@ for (const width of [320, 1280])
         }
         if (part.number === "7(b)") {
           await page.locator(".numeric-label input").fill("4.50e23");
-          await page.getByText("Show your working", { exact: true }).click();
+          await expect(
+            page.getByLabel("Working for this question", { exact: true }),
+          ).toBeVisible();
           await page
             .getByLabel("Working for this question", { exact: true })
             .fill(
@@ -303,7 +307,9 @@ for (const width of [320, 1280])
         }
         if (part.number === "8(b)") {
           await page.locator(".numeric-label input").fill("12000");
-          await page.getByText("Show your working", { exact: true }).click();
+          await expect(
+            page.getByLabel("Working for this question", { exact: true }),
+          ).toBeVisible();
           await page
             .getByLabel("Working for this question", { exact: true })
             .fill(

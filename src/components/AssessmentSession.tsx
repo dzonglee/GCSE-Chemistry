@@ -478,6 +478,7 @@ export function AssessmentSession({
   const working = work.drafts["working:" + q.id] ?? "";
   const calculation =
     !q.rubric && (q.parts || (!q.options && Number.isFinite(Number(q.answer))));
+  const WorkingContainer = examPaper ? "section" : "details";
   const answered = Object.keys(run.responses).length;
   const navigate = (index: number) => {
     setMessage("");
@@ -654,8 +655,8 @@ export function AssessmentSession({
           }}
         />
         {calculation && (
-          <details className="assessment-working">
-            <summary>Show your working</summary>
+          <WorkingContainer className="assessment-working">
+            {!examPaper && <summary>Show your working</summary>}
             <label htmlFor={`working-${q.id}`}>Working for this question</label>
             <textarea
               id={`working-${q.id}`}
@@ -676,7 +677,7 @@ export function AssessmentSession({
                 ? "Show steps, units and reasoning for method credit. Your working is saved for review after whole-paper submission."
                 : "Optional: record your steps, units and reasoning. Your working is saved, but receives no automatic method mark."}
             </p>
-          </details>
+          </WorkingContainer>
         )}
         {!recorded ? (
           <div className="button-row">

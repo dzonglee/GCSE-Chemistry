@@ -592,10 +592,6 @@ footer > div {
   line-height: 20px;
 }
 @media (min-width: 601px) {
-  .question-panel[data-full-paper] .written-answer textarea {
-    height: 104px;
-    min-height: 104px;
-  }
   .question-panel[data-full-paper] .ionic-slice-response {
     display: grid;
     grid-template-columns: 208px minmax(0, 1fr);
@@ -5317,5 +5313,66 @@ progress {
     .question-panel
     > .ion-construction-preview {
     grid-row: 4;
+  }
+}
+
+/* Full exam explanations need writing space on desktop and phones. */
+@media (min-width: 601px) {
+  .assessment-page.full-paper.working h1 {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  .assessment-page.full-paper.working .sample-course-scope {
+    margin-bottom: 4px;
+  }
+  .assessment-page.full-paper.working .session-heading {
+    margin: 4px 0;
+  }
+  .assessment-page.full-paper.working .question-panel {
+    padding: 24px;
+    margin-top: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .assessment-page.full-paper.working h1 {
+    margin-top: 0;
+  }
+}
+@media (max-width: 350px) {
+  .assessment-page.full-paper.working {
+    margin-top: -28px;
+  }
+  .assessment-page.full-paper.working .breadcrumb {
+    margin-bottom: 2px;
+  }
+  .assessment-page.full-paper.working h1 {
+    margin-top: 0;
+    margin-bottom: 2px;
+  }
+  .assessment-page.full-paper.working .sample-course-scope {
+    font-size: 14px;
+    line-height: 1.45;
+    margin-bottom: 2px;
+  }
+  .assessment-page.full-paper.working .question-panel {
+    padding: 8px;
+  }
+  .assessment-page.full-paper.working .written-equation-prompt {
+    line-height: 1.4;
+  }
+}
+.assessment-page.full-paper.working
+  .written-answer:not(.short-written-answer)
+  textarea {
+  height: 140px;
+  min-height: 140px;
+}
+@supports (field-sizing: content) {
+  .assessment-page.full-paper.working
+    .written-answer:not(.short-written-answer)
+    textarea {
+    field-sizing: content;
+    height: auto;
+    max-height: 420px;
   }
 }

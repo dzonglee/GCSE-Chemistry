@@ -514,6 +514,7 @@ const ionic: ExamPart[] = [
       {
         ionicSlice: true,
         compactIonicSlice: true,
+        shortWritten: true,
         rubric: [
           "One justified limitation of the supplied finite two-dimensional representation.",
         ],

@@ -216,7 +216,9 @@ async function answer(page: Page, index: number) {
       .fill(q.answer);
   if (part.number === "1(b)") {
     await page.locator(".numeric-label input").fill("6.02e-5");
-    await page.getByText("Show your working", { exact: true }).click();
+    await expect(
+      page.getByLabel("Working for this question", { exact: true }),
+    ).toBeVisible();
     await page
       .getByLabel("Working for this question", { exact: true })
       .fill(
@@ -225,7 +227,9 @@ async function answer(page: Page, index: number) {
   }
   if (part.number === "7(c)") {
     await page.locator(".numeric-label input").fill("0.0160");
-    await page.getByText("Show your working", { exact: true }).click();
+    await expect(
+      page.getByLabel("Working for this question", { exact: true }),
+    ).toBeVisible();
     await page
       .getByLabel("Working for this question", { exact: true })
       .fill(

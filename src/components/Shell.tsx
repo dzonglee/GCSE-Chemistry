@@ -156,7 +156,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <span className="saved-dot" /> Progress stays on this device
           <small>
             {ready
-              ? `${data.preferences.tier === "higher" ? "Higher" : "Foundation"} · ${data.preferences.course === "combined" ? "Combined Science" : "Separate Chemistry"}`
+              ? `Your study preference: ${data.preferences.tier === "higher" ? "Higher" : "Foundation"} · ${data.preferences.course === "combined" ? "Combined Science" : "Separate Chemistry"}`
               : "Browser-local learning"}
           </small>
         </div>

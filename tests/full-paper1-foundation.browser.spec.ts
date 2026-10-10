@@ -319,7 +319,9 @@ test("all fifty parts record through their native UI, remain sealed and allow wh
       await page.getByLabel("Point 5 y (°C)", { exact: true }).fill("21.1");
     }
     if (part.number === "5(b)") {
-      await page.getByText("Show your working", { exact: true }).click();
+      await expect(
+        page.getByLabel("Working for this question", { exact: true }),
+      ).toBeVisible();
       await page
         .getByLabel("Working for this question", { exact: true })
         .fill(

@@ -1,0 +1,36 @@
+{
+  "productionBuild": "JNHs5_KhZ086WCLkwzQ29",
+  "scope": "Six selected personally inspected focused-run captures, not all48 generated frames. Same unchanged production build passed 12 focused and 132 all-parts/workflow browser checks; 2344 fingerprints verified.",
+  "images": [
+    {
+      "file": "paper-writing-mobile-390-paper-2-higher-full-explanation.png",
+      "sha256": "7c0ea79e3fbf1fba92fdfc4a4758b259692db6d025bc33dbefb983e5451cc04b",
+      "personallyInspected": true
+    },
+    {
+      "file": "paper-writing-desktop-1280-paper-2-foundation-full-explanation.png",
+      "sha256": "073d8091a0444de4caa77337d4e46efc63b9a4337400e5d2840d2dc04a3899c0",
+      "personallyInspected": true
+    },
+    {
+      "file": "paper-writing-mobile-320-paper-1-foundation-full-working.png",
+      "sha256": "a82daada7c1613e007adab0ceff4e1d2f2c861a3dc961163bef4b07194359304",
+      "personallyInspected": true
+    },
+    {
+      "file": "paper-writing-desktop-1280-paper-1-higher-full-working.png",
+      "sha256": "d82644df8335fb0f5c58d286bd36f63b4605b3372d29477dc6ac3e269237724e",
+      "personallyInspected": true
+    },
+    {
+      "file": "paper-writing-mobile-390-paper-2-foundation-full-working.png",
+      "sha256": "6791aeda93c9250fd570ceba3614d213d85e583ca120460e2ce29e1dcc522df9",
+      "personallyInspected": true
+    },
+    {
+      "file": "paper-writing-desktop-1280-paper-2-higher-full-explanation.png",
+      "sha256": "e9ff81355b4b2f6e9884d5a1e509d16c6287038dee62b54eeca0199611440d0f",
+      "personallyInspected": true
+    }
+  ]
+}
