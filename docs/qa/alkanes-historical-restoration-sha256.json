@@ -1,0 +1,76 @@
+{
+  "scope": "fourteen pre-existing historical artifacts linked by lesson73 review, restored unchanged",
+  "currentVisualAcceptance": false,
+  "files": [
+    {
+      "path": "docs/qa/alkanes-desktop-kit.png",
+      "sha256": "5ec498746008c2987abeca8583864477aadbc1be4e6c04e5879bfe80408488d5",
+      "bytes": 331163
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-kit-model.png",
+      "sha256": "d58fa66baaa1072d1ab79ae2cbc1dc249d0c2f614dde8b27a1605ac3aafd602b",
+      "bytes": 175176
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-formula-model.png",
+      "sha256": "879546b1cfbdaca48941bf1f08c45a6f457d7d9531bd16e2a0c1cd97e6235b04",
+      "bytes": 119699
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-classify-model.png",
+      "sha256": "40060f4dee663b95ec73f76d31285486694d679cefe0283ae43af260ba60c055",
+      "bytes": 124752
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-equation-model.png",
+      "sha256": "accb000db19c5fe6f6eb4393a83603a4781229249ae3c51ef01ef5e00dfca5f2",
+      "bytes": 136989
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-oxygen-model.png",
+      "sha256": "421f753b92d11ae8733ef5230a62475641e378073e354425b7ee96c1e731f5f1",
+      "bytes": 157347
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-evidence-model.png",
+      "sha256": "b7819bd881cbd1fa3bf6bc619703ec362d5c0812a56bcffdfdbe7d57146e9f96",
+      "bytes": 148732
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-independent-form-0-drawing.png",
+      "sha256": "8b11bfd30fa08e59d0e41a401079661f50e28bce93affa4720b07f8c6e9be11a",
+      "bytes": 81392
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-independent-form-1-drawing.png",
+      "sha256": "0231245db94abaf2ddb44ab72a7af363543fd019aa27526ef2d94f4d92fff056",
+      "bytes": 73225
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-retained-wrong-drawing.png",
+      "sha256": "4e668d38feb7a12ccb11a64587602b6be1793d4fa922326b4760efae9ea787f3",
+      "bytes": 182244
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-completed-structure-review.png",
+      "sha256": "edfaf598953a3e751be7d67f22f9ce27c187bed63af63c278a9a07c6048af092",
+      "bytes": 280789
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-fallback.png",
+      "sha256": "507b523dcfeb99bdc35a743b7c426a972f6eec89a71e3d17b83b15be09a68441",
+      "bytes": 225084
+    },
+    {
+      "path": "docs/qa/alkanes-mobile-opening.png",
+      "sha256": "82797cf2e75b248b873539d7f38e793710ed43cd698743f0577bd28bd5069c3c",
+      "bytes": 232233
+    },
+    {
+      "path": "docs/qa/alkanes-desktop.glb",
+      "sha256": "6f1af539c6ca7f9721b04c55be829d51ab76c24479bbe4899a513f3429faa850",
+      "bytes": 123224
+    }
+  ]
+}

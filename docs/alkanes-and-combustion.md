@@ -168,3 +168,7 @@ No lesson 74 research before these samples are explicitly sent. Full 1,348-case 
 
 
 Lesson73 full regression:1,346 passed in53.5minutes; two older generic-organic smoke cases failed because they expected the retired Compound family control on the individually rebuilt alkane page. The smoke test now verifies the four actual alkane formula proposals and explanatory feedback. Both desktop/mobile repaired cases passed5.7seconds against the unchanged production build. Source hashes passed after completion. This is1,346 full-run passes plus2 repaired passes, not one all1,348-pass run. Lesson74 integration proceeds only after that repaired pair. Whole-course parity and readiness remain unfinished.
+
+## Historical artifact-link restoration — 10 October 2026
+
+Restored the fourteen original linked local artifacts to the GitHub handoff: thirteen historical screenshots and the original GLB. Their bytes are unchanged; the screenshots were inspected again for archival identity and the GLB header/version/length checked. These retain the older lesson layout and are not current UI acceptance screenshots. No application content, assessed demands or scientific values changed. Current regression evidence is recorded separately in validation.md.
