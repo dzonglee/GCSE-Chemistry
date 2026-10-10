@@ -1,0 +1,3 @@
+# Higher paper reference spacing
+
+Two existing submitted-reference strings contained joined prose: Choose3, To3 and is4.52. Five ordinary spaces now separate these words and the two equals signs in the particle-count calculation. The arithmetic remains0.750×6.02×10²³=4.515×10²³, rounded to4.52×10²³ at three significant figures. No question, answer, mark, ID, retained response or progress metadata changes. A literal comparison against461a87f verifies that these five spaces are the entire source difference. Types and affected lint passed. Full-course verification is separately in progress; no completed unified browser pass is claimed.

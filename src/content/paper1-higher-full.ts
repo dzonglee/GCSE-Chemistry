@@ -575,7 +575,7 @@ const salts: ExamPart[] = [
         {
           min: 3,
           max: 4,
-          text: "Most relevant stages are present, but a missing stage or sequencing/chemical error makes pure, dry crystals unreliable. Choose3 or 4 by the overall coherence and effectiveness of the method.",
+          text: "Most relevant stages are present, but a missing stage or sequencing/chemical error makes pure, dry crystals unreliable. Choose 3 or 4 by the overall coherence and effectiveness of the method.",
         },
         {
           min: 1,
@@ -1002,7 +1002,7 @@ const moles: ExamPart[] = [
         inputMode: "text",
         tolerance: 1e20,
         explanation:
-          "Number =0.750 × 6.02 × 10²³ =4.515 × 10²³ molecules. To3 significant figures in normalised standard form, this is4.52 × 10²³. The raw answer must show the required presentation; an equivalent unrounded decimal integer alone does not establish it.",
+          "Number = 0.750 × 6.02 × 10²³ = 4.515 × 10²³ molecules. To 3 significant figures in normalised standard form, this is 4.52 × 10²³. The raw answer must show the required presentation; an equivalent unrounded decimal integer alone does not establish it.",
       },
     ),
     3,
