@@ -181,3 +181,14 @@ test("numerical answers are independently recomputed from the actual given pairs
   for (const q of numerical)
     expect(Number(q.answer), q.id).toBeCloseTo(expected[q.id.slice(6)], 9);
 });
+
+test("exact historical wrong choices retain their meaning and feedback after spacing corrections", () => {
+  for (const q of tasks(journey).filter((q) => q.optionAliases)) {
+    expect(mark(q, q.answer).correct).toBe(true);
+    for (const [old, current] of Object.entries(q.optionAliases!)) {
+      expect(mark(q, old)).toEqual(mark(q, current));
+      expect(mark(q, old).correct).toBe(false);
+      expect(mark(q, old).feedback).toContain(q.misconceptions![current]);
+    }
+  }
+});

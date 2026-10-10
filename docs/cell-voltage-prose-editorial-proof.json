@@ -1,0 +1,177 @@
+{
+  "source": "src/content/journeys/cell-voltage.ts",
+  "beforeSha256": "75e9050ddc68adcb0a3951cfd0c5d1840ee97e6c0317535a152cf936045da5e9",
+  "nonSpaceBytesUnchangedBeforeExplicitAliases": true,
+  "explicitEdits": [
+    {
+      "before": "difference:0.60",
+      "after": "difference: 0.60",
+      "occurrences": 1
+    },
+    {
+      "before": "Calculate0.40",
+      "after": "Calculate 0.40",
+      "occurrences": 1
+    },
+    {
+      "before": "Subtracting0.90",
+      "after": "Subtracting 0.90",
+      "occurrences": 1
+    },
+    {
+      "before": "from0.40",
+      "after": "from 0.40",
+      "occurrences": 1
+    },
+    {
+      "before": "gives−0.50",
+      "after": "gives −0.50",
+      "occurrences": 1
+    },
+    {
+      "before": "keeps−",
+      "after": "keeps −",
+      "occurrences": 1
+    },
+    {
+      "before": "changes+1.20",
+      "after": "changes +1.20",
+      "occurrences": 1
+    },
+    {
+      "before": "to−1.20",
+      "after": "to −1.20",
+      "occurrences": 1
+    },
+    {
+      "before": "giving+0.70",
+      "after": "giving +0.70",
+      "occurrences": 1
+    },
+    {
+      "before": "remains−0.40",
+      "after": "remains −0.40",
+      "occurrences": 1
+    },
+    {
+      "before": "order:−0.70",
+      "after": "order: −0.70",
+      "occurrences": 1
+    },
+    {
+      "before": "becomes−1.20",
+      "after": "becomes −1.20",
+      "occurrences": 1
+    },
+    {
+      "before": "supplied−0.40",
+      "after": "supplied −0.40",
+      "occurrences": 1
+    },
+    {
+      "before": "level1.6",
+      "after": "level 1.6",
+      "occurrences": 1
+    },
+    {
+      "before": "level3.1",
+      "after": "level 3.1",
+      "occurrences": 1
+    },
+    {
+      "before": "requires−0.70",
+      "after": "requires −0.70",
+      "occurrences": 1
+    },
+    {
+      "before": "so−0.90",
+      "after": "so −0.90",
+      "occurrences": 1
+    },
+    {
+      "before": "inferred−0.70",
+      "after": "inferred −0.70",
+      "occurrences": 1
+    },
+    {
+      "before": "a−0.70",
+      "after": "a −0.70",
+      "occurrences": 1
+    },
+    {
+      "before": "by+2",
+      "after": "by +2",
+      "occurrences": 1
+    },
+    {
+      "before": "is0.70",
+      "after": "is 0.70",
+      "occurrences": 1
+    },
+    {
+      "before": "second:0.50",
+      "after": "second: 0.50",
+      "occurrences": 1
+    },
+    {
+      "before": "changes−0.70",
+      "after": "changes −0.70",
+      "occurrences": 1
+    },
+    {
+      "before": "to+0.70",
+      "after": "to +0.70",
+      "occurrences": 1
+    },
+    {
+      "before": "stays0.70",
+      "after": "stays 0.70",
+      "occurrences": 1
+    },
+    {
+      "before": "order;−0.85",
+      "after": "order; −0.85",
+      "occurrences": 1
+    },
+    {
+      "before": "is1.05",
+      "after": "is 1.05",
+      "occurrences": 1
+    },
+    {
+      "before": "gives−1.05",
+      "after": "gives −1.05",
+      "occurrences": 1
+    },
+    {
+      "before": "exactly0 V",
+      "after": "exactly 0 V",
+      "occurrences": 2
+    },
+    {
+      "before": "by2 V",
+      "after": "by 2 V",
+      "occurrences": 1
+    },
+    {
+      "before": "be0 V",
+      "after": "be 0 V",
+      "occurrences": 1
+    }
+  ],
+  "explicitOptionAliases": {
+    "cv-v1-r-missing": {
+      "The cell has exactly0 V": "The cell has exactly 0 V"
+    },
+    "cv-v1-p-missing": {
+      "The cell was measured at exactly0 V": "The cell was measured at exactly 0 V"
+    },
+    "cv-v1-p-zero-origin": {
+      "It necessarily increases by2 V": "It necessarily increases by 2 V"
+    },
+    "cv-v1-p-identical-scope": {
+      "The table entries marked not measured must also be0 V": "The table entries marked not measured must also be 0 V"
+    }
+  },
+  "afterSha256": "f8761117934a6952bdf73bb30a1afafcf509a60c43045ab03b42b979fcb6badf"
+}

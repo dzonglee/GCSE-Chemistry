@@ -134,15 +134,15 @@ export const voltageJourney: LessonJourney = {
       "Keep magnitude unsigned",
       "What is the magnitude of a −0.60 V reading?",
       0.6,
-      "Magnitude is the unsigned size of the difference:0.60 V.",
+      "Magnitude is the unsigned size of the difference: 0.60 V.",
       "Separate sign from size.",
     ),
     n(
       "warm-subtract",
       "Recall signed subtraction",
-      "Calculate0.40−0.90.",
+      "Calculate 0.40−0.90.",
       -0.5,
-      "Subtracting0.90 from0.40 gives−0.50.",
+      "Subtracting 0.90 from 0.40 gives −0.50.",
       "Keep the order of the two values.",
     ),
   ],
@@ -180,7 +180,7 @@ export const voltageJourney: LessonJourney = {
       "Separate reading and magnitude",
       "A reading is −0.40 V. What is its unsigned magnitude?",
       0.4,
-      "The reading keeps−; its magnitude is 0.40 V.",
+      "The reading keeps −; its magnitude is 0.40 V.",
       "An unsigned size is non-negative.",
     ),
     n(
@@ -188,7 +188,7 @@ export const voltageJourney: LessonJourney = {
       "Reverse only meter leads",
       "The same cell reads +1.20 V. Only red and black meter connections are reversed. What is the new signed reading?",
       -1.2,
-      "Reversing terminal order changes+1.20 V to−1.20 V, with the same magnitude and unchanged cell chemistry.",
+      "Reversing terminal order changes +1.20 V to −1.20 V, with the same magnitude and unchanged cell chemistry.",
       "Swap the sign, not the physical metals.",
     ),
     n(
@@ -241,7 +241,7 @@ export const voltageJourney: LessonJourney = {
       "A table entry says not measured. What does that establish?",
       "No observed reading is recorded",
       {
-        "The cell has exactly0 V":
+        "The cell has exactly 0 V":
           "Absence of an observation is not a zero measurement.",
         "The metals cannot react": "That conclusion needs chemical evidence.",
       },
@@ -303,7 +303,7 @@ export const voltageJourney: LessonJourney = {
       "Swap the meter leads",
       "The given iron/copper cell reads −0.70 V. Reverse only its meter leads. What is the new reading?",
       0.7,
-      "The terminal order reverses, giving+0.70 V. Iron still supplies discharge electrons to the unchanged separate load.",
+      "The terminal order reverses, giving +0.70 V. Iron still supplies discharge electrons to the unchanged separate load.",
       "Do not swap the chemical donor and acceptor.",
       model(
         "lead",
@@ -409,7 +409,7 @@ export const voltageJourney: LessonJourney = {
       "Do not copy the sign into magnitude",
       "The given tin/copper reading is −0.40 V. What is its unsigned magnitude?",
       0.4,
-      "The unsigned separation is 0.40 V, while the signed reading remains−0.40 V.",
+      "The unsigned separation is 0.40 V, while the signed reading remains −0.40 V.",
       "Magnitude is a size.",
       model("read", "Keep the two numerical predictions separate.", "negative"),
     ),
@@ -430,7 +430,7 @@ export const voltageJourney: LessonJourney = {
       "Reverse a positive cell reading",
       "A given copper/iron cell reads +0.70 V with normal red/black connections. Reverse only those meter leads. What is the new reading?",
       -0.7,
-      "The same magnitude is read in the opposite terminal order:−0.70 V. Iron remains the given discharge donor.",
+      "The same magnitude is read in the opposite terminal order: −0.70 V. Iron remains the given discharge donor.",
       "Reverse sign without changing the physical cell.",
       model(
         "lead",
@@ -443,7 +443,7 @@ export const voltageJourney: LessonJourney = {
       "Reverse a wider supplied comparison",
       "A given copper/chromium cell reads +1.20 V with normal meter connections. Reverse only the meter leads. What is the new reading?",
       -1.2,
-      "+1.20 V becomes−1.20 V; the unsigned magnitude remains 1.20 V.",
+      "+1.20 V becomes −1.20 V; the unsigned magnitude remains 1.20 V.",
       "Only the terminal order changes.",
       model(
         "lead",
@@ -456,7 +456,7 @@ export const voltageJourney: LessonJourney = {
       "Do not reverse unchanged wiring",
       "A given tin/copper cell reads −0.40 V with red on metal1=tin and black on metal2=copper. Keep those connections. What is the reading?",
       -0.4,
-      "The connections are unchanged, so the supplied−0.40 V reading keeps its sign.",
+      "The connections are unchanged, so the supplied −0.40 V reading keeps its sign.",
       "Read whether the question asks for a reversal.",
       model(
         "lead",
@@ -627,10 +627,10 @@ export const voltageJourney: LessonJourney = {
       "Which labelled metal is least reactive under this supplied comparison against new reference S as metal2?",
       "B",
       {
-        C: "Its supplied level1.6 V is lowest, so it is most reactive in this set.",
+        C: "Its supplied level 1.6 V is lowest, so it is most reactive in this set.",
         E: "Its level is below A, D and B.",
       },
-      "B has the highest level3.1 V. A common change in reference can shift all comparison readings without changing the relative order of the same metals.",
+      "B has the highest level 3.1 V. A common change in reference can shift all comparison readings without changing the relative order of the same metals.",
       "Compare the given readings under one reference role.",
       model(
         "rank",
@@ -664,11 +664,11 @@ export const voltageJourney: LessonJourney = {
       "The three exact claims are inconsistent",
       {
         "All three satisfy the shared-reference subtraction":
-          "0.50−1.20 requires−0.70 V.",
+          "0.50−1.20 requires −0.70 V.",
         "Delete the inconvenient record and call it verified":
           "The records should be retained while their conditions are investigated.",
       },
-      "The exact givens require−0.70 V, so−0.90 V cannot also hold for this stated unchanged comparison. Real measured data need their stated uncertainty/rounding.",
+      "The exact givens require−0.70 V, so −0.90 V cannot also hold for this stated unchanged comparison. Real measured data need their stated uncertainty/rounding.",
       "Test the given consistency rule.",
       model(
         "evidence",
@@ -701,12 +701,12 @@ export const voltageJourney: LessonJourney = {
       "The specimen iron/copper entry says not measured. Before inferring a value, what is established?",
       "No observed reading is recorded",
       {
-        "The cell was measured at exactly0 V":
+        "The cell was measured at exactly 0 V":
           "Not measured is not a zero observation.",
         "The table proves the metals are identical":
           "Missing data do not establish matching metals.",
       },
-      "An inferred−0.70 V must be labelled as a prediction from other data, not a recorded observation.",
+      "An inferred −0.70 V must be labelled as a prediction from other data, not a recorded observation.",
       "Distinguish an absent value from an observed zero.",
       model(
         "evidence",
@@ -717,7 +717,7 @@ export const voltageJourney: LessonJourney = {
     c(
       "p-negative-energy",
       "Do not misread the meter sign",
-      "A given discharging cell has a−0.70 V meter reading under the declared terminal order. What does that sign establish?",
+      "A given discharging cell has a −0.70 V meter reading under the declared terminal order. What does that sign establish?",
       "The chosen meter terminal potential order",
       {
         "The metal has negative reactivity":
@@ -736,10 +736,10 @@ export const voltageJourney: LessonJourney = {
     c(
       "p-zero-origin",
       "Shift only the display origin",
-      "Every plotted relative level, including the reference, is shifted by+2 V on the display. What happens to the measured difference between two electrodes?",
+      "Every plotted relative level, including the reference, is shifted by +2 V on the display. What happens to the measured difference between two electrodes?",
       "It stays the same",
       {
-        "It necessarily increases by2 V":
+        "It necessarily increases by 2 V":
           "Both levels gain the same offset, which cancels.",
         "It becomes an absolute isolated-electrode voltage":
           "A display origin does not change what is measured.",
@@ -760,7 +760,7 @@ export const voltageJourney: LessonJourney = {
       {
         "Copper cannot react in any chemical situation":
           "The matching-electrode result has narrower scope.",
-        "The table entries marked not measured must also be0 V":
+        "The table entries marked not measured must also be 0 V":
           "A missing observation is different from this measured zero.",
       },
       "Two matching plates give no relative-reactivity difference here; copper can still react in other stated chemical contexts.",
@@ -775,7 +775,7 @@ export const voltageJourney: LessonJourney = {
       "p-explain-signed",
       "Explain the missing signed cell",
       "Explain how the supplied iron/chromium +0.50 V and copper/chromium +1.20 V comparisons give iron/copper −0.70 V, and distinguish its magnitude.",
-      "Both givens use chromium in the same second role under the supplied comparison. Subtract first-minus-second:0.50−1.20=−0.70 V. The magnitude is0.70 V. The supplied sign rule makes iron more reactive than copper for this ordered pair. The prediction is inferred, not a previously recorded iron/copper observation.",
+      "Both givens use chromium in the same second role under the supplied comparison. Subtract first-minus-second: 0.50−1.20=−0.70 V. The magnitude is 0.70 V. The supplied sign rule makes iron more reactive than copper for this ordered pair. The prediction is inferred, not a previously recorded iron/copper observation.",
       [
         "Identify the matching reference role and conditions.",
         "Use ordered subtraction and distinguish signed reading from magnitude.",
@@ -785,8 +785,8 @@ export const voltageJourney: LessonJourney = {
     w(
       "p-explain-leads",
       "Explain lead-only reversal",
-      "Explain why reversing only red/black meter leads on the given discharging iron/copper cell changes−0.70 V to+0.70 V without reversing its chemical electron-transfer direction.",
-      "The meter subtracts its terminal potentials in the opposite order, so the sign reverses while magnitude stays0.70 V. The physical iron/copper plates and separate conducting load are unchanged. Iron remains the given more reactive electron donor and the copper electrode receives electrons; discharge electrons still pass through the load from iron to copper.",
+      "Explain why reversing only red/black meter leads on the given discharging iron/copper cell changes −0.70 V to +0.70 V without reversing its chemical electron-transfer direction.",
+      "The meter subtracts its terminal potentials in the opposite order, so the sign reverses while magnitude stays 0.70 V. The physical iron/copper plates and separate conducting load are unchanged. Iron remains the given more reactive electron donor and the copper electrode receives electrons; discharge electrons still pass through the load from iron to copper.",
       [
         "Explain terminal-order reversal and unchanged magnitude.",
         "Keep the physical cell/load and given donor/acceptor unchanged.",
@@ -852,7 +852,7 @@ export const voltageJourney: LessonJourney = {
         "A-explain",
         "Explain a negative reading",
         "A given cell discharges through its separate load while its voltmeter reads −0.85 V under the declared terminal order. Explain why the sign does not prove the reaction has stopped or that the cell absorbs electrical energy.",
-        "The meter reports its chosen terminal potential order;−0.85 V has magnitude 0.85 V. A reversed terminal order would give +0.85 V while the same physical discharging cell/load remains. The negative measurement sign is not negative reactivity, proof of no reaction or proof of energy absorption.",
+        "The meter reports its chosen terminal potential order; −0.85 V has magnitude 0.85 V. A reversed terminal order would give +0.85 V while the same physical discharging cell/load remains. The negative measurement sign is not negative reactivity, proof of no reaction or proof of energy absorption.",
         [
           "Explain signed terminal order and unsigned magnitude.",
           "Separate the measurement convention from the given continuing chemical discharge.",
@@ -881,7 +881,7 @@ export const voltageJourney: LessonJourney = {
         "Keep a new magnitude unsigned",
         "A stated meter reading is −1.05 V. What is its unsigned magnitude?",
         1.05,
-        "Magnitude is1.05 V, without the reading sign.",
+        "Magnitude is 1.05 V, without the reading sign.",
         "Separate size and order.",
       ),
       c(
@@ -931,7 +931,7 @@ export const voltageJourney: LessonJourney = {
         "Retrieve lead reversal",
         "The same given cell reads +1.05 V. Only the meter leads are reversed. What is the new reading?",
         -1.05,
-        "Reversed terminal order gives−1.05 V, with unchanged magnitude and physical cell.",
+        "Reversed terminal order gives −1.05 V, with unchanged magnitude and physical cell.",
         "Reverse the measurement sign.",
       ),
       w(
@@ -1140,3 +1140,26 @@ for (const q of all)
           .filter((id) => id !== q.id),
       ]),
     ];
+
+voltageJourney.refresher.find(
+  (q) => q.id === "cv-v1-r-missing",
+)!.optionAliases = { "The cell has exactly0 V": "The cell has exactly 0 V" };
+
+voltageJourney.practice.find((q) => q.id === "cv-v1-p-missing")!.optionAliases =
+  {
+    "The cell was measured at exactly0 V":
+      "The cell was measured at exactly 0 V",
+  };
+
+voltageJourney.practice.find(
+  (q) => q.id === "cv-v1-p-zero-origin",
+)!.optionAliases = {
+  "It necessarily increases by2 V": "It necessarily increases by 2 V",
+};
+
+voltageJourney.practice.find(
+  (q) => q.id === "cv-v1-p-identical-scope",
+)!.optionAliases = {
+  "The table entries marked not measured must also be0 V":
+    "The table entries marked not measured must also be 0 V",
+};

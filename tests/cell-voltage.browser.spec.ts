@@ -1,7 +1,12 @@
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { voltageJourney as journey } from "../src/content/journeys/cell-voltage";
-import { STORAGE_KEY, REVIEW_DELAY } from "../src/lib/progress";
+import {
+  STORAGE_KEY,
+  REVIEW_DELAY,
+  emptyProgress,
+  emptyWork,
+} from "../src/lib/progress";
 import {
   voltageRecords,
   voltageOptions,
@@ -163,7 +168,7 @@ test("reserved checks defer marking, retain drafts and separate actual seven-day
 
 test("all original practice works while three written explanations remain self-reviewed", async ({
   page,
-}) => {
+}, info) => {
   await page.goto(route);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   for (let i = 0; i < journey.practice.length; i++) {
@@ -195,6 +200,14 @@ test("all original practice works while three written explanations remain self-r
       await expect(
         page.locator(".sample-task-answer [role=status]"),
       ).toContainText("That’s right.");
+    if (["cv-v1-p-explain-signed", "cv-v1-p-explain-leads"].includes(q.id)) {
+      await page
+        .getByLabel("Your explanation", { exact: true })
+        .evaluate((element) => {
+          (element as HTMLTextAreaElement).scrollTop = 0;
+        });
+      await capture(page, info.outputPath(`${info.project.name}-${q.id}.png`));
+    }
   }
 });
 async function learn(page: Page, n: number) {
@@ -456,3 +469,66 @@ test("WebGL failure retains a text wiring interpretation and working numerical p
     }),
   ).toHaveCount(0);
 });
+
+for (const id of [
+  "cv-v1-p-missing",
+  "cv-v1-p-zero-origin",
+  "cv-v1-p-identical-scope",
+])
+  test(`historical wrong choice ${id} stays selected without rewriting raw history`, async ({
+    page,
+  }, info) => {
+    if (info.project.name === "mobile")
+      await page.setViewportSize({ width: 320, height: 720 });
+    const q = journey.practice.find((q) => q.id === id)!;
+    const [raw, current] = Object.entries(q.optionAliases!)[0];
+    const original = {
+      answer: raw,
+      correct: false,
+      helped: true,
+      fresh: false,
+      at: Date.now() - 1000,
+    };
+    const data = emptyProgress();
+    data.work["interpreting-cell-voltages"] = {
+      ...emptyWork(),
+      section: "practice",
+      learning: {
+        version: 1,
+        stage: "practice",
+        index: journey.practice.indexOf(q),
+      },
+      drafts: { [id]: raw },
+      attempts: { [id]: [original] },
+    };
+    await page.addInitScript(
+      ({ key, data }) => {
+        if (!localStorage.getItem(key))
+          localStorage.setItem(key, JSON.stringify(data));
+      },
+      { key: STORAGE_KEY, data },
+    );
+    await page.goto(route);
+    const selected = page.getByRole("radio", { name: current, exact: true });
+    await expect(selected).toBeChecked();
+    await expect(
+      page.locator(".sample-task-answer [role=status]"),
+    ).toContainText(q.misconceptions![current]);
+    await page.reload();
+    await expect(selected).toBeChecked();
+    const stored = await page.evaluate(
+      ({ key, id }) => {
+        const w = JSON.parse(localStorage.getItem(key)!).work[
+          "interpreting-cell-voltages"
+        ];
+        return { draft: w.drafts[id], attempts: w.attempts[id] };
+      },
+      { key: STORAGE_KEY, id },
+    );
+    expect(stored).toEqual({ draft: raw, attempts: [original] });
+    if (id === "cv-v1-p-missing")
+      await capture(
+        page,
+        info.outputPath(`${info.project.name}-legacy-missing.png`),
+      );
+  });
