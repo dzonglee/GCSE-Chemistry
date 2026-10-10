@@ -8945,3 +8945,35 @@ body:has(.sample-lesson) .topic-number {
     margin-top: 0;
   }
 }
+
+/* Keep one accessible task chooser after the learner's active response. */
+.sample-task-jump {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--control-border);
+  min-width: 0;
+}
+.sample-task-jump .practice-task-picker {
+  margin: 0;
+  max-width: 100%;
+}
+.sample-task-jump-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sample-task-jump-buttons button {
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1.5px solid var(--control-border);
+  border-radius: 10px;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 750;
+}
+.sample-task-jump-buttons button[aria-current] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: white;
+}

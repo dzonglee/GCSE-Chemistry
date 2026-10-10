@@ -97,9 +97,7 @@ export function DetailedLesson({
   const [message, setMessage] = useState("");
   const heading = useRef<HTMLHeadingElement>(null),
     lastTask = useRef(""),
-    stages = useRef<HTMLElement>(null),
-    taskNavigation = useRef<HTMLDivElement>(null),
-    mobileTaskNavigation = useRef<HTMLDivElement>(null);
+    stages = useRef<HTMLElement>(null);
   const taskKey = `${section}:${q.id}`;
   useEffect(() => {
     if (ready && (section === "explore" || section === "practice"))
@@ -119,36 +117,6 @@ export function DetailedLesson({
     if (tab.left < frame.left) nav.scrollLeft += tab.left - frame.left;
     else if (tab.right > frame.right) nav.scrollLeft += tab.right - frame.right;
   }, [ready, section, stage]);
-  useEffect(() => {
-    if (!ready) return;
-    const navs = [taskNavigation.current, mobileTaskNavigation.current].filter(
-      (nav): nav is HTMLDivElement => nav !== null,
-    );
-    if (!navs.length) return;
-    let cancelled = false;
-    const reveal = () => {
-      if (cancelled) return;
-      for (const nav of navs) {
-        if (!nav.getClientRects().length) continue;
-        const active = nav.querySelector<HTMLElement>('[aria-current="step"]');
-        if (!active) continue;
-        const frame = nav.getBoundingClientRect(),
-          tab = active.getBoundingClientRect();
-        if (tab.left < frame.left)
-          nav.scrollLeft += Math.floor(tab.left - frame.left);
-        else if (tab.right > frame.right)
-          nav.scrollLeft += Math.ceil(tab.right - frame.right);
-      }
-    };
-    const observer = new ResizeObserver(reveal);
-    for (const nav of navs) observer.observe(nav);
-    void document.fonts.ready.then(reveal);
-    reveal();
-    return () => {
-      cancelled = true;
-      observer.disconnect();
-    };
-  }, [ready, lesson.slug, q.id, q.rubric, section, stage]);
   const choose = (next: LearningStage | "check" | "review", position = 0) => {
     setMessage("");
     setWork(lesson.slug, (w) =>
@@ -710,34 +678,6 @@ export function DetailedLesson({
                   : "Task"}{" "}
               {index + 1} of {list.length}
             </span>
-            {stage === "practice" && journey.practiceGroups ? (
-              lesson.slug !== "life-cycle-and-recycling" &&
-              !organicLesson &&
-              !q.id.startsWith("alc-write-v1-") &&
-              !q.id.startsWith("early-atmosphere-v1-minor-") &&
-              !compactRecallTask &&
-              !q.polyesterDrawing &&
-              practicePicker
-            ) : !compactRecallTask &&
-              lesson.slug !== "materials-and-corrosion" ? (
-              <div
-                ref={taskNavigation}
-                className="question-navigation"
-                aria-label="Learning task navigation"
-              >
-                {list.map((task, i) => (
-                  <button
-                    key={task.id}
-                    aria-label={`Task ${i + 1}`}
-                    aria-current={index === i ? "step" : undefined}
-                    className={index === i ? "current" : ""}
-                    onClick={() => choose(stage, i)}
-                  >
-                    Task {i + 1}
-                  </button>
-                ))}
-              </div>
-            ) : null}
           </div>
           <h2 ref={heading} tabIndex={-1}>
             {q.title ?? q.prompt}
@@ -927,7 +867,6 @@ export function DetailedLesson({
                   ? "Try your own answer first. Use support if you need it."
                   : "Try a step, explain what changed, then check your answer."}
               </p>
-              {q.polyesterDrawing && !organicLesson && practicePicker}
               <div className="sample-task-actions">
                 {!q.openingHint && (
                   <button
@@ -993,60 +932,28 @@ export function DetailedLesson({
               </div>
             </div>
           </div>
-          {(lesson.slug === "life-cycle-and-recycling" ||
-            organicLesson ||
-            q.id.startsWith("alc-write-v1-") ||
-            q.id.startsWith("early-atmosphere-v1-minor-") ||
-            compactRecallTask) &&
-            practicePicker}
-          {(!(stage === "practice" && journey.practiceGroups) ||
-            lesson.slug === "balancing-equations" ||
-            lesson.slug === "transition-metals" ||
-            lesson.slug === "atomic-models" ||
-            [
-              "periodic-development",
-              "group-reactions",
-              "group-seven",
-              "group-zero",
-              "periodic-patterns",
-              "ionic-bonding",
-              "ionic-structures",
-              "states-of-matter",
-              "covalent-bonding",
-              "small-molecules-properties",
-              "structure-and-properties",
-              "carbon-structures",
-              "graphite",
-              "graphene",
-              "fullerenes",
-              "carbon-nanotubes",
-              "polymer-structures",
-              "particles-and-nanoparticles",
-              "conservation-of-mass",
-              "measurement-uncertainty",
-              "changing-concentration",
-              "metal-reactivity",
-              "acids-and-neutralisation",
-              "electrolysis",
-            ].includes(lesson.slug)) && (
-            <div
-              ref={mobileTaskNavigation}
-              className="sample-mobile-tasks question-navigation"
-              aria-label="Learning task navigation"
-            >
-              {list.map((task, i) => (
-                <button
-                  key={task.id}
-                  aria-label={`Task ${i + 1}`}
-                  aria-current={index === i ? "step" : undefined}
-                  className={index === i ? "current" : ""}
-                  onClick={() => choose(stage, i)}
-                >
-                  Task {i + 1}
-                </button>
-              ))}
-            </div>
-          )}
+          <div
+            className="sample-task-jump"
+            aria-label="Learning task navigation"
+          >
+            {stage === "practice" && journey.practiceGroups ? (
+              practicePicker
+            ) : (
+              <div className="sample-task-jump-buttons">
+                {list.map((task, i) => (
+                  <button
+                    key={task.id}
+                    aria-label={`Task ${i + 1}`}
+                    aria-current={index === i ? "step" : undefined}
+                    className={index === i ? "current" : ""}
+                    onClick={() => choose(stage, i)}
+                  >
+                    Task {i + 1}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
           <details className="sample-explanation">
             <summary>Why does this work?</summary>
             <p>{lesson.concept}</p>

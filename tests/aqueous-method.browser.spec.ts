@@ -79,14 +79,12 @@ test("all explanation practice retains wrong writing and manual criteria", async
       if (width > 600)
         await expect
           .poll(() =>
-            page
-              .locator(".sample-task-topline .question-navigation")
-              .evaluate((nav) => {
-                const active = nav.querySelector('[aria-current="step"]')!;
-                const frame = nav.getBoundingClientRect(),
-                  tab = active.getBoundingClientRect();
-                return tab.left >= frame.left && tab.right <= frame.right;
-              }),
+            page.locator(".sample-task-jump-buttons").evaluate((nav) => {
+              const active = nav.querySelector('[aria-current="step"]')!;
+              const frame = nav.getBoundingClientRect(),
+                tab = active.getBoundingClientRect();
+              return tab.left >= frame.left && tab.right <= frame.right;
+            }),
           )
           .toBe(true);
       const input = page.getByLabel("Your explanation", { exact: true }),
@@ -98,14 +96,12 @@ test("all explanation practice retains wrong writing and manual criteria", async
       if (width > 600)
         await expect
           .poll(() =>
-            page
-              .locator(".sample-task-topline .question-navigation")
-              .evaluate((nav) => {
-                const active = nav.querySelector('[aria-current="step"]')!;
-                const frame = nav.getBoundingClientRect(),
-                  tab = active.getBoundingClientRect();
-                return tab.left >= frame.left && tab.right <= frame.right;
-              }),
+            page.locator(".sample-task-jump-buttons").evaluate((nav) => {
+              const active = nav.querySelector('[aria-current="step"]')!;
+              const frame = nav.getBoundingClientRect(),
+                tab = active.getBoundingClientRect();
+              return tab.left >= frame.left && tab.right <= frame.right;
+            }),
           )
           .toBe(true);
       await page.locator(".sample-check-answer").click();

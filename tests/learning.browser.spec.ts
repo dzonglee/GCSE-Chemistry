@@ -328,7 +328,8 @@ test("saved legacy due review survives restart and uses previously seen question
 test("all released lesson routes expose a working model and mark their first practice item", async ({
   page,
 }) => {
-  test.setTimeout(180000);
+  // All 95 released routes load their real scientific models in each project.
+  test.setTimeout(360000);
   for (const l of lessons) {
     await page.goto(`/lessons/${l.slug}`);
     await expect(

@@ -7,11 +7,13 @@ async function visibleCurrent(page: Page, index: number) {
   await page.evaluate(() => document.fonts.ready);
   await expect
     .poll(() =>
-      page.locator(".question-navigation").evaluateAll((navs, index) => {
+      page.locator(".sample-task-jump").evaluateAll((navs, index) => {
         const visible = navs.filter((nav) => nav.getClientRects().length > 0);
         return (
           visible.length > 0 &&
           visible.every((nav) => {
+            const picker = nav.querySelector<HTMLSelectElement>("select");
+            if (picker) return picker.value === String(index);
             const button = nav.querySelector<HTMLElement>(
               '[aria-current="step"]',
             );
