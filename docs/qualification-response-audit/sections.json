@@ -2354,11 +2354,22 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Li crimson, Na yellow, K lilac, Ca orange-red, Cu green; mixture masking; identify results; unspecified colours excluded. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read all35 ion-test practice and34 reserved responses plus all five literal native flame records. Li crimson, Na yellow, K lilac, Ca orange-red and Cu green are distinguished from hydroxide precipitate colours. Clean-wire method and separate cation/anion planning are written; sodium masking leaves other ions unresolved. RP7 tests supported single-compound identification without a mixture purity claim.",
+    "responseEvidenceIds": [
+      "ion-tests-v1-g-flame",
+      "ion-tests-v1-p-li",
+      "ion-tests-v1-p-ca",
+      "ion-tests-v1-p-cu-flame",
+      "ion-tests-v1-p-plan",
+      "ion-tests-v1-cA-plan",
+      "ion-tests-v1-vA-limit"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.3.2",
@@ -2367,11 +2378,23 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "NaOH: Al/Ca/Mg white, only Al dissolves excess; Cu blue/FeII green/FeIII brown; balanced insoluble-hydroxide equations BOTH tiers, sodium-aluminate equations excluded. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read all ion practice/reserved responses. Six hydroxide results and only aluminium dissolving in excess among Al/Ca/Mg are tested; Ca/Mg remain unresolved without further evidence. Full molecular precipitation equations are written from blank, with state symbols and atom conservation; coefficients alone are not the sole response. Initial aluminium precipitation is distinguished from excess dissolution; sodium-aluminate equations are not required. Slight calcium hydroxide solubility is respected through supplied precipitation conditions.",
+    "responseEvidenceIds": [
+      "ion-tests-v1-p-fe2",
+      "ion-tests-v1-p-al",
+      "ion-tests-v1-p-camg",
+      "ion-tests-v1-p-molecular",
+      "ion-tests-v1-write-p-calcium",
+      "ion-tests-v1-write-cC-ironIII",
+      "ion-tests-v1-write-cD-copper",
+      "ion-tests-v1-write-vD-aluminium"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.3.3",
@@ -2380,11 +2403,21 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Carbonate dilute acid releases CO2, limewater identification. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read ion practice/reserved responses. Dilute-acid carbonate reaction requires evolved-gas confirmation with limewater; bubbles alone do not uniquely identify carbonate. Native sodium-carbonate combined-ion evidence, cold acid/gas identification and delayed gas evidence are distinct responses within RP7.",
+    "responseEvidenceIds": [
+      "ion-tests-v1-p-co3",
+      "ion-tests-v1-p-bubbles",
+      "ion-tests-v1-p-na2co3",
+      "ion-tests-v1-cA-carbonate",
+      "ion-tests-v1-cB-gas",
+      "ion-tests-v1-vB-gas"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.3.4",
@@ -2393,11 +2426,23 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Dilute nitric acid/silver nitrate; Cl white/Br cream/I yellow. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read ion practice/reserved responses. Dilute nitric acid then silver nitrate, chloride white/bromide cream/iodide yellow solids; yellow flame is a different observation. Written test plans link reagent order, fresh dissolved sample, results and ion conclusions. HCl contamination and reuse after barium chloride are evaluated; repeating on the same contaminated portion does not repair identification.",
+    "responseEvidenceIds": [
+      "ion-tests-v1-p-cl",
+      "ion-tests-v1-p-br",
+      "ion-tests-v1-p-i",
+      "ion-tests-v1-p-plan",
+      "ion-tests-v1-cA-plan",
+      "ion-tests-v1-cB-halide",
+      "ion-tests-v1-cB-portions",
+      "ion-tests-v1-vB-method"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.3.5",
@@ -2406,11 +2451,22 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Dilute HCl/barium chloride white sulfate; RP7 unknown single ionic compounds across five ion-test clauses. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read ion practice/reserved responses. Dilute hydrochloric acid then barium chloride gives white sulfate precipitate; sulfuric-acid contamination is explicitly rejected. Independent written separate-portion Cu(II)/sulfate test plan and supplied paired single-compound evidence support RP7, without treating white solid alone as a unique identity.",
+    "responseEvidenceIds": [
+      "ion-tests-v1-p-so4",
+      "ion-tests-v1-p-h2so4",
+      "ion-tests-v1-p-k2so4",
+      "ion-tests-v1-p-cuso4",
+      "ion-tests-v1-cA-sulfate",
+      "ion-tests-v1-cB-acid",
+      "ion-tests-v1-cB-plan"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.3.6",
@@ -2419,11 +2475,22 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Instrumental identification accurate/sensitive/rapid; advantages compared to specified chemical tests. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read all24 instrumental practice and24 reserved responses against actual4.8.3.6–7. Written state-one advantage accepts one concise accurate/sensitive/rapid or supported concentration/small-sample advantage. Supplied timing, detection limits and accepted-value comparisons keep rapid, sensitive, accurate and precise distinct; no instrument infallibility or guaranteed purity is asserted.",
+    "responseEvidenceIds": [
+      "instrumental-analysis-v1-p-sensitive",
+      "instrumental-analysis-v1-p-accuracy",
+      "instrumental-analysis-v1-p-rapid",
+      "instrumental-analysis-v1-p-repeat",
+      "instrumental-analysis-v1-p-oneadv",
+      "instrumental-analysis-v1-cA-advantage",
+      "instrumental-analysis-v1-vB-rapid"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.8.3.7",
@@ -2432,11 +2499,24 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Flame light through spectroscope line spectrum; identify metal ions and concentrations from supplied reference charts/tables. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read all instrumental practice/reserved responses. Solution/flame/emitted-light/spectroscope/line-output sequence, supplied chart and table reference-pattern matching, shared partial lines, overlapping two-ion patterns and same-ion matched-condition calibration concentrations are tested. Identity is separated from intensity/concentration; nonzero backgrounds, changed settings and outside-range evidence are evaluated. Original positions are schematic, not invented real wavelengths; chart/table results use supplied same-form reference sets.",
+    "responseEvidenceIds": [
+      "instrumental-analysis-v1-p-method",
+      "instrumental-analysis-v1-p-cu",
+      "instrumental-analysis-v1-p-shared",
+      "instrumental-analysis-v1-p-cal25",
+      "instrumental-analysis-v1-p-concentration-plan",
+      "instrumental-analysis-v1-cB-output",
+      "instrumental-analysis-v1-cB-ca-cu",
+      "instrumental-analysis-v1-cB-measurement",
+      "instrumental-analysis-v1-vB-cal"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.9.1.1",
