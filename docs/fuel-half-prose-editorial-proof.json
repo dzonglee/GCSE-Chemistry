@@ -1,0 +1,103 @@
+{
+  "source": "src/content/journeys/fuel-half.ts",
+  "beforeSha256": "003fb19935848bfd3d2551b6b935ddb583ec6774452c47e61a3ea3ebcaac68ba",
+  "afterSha256": "3c5f23c83a57f21e595eca4906c10b407c2f5cb0cf62e00c666bb3acd77d3b1b",
+  "nonSpaceBytesUnchanged": true,
+  "explicitEdits": [
+    {
+      "before": "reaction is2H\u2082",
+      "after": "reaction is 2H\u2082",
+      "occurrences": 1
+    },
+    {
+      "before": "contributes+1",
+      "after": "contributes +1",
+      "occurrences": 1
+    },
+    {
+      "before": "give+2",
+      "after": "give +2",
+      "occurrences": 2
+    },
+    {
+      "before": "give\u22124",
+      "after": "give \u22124",
+      "occurrences": 1
+    },
+    {
+      "before": "in2H\u2082O",
+      "after": "in 2H\u2082O",
+      "occurrences": 1
+    },
+    {
+      "before": "Does2H\u207a",
+      "after": "Does 2H\u207a",
+      "occurrences": 1
+    },
+    {
+      "before": "leaving2H\u2082",
+      "after": "leaving 2H\u2082",
+      "occurrences": 2
+    },
+    {
+      "before": "not0",
+      "after": "not 0",
+      "occurrences": 1
+    },
+    {
+      "before": "charge is0",
+      "after": "charge is 0",
+      "occurrences": 1
+    },
+    {
+      "before": "Charge0",
+      "after": "Charge 0",
+      "occurrences": 1
+    },
+    {
+      "before": "matches0",
+      "after": "matches 0",
+      "occurrences": 1
+    },
+    {
+      "before": "atoms:8",
+      "after": "atoms: 8",
+      "occurrences": 1
+    },
+    {
+      "before": "contributes0",
+      "after": "contributes 0",
+      "occurrences": 1
+    },
+    {
+      "before": "contribute\u22122",
+      "after": "contribute \u22122",
+      "occurrences": 2
+    },
+    {
+      "before": "Combine2H\u2082",
+      "after": "Combine 2H\u2082",
+      "occurrences": 1
+    },
+    {
+      "before": "with2O\u2082",
+      "after": "with 2O\u2082",
+      "occurrences": 1
+    },
+    {
+      "before": "Combine3H\u2082",
+      "after": "Combine 3H\u2082",
+      "occurrences": 1
+    },
+    {
+      "before": "contribute+2",
+      "after": "contribute +2",
+      "occurrences": 1
+    },
+    {
+      "before": "total is0",
+      "after": "total is 0",
+      "occurrences": 1
+    }
+  ]
+}

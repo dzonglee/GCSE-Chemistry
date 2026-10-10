@@ -99,7 +99,7 @@ export const fuelHalfJourney: LessonJourney = {
   introduction:
     "Construct the two acidic fuel-cell half equations, match their electrons and recover the overall water reaction.",
   scopeNote:
-    "Higher/separate Chemistry working AQA 8462 4.5.2.2: write the electrode half equations for a hydrogen fuel cell. Actual AQA specimen Higher Paper 1 Q06.5 and paired mark scheme were read and visually inspected. Its acidic equations are H₂→2H⁺+2e⁻ and O₂+4H⁺+4e⁻→2H₂O. This lesson declares an acidic proton-conducting account; it does not mix H⁺ and OH⁻ equations or claim that every fuel cell has this electrolyte. In the supplied discharging fuel cell, hydrogen oxidation occurs at the negative anode and oxygen reduction at the positive cathode. Anode means oxidation and cathode means reduction; electrolysis electrode signs are a different context. Electrons move through the external wire from hydrogen to oxygen; H⁺ carries charge through the electrolyte in this supplied account. Conventional-current direction is an optional extension, opposite to electron flow in the wire, not actual protons travelling through the metal. Each electron contributes −1 charge and no H/O atoms. Balance every element and total charge separately, with fixed species and the required direction. To combine half equations, multiply all terms on both sides until electron counts match; cancel equal identical H⁺ and e⁻ amounts on opposite sides. The overall reaction is2H₂+O₂→2H₂O and has no net H⁺ or electrons. Cancellation describes the net accounting, not destruction of atoms or charges. Constructed cases specify a reactant count and retained combined scale; typed tasks explicitly ask for smallest positive whole-number coefficients. The reused strict parser accepts reordered terms, charged ASCII/Unicode notation, appropriate optional states and declared positive whole-number bounds; no automatic partial examiner marks are claimed. Optional states use H₂(g), O₂(g) and H⁺(aq). Fuel-cell water can leave as liquid or vapour depending on output conditions: H₂O(l) and H₂O(g) are accepted here, and states are not required. Electron state labels are inappropriate. Macroscopic 3D layers and route arrows are schematic, not atoms moving at measured speed or voltage computed from geometry. OpenStax Chemistry 2e Fuel Cells supplies the acidic electrode/transport account; its illustrative voltage, efficiency and historical market comments are not imported as compulsory GCSE facts. Pearson 5.25C–5.27C does not make these half equations compulsory; full board mapping remains unfinished. Written responses remain self-reviewed. Repeated/model-assisted reasoning has conservative direct global exposure; independent checks defer feedback and delayed review waits seven days. This app does not certify laboratory technique or whole-course exam readiness.",
+    "Higher/separate Chemistry working AQA 8462 4.5.2.2: write the electrode half equations for a hydrogen fuel cell. Actual AQA specimen Higher Paper 1 Q06.5 and paired mark scheme were read and visually inspected. Its acidic equations are H₂→2H⁺+2e⁻ and O₂+4H⁺+4e⁻→2H₂O. This lesson declares an acidic proton-conducting account; it does not mix H⁺ and OH⁻ equations or claim that every fuel cell has this electrolyte. In the supplied discharging fuel cell, hydrogen oxidation occurs at the negative anode and oxygen reduction at the positive cathode. Anode means oxidation and cathode means reduction; electrolysis electrode signs are a different context. Electrons move through the external wire from hydrogen to oxygen; H⁺ carries charge through the electrolyte in this supplied account. Conventional-current direction is an optional extension, opposite to electron flow in the wire, not actual protons travelling through the metal. Each electron contributes −1 charge and no H/O atoms. Balance every element and total charge separately, with fixed species and the required direction. To combine half equations, multiply all terms on both sides until electron counts match; cancel equal identical H⁺ and e⁻ amounts on opposite sides. The overall reaction is 2H₂+O₂→2H₂O and has no net H⁺ or electrons. Cancellation describes the net accounting, not destruction of atoms or charges. Constructed cases specify a reactant count and retained combined scale; typed tasks explicitly ask for smallest positive whole-number coefficients. The reused strict parser accepts reordered terms, charged ASCII/Unicode notation, appropriate optional states and declared positive whole-number bounds; no automatic partial examiner marks are claimed. Optional states use H₂(g), O₂(g) and H⁺(aq). Fuel-cell water can leave as liquid or vapour depending on output conditions: H₂O(l) and H₂O(g) are accepted here, and states are not required. Electron state labels are inappropriate. Macroscopic 3D layers and route arrows are schematic, not atoms moving at measured speed or voltage computed from geometry. OpenStax Chemistry 2e Fuel Cells supplies the acidic electrode/transport account; its illustrative voltage, efficiency and historical market comments are not imported as compulsory GCSE facts. Pearson 5.25C–5.27C does not make these half equations compulsory; full board mapping remains unfinished. Written responses remain self-reviewed. Repeated/model-assisted reasoning has conservative direct global exposure; independent checks defer feedback and delayed review waits seven days. This app does not certify laboratory technique or whole-course exam readiness.",
   outcomes: [
     "Balance H/O counts and total charge in the stated half equations.",
     "Identify hydrogen oxidation and oxygen reduction under declared acidic conditions.",
@@ -114,7 +114,7 @@ export const fuelHalfJourney: LessonJourney = {
       "What total charge do two H⁺ ions contribute?",
       2,
       "relative charge",
-      "Each H⁺ contributes+1, so two give+2.",
+      "Each H⁺ contributes +1, so two give +2.",
       "Multiply ion count by its charge.",
     ),
     n(
@@ -123,7 +123,7 @@ export const fuelHalfJourney: LessonJourney = {
       "What total charge do four electrons contribute?",
       -4,
       "relative charge",
-      "Each electron contributes −1; four give−4.",
+      "Each electron contributes −1; four give −4.",
       "Retain the negative sign.",
     ),
   ],
@@ -162,7 +162,7 @@ export const fuelHalfJourney: LessonJourney = {
     n(
       "r-water",
       "Count oxygen in water",
-      "How many oxygen atoms are in2H₂O?",
+      "How many oxygen atoms are in 2H₂O?",
       2,
       "atoms",
       "Each water formula contains one O atom.",
@@ -212,7 +212,7 @@ export const fuelHalfJourney: LessonJourney = {
     c(
       "r-process",
       "Keep the required direction",
-      "The hydrogen fuel electrode must oxidise H₂. Does2H⁺+2e⁻→H₂ describe that process?",
+      "The hydrogen fuel electrode must oxidise H₂. Does 2H⁺+2e⁻→H₂ describe that process?",
       "No; it describes reduction",
       {
         "Yes; balanced always means correct for the electrode":
@@ -270,7 +270,7 @@ export const fuelHalfJourney: LessonJourney = {
       "Combine the primitive acidic half equations using the smallest multipliers. How many electrons cancel on each side?",
       4,
       "electrons",
-      "Double H₂→2H⁺+2e⁻ so both halves transfer four electrons. Four H⁺ also cancel, leaving2H₂+O₂→2H₂O.",
+      "Double H₂→2H⁺+2e⁻ so both halves transfer four electrons. Four H⁺ also cancel, leaving 2H₂+O₂→2H₂O.",
       "Match electron counts before cancelling.",
       m(
         "combine",
@@ -384,10 +384,10 @@ export const fuelHalfJourney: LessonJourney = {
       "What is wrong with O₂+4H⁺+2e⁻→2H₂O?",
       "Atoms balance, but charge does not",
       {
-        "Both atoms and charge balance": "The left charge is +2, not0.",
+        "Both atoms and charge balance": "The left charge is +2, not 0.",
         "Only oxygen atoms fail": "Both sides contain 2 O and 4 H.",
       },
-      "Its left charge is +4−2=+2; right charge is0. H/O atom counts do match.",
+      "Its left charge is +4−2=+2; right charge is 0. H/O atom counts do match.",
       "Perform both checks separately.",
       m(
         "diagnose",
@@ -405,7 +405,7 @@ export const fuelHalfJourney: LessonJourney = {
           "Two H atoms on the left become only one on the right.",
         "Only charge fails": "+1−1=0 matches neutral H₂.",
       },
-      "Charge0 matches0, but H counts 2 and 1 do not.",
+      "Charge 0 matches 0, but H counts 2 and 1 do not.",
       "Check the fixed formulas' atoms as well as charge.",
       m(
         "diagnose",
@@ -433,7 +433,7 @@ export const fuelHalfJourney: LessonJourney = {
       "In the proposed O₂+4H⁺+4e⁻→4H₂O, how many H atoms occur on the right?",
       8,
       "H atoms",
-      "Four water formulas each contain two H atoms:8, compared with 4 on the left.",
+      "Four water formulas each contain two H atoms: 8, compared with 4 on the left.",
       "Multiply the whole water formula by its coefficient.",
       m(
         "diagnose",
@@ -447,7 +447,7 @@ export const fuelHalfJourney: LessonJourney = {
       "In H₂+2e⁻→2H⁺, what is the left-hand total charge?",
       -2,
       "relative charge",
-      "Neutral H₂ contributes0 and two electrons contribute−2. Right charge is +2.",
+      "Neutral H₂ contributes 0 and two electrons contribute −2. Right charge is +2.",
       "Include the electron sign.",
       m(
         "diagnose",
@@ -458,7 +458,7 @@ export const fuelHalfJourney: LessonJourney = {
     n(
       "p-matched",
       "Recognise already matching halves",
-      "Combine2H₂→4H⁺+4e⁻ and O₂+4H⁺+4e⁻→2H₂O using smallest multipliers. What multiplier is needed for the hydrogen half?",
+      "Combine 2H₂→4H⁺+4e⁻ and O₂+4H⁺+4e⁻→2H₂O using smallest multipliers. What multiplier is needed for the hydrogen half?",
       1,
       "",
       "Both supplied halves already transfer four electrons; no additional scaling is needed.",
@@ -472,7 +472,7 @@ export const fuelHalfJourney: LessonJourney = {
     n(
       "p-o-combine",
       "Match a doubled oxygen half",
-      "Combine H₂→2H⁺+2e⁻ with2O₂+8H⁺+8e⁻→4H₂O. What is the smallest multiplier for the hydrogen half?",
+      "Combine H₂→2H⁺+2e⁻ with 2O₂+8H⁺+8e⁻→4H₂O. What is the smallest multiplier for the hydrogen half?",
       4,
       "",
       "2×4=8 electrons matches the supplied oxygen half. Net retained scale is 4H₂+2O₂→4H₂O.",
@@ -486,7 +486,7 @@ export const fuelHalfJourney: LessonJourney = {
     n(
       "p-unequal",
       "Find a common electron count",
-      "Combine3H₂→6H⁺+6e⁻ and O₂+4H⁺+4e⁻→2H₂O using smallest multipliers. How many electrons cancel on each side?",
+      "Combine 3H₂→6H⁺+6e⁻ and O₂+4H⁺+4e⁻→2H₂O using smallest multipliers. How many electrons cancel on each side?",
       12,
       "electrons",
       "Smallest common count of 6 and 4 is 12: multiply the hydrogen half by 2 and oxygen half by 3.",
@@ -612,7 +612,7 @@ export const fuelHalfJourney: LessonJourney = {
       "p-explain-charge",
       "Explain hydrogen's electrons",
       "Explain why one H₂ forming two H⁺ needs two electrons on the product side in the stated acidic half equation.",
-      "Two H atoms in H₂ become two H⁺, conserving H nuclei. Neutral H₂ has charge 0; two H⁺ contribute+2. Two product electrons contribute−2, so the product total is0. Electron loss is oxidation.",
+      "Two H atoms in H₂ become two H⁺, conserving H nuclei. Neutral H₂ has charge 0; two H⁺ contribute +2. Two product electrons contribute −2, so the product total is 0. Electron loss is oxidation.",
       [
         "Conserve the two H atoms.",
         "Compare 0 with +2−2 and identify product electrons.",
@@ -623,7 +623,7 @@ export const fuelHalfJourney: LessonJourney = {
       "p-derive",
       "Explain combination and cancellation",
       "Use the primitive acidic half equations to explain how the overall 2H₂+O₂→2H₂O is obtained.",
-      "Double the whole hydrogen half to 2H₂→4H⁺+4e⁻. Add O₂+4H⁺+4e⁻→2H₂O. Equal 4H⁺ and 4e⁻ occur on opposite sides and cancel, leaving2H₂+O₂→2H₂O. Cancellation is net accounting, not destruction of atoms or charge.",
+      "Double the whole hydrogen half to 2H₂→4H⁺+4e⁻. Add O₂+4H⁺+4e⁻→2H₂O. Equal 4H⁺ and 4e⁻ occur on opposite sides and cancel, leaving 2H₂+O₂→2H₂O. Cancellation is net accounting, not destruction of atoms or charge.",
       [
         "Scale all terms to match four electrons.",
         "Add and cancel equal identical H⁺/e⁻ terms.",
@@ -668,7 +668,7 @@ export const fuelHalfJourney: LessonJourney = {
         "For the proposed H₂+2e⁻→2H⁺, what is the right-hand total charge?",
         2,
         "relative charge",
-        "Two H⁺ give+2 on the right; electrons in this proposal are on the left.",
+        "Two H⁺ give +2 on the right; electrons in this proposal are on the left.",
         "Count only the right-hand terms.",
       ),
       c(

@@ -166,7 +166,7 @@ test("reserved checks defer marking, retain drafts and separate actual seven-day
 
 test("all original practice works while three written explanations remain self-reviewed", async ({
   page,
-}) => {
+}, info) => {
   await page.goto(route);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   for (let i = 0; i < journey.practice.length; i++) {
@@ -198,6 +198,14 @@ test("all original practice works while three written explanations remain self-r
       await expect(
         page.locator(".sample-task-answer [role=status]"),
       ).toContainText("That’s right.");
+    if (["fh-v1-p-explain-charge", "fh-v1-p-derive"].includes(q.id)) {
+      await page
+        .getByLabel("Your explanation", { exact: true })
+        .evaluate((element) => {
+          (element as HTMLTextAreaElement).scrollTop = 0;
+        });
+      await capture(page, info.outputPath(`${info.project.name}-${q.id}.png`));
+    }
   }
 });
 async function learn(page: Page, n: number) {
