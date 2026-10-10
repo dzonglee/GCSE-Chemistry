@@ -1633,11 +1633,22 @@
     "trilogyCandidate": "5.6.1.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Recall concentration/pressure/surface/temperature/catalyst rate effects; RP5gasvolume ANDcolour/turbidity withhypothesis=TrilogyRP11. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "ct-v1-p-fair-test",
+      "tc-v1-p-controls",
+      "rp-v1-p-plan-written",
+      "rp-v1-p-endpoint-written",
+      "rp-v1-p-hypothesis",
+      "rp-v1-p-dilution-written",
+      "rp-v1-ra-evidence"
+    ],
+    "responseEvidenceReview": "Personally read all collision, temperature/catalyst and rates-practical practice responses and all cold/delayed forms. Five changing factors are addressed under stated controls. RP5 gas-volume and turbidity concentration methods include supervised student-written plans, timing/repeats, dilution and optical endpoint controls. Native plan records for magnesium/marble and thiosulfate include independently chosen concentration hypotheses, not only ready-made explanations. Retain original anomalies and distinguish repeat agreement from common leak bias. SeparateRP5 maps TrilogyRP11; this is not reserved waterRP8/RP13.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.6.1.3",
@@ -1646,11 +1657,22 @@
     "trilogyCandidate": "5.6.1.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Collision frequency/energy threshold; concentration/pressure/surface collisionfrequency;temperaturefrequency+energy; solid size/area-volume and proportionality explanations. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "ct-v1-p-frequency-explain",
+      "ct-v1-p-compression-energy",
+      "ct-v1-p-volume-explain",
+      "ct-v1-p-area-volume",
+      "ct-v1-check-a-explain",
+      "tc-v1-p-heat-written",
+      "tc-v1-b5"
+    ],
+    "responseEvidenceReview": "Personally read all32 collision practice tasks and16 cold/delayed responses, all32 thermal/catalyst practice tasks and16 cold/delayed responses. Contact and sufficient energy, concentration/pressure density versus fixed-temperature energy, accessible cube area/volume, heating collision frequency and energetic fraction are generated or independently explained. Recomputed cube totals96/192/384 and cold648/162, preserving material volume. Proportionality tasks use supplied measured evidence without inventing universal exact rate multipliers. Molecular orientation is explicitly limited to the stated molecular model, not required for all atomic encounters.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.6.1.4",
@@ -1659,11 +1681,22 @@
     "trilogyCandidate": "5.6.1.4",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Not consumed, reaction-specific and enzyme catalysts; alternative lowerEA pathway/profile, identify catalyst omitted fromnetequation; no unspecified catalyst-name recall. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "tc-v1-p-not-inert",
+      "tc-v1-p-catalyst-written",
+      "tc-v1-p-enzyme",
+      "tc-v1-p-evidence-written",
+      "tc-v1-p-draw-profile",
+      "tc-v1-a3",
+      "tc-v1-ra3"
+    ],
+    "responseEvidenceReview": "Personally read all generated thermal/catalyst practice and cold/delayed responses. Overall peroxide equation with X over the arrow, rate/regeneration evidence, biological enzymes and alternative lower-activation-energy pathway are explicit. Actual native thermal profile source draws original and student-proposed catalysed paths with fixed endpoints; independent profiles construct own levels/arrows. Fixed-temperature catalysis changes neither average particle energy nor overall reaction energy. Unchanged recovered mass alone does not establish catalyst identity or rate effect; no extra catalyst-name memorisation is imposed.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.6.2.1",
@@ -1672,11 +1705,19 @@
     "trilogyCandidate": "5.6.2.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Products return to original reactants; reversible arrow and conditions change direction. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "re-v1-g-direction",
+      "re-v1-p-hydrate",
+      "re-v1-p-conditions",
+      "re-v1-b-direction"
+    ],
+    "responseEvidenceReview": "Personally read all32 reversible practice tasks and16 cold/delayed responses; original specification page59 examples were visually inspected. Supplied ammonium chloride heating/recombination on cooling and hydrated blue copper sulfate/white anhydrous salt plus water show reversal; symbolic cold response identifies both original-product reactants. Direction changes with supplied conditions; reversible arrow does not alone prove equilibrium.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.6.2.2",
@@ -1685,11 +1726,21 @@
     "trilogyCandidate": "5.6.2.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Reverse direction opposite exo/endo, same amount energy for same reversed reaction basis. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "re-v1-p-energy-endo",
+      "re-v1-p-energy-exo",
+      "re-v1-p-energy-offset",
+      "re-v1-p-energy-written",
+      "re-v1-a-energy",
+      "re-v1-ra-energy"
+    ],
+    "responseEvidenceReview": "Personally read all practice/cold/delayed energy responses and recomputed signed/amount calculations. Reverse swaps identical chemical endpoints, same amount transfers equal energy magnitude/opposite sign; scaled batch values are explicit and activation peak cannot be inferred from overall change. Original page59 hydrated copper sulfate energy example visually inspected.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.6.2.3",
@@ -1698,11 +1749,20 @@
     "trilogyCandidate": "5.6.2.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Closed apparatus, continuing forward/reverse equal rates at equilibrium. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "re-v1-p-dynamic-written",
+      "re-v1-p-plateau-written",
+      "re-v1-a-written",
+      "re-v1-b-written",
+      "re-v1-ra-written"
+    ],
+    "responseEvidenceReview": "Personally read all practice/cold/delayed equilibrium responses. Native conserved1:1 inventory records and generated net counts distinguish equal directional rates from equal amounts. Students explain closed reacting boundary, continuing equal positive rates and no net concentration change; flat traces or externally maintained open flow alone do not establish dynamic equilibrium. Conceptual closed model is explicitly not an instruction to seal heated gas-producing apparatus.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.6.2.4",
@@ -1711,11 +1771,19 @@
     "trilogyCandidate": "5.6.2.4",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
     "actualBodyReview": "LeChatelier qualitative response to counteract conditionchanges with appropriate giveninformation. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "es-v1-p-partial-written",
+      "es-v1-p-opposed-written",
+      "es-v1-a-conflict",
+      "es-v1-ra-partial"
+    ],
+    "responseEvidenceReview": "Personally read all30 changing-equilibrium practice responses and16 cold/delayed responses against actual inherited Higher scope. Responses make qualitative counteracting predictions using supplied gaseous coefficients, energy direction and concentration changes. Immediate edits are separated from later net reactions; partial counteraction does not mean exact restoration. Opposing temperature/pressure changes without relative sizes cannot yield a unique overall direction.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.6.2.5",
@@ -1724,11 +1792,22 @@
     "trilogyCandidate": "5.6.2.5",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
     "actualBodyReview": "Changed reactant/product concentrations reach newequilibrium; supplied data predicts direction. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "es-v1-p-add-product",
+      "es-v1-p-remove-reactant",
+      "es-v1-p-add-account",
+      "es-v1-p-removal-account",
+      "es-v1-p-partial-written",
+      "es-v1-a-add",
+      "es-v1-b-removal"
+    ],
+    "responseEvidenceReview": "Personally read all changing-equilibrium practice/cold/delayed concentration responses. Added reactants/products and removal drive correct net directions at fixed temperature/volume. Given later inventories use conserved total after the actual add/remove operation, rather than fabricated equilibrium constants or undoing the edit; cold later8mmol/4mmol products independently recomputed.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.6.2.6",
@@ -1737,11 +1816,21 @@
     "trilogyCandidate": "5.6.2.6",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
     "actualBodyReview": "Heatingfavours endodirection/coolingexodirection;given data qualitativeprediction. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "es-v1-p-temperature-written",
+      "es-v1-p-yield-rate-written",
+      "es-v1-p-opposed-written",
+      "es-v1-a-temperature",
+      "es-v1-b-temperature",
+      "es-v1-rb-temperature"
+    ],
+    "responseEvidenceReview": "Personally read all changing-equilibrium practice/cold/delayed temperature responses. Heating favours the endothermic direction and cooling the exothermic, with displayed equation orientation explicit. Student writing distinguishes equilibrium yield from production speed; supplied hotter/cooler plateau data and conflicting condition changes limit the conclusion. Higher shared scope verified.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.6.2.7",
@@ -1750,11 +1839,21 @@
     "trilogyCandidate": "5.6.2.7",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
     "actualBodyReview": "Gaspressure shifts smaller/larger gasparticle counts frombalanced equation; supplied data interpretation. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "es-v1-p-phase",
+      "es-v1-p-pressure-written",
+      "es-v1-p-compression-written",
+      "es-v1-a-phase",
+      "es-v1-b-equal",
+      "es-v1-ra-pressure"
+    ],
+    "responseEvidenceReview": "Personally read all changing-equilibrium practice/cold/delayed pressure responses. Count gaseous coefficients only, including supplied solids/liquids, and use compressed/expanded fixed-temperature reacting mixtures. Equal gaseous totals yield no position shift, not no pressure change. Own explanations separate immediate volume/pressure change from later conserved chemical conversion; given post-equilibrium colour observation is not asserted as a universal immediate colour response.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.7.1.1",
