@@ -24,18 +24,18 @@ import {
 } from "../src/lib/workbench";
 import { lessons } from "../src/content/curriculum";
 import { mark } from "../src/lib/marking";
-test("one133-task separate Chemistry lesson retains eight specific activities and25 supplied cases", () => {
+test("one138-task separate Chemistry lesson retains eight specific activities and25 supplied cases", () => {
   const l = lessons.find((l) => l.slug === "materials-and-corrosion")!;
   expect(l.journey).toBe(j);
   expect(l.tier).toBe("foundation");
   expect(l.course).toBe("separate");
-  expect(all).toHaveLength(133);
-  expect(new Set(all.map((q) => q.id)).size).toBe(133);
-  expect(j.refresher).toHaveLength(38);
-  expect(j.guided).toHaveLength(11);
-  expect(j.practice).toHaveLength(38);
-  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8, 7, 2]);
-  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4, 7, 2]);
+  expect(all).toHaveLength(138);
+  expect(new Set(all.map((q) => q.id)).size).toBe(138);
+  expect(j.refresher).toHaveLength(39);
+  expect(j.guided).toHaveLength(12);
+  expect(j.practice).toHaveLength(39);
+  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8, 7, 2, 1]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4, 7, 2, 1]);
   expect(Object.keys(R)).toHaveLength(25);
   expect(j.practiceGroups!.flatMap((g) => g.taskIds)).toEqual(
     j.practice.map((q) => q.id),
@@ -280,9 +280,9 @@ test("recipes, composite roles and simultaneous constraints cannot be interchang
   expect(R.hot.expected).toEqual({ material: "a", property: "heat" });
   expect(R.cold.expected).toEqual({ material: "b", property: "impact" });
 });
-test("forty-four written responses are manual and reserved numerics are distinct from teaching", () => {
+test("forty-eight written responses are manual and reserved numerics are distinct from teaching", () => {
   const written = all.filter((q) => q.rubric);
-  expect(written).toHaveLength(44);
+  expect(written).toHaveLength(48);
   for (const q of written) {
     expect(q.referenceResponse).toBe(q.answer);
     expect(mark(q, q.answer)).toMatchObject({

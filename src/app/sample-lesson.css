@@ -8709,16 +8709,16 @@ body:has(.sample-lesson) .topic-number {
 }
 
 /* Keep this lesson's expanding task list below the actual work. */
-.assessment-session:has([data-rust-design]) .session-heading {
+.assessment-session:has([data-materials-description]) .session-heading {
   margin: 4px 0;
 }
-.assessment-session .question-panel[data-rust-design] {
+.assessment-session .question-panel[data-materials-description] {
   margin-top: 4px;
 }
-.question-panel[data-rust-design] > .eyebrow {
+.question-panel[data-materials-description] > .eyebrow {
   margin: 0 0 4px;
 }
-.question-panel[data-rust-design] .written-equation-prompt {
+.question-panel[data-materials-description] .written-equation-prompt {
   margin: 0 0 8px;
   font-size: 15px;
   line-height: 1.35;

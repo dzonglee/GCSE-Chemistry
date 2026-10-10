@@ -1,0 +1,223 @@
+{
+  "build": "s8LT93c36LzXkV-nPlPqd",
+  "images": [
+    {
+      "file": "320-composite-retained-wrong-viewport.png",
+      "width": 320,
+      "sha256": "b890a2ebd40ccc00277cccc057fd6716d1e7424180a8b4d233c53a1a58067f57",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-composite-retained-wrong-full.png",
+      "width": 320,
+      "sha256": "dd63a9466f27c8cb30648f178718de553a802d31eaf7f0942b640f23d2c584f5",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-composite-repaired-roles-viewport.png",
+      "width": 320,
+      "sha256": "07e87b7a261efe172bbac1dc7a485d2e3facc8ac1daa99dc175d08dd513ea7f4",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-composite-repaired-roles-full.png",
+      "width": 320,
+      "sha256": "e1ed82bba72228a0db0e9a1bd3cf1a15f2bcca1e30e49cb5ce670f1dcbe25556",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-g-examples-retained-viewport.png",
+      "width": 320,
+      "sha256": "9599763b57bca3302e5c38d80f389d6d3d7252dfbbe13ffa04c3600c8862b5ee",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-g-examples-retained-full.png",
+      "width": 320,
+      "sha256": "9adef0f556934738e7d697f2b97a14b3d544ec9c41a7f52c26eb66e704676823",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-p-examples-retained-viewport.png",
+      "width": 320,
+      "sha256": "55f7a51db64c51b850cf81a397af4e8ef6bf6d67b377eb2b6221861201df51a9",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-p-examples-retained-full.png",
+      "width": 320,
+      "sha256": "899249789e98447ed1272d8b798116af4bf871e32c1662434bf406a37d57bc2d",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-c-examples-retained-viewport.png",
+      "width": 320,
+      "sha256": "32b55fa1fa50af1468fb3f9fcd8e7581622b358264e27806d0915555f1c4abce",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-c-examples-retained-full.png",
+      "width": 320,
+      "sha256": "1c088d7c135704d0326eb61ca93a66d06585596cb536fa5e1a96592df2688936",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-whole-set-manual-examples-viewport.png",
+      "width": 320,
+      "sha256": "67c9fbc83f9ee6d93ab7b075cec2abc57991a8337f1a54ed03c51b6b19c06faa",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-whole-set-manual-examples-full.png",
+      "width": 320,
+      "sha256": "d447a6b8c8e3e75231b9e00e98e8c581f5719e7437aef4f4b278dba29a63d33d",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-composite-retained-wrong-viewport.png",
+      "width": 390,
+      "sha256": "6d7343402388c5c801898d31a1b96ee7159314091d99ba1ce3c9f23d1630bffb",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-composite-retained-wrong-full.png",
+      "width": 390,
+      "sha256": "a5c215c85b22dbca97d6ba81a2c594e3999e97c26db581dd4af9c719407ddd26",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-composite-repaired-roles-viewport.png",
+      "width": 390,
+      "sha256": "0267965c8050a3eabc39a32d6672ac192158699f765c82740f9d5515be9e747b",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-composite-repaired-roles-full.png",
+      "width": 390,
+      "sha256": "345d9b3ec8dccd053cb84b852b8810a6759eb2643df73467649f21336b498429",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-g-examples-retained-viewport.png",
+      "width": 390,
+      "sha256": "72ec9a46d98cfafcbe1825a1853e42a6357872a6d068206c0a9254d89a2b0512",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-g-examples-retained-full.png",
+      "width": 390,
+      "sha256": "1394411092bfa3bbfdef6feae8427365023e12e09e0177cf4cdffef91e60f7a8",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-p-examples-retained-viewport.png",
+      "width": 390,
+      "sha256": "6b8c1f17b9cb0372fe807effb8fca79e9ff2b28440ff38ab67de628e5657874c",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-p-examples-retained-full.png",
+      "width": 390,
+      "sha256": "0cce4c9d6e2afd5514a17d4f7283946bb4f31171fc634d4d9cfd536515821105",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-c-examples-retained-viewport.png",
+      "width": 390,
+      "sha256": "a0cc3495ce91a987831da3c830e3161cd7de530fa6293b2c2260d1b9b4b65bab",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-c-examples-retained-full.png",
+      "width": 390,
+      "sha256": "914188a393c6f939814a49dba733b990fb6a35a5c5c5d68569a96ebd50189254",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-whole-set-manual-examples-viewport.png",
+      "width": 390,
+      "sha256": "29d5b2a560fcbb033fa783b82af8e1a3468f60e445cf469fe6ef1f9da9163114",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-whole-set-manual-examples-full.png",
+      "width": 390,
+      "sha256": "0dc35ba213519e0739a54bf009a7d6dbbf7a3d20ea2220a065361c9dfecb5c93",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-composite-retained-wrong-viewport.png",
+      "width": 1280,
+      "sha256": "03de2de7c16b4c381b1efb6697093299f9b4feebf7b424b24192d82fdd54f701",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-composite-retained-wrong-full.png",
+      "width": 1280,
+      "sha256": "c1dbe3f64432cb0e451631be06427a247f982e4caf38a5c78f80b82628330121",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-composite-repaired-roles-viewport.png",
+      "width": 1280,
+      "sha256": "0bea23112c53b6b523ec247b32598e650c7fbe05f36b5dc8d7fb611a14ace71b",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-composite-repaired-roles-full.png",
+      "width": 1280,
+      "sha256": "1e78eaf5900ef6454d0dd7f098129dfee59ef3f5f91cd91ab207215201500453",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-g-examples-retained-viewport.png",
+      "width": 1280,
+      "sha256": "e2c6822e0f7ed800453cf6bff011ed6c3fa97790a2330ad97514d10b22c1ab4e",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-g-examples-retained-full.png",
+      "width": 1280,
+      "sha256": "4a5bd20d5bb96b11c1493c19bc668c1dcc5602b2ce4bfbdc46ded55582fc0a9f",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-p-examples-retained-viewport.png",
+      "width": 1280,
+      "sha256": "a4e056e2228ea84e3cd1ebc1738b08588ec57bdfaa495927f34a150aaf41a351",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-p-examples-retained-full.png",
+      "width": 1280,
+      "sha256": "96e4f253bb171762a56d6ab9df999a30cfc8fa1107c88b9563b14e0db8a20ff3",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-c-examples-retained-viewport.png",
+      "width": 1280,
+      "sha256": "4f7b94d7655d94c52212c9537eeb7534969bb2317e3802956ab4f12fd1836029",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-c-examples-retained-full.png",
+      "width": 1280,
+      "sha256": "974df7dfb5b117a91ffd5ef1d033ba0bede144dcc1fdddea160a56d82adac666",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-whole-set-manual-examples-viewport.png",
+      "width": 1280,
+      "sha256": "bc91070b89522f6b98bf17f7e4b59f510207c61c5f6277fbefb714e15aef2073",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-whole-set-manual-examples-full.png",
+      "width": 1280,
+      "sha256": "09e73973b4e1ec21f52d9fa0ddd27dad7ff1418eb992d3af784e9719bc694f7f",
+      "personallyInspected": true
+    }
+  ],
+  "samplesSent": true,
+  "sampleDelivery": "Five local screenshot links explicitly sent in commentary on 10 October 2026 before any subsequent lesson or paper research."
+}

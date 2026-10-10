@@ -52,8 +52,8 @@ test("one full Foundation paper has 100 allocated marks, 105 minutes and explici
         .reduce((sum, p) => sum + p.marks, 0),
     ).toBe(10);
   const native = lessons.flatMap((l) => tasks(l.journey!));
-  // Original5,824 tasks plus individually appended5air,30alloy and10rust-design tasks.
-  expect(native).toHaveLength(5869);
+  // Original5,824 tasks plus individually appended5air,30alloy,10rust-design and5composite-recall tasks.
+  expect(native).toHaveLength(5874);
   expect(new Set(paper.parts.map((p) => p.question.id)).size).toBe(50);
   expect(
     paper.parts.every((p) => !native.some((q) => q.id === p.question.id)),

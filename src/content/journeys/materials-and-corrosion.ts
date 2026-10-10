@@ -1,5 +1,12 @@
 import type { LearningTask, LessonJourney } from "../types";
 import {
+  compositeRecallRecovery,
+  compositeRecallGuided,
+  compositeRecallPractice,
+  compositeRecallCheck,
+  compositeRecallReview,
+} from "./composite-example-recall";
+import {
   rustDesignRecovery,
   rustDesignGuided,
   rustDesignPractice,
@@ -1439,6 +1446,34 @@ checkForms.push(rustDesignCheck);
 reviewForms.push(rustDesignReview);
 allMaterialsTasks.push(...rustDesignAdditions);
 
+// Generated examples append without replacing named component interpretations.
+const compositeRecallAdditions = [
+  ...compositeRecallRecovery,
+  ...compositeRecallGuided,
+  ...compositeRecallPractice,
+  ...compositeRecallCheck,
+  ...compositeRecallReview,
+];
+const originalCompositeIds = materialsExposureFamilies.composite.map(id);
+for (const task of compositeRecallAdditions) {
+  task.exposureAliases = [
+    ...originalCompositeIds,
+    ...compositeRecallAdditions
+      .filter((other) => other !== task)
+      .map((other) => other.id),
+  ];
+}
+for (const task of compositeRecallPractice) {
+  task.followUp = compositeRecallRecovery[0].id;
+  materialsRecoveryRoutes[task.id] = task.followUp;
+}
+refresher.push(...compositeRecallRecovery);
+guided.push(...compositeRecallGuided);
+practice.push(...compositeRecallPractice);
+checkForms.push(compositeRecallCheck);
+reviewForms.push(compositeRecallReview);
+allMaterialsTasks.push(...compositeRecallAdditions);
+
 export const materialsJourney: LessonJourney = {
   version: 1,
   introduction:
@@ -1452,7 +1487,7 @@ export const materialsJourney: LessonJourney = {
     "Explain pure-metal shaping and alloy hardness through layer sliding and atom sizes.",
     "Relate thermosoftening/thermosetting heating to between-chain attractions/covalent crosslinks; explain LD/HD poly(ethene) from conditions, branching and packing.",
     "Recall soda-lime/borosilicate recipes and melting comparison; order clay-ceramic manufacture.",
-    "Identify matrix/reinforcement in named composites and link component properties to uses.",
+    "Recall examples of composites, identify matrix/reinforcement and link component properties to uses.",
     "Compare material properties quantitatively, meet every stated constraint and justify choices with evidence and limitations.",
   ],
   warmup,
@@ -1485,6 +1520,10 @@ export const materialsJourney: LessonJourney = {
     {
       label: "Describe and evaluate rust experiment designs",
       taskIds: rustDesignPractice.map((q) => q.id),
+    },
+    {
+      label: "Recall composite examples without supplied names",
+      taskIds: compositeRecallPractice.map((q) => q.id),
     },
   ],
 };

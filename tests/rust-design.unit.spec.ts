@@ -30,7 +30,11 @@ test("all123 previously published Materials definitions/order and original asses
     const records = stage.endsWith("Forms")
       ? (j[stage] as typeof j.checkForms).flat()
       : (j[stage] as typeof j.practice);
-    const previous = records.filter((q) => !q.id.startsWith(prefix));
+    const previous = records.filter(
+      (q) =>
+        !q.id.startsWith(prefix) &&
+        !q.id.startsWith("materials-v1-composite-recall-"),
+    );
     const fixture = original.filter((q) => q.stage === stage);
     expect(previous.map((q) => q.id)).toEqual(fixture.map((q) => q.id));
     previous.forEach((q, index) =>
@@ -40,8 +44,8 @@ test("all123 previously published Materials definitions/order and original asses
       ).toBe(fixture[index].sha256),
     );
   }
-  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8, 7, 2]);
-  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4, 7, 2]);
+  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8, 7, 2, 1]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4, 7, 2, 1]);
 });
 
 test("planning responses preserve wrong/alternative words for manual review and expose old rust work conservatively both ways", () => {

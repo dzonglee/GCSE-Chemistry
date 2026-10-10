@@ -7075,7 +7075,11 @@ for (const ids0 of [
         ...l.checks,
         ...(l.journey ? tasks(l.journey) : []),
       ])
-      .filter((q) => !q.id.startsWith("materials-v1-rust-design-"));
+      .filter(
+        (q) =>
+          !q.id.startsWith("materials-v1-rust-design-") &&
+          !q.id.startsWith("materials-v1-composite-recall-"),
+      );
   let changed = true;
   while (changed) {
     changed = false;

@@ -567,12 +567,15 @@ export function AssessmentSession({
       {questions.length <= 20 && !navigationAfterResponse && questionNavigation}
       <form
         className="question-panel"
-        data-rust-design={
-          q.id.startsWith("materials-v1-rust-design-") || undefined
+        data-materials-description={
+          q.id.startsWith("materials-v1-rust-design-") ||
+          q.id.startsWith("materials-v1-composite-recall-") ||
+          undefined
         }
         data-materials-recall={
           q.id.startsWith("materials-v1-alloy-use-") ||
           q.id.startsWith("materials-v1-rust-design-") ||
+          q.id.startsWith("materials-v1-composite-recall-") ||
           undefined
         }
         data-atmosphere-minor={

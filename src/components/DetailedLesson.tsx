@@ -82,7 +82,8 @@ export function DetailedLesson({
   const q = list[index];
   const materialsRecallTask =
     q.id.startsWith("materials-v1-alloy-use-") ||
-    q.id.startsWith("materials-v1-rust-design-");
+    q.id.startsWith("materials-v1-rust-design-") ||
+    q.id.startsWith("materials-v1-composite-recall-");
   const answer = work.drafts[q.id] ?? "";
   const attempt = work.attempts[q.id]?.at(-1);
   const feedback = attempt?.answer === answer ? mark(q, answer) : undefined;
@@ -292,7 +293,8 @@ export function DetailedLesson({
   const materialsRecallRun = work.run?.ids.some(
     (id) =>
       id.startsWith("materials-v1-alloy-use-") ||
-      id.startsWith("materials-v1-rust-design-"),
+      id.startsWith("materials-v1-rust-design-") ||
+      id.startsWith("materials-v1-composite-recall-"),
   );
   const compactReview =
     (materialsRecallRun ||
