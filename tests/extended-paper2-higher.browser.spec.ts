@@ -492,6 +492,12 @@ test("a native polyester practice response retains its exposure when reused in t
     (q) => q.id === "pol-v1-p-polyester2",
   );
   expect(index).toBeGreaterThanOrEqual(0);
+  await page.goto("/preferences");
+  await page.getByLabel("Tier", { exact: true }).selectOption("higher");
+  await page
+    .getByLabel("Qualification", { exact: true })
+    .selectOption("separate");
+  await saved(page);
   await page.goto("/lessons/polymers");
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   await page
