@@ -216,200 +216,214 @@ for (const [mode, n] of [
   ["concentration", 4],
   ["combined", 5],
   ["evidence", 6],
-] as [ShiftMode, number][])
-  test(`${mode}: six comparisons retain scientific predictions and strict histories`, async ({
-    page,
-  }, info) => {
-    if (
-      info.project.name === "mobile" &&
-      ["temperature", "concentration", "evidence"].includes(mode)
-    ) {
-      await page.setViewportSize({ width: 320, height: 844 });
-    }
-    await learn(page, n);
-    const root = page.getByRole("region", { name: "Task model", exact: true }),
-      original = journey.guided[n - 1].model!;
-    for (const [id, r] of Object.entries(shiftRecords[mode])) {
+] as [ShiftMode, number][]) {
+  const comparisons = Object.entries(shiftRecords[mode]);
+  const chunks =
+    mode === "compression"
+      ? [comparisons.slice(0, 3), comparisons.slice(3)]
+      : [comparisons];
+  for (const [chunkIndex, records] of chunks.entries())
+    test(`${mode}${mode === "compression" ? ` comparisons ${chunkIndex * 3 + 1}–${chunkIndex * 3 + records.length}` : ": six comparisons"} retain scientific predictions and strict histories`, async ({
+      page,
+    }, info) => {
+      if (
+        info.project.name === "mobile" &&
+        ["temperature", "concentration", "evidence"].includes(mode)
+      ) {
+        await page.setViewportSize({ width: 320, height: 844 });
+      }
+      await learn(page, n);
+      const root = page.getByRole("region", {
+          name: "Task model",
+          exact: true,
+        }),
+        original = journey.guided[n - 1].model!;
+      for (const [id, r] of records) {
+        await root
+          .getByText("Choose another supplied comparison", { exact: true })
+          .click();
+        await root
+          .getByLabel("Supplied comparison", { exact: true })
+          .selectOption(id);
+        await root
+          .getByText("Choose another supplied comparison", { exact: true })
+          .click();
+        await check(page, false);
+        if (mode === "compression") {
+          for (const stage of [0, 1, 2]) {
+            if (stage)
+              await root
+                .getByRole("button", {
+                  name:
+                    stage === 1
+                      ? "Change the occupied volume"
+                      : "Show supplied later composition",
+                  exact: true,
+                })
+                .click();
+            await expect(root.locator("[data-stage]")).toHaveAttribute(
+              "data-stage",
+              String(stage),
+            );
+            await expect(root.locator("[data-stage]")).toHaveAttribute(
+              "data-comparison",
+              r.title,
+            );
+            const canvas = root.locator("canvas");
+            const dims = await canvas.evaluate((c) => ({
+              width: c.getBoundingClientRect().width,
+              parent: c.parentElement!.clientWidth,
+              pixels: (c as HTMLCanvasElement).width,
+              dpr: Math.min(devicePixelRatio, 2),
+            }));
+            expect(Math.abs(dims.width - dims.parent)).toBeLessThan(1);
+            expect(
+              Math.abs(dims.pixels - dims.parent * dims.dpr),
+            ).toBeLessThanOrEqual(1);
+          }
+          await expect(
+            root.getByRole("button", {
+              name: "Later equilibrium shown",
+              exact: true,
+            }),
+          ).toBeDisabled();
+          if (id === "initial") {
+            const downloadButton = root.getByRole("button", {
+              name: "Download 3D asset",
+              exact: true,
+            });
+            await expect(downloadButton).toBeEnabled();
+            const downloadPromise = page.waitForEvent("download");
+            await downloadButton.click();
+            await (
+              await downloadPromise
+            ).saveAs(`docs/qa/changing-equilibrium-${info.project.name}.glb`);
+            const view = root.locator("[data-stage]");
+            await view.focus();
+            await page.keyboard.press("ArrowRight");
+            expect(
+              Number(await view.getAttribute("data-rotation")),
+            ).toBeGreaterThan(0);
+            await root
+              .getByRole("button", { name: "Reset view", exact: true })
+              .click();
+            await expect(view).toHaveAttribute("data-rotation", "0");
+          }
+        }
+        const expected = expectedShiftBoard(mode, id);
+        for (const [key, v] of Object.entries(expected)) {
+          if (key === "record" || key === "step") continue;
+          const field = root.locator(`[id$="-${key}"]`);
+          if (await field.evaluate((x) => x.tagName === "SELECT"))
+            await field.selectOption(v);
+          else await field.fill(v);
+        }
+        await check(page, true);
+        await root
+          .getByText("Choose another supplied comparison", { exact: true })
+          .click();
+        await root
+          .getByLabel("Supplied comparison", { exact: true })
+          .selectOption(id);
+        await root
+          .getByText("Choose another supplied comparison", { exact: true })
+          .click();
+        await check(page, true);
+        await saved(page);
+        const history = await page.evaluate(
+          ({ key, id }) =>
+            JSON.parse(localStorage.getItem(key)!).work["changing-equilibrium"]
+              .taskModels[id],
+          { key: STORAGE_KEY, id: journey.guided[n - 1].id },
+        );
+        expect(
+          history.every((b: Record<string, string>) =>
+            validShiftBoard(mode, b),
+          ),
+        ).toBe(true);
+        for (let i = 1; i < history.length; i++)
+          expect(shiftHistoryStep(mode, history[i - 1], history[i])).toBe(true);
+        if (mode === "concentration" || mode === "evidence")
+          await root.locator("th[scope=col]").evaluateAll((headers) => {
+            for (const header of headers) {
+              const walker = document.createTreeWalker(
+                header,
+                NodeFilter.SHOW_TEXT,
+              );
+              let node: Node | null;
+              while ((node = walker.nextNode()))
+                for (const word of node.textContent!.matchAll(/[A-Za-z]+/g)) {
+                  const range = document.createRange();
+                  range.setStart(node, word.index!);
+                  range.setEnd(node, word.index! + word[0].length);
+                  if (
+                    Array.from(range.getClientRects()).filter(
+                      (r) => r.width && r.height,
+                    ).length > 1
+                  )
+                    throw Error("Split column heading word " + word[0]);
+                }
+            }
+          });
+        if (mode === "evidence")
+          await expect(root).toContainText(
+            "supplied as known dynamic equilibria",
+          );
+        if (mode === "temperature" || mode === "evidence")
+          await root.locator("svg").evaluateAll((svgs) => {
+            for (const svg of svgs as SVGSVGElement[])
+              for (const t of svg.querySelectorAll("text")) {
+                const box = t.getBBox(),
+                  matrix = t.getScreenCTM()!,
+                  font = parseFloat(getComputedStyle(t).fontSize);
+                if (font * Math.hypot(matrix.a, matrix.b) < 12)
+                  throw Error("Small label " + t.textContent);
+                if (
+                  box.x < 0 ||
+                  box.y < 0 ||
+                  box.x + box.width > svg.viewBox.baseVal.width ||
+                  box.y + box.height > svg.viewBox.baseVal.height
+                )
+                  throw Error("Clipped label " + t.textContent);
+              }
+          });
+        for (const button of await root.getByRole("button").all())
+          expect((await button.boundingBox())?.height).toBeGreaterThanOrEqual(
+            44,
+          );
+        if (
+          id === ("record" in original ? original.record : "initial") ||
+          ((!("record" in original) || !original.record) && id === "initial")
+        ) {
+          await answer(page, journey.guided[n - 1]);
+          await page
+            .getByRole("button", { name: "Check answer", exact: true })
+            .click();
+          await expect(
+            page.locator(".sample-task-answer [role=status]"),
+          ).toContainText("That’s right.");
+          await capture(
+            page,
+            `docs/qa/changing-equilibrium-${info.project.name}-${mode}.png`,
+          );
+        }
+        await page.reload();
+        await check(page, true);
+      }
+      await root.getByRole("button", { name: "Undo", exact: true }).click();
+      await check(page, false);
       await root
-        .getByText("Choose another supplied comparison", { exact: true })
-        .click();
-      await root
-        .getByLabel("Supplied comparison", { exact: true })
-        .selectOption(id);
-      await root
-        .getByText("Choose another supplied comparison", { exact: true })
+        .getByRole("button", { name: "Reset model", exact: true })
         .click();
       await check(page, false);
-      if (mode === "compression") {
-        for (const stage of [0, 1, 2]) {
-          if (stage)
-            await root
-              .getByRole("button", {
-                name:
-                  stage === 1
-                    ? "Change the occupied volume"
-                    : "Show supplied later composition",
-                exact: true,
-              })
-              .click();
-          await expect(root.locator("[data-stage]")).toHaveAttribute(
-            "data-stage",
-            String(stage),
-          );
-          await expect(root.locator("[data-stage]")).toHaveAttribute(
-            "data-comparison",
-            r.title,
-          );
-          const canvas = root.locator("canvas");
-          const dims = await canvas.evaluate((c) => ({
-            width: c.getBoundingClientRect().width,
-            parent: c.parentElement!.clientWidth,
-            pixels: (c as HTMLCanvasElement).width,
-            dpr: Math.min(devicePixelRatio, 2),
-          }));
-          expect(Math.abs(dims.width - dims.parent)).toBeLessThan(1);
-          expect(
-            Math.abs(dims.pixels - dims.parent * dims.dpr),
-          ).toBeLessThanOrEqual(1);
-        }
-        await expect(
-          root.getByRole("button", {
-            name: "Later equilibrium shown",
-            exact: true,
-          }),
-        ).toBeDisabled();
-        if (id === "initial") {
-          const downloadButton = root.getByRole("button", {
-            name: "Download 3D asset",
-            exact: true,
-          });
-          await expect(downloadButton).toBeEnabled();
-          const downloadPromise = page.waitForEvent("download");
-          await downloadButton.click();
-          await (
-            await downloadPromise
-          ).saveAs(`docs/qa/changing-equilibrium-${info.project.name}.glb`);
-          const view = root.locator("[data-stage]");
-          await view.focus();
-          await page.keyboard.press("ArrowRight");
-          expect(
-            Number(await view.getAttribute("data-rotation")),
-          ).toBeGreaterThan(0);
-          await root
-            .getByRole("button", { name: "Reset view", exact: true })
-            .click();
-          await expect(view).toHaveAttribute("data-rotation", "0");
-        }
-      }
-      const expected = expectedShiftBoard(mode, id);
-      for (const [key, v] of Object.entries(expected)) {
-        if (key === "record" || key === "step") continue;
-        const field = root.locator(`[id$="-${key}"]`);
-        if (await field.evaluate((x) => x.tagName === "SELECT"))
-          await field.selectOption(v);
-        else await field.fill(v);
-      }
-      await check(page, true);
-      await root
-        .getByText("Choose another supplied comparison", { exact: true })
-        .click();
-      await root
-        .getByLabel("Supplied comparison", { exact: true })
-        .selectOption(id);
-      await root
-        .getByText("Choose another supplied comparison", { exact: true })
-        .click();
-      await check(page, true);
-      await saved(page);
-      const history = await page.evaluate(
-        ({ key, id }) =>
-          JSON.parse(localStorage.getItem(key)!).work["changing-equilibrium"]
-            .taskModels[id],
-        { key: STORAGE_KEY, id: journey.guided[n - 1].id },
-      );
+      expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
       expect(
-        history.every((b: Record<string, string>) => validShiftBoard(mode, b)),
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= innerWidth,
+        ),
       ).toBe(true);
-      for (let i = 1; i < history.length; i++)
-        expect(shiftHistoryStep(mode, history[i - 1], history[i])).toBe(true);
-      if (mode === "concentration" || mode === "evidence")
-        await root.locator("th[scope=col]").evaluateAll((headers) => {
-          for (const header of headers) {
-            const walker = document.createTreeWalker(
-              header,
-              NodeFilter.SHOW_TEXT,
-            );
-            let node: Node | null;
-            while ((node = walker.nextNode()))
-              for (const word of node.textContent!.matchAll(/[A-Za-z]+/g)) {
-                const range = document.createRange();
-                range.setStart(node, word.index!);
-                range.setEnd(node, word.index! + word[0].length);
-                if (
-                  Array.from(range.getClientRects()).filter(
-                    (r) => r.width && r.height,
-                  ).length > 1
-                )
-                  throw Error("Split column heading word " + word[0]);
-              }
-          }
-        });
-      if (mode === "evidence")
-        await expect(root).toContainText(
-          "supplied as known dynamic equilibria",
-        );
-      if (mode === "temperature" || mode === "evidence")
-        await root.locator("svg").evaluateAll((svgs) => {
-          for (const svg of svgs as SVGSVGElement[])
-            for (const t of svg.querySelectorAll("text")) {
-              const box = t.getBBox(),
-                matrix = t.getScreenCTM()!,
-                font = parseFloat(getComputedStyle(t).fontSize);
-              if (font * Math.hypot(matrix.a, matrix.b) < 12)
-                throw Error("Small label " + t.textContent);
-              if (
-                box.x < 0 ||
-                box.y < 0 ||
-                box.x + box.width > svg.viewBox.baseVal.width ||
-                box.y + box.height > svg.viewBox.baseVal.height
-              )
-                throw Error("Clipped label " + t.textContent);
-            }
-        });
-      for (const button of await root.getByRole("button").all())
-        expect((await button.boundingBox())?.height).toBeGreaterThanOrEqual(44);
-      if (
-        id === ("record" in original ? original.record : "initial") ||
-        ((!("record" in original) || !original.record) && id === "initial")
-      ) {
-        await answer(page, journey.guided[n - 1]);
-        await page
-          .getByRole("button", { name: "Check answer", exact: true })
-          .click();
-        await expect(
-          page.locator(".sample-task-answer [role=status]"),
-        ).toContainText("That’s right.");
-        await capture(
-          page,
-          `docs/qa/changing-equilibrium-${info.project.name}-${mode}.png`,
-        );
-      }
-      await page.reload();
-      await check(page, true);
-    }
-    await root.getByRole("button", { name: "Undo", exact: true }).click();
-    await check(page, false);
-    await root
-      .getByRole("button", { name: "Reset model", exact: true })
-      .click();
-    await check(page, false);
-    expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
-    expect(
-      await page.evaluate(
-        () => document.documentElement.scrollWidth <= innerWidth,
-      ),
-    ).toBe(true);
-  });
+    });
+}
 test("opening compression action is complete within the mobile viewport and keyboard-operable", async ({
   page,
 }, info) => {
@@ -458,9 +472,41 @@ test("gas tallies respond to construction buttons and preserve wrong and invalid
   await expect(root).toContainText("is not saved");
   await root.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(field).toHaveValue("1");
+  await saved(page);
+  const modelId = journey.guided[1].id;
+  const readModel = () =>
+    page.evaluate(
+      ({ key, id }) => {
+        const work = JSON.parse(localStorage.getItem(key)!).work[
+          "changing-equilibrium"
+        ];
+        return {
+          history: work.taskModels[id],
+          raw: work.drafts["model-input:" + id],
+        };
+      },
+      { key: STORAGE_KEY, id: modelId },
+    );
+  const retained = await readModel();
   await field.fill("1/2");
+  await saved(page);
+  const invalid = await readModel();
+  expect(invalid.history).toEqual(retained.history);
+  expect(JSON.parse(invalid.raw).left).toBe("1/2");
   await page.reload();
+  await expect(field).toHaveValue("1/2");
+  expect(await readModel()).toEqual(invalid);
+  await expect(root).toContainText("Your invalid entry is visible");
+  await expect(
+    root.getByRole("button", {
+      name: "Remove one left gas count",
+      exact: true,
+    }),
+  ).toBeDisabled();
+  await root.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(field).toHaveValue("1");
+  await saved(page);
+  expect(await readModel()).toEqual({ history: retained.history, raw: "" });
   await root
     .getByRole("button", { name: "Remove one left gas count", exact: true })
     .click();
