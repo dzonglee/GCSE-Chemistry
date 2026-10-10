@@ -54,8 +54,13 @@ export function FuelDrawingInput({
     >
       {temperature ? (
         <table className="temperature-source-table">
-          <caption aria-label="Mass of salt in grams to lowest temperature in degrees Celsius">
-            Mass / g → minimum / °C
+          <caption
+            aria-label={`${drawing.data.xName} (${drawing.data.xUnit}) to ${drawing.data.yName} (${drawing.data.yUnit})`}
+          >
+            {drawing.data.xName === "Mass of salt" &&
+            drawing.data.yName === "Lowest temperature"
+              ? "Mass / g → minimum / °C"
+              : `${drawing.data.xName} / ${drawing.data.xUnit} → ${drawing.data.yName} / ${drawing.data.yUnit}`}
           </caption>
           <tbody>
             {[0, 3].map((i) => (
@@ -123,8 +128,8 @@ export function FuelDrawingInput({
           <p>
             Use two separate end heights for a straight best-fit line, with
             observations balanced around it. Do not join the observations dot to
-            dot. Your intercept is an estimate beyond the measured masses. Save
-            to compare the criteria; no automatic graph mark is awarded.
+            dot. Your intercept is an estimate outside the measured x values.
+            Save to compare the criteria; no automatic graph mark is awarded.
           </p>
         </>
       )}

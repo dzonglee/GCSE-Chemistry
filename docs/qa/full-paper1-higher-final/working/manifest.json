@@ -1,0 +1,24 @@
+{
+  "build": "B2HShdYqwmUp4ogPQkAVY",
+  "note": "Controlled titration opening with raw calculation working entered through the UI, retained after reload and reopened for inspection. Unseeded whole43-part submission flows verified separately.",
+  "captures": [
+    {
+      "file": "320-5b-full.png",
+      "width": 320,
+      "number": "5(b)",
+      "sha256": "e4a98a0578440175d0f066a1ff76ebc554b3cd89671c79ab307d4fd8180788c6"
+    },
+    {
+      "file": "390-5b-full.png",
+      "width": 390,
+      "number": "5(b)",
+      "sha256": "4a1ee68731ef58d2db2c2114f4a86775aaf2b51e8094a3caf3cc48b5bbba0308"
+    },
+    {
+      "file": "1280-5b-full.png",
+      "width": 1280,
+      "number": "5(b)",
+      "sha256": "68e627b881a68958c5306e71076c6ef7bc558470e8af9528db56817817820e8b"
+    }
+  ]
+}

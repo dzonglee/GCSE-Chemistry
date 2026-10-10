@@ -1,6 +1,7 @@
 import type { Assessment } from "./assessments";
 import { paper1FoundationFull } from "./paper1-foundation-full";
 import { paper2FoundationFull } from "./paper2-foundation-full";
+import { paper1HigherFull } from "./paper1-higher-full";
 
 export const fullPapers: Assessment[] = [
   {
@@ -34,5 +35,22 @@ export const fullPapers: Assessment[] = [
     examPaper: paper2FoundationFull,
     questions: paper2FoundationFull.parts.map((part) => part.question),
     topics: paper2FoundationFull.parts.map((part) => part.topic),
+  },
+  {
+    slug: paper1HigherFull.id,
+    title: "Full Paper 1 · Higher",
+    shortTitle: "Paper 1 · Higher",
+    description:
+      "An original 100-mark, 105-minute AQA Separate Chemistry practice paper. Ten question groups include multi-stage mole and titration calculations, independent plotting and extrapolation, native electron and energy diagrams and a six-mark practical method. Submit the whole paper before reviewing retained working, requested precision and manual method marks.",
+    tier: "higher",
+    course: "separate",
+    structure: "full",
+    kind: "paper",
+    minutes: paper1HigherFull.minutes,
+    examPaper: paper1HigherFull,
+    questions: paper1HigherFull.parts.map((part) => part.question),
+    topics: paper1HigherFull.parts.map((part) =>
+      part.topic === "energy-changes" ? "energy" : part.topic,
+    ),
   },
 ];

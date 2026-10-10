@@ -55,19 +55,26 @@ export function FuelPlotEditor({
         : [{ x, y: fuelCoordinate(board["c" + i]) }],
     ),
     estimateValue = fuelCoordinate(board.estimate),
+    extensionX = data.independentExtrapolation
+      ? fuelCoordinate(board.extensionX)
+      : data.targetX,
     extrapolationAnchor =
-      data.targetX < curve[0].x
-        ? curve[0]
-        : data.targetX > curve.at(-1)!.x
-          ? curve.at(-1)!
-          : null,
+      extensionX === null
+        ? null
+        : extensionX < curve[0].x
+          ? curve[0]
+          : extensionX > curve.at(-1)!.x
+            ? curve.at(-1)!
+            : null,
     hasCurve = curve.every((c) => c.y !== null),
     projectedY =
-      hasCurve && straight
+      hasCurve && straight && extensionX !== null
         ? curve[0].y! +
-          ((data.targetX - curve[0].x) * (curve[1].y! - curve[0].y!)) /
+          ((extensionX - curve[0].x) * (curve[1].y! - curve[0].y!)) /
             (curve[1].x - curve[0].x)
-        : estimateValue,
+        : data.independentExtrapolation
+          ? null
+          : estimateValue,
     outside = points
       .filter((p) => p.x !== null && p.y !== null && !inside(p.x, p.y))
       .map((p) => "Point " + (p.i + 1))
@@ -82,7 +89,7 @@ export function FuelPlotEditor({
           : [],
       )
       .concat(
-        straight && projectedY !== null && !inside(data.targetX, projectedY)
+        straight && projectedY !== null && !inside(extensionX!, projectedY)
           ? ["Your extrapolated line crossing"]
           : [],
       ),
@@ -401,7 +408,7 @@ export function FuelPlotEditor({
               <line
                 x1={px(extrapolationAnchor.x)}
                 y1={py(extrapolationAnchor.y!)}
-                x2={px(data.targetX)}
+                x2={px(extensionX!)}
                 y2={py(projectedY)}
                 stroke="#bd7624"
                 strokeWidth="3"
@@ -475,6 +482,25 @@ export function FuelPlotEditor({
         </p>
       )}
       {!straight && coordinateFields}
+      {data.independentExtrapolation && (
+        <div className="organic-field">
+          <label htmlFor={uid + "-extension"}>
+            Your extrapolated line end x ({data.xUnit})
+          </label>
+          <input
+            id={uid + "-extension"}
+            inputMode="decimal"
+            disabled={disabled}
+            value={inputValues.extensionX}
+            onChange={(e) => onChange({ extensionX: e.target.value })}
+          />
+          <p>
+            Choose where to extend your fitted line. Its dashed extension
+            appears only after you enter an endpoint outside the observed x
+            range.
+          </p>
+        </div>
+      )}
       <div className="organic-field">
         <label htmlFor={uid + "-estimate"}>
           Your proposed estimate at x={data.targetX} ({data.yUnit})

@@ -32,7 +32,7 @@ export function TemperatureGraphReference({
           viewBox="0 0 650 450"
           style={{ minWidth: 390, maxWidth: 650 }}
           role="img"
-          aria-label="Reference observations with one balanced straight fit and its extrapolation to zero mass"
+          aria-label={`Reference observations with one balanced straight fit and its extrapolation to zero ${d.xName.toLowerCase()}`}
         >
           {Array.from(
             { length: Math.round((d.xMax - d.xMin) / d.xTick) + 1 },

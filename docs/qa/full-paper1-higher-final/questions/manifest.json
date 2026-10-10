@@ -1,0 +1,204 @@
+{
+  "build": "B2HShdYqwmUp4ogPQkAVY",
+  "note": "Controlled QA openings, one individually selected part per question group. Answers entered through native UI and retained after reload. Unseeded whole43-part submission flows verified separately.",
+  "captures": [
+    {
+      "file": "320-intro-full.png",
+      "width": 320,
+      "number": null,
+      "sha256": "35559ccb5772e45006b2061604b1c96fbc75fdc549783c2766bbdb83d55fc3e6"
+    },
+    {
+      "file": "320-1b-full.png",
+      "width": 320,
+      "number": "1(b)",
+      "sha256": "37f07ec4417b55185e2290b8e09014f09ca6a6f0c59335d3f4fd80f10a14bf39"
+    },
+    {
+      "file": "320-2a-full.png",
+      "width": 320,
+      "number": "2(a)",
+      "sha256": "655c3987cbb621dcf911313cad71a620790633c41478e77c4baeac1ab7797bb5"
+    },
+    {
+      "file": "320-3b-full.png",
+      "width": 320,
+      "number": "3(b)",
+      "sha256": "d62fcf5790965f2c3458543590865af8b7fd19b4002129de199d48c0796e3b88"
+    },
+    {
+      "file": "320-4a-full.png",
+      "width": 320,
+      "number": "4(a)",
+      "sha256": "6ae13872231e87956ae0de3b528940956b7b9213b1aa64df5b777032e73a642a"
+    },
+    {
+      "file": "320-5b-full.png",
+      "width": 320,
+      "number": "5(b)",
+      "sha256": "f11115ad3f271871d2de4a20d0ef96cd8681ee94b5863258ad09c54870d31830"
+    },
+    {
+      "file": "320-6b-full.png",
+      "width": 320,
+      "number": "6(b)",
+      "sha256": "b0e670bd1062f41f1349a5d88033014ff3ebb51f4cb0044e9f582a5bca03655b"
+    },
+    {
+      "file": "320-7b-full.png",
+      "width": 320,
+      "number": "7(b)",
+      "sha256": "8e8e3649fd2fe531f1784010bb862376488528fefb8dd3cc934dbc259b8e4da9"
+    },
+    {
+      "file": "320-8b-full.png",
+      "width": 320,
+      "number": "8(b)",
+      "sha256": "baac796526591e57310386d573eebf985a90848267707de31d5ddbde2198b96a"
+    },
+    {
+      "file": "320-9b-full.png",
+      "width": 320,
+      "number": "9(b)",
+      "sha256": "394472696dde4a0d2fb618865d932d9db4ce585c4a02c1061947b52be33a2645"
+    },
+    {
+      "file": "320-10c-full.png",
+      "width": 320,
+      "number": "10(c)",
+      "sha256": "9f504cdbd1c9d374884865033c347a4e7939ea76e0ce3be04797a35384570b85"
+    },
+    {
+      "file": "390-intro-full.png",
+      "width": 390,
+      "number": null,
+      "sha256": "c77a4128aab26c11c44e6b887f1a4446fe38be12e1661dabf13669ba0aab0dc9"
+    },
+    {
+      "file": "390-1b-full.png",
+      "width": 390,
+      "number": "1(b)",
+      "sha256": "763fb4f003e9ce34567db7115c19b2e40aa3bcd932445e0d7a5ba23c64a85618"
+    },
+    {
+      "file": "390-2a-full.png",
+      "width": 390,
+      "number": "2(a)",
+      "sha256": "38c2b85cd9809fb64c4be94ed1fcacc121efeb8395023240d6ae790a803d30bd"
+    },
+    {
+      "file": "390-3b-full.png",
+      "width": 390,
+      "number": "3(b)",
+      "sha256": "556e3b3897923819c421e7300a97dcf7bde545a091fcf870e533f6c7eedba1c0"
+    },
+    {
+      "file": "390-4a-full.png",
+      "width": 390,
+      "number": "4(a)",
+      "sha256": "251b68204642e38da1645eaa9b4113398a89180425452f638e6ce92812f5a973"
+    },
+    {
+      "file": "390-5b-full.png",
+      "width": 390,
+      "number": "5(b)",
+      "sha256": "0ee98ba0bbf5f7b6daf4ec7220deba0a1b3594d0c7d5716a50386385c2d57964"
+    },
+    {
+      "file": "390-6b-full.png",
+      "width": 390,
+      "number": "6(b)",
+      "sha256": "4ee31efa35b1208cf585babe1b18007940005e5444c9debb0390f2d7b9522e22"
+    },
+    {
+      "file": "390-7b-full.png",
+      "width": 390,
+      "number": "7(b)",
+      "sha256": "3e25fa99e5b6b2ee8000a1f8365bdd038eb29b689c39ede89cc8cdafbbe7e146"
+    },
+    {
+      "file": "390-8b-full.png",
+      "width": 390,
+      "number": "8(b)",
+      "sha256": "bd1e3cfedb391c98662277fe7f56e1deec45a221c2d4579f121439b6de7c9ee5"
+    },
+    {
+      "file": "390-9b-full.png",
+      "width": 390,
+      "number": "9(b)",
+      "sha256": "8a482ada44f6ffa2caa0cf9274b7c21d5bd4f7fbf97634b04636cf7b6ccab69d"
+    },
+    {
+      "file": "390-10c-full.png",
+      "width": 390,
+      "number": "10(c)",
+      "sha256": "cc48f0a0e58b840b916e7d97a90e4b5e3a7685b5c74ebaae3145c741003f89e5"
+    },
+    {
+      "file": "1280-intro-full.png",
+      "width": 1280,
+      "number": null,
+      "sha256": "7e9e0890067a6ea15814beefd59a6132f8f993a3f94f59d18bacbe291ff00b28"
+    },
+    {
+      "file": "1280-1b-full.png",
+      "width": 1280,
+      "number": "1(b)",
+      "sha256": "fac03d0d4d816a9313a96f5e0f1cd6290e8c215bb4317b149ad63eaf41deca02"
+    },
+    {
+      "file": "1280-2a-full.png",
+      "width": 1280,
+      "number": "2(a)",
+      "sha256": "aa55ce23cc478082e11e9dd1f9fddac976b2b8d5808709dcb140c6ddae4ad678"
+    },
+    {
+      "file": "1280-3b-full.png",
+      "width": 1280,
+      "number": "3(b)",
+      "sha256": "fb9804605b33820933517a63e46c466d54a924214f3d8eef99ac69c4c3e02490"
+    },
+    {
+      "file": "1280-4a-full.png",
+      "width": 1280,
+      "number": "4(a)",
+      "sha256": "0307dcf63631ed9ef31bb761732ada0d28769ff3dcbc26f16b26a7049f21a811"
+    },
+    {
+      "file": "1280-5b-full.png",
+      "width": 1280,
+      "number": "5(b)",
+      "sha256": "b6c3cfbfed9b55c5306c49d45410e84eb45908bbe8799cb0415fd185812b60b9"
+    },
+    {
+      "file": "1280-6b-full.png",
+      "width": 1280,
+      "number": "6(b)",
+      "sha256": "583f993fefefb7adcb465c3124832d978237ef034bde0c9ab1b3ea7ed6775500"
+    },
+    {
+      "file": "1280-7b-full.png",
+      "width": 1280,
+      "number": "7(b)",
+      "sha256": "5473f3601327839b5d442a8c088c8a0b7857280cb761ee9b2cf1805f1f42f3b0"
+    },
+    {
+      "file": "1280-8b-full.png",
+      "width": 1280,
+      "number": "8(b)",
+      "sha256": "d4f14c4acc0eab5ea2bcaab066baec939e92abf3bb51422188814e6af8136d71"
+    },
+    {
+      "file": "1280-9b-full.png",
+      "width": 1280,
+      "number": "9(b)",
+      "sha256": "7ee85f62e49ef9f45ef791a333d564db027dde26b3b4bcf0269e039e95886c83"
+    },
+    {
+      "file": "1280-10c-full.png",
+      "width": 1280,
+      "number": "10(c)",
+      "sha256": "844f8441c864c78ed5fb6ca3e2e8f889f346f858addb163e712117e1e2aae3ae"
+    }
+  ]
+}

@@ -886,9 +886,13 @@ function ResponseInput({
               : question.writtenEquations &&
                   question.id.startsWith("ion-tests-v1-write-")
                 ? "Use formulas and state symbols; type → or ->. Name spectator ions on a separate line. Scientific accuracy is reviewed manually."
-                : question.writtenEquations
-                  ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
-                  : "Write in your own words. Use the marking points for self-review when feedback appears."}
+                : question.writtenEquationKind === "half"
+                  ? "Use chemical formulas, ion charges and electrons. Balance atoms and charge. You can type → or ->. State symbols are optional for this question. Include any explanation requested."
+                  : question.writtenEquationKind === "symbol"
+                    ? "Use chemical formulas and whole-number coefficients to write a balanced symbol equation. You can type → or ->."
+                    : question.writtenEquations
+                      ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
+                      : "Write in your own words. Use the marking points for self-review when feedback appears."}
         </small>
       </label>
     );

@@ -8,6 +8,7 @@ export function emptyFuelDrawing(data: FuelPlotRecord): Record<string, string> {
   return Object.fromEntries(
     [
       ...data.points.flatMap((_, i) => ["p" + i + "x", "p" + i + "y", "c" + i]),
+      ...(data.independentExtrapolation ? ["extensionX"] : []),
       "estimate",
     ].map((k) => [k, ""]),
   );

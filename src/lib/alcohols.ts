@@ -489,6 +489,8 @@ export const fuelComparisons: Record<string, FuelRecord> = {
 export type FuelPlotRecord = {
   /** Existing fuel plots retain curved fits; temperature scatter uses a straight line. */
   fitKind?: "straight";
+  /** Opt-in construction: learners choose the extrapolated line endpoint. */
+  independentExtrapolation?: boolean;
   context?: "temperature";
   title: string;
   xName: string;

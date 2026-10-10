@@ -1,0 +1,316 @@
+{
+  "build": "B2HShdYqwmUp4ogPQkAVY",
+  "count": 60,
+  "allFinalImagesPersonallyInspected": true,
+  "hashesVerified": true,
+  "samplesSent": true,
+  "captures": [
+    {
+      "file": "questions/320-intro-full.png",
+      "sha256": "35559ccb5772e45006b2061604b1c96fbc75fdc549783c2766bbdb83d55fc3e6",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/320-1b-full.png",
+      "sha256": "37f07ec4417b55185e2290b8e09014f09ca6a6f0c59335d3f4fd80f10a14bf39",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/320-2a-full.png",
+      "sha256": "655c3987cbb621dcf911313cad71a620790633c41478e77c4baeac1ab7797bb5",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/320-3b-full.png",
+      "sha256": "d62fcf5790965f2c3458543590865af8b7fd19b4002129de199d48c0796e3b88",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/320-4a-full.png",
+      "sha256": "6ae13872231e87956ae0de3b528940956b7b9213b1aa64df5b777032e73a642a",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/320-5b-full.png",
+      "sha256": "f11115ad3f271871d2de4a20d0ef96cd8681ee94b5863258ad09c54870d31830",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/320-6b-full.png",
+      "sha256": "b0e670bd1062f41f1349a5d88033014ff3ebb51f4cb0044e9f582a5bca03655b",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/320-7b-full.png",
+      "sha256": "8e8e3649fd2fe531f1784010bb862376488528fefb8dd3cc934dbc259b8e4da9",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/320-8b-full.png",
+      "sha256": "baac796526591e57310386d573eebf985a90848267707de31d5ddbde2198b96a",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/320-9b-full.png",
+      "sha256": "394472696dde4a0d2fb618865d932d9db4ce585c4a02c1061947b52be33a2645",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/320-10c-full.png",
+      "sha256": "9f504cdbd1c9d374884865033c347a4e7939ea76e0ce3be04797a35384570b85",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/390-intro-full.png",
+      "sha256": "c77a4128aab26c11c44e6b887f1a4446fe38be12e1661dabf13669ba0aab0dc9",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/390-1b-full.png",
+      "sha256": "763fb4f003e9ce34567db7115c19b2e40aa3bcd932445e0d7a5ba23c64a85618",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/390-2a-full.png",
+      "sha256": "38c2b85cd9809fb64c4be94ed1fcacc121efeb8395023240d6ae790a803d30bd",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/390-3b-full.png",
+      "sha256": "556e3b3897923819c421e7300a97dcf7bde545a091fcf870e533f6c7eedba1c0",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/390-4a-full.png",
+      "sha256": "251b68204642e38da1645eaa9b4113398a89180425452f638e6ce92812f5a973",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/390-5b-full.png",
+      "sha256": "0ee98ba0bbf5f7b6daf4ec7220deba0a1b3594d0c7d5716a50386385c2d57964",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/390-6b-full.png",
+      "sha256": "4ee31efa35b1208cf585babe1b18007940005e5444c9debb0390f2d7b9522e22",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/390-7b-full.png",
+      "sha256": "3e25fa99e5b6b2ee8000a1f8365bdd038eb29b689c39ede89cc8cdafbbe7e146",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/390-8b-full.png",
+      "sha256": "bd1e3cfedb391c98662277fe7f56e1deec45a221c2d4579f121439b6de7c9ee5",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/390-9b-full.png",
+      "sha256": "8a482ada44f6ffa2caa0cf9274b7c21d5bd4f7fbf97634b04636cf7b6ccab69d",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/390-10c-full.png",
+      "sha256": "cc48f0a0e58b840b916e7d97a90e4b5e3a7685b5c74ebaae3145c741003f89e5",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/1280-intro-full.png",
+      "sha256": "7e9e0890067a6ea15814beefd59a6132f8f993a3f94f59d18bacbe291ff00b28",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/1280-1b-full.png",
+      "sha256": "fac03d0d4d816a9313a96f5e0f1cd6290e8c215bb4317b149ad63eaf41deca02",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/1280-2a-full.png",
+      "sha256": "aa55ce23cc478082e11e9dd1f9fddac976b2b8d5808709dcb140c6ddae4ad678",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/1280-3b-full.png",
+      "sha256": "fb9804605b33820933517a63e46c466d54a924214f3d8eef99ac69c4c3e02490",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/1280-4a-full.png",
+      "sha256": "0307dcf63631ed9ef31bb761732ada0d28769ff3dcbc26f16b26a7049f21a811",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/1280-5b-full.png",
+      "sha256": "b6c3cfbfed9b55c5306c49d45410e84eb45908bbe8799cb0415fd185812b60b9",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/1280-6b-full.png",
+      "sha256": "583f993fefefb7adcb465c3124832d978237ef034bde0c9ab1b3ea7ed6775500",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/1280-7b-full.png",
+      "sha256": "5473f3601327839b5d442a8c088c8a0b7857280cb761ee9b2cf1805f1f42f3b0",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/1280-8b-full.png",
+      "sha256": "d4f14c4acc0eab5ea2bcaab066baec939e92abf3bb51422188814e6af8136d71",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/1280-9b-full.png",
+      "sha256": "7ee85f62e49ef9f45ef791a333d564db027dde26b3b4bcf0269e039e95886c83",
+      "personallyInspected": true
+    },
+    {
+      "file": "questions/1280-10c-full.png",
+      "sha256": "844f8441c864c78ed5fb6ca3e2e8f889f346f858addb163e712117e1e2aae3ae",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-submitted-pending-viewport.png",
+      "sha256": "98ba0b7466b1a294b8bc0eccc8a6933135b25977f2dc1c3d2fad93aef9ae725b",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-precision-2of3-full-response.png",
+      "sha256": "cd22029fc5e87698220b758c05403c4067ac81f231338d76a00ef8b5022e90bb",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-standard-form-carried-error-2of3-full-response.png",
+      "sha256": "4f85717c44a2f32ae8612b7c8c7b57701f50894cf76c7c225989362c44907522",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-carried-error-5of6-full-response.png",
+      "sha256": "bb39686274140e6a1abdda44b99f3b689abf45c4f3133b686e197cc195a5a371",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-crystal-method-4of6-full-response.png",
+      "sha256": "63b043171af7de4a9395e2c123da7eb62a89c0a4796a3ced23235ae6f854a753",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-incomplete-retained-HCl-viewport.png",
+      "sha256": "250476b22e6ef48194c8f7e0acd157fba4111396915ec32ecbe191d502a34446",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-worked-HCl-viewport.png",
+      "sha256": "d562cd7868c200c0835c34900a474d4d8a890aff3cbee5c3294f74ae259ca0f1",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-retained-fit-without-extension-viewport.png",
+      "sha256": "39d349b4c7f5d571ac37f85ac2782d3fcd2af7a7ff1517d7e95c1cf79e7362fe",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-worked-extrapolation-viewport.png",
+      "sha256": "d9c774b4ebe7e2f56a0a0934f828390095eaeef1d7be366b4ead581ca3cc9958",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-graph-review-3of5-full-response.png",
+      "sha256": "a2a533d6ef8c37f95b403dd3b0caaea4e91daa1bcf30739f7fca57b6ef754355",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-alternative-valid-profile-viewport.png",
+      "sha256": "9b8407cc8a70f4d933f3397297642409098f5a65ff10bea520e0faf545e612bc",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/320-worked-example-profile-viewport.png",
+      "sha256": "b34d11cccec5689cb9d93dd1402eaddcd9abbf6afa72127b514b203586a347f9",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-submitted-pending-viewport.png",
+      "sha256": "10f9207abb7f5e1f993655e3d9ff0e2992de977880b7a8723eefe6a4f399af38",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-precision-2of3-full-response.png",
+      "sha256": "62a3854bfcb5ec5a3caae87abe93c93833eb56a3439ed0ee893fb7d1e2b5f9c7",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-standard-form-carried-error-2of3-full-response.png",
+      "sha256": "20c4c0cf3f49541e3cc27532ff14434a39de859f44ab8162808257384e2d0b8c",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-carried-error-5of6-full-response.png",
+      "sha256": "0d12834976850b85061ff8201237dee8b7c646aa743712d3634debc298894ca0",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-crystal-method-4of6-full-response.png",
+      "sha256": "2bc92a51e0c50ff1af5033bfd6bdc485612f8d9274d4f250ee16d4d0b42bc087",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-incomplete-retained-HCl-viewport.png",
+      "sha256": "405c06e114149d0dcf21e64956d756a74e6b47f2cfc18756e5c062d411d651c1",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-worked-HCl-viewport.png",
+      "sha256": "2c165669654fb2aadf10b41ccf8d979b960af4f70bc988f7062a7ca859b23ef5",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-retained-fit-without-extension-viewport.png",
+      "sha256": "63306e6037ddcde81ab317427c64be21dffb7acce32cf4e65a8817ee9e6ad71a",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-worked-extrapolation-viewport.png",
+      "sha256": "7e5f8faccf16f1f164660efb299b041ca77c66da299fd6e6ccfb0db7240c75d8",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-graph-review-3of5-full-response.png",
+      "sha256": "b4360473efc9b8b26a0fa6dcfc7dca1b78115222615aba840960a6f0a60404f4",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-alternative-valid-profile-viewport.png",
+      "sha256": "e18a0c9fe6e14fba6ffe9157986352afbd3c158744d2b234d7ddae8606930c02",
+      "personallyInspected": true
+    },
+    {
+      "file": "submitted-review/1280-worked-example-profile-viewport.png",
+      "sha256": "b8abb4f80a636d3d66272a9db6d93f4d0a12390da5c264d2de406348ba2a1707",
+      "personallyInspected": true
+    },
+    {
+      "file": "working/320-5b-full.png",
+      "sha256": "e4a98a0578440175d0f066a1ff76ebc554b3cd89671c79ab307d4fd8180788c6",
+      "personallyInspected": true
+    },
+    {
+      "file": "working/390-5b-full.png",
+      "sha256": "4a1ee68731ef58d2db2c2114f4a86775aaf2b51e8094a3caf3cc48b5bbba0308",
+      "personallyInspected": true
+    },
+    {
+      "file": "working/1280-5b-full.png",
+      "sha256": "68e627b881a68958c5306e71076c6ef7bc558470e8af9528db56817817820e8b",
+      "personallyInspected": true
+    }
+  ],
+  "openSharedUiFollowups": [
+    "Complete graph axis caption initially visible at320 without panning",
+    "Reference prose word/number spacing",
+    "Review space for long desktop method answers",
+    "Clarify global course preference versus directly opened paper qualification"
+  ],
+  "sentBeforeHigherPaper2Research": true
+}

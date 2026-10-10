@@ -25,6 +25,7 @@ export interface Question {
   };
   title?: string;
   writtenEquations?: boolean;
+  writtenEquationKind?: "symbol" | "half";
   shortWritten?: boolean;
   conciseHeading?: boolean;
   elementReference?: boolean;
