@@ -286,7 +286,9 @@ test("all twenty-two independent demands accept reviewed references while explan
 });
 test("reserved checks defer marking, retain drafts and separate actual seven-day retrieval", async ({
   page,
-}) => {
+}, info) => {
+  if (info.project.name === "mobile")
+    await page.setViewportSize({ width: 320, height: 720 });
   await page.goto("/lessons/percentage-composition");
   await page.getByRole("button", { name: "Check", exact: true }).click();
   await page
@@ -369,6 +371,65 @@ test("reserved checks defer marking, retain drafts and separate actual seven-day
     await page
       .getByRole("button", { name: "Record answer", exact: true })
       .click();
+  }
+  await page
+    .getByRole("button", { name: "Submit whole set", exact: true })
+    .click();
+  await expect(
+    page.getByRole("heading", { name: "3 of 3 correct", exact: true }),
+  ).toBeVisible();
+  await saved(page);
+  await page.evaluate(
+    ({ key, delay }) => {
+      const p = JSON.parse(localStorage.getItem(key)!);
+      for (const run of p.work["percentage-composition"].history)
+        run.submitted = Date.now() - delay - 1000;
+      p.work["percentage-composition"].run.submitted =
+        Date.now() - delay - 1000;
+      localStorage.setItem(key, JSON.stringify(p));
+    },
+    { key: STORAGE_KEY, delay: REVIEW_DELAY },
+  );
+  await page.reload();
+  await page
+    .getByRole("button", { name: "Try the next form", exact: true })
+    .click();
+  for (const [i, q] of journey.reviewForms[1].entries()) {
+    if (i)
+      await page
+        .getByRole("button", { name: "Next question →", exact: true })
+        .click();
+    if (q.id === "pc-v1-rb-fraction") {
+      await page.evaluate(async () => {
+        await document.fonts.ready;
+        scrollTo(0, 0);
+      });
+      const control = await page
+        .locator(".question-panel .answer-option")
+        .first()
+        .boundingBox();
+      expect(control).not.toBeNull();
+      expect(control!.y).toBeGreaterThanOrEqual(0);
+      expect(control!.y + control!.height).toBeLessThanOrEqual(664);
+      expect(control!.height).toBeGreaterThanOrEqual(44);
+      await expect(
+        page.getByRole("radio", {
+          name: "It becomes 100% automatically",
+          exact: true,
+        }),
+      ).toBeVisible();
+      await capture(
+        page,
+        `test-results/qa/percentage-composition/percentage-composition-${info.project.name}-scaling-review.png`,
+      );
+    }
+    await answer(page, q);
+    await page
+      .getByRole("button", { name: "Record answer", exact: true })
+      .click();
+    await expect(page.getByText("That’s right.", { exact: true })).toHaveCount(
+      0,
+    );
   }
   await page
     .getByRole("button", { name: "Submit whole set", exact: true })

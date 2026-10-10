@@ -22,6 +22,13 @@ function c(
       model,
     ),
     title,
+    ...(id === "rb-fraction"
+      ? {
+          optionAliases: {
+            "It becomes100% automatically": "It becomes 100% automatically",
+          },
+        }
+      : {}),
   };
 }
 function n(
@@ -649,11 +656,11 @@ export const compositionJourney: LessonJourney = {
         "It stays unchanged",
         {
           "It doubles": "The fraction cancels the common scale.",
-          "It becomes100% automatically":
+          "It becomes 100% automatically":
             "Doubling is not replacing the whole by the part.",
         },
         "The fraction is invariant under common scaling.",
-        "Compare2m/2M with m/M.",
+        "Compare 2m/2M with m/M.",
       ),
     ],
   ],

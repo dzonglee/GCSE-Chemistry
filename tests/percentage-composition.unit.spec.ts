@@ -133,6 +133,11 @@ test("strict complete predictions reject atom-count bases missing named atoms an
   ).toBe(false);
 });
 test("forty-nine original tasks separate chemical working rounding scaling and ungraded explanations", () => {
+  const fraction = journey.reviewForms[1][2];
+  expect(mark(fraction, "It becomes100% automatically")).toEqual(
+    mark(fraction, "It becomes 100% automatically"),
+  );
+  expect(mark(fraction, "It becomes100% automatically").correct).toBe(false);
   const all = tasks(journey);
   expect(all).toHaveLength(49);
   expect(journey.practice).toHaveLength(22);
