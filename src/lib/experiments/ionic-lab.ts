@@ -29,7 +29,15 @@ export type LabState = {
   scene: number;
   nacl: { sent: number; charge: Charge; checked: boolean };
   mgcl: { transfers: number[]; ratio: string; checked: boolean };
-  lattice: { depth: boolean; guess: string; checked: boolean };
+  lattice: {
+    depth: boolean;
+    guess: string;
+    checked: boolean;
+    focus?: "sodium" | "chloride";
+    forces?: boolean;
+    relationship?: "donor" | "network";
+    relationshipChecked?: boolean;
+  };
   run: LabRun | null;
   runs: FinishedRun[];
 };
@@ -321,11 +329,29 @@ export function readLab(raw: string | undefined): LabState | null {
       !["", "1", "2", "3"].includes(x.mgcl.ratio) ||
       typeof x.mgcl.checked !== "boolean" ||
       !object(x.lattice) ||
-      !keys(x.lattice, ["depth", "guess", "checked"]) ||
+      !keys(x.lattice, [
+        "depth",
+        "guess",
+        "checked",
+        ...(Object.hasOwn(x.lattice, "focus") ? ["focus"] : []),
+        ...(Object.hasOwn(x.lattice, "forces") ? ["forces"] : []),
+        ...(Object.hasOwn(x.lattice, "relationship") ? ["relationship"] : []),
+        ...(Object.hasOwn(x.lattice, "relationshipChecked")
+          ? ["relationshipChecked"]
+          : []),
+      ]) ||
       typeof x.lattice.depth !== "boolean" ||
       typeof x.lattice.guess !== "string" ||
       !["", "4", "6", "8"].includes(x.lattice.guess) ||
       typeof x.lattice.checked !== "boolean" ||
+      (x.lattice.focus !== undefined &&
+        !["sodium", "chloride"].includes(x.lattice.focus as string)) ||
+      (x.lattice.forces !== undefined &&
+        typeof x.lattice.forces !== "boolean") ||
+      (x.lattice.relationship !== undefined &&
+        !["donor", "network"].includes(x.lattice.relationship as string)) ||
+      (x.lattice.relationshipChecked !== undefined &&
+        typeof x.lattice.relationshipChecked !== "boolean") ||
       (x.run !== null && !validRun(x.run)) ||
       !Array.isArray(x.runs) ||
       !x.runs.every((r) => validRun(r, true))
@@ -346,6 +372,15 @@ export const latticeSites: Site[] = Array.from({ length: 64 }, (_, i) => {
 export const focusSite: Site = { x: 2, y: 2, z: 2, charge: 1 };
 export function isNeighbour(s: Site): boolean {
   return Math.abs(s.x - 2) + Math.abs(s.y - 2) + Math.abs(s.z - 2) === 1;
+}
+export function neighboursOf(focus: Site): Site[] {
+  return latticeSites.filter(
+    (s) =>
+      Math.abs(s.x - focus.x) +
+        Math.abs(s.y - focus.y) +
+        Math.abs(s.z - focus.z) ===
+      1,
+  );
 }
 export function projectSite(s: Site, depth: boolean, view = 0) {
   const azimuth = ((35 + view * 18) * Math.PI) / 180;

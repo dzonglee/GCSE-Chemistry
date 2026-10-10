@@ -13,6 +13,7 @@ import {
   latticeSites,
   isNeighbour,
   projectSite,
+  neighboursOf,
   type Compound,
 } from "../src/lib/experiments/ionic-lab";
 import {
@@ -22,6 +23,70 @@ import {
 } from "../src/content/experiments/ionic-lab";
 import { ionicBondingJourney } from "../src/content/journeys/ionic-bonding";
 import { tasks } from "../src/content/journeys/helpers";
+
+test("sodium and chloride share an extended lattice, with six opposite nearest neighbours around either ion", () => {
+  const sodium = { x: 2, y: 2, z: 2, charge: 1 as const };
+  const chloride = { x: 2, y: 2, z: 1, charge: -1 as const };
+  const aroundSodium = neighboursOf(sodium);
+  const aroundChloride = neighboursOf(chloride);
+  expect(aroundSodium.map((s) => [s.x, s.y, s.z]).sort()).toEqual(
+    [
+      [1, 2, 2],
+      [2, 1, 2],
+      [2, 2, 1],
+      [2, 2, 3],
+      [2, 3, 2],
+      [3, 2, 2],
+    ].sort(),
+  );
+  expect(aroundChloride.map((s) => [s.x, s.y, s.z]).sort()).toEqual(
+    [
+      [1, 2, 1],
+      [2, 1, 1],
+      [2, 2, 0],
+      [2, 2, 2],
+      [2, 3, 1],
+      [3, 2, 1],
+    ].sort(),
+  );
+  expect(aroundSodium.every((s) => s.charge === -1)).toBe(true);
+  expect(aroundChloride.every((s) => s.charge === 1)).toBe(true);
+  expect(aroundChloride).toContainEqual(sodium);
+  expect(aroundChloride.filter((s) => s.z === chloride.z)).toHaveLength(4);
+  expect(latticeSites.filter((s) => s.charge === 1)).toHaveLength(32);
+  expect(latticeSites.filter((s) => s.charge === -1)).toHaveLength(32);
+});
+
+test("new lattice inspection settings are optional for old v1 drafts, strictly validated and never erase wrong work", () => {
+  const old = initialLab();
+  old.lattice.guess = "4";
+  old.lattice.checked = true;
+  expect(readLab(JSON.stringify(old))).toEqual(old);
+  const current = {
+    ...old,
+    lattice: {
+      ...old.lattice,
+      focus: "chloride" as const,
+      forces: true,
+      relationship: "donor" as const,
+      relationshipChecked: true,
+    },
+  };
+  expect(readLab(JSON.stringify(current))).toEqual(current);
+  for (const bad of [
+    { focus: "potassium" },
+    { focus: null },
+    { forces: "true" },
+    { forces: 1 },
+    { accidentalAnswer: true },
+    { relationship: "pair" },
+    { relationshipChecked: "true" },
+  ]) {
+    expect(
+      readLab(JSON.stringify({ ...old, lattice: { ...old.lattice, ...bad } })),
+    ).toBeNull();
+  }
+});
 
 test("the four usual ion arrangements retain nuclei, every electron and its origin", () => {
   const examples: [

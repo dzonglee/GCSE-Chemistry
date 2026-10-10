@@ -31,6 +31,7 @@ import {
 } from "@/content/experiments/ionic-lab";
 import { Board, ModelNote } from "./ElectronBoard";
 import { LatticeScene } from "./LatticeScene";
+import { ChargeLedger } from "./ChargeLedger";
 import { LabIcon } from "./LabIcon";
 import styles from "./IonicLab.module.css";
 const choices: [Charge, string][] = [
@@ -502,6 +503,9 @@ export function IonicLab() {
                     Check my prediction <LabIcon />
                   </button>
                   {state.nacl.checked && <Feedback {...messages[0]} />}
+                  {state.nacl.checked && (
+                    <ChargeLedger sent={state.nacl.sent} />
+                  )}
                   {completed[0] && (
                     <button
                       className={styles.continueButton}
@@ -613,7 +617,17 @@ export function IonicLab() {
               </div>
               <div className={styles.interactiveRow}>
                 <div className={styles.visualPanel}>
-                  <LatticeScene depth={state.lattice.depth} />
+                  <LatticeScene
+                    depth={state.lattice.depth}
+                    focus={state.lattice.focus}
+                    forces={state.lattice.forces}
+                    onFocus={(focus) =>
+                      edit((s) => ({ ...s, lattice: { ...s.lattice, focus } }))
+                    }
+                    onForces={(forces) =>
+                      edit((s) => ({ ...s, lattice: { ...s.lattice, forces } }))
+                    }
+                  />
                   <button
                     className={styles.depthButton}
                     aria-pressed={state.lattice.depth}
@@ -636,33 +650,83 @@ export function IonicLab() {
                   </p>
                 </div>
                 <div className={styles.responsePanel}>
-                  <Choice
-                    label="Nearest opposite-charge neighbours in 3D?"
-                    value={state.lattice.guess}
-                    options={[
-                      ["4", "4"],
-                      ["6", "6"],
-                      ["8", "8"],
-                    ]}
-                    onChange={(v) =>
-                      edit((s) => ({
-                        ...s,
-                        lattice: { ...s.lattice, guess: v, checked: false },
-                      }))
-                    }
-                  />
-                  <button
-                    className={styles.primary}
-                    onClick={() =>
-                      archiveGuided("ionic-lab-lattice", (s) => ({
-                        ...s,
-                        lattice: { ...s.lattice, depth: true, checked: true },
-                      }))
-                    }
-                  >
-                    Check my prediction <LabIcon />
-                  </button>
-                  {state.lattice.checked && <Feedback {...messages[2]} />}
+                  <div className={styles.networkQuestion}>
+                    <p className={styles.bondBridge}>
+                      A chlorine atom gained an electron from one sodium atom.
+                      Follow the resulting chloride ion in the lattice.
+                    </p>
+                    <Choice
+                      label="Which sodium ions attract this chloride ion?"
+                      value={state.lattice.relationship ?? ""}
+                      options={[
+                        ["donor", "Just its donor"],
+                        ["network", "Other Na⁺ too"],
+                      ]}
+                      onChange={(relationship) =>
+                        edit((s) => ({
+                          ...s,
+                          lattice: {
+                            ...s.lattice,
+                            relationship: relationship as "donor" | "network",
+                            relationshipChecked: false,
+                          },
+                        }))
+                      }
+                    />
+                    <button
+                      className={styles.primary}
+                      disabled={!state.lattice.relationship}
+                      onClick={() =>
+                        archiveGuided("ionic-lab-network", (s) => ({
+                          ...s,
+                          lattice: { ...s.lattice, relationshipChecked: true },
+                        }))
+                      }
+                    >
+                      Check the connection <LabIcon />
+                    </button>
+                    {state.lattice.relationshipChecked && (
+                      <Feedback
+                        good={state.lattice.relationship === "network"}
+                        title={
+                          state.lattice.relationship === "network"
+                            ? "Transfer made ions. Attraction makes a network."
+                            : "The transferred electron does not choose a partner."
+                        }
+                        detail="Every nearby sodium ion attracts this chloride ion, and those sodium ions also attract other chloride ions. Strong electrostatic attraction acts throughout the giant lattice. NaCl gives the 1:1 ion ratio, not a separate molecule."
+                      />
+                    )}
+                  </div>
+                  <div className={styles.geometryQuestion}>
+                    <h2>Inspect the geometry</h2>
+                    <Choice
+                      label="Nearest opposite-charge neighbours in 3D?"
+                      value={state.lattice.guess}
+                      options={[
+                        ["4", "4"],
+                        ["6", "6"],
+                        ["8", "8"],
+                      ]}
+                      onChange={(v) =>
+                        edit((s) => ({
+                          ...s,
+                          lattice: { ...s.lattice, guess: v, checked: false },
+                        }))
+                      }
+                    />
+                    <button
+                      className={styles.primary}
+                      onClick={() =>
+                        archiveGuided("ionic-lab-lattice", (s) => ({
+                          ...s,
+                          lattice: { ...s.lattice, depth: true, checked: true },
+                        }))
+                      }
+                    >
+                      Check my prediction <LabIcon />
+                    </button>
+                    {state.lattice.checked && <Feedback {...messages[2]} />}
+                  </div>
                   {completed[2] && (
                     <button
                       className={styles.continueButton}

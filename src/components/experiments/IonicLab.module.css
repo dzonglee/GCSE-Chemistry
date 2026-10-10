@@ -1199,7 +1199,7 @@
 }
 @keyframes arrive {
   from {
-    opacity: 0.5;
+    opacity: 1;
     transform: translateY(4px);
   }
   to {
@@ -1729,6 +1729,149 @@
 }
 .compactTitle {
   display: none;
+}
+.latticeInspect {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.latticeInspect button {
+  flex: 1;
+  padding: 8px;
+  font-size: 13px;
+  transition:
+    border-color 150ms,
+    box-shadow 150ms;
+}
+.lab .latticeInspect button[aria-pressed="true"],
+.lab .latticeInspect button[aria-pressed="true"]:hover {
+  background: #173d37;
+  color: #fff;
+  border-color: #173d37;
+}
+.lab .forceToggle {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  color: #14634f;
+  background: #edf7f1;
+  font-size: 13px;
+}
+.latticeLines .forceArrow {
+  stroke: #14634f;
+  stroke-width: 3;
+  stroke-dasharray: none;
+}
+.forceCaption,
+.latticeInventory {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--lab-muted);
+  margin: 8px 0;
+}
+.bondBridge {
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+.bondBridge strong {
+  display: block;
+  margin-bottom: 6px;
+}
+.networkQuestion {
+  margin: 0;
+}
+.geometryQuestion {
+  border-top: 1px solid var(--lab-line);
+  margin-top: 24px;
+  padding-top: 16px;
+}
+.geometryQuestion h2 {
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+@media (max-width: 620px) {
+  .lab[data-scene="2"] .networkQuestion {
+    order: -1;
+    width: 100%;
+  }
+  .lab[data-scene="2"] .geometryQuestion {
+    width: 100%;
+  }
+}
+.networkQuestion .choice legend {
+  font-size: 16px;
+}
+.networkQuestion .choice button {
+  font-size: 13px;
+}
+.chargeLedger {
+  margin-top: 12px;
+  border: 1px solid #b6d7c9;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #f5faf7;
+  font-size: 13px;
+}
+.chargeLedger summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+}
+.chargeLedger summary::after {
+  content: "+";
+  margin-left: auto;
+}
+.chargeLedger[open] summary::after {
+  content: "−";
+}
+.chargeLedger p {
+  font-size: 12px;
+}
+.chargeLedger > strong {
+  display: block;
+  font-size: 22px;
+  margin-top: 12px;
+}
+.chargePairs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+.chargePairs > span {
+  font-weight: 700;
+  font-size: 12px;
+}
+.chargePairs > div {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  gap: 3px;
+}
+.chargePairs i {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  color: #294eaa;
+  background: #dce7fc;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 800;
+  min-height: 18px;
+}
+.chargePairs i[data-positive] {
+  background: #ffdbb4;
+  color: #8c4019;
+}
+.chargePairs i[data-missing] {
+  border: 1px dashed #8099a4;
+  background: transparent;
+}
+.chargePairs i[data-unmatched] {
+  box-shadow: 0 0 0 2px #8c4019;
+  background: #ffc078;
 }
 @media (max-width: 620px) {
   :global(main):has(.lab) {

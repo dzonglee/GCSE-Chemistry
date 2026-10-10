@@ -22,10 +22,10 @@ export const chapters = [
   },
   {
     label: "Connect",
-    compactTitle: "See the missing depth.",
-    title: "Look beyond\nthe flat picture.",
+    compactTitle: "From ions to a solid.",
+    title: "One electron.\nA whole network.",
     description:
-      "Explore a sodium chloride lattice. The attraction continues in every direction.",
+      "Electron transfer forms ions. Explore how attraction between ions builds a giant structure.",
     kicker: "03 / ZOOM OUT",
     colour: "mint",
   },

@@ -457,6 +457,120 @@ test("rotating a 3D cutaway retains six opposite neighbours and its planar slice
   await expect(page.locator("[data-neighbour]")).toHaveCount(4);
 });
 
+test("charge bookkeeping and following either lattice ion distinguish ion formation from the extended attraction network", async ({
+  page,
+}) => {
+  await page.goto(route);
+  await expect(page.getByText("See why sodium becomes positive")).toHaveCount(
+    0,
+  );
+  await press(page, "Send an electron from sodium to chlorine");
+  await press(page, "1−");
+  await press(page, "Check my prediction");
+  const ledgerToggle = page.getByText("See why sodium becomes positive", {
+    exact: true,
+  });
+  if (await page.evaluate(() => navigator.maxTouchPoints > 0))
+    await ledgerToggle.tap();
+  else await ledgerToggle.click();
+  await expect(
+    page.getByRole("img", {
+      name: /Sodium has eleven positive proton charges and 10 negative electron charges/,
+    }),
+  ).toBeVisible();
+  await expect(page.getByText("11 − 10 = +1", { exact: true })).toBeVisible();
+  const positive = page.locator('[data-positive="true"]');
+  await expect(positive).toHaveCount(11);
+  await expect(page.locator('[data-missing="true"]')).toHaveCount(1);
+  await press(page, "Open Connect chapter");
+  await press(page, "Follow Cl⁻");
+  await press(page, "Show attraction directions");
+  await expect(page.locator("[data-force-direction]")).toHaveCount(4);
+  await expect(page.locator("[data-selected-ion]")).toHaveAttribute(
+    "data-lattice-charge",
+    "-1",
+  );
+  await press(page, "Reveal the third dimension");
+  await expect(page.locator("[data-force-direction]")).toHaveCount(6);
+  await expect(page.locator('[data-lattice-charge="1"]')).toHaveCount(32);
+  await expect(page.locator('[data-lattice-charge="-1"]')).toHaveCount(32);
+  await press(page, "4");
+  await press(page, "Check my prediction");
+  await press(page, "Just its donor");
+  await press(page, "Check the connection");
+  await expect(
+    page.getByText("The transferred electron does not choose a partner."),
+  ).toBeVisible();
+  await page.reload();
+  await expect(
+    page.getByRole("button", { name: "Follow Cl⁻", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator("[data-force-direction]")).toHaveCount(6);
+  await expect
+    .poll(async () => (await saved(page)).lattice)
+    .toMatchObject({
+      focus: "chloride",
+      forces: true,
+      guess: "4",
+      checked: true,
+      relationship: "donor",
+      relationshipChecked: true,
+    });
+  await layout(
+    page,
+    // The bonding response now precedes the model on mobile. Gate the actual
+    // first complete answer; all model controls still receive the 44px check.
+    page.getByRole("button", { name: "Just its donor", exact: true }),
+  );
+  await press(page, "Follow Na⁺");
+  await expect(page.locator("[data-selected-ion]")).toHaveAttribute(
+    "data-lattice-charge",
+    "1",
+  );
+  await expect(page.locator("[data-force-direction]")).toHaveCount(6);
+  await expect(page.locator('[data-lattice-charge="1"]')).toHaveCount(32);
+  await expect(page.locator('[data-lattice-charge="-1"]')).toHaveCount(32);
+  await press(page, "Hide attraction directions");
+  await expect(page.locator("[data-force-direction]")).toHaveCount(0);
+  await expect(page.locator("[data-neighbour]")).toHaveCount(6);
+  expect((await saved(page)).lattice.guess).toBe("4");
+  await press(page, "Other Na⁺ too");
+  await expect(
+    page.getByText("The transferred electron does not choose a partner."),
+  ).toHaveCount(0);
+  await press(page, "Check the connection");
+  await expect(
+    page.getByText("Transfer made ions. Attraction makes a network."),
+  ).toBeVisible();
+  const work = await saved(page);
+  expect(work.lattice.relationship).toBe("network");
+  await expect
+    .poll(async () =>
+      page.evaluate(
+        (key) =>
+          JSON.parse(localStorage.getItem(key)!).work[
+            "experiment-ionic-bonding"
+          ].attempts["ionic-lab-network"]?.length ?? 0,
+        STORAGE_KEY,
+      ),
+    )
+    .toBe(2);
+  const history = await page.evaluate(
+    (key) =>
+      JSON.parse(localStorage.getItem(key)!).work["experiment-ionic-bonding"]
+        .attempts["ionic-lab-network"],
+    STORAGE_KEY,
+  );
+  expect(history).toHaveLength(2);
+  expect(
+    history.every(
+      (attempt: { helped: boolean; fresh: boolean; correct: boolean }) =>
+        attempt.helped && !attempt.fresh && !attempt.correct,
+    ),
+  ).toBe(true);
+  expect(JSON.parse(history[0].answer).lattice.relationship).toBe("donor");
+});
+
 test("three incorrect responses stay sealed until whole submission; editing invalidates recording and written work stays manual", async ({
   page,
 }) => {
