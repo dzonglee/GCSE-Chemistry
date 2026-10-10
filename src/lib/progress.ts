@@ -1,6 +1,7 @@
 import { useSyncExternalStore } from "react";
 import { lessons, questionById } from "@/content/curriculum";
 import { assessmentExposureIds } from "@/content/assessment-exposure";
+import { fullPapers } from "@/content/full-assessments";
 import { mark } from "./marking";
 import { validModel } from "./model-state";
 import { validTaskModels } from "./workbench";
@@ -403,11 +404,14 @@ export function setWork(id: string, change: (w: Work) => Work) {
   }));
 }
 export function exposureIds(ids: string[]) {
-  const bank = lessons.flatMap((l) => [
-    ...l.questions,
-    ...l.checks,
-    ...(l.journey ? tasks(l.journey) : []),
-  ]);
+  const bank = [
+    ...lessons.flatMap((l) => [
+      ...l.questions,
+      ...l.checks,
+      ...(l.journey ? tasks(l.journey) : []),
+    ]),
+    ...fullPapers.flatMap((paper) => paper.questions),
+  ];
   return [
     ...new Set(
       ids.flatMap((id) => [

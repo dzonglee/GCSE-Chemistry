@@ -12,11 +12,13 @@ export function OrganicDrawingInput({
   onChange,
   drawing,
   disabled = false,
+  contextLabel,
 }: {
   value: string;
   onChange: (s: string) => void;
   drawing: OrganicDrawingData;
   disabled?: boolean;
+  contextLabel?: string;
 }) {
   const uid = useId(),
     d = readOrganicDrawing(value);
@@ -43,7 +45,11 @@ export function OrganicDrawingInput({
   return (
     <section
       className="organic-drawing-input"
-      aria-label="Organic structure construction"
+      aria-label={
+        contextLabel
+          ? `${contextLabel}: organic structure construction`
+          : "Organic structure construction"
+      }
     >
       <p>{drawing.note}</p>
       <label htmlFor={uid + "-n"}>
@@ -111,6 +117,7 @@ export function OrganicDrawingInput({
             </p>
           )}
           <OrganicDisplayed
+            contextLabel={contextLabel}
             n={Number(d.n)}
             board={d}
             onToggle={disabled ? undefined : toggle}

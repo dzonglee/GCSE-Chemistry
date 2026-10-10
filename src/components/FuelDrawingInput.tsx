@@ -10,11 +10,15 @@ export function FuelDrawingInput({
   onChange,
   drawing,
   disabled = false,
+  compact = false,
+  contextLabel,
 }: {
   value: string;
   onChange: (raw: string) => void;
   drawing: FuelDrawingData;
   disabled?: boolean;
+  compact?: boolean;
+  contextLabel?: string;
 }) {
   const b = readFuelDrawing(value, drawing.data);
   const temperature = drawing.data.context === "temperature";
@@ -41,9 +45,11 @@ export function FuelDrawingInput({
     <section
       className={`fuel-drawing-input${temperature ? " temperature-drawing-input" : ""}`}
       aria-label={
-        temperature
-          ? "Temperature graph construction"
-          : "Independent fuel graph construction"
+        contextLabel
+          ? `${contextLabel}: graph construction`
+          : temperature
+            ? "Temperature graph construction"
+            : "Independent fuel graph construction"
       }
     >
       {temperature ? (
@@ -63,6 +69,24 @@ export function FuelDrawingInput({
             ))}
           </tbody>
         </table>
+      ) : compact ? (
+        <table className="temperature-source-table">
+          <caption>
+            {drawing.data.xName} → {drawing.data.yName}
+            {drawing.data.yUnit ? ` / ${drawing.data.yUnit}` : ""}
+          </caption>
+          <tbody>
+            {[0, 3].map((i) => (
+              <tr key={i}>
+                {drawing.data.points.slice(i, i + 3).map(([x, y]) => (
+                  <td key={x}>
+                    {x} → {y}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       ) : (
         <>
           <p>{drawing.note}</p>
@@ -75,11 +99,24 @@ export function FuelDrawingInput({
         </>
       )}
       <FuelPlotEditor
+        contextLabel={contextLabel}
         data={drawing.data}
         board={b}
         onChange={(changes) => onChange(JSON.stringify({ ...b, ...changes }))}
         disabled={disabled}
       />
+      {compact && !temperature && (
+        <details>
+          <summary>About these observations and your construction</summary>
+          <p>{drawing.note}</p>
+          <p>{drawing.data.note}</p>
+          <p>
+            Construct each original point and your separate fit curve from blank
+            coordinates. The original scales stay fixed. Curves and estimates
+            are retained for manual review after submission.
+          </p>
+        </details>
+      )}
       {temperature && (
         <>
           <p>{drawing.note}</p>

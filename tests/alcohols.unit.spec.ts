@@ -77,7 +77,9 @@ test("all93 demands retain first-four scope, literal numeric references and hone
                 ...emptyFuelDrawing(t.fuelDrawing.data),
                 p0x: "1",
               })
-            : t.answer,
+            : t.organicDrawing
+              ? JSON.stringify({ ...emptyOrganicDrawing(), n: "1" })
+              : t.answer,
         ).selfReview,
       ).toBe(true);
       expect(mark(t, t.answer).correct).toBe(false);

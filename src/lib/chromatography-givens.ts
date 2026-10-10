@@ -16,6 +16,20 @@ export type ChromaGivenSource = {
   note: string;
 };
 export const chromaGivenSources: Record<string, ChromaGivenSource> = {
+  paper2Foundation: {
+    title: "Original full-paper calibrated chromatogram",
+    origin: 15,
+    front: 95,
+    top: 110,
+    unit: "mm",
+    phaseNote:
+      "The lanes run together on the same paper in the same solvent and at the same temperature.",
+    lanes: [
+      { label: "A", centres: [39, 71], colour: "purple" },
+      { label: "B", centres: [51], colour: "blue" },
+    ],
+    note: "Original illustrative measured coordinates above the paper bottom. Use each spot centre and measure both distances from the origin; this calibrated schematic is not a life-size sheet.",
+  },
   coldAmeasurement: {
     title: "Original calibrated record A",
     origin: 18,

@@ -18,6 +18,8 @@ export interface ExamPart {
   /** Only a discrete, unambiguous answer point; never automatic method marks. */
   automaticMarks: number;
   criteria: PaperCriterion[];
+  /** A worked native construction shown only after whole-paper submission. */
+  referenceConstruction?: string;
   levels?: { min: number; max: number; text: string }[];
 }
 export interface ExamPaper {

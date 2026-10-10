@@ -214,6 +214,7 @@ export function mark(
   }
   if (
     (q.naturalDrawing && !readNaturalDrawing(raw, q.naturalDrawing)) ||
+    (q.organicDrawing && !readOrganicDrawing(raw)) ||
     (q.pathwayDrawing && !readPathwayDrawing(raw)) ||
     (q.polymerisationDrawing && !readPolymerisationDrawing(raw)) ||
     (q.polyesterDrawing && !readPolyesterResponse(raw, q.polyesterDrawing))

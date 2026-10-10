@@ -29,8 +29,10 @@ const response = (answer: string, working?: string): Response => ({
   at: 20,
 });
 
-test("one full Foundation paper has 100 allocated marks, 105 minutes and explicit original AO/maths/practical demands", () => {
-  expect(fullPapers).toHaveLength(1);
+test("original full Foundation Paper1 retains 100 allocated marks, 105 minutes and explicit AO/maths/practical demands", () => {
+  expect(fullPapers.map((p) => p.slug)).toContain(paper.id);
+  expect(fullPapers).toHaveLength(2);
+  expect(fullPapers[0].examPaper).toBe(paper);
   expect(paper.parts).toHaveLength(50);
   expect(paper.minutes).toBe(105);
   expect(paper.parts.reduce((sum, p) => sum + p.marks, 0)).toBe(100);

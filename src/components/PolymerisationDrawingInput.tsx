@@ -14,12 +14,14 @@ export function PolymerisationDrawingInput({
   drawing,
   disabled = false,
   compact = false,
+  contextLabel,
 }: {
   value: string;
   onChange: (value: string) => void;
   drawing: PolymerisationDrawing;
   disabled?: boolean;
   compact?: boolean;
+  contextLabel?: string;
 }) {
   const id = useId(),
     saved = value ? readPolymerisationDrawing(value) : null,
@@ -103,7 +105,15 @@ export function PolymerisationDrawingInput({
           ["inside", "n inside brackets"],
         ])}
       </div>
-      <PolymerisationDisplayed groups={boardGroups(b)} {...b} />
+      <PolymerisationDisplayed
+        groups={boardGroups(b)}
+        {...b}
+        label={
+          contextLabel
+            ? `${contextLabel}: displayed polymerisation construction`
+            : undefined
+        }
+      />
       {compact && (
         <p>{drawing.note} Your construction is saved for manual review.</p>
       )}

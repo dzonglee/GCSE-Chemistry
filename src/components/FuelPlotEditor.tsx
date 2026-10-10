@@ -15,12 +15,14 @@ export function FuelPlotEditor({
   inputValues = board,
   onChange,
   disabled = false,
+  contextLabel,
 }: {
   data: FuelPlotRecord;
   board: Record<string, string>;
   inputValues?: Record<string, string>;
   onChange: (changes: Record<string, string>) => void;
   disabled?: boolean;
+  contextLabel?: string;
 }) {
   const uid = useId(),
     [selected, setSelected] = useState(0),
@@ -149,7 +151,7 @@ export function FuelPlotEditor({
             <label htmlFor={uid + "-" + key}>
               {layer === "curve"
                 ? `Your fit height at original x=${data.points[index][0]} (${data.yUnit})`
-                : `${straight ? "Point" : "Your plotted point"} ${index + 1} ${i === 0 ? "x (" + data.xUnit + ")" : "y (" + data.yUnit + ")"}`}
+                : `${straight ? "Point" : "Your plotted point"} ${index + 1} ${i === 0 ? "x" + (data.xUnit ? " (" + data.xUnit + ")" : "") : "y" + (data.yUnit ? " (" + data.yUnit + ")" : "")}`}
             </label>
             <input
               id={uid + "-" + key}
@@ -168,9 +170,11 @@ export function FuelPlotEditor({
     <section
       className="fuel-plot-editor"
       aria-label={
-        data.context === "temperature"
-          ? "Temperature observation plot editor"
-          : "Fuel observation plot editor"
+        contextLabel
+          ? `${contextLabel}: observation plot editor`
+          : data.context === "temperature"
+            ? "Temperature observation plot editor"
+            : "Fuel observation plot editor"
       }
     >
       {straight && coordinateFields}
@@ -204,7 +208,7 @@ export function FuelPlotEditor({
           aria-pressed={layer === "point"}
           onClick={() => setLayer("point")}
         >
-          Edit observation point
+          {disabled ? "View observation points" : "Edit observation point"}
         </button>
         <button
           type="button"
@@ -212,7 +216,11 @@ export function FuelPlotEditor({
           aria-pressed={layer === "curve"}
           onClick={() => setLayer("curve")}
         >
-          {straight ? "Edit your best-fit line" : "Edit your fit curve"}
+          {disabled
+            ? `View fit ${fitName}`
+            : straight
+              ? "Edit your best-fit line"
+              : "Edit your fit curve"}
         </button>
       </div>
       <p>
@@ -226,9 +234,11 @@ export function FuelPlotEditor({
         className="fuel-plot-scroll"
         role="region"
         aria-label={
-          data.context === "temperature"
-            ? "Temperature graph with fixed original scales"
-            : "Fuel graph with fixed original scales"
+          contextLabel
+            ? `${contextLabel}: graph with fixed original scales`
+            : data.context === "temperature"
+              ? "Temperature graph with fixed original scales"
+              : "Fuel graph with fixed original scales"
         }
         tabIndex={0}
         onKeyDown={(e) => {
@@ -437,7 +447,7 @@ export function FuelPlotEditor({
             {data.xName}
           </text>
           <text x={(left + right) / 2} y="431" textAnchor="middle">
-            ({data.xUnit})
+            {data.xUnit ? `(${data.xUnit})` : ""}
           </text>
           <text x="16" y="19">
             {data.yName} ({data.yUnit})

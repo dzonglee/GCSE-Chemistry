@@ -529,6 +529,45 @@ footer > div {
 .question-panel[data-full-paper] .written-equation-prompt {
   margin: 8px 0;
 }
+.question-panel[data-full-paper]
+  .polymerisation-assessment-response
+  > .polymerisation-drawing {
+  padding: 12px;
+}
+.question-panel[data-full-paper]
+  .polymerisation-assessment-response
+  > .polymerisation-drawing
+  .polymerisation-fields {
+  margin: 8px 0;
+}
+.chroma-assessment-coordinates {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 8px 0 12px;
+  font-size: 14px;
+}
+.chroma-assessment-coordinates caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.chroma-assessment-coordinates td {
+  padding: 4px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.chroma-assessment-response > .chroma-given {
+  margin-top: 16px;
+}
+@media (min-width: 900px) {
+  .question-panel[data-full-paper] .polymerisation-assessment-response {
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) minmax(0, 2fr);
+    align-items: start;
+    gap: 16px;
+  }
+}
 .question-panel[data-full-paper] .isotope-data {
   margin: 8px 0 12px;
 }

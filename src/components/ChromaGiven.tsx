@@ -10,6 +10,35 @@ export function ChromaGiven({ data }: { data: ChromaGivenData }) {
     return <p role="alert">The original chromatogram record is unavailable.</p>;
   return <ChromaOriginalPlot source={source} />;
 }
+export function ChromaCoordinateTable({ data }: { data: ChromaGivenData }) {
+  const source = chromaGivenSources[data.record];
+  if (!source)
+    return <p role="alert">The original chromatogram record is unavailable.</p>;
+  return (
+    <table className="chroma-assessment-coordinates">
+      <caption>Coordinates above paper bottom / mm</caption>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Origin:</strong> {source.origin}
+          </td>
+          <td>
+            <strong>Front:</strong> {source.front ?? "unrecorded"}
+          </td>
+        </tr>
+        {Array.from({ length: Math.ceil(source.lanes.length / 2) }, (_, i) => (
+          <tr key={i}>
+            {source.lanes.slice(i * 2, i * 2 + 2).map((lane) => (
+              <td key={lane.label}>
+                <strong>{lane.label} centres:</strong> {lane.centres.join(", ")}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
 export function ChromaOriginalPlot({ source }: { source: ChromaGivenSource }) {
   const width = Math.max(380, 120 + source.lanes.length * 100),
     scale = 2.5,

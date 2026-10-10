@@ -1,0 +1,240 @@
+{
+  "build": "jhvL2_XVQy1C1gg-965Ln",
+  "note": "Controlled QA openings; responses filled through native UI and retained after reload. Incorrect repeat notation, missing oxygen hydrogen and one incorrect observation are deliberately retained. Whole49-part unseeded flow verified separately.",
+  "captures": [
+    {
+      "file": "320-intro-viewport.png",
+      "width": 320,
+      "number": null,
+      "sha256": "5821badf63632c1a8d9f5f91752a817b30f7436069a436f20d1123446e9cda69"
+    },
+    {
+      "file": "320-1b-viewport.png",
+      "width": 320,
+      "number": "1(b)",
+      "sha256": "0efaea54bafd2eafca6948e761d85131e5f1bf8d60a2b5c4fbb8240135fe359a"
+    },
+    {
+      "file": "320-4a-viewport.png",
+      "width": 320,
+      "number": "4(a)",
+      "sha256": "a6fffbca12ad16bb732a7069a94584036b8a616f0d666fe808ac81b2b3919e32"
+    },
+    {
+      "file": "320-4a-full.png",
+      "width": 320,
+      "number": "4(a)",
+      "sha256": "294be367958097eec48d4d8da6d87d8adde038a7d4f6361d5bfedf0483f710e5"
+    },
+    {
+      "file": "320-5a-viewport.png",
+      "width": 320,
+      "number": "5(a)",
+      "sha256": "ec2479ef5051acca4b5931afc33cd8b6513a1207643e88c824ba2d84c0ed5bb2"
+    },
+    {
+      "file": "320-5a-full.png",
+      "width": 320,
+      "number": "5(a)",
+      "sha256": "b8f204c0194d6549e7e1481aabf38780a6e2801382afd34a10d2365e31589f58"
+    },
+    {
+      "file": "320-5e-viewport.png",
+      "width": 320,
+      "number": "5(e)",
+      "sha256": "09f18fa9813b3d7de2fd5850e4727f5f744059d9ec626fbb89a1978208f690af"
+    },
+    {
+      "file": "320-5e-full.png",
+      "width": 320,
+      "number": "5(e)",
+      "sha256": "4e3c569a4aa52cb7582367f5d1da9aa55302d27be04afd681cc31516d57d191c"
+    },
+    {
+      "file": "320-6b-viewport.png",
+      "width": 320,
+      "number": "6(b)",
+      "sha256": "82f157bf63807325824df5cb1ee72273ae7ef929933e666745ea4fe00cc53984"
+    },
+    {
+      "file": "320-6b-full.png",
+      "width": 320,
+      "number": "6(b)",
+      "sha256": "d352a13d1a112c3282cebf9327b181b78c6b3ba0a9300018940654cf4054289c"
+    },
+    {
+      "file": "320-7a-viewport.png",
+      "width": 320,
+      "number": "7(a)",
+      "sha256": "58f947ac0d481a377efa84bfb240815eac6837140e87d8a1c4b83c3569321a96"
+    },
+    {
+      "file": "320-9b-viewport.png",
+      "width": 320,
+      "number": "9(b)",
+      "sha256": "a0e6b0e4c1c9ef3d6fedca322f25b9d0f13730c0b22acb1d6b3e18d3fdb632d5"
+    },
+    {
+      "file": "320-10d-viewport.png",
+      "width": 320,
+      "number": "10(d)",
+      "sha256": "8e365e39e16932e8b6cb17f3dfa6348861270b6953120b5aac86eef4ace039f0"
+    },
+    {
+      "file": "390-intro-viewport.png",
+      "width": 390,
+      "number": null,
+      "sha256": "ebfba9a1ed70cc02e4eb194563ce070540743ccf7cdc09243877dbacfbdfab3e"
+    },
+    {
+      "file": "390-1b-viewport.png",
+      "width": 390,
+      "number": "1(b)",
+      "sha256": "aee9e281780583d4d0e6e2a9596e9532c1c64104eb97fd2d6e281571fe4cc5f2"
+    },
+    {
+      "file": "390-4a-viewport.png",
+      "width": 390,
+      "number": "4(a)",
+      "sha256": "56d0e2665c92e5ec0c5efeec6e0dc9607001b8b40714d7bde9fdc8e94f19aa80"
+    },
+    {
+      "file": "390-4a-full.png",
+      "width": 390,
+      "number": "4(a)",
+      "sha256": "6ca787a2dc0db8a8ef797f0ea00b8a410fa2a986dd6cd861410638c66b8ce3c5"
+    },
+    {
+      "file": "390-5a-viewport.png",
+      "width": 390,
+      "number": "5(a)",
+      "sha256": "14692b7a04628c029a8dd7b8bbbc6d1aeba10f8db73990bd6baf3bf347df2290"
+    },
+    {
+      "file": "390-5a-full.png",
+      "width": 390,
+      "number": "5(a)",
+      "sha256": "6549318b6f17a7b435f97b487db4cdaecc498cb87732b1e3f095dcf953191b31"
+    },
+    {
+      "file": "390-5e-viewport.png",
+      "width": 390,
+      "number": "5(e)",
+      "sha256": "603a43ea7c011131587a8ba3184e6fcf9a17d32573fc962151a0cf1f581c35d0"
+    },
+    {
+      "file": "390-5e-full.png",
+      "width": 390,
+      "number": "5(e)",
+      "sha256": "57b0a5a4e02273658f4bf05675babd43420e2ae5435d66a53ce51c4015d9f407"
+    },
+    {
+      "file": "390-6b-viewport.png",
+      "width": 390,
+      "number": "6(b)",
+      "sha256": "db6440c2b3884127ed583d87c7b34c4e3730c5cf8abb7fc51ca95b73091ee3b7"
+    },
+    {
+      "file": "390-6b-full.png",
+      "width": 390,
+      "number": "6(b)",
+      "sha256": "5e69bfcddfef7aeb3dd308186022b0362ec587adadbcacd22cc3b3bcd6560b39"
+    },
+    {
+      "file": "390-7a-viewport.png",
+      "width": 390,
+      "number": "7(a)",
+      "sha256": "587f18d4185a5eb5610c7b811a8cb1af88c47f1742bcb863f44647b85b3a3a35"
+    },
+    {
+      "file": "390-9b-viewport.png",
+      "width": 390,
+      "number": "9(b)",
+      "sha256": "e5fc132c198d0c71aa72ee3ea96ef03c2ea0a54ae1f2f6b414a91492055f4e0f"
+    },
+    {
+      "file": "390-10d-viewport.png",
+      "width": 390,
+      "number": "10(d)",
+      "sha256": "2538330968205bdd7130e0891d7f8f0611d04ccb7b5b4a4b847f21dc2a38c970"
+    },
+    {
+      "file": "1280-intro-viewport.png",
+      "width": 1280,
+      "number": null,
+      "sha256": "2321f04584cea8a13de535818166b93ec39ac9221c299db6af9fa708d991ba9c"
+    },
+    {
+      "file": "1280-1b-viewport.png",
+      "width": 1280,
+      "number": "1(b)",
+      "sha256": "6ead63a6fe0cc5a966b850788a3b1fbd07620d944bb6b9966d24068629a6d540"
+    },
+    {
+      "file": "1280-4a-viewport.png",
+      "width": 1280,
+      "number": "4(a)",
+      "sha256": "f0ca8cc87a64aac516021b0403f9fd6f2b22dc904dea552172db66d4858543fa"
+    },
+    {
+      "file": "1280-4a-full.png",
+      "width": 1280,
+      "number": "4(a)",
+      "sha256": "04c8a5a94fbf7e8018e388efa2f1e5a8decd26fbf337060f06fb8ce16a21159e"
+    },
+    {
+      "file": "1280-5a-viewport.png",
+      "width": 1280,
+      "number": "5(a)",
+      "sha256": "82e651db352dc09d791d0eae7d8955203bd85de25f746f3f44adf264c8c8ba89"
+    },
+    {
+      "file": "1280-5a-full.png",
+      "width": 1280,
+      "number": "5(a)",
+      "sha256": "596022fbcb8bb7905e60896aff43cad2307b2a4b14bb02b665f5e20ed975b062"
+    },
+    {
+      "file": "1280-5e-viewport.png",
+      "width": 1280,
+      "number": "5(e)",
+      "sha256": "655fca093dc066d3e427f28a3727693f2de857ea6be33f656df53dc68c82db74"
+    },
+    {
+      "file": "1280-5e-full.png",
+      "width": 1280,
+      "number": "5(e)",
+      "sha256": "865e2673d263d8f8b99b339ff67dc98d47c687441504283aa680e3f721344766"
+    },
+    {
+      "file": "1280-6b-viewport.png",
+      "width": 1280,
+      "number": "6(b)",
+      "sha256": "828e137ee1532d2fc0ab831fc1718ded1a431f3485aa8d2d07fb0c262c998019"
+    },
+    {
+      "file": "1280-6b-full.png",
+      "width": 1280,
+      "number": "6(b)",
+      "sha256": "5fdf2428fc2cc4d97a3c452c383891f94307650dd8fc21564303e24829ced409"
+    },
+    {
+      "file": "1280-7a-viewport.png",
+      "width": 1280,
+      "number": "7(a)",
+      "sha256": "2bea36242226bc2189500a5527d16d0740521f951bba41df438172acfdf0f899"
+    },
+    {
+      "file": "1280-9b-viewport.png",
+      "width": 1280,
+      "number": "9(b)",
+      "sha256": "58b9ca93ce27b649324c818080a133c8f7a45c13f1b05a35e25164a750972aad"
+    },
+    {
+      "file": "1280-10d-viewport.png",
+      "width": 1280,
+      "number": "10(d)",
+      "sha256": "f672b90e63829283d7b885cda981060fc0f890403c1562e6f2ffa718becda47f"
+    }
+  ]
+}

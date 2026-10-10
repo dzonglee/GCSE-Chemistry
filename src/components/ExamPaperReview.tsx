@@ -132,10 +132,13 @@ export function ExamPaperReview({
                     q.arrangement ||
                     q.profileDrawing ||
                     q.fuelDrawing ||
+                    q.organicDrawing ||
+                    q.polymerisationDrawing ||
                     q.isotopeData) && (
                     <QuestionInput
                       question={q}
                       value={response.answer}
+                      contextLabel={`Retained ${part.number} response`}
                       disabled
                       onChange={() => {}}
                       compactAssessment
@@ -154,6 +157,26 @@ export function ExamPaperReview({
                   </p>
                   {q.fuelDrawing && (
                     <TemperatureGraphReference drawing={q.fuelDrawing} />
+                  )}
+                  {part.referenceConstruction && (
+                    <section
+                      className="paper-worked-construction"
+                      aria-label={`Worked visual reference for ${part.number}`}
+                    >
+                      <h3>Worked visual reference</h3>
+                      <p>
+                        One valid construction; equivalent structures or other
+                        suitable smooth fits can also earn the described marks.
+                      </p>
+                      <QuestionInput
+                        question={q}
+                        value={part.referenceConstruction}
+                        contextLabel={`Worked ${part.number} reference`}
+                        disabled
+                        onChange={() => {}}
+                        compactAssessment
+                      />
+                    </section>
                   )}
                   {(q.profileDrawing ||
                     q.drawArrangement ||

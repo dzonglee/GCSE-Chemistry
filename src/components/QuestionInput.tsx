@@ -30,7 +30,7 @@ import { InstrumentalGivenFigure } from "./InstrumentalFigures";
 import { IonGiven } from "./IonGiven";
 import { GasSourceFigure } from "./GasSourceFigure";
 import { GasDrawingInput } from "./GasDrawingInput";
-import { ChromaGiven } from "./ChromaGiven";
+import { ChromaGiven, ChromaCoordinateTable } from "./ChromaGiven";
 import { ChromaDrawingInput } from "./ChromaDrawingInput";
 import { PurityDrawingInput } from "./PurityDrawingInput";
 import { NaturalGiven, NaturalDrawingInput } from "./NaturalDrawingInput";
@@ -96,8 +96,25 @@ type InputProps = {
   naturalInstructions?: string;
   compactHistorical?: boolean;
   compactMaterials?: boolean;
+  contextLabel?: string;
 };
 export function QuestionInput(props: InputProps) {
+  const originalPolymer = props.question.polymerisationGiven && (
+    <PolymerisationDisplayed
+      groups={props.question.polymerisationGiven.groups}
+      bond={props.question.polymerisationGiven.polymer ? "1" : "2"}
+      left={props.question.polymerisationGiven.polymer ? "1" : "0"}
+      right={props.question.polymerisationGiven.polymer ? "1" : "0"}
+      brackets={props.question.polymerisationGiven.polymer ? "1" : "0"}
+      countMark={props.question.polymerisationGiven.polymer ? "n" : "none"}
+      label={
+        props.contextLabel
+          ? `${props.contextLabel}: original supplied structure`
+          : "Original supplied structure"
+      }
+      compact={props.compactAssessment}
+    />
+  );
   return (
     <>
       {props.question.elementReference && <FirstTwentyReference symbolsOnly />}
@@ -170,9 +187,16 @@ export function QuestionInput(props: InputProps) {
       {props.question.gasGiven && (
         <GasSourceFigure data={props.question.gasGiven} />
       )}
-      {props.question.chromatographyGiven && (
-        <ChromaGiven data={props.question.chromatographyGiven} />
-      )}
+      {props.question.chromatographyGiven &&
+        (props.compactAssessment ? (
+          <div className="chroma-assessment-response">
+            <ChromaCoordinateTable data={props.question.chromatographyGiven} />
+            <ResponseInput {...props} />
+            <ChromaGiven data={props.question.chromatographyGiven} />
+          </div>
+        ) : (
+          <ChromaGiven data={props.question.chromatographyGiven} />
+        ))}
       {props.question.naturalGiven && (
         <NaturalGiven
           data={props.question.naturalGiven}
@@ -280,18 +304,15 @@ export function QuestionInput(props: InputProps) {
           </div>
         </div>
       )}
-      {props.question.polymerisationGiven && (
-        <PolymerisationDisplayed
-          groups={props.question.polymerisationGiven.groups}
-          bond={props.question.polymerisationGiven.polymer ? "1" : "2"}
-          left={props.question.polymerisationGiven.polymer ? "1" : "0"}
-          right={props.question.polymerisationGiven.polymer ? "1" : "0"}
-          brackets={props.question.polymerisationGiven.polymer ? "1" : "0"}
-          countMark={props.question.polymerisationGiven.polymer ? "n" : "none"}
-          label="Original supplied structure"
-          compact={props.compactAssessment}
-        />
-      )}
+      {originalPolymer &&
+        (props.compactAssessment ? (
+          <div className="polymerisation-assessment-response">
+            {originalPolymer}
+            <ResponseInput {...props} />
+          </div>
+        ) : (
+          originalPolymer
+        ))}
       {props.question.nanoFootprintDiagram && (
         <div className="nano-reference-response">
           <div className="question-response-controls">
@@ -539,6 +560,8 @@ export function QuestionInput(props: InputProps) {
         </div>
       )}
       {!(props.question.naturalHelix && props.compactNatural) &&
+        !(props.question.chromatographyGiven && props.compactAssessment) &&
+        !(props.question.polymerisationGiven && props.compactAssessment) &&
         !props.question.lcaGiven &&
         !props.question.phMeasurements &&
         !props.question.invertedGasScale &&
@@ -639,6 +662,7 @@ function ResponseInput({
   onChange,
   disabled = false,
   compactAssessment,
+  contextLabel,
   naturalInstructions,
 }: InputProps) {
   if (question.gasDrawing)
@@ -695,6 +719,7 @@ function ResponseInput({
         onChange={onChange}
         drawing={question.polymerisationDrawing}
         compact={compactAssessment}
+        contextLabel={contextLabel}
         disabled={disabled}
       />
     );
@@ -715,6 +740,7 @@ function ResponseInput({
         onChange={onChange}
         disabled={disabled}
         drawing={question.organicDrawing}
+        contextLabel={contextLabel}
       />
     );
   if (question.fuelDrawing)
@@ -725,6 +751,8 @@ function ResponseInput({
         onChange={onChange}
         disabled={disabled}
         drawing={question.fuelDrawing}
+        contextLabel={contextLabel}
+        compact={compactAssessment}
       />
     );
   if (question.alkeneDrawing)

@@ -24,11 +24,13 @@ export function OrganicDisplayed({
   board,
   onToggle,
   supplied = false,
+  contextLabel,
 }: {
   n: number;
   board: Record<string, string>;
   onToggle?: (key: string) => void;
   supplied?: boolean;
+  contextLabel?: string;
 }) {
   const width = n * 100 + 170,
     terminal = n * 100,
@@ -44,9 +46,11 @@ export function OrganicDisplayed({
       className="organic-diagram-scroll"
       role="region"
       aria-label={
-        supplied
-          ? "Original supplied organic structure"
-          : "Displayed organic construction proposal"
+        contextLabel
+          ? `${contextLabel}: displayed organic structure`
+          : supplied
+            ? "Original supplied organic structure"
+            : "Displayed organic construction proposal"
       }
       tabIndex={0}
     >
