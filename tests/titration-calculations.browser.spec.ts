@@ -2,7 +2,12 @@ import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { writeFile } from "node:fs/promises";
 import { titrationCalculationsJourney as journey } from "../src/content/journeys/titration-calculations";
-import { STORAGE_KEY, REVIEW_DELAY } from "../src/lib/progress";
+import {
+  STORAGE_KEY,
+  REVIEW_DELAY,
+  emptyProgress,
+  emptyWork,
+} from "../src/lib/progress";
 async function task(page: Page, n: number) {
   await page
     .getByRole("button", { name: `Task ${n}`, exact: true })
@@ -333,7 +338,7 @@ test("reverse reacting volume changes with titrant concentration and acid equati
 });
 test("all original practice works while four written explanations remain self-reviewed", async ({
   page,
-}) => {
+}, info) => {
   await page.goto(route);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   for (let i = 0; i < journey.practice.length; i++) {
@@ -365,7 +370,81 @@ test("all original practice works while four written explanations remain self-re
       await expect(
         page.locator(".sample-task-answer [role=status]"),
       ).toContainText("That’s right.");
+    if (q.id === "tc-v1-p-wrong-ratio" || q.id === "tc-v1-p-shift") {
+      await page.locator(".question-panel textarea").evaluateAll((nodes) => {
+        for (const node of nodes) node.scrollTop = 0;
+      });
+      await capture(
+        page,
+        `test-results/qa/titration-prose/${info.project.name}-${q.id}.png`,
+      );
+    }
   }
+});
+
+test("historical combined-volume response stays raw and incorrect after correction and reload", async ({
+  page,
+}, info) => {
+  if (info.project.name === "mobile")
+    await page.setViewportSize({ width: 320, height: 720 });
+  const q = journey.refresher.find((q) => q.id === "tc-v1-r-volume")!;
+  const raw = "The combined43.0 cm³ mixture";
+  const original = {
+    answer: raw,
+    correct: false,
+    helped: true,
+    fresh: false,
+    at: Date.now() - 1000,
+  };
+  const data = emptyProgress();
+  data.preferences.tier = "higher";
+  data.preferences.course = "separate";
+  data.work["titration-calculations"] = {
+    ...emptyWork(),
+    section: "explore",
+    learning: {
+      version: 1,
+      stage: "refresher",
+      index: journey.refresher.indexOf(q),
+    },
+    drafts: { [q.id]: raw },
+    attempts: { [q.id]: [original] },
+  };
+  await page.addInitScript(
+    ({ key, data }) => {
+      if (!localStorage.getItem(key))
+        localStorage.setItem(key, JSON.stringify(data));
+    },
+    { key: STORAGE_KEY, data },
+  );
+  await page.goto(route);
+  const selected = page.getByRole("radio", {
+    name: "The combined 43.0 cm³ mixture",
+    exact: true,
+  });
+  await expect(selected).toBeChecked();
+  await expect(page.locator(".sample-task-answer [role=status]")).toContainText(
+    "original acid concentration",
+  );
+  await page.reload();
+  await expect(selected).toBeChecked();
+  await expect(page.locator(".sample-task-answer [role=status]")).toContainText(
+    "original acid concentration",
+  );
+  const stored = await page.evaluate(
+    ({ key, id }) => {
+      const work = JSON.parse(localStorage.getItem(key)!).work[
+        "titration-calculations"
+      ];
+      return { draft: work.drafts[id], attempts: work.attempts[id] };
+    },
+    { key: STORAGE_KEY, id: q.id },
+  );
+  expect(stored).toEqual({ draft: raw, attempts: [original] });
+  await capture(
+    page,
+    `test-results/qa/titration-prose/${info.project.name}-legacy-volume.png`,
+  );
 });
 test("fresh independent reacting amounts align inputs and hide assistance until submission", async ({
   page,

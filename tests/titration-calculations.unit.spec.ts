@@ -1,4 +1,6 @@
 import { test, expect } from "@playwright/test";
+import { titrationCalculationsJourney } from "../src/content/journeys/titration-calculations";
+import { mark } from "../src/lib/marking";
 import {
   deliveredTitre,
   titrationAmounts,
@@ -13,6 +15,16 @@ import {
   titrationPrediction,
   type TitrationMode,
 } from "../src/lib/titration-calculations";
+test("historical combined-volume choice retains its incorrect scientific feedback", () => {
+  const q = titrationCalculationsJourney.refresher.find(
+    (q) => q.id === "tc-v1-r-volume",
+  )!;
+  const historical = mark(q, "The combined43.0 cm³ mixture");
+  expect(historical).toEqual(mark(q, "The combined 43.0 cm³ mixture"));
+  expect(historical.correct).toBe(false);
+  expect(historical.feedback).toContain("original acid concentration");
+  expect(mark(q, "The original 25.0 cm³ HCl sample").correct).toBe(true);
+});
 test("nonzero starting readings are subtracted; a scale reading is not a delivered volume", () => {
   expect(deliveredTitre(1.4, 21.4)).toBeCloseTo(20, 12);
   expect(deliveredTitre(4.8, 24.8)).toBeCloseTo(20, 12);

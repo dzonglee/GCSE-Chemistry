@@ -137,7 +137,7 @@ export const titrationCalculationsJourney: LessonJourney = {
       "The original 25.0 cm³ HCl sample",
       {
         "The 18.0 cm³ NaOH titre": "That is a different solution.",
-        "The combined43.0 cm³ mixture":
+        "The combined 43.0 cm³ mixture":
           "We want the original acid concentration, not a reacted mixture.",
       },
       "Use the original sample volume of the named unknown solution.",
@@ -146,7 +146,7 @@ export const titrationCalculationsJourney: LessonJourney = {
     n(
       "r-mass",
       "Convert the concentration numerator",
-      "NaOH has concentration0.150 mol/dm³ and M=40 g/mol. Find its mass concentration.",
+      "NaOH has concentration 0.150 mol/dm³ and M=40 g/mol. Find its mass concentration.",
       6,
       "g/dm³",
       "0.150×40=6.00 g/dm³.",
@@ -310,7 +310,7 @@ export const titrationCalculationsJourney: LessonJourney = {
       0.06,
       "mol/dm³",
       "NaOH n=0.00240 mol; acid n=0.00120 mol; c=0.00120/0.0200=0.0600 mol/dm³.",
-      "Apply1/2 before dividing.",
+      "Apply 1/2 before dividing.",
     ),
     n(
       "p-base",
@@ -407,12 +407,12 @@ export const titrationCalculationsJourney: LessonJourney = {
     w(
       "p-wrong-ratio",
       "Repair a one-to-one assumption",
-      "25.0 cm³ HCl reacts with 22.0 cm³ Ba(OH)2 at 0.100 mol/dm³. 2HCl + Ba(OH)2 → BaCl2 + 2H2O. A student obtains0.0880 mol/dm³ by assuming1:1. Explain the repair.",
-      "Ba(OH)2 n=0.00220 mol; HCl n=2×0.00220=0.00440 mol; c=0.00440/0.0250=0.176 mol/dm³. The original answer omitted the2:1 acid:base factor.",
+      "25.0 cm³ HCl reacts with 22.0 cm³ Ba(OH)2 at 0.100 mol/dm³. 2HCl + Ba(OH)2 → BaCl2 + 2H2O. A student obtains 0.0880 mol/dm³ by assuming 1:1. Explain the repair.",
+      "Ba(OH)2 n=0.00220 mol; HCl n=2×0.00220=0.00440 mol; c=0.00440/0.0250=0.176 mol/dm³. The original answer omitted the 2:1 acid:base factor.",
       [
         "Calculate known 0.00220 mol.",
-        "Apply2:1 to HCl.",
-        "Obtain0.176 mol/dm³ and identify omitted factor.",
+        "Apply 2:1 to HCl.",
+        "Obtain 0.176 mol/dm³ and identify omitted factor.",
       ],
     ),
     w(
@@ -430,7 +430,7 @@ export const titrationCalculationsJourney: LessonJourney = {
       "p-shift",
       "Explain unchanged delivery",
       "One titration runs from 1.40 to 21.40 cm³ and another from 4.80 to 24.80 cm³ using the same titrant concentration. Explain why the calculated delivered amount is unchanged.",
-      "Both differences are 20.00 cm³, so the same concentration times0.02000 dm³ gives the same delivered moles. Final readings alone differ and are not titres.",
+      "Both differences are 20.00 cm³, so the same concentration times 0.02000 dm³ gives the same delivered moles. Final readings alone differ and are not titres.",
       [
         "Subtract each initial reading.",
         "Both give 20.00 cm³.",
@@ -449,12 +449,12 @@ export const titrationCalculationsJourney: LessonJourney = {
           { id: "acid", label: "H2SO4/mol", answer: 0.0021 },
         ],
         "NaOH=0.150×0.0280=0.00420 mol; acid=0.00210 mol.",
-        "Convert then apply1/2.",
+        "Convert then apply 1/2.",
       ),
       n(
         "ca-c",
         "Fresh acid concentration",
-        "Using25.0 cm³ H2SO4 and28.0 cm³ NaOH at 0.150 mol/dm³, H2SO4 + 2NaOH → Na2SO4 + 2H2O, find acid concentration.",
+        "Using 25.0 cm³ H2SO4 and 28.0 cm³ NaOH at 0.150 mol/dm³, H2SO4 + 2NaOH → Na2SO4 + 2H2O, find acid concentration.",
         0.084,
         "mol/dm³",
         "0.00420/2/0.0250=0.0840 mol/dm³.",
@@ -463,7 +463,7 @@ export const titrationCalculationsJourney: LessonJourney = {
       n(
         "ca-mass",
         "Fresh acid mass concentration",
-        "H2SO4 has concentration0.0840 mol/dm³ and M=98 g/mol. Find mass concentration.",
+        "H2SO4 has concentration 0.0840 mol/dm³ and M=98 g/mol. Find mass concentration.",
         8.232,
         "g/dm³",
         "0.0840×98=8.232 g/dm³.",
@@ -500,7 +500,7 @@ export const titrationCalculationsJourney: LessonJourney = {
           { id: "acid", label: "HCl/mol", answer: 0.004 },
         ],
         "Base=0.125×0.0160=0.00200 mol; acid=0.00400 mol.",
-        "Apply2:1 HCl:base.",
+        "Apply 2:1 HCl:base.",
       ),
       n(
         "cb-c",
@@ -514,7 +514,7 @@ export const titrationCalculationsJourney: LessonJourney = {
       n(
         "cb-mass",
         "Alternative acid mass concentration",
-        "HCl has concentration0.200 mol/dm³;M=36.5 g/mol. Find mass concentration.",
+        "HCl has concentration 0.200 mol/dm³;M=36.5 g/mol. Find mass concentration.",
         7.3,
         "g/dm³",
         "0.200×36.5=7.30 g/dm³.",
@@ -532,9 +532,9 @@ export const titrationCalculationsJourney: LessonJourney = {
       w(
         "cb-written",
         "Alternative titre reasoning",
-        "Two same-concentration burette trials have initial/final readings2.60/19.60 cm³ and5.30/22.30 cm³. Explain whether delivered moles differ.",
+        "Two same-concentration burette trials have initial/final readings 2.60/19.60 cm³ and 5.30/22.30 cm³. Explain whether delivered moles differ.",
         "Both delivered volumes are 17.00 cm³. Same c gives same delivered n; final readings alone cannot compare delivered amount.",
-        ["Subtract both pairs.", "Same17.00 cm³.", "Same c means same n."],
+        ["Subtract both pairs.", "Same 17.00 cm³.", "Same c means same n."],
       ),
     ],
   ],
@@ -543,7 +543,7 @@ export const titrationCalculationsJourney: LessonJourney = {
       n(
         "ra-titre",
         "Delayed delivered volume",
-        "Initial burette reading3.65 cm³;final 22.15 cm³. Find delivered volume.",
+        "Initial burette reading 3.65 cm³;final 22.15 cm³. Find delivered volume.",
         18.5,
         "cm³",
         "22.15−3.65=18.50 cm³.",
@@ -561,7 +561,7 @@ export const titrationCalculationsJourney: LessonJourney = {
       n(
         "ra-volume",
         "Delayed reverse ratio",
-        "10.0 cm³ H2SO4 at 0.120 mol/dm³ requires0.150 mol/dm³ NaOH. H2SO4 + 2NaOH → Na2SO4 + 2H2O. Find NaOH volume.",
+        "10.0 cm³ H2SO4 at 0.120 mol/dm³ requires 0.150 mol/dm³ NaOH. H2SO4 + 2NaOH → Na2SO4 + 2H2O. Find NaOH volume.",
         16,
         "cm³",
         "Acid=0.00120 mol; NaOH=0.00240 mol; V=0.0160 dm³=16.0 cm³.",
@@ -572,7 +572,7 @@ export const titrationCalculationsJourney: LessonJourney = {
       n(
         "rb-titre",
         "Other delayed volume",
-        "Initial burette reading0.80 cm³;final 17.05 cm³. Find delivered volume.",
+        "Initial burette reading 0.80 cm³;final 17.05 cm³. Find delivered volume.",
         16.25,
         "cm³",
         "17.05−.80=16.25 cm³.",
@@ -611,3 +611,9 @@ for (const [from, to] of Object.entries({
 }
 
 titrationCalculationsJourney.guided[0].openingHint = true;
+
+titrationCalculationsJourney.refresher.find(
+  (q) => q.id === "tc-v1-r-volume",
+)!.optionAliases = {
+  "The combined43.0 cm³ mixture": "The combined 43.0 cm³ mixture",
+};

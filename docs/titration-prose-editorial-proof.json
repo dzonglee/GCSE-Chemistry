@@ -1,0 +1,110 @@
+{
+  "spaceReplacements": [
+    {
+      "old": "combined43.0",
+      "new": "combined 43.0",
+      "occurrences": 1
+    },
+    {
+      "old": "concentration0.150",
+      "new": "concentration 0.150",
+      "occurrences": 1
+    },
+    {
+      "old": "Apply1",
+      "new": "Apply 1",
+      "occurrences": 1
+    },
+    {
+      "old": "obtains0.0880",
+      "new": "obtains 0.0880",
+      "occurrences": 1
+    },
+    {
+      "old": "assuming1",
+      "new": "assuming 1",
+      "occurrences": 1
+    },
+    {
+      "old": "the2:1",
+      "new": "the 2:1",
+      "occurrences": 1
+    },
+    {
+      "old": "Apply2",
+      "new": "Apply 2",
+      "occurrences": 2
+    },
+    {
+      "old": "Obtain0.176",
+      "new": "Obtain 0.176",
+      "occurrences": 1
+    },
+    {
+      "old": "times0.02000",
+      "new": "times 0.02000",
+      "occurrences": 1
+    },
+    {
+      "old": "apply1",
+      "new": "apply 1",
+      "occurrences": 1
+    },
+    {
+      "old": "Using25.0",
+      "new": "Using 25.0",
+      "occurrences": 1
+    },
+    {
+      "old": "and28.0",
+      "new": "and 28.0",
+      "occurrences": 1
+    },
+    {
+      "old": "concentration0.0840",
+      "new": "concentration 0.0840",
+      "occurrences": 1
+    },
+    {
+      "old": "concentration0.200",
+      "new": "concentration 0.200",
+      "occurrences": 1
+    },
+    {
+      "old": "readings2.60",
+      "new": "readings 2.60",
+      "occurrences": 1
+    },
+    {
+      "old": "and5.30",
+      "new": "and 5.30",
+      "occurrences": 1
+    },
+    {
+      "old": "Same17.00",
+      "new": "Same 17.00",
+      "occurrences": 1
+    },
+    {
+      "old": "reading3.65",
+      "new": "reading 3.65",
+      "occurrences": 1
+    },
+    {
+      "old": "requires0.150",
+      "new": "requires 0.150",
+      "occurrences": 1
+    },
+    {
+      "old": "reading0.80",
+      "new": "reading 0.80",
+      "occurrences": 1
+    }
+  ],
+  "wholeSourceIdenticalAfterRemovingSpacesBeforeAliasAppend": true,
+  "explicitCompatibilityAlias": {
+    "The combined43.0 cm\u00b3 mixture": "The combined 43.0 cm\u00b3 mixture"
+  },
+  "beforeSHA256": "76acc546b013ccf9999ffc8065dc7ee174fb9d4e9d3e6bf921360639b7d1ab12",
+  "afterSHA256": "34989d5a02989cf17323f49ab53573c1e2cf9e0c2d5cfe186680a6600c0f34ed"
+}
