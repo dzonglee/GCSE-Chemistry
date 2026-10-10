@@ -108,3 +108,7 @@ Each entry below records the purpose and the scientific/assessment decision chec
 Current content audit: 67 individual tasks, 20 numerical references, 56 objective markers, 11 written self-reviews, and 30 direct practice recoveries. Typecheck, lint, production build and 614 unit tests passed. All 22 final native desktop/mobile browser checks passed in 1.8 minutes against the rebuilt production artifact, including 320-pixel temperature/concentration/evidence activities. Real-browser binary exports were independently checked for vertex bounds, fixed atom radii, container volume, molecule counts, conserved atoms and nitrogen triple bonds.
 
 Reviewed samples: [desktop 3D lesson](qa/changing-equilibrium-desktop-compression.png), [mobile pressure construction](qa/changing-equilibrium-mobile-pressure-model.png), [mobile evidence](qa/changing-equilibrium-mobile-evidence-model.png), [independent question](qa/changing-equilibrium-mobile-independent-form-0-task-2.png), [actual GLB](qa/changing-equilibrium-desktop.glb).
+
+## Historical artifact-link restoration — 10 October 2026
+
+Restored the five original linked local artifacts to GitHub: four historical screenshots and the original GLB. Their bytes are unchanged. Screenshots were inspected again for archival identity and the GLB header/version/length checked. These show the older lesson layout, not current visual acceptance. No application content, scientific values or assessed demands changed; current regression evidence remains separate in validation.md.

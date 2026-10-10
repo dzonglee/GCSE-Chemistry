@@ -1,0 +1,31 @@
+{
+  "scope": "five pre-existing historical artifacts linked by the individual review, restored unchanged",
+  "currentVisualAcceptance": false,
+  "files": [
+    {
+      "path": "docs/qa/changing-equilibrium-desktop-compression.png",
+      "sha256": "cd1fc82d9947eb2a1908eb1215e4c0da3a8f20adcef371f0aa12df6287715aec",
+      "bytes": 367513
+    },
+    {
+      "path": "docs/qa/changing-equilibrium-mobile-pressure-model.png",
+      "sha256": "bec300f6ae8a5e04e14e6eecb816d295a6dae29ffa6da5b498a4d592c358b294",
+      "bytes": 102645
+    },
+    {
+      "path": "docs/qa/changing-equilibrium-mobile-evidence-model.png",
+      "sha256": "20755f590eea886d8afee31c9cb4712f518d1b51d3adb11ffbe80e1dcf7c4979",
+      "bytes": 107236
+    },
+    {
+      "path": "docs/qa/changing-equilibrium-mobile-independent-form-0-task-2.png",
+      "sha256": "3f3fb8e29d1612687e04e538d1235ada96a554ceff4cd09ea413af2622ed4b66",
+      "bytes": 340536
+    },
+    {
+      "path": "docs/qa/changing-equilibrium-desktop.glb",
+      "sha256": "8bce8279ffd51b2f37d69e8f5dd060f9ecba372e29bd464a7a33a443c66c3dfe",
+      "bytes": 808656
+    }
+  ]
+}
