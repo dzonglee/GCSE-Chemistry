@@ -1,3 +1,4 @@
+import { extendAlkaneEquationWriting } from "./alkane-equation-writing";
 import type { LearningTask as Task, LessonJourney } from "../types";
 import type { AlkaneMode } from "../../lib/alkanes";
 const model = (
@@ -1277,6 +1278,7 @@ export const alkanesJourney: LessonJourney = {
   checkForms,
   reviewForms,
 };
+extendAlkaneEquationWriting(alkanesJourney);
 export const alkaneRecovery = recovery;
 export const alkaneExposureFamilies = families;
 export { warmup, refresher, guided, practice, checkForms, reviewForms };

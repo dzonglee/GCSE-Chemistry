@@ -54,7 +54,13 @@ async function answer(page: Page, q: (typeof journey.practice)[number]) {
       for (let slot = 0; slot < 4; slot++)
         if (attachmentRequired(n, c, slot))
           await root.locator(`[data-h-slot="h${c * 4 + slot}"]`).click();
-  } else if (q.rubric)
+  } else if (q.writtenEquations)
+    await page
+      .getByLabel(q.shortWritten ? "Your answer" : "Your equations", {
+        exact: true,
+      })
+      .fill(q.answer);
+  else if (q.rubric)
     await page.getByLabel("Your explanation", { exact: true }).fill(q.answer);
   else if (q.options)
     await page.getByRole("radio", { name: q.answer, exact: true }).check();
@@ -182,7 +188,7 @@ for (const [mode, index] of (
       ).toHaveValue("initial");
     },
   );
-test("all 36 practice demands retain honest structure and written review", async ({
+test("all 38 practice demands retain honest structure and written review", async ({
   page,
 }) => {
   await page.goto(route);
@@ -193,12 +199,20 @@ test("all 36 practice demands retain honest structure and written review", async
     await answer(page, q);
     await page
       .getByRole("button", {
-        name: q.rubric ? "Save and review explanation" : "Check answer",
+        name: q.writtenEquations
+          ? "Save and review equations"
+          : q.rubric
+            ? "Save and review explanation"
+            : "Check answer",
         exact: true,
       })
       .click();
     await expect(page.locator(".sample-task-answer .feedback")).toContainText(
-      q.rubric ? "Compare your explanation" : "right",
+      q.writtenEquations
+        ? "Compare your equations"
+        : q.rubric
+          ? "Compare your explanation"
+          : "right",
     );
   }
   await saved(page);

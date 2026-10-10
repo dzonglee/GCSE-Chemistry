@@ -139,7 +139,7 @@ test("drawn structures are honestly self-reviewed and malformed originals remain
   expect(displayResponse(q, JSON.stringify(b))).toContain("3");
   expect(displayResponse(q, "unreadable")).toContain("retained");
 });
-test("84 tasks reserve two cold and delayed forms and every practice task has direct recovery", () => {
+test("92 tasks reserve the original and complete-equation forms and every practice task has direct recovery", () => {
   const all = [
     ...journey.warmup,
     ...journey.refresher,
@@ -148,13 +148,13 @@ test("84 tasks reserve two cold and delayed forms and every practice task has di
     ...journey.checkForms.flat(),
     ...journey.reviewForms.flat(),
   ];
-  expect(all).toHaveLength(84);
-  expect(new Set(all.map((t) => t.id)).size).toBe(84);
-  expect(journey.checkForms.map((x) => x.length)).toEqual([8, 8]);
-  expect(journey.reviewForms.map((x) => x.length)).toEqual([3, 3]);
+  expect(all).toHaveLength(92);
+  expect(new Set(all.map((t) => t.id)).size).toBe(92);
+  expect(journey.checkForms.map((x) => x.length)).toEqual([8, 8, 2]);
+  expect(journey.reviewForms.map((x) => x.length)).toEqual([3, 3, 2]);
   for (const q of journey.practice)
     expect(journey.refresher.some((r) => r.id === q.followUp)).toBe(true);
-  expect(all.filter((q) => q.rubric)).toHaveLength(13);
+  expect(all.filter((q) => q.rubric)).toHaveLength(20);
   expect(all.filter((q) => q.alkaneDrawing)).toHaveLength(6);
   for (const q of all) {
     if (q.options) expect(q.options).toContain(q.answer);
