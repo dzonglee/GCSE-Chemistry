@@ -46,16 +46,16 @@ export function LatticeScene({ depth }: { depth: boolean }) {
             cx="30%"
             cy="25%"
           >
-            <stop offset="0" stopColor="#ffdfa9" />
-            <stop offset="1" stopColor="#eaaa55" />
+            <stop offset="0" stopColor="#ffeac6" />
+            <stop offset="1" stopColor="#e8a35b" />
           </radialGradient>
           <radialGradient
             id={depth ? "lab-nonmetal-depth" : "lab-nonmetal-slice"}
             cx="30%"
             cy="25%"
           >
-            <stop offset="0" stopColor="#e2d7ff" />
-            <stop offset="1" stopColor="#9677c6" />
+            <stop offset="0" stopColor="#e5efff" />
+            <stop offset="1" stopColor="#7095d9" />
           </radialGradient>
         </defs>
         {depth && (
@@ -114,7 +114,7 @@ export function LatticeScene({ depth }: { depth: boolean }) {
               <g
                 key={`${s.x}${s.y}${s.z}`}
                 transform={`translate(${p.x},${p.y})`}
-                opacity={near ? 1 : depth ? 0.18 : 0.5}
+                opacity={near ? 1 : depth ? 0.24 : 0.55}
                 data-lattice-charge={s.charge}
               >
                 {near && (
@@ -124,21 +124,23 @@ export function LatticeScene({ depth }: { depth: boolean }) {
                   />
                 )}
                 <circle
-                  r={depth ? 18 : 27}
+                  r={depth ? (near ? 18 : 12) : 27}
                   fill={`url(#lab-${s.charge === 1 ? "metal" : "nonmetal"}-${depth ? "depth" : "slice"})`}
-                  stroke={s.charge === 1 ? "#916631" : "#69528e"}
+                  stroke={s.charge === 1 ? "#a06b35" : "#496d9e"}
                   strokeWidth="1.5"
                 />
-                <text
-                  y="1"
-                  dominantBaseline="middle"
-                  textAnchor="middle"
-                  fontSize="28"
-                  fontWeight="800"
-                  fill="#262d30"
-                >
-                  {s.charge === 1 ? "+" : "−"}
-                </text>
+                {(!depth || near) && (
+                  <text
+                    y="1"
+                    dominantBaseline="middle"
+                    textAnchor="middle"
+                    fontSize="28"
+                    fontWeight="800"
+                    fill="#262d30"
+                  >
+                    {s.charge === 1 ? "+" : "−"}
+                  </text>
+                )}
               </g>
             );
           })}

@@ -4,7 +4,8 @@ import type { LabState, LabRun } from "../../lib/experiments/ionic-lab";
 export const chapters = [
   {
     label: "Transfer",
-    title: "One tiny move.\nA whole new charge.",
+    compactTitle: "Make an ion.",
+    title: "One electron.\nA different charge.",
     description:
       "Move an outer electron from sodium to chlorine. Then predict sodium’s charge.",
     kicker: "01 / MAKE AN ION",
@@ -12,7 +13,8 @@ export const chapters = [
   },
   {
     label: "Balance",
-    title: "Two electrons.\nTwo places to go.",
+    compactTitle: "Balance the charges.",
+    title: "Two electrons.\nWhere should they go?",
     description:
       "Magnesium has two outer electrons. Decide how to distribute them between two chlorine atoms.",
     kicker: "02 / FIND THE RATIO",
@@ -20,7 +22,8 @@ export const chapters = [
   },
   {
     label: "Connect",
-    title: "One pair is only\nthe beginning.",
+    compactTitle: "See the missing depth.",
+    title: "Look beyond\nthe flat picture.",
     description:
       "Explore a sodium chloride lattice. The attraction continues in every direction.",
     kicker: "03 / ZOOM OUT",
@@ -28,7 +31,8 @@ export const chapters = [
   },
   {
     label: "Challenge",
-    title: "Now it’s\nyour chemistry.",
+    compactTitle: "Build the ions.",
+    title: "Your turn\nto build the ions.",
     description:
       "Build a diagram, identify the bond and explain ion formation. Feedback follows all three responses.",
     kicker: "04 / PUT IT TOGETHER",
@@ -36,7 +40,8 @@ export const chapters = [
   },
   {
     label: "Revisit",
-    title: "Make the idea\nstick around.",
+    compactTitle: "Rebuild it later.",
+    title: "Remember it.\nRebuild it.",
     description:
       "Come back after seven days and retrieve the ideas without the worked models.",
     kicker: "05 / RETRIEVE LATER",

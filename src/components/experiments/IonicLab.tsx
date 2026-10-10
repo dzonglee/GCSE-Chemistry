@@ -3,9 +3,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useProgress, setWork, expose, emptyWork } from "@/lib/progress";
 import {
-  atomLedger,
-  changeTransfer,
-  compounds,
   initialLab,
   LAB_DRAFT,
   LAB_WORK,
@@ -17,7 +14,6 @@ import {
   SEVEN_DAYS,
   submitRun,
   type Charge,
-  type Compound,
   type Drawing,
   type LabRun,
   type LabState,
@@ -33,7 +29,7 @@ import {
   sodiumFeedback,
   writingReference,
 } from "@/content/experiments/ionic-lab";
-import { AtomDiagram } from "./AtomDiagram";
+import { Board, ModelNote } from "./ElectronBoard";
 import { LatticeScene } from "./LatticeScene";
 import { LabIcon } from "./LabIcon";
 import styles from "./IonicLab.module.css";
@@ -93,203 +89,6 @@ function Feedback({
         <strong>{title}</strong>
         <p>{detail}</p>
       </div>
-    </div>
-  );
-}
-function Board({
-  compound,
-  transfers,
-  onChange,
-  proposal,
-  detail = true,
-  revealCharges = true,
-}: {
-  compound: Compound;
-  transfers: number[];
-  onChange?: (transfers: number[]) => void;
-  proposal?: Drawing;
-  detail?: boolean;
-  revealCharges?: boolean;
-}) {
-  const s = compounds[compound],
-    atoms = atomLedger(compound, transfers);
-  const [inspected, setInspected] = useState<string | null>(null);
-  const [motion, setMotion] = useState<{
-    direction: "send" | "return";
-    step: number;
-  } | null>(null);
-  const move = (edge: number, delta: 1 | -1) => {
-    const next = changeTransfer(compound, transfers, edge, delta);
-    if (next === transfers || !onChange) return;
-    setMotion((m) => ({
-      direction: delta === 1 ? "send" : "return",
-      step: (m?.step ?? 0) + 1,
-    }));
-    onChange(next);
-  };
-  const atom = atoms.find((a) => `${a.side}-${a.index}` === inspected);
-  const electronTotal = atoms.reduce((sum, a) => sum + a.electrons, 0);
-  return (
-    <div className={styles.transferBoard} data-compound={compound}>
-      {onChange && (
-        <div className={styles.transferControls}>
-          {s.edges.map(([donor, receiver], i) => {
-            const recipient = `${s.nonmetalName.toLowerCase()}${s.receivers > 1 ? ` ${receiver + 1}` : ""}`;
-            const source = `${s.metalName.toLowerCase()}${s.donors > 1 ? ` ${donor + 1}` : ""}`;
-            const canSend =
-              changeTransfer(compound, transfers, i, 1) !== transfers;
-            return (
-              <div key={i}>
-                <button
-                  className={styles.sendButton}
-                  disabled={!canSend}
-                  onClick={() => move(i, 1)}
-                  aria-label={`Send an electron from ${source} to ${recipient}`}
-                  data-answer-control="true"
-                >
-                  <span aria-hidden="true">×</span>
-                  {s.receivers > 1
-                    ? `To chlorine ${receiver + 1}`
-                    : s.donors > 1
-                      ? `From sodium ${donor + 1}`
-                      : "Send an electron"}
-                  <LabIcon />
-                </button>
-                <button
-                  className={styles.returnButton}
-                  disabled={transfers[i] === 0}
-                  onClick={() => move(i, -1)}
-                  aria-label={`Return an electron from ${recipient} to ${source}`}
-                >
-                  ↶ <span>Return</span>
-                </button>
-              </div>
-            );
-          })}
-        </div>
-      )}
-      <div
-        className={`${styles.atomRow} ${atoms.length === 3 ? styles.threeAtoms : ""}`}
-      >
-        {atoms.map((a) => {
-          const id = `${a.side}-${a.index}`;
-          const proposedCharge =
-            a.side === "metal"
-              ? proposal?.metalCharge
-              : proposal?.nonmetalCharge;
-          const shown = proposal
-            ? proposedCharge === ""
-              ? null
-              : Number(proposedCharge)
-            : revealCharges
-              ? a.charge
-              : null;
-          const brackets = proposal
-            ? proposal.brackets === "yes"
-            : a.charge !== 0;
-          return (
-            <div className={styles.atomTile} key={id}>
-              <button
-                className={styles.atomInspect}
-                aria-label={`Inspect ${a.name.toLowerCase()}${a.side === "metal" ? (s.donors > 1 ? ` ${a.index + 1}` : "") : s.receivers > 1 ? ` ${a.index + 1}` : ""}`}
-                aria-expanded={id === inspected}
-                onClick={() => setInspected(id === inspected ? null : id)}
-              >
-                <AtomDiagram
-                  atom={a}
-                  brackets={brackets}
-                  charge={shown}
-                  hiddenChargeLabel={
-                    revealCharges
-                      ? undefined
-                      : "charge awaiting your prediction"
-                  }
-                  selected={id === inspected}
-                />
-                <span className={styles.atomName}>
-                  {a.name}
-                  {(a.side === "metal" ? s.donors : s.receivers) > 1
-                    ? ` ${a.index + 1}`
-                    : ""}
-                </span>
-              </button>
-              <span className={styles.arrangement}>{a.shells.join(",")}</span>
-              {detail && (
-                <span className={styles.particleCount}>
-                  {a.protons} p⁺ · {a.electrons} e⁻
-                </span>
-              )}
-            </div>
-          );
-        })}
-      </div>
-      <div
-        className={`${styles.electronTrail} ${motion ? styles.hasTransfer : ""} ${motion?.direction === "return" ? styles.returnTransfer : ""}`}
-        key={motion?.step ?? 0}
-        aria-hidden="true"
-      >
-        <span>×</span>
-        <i />
-        <span>○</span>
-      </div>
-      <p className={styles.originKey}>
-        <span>× from metal</span>
-        <span>• from non-metal</span>
-      </p>
-      {atom && (
-        <div className={styles.inspector}>
-          <div>
-            <strong>{atom.name}, close up</strong>
-            <p>
-              {atom.protons} protons · {atom.electrons} electrons
-            </p>
-            <p>Arrangement: {atom.shells.join(",")}</p>
-            <button
-              onClick={() => setInspected(null)}
-              className={styles.closeInspector}
-            >
-              Close atom view
-            </button>
-          </div>
-          <AtomDiagram
-            atom={atom}
-            brackets={
-              proposal ? proposal.brackets === "yes" : atom.charge !== 0
-            }
-            charge={
-              proposal
-                ? (atom.side === "metal"
-                    ? proposal.metalCharge
-                    : proposal.nonmetalCharge) === ""
-                  ? null
-                  : Number(
-                      atom.side === "metal"
-                        ? proposal.metalCharge
-                        : proposal.nonmetalCharge,
-                    )
-                : revealCharges
-                  ? atom.charge
-                  : null
-            }
-            hiddenChargeLabel={
-              revealCharges ? undefined : "charge awaiting your prediction"
-            }
-          />
-        </div>
-      )}
-      {detail && (
-        <div className={styles.conserved} data-electron-total={electronTotal}>
-          <span aria-hidden="true">◎</span>
-          <p>
-            <strong>{electronTotal} electrons. All accounted for.</strong>
-            <span>No nucleus changes. Only electrons move.</span>
-          </p>
-        </div>
-      )}
-      <p className={styles.diagramNote}>
-        Shell diagrams show electron counts, not real electron paths. Dots and
-        crosses track origin; all are electrons.
-      </p>
     </div>
   );
 }
@@ -598,13 +397,21 @@ export function IonicLab() {
   return (
     <div className={styles.lab} data-scene={scene}>
       <header className={styles.labHeader}>
-        <Link href="/lessons/ionic-bonding" className={styles.back}>
-          ← Ionic bonding
+        <Link
+          href="/"
+          className={styles.labBrand}
+          aria-label="Atelier Chemistry course map"
+        >
+          <span aria-hidden="true" className={styles.brandMark}>
+            a<span>•</span>
+          </span>
+          <span>
+            Atelier <small>CHEMISTRY LAB</small>
+          </span>
         </Link>
-        <span className={styles.labTag}>
-          <i aria-hidden="true" />
-          An interactive lesson
-        </span>
+        <Link href="/lessons/ionic-bonding" className={styles.back}>
+          Ionic bonding <LabIcon />
+        </Link>
       </header>
       <nav className={styles.chapterNav} aria-label="Ionic bonding chapters">
         {chapters.map((c, i) => (
@@ -613,6 +420,7 @@ export function IonicLab() {
             onClick={() => navigate(i)}
             aria-label={`Open ${c.label} chapter`}
             aria-current={scene === i ? "step" : undefined}
+            data-completed={completed[i] || undefined}
           >
             <span className={styles.chapterNumber}>
               {completed[i] ? <span aria-hidden="true">✓</span> : `0${i + 1}`}
@@ -625,55 +433,15 @@ export function IonicLab() {
         ))}
       </nav>
       <div
-        className={`${styles.workArea} ${scene >= 3 ? styles.challengeArea : ""}`}
+        className={`${styles.workArea} ${scene >= 3 ? styles.challengeArea : ""} ${challenge ? styles.activeChallenge : ""}`}
       >
         <div className={styles.story}>
           <p className={styles.kicker}>{chapter.kicker}</p>
           <h1 id="ionic-lab-title" tabIndex={-1}>
-            {chapter.title}
+            <span className={styles.desktopTitle}>{chapter.title}</span>
+            <span className={styles.compactTitle}>{chapter.compactTitle}</span>
           </h1>
           <p className={styles.storyCopy}>{chapter.description}</p>
-          {scene < 3 && (
-            <div className={styles.ideaCard}>
-              <span className={styles.ideaIcon} aria-hidden="true">
-                {scene === 0 ? (
-                  <>
-                    e⁻ <LabIcon />
-                  </>
-                ) : scene === 1 ? (
-                  "+ − −"
-                ) : (
-                  <LabIcon kind="network" />
-                )}
-              </span>
-              <p>
-                {scene === 0 ? (
-                  <>
-                    The atom stays the same element.
-                    <br />
-                    <strong>Its charge changes.</strong>
-                  </>
-                ) : scene === 1 ? (
-                  <>
-                    Follow each electron.
-                    <br />
-                    <strong>Then balance each charge.</strong>
-                  </>
-                ) : (
-                  <>
-                    Transfer makes the ions.
-                    <br />
-                    <strong>Attraction makes the bond.</strong>
-                  </>
-                )}
-              </p>
-            </div>
-          )}
-          {scene < 3 && (
-            <p className={styles.storyFoot}>
-              Make a move. Notice what changes. Explain why.
-            </p>
-          )}
         </div>
         <section
           className={`${styles.stage} ${styles[chapter.colour]}`}
@@ -687,52 +455,70 @@ export function IonicLab() {
                 </span>
                 <span className={styles.compoundPill}>Na + Cl</span>
               </div>
-              <Board
-                compound="NaCl"
-                transfers={[state.nacl.sent]}
-                revealCharges={state.nacl.checked}
-                onChange={(t) =>
-                  edit((s) => ({
-                    ...s,
-                    nacl: { ...s.nacl, sent: t[0], checked: false },
-                  }))
-                }
-              />
-              <Choice
-                label="What charge does sodium have now?"
-                value={state.nacl.charge}
-                options={[
-                  ["-1", "1−"],
-                  ["0", "0"],
-                  ["1", "1+"],
-                ]}
-                onChange={(v) =>
-                  edit((s) => ({
-                    ...s,
-                    nacl: { ...s.nacl, charge: v as Charge, checked: false },
-                  }))
-                }
-              />
-              <button
-                className={styles.primary}
-                onClick={() =>
-                  archiveGuided("ionic-lab-transfer", (s) => ({
-                    ...s,
-                    nacl: { ...s.nacl, checked: true },
-                  }))
-                }
-              >
-                Check my prediction <LabIcon />
-              </button>
-              {state.nacl.checked && <Feedback {...messages[0]} />}
-              {completed[0] && (
-                <button
-                  className={styles.continueButton}
-                  onClick={() => navigate(1)}
-                >
-                  What if there are two electrons? →
-                </button>
-              )}
+              <div className={styles.interactiveRow}>
+                <div className={styles.visualPanel}>
+                  <Board
+                    note={false}
+                    compound="NaCl"
+                    transfers={[state.nacl.sent]}
+                    revealCharges={state.nacl.checked}
+                    onChange={(t) =>
+                      edit((s) => ({
+                        ...s,
+                        nacl: { ...s.nacl, sent: t[0], checked: false },
+                      }))
+                    }
+                  />
+                </div>
+                <div className={styles.responsePanel}>
+                  <Choice
+                    label="What charge does sodium have now?"
+                    value={state.nacl.charge}
+                    options={[
+                      ["-1", "1−"],
+                      ["0", "0"],
+                      ["1", "1+"],
+                    ]}
+                    onChange={(v) =>
+                      edit((s) => ({
+                        ...s,
+                        nacl: {
+                          ...s.nacl,
+                          charge: v as Charge,
+                          checked: false,
+                        },
+                      }))
+                    }
+                  />
+                  <button
+                    className={styles.primary}
+                    onClick={() =>
+                      archiveGuided("ionic-lab-transfer", (s) => ({
+                        ...s,
+                        nacl: { ...s.nacl, checked: true },
+                      }))
+                    }
+                  >
+                    Check my prediction <LabIcon />
+                  </button>
+                  {state.nacl.checked && <Feedback {...messages[0]} />}
+                  {completed[0] && (
+                    <button
+                      className={styles.continueButton}
+                      onClick={() => navigate(1)}
+                    >
+                      What if there are two electrons? →
+                    </button>
+                  )}
+                  <details className={styles.modelNote}>
+                    <summary>About this model</summary>
+                    <p className={styles.diagramNote}>
+                      Shell diagrams show electron counts, not real electron
+                      paths. Dots and crosses track origin; all are electrons.
+                    </p>
+                  </details>
+                </div>
+              </div>
             </>
           )}
           {scene === 1 && (
@@ -741,65 +527,80 @@ export function IonicLab() {
                 <span className={styles.activityLabel}>FIND TWO RECEIVERS</span>
                 <span className={styles.compoundPill}>Mg + 2Cl</span>
               </div>
-              <Board
-                compound="MgCl2"
-                transfers={state.mgcl.transfers}
-                onChange={(t) =>
-                  edit((s) => ({
-                    ...s,
-                    mgcl: { ...s.mgcl, transfers: t, checked: false },
-                  }))
-                }
-              />
-              <Choice
-                label="Chloride ions per magnesium ion"
-                value={state.mgcl.ratio}
-                options={[
-                  ["1", "1"],
-                  ["2", "2"],
-                  ["3", "3"],
-                ]}
-                onChange={(v) =>
-                  edit((s) => ({
-                    ...s,
-                    mgcl: { ...s.mgcl, ratio: v, checked: false },
-                  }))
-                }
-              />
-              <div
-                className={styles.formulaDisplay}
-                aria-label={`Your proposed formula: MgCl${state.mgcl.ratio === "1" ? "" : state.mgcl.ratio || "not chosen"}`}
-              >
-                <span>YOUR FORMULA</span>
-                <strong>
-                  MgCl
-                  {state.mgcl.ratio && state.mgcl.ratio !== "1" ? (
-                    <sub>{state.mgcl.ratio}</sub>
-                  ) : !state.mgcl.ratio ? (
-                    <sub>?</sub>
-                  ) : null}
-                </strong>
+              <div className={styles.interactiveRow}>
+                <div className={styles.visualPanel}>
+                  <Board
+                    note={false}
+                    compound="MgCl2"
+                    compactControls
+                    transfers={state.mgcl.transfers}
+                    onChange={(t) =>
+                      edit((s) => ({
+                        ...s,
+                        mgcl: { ...s.mgcl, transfers: t, checked: false },
+                      }))
+                    }
+                  />
+                </div>
+                <div className={styles.responsePanel}>
+                  <Choice
+                    label="Chloride ions per magnesium ion"
+                    value={state.mgcl.ratio}
+                    options={[
+                      ["1", "1"],
+                      ["2", "2"],
+                      ["3", "3"],
+                    ]}
+                    onChange={(v) =>
+                      edit((s) => ({
+                        ...s,
+                        mgcl: { ...s.mgcl, ratio: v, checked: false },
+                      }))
+                    }
+                  />
+                  <div
+                    className={styles.formulaDisplay}
+                    aria-label={`Your proposed formula: MgCl${state.mgcl.ratio === "1" ? "" : state.mgcl.ratio || "not chosen"}`}
+                  >
+                    <span>YOUR FORMULA</span>
+                    <strong>
+                      MgCl
+                      {state.mgcl.ratio && state.mgcl.ratio !== "1" ? (
+                        <sub>{state.mgcl.ratio}</sub>
+                      ) : !state.mgcl.ratio ? (
+                        <sub>?</sub>
+                      ) : null}
+                    </strong>
+                  </div>
+                  <button
+                    className={styles.primary}
+                    onClick={() =>
+                      archiveGuided("ionic-lab-balance", (s) => ({
+                        ...s,
+                        mgcl: { ...s.mgcl, checked: true },
+                      }))
+                    }
+                  >
+                    Check my arrangement <LabIcon />
+                  </button>
+                  {state.mgcl.checked && <Feedback {...messages[1]} />}
+                  {completed[1] && (
+                    <button
+                      className={styles.continueButton}
+                      onClick={() => navigate(2)}
+                    >
+                      Zoom out to a solid →
+                    </button>
+                  )}
+                  <details className={styles.modelNote}>
+                    <summary>About this model</summary>
+                    <p className={styles.diagramNote}>
+                      Shell diagrams show electron counts, not real electron
+                      paths. Dots and crosses track origin; all are electrons.
+                    </p>
+                  </details>
+                </div>
               </div>
-              <button
-                className={styles.primary}
-                onClick={() =>
-                  archiveGuided("ionic-lab-balance", (s) => ({
-                    ...s,
-                    mgcl: { ...s.mgcl, checked: true },
-                  }))
-                }
-              >
-                Check my arrangement <LabIcon />
-              </button>
-              {state.mgcl.checked && <Feedback {...messages[1]} />}
-              {completed[1] && (
-                <button
-                  className={styles.continueButton}
-                  onClick={() => navigate(2)}
-                >
-                  Zoom out to a solid →
-                </button>
-              )}
             </>
           )}
           {scene === 2 && (
@@ -810,64 +611,70 @@ export function IonicLab() {
                 </span>
                 <span className={styles.compoundPill}>NaCl</span>
               </div>
-              <Choice
-                label="Nearest opposite-charge neighbours in 3D?"
-                value={state.lattice.guess}
-                options={[
-                  ["4", "4"],
-                  ["6", "6"],
-                  ["8", "8"],
-                ]}
-                onChange={(v) =>
-                  edit((s) => ({
-                    ...s,
-                    lattice: { ...s.lattice, guess: v, checked: false },
-                  }))
-                }
-              />
-              <LatticeScene depth={state.lattice.depth} />
-              <button
-                className={styles.depthButton}
-                aria-pressed={state.lattice.depth}
-                onClick={() =>
-                  edit((s) => ({
-                    ...s,
-                    lattice: { ...s.lattice, depth: !s.lattice.depth },
-                  }))
-                }
-              >
-                <span aria-hidden="true">◇</span>
-                {state.lattice.depth
-                  ? "Return to the flat slice"
-                  : "Reveal the third dimension"}
-              </button>
-              <p className={styles.diagramNote}>
-                A cut-out of a repeating lattice, not separate NaCl molecules.
-                The highlighted neighbours show only the nearest opposite-charge
-                ions; forces also act beyond them.
-              </p>
-              <button
-                className={styles.primary}
-                onClick={() =>
-                  archiveGuided("ionic-lab-lattice", (s) => ({
-                    ...s,
-                    lattice: { ...s.lattice, depth: true, checked: true },
-                  }))
-                }
-              >
-                Check my prediction <LabIcon />
-              </button>
-              {state.lattice.checked && <Feedback {...messages[2]} />}
-              {completed[2] && (
-                <button
-                  className={styles.continueButton}
-                  onClick={() => {
-                    navigate(3);
-                  }}
-                >
-                  Try it without the worked feedback →
-                </button>
-              )}
+              <div className={styles.interactiveRow}>
+                <div className={styles.visualPanel}>
+                  <LatticeScene depth={state.lattice.depth} />
+                  <button
+                    className={styles.depthButton}
+                    aria-pressed={state.lattice.depth}
+                    onClick={() =>
+                      edit((s) => ({
+                        ...s,
+                        lattice: { ...s.lattice, depth: !s.lattice.depth },
+                      }))
+                    }
+                  >
+                    <span aria-hidden="true">◇</span>
+                    {state.lattice.depth
+                      ? "Return to the flat slice"
+                      : "Reveal the third dimension"}
+                  </button>
+                  <p className={styles.diagramNote}>
+                    A cut-out of a repeating lattice, not separate NaCl
+                    molecules. The highlighted neighbours show only the nearest
+                    opposite-charge ions; forces also act beyond them.
+                  </p>
+                </div>
+                <div className={styles.responsePanel}>
+                  <Choice
+                    label="Nearest opposite-charge neighbours in 3D?"
+                    value={state.lattice.guess}
+                    options={[
+                      ["4", "4"],
+                      ["6", "6"],
+                      ["8", "8"],
+                    ]}
+                    onChange={(v) =>
+                      edit((s) => ({
+                        ...s,
+                        lattice: { ...s.lattice, guess: v, checked: false },
+                      }))
+                    }
+                  />
+                  <button
+                    className={styles.primary}
+                    onClick={() =>
+                      archiveGuided("ionic-lab-lattice", (s) => ({
+                        ...s,
+                        lattice: { ...s.lattice, depth: true, checked: true },
+                      }))
+                    }
+                  >
+                    Check my prediction <LabIcon />
+                  </button>
+                  {state.lattice.checked && <Feedback {...messages[2]} />}
+                  {completed[2] && (
+                    <button
+                      className={styles.continueButton}
+                      onClick={() => {
+                        navigate(3);
+                      }}
+                    >
+                      Try it without the worked feedback →
+                    </button>
+                  )}
+                </div>
+              </div>
             </>
           )}
           {scene === 3 && !run && !last && (
@@ -924,33 +731,38 @@ export function IonicLab() {
               </h2>
               {index === 0 && (
                 <>
-                  <Board
-                    compound={runCompound(run.kind)}
-                    transfers={run.drawing.transfers}
-                    proposal={run.drawing}
-                    detail={false}
-                    onChange={(t) =>
-                      runEdit((r) => ({
-                        ...r,
-                        drawing: { ...r.drawing, transfers: t },
-                        recorded: r.recorded.map((b, i) =>
-                          i === 0 ? false : b,
-                        ),
-                      }))
-                    }
-                  />
-                  <DrawingControls
-                    drawing={run.drawing}
-                    onChange={(d) =>
-                      runEdit((r) => ({
-                        ...r,
-                        drawing: d,
-                        recorded: r.recorded.map((b, i) =>
-                          i === 0 ? false : b,
-                        ),
-                      }))
-                    }
-                  />
+                  <div className={styles.constructionRow}>
+                    <Board
+                      compound={runCompound(run.kind)}
+                      transfers={run.drawing.transfers}
+                      proposal={run.drawing}
+                      detail={false}
+                      note={false}
+                      compactControls
+                      onChange={(t) =>
+                        runEdit((r) => ({
+                          ...r,
+                          drawing: { ...r.drawing, transfers: t },
+                          recorded: r.recorded.map((b, i) =>
+                            i === 0 ? false : b,
+                          ),
+                        }))
+                      }
+                    />
+                    <DrawingControls
+                      drawing={run.drawing}
+                      onChange={(d) =>
+                        runEdit((r) => ({
+                          ...r,
+                          drawing: d,
+                          recorded: r.recorded.map((b, i) =>
+                            i === 0 ? false : b,
+                          ),
+                        }))
+                      }
+                    />
+                  </div>
+                  <ModelNote />
                 </>
               )}
               {index === 1 && (

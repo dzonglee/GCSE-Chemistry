@@ -19,6 +19,15 @@ async function press(p: Page, name: string) {
   else await target.click();
 }
 async function saved(p: Page) {
+  await p.waitForFunction(
+    ({ key, work, draft }) => {
+      const raw = localStorage.getItem(key);
+      return (
+        raw !== null && JSON.parse(raw).work[work]?.drafts[draft] !== undefined
+      );
+    },
+    { key: STORAGE_KEY, work: LAB_WORK, draft: LAB_DRAFT },
+  );
   return p.evaluate(
     ({ key, work, draft }) =>
       JSON.parse(
@@ -84,6 +93,88 @@ async function charge(p: Page, label: string, value: string) {
     .getByRole("button", { name: value, exact: true })
     .click();
 }
+async function dragElectron(
+  page: Page,
+  donor: number,
+  receiver: number,
+  cancel = false,
+) {
+  const pickup = page.locator(`[data-drag-donor="${donor}"]`);
+  await pickup.scrollIntoViewIfNeeded();
+  const from = (await pickup.boundingBox())!;
+  const target = page
+    .locator(`[data-side="nonmetal"][data-atom-index="${receiver}"] button`)
+    .first();
+  const to = (await target.boundingBox())!;
+  const start = { x: from.x + from.width / 2, y: from.y + from.height / 2 };
+  const end = { x: to.x + to.width / 2, y: to.y + to.height / 2 };
+  if (await page.evaluate(() => navigator.maxTouchPoints > 0)) {
+    const native = await page.context().newCDPSession(page);
+    const touch = (x: number, y: number) => ({
+      x,
+      y,
+      radiusX: 4,
+      radiusY: 4,
+      force: 1,
+      id: 1,
+    });
+    await native.send("Input.dispatchTouchEvent", {
+      type: "touchStart",
+      touchPoints: [touch(start.x, start.y)],
+    });
+    for (let step = 1; step <= 12; step++)
+      await native.send("Input.dispatchTouchEvent", {
+        type: "touchMove",
+        touchPoints: [
+          touch(
+            start.x + ((end.x - start.x) * step) / 12,
+            start.y + ((end.y - start.y) * step) / 12,
+          ),
+        ],
+      });
+    await visibleParticles(page);
+    await native.send("Input.dispatchTouchEvent", {
+      type: cancel ? "touchCancel" : "touchEnd",
+      touchPoints: [],
+    });
+    await native.detach();
+    // Chromium suppresses the next synthesized click during its post-drag
+    // gesture window, including on a plain HTML page with no event handlers.
+    // Let that window finish before the first subsequent native tap; never
+    // retry the tap or relax its required response/persistence assertions.
+    await page.waitForTimeout(500);
+  } else {
+    await page.mouse.move(start.x, start.y);
+    await page.mouse.down();
+    await page.mouse.move(end.x, end.y, { steps: 12 });
+    await visibleParticles(page);
+    if (cancel) await page.keyboard.press("Escape");
+    await page.mouse.up();
+  }
+}
+async function visibleParticles(page: Page) {
+  const particles = await page
+    .locator("svg[data-electrons]")
+    .evaluateAll((ions) =>
+      ions.map((svg) => ({
+        expected: Number(svg.getAttribute("data-electrons")),
+        visible: [
+          ...svg.querySelectorAll('circle[r="4.6"], path[class*="cross"]'),
+        ].filter((marker) => getComputedStyle(marker).visibility !== "hidden")
+          .length,
+        held:
+          svg
+            .closest("[data-atom-visual]")
+            ?.querySelectorAll("[data-drag-donor]").length ?? 0,
+        placeholders: svg.querySelectorAll("[data-electron-placeholder]")
+          .length,
+      })),
+    );
+  for (const atom of particles) {
+    expect(atom.visible + atom.held).toBe(atom.expected);
+    expect(atom.placeholders).toBe(atom.held);
+  }
+}
 function completed(at: number) {
   const state = initialLab();
   state.run = newRun("check", at - 1000);
@@ -128,6 +219,145 @@ test("every learning and challenge opening reflows with usable native controls a
   finished.scene = 4;
   await seed(page, finished);
   await layout(page, button(page, "Start delayed retrieval"));
+});
+
+test("direct electron manipulation supports real pointer and touch drag, cancellation, tap and keyboard without changing a nucleus", async ({
+  page,
+}) => {
+  await page.goto(route);
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+  });
+  const unchanged = await page.evaluate(
+    (key) =>
+      JSON.parse(localStorage.getItem(key)!).work["experiment-ionic-bonding"] ??
+      null,
+    STORAGE_KEY,
+  );
+  await dragElectron(page, 0, 0, true);
+  expect(
+    await page.evaluate(
+      (key) =>
+        JSON.parse(localStorage.getItem(key)!).work[
+          "experiment-ionic-bonding"
+        ] ?? null,
+      STORAGE_KEY,
+    ),
+  ).toEqual(unchanged);
+  await expect(page.locator('svg[data-protons="11"]')).toHaveAttribute(
+    "data-electrons",
+    "11",
+  );
+  await expect(
+    page.getByText("Choose a receiving atom. Tap × again or Escape to cancel."),
+  ).toHaveCount(0);
+  await press(page, "Move an outer electron from sodium");
+  await expect(
+    button(page, "Move an outer electron from sodium"),
+  ).toHaveAttribute("aria-pressed", "true");
+  await press(page, "Move an outer electron from sodium");
+  await expect(
+    button(page, "Move an outer electron from sodium"),
+  ).toHaveAttribute("aria-pressed", "false");
+  await expect(page.locator('svg[data-protons="11"]')).toHaveAttribute(
+    "data-electrons",
+    "11",
+  );
+  await dragElectron(page, 0, 0);
+  await expect.poll(async () => (await saved(page)).nacl.sent).toBe(1);
+  await expect(page.locator('svg[data-protons="11"]')).toHaveAttribute(
+    "data-electrons",
+    "10",
+  );
+  await expect(page.locator('svg[data-protons="17"]')).toHaveAttribute(
+    "data-electrons",
+    "18",
+  );
+  // The entire first prediction row should fit, as well as the pickup control.
+  for (const name of ["1−", "0", "1+"]) {
+    const bounds = (await button(page, name).boundingBox())!;
+    expect(bounds.height).toBeGreaterThanOrEqual(44);
+    expect(bounds.width).toBeGreaterThanOrEqual(44);
+    expect(bounds.y + bounds.height).toBeLessThanOrEqual(664);
+  }
+  await press(page, "1−");
+  await press(page, "Check my prediction");
+  await expect(
+    page.getByText("Losing a negative makes the ion positive."),
+  ).toBeVisible();
+  await page.reload();
+  await expect
+    .poll(async () => (await saved(page)).nacl)
+    .toMatchObject({
+      sent: 1,
+      charge: "-1",
+      checked: true,
+    });
+  await press(page, "Return an electron from chlorine to sodium");
+  const pickup = button(page, "Move an outer electron from sodium");
+  await pickup.focus();
+  await page.keyboard.press("Enter");
+  await expect(pickup).toHaveAttribute("aria-pressed", "true");
+  await page.keyboard.press("Escape");
+  await expect(pickup).toHaveAttribute("aria-pressed", "false");
+  await page.keyboard.press("Space");
+  const receiver = button(page, "Give sodium’s electron to chlorine");
+  await receiver.focus();
+  await page.keyboard.press("Enter");
+  await expect.poll(async () => (await saved(page)).nacl.sent).toBe(1);
+  await press(page, "Return an electron from chlorine to sodium");
+  await press(page, "Move an outer electron from sodium");
+  await press(page, "Give sodium’s electron to chlorine");
+  await expect.poll(async () => (await saved(page)).nacl.sent).toBe(1);
+  expect((await saved(page)).nacl.checked).toBe(false);
+  await press(page, "Return an electron from chlorine to sodium");
+  await press(page, "Move an outer electron from sodium");
+  await press(page, "Send an electron from sodium to chlorine");
+  await expect(button(page, "Inspect chlorine")).toBeVisible();
+  await expect(button(page, "Give sodium’s electron to chlorine")).toHaveCount(
+    0,
+  );
+  await expect.poll(async () => (await saved(page)).nacl.sent).toBe(1);
+});
+
+test("spatial electron drops preserve a wrong magnesium distribution and can repair it after reload", async ({
+  page,
+}) => {
+  await page.goto(route);
+  await press(page, "Open Balance chapter");
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+  });
+  await dragElectron(page, 0, 0);
+  await dragElectron(page, 0, 0);
+  await press(page, "Check my arrangement");
+  await expect(
+    page.getByText("One chlorine received both electrons."),
+  ).toBeVisible();
+  await page.reload();
+  expect((await saved(page)).mgcl.transfers).toEqual([2, 0]);
+  await expect(
+    page.getByText("One chlorine received both electrons."),
+  ).toBeVisible();
+  await expect(page.locator('svg[data-protons="17"]').first()).toHaveAttribute(
+    "data-shells",
+    "2,8,9",
+  );
+  await press(page, "Return an electron from chlorine 1 to magnesium");
+  await dragElectron(page, 0, 1);
+  expect((await saved(page)).mgcl.transfers).toEqual([1, 1]);
+  const particles = await page
+    .locator("svg[data-electrons]")
+    .evaluateAll((ions) =>
+      ions.map((a) => ({
+        protons: Number(a.getAttribute("data-protons")),
+        electrons: Number(a.getAttribute("data-electrons")),
+      })),
+    );
+  expect(particles.map((a) => a.protons)).toEqual([12, 17, 17]);
+  expect(particles.reduce((sum, a) => sum + a.electrons, 0)).toBe(46);
+  await page.reload();
+  expect((await saved(page)).mgcl.transfers).toEqual([1, 1]);
 });
 
 test("wrong transfers and charge predictions survive reload and can be reversed without losing any electron", async ({
@@ -241,9 +471,13 @@ test("three incorrect responses stay sealed until whole submission; editing inva
   await charge(page, "Non-metal-ion charge", "1+");
   await press(page, "No brackets");
   await press(page, "Record this response");
-  expect((await saved(page)).run!.recorded[0]).toBe(true);
+  await expect
+    .poll(async () => (await saved(page)).run!.recorded[0])
+    .toBe(true);
   await charge(page, "Metal-ion charge", "2−");
-  expect((await saved(page)).run!.recorded[0]).toBe(false);
+  await expect
+    .poll(async () => (await saved(page)).run!.recorded[0])
+    .toBe(false);
   await expect(button(page, "Next response →")).toBeDisabled();
   await press(page, "Record this response");
   await press(page, "Next response →");
@@ -319,6 +553,13 @@ test("seven-day gate stays closed at the last millisecond and opens at the bound
   await charge(page, "Metal-ion charge", "1+");
   await charge(page, "Non-metal-ion charge", "2−");
   await press(page, "Square brackets");
+  await layout(page, button(page, "Send an electron from sodium 1 to oxygen"));
+  const chargeBounds = (await page
+    .getByRole("group", { name: "Metal-ion charge", exact: true })
+    .getByRole("button", { name: "1+", exact: true })
+    .boundingBox())!;
+  expect(chargeBounds.height).toBeGreaterThanOrEqual(44);
+  expect(chargeBounds.y + chargeBounds.height).toBeLessThanOrEqual(664);
   await press(page, "Record this response");
   await press(page, "Next response →");
   await page.getByRole("radio", { name: /Electrostatic attraction/ }).check();
