@@ -105,6 +105,7 @@ export function FuelDrawingInput({
       )}
       <FuelPlotEditor
         contextLabel={contextLabel}
+        compact={compact}
         data={drawing.data}
         board={b}
         onChange={(changes) => onChange(JSON.stringify({ ...b, ...changes }))}

@@ -1,0 +1,70 @@
+{
+  "buildId": "uGS9O1eoCdzkOlzS-vSVV",
+  "records": [
+    {
+      "file": "320-pending.png",
+      "sha256": "f6a973d52fd605009caf0329b8a1ce21c687796396da732b1bf2db75a9a7d513"
+    },
+    {
+      "file": "320-1b-review.png",
+      "sha256": "e554e9933ee2efa8ab5aa45e7d00e12058fbb1168862c416370093b1cd3cb787"
+    },
+    {
+      "file": "320-2b-review.png",
+      "sha256": "f8990cda59cfd17499ea8f878e051ffb67225eaf504e2d8ba204b9f204410a55"
+    },
+    {
+      "file": "320-3a-review.png",
+      "sha256": "6ab7eaec42203eec04e098b2aef8d86ccb9e95b6dce25dbaf142360d172c7493"
+    },
+    {
+      "file": "320-7c-review.png",
+      "sha256": "10a3c4aa214321295ce11e3f90da54ee04b4ddbaafe6b4d7c505114ebf4135a4"
+    },
+    {
+      "file": "320-8b-review.png",
+      "sha256": "695da6907454c7d86616520568da9967111717d59610139b24a58862dbaf473b"
+    },
+    {
+      "file": "320-10a-review.png",
+      "sha256": "2dc550418e11e8f7d4526b769e3f8899a3b9e7e391c1fe04967623c2adb12acb"
+    },
+    {
+      "file": "320-reviewed-93.png",
+      "sha256": "3b519e3bd989756e89f55b08b7d469d1b7d3c983c97f55859b1c94c2821a7ecd"
+    },
+    {
+      "file": "1280-pending.png",
+      "sha256": "87c7ee07bea4232f2240edf0b94dd3e505af93253b72841fb52af914aab985b8"
+    },
+    {
+      "file": "1280-1b-review.png",
+      "sha256": "e9744c6af46911537fb3bccaefdf526e937d5938405f00d3a75a68341a5e66a8"
+    },
+    {
+      "file": "1280-2b-review.png",
+      "sha256": "15426a79804258acd27fc543d3e79467cc0247e7932ec33013ce9e22c0493619"
+    },
+    {
+      "file": "1280-3a-review.png",
+      "sha256": "f21aaa464107affbb50885b6ef6305c312accbee3d485bbae63ba2b90a3b06ee"
+    },
+    {
+      "file": "1280-7c-review.png",
+      "sha256": "432c3d8b964854fec06b0e813645c38d82f18e28a7d58ac43926bcb5530b8370"
+    },
+    {
+      "file": "1280-8b-review.png",
+      "sha256": "06c62f872337a8ef033e6da2de3aaa9391ac8a5c2fb95bd83329c6d60d493aee"
+    },
+    {
+      "file": "1280-10a-review.png",
+      "sha256": "606ff8c2dfa9b3a2037d710a804444ae61c67c811d22fdb07280b8a3f7a9550b"
+    },
+    {
+      "file": "1280-reviewed-93.png",
+      "sha256": "9e6f20d887b4cdf5f2b874fca4834ea813d21f57db19315d69ba8008cade1a79"
+    }
+  ],
+  "questionPanelCaptureStyle": "Only full-row captures suppress fixed mobile-bar and skip-link; viewport captures retain normal chrome."
+}

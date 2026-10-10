@@ -11,11 +11,13 @@ export function TangentPlot({
   line = graph.line,
   onPlace,
   onMove,
+  compact = false,
 }: {
   graph: TangentGraph;
   line?: readonly [TangentPoint, TangentPoint];
   onPlace?: (p: TangentPoint) => void;
   onMove?: (axis: "time" | "quantity", direction: number) => void;
+  compact?: boolean;
 }) {
   const suppliedLine = !!graph.line && line === graph.line;
   const c = graph.curve,
@@ -109,7 +111,7 @@ export function TangentPlot({
               x={65 + 100 * i}
               y={285}
               textAnchor="middle"
-              fontSize="23"
+              fontSize={compact ? 30 : 23}
               fill="#626b7d"
             >
               {Number((c.start + (span * i) / 4).toFixed(5))}
@@ -118,17 +120,23 @@ export function TangentPlot({
               x={56}
               y={267 - 52.5 * i}
               textAnchor="end"
-              fontSize="23"
+              fontSize={compact ? 30 : 23}
               fill="#626b7d"
             >
               {Number(((c.max * i) / 4).toFixed(5))}
             </text>
           </g>
         ))}
-        <text x={65} y={30} fontSize="23" fill="#626b7d">
+        <text x={65} y={30} fontSize={compact ? 30 : 23} fill="#626b7d">
           {c.quantity} / {c.unit}
         </text>
-        <text x={260} y={322} textAnchor="middle" fontSize="23" fill="#626b7d">
+        <text
+          x={260}
+          y={322}
+          textAnchor="middle"
+          fontSize={compact ? 30 : 23}
+          fill="#626b7d"
+        >
           Time / s
         </text>
         {points.every(inside) && (

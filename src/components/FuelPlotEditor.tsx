@@ -16,6 +16,7 @@ export function FuelPlotEditor({
   onChange,
   disabled = false,
   contextLabel,
+  compact = false,
 }: {
   data: FuelPlotRecord;
   board: Record<string, string>;
@@ -23,6 +24,7 @@ export function FuelPlotEditor({
   onChange: (changes: Record<string, string>) => void;
   disabled?: boolean;
   contextLabel?: string;
+  compact?: boolean;
 }) {
   const uid = useId(),
     [selected, setSelected] = useState(0),
@@ -184,7 +186,7 @@ export function FuelPlotEditor({
             : "Fuel observation plot editor"
       }
     >
-      {straight && coordinateFields}
+      {(straight || compact) && coordinateFields}
       <div className="organic-field">
         <label htmlFor={uid + "-selected"}>
           {straight
@@ -481,7 +483,7 @@ export function FuelPlotEditor({
           axis limits have not changed.
         </p>
       )}
-      {!straight && coordinateFields}
+      {!straight && !compact && coordinateFields}
       {data.independentExtrapolation && (
         <div className="organic-field">
           <label htmlFor={uid + "-extension"}>

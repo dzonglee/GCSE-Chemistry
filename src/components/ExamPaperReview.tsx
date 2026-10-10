@@ -89,8 +89,9 @@ export function ExamPaperReview({
           its associated calculation-method credit; this does not imply separate
           explanation or drawing points. For calculations, review working for
           contradictions and valid method credit, including a valid later step
-          after an earlier error where the criterion allows it. For the six-mark
-          method, judge the complete response using the level descriptions.
+          after an earlier error where the criterion allows it. For responses
+          marked using levels, judge the complete response using the level
+          descriptions rather than counting isolated keywords.
         </p>
         {Object.values(run.responses).some(
           (response) => !response.fresh || response.helped,
@@ -134,6 +135,9 @@ export function ExamPaperReview({
                     q.fuelDrawing ||
                     q.organicDrawing ||
                     q.polymerisationDrawing ||
+                    q.tangentGraph ||
+                    q.haberGiven ||
+                    q.chromatographyGiven ||
                     q.isotopeData) && (
                     <QuestionInput
                       question={q}

@@ -120,9 +120,16 @@ export function QuestionInput(props: InputProps) {
       {props.question.elementReference && <FirstTwentyReference symbolsOnly />}
       {props.question.alkaliReference && <AlkaliReference />}
       {props.question.halogenReference && <HalogenReference />}
-      {props.question.haberGiven && !props.question.parts && (
-        <HaberGivenFigure data={props.question.haberGiven} />
-      )}
+      {props.question.haberGiven &&
+        !props.question.parts &&
+        (props.compactAssessment ? (
+          <div className="haber-assessment-response">
+            <ResponseInput {...props} />
+            <HaberGivenFigure data={props.question.haberGiven} />
+          </div>
+        ) : (
+          <HaberGivenFigure data={props.question.haberGiven} />
+        ))}
       {props.question.materialsGiven &&
         !props.question.parts &&
         (props.compactMaterials ? (
@@ -223,9 +230,15 @@ export function QuestionInput(props: InputProps) {
       {props.question.hydrocarbonGiven && (
         <HydrocarbonGiven {...props.question.hydrocarbonGiven} />
       )}
-      {props.question.tangentGraph && (
-        <TangentPlot graph={props.question.tangentGraph} />
-      )}
+      {props.question.tangentGraph &&
+        (props.compactAssessment ? (
+          <div className="tangent-assessment-response">
+            <ResponseInput {...props} />
+            <TangentPlot graph={props.question.tangentGraph} compact />
+          </div>
+        ) : (
+          <TangentPlot graph={props.question.tangentGraph} />
+        ))}
       {props.question.rateGraph && (
         <RatePlot
           data={props.question.rateGraph}
@@ -563,6 +576,12 @@ export function QuestionInput(props: InputProps) {
         !(props.question.chromatographyGiven && props.compactAssessment) &&
         !(props.question.polymerisationGiven && props.compactAssessment) &&
         !props.question.lcaGiven &&
+        !(
+          props.compactAssessment &&
+          props.question.haberGiven &&
+          !props.question.parts
+        ) &&
+        !(props.compactAssessment && props.question.tangentGraph) &&
         !props.question.phMeasurements &&
         !props.question.invertedGasScale &&
         !props.question.halogenResults &&
@@ -878,7 +897,7 @@ function ResponseInput({
           onChange={(e) => onChange(e.target.value)}
         />
         <small>
-          {question.shortWritten
+          {question.shortWritten && !question.writtenEquationKind
             ? "A short phrase is enough. Compare with the examples when feedback appears; other valid answers can be accepted in manual review."
             : question.id.startsWith("ph-v1-method-") &&
                 question.writtenEquations
@@ -889,7 +908,7 @@ function ResponseInput({
                 : question.writtenEquationKind === "half"
                   ? "Use chemical formulas, ion charges and electrons. Balance atoms and charge. You can type → or ->. State symbols are optional for this question. Include any explanation requested."
                   : question.writtenEquationKind === "symbol"
-                    ? "Use chemical formulas and whole-number coefficients to write a balanced symbol equation. You can type → or ->."
+                    ? "Use chemical formulas and coefficients to write a balanced symbol equation. You can type → or ->."
                     : question.writtenEquations
                       ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
                       : "Write in your own words. Use the marking points for self-review when feedback appears."}

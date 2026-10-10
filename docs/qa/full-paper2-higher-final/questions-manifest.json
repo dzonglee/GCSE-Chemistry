@@ -1,0 +1,138 @@
+{
+  "buildId": "uGS9O1eoCdzkOlzS-vSVV",
+  "records": [
+    {
+      "file": "320-opening.png",
+      "sha256": "a0b64f2516a44d90014f6d4ce11015effec1e594b8f6ec682facda1ff5a71b26"
+    },
+    {
+      "file": "320-1b.png",
+      "sha256": "b8821ed4b2c6614a74c072ccc46c651f7f8c35bad68de7a02fb980bc1984f1db"
+    },
+    {
+      "file": "320-2b.png",
+      "sha256": "2fba016ae8616c10d5c0135d4398b4e163d8e4647ce862213eebe5d590ff82e7"
+    },
+    {
+      "file": "320-3a.png",
+      "sha256": "30caf3db260194f5b5b137fc730184e822740b290f0fa2f977a11fdc69b2763b"
+    },
+    {
+      "file": "320-4c.png",
+      "sha256": "b9f544ef94686a3779fd847ac765e7f400edd879d848dc60af6448f65f9402c2"
+    },
+    {
+      "file": "320-5b.png",
+      "sha256": "4e05330fc9a93f6e0df9985215fa32285ada9ef1b9977f9b4cbc53002c85366d"
+    },
+    {
+      "file": "320-6c.png",
+      "sha256": "bb7c97a175b18d9a8c9b4bf0b21ba696d6903ac0217e9aaffdf237ec6bc62bd9"
+    },
+    {
+      "file": "320-7c.png",
+      "sha256": "3ba284dea1b1dece3ed1d2606eecea8d5b420f132cf4a7cec1cf8c3b7b0f5437"
+    },
+    {
+      "file": "320-8b.png",
+      "sha256": "62e6bab762159e3d19ee93f1b012a9b365975fed6d4d145fe7d015c3033aeb70"
+    },
+    {
+      "file": "320-9b.png",
+      "sha256": "4df5c63b246dfd2233c5268cb53bc4aad41ad1bfe8ddd5768746e98fb005b602"
+    },
+    {
+      "file": "320-10a.png",
+      "sha256": "f51568b1c21771302fa60e722f05a906aa670a80fc59a38165ec5bdbf91c569e"
+    },
+    {
+      "file": "390-opening.png",
+      "sha256": "062cb7c17c2267577325a7ad290f76853010579d16ecca3f08a70470f0e213d0"
+    },
+    {
+      "file": "390-1b.png",
+      "sha256": "3ece3d40ac73a037fe3df1fbb85b3b72acdbf827465052ecbef4728e6c5b1b7d"
+    },
+    {
+      "file": "390-2b.png",
+      "sha256": "7ded70c407fa9ef2b96ef9ea58db29c8ab10d728cdff2627738332bb502a9e24"
+    },
+    {
+      "file": "390-3a.png",
+      "sha256": "6359cb8012ef694f9099240196086d7e858ba2e6453ceb488353356c94c09e0e"
+    },
+    {
+      "file": "390-4c.png",
+      "sha256": "5a730541b4a706c5c12085d3a03c739c237d0ea1819cfa0837587b3dff884a23"
+    },
+    {
+      "file": "390-5b.png",
+      "sha256": "08bed43bafc2b30beb9edc8d5ca6cffa5413dfccfc02357397df9a3b4dc0c24c"
+    },
+    {
+      "file": "390-6c.png",
+      "sha256": "36d353d775197d366173d829e737f8fc0735570ec29ec98a284736fd04d8427b"
+    },
+    {
+      "file": "390-7c.png",
+      "sha256": "624aae91195e527f9531f633038f341f16157a179217b31b3698689afdeb5c34"
+    },
+    {
+      "file": "390-8b.png",
+      "sha256": "fcb2cbf12a04fab880cb390dba1b21cb8d3e9edba055be955296ab6a0b089042"
+    },
+    {
+      "file": "390-9b.png",
+      "sha256": "cc1db88773e6aa2ebaf2bde7b7f383e25803fef368dbadd643fa813f5526ec1f"
+    },
+    {
+      "file": "390-10a.png",
+      "sha256": "3d06124df129b6e98169f418ff909d73816650e4857a2b141e1a8202d3ee728a"
+    },
+    {
+      "file": "1280-opening.png",
+      "sha256": "9d734a01651933208f187ddc92c87248d811c11dceea3ddf6305b8a6fc09f0c4"
+    },
+    {
+      "file": "1280-1b.png",
+      "sha256": "4ef754654480e624e55a125dea268ef8b9ef4c85ff160c377a2517d3bf951c80"
+    },
+    {
+      "file": "1280-2b.png",
+      "sha256": "7a707187cb8667ddef84b84d07226d9f4dc7cd7ef5549318935d36f6d80e3d26"
+    },
+    {
+      "file": "1280-3a.png",
+      "sha256": "a3697691f36ea5f23a8340f21755e6bce8e17be53187bbe49b94d4e4bf824460"
+    },
+    {
+      "file": "1280-4c.png",
+      "sha256": "61b0977f3d4d3d4c6f2e35d7c4c81c9a16a69b341d4575c01eeedc10226b06ad"
+    },
+    {
+      "file": "1280-5b.png",
+      "sha256": "17e228aa8a921b658c093f4b295b535ced54595d6db6949285389101cfd5ddfc"
+    },
+    {
+      "file": "1280-6c.png",
+      "sha256": "ba40d450d4212540aff025fcd3396b1cfe917aa1928affb556d4aca4654031e5"
+    },
+    {
+      "file": "1280-7c.png",
+      "sha256": "66eba4e105a77a73357a4f4cf701e121461957cc0453d238556dec38f3538b5a"
+    },
+    {
+      "file": "1280-8b.png",
+      "sha256": "93bbcedaf44fb0bad15c5d84bedd13065e577020646ea510387ea0f4ec50aadb"
+    },
+    {
+      "file": "1280-9b.png",
+      "sha256": "d0b1a7c9eb0cd5d27458861ec3ac82250a535288b4bb68d6780b3ba635c87dbf"
+    },
+    {
+      "file": "1280-10a.png",
+      "sha256": "b97e59ba34cc054bc458e9a3d28b9b03552c2fca2a2b289a4817d1cad6956d9d"
+    }
+  ],
+  "questionPanelCaptureStyle": "Only panel captures suppress fixed mobile-bar and skip-link; opening viewport captures retain normal chrome."
+}

@@ -526,6 +526,9 @@ footer > div {
 .paper-retained-response {
   white-space: pre-wrap;
 }
+.tangent-assessment-response > .rate-plot {
+  margin: 16px 0;
+}
 .question-panel[data-full-paper] .written-equation-prompt {
   margin: 8px 0;
 }

@@ -262,7 +262,7 @@ for (const width of [320, 1280])
             page.getByText(
               part.question.writtenEquationKind === "half"
                 ? "Use chemical formulas, ion charges and electrons. Balance atoms and charge. You can type → or ->. State symbols are optional for this question. Include any explanation requested."
-                : "Use chemical formulas and whole-number coefficients to write a balanced symbol equation. You can type → or ->.",
+                : "Use chemical formulas and coefficients to write a balanced symbol equation. You can type → or ->.",
               { exact: true },
             ),
           ).toBeVisible();

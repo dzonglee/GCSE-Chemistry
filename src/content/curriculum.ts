@@ -1,6 +1,7 @@
 import { paper1FoundationFull } from "./paper1-foundation-full";
 import { paper2FoundationFull } from "./paper2-foundation-full";
 import { paper1HigherFull } from "./paper1-higher-full";
+import { paper2HigherFull } from "./paper2-higher-full";
 import {
   haberJourney,
   haberExposureFamilies,
@@ -4204,7 +4205,8 @@ export const questionById = (id: string) =>
     ?.question ??
   paper2FoundationFull.parts.find((part) => part.question.id === id)
     ?.question ??
-  paper1HigherFull.parts.find((part) => part.question.id === id)?.question;
+  paper1HigherFull.parts.find((part) => part.question.id === id)?.question ??
+  paper2HigherFull.parts.find((part) => part.question.id === id)?.question;
 
 const nanoLesson = lessons.find(
   (l) => l.slug === "particles-and-nanoparticles",
