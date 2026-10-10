@@ -1077,11 +1077,19 @@
     "trilogyCandidate": "5.4.1.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Metal oxides oxidation oxygen gain; reduction oxygen loss. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "or-v1-p-magnesium",
+      "or-v1-p-paired",
+      "or-v1-ca-written",
+      "or-v1-p-agent-explain"
+    ],
+    "responseEvidenceReview": "Actual8462 body reread. All20 oxygen-redox practice prompts/answers/rubrics and selected cold explanations personally read, plus complete individual review/source record. Metals combine with oxygen to make oxides; written paired explanation constructs oxygen-loss reduction and oxygen-gain oxidation while conserving transferred atoms. Supplied CO and CO2 equations distinguished; electron definitions remain separately Higher.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.1.2",
@@ -1090,11 +1098,23 @@
     "trilogyCandidate": "5.4.1.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "SpecifiedK/Na/Li/Ca/Mg/Zn/Fe/Cu water/diluteacid room-temp reactions, positive-ion tendency, displacement and experimental ranking;steam excluded. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "mr-v1-p-full-order",
+      "mr-v1-p-spectator",
+      "mr-write-v1-ca-core",
+      "mr-write-v1-ca-acid",
+      "mr-write-v1-ca-plan",
+      "mr-write-v1-ra-water",
+      "mr-write-v1-ra-ions",
+      "mr-write-v1-ra-plan"
+    ],
+    "responseEvidenceReview": "Actual8462 full body reread, then all23 practice responses and all check/review responses personally read. Native ordering and displacement plus written independent/delayed full eight-metal order, room-temperature water observations/products, acid contrasts, positive-ion tendency rather than charge magnitude, and experiment plan/control/ranking. Steam excluded; short null observations do not imply equal reactivity.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.1.3",
@@ -1103,11 +1123,25 @@
     "trilogyCandidate": "5.4.1.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Nativegold versus compounds;carbon reduction belowcarbon; supplied extraction evaluation andoxygen transfer; detailed industrialprocess recall excluded. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "me-v1-p-native",
+      "me-v1-p-explain-al",
+      "me-v1-p-agent",
+      "me-v1-p-carbon-product",
+      "me-v1-p-neither",
+      "me-v1-p-evaluate",
+      "me-v1-a-explain",
+      "me-v1-b-explain",
+      "me-v1-v-a-native",
+      "me-v1-v-b-route"
+    ],
+    "responseEvidenceReview": "Actual8462 body reread; all20 metal-extraction practice prompts/answers/rubrics and selected cold/retention responses personally read plus full individual review. Uncombined gold differs from purity; carbon-relative compatibility and oxygen-loss reduction precede supplied economic evaluation. Constructed explanation and inverse/normalised supplied calculation/evaluation preserve ore, oxide, contained metal and actual recovered output distinctions. No detailed industrial-process recall imposed.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.1.4",
@@ -1116,11 +1150,23 @@
     "trilogyCandidate": "5.4.1.4",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
     "actualBodyReview": "Electron redox, constructed ionic displacement equations, identify species from reactions/symbol/halfequations. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "he-v1-p-definition",
+      "he-v1-p-displacement",
+      "he-v1-p-iron-ion",
+      "he-v1-g-ionic",
+      "he-v1-rb-silver",
+      "disp-v1-p-explain-scale",
+      "disp-v1-p-explain-cancel",
+      "disp-v1-p-explain-feasible"
+    ],
+    "responseEvidenceReview": "Actual8462 complete electron-redox body reread. All half-equation/redox and displacement-combination practice prompts/answers/typed-equation flags/rubrics, all half-equation cold/review responses and complete individual source reviews personally read. Typed net zinc and delayed copper/silver displacement construction retains atoms/charge; changed species, gained/lost electrons and intact spectators explicitly distinguished. Balancing alone does not prove displacement feasibility. Higher scope remains enforced.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.2.1",
@@ -1129,11 +1175,24 @@
     "trilogyCandidate": "5.4.2.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both; Higher redox sub-demand",
     "actualBodyReview": "Acid-metal salt/H2, specifiedMgZnFe/HClH2SO4; electron redox explanation/species Higher only. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "an-v1-p-metal",
+      "am-write-v1-p-salts",
+      "am-write-v1-p-oxide",
+      "am-write-v1-ca-hcl",
+      "am-write-v1-ca-sulfate",
+      "am-write-v1-ca-redox",
+      "am-write-v1-ra-hcl",
+      "am-write-v1-ra-sulfate",
+      "am-write-v1-ra-redox"
+    ],
+    "responseEvidenceReview": "Actual8462 body reread. All23 acid/neutralisation practice and24 check/review responses personally read, including all six specified Mg/Zn/Fe with HCl/H2SO4 written equations, named salts/formula explanation, hydrogen versus neutralisation water, and independently constructed Higher atom/ion electron redox and spectators. Higher redox flags personally verified in actual task/source; no all-acid generalisation.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.2.2",
@@ -1142,11 +1201,28 @@
     "trilogyCandidate": "5.4.2.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Alkali/oxide/hydroxide/carbonate neutralisation products; acidanion/positiveion saltformula deduction. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "an-v1-p-base-explain",
+      "an-v1-p-oxide",
+      "an-v1-p-carbonate",
+      "an-v1-p-nitrate",
+      "an-v1-p-sulfate",
+      "an-v1-a-missing",
+      "an-v1-a-formula",
+      "an-v1-b-missing",
+      "if-v1-p-potassium-nitrate",
+      "if-v1-p-carbonate",
+      "if-v1-p-ammonium",
+      "if-v1-p-iron",
+      "if-v1-p-explain"
+    ],
+    "responseEvidenceReview": "Actual8462 complete neutralisation/salt body reread. All acid/neutralisation practice and check/review records personally read. Base versus alkali and insoluble oxide, hydroxide/oxide salt-and-water and carbonate additional CO2 products, chloride/nitrate/sulfate acid-anion identity and supplied ion charge balance retained. Ionic-formulae generated construction personally reread supplies formula deduction rather than relying only on acid-lesson choices.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.2.3",
@@ -1155,11 +1231,23 @@
     "trilogyCandidate": "5.4.2.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Excessinsolublesolid/filter/crystallise, describepuredrysaltfromprovidedinformation;8462RP1=8464RP8 soluble salts, NOT potable water. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "ss-v1-p-excess-write",
+      "ss-v1-p-filter-write",
+      "ss-v1-p-method-write",
+      "ss-v1-heating-p-copper",
+      "ss-v1-heating-ca-magnesium",
+      "ss-v1-heating-cb-repair",
+      "ss-v1-heating-ra-stages",
+      "ss-v1-heating-rb-zinc-sulfate"
+    ],
+    "responseEvidenceReview": "Actual8462 soluble-salt body and RP1 reread. All22 practice and six written cold/review responses personally read. Independent complete pure/dry method specifies insoluble oxide/acid, Bunsen warm acid then excess stirred solid, cooling/filtering excess, water-bath/electric concentration, stopping before dryness, cooling crystallisation/recovery/gentle drying. Changed ZnO/MgO transfers and repair retain stage purposes. Burner-heated water bath permitted; no invented blanket burner ban. RP1 maps to TrilogyRP8 soluble salts, distinct from reserved potable-water scope.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.2.4",
@@ -1168,11 +1256,25 @@
     "trilogyCandidate": "5.4.2.4",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "H+/OH-, pH/probe/indicatorapproximation; neutralisationH+(aq)+OH-(aq)→H2O(l); missing text-extracted equation personally viewed inboth47/92 pages. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "an-v1-p-acid-ion",
+      "an-v1-p-alkali-ion",
+      "ph-v1-p-decimal",
+      "ph-v1-p-green",
+      "ph-v1-p-colour-explain",
+      "ph-v1-method-p-indicator",
+      "ph-v1-method-ca-indicator",
+      "ph-v1-method-cb-indicator",
+      "ph-v1-method-ca-equation",
+      "ph-v1-method-ra-equation"
+    ],
+    "responseEvidenceReview": "Actual8462 pH/neutralisation body reread; original equation image previously inspected. All22 pH practice and written cold/review records personally read. Constructed universal/wide-range indicator method with own chart yields approximate pH, numerical probe/accuracy distinctions, acid/alkali classification, H+/OH- and explicit state-bearing net neutralisation equation conserve atoms/charge and retain spectator ions. Actual curriculum confirms this route Foundation/shared and method equations have no Higher task restriction.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.2.5",
@@ -1181,11 +1283,24 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both; Higher quantities sub-demand",
     "actualBodyReview": "Separateonlytitration strongacid/alkali accuratevolumes/indicatorRP2; molar andmass concentrationcalculations Higheronly. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "tech-v1-p-shift",
+      "tech-v1-p-fine",
+      "tech-v1-p-meniscus",
+      "tech-v1-p-tools",
+      "tech-v1-p-comparison",
+      "tech-v1-p-error-reason",
+      "tech-v1-a-method",
+      "tech-v1-b-overshoot",
+      "tech-v1-d-salt"
+    ],
+    "responseEvidenceReview": "Actual8462 titration body/RP2 reread. All20 technique practice and four cold/review written explanations personally read. Constructed controlled titration plan/measurement includes fixed pipetted aliquot, measured burette delivery, suitable indicator, rough/careful fresh repeats, dropwise/swirl and accepted means; reading2dp/meniscus, rinse/jet/funnel and systematic error distinctions retained. Separate-only practical; already reviewed Higher titration-calculation/molar concentration route supplies mol/dm3 and g/dm3 quantities without imposing them on Foundation.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.2.6",
@@ -1194,11 +1309,24 @@
     "trilogyCandidate": "5.4.2.5",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
     "actualBodyReview": "Complete/partialionisation;specifiedstrongweakacidexamples;dilute/concentrated distinct;equalconcentrationstrongerlowerpH;wholepH10foldH+. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "acid-v1-p-strong-dilute",
+      "acid-v1-p-ions",
+      "acid-v1-p-fall-three",
+      "acid-v1-p-controlled",
+      "acid-v1-p-uncontrolled",
+      "acid-v1-b-descriptors",
+      "acid-v1-a-subject",
+      "acid-v1-ra-uncontrolled",
+      "acid-v1-rb-two"
+    ],
+    "responseEvidenceReview": "Actual8462 strong/weak complete body reread. All20 practice and16 independent/review responses personally read. Generated whole-pH tenfold comparisons and constructed complete/partial acid-ionisation versus amount/volume descriptors, controlled equal-concentration comparison and pH causal explanations distinguish strength/concentration. All specified acid examples appear in actual prompts/feedback. Weak dilution and sulfuric polyprotic shortcut limits explicitly acknowledged. Higher only; Trilogy counterpart5.4.2.5, not copiedsuffix5.4.2.6.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.3.1",
@@ -1207,11 +1335,22 @@
     "trilogyCandidate": "5.4.3.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both; Higher half-equation sub-demand",
     "actualBodyReview": "Mobileionicliquid electrolytes, anion/cation electrodes/discharge; section-wide Higherhalf-equationwriting/completion. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "el-v1-p-electrolyte",
+      "el-v1-p-carrier-write",
+      "el-v1-p-move-write",
+      "el-v1-a-write",
+      "el-v1-b-layout",
+      "he-v1-p-hydrogen",
+      "he-v1-p-hydroxide"
+    ],
+    "responseEvidenceReview": "Actual8462 complete electrolysis body reread including section-wide Higher half equations. All22 molten/electrolysis practice and28 cold/review responses personally read. Mobile ions in melt/solution versus fixed lattice/electron wire carriers, electrolyte/DC supply, polarity and discharge/neutral products are constructed in writing and native responses. Already independently reviewed Higher typed half-equations cover inherited electrode demand; no Foundation electron equation imposed.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.3.2",
@@ -1220,11 +1359,24 @@
     "trilogyCandidate": "5.4.3.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both; Higher half-equation sub-demand",
     "actualBodyReview": "Moltenbinaryionic products inert electrodes; Higher section-wide half-equations inherited. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "el-v1-p-lead",
+      "el-v1-p-sodium",
+      "el-v1-p-chlorine",
+      "el-v1-p-products-write",
+      "el-v1-a-products",
+      "el-v1-b-products",
+      "el-write-v1-vA-reaction",
+      "el-write-v1-vB-reaction",
+      "he-v1-b-zinc"
+    ],
+    "responseEvidenceReview": "Actual8462 complete molten body reread. All molten product practice/cold/review records read: binary-melt inert-electrode prediction, metal at cathode/neutral diatomic nonmetal at anode, no water-derived hydrogen, changed CaBr2/KI and written MgCl2/CaBr2 decomposition. Higher typed molten Zn cathode and halide oxidation mapped separately.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.3.3",
@@ -1233,11 +1385,26 @@
     "trilogyCandidate": "5.4.3.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both; Higher half-equation sub-demand",
     "actualBodyReview": "More reactive/carbonreacts electroextraction, melting/currentenergy; alumina/cryolite mixture andconsumedcarbonanode explanations. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "me-v1-p-al",
+      "me-v1-p-carbide",
+      "el-v1-p-extraction-write",
+      "el-write-v1-p-mixture",
+      "el-write-v1-p-anode",
+      "el-write-v1-cA-mixture",
+      "el-write-v1-cA-anode",
+      "el-write-v1-vB-mixture",
+      "el-write-v1-vB-anode",
+      "he-v1-p-aluminium",
+      "he-v1-p-oxide"
+    ],
+    "responseEvidenceReview": "Actual8462 aluminium/electroextraction body reread; all22 electrolysis practice and cold/review responses personally read. More-reactive-than-carbon and supplied carbide suitability, molten alumina/cryolite lower-temperature heating benefit while current remains necessary, carbon anode oxygen reaction/consumption and continually replaced written causal explanation. Higher alumina ion half-equations map to separate typed responses.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.3.4",
@@ -1246,11 +1413,28 @@
     "trilogyCandidate": "5.4.3.4",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both; Higher half-equation sub-demand",
     "actualBodyReview": "Aqueoussinglecompound inert-electrode products/cathodereactivity/halides vsoxygen/waterions; hypothesisRP3Separate=RP9Trilogy. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "aqp-v1-p-magnesium",
+      "aqp-v1-p-silver",
+      "aqp-v1-p-bromide",
+      "aqp-v1-p-sulfate",
+      "aqp-v1-p-explain-water",
+      "aqp-v1-method-p-copper",
+      "aqp-v1-method-c-potassium",
+      "aqp-v1-method-c-copper",
+      "aqp-v1-method-r-sodium",
+      "aqp-v1-method-r-magnesium",
+      "he-v1-p-hydrogen",
+      "he-v1-p-hydroxide",
+      "he-v1-p-chloride"
+    ],
+    "responseEvidenceReview": "Actual8462 aqueous body/RP3 reread. All22 aqueous product practice and20 cold/review records personally read: known single-salt inert-electrode relative reactivity/water competition, halide/nonhalide products and distinct active copper context. Constructed complete independent/delayed hypothesis-led practical plans specify labelled immersed separated carbon electrodes/DC supply, separate collections, paired gas tests/deposit evidence, comparison to prediction and repeated controlled observations. Foundation plans exclude Higher half equations; existing Higher typed H+/OH-/halide responses cover inherited demand. RP3=TrilogyRP9.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.3.5",
@@ -1259,11 +1443,25 @@
     "trilogyCandidate": "5.4.3.5",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
     "actualBodyReview": "Cathodeelectron-gainreduction/anodelossoxidation; H+andOH- half-equations withcharge/atom balance. Completeactual8462/8464 correspondingbodiesread; actualTrilogystrongweak=5.4.2.5, not5.4.2.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "he-v1-p-hydrogen",
+      "he-v1-p-hydroxide",
+      "he-v1-p-chloride",
+      "he-v1-p-bromide",
+      "he-v1-p-oxide",
+      "he-v1-p-aluminium",
+      "he-v1-b-zinc",
+      "he-v1-b-hydroxide-count",
+      "he-v1-b-explain",
+      "he-v1-rb-explain"
+    ],
+    "responseEvidenceReview": "Actual8462 full electrode-half-equation body reread including both supplied H+/OH- examples and equivalent hydroxide electron-subtraction form. All20 half-equation practice and16 cold/review responses personally read, plus complete individual review. Typed equations construct cation reduction, diatomic halide/oxide oxidation and hydroxide oxidation retaining water, balancing atoms and signed charge; positive balanced multiples accepted except explicit simplest demand. Cathode gain/reduction and anode loss/oxidation plus external electron versus ionic current distinguished. Higher section-wide demand needs to accompany Foundation product routes, separately mapped.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.5.1.1",
