@@ -31,6 +31,28 @@ async function capture(page: Page, path: string) {
   });
   await page.screenshot({ path, fullPage: true });
 }
+async function captureProse(page: Page, name: string, device: string) {
+  await page.evaluate(async () => {
+    if (document.activeElement instanceof HTMLElement)
+      document.activeElement.blur();
+    await document.fonts.ready;
+    scrollTo(0, 0);
+    await new Promise<void>((r) =>
+      requestAnimationFrame(() => requestAnimationFrame(() => r())),
+    );
+  });
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.screenshot({
+    path: `test-results/qa/balancing-masses-prose/${device}-${name}.png`,
+    fullPage: true,
+    scale: "css",
+  });
+}
 async function answer(page: Page, q: (typeof journey.practice)[number]) {
   if (q.parts) {
     const values = JSON.parse(q.answer);
@@ -260,6 +282,9 @@ test("all twenty-one independent tasks keep complete working container readings 
         exact: true,
       }),
     ).toBeVisible();
+    if (["bm-v1-p-water", "bm-v1-p-candidate-two"].includes(q.id)) {
+      await captureProse(page, q.id, info.project.name);
+    }
     if (q.id === "bm-v1-p-ethane") {
       const boxes = await page
         .locator(".multipart-answer input")

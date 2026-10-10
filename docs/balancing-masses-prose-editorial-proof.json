@@ -1,0 +1,33 @@
+{
+  "source": "src/content/journeys/balancing-masses.ts",
+  "beforeSha256": "a8aa460bd6f8d5206f36ca1321944d2b7c9889f1aac940802eebb25a019b14c0",
+  "nonSpaceBytesUnchanged": true,
+  "explicitEdits": [
+    {
+      "before": "ratio2",
+      "after": "ratio 2",
+      "occurrences": 1
+    },
+    {
+      "before": "H\u2082O3.6",
+      "after": "H\u2082O 3.6",
+      "occurrences": 1
+    },
+    {
+      "before": "CaO5.6",
+      "after": "CaO 5.6",
+      "occurrences": 1
+    },
+    {
+      "before": "andCO\u2082",
+      "after": "and CO\u2082",
+      "occurrences": 1
+    },
+    {
+      "before": "H\u2082O1.08",
+      "after": "H\u2082O 1.08",
+      "occurrences": 1
+    }
+  ],
+  "afterSha256": "ed6efef535e4486025692c21abf42af9593d6975148be00e591db179e4837398"
+}

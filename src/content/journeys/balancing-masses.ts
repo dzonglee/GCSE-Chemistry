@@ -286,7 +286,7 @@ export const balancingMassesJourney: LessonJourney = {
     parts(
       "p-water",
       "Derive a different three-part equation",
-      "Reacted masses H₂ 0.4 g,O₂ 3.2 g,H₂O3.6 g. M:2,32,18 g/mol. Enter smallest coefficients in that order.",
+      "Reacted masses H₂ 0.4 g,O₂ 3.2 g,H₂O 3.6 g. M:2,32,18 g/mol. Enter smallest coefficients in that order.",
       [
         { id: "hydrogen", label: "H₂ coefficient", answer: 2 },
         { id: "oxygen", label: "O₂ coefficient", answer: 1 },
@@ -298,7 +298,7 @@ export const balancingMassesJourney: LessonJourney = {
     parts(
       "p-decomposition",
       "Derive a decomposition ratio",
-      "CaCO₃ 10 g gives CaO5.6 g andCO₂ 4.4 g. M:100,56,44 g/mol. Enter smallest coefficients in that order.",
+      "CaCO₃ 10 g gives CaO 5.6 g and CO₂ 4.4 g. M:100,56,44 g/mol. Enter smallest coefficients in that order.",
       [
         { id: "carbonate", label: "CaCO₃ coefficient", answer: 1 },
         { id: "oxide", label: "CaO coefficient", answer: 1 },
@@ -349,7 +349,7 @@ export const balancingMassesJourney: LessonJourney = {
         "Neither because gram masses differ":
           "Different product masses do not imply unequal molar ratios of the expected size.",
       },
-      "10.16/63.5=.16;1.44/18=.08;ratio2:1.",
+      "10.16/63.5=.16;1.44/18=.08;ratio 2:1.",
       "Each balanced candidate predicts a different Cu:water ratio.",
     ),
     n(
@@ -636,7 +636,7 @@ export const balancingMassesJourney: LessonJourney = {
       parts(
         "ra-moles",
         "Retrieve mass-to-mol conversion",
-        "Reacted masses H₂ .12 g,O₂ .96 g,H₂O1.08 g. M:2,32,18 g/mol. Enter mol amounts.",
+        "Reacted masses H₂ .12 g,O₂ .96 g,H₂O 1.08 g. M:2,32,18 g/mol. Enter mol amounts.",
         [
           { id: "hydrogen", label: "H₂ / mol", answer: 0.06 },
           { id: "oxygen", label: "O₂ / mol", answer: 0.03 },
