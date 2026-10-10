@@ -73,7 +73,7 @@ const decision = written(
 const model = written(
   "ra-model",
   "Interpret the crop",
-  "A drawing shows32 carbons in one plane. Explain why graphene is one layer but not a C₃₂ molecule, and what the drawing omits.",
+  "A drawing shows 32 carbons in one plane. Explain why graphene is one layer but not a C₃₂ molecule, and what the drawing omits.",
   "Graphene is one atom-layer thick; each interior carbon has three bonded neighbours within its extended hexagonal sheet. Thirty-two is a finite model inventory, not a fixed molecule size. Connections continue beyond the cropped edge. Spheres/sticks are schematic sizes and links; the drawing does not show physical thickness, real bond lengths or the delocalised-electron distribution.",
   [
     "Distinguish one atom layer from three bonded neighbours.",
