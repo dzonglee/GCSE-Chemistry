@@ -174,9 +174,21 @@ test("the individually reviewed Higher sample renders thirty formats, preserves 
     .click();
   for (let i = 0; i < 30; i++) {
     const q = paper.questions[i];
+    const hasSeparatePrompt = !!(
+      (q.writtenEquations || q.conciseHeading) &&
+      q.title
+    );
     await expect(
-      page.getByRole("heading", { name: q.prompt, exact: true }),
+      page.getByRole("heading", {
+        name: hasSeparatePrompt ? q.title : q.prompt,
+        exact: true,
+      }),
     ).toBeVisible();
+    if (hasSeparatePrompt) {
+      const prompt = page.locator(".question-panel .written-equation-prompt");
+      await expect(prompt).toBeVisible();
+      await expect(prompt).toHaveText(q.prompt);
+    }
     await expect(
       page.locator(
         ".assessment-results,.assessment-review-criteria,.temperature-graph-reference",
