@@ -1,0 +1,25 @@
+{
+  "source": "src/content/journeys/making-soluble-salts.ts",
+  "beforeSHA256": "d1464cc7779a300e37e7fa6360f965a822296c8c1674162a74de3897af864141",
+  "afterSHA256": "2d91a5fb611e272116ff4c15b3792e813211e9b4f77e77a0f1f973365d93ea89",
+  "spaceEdits": {
+    "of7": "of 7",
+    "from40": "from 40",
+    "record:40": "record: 40",
+    "g;8": "g; 8",
+    "g;60": "g; 60",
+    "crystallisation,40": "crystallisation, 40",
+    "crystallises;16": "crystallises; 16",
+    "record,48": "record, 48",
+    "g;48": "g; 48",
+    "to60": "to 60",
+    "record,35": "record, 35",
+    "g;35": "g; 35",
+    "record:27": "record: 27",
+    "dissolved;27": "dissolved; 27",
+    "record:44": "record: 44",
+    "dissolved;44": "dissolved; 44"
+  },
+  "nonSpaceBytesIdenticalBeforeExplicitAlias": true,
+  "explicitAlias": "It proves an exact pH of7 \u2192 It proves an exact pH of 7"
+}

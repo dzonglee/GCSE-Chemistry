@@ -263,7 +263,7 @@ export const solubleSaltsJourney: LessonJourney = {
     n(
       "g-cooling",
       "Keep the mother liquor",
-      "Supplied KNO3 record:40 g salt initially dissolved in 50 g water; cold solubility 32 g per 100 g water. After equilibrium crystallisation without water loss, how many grams crystallise?",
+      "Supplied KNO3 record: 40 g salt initially dissolved in 50 g water; cold solubility 32 g per 100 g water. After equilibrium crystallisation without water loss, how many grams crystallise?",
       24,
       "g",
       "Cold capacity=16 g; crystals=40−16=24 g. Dissolved salt remains in mother liquor.",
@@ -336,7 +336,7 @@ export const solubleSaltsJourney: LessonJourney = {
       "It supports that the acid has been consumed",
       {
         "It proves CuO became soluble": "The remaining solid is insoluble.",
-        "It proves an exact pH of7":
+        "It proves an exact pH of 7":
           "This observation does not give an exact pH measurement.",
       },
       "The insoluble reactant is now in excess and can be removed; do not invent an exact pH.",
@@ -459,7 +459,7 @@ export const solubleSaltsJourney: LessonJourney = {
       "20 g KNO3 is initially dissolved in 25 g water. Cold capacity is 8 g. With equilibrium crystallisation and no losses, what mass crystallises?",
       12,
       "g",
-      "20−8=12 g;8 g remains dissolved.",
+      "20−8=12 g; 8 g remains dissolved.",
       "Subtract, do not add.",
     ),
     n(
@@ -477,17 +477,17 @@ export const solubleSaltsJourney: LessonJourney = {
       "60 g KNO3 is dissolved in 75 g water. Supplied cold solubility is 32 g per 100 g water. At equilibrium with no losses, what mass crystallises?",
       36,
       "g",
-      "Cold capacity=24 g;60−24=36 g.",
+      "Cold capacity=24 g; 60−24=36 g.",
       "Scale capacity before subtracting.",
     ),
     w(
       "p-cooling-write",
       "Explain the two masses",
       "Explain why the 40 g KNO3 record gives 24 g crystals rather than 40 g, using the supplied cold solubility and 50 g water.",
-      "The cold solution can retain 32×50/100=16 g dissolved. With no water loss and equilibrium crystallisation,40−16=24 g crystallises;16 g remains in mother liquor.",
+      "The cold solution can retain 32×50/100=16 g dissolved. With no water loss and equilibrium crystallisation, 40−16=24 g crystallises; 16 g remains in mother liquor.",
       [
         "Scale the dissolved capacity to 16 g.",
-        "Subtract from40 g.",
+        "Subtract from 40 g.",
         "Identify mother liquor and stated assumptions.",
       ],
     ),
@@ -560,11 +560,11 @@ export const solubleSaltsJourney: LessonJourney = {
       n(
         "a-crystals",
         "Use fresh supplied data",
-        "For this original KNO3 record,48 g is dissolved in 60 g water. Cold solubility is 30 g per 100 g water. At equilibrium with no losses, how many grams crystallise?",
+        "For this original KNO3 record, 48 g is dissolved in 60 g water. Cold solubility is 30 g per 100 g water. At equilibrium with no losses, how many grams crystallise?",
         30,
         "g",
-        "Cold capacity=18 g;48−18=30 g.",
-        "Scale to60 g water.",
+        "Cold capacity=18 g; 48−18=30 g.",
+        "Scale to 60 g water.",
       ),
       c(
         "a-sequence",
@@ -621,10 +621,10 @@ export const solubleSaltsJourney: LessonJourney = {
       n(
         "b-crystals",
         "Use another fresh record",
-        "For this original KNO3 record,35 g is dissolved in 40 g water. Cold solubility is 25 g per 100 g water. At equilibrium with no losses, how many grams crystallise?",
+        "For this original KNO3 record, 35 g is dissolved in 40 g water. Cold solubility is 25 g per 100 g water. At equilibrium with no losses, how many grams crystallise?",
         25,
         "g",
-        "Cold capacity=10 g;35−10=25 g.",
+        "Cold capacity=10 g; 35−10=25 g.",
         "Scale then subtract.",
       ),
       c(
@@ -671,10 +671,10 @@ export const solubleSaltsJourney: LessonJourney = {
       n(
         "ra-mass",
         "Retrieve scaling and subtraction",
-        "Supplied KNO3 record:27 g salt dissolved in 30 g water; cold solubility 20 g per 100 g water. At equilibrium with no losses, how many grams crystallise?",
+        "Supplied KNO3 record: 27 g salt dissolved in 30 g water; cold solubility 20 g per 100 g water. At equilibrium with no losses, how many grams crystallise?",
         21,
         "g",
-        "6 g remains dissolved;27−6=21 g.",
+        "6 g remains dissolved; 27−6=21 g.",
         "Scale capacity first.",
       ),
       c(
@@ -707,10 +707,10 @@ export const solubleSaltsJourney: LessonJourney = {
       n(
         "rb-mass",
         "Retrieve with changed data",
-        "Supplied KNO3 record:44 g dissolved in 80 g water; cold solubility 30 g per 100 g water. At equilibrium with no losses, how many grams crystallise?",
+        "Supplied KNO3 record: 44 g dissolved in 80 g water; cold solubility 30 g per 100 g water. At equilibrium with no losses, how many grams crystallise?",
         20,
         "g",
-        "24 g remains dissolved;44−24=20 g.",
+        "24 g remains dissolved; 44−24=20 g.",
         "Scale before subtraction.",
       ),
       c(
@@ -757,3 +757,9 @@ for (const task of solubleSaltsJourney.practice)
 
 // Append practical heater transfer without changing original task identities/forms.
 extendSaltHeating(solubleSaltsJourney);
+
+solubleSaltsJourney.practice.find(
+  (q) => q.id === "ss-v1-p-excess",
+)!.optionAliases = {
+  "It proves an exact pH of7": "It proves an exact pH of 7",
+};

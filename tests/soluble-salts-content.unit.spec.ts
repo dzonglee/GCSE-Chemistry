@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { solubleSaltsJourney as j } from "../src/content/journeys/making-soluble-salts";
+import { mark } from "../src/lib/marking";
 import { tasks } from "../src/content/journeys/helpers";
 test("original49 demands retain their forms; eight heater transfers add deferred manual review", () => {
   const all = tasks(j);
@@ -68,4 +69,13 @@ test("method explanations preserve logical sequence, named reagents and distinct
     "self-reviewed",
   ])
     expect(j.scopeNote).toContain(phrase);
+});
+
+test("historical exact-pH choice stays incorrect with its scientific feedback", () => {
+  const q = j.practice.find((q) => q.id === "ss-v1-p-excess")!;
+  const historical = mark(q, "It proves an exact pH of7");
+  expect(historical).toEqual(mark(q, "It proves an exact pH of 7"));
+  expect(historical.correct).toBe(false);
+  expect(historical.feedback).toContain("exact pH measurement");
+  expect(mark(q, q.answer).correct).toBe(true);
 });
