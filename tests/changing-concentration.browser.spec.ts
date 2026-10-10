@@ -299,6 +299,15 @@ test("twenty independent demands include constructed inventories and honest writ
           ),
         )
         .toBe(false);
+    if (q.id === "cc-v1-p-explain") {
+      await page.locator(".question-panel textarea").evaluateAll((nodes) => {
+        for (const node of nodes) node.scrollTop = 0;
+      });
+      await capture(
+        page,
+        `test-results/qa/changing-concentration-prose/${info.project.name}-dilution-and-sampling-explanation.png`,
+      );
+    }
   }
 });
 test("incorrect inventory returns from targeted recovery with original working preserved", async ({

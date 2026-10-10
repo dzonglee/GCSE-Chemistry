@@ -59,7 +59,7 @@ const guided = [
     "20 g/dm³",
     {
       "40 g/dm³": "The final volume has doubled at fixed solute mass.",
-      "10 g/dm³": "10 g in .5 dm³ gives 20, not10.",
+      "10 g/dm³": "10 g in .5 dm³ gives 20, not 10.",
     },
     "10÷.5=20 g/dm³. No solute is removed; concentration halves because volume doubles.",
     "Keep all dissolved-solute grams.",
@@ -73,13 +73,13 @@ const guided = [
   c(
     "g-portion",
     "Separate sampling from dilution",
-    "A homogeneous solution contains 10 g in 500 cm³. A250 cm³ portion is retained. What concentration remains?",
+    "A homogeneous solution contains 10 g in 500 cm³. A 250 cm³ portion is retained. What concentration remains?",
     "20 g/dm³",
     {
-      "40 g/dm³": "The retained portion does not keep all10 g.",
+      "40 g/dm³": "The retained portion does not keep all 10 g.",
       "10 g/dm³": "Mass and volume both halve; their quotient stays unchanged.",
     },
-    "The retained 250 cm³ contains 5 g, so5÷.25=20 g/dm³. The other 5 g is in the removed 250 cm³.",
+    "The retained 250 cm³ contains 5 g, so 5÷.25=20 g/dm³. The other 5 g is in the removed 250 cm³.",
     "Account for both retained and removed portions.",
     {
       kind: "changing-concentration",
@@ -95,7 +95,7 @@ const guided = [
     "250 cm³",
     {
       "500 cm³": "500 cm³ is the final solution volume, not the addition.",
-      "750 cm³": "This would give1000 cm³ final volume and 10 g/dm³.",
+      "750 cm³": "This would give 1000 cm³ final volume and 10 g/dm³.",
     },
     "Final volume=10÷20=.5 dm³=500 cm³. Added=500−250=250 cm³ under the stated approximation.",
     "Find final volume, then subtract the original volume.",
@@ -127,7 +127,7 @@ export const changingConcentrationJourney: LessonJourney = {
       "8 g dissolved solute in 200 cm³ final solution: calculate g/dm³.",
       40,
       "g/dm³",
-      "200 cm³=.2 dm³;8÷.2=40.",
+      "200 cm³=.2 dm³; 8÷.2=40.",
       "Convert final volume to dm³.",
     ),
     n(
@@ -209,7 +209,7 @@ export const changingConcentrationJourney: LessonJourney = {
       "All solute is retained while final volume changes from 200 to 800 cm³. What is the concentration factor?",
       0.25,
       "",
-      "Volume factor4; concentration factor1÷4=.25.",
+      "Volume factor 4; concentration factor 1÷4=.25.",
       "Use the inverse factor.",
     ),
     n(
@@ -251,11 +251,11 @@ export const changingConcentrationJourney: LessonJourney = {
     n(
       "p-diluted",
       "Calculate a diluted solution",
-      "All 6 g dissolved solute in 150 cm³ solution is retained. Final volume becomes600 cm³. Calculate concentration.",
+      "All 6 g dissolved solute in 150 cm³ solution is retained. Final volume becomes 600 cm³. Calculate concentration.",
       10,
       "g/dm³",
       "6÷.6=10 g/dm³; original 40 becomes one quarter.",
-      "Use final600 cm³, not added volume.",
+      "Use final 600 cm³, not added volume.",
     ),
     n(
       "p-solute",
@@ -263,7 +263,7 @@ export const changingConcentrationJourney: LessonJourney = {
       "All 12 g dissolved solute is retained during dilution from 300 to 900 cm³. How many grams of dissolved solute are present afterwards?",
       12,
       "g",
-      "No solute loss or reaction occurs;12 g remains.",
+      "No solute loss or reaction occurs; 12 g remains.",
       "Dilution is solvent addition.",
     ),
     n(
@@ -281,22 +281,22 @@ export const changingConcentrationJourney: LessonJourney = {
       "9 g in 200 cm³ is diluted to 15 g/dm³. Assume solution and added solvent volumes are additive. How much solvent is added?",
       400,
       "cm³",
-      "Final600 cm³;600−200=400 cm³ added.",
+      "Final 600 cm³; 600−200=400 cm³ added.",
       "Subtract the original volume from the final one.",
     ),
     n(
       "p-portion-mass",
       "Account for a homogeneous sample",
-      "A homogeneous solution contains 18 g in 600 cm³. A200 cm³ portion is retained. Find its dissolved-solute mass.",
+      "A homogeneous solution contains 18 g in 600 cm³. A 200 cm³ portion is retained. Find its dissolved-solute mass.",
       6,
       "g",
-      "Retained fraction200/600=1/3;18/3=6 g.",
+      "Retained fraction 200/600=1/3; 18/3=6 g.",
       "Scale mass with retained volume.",
     ),
     n(
       "p-portion-c",
       "Check concentration after sampling",
-      "A homogeneous solution contains 18 g in 600 cm³. A200 cm³ portion is retained. Find its concentration.",
+      "A homogeneous solution contains 18 g in 600 cm³. A 200 cm³ portion is retained. Find its concentration.",
       30,
       "g/dm³",
       "6 g in .2 dm³=30 g/dm³, equal to 18/.6.",
@@ -305,10 +305,10 @@ export const changingConcentrationJourney: LessonJourney = {
     n(
       "p-removed",
       "Include the removed solute",
-      "A homogeneous solution contains 8 g in 400 cm³.100 cm³ is removed. What dissolved-solute mass is in the removed portion?",
+      "A homogeneous solution contains 8 g in 400 cm³. 100 cm³ is removed. What dissolved-solute mass is in the removed portion?",
       2,
       "g",
-      "Removed fraction100/400=1/4;8/4=2 g.",
+      "Removed fraction 100/400=1/4; 8/4=2 g.",
       "The removed solution also contains solute.",
     ),
     c(
@@ -360,7 +360,7 @@ export const changingConcentrationJourney: LessonJourney = {
         "A homogeneous solution contains 12 g dissolved solute in 600 cm³. Retain 150 cm³ and remove the rest. Enter retained solute grams, removed solute grams and retained concentration in g/dm³.",
         JSON.stringify({ retained: "3", removed: "9", concentration: "20" }),
         {},
-        "150/600=1/4: retained 3 g, removed 9 g.3/.15=20 g/dm³;3+9=12 g.",
+        "150/600=1/4: retained 3 g, removed 9 g. 3/.15=20 g/dm³; 3+9=12 g.",
         "Account for both portions before dividing.",
       ),
       options: undefined,
@@ -388,8 +388,8 @@ export const changingConcentrationJourney: LessonJourney = {
       ...c(
         "p-explain",
         "Explain two different operations",
-        "Compare diluting an entire 10 g/500 cm³ solution to 1000 cm³ with retaining250 cm³ of the original homogeneous solution. Explain mass, volume and concentration for each.",
-        "Dilution retains 10 g in 1 dm³, so10 g/dm³. Sampling retains 5 g in .25 dm³, so20 g/dm³; removed 5 g is in 250 cm³. Dilution increases volume at fixed solute mass; sampling reduces mass and volume together.",
+        "Compare diluting an entire 10 g/500 cm³ solution to 1000 cm³ with retaining 250 cm³ of the original homogeneous solution. Explain mass, volume and concentration for each.",
+        "Dilution retains 10 g in 1 dm³, so 10 g/dm³. Sampling retains 5 g in .25 dm³, so 20 g/dm³; removed 5 g is in 250 cm³. Dilution increases volume at fixed solute mass; sampling reduces mass and volume together.",
         {},
         "Identify the different solute inventories, not just the liquid levels.",
         "Calculate both quotients and account for removed solute.",
@@ -397,7 +397,7 @@ export const changingConcentrationJourney: LessonJourney = {
       options: undefined,
       rubric: [
         "Dilution retains 10 g in 1000 cm³ and gives 10 g/dm³.",
-        "The retained homogeneous250 cm³ contains 5 g and remains20 g/dm³.",
+        "The retained homogeneous 250 cm³ contains 5 g and remains 20 g/dm³.",
         "Explains fixed mass on dilution versus proportional mass/volume removal and accounts for removed solute.",
       ],
     },
@@ -414,7 +414,7 @@ export const changingConcentrationJourney: LessonJourney = {
       options: undefined,
       rubric: [
         "Identifies the quotient of mass and final volume.",
-        "Calculates concentration factor2/3 and identifies a decrease.",
+        "Calculates concentration factor 2/3 and identifies a decrease.",
         "States that doubling mass doubles concentration only at fixed final volume.",
       ],
     },
@@ -424,7 +424,7 @@ export const changingConcentrationJourney: LessonJourney = {
       n(
         "ca-factor",
         "Compare new factors",
-        "Dissolved mass increases by factor5 and final solution volume by factor2. What is the concentration factor?",
+        "Dissolved mass increases by factor 5 and final solution volume by factor 2. What is the concentration factor?",
         2.5,
         "",
         "5÷2=2.5.",
@@ -433,7 +433,7 @@ export const changingConcentrationJourney: LessonJourney = {
       n(
         "ca-dilute",
         "Calculate retained-solute dilution",
-        "All 7.2 g dissolved solute is retained when final solution volume becomes900 cm³. Find concentration.",
+        "All 7.2 g dissolved solute is retained when final solution volume becomes 900 cm³. Find concentration.",
         8,
         "g/dm³",
         "7.2÷.9=8.",
@@ -454,7 +454,7 @@ export const changingConcentrationJourney: LessonJourney = {
         "6 g solute in 150 cm³ is diluted to 12 g/dm³. Assume additive volumes. How much pure solvent is added?",
         350,
         "cm³",
-        "Final6/12=.5 dm³=500 cm³; added350.",
+        "Final 6/12=.5 dm³=500 cm³; added 350.",
         "Calculate final volume first.",
       ),
       c(
@@ -475,7 +475,7 @@ export const changingConcentrationJourney: LessonJourney = {
       n(
         "cb-factor",
         "Combine unfamiliar factors",
-        "Dissolved-solute mass increases by factor1.5 and final solution volume by factor3. What is the concentration factor?",
+        "Dissolved-solute mass increases by factor 1.5 and final solution volume by factor 3. What is the concentration factor?",
         0.5,
         "",
         "1.5÷3=.5.",
@@ -488,12 +488,12 @@ export const changingConcentrationJourney: LessonJourney = {
         4,
         "g/dm³",
         "4.8÷1.2=4.",
-        "Convert1200 cm³ to dm³.",
+        "Convert 1200 cm³ to dm³.",
       ),
       n(
         "cb-removed",
         "Account for removed sample",
-        "A homogeneous solution contains 21 g in 700 cm³. Remove200 cm³. What solute mass is removed?",
+        "A homogeneous solution contains 21 g in 700 cm³. Remove 200 cm³. What solute mass is removed?",
         6,
         "g",
         "21×200/700=6.",
@@ -506,7 +506,7 @@ export const changingConcentrationJourney: LessonJourney = {
           "All 8 g solute in 100 cm³ is diluted to 16 g/dm³. Assume additive volumes. Enter final solution cm³ and added solvent cm³.",
           JSON.stringify({ final: "500", added: "400" }),
           {},
-          "Final8/16=.5 dm³=500 cm³; added500−100=400 cm³.",
+          "Final 8/16=.5 dm³=500 cm³; added 500−100=400 cm³.",
           "Subtract only after finding final volume.",
         ),
         options: undefined,
@@ -519,7 +519,7 @@ export const changingConcentrationJourney: LessonJourney = {
       c(
         "cb-equal",
         "Explain equal scaling",
-        "The same solute's dissolved mass and final solution volume both increase by factor4. What happens to concentration?",
+        "The same solute's dissolved mass and final solution volume both increase by factor 4. What happens to concentration?",
         "It stays unchanged",
         {
           "It becomes four times greater":
@@ -566,7 +566,7 @@ export const changingConcentrationJourney: LessonJourney = {
       n(
         "rb-factor",
         "Retrieve unequal scaling",
-        "Dissolved-solute mass doubles and final solution volume increases by factor8. What is the concentration factor?",
+        "Dissolved-solute mass doubles and final solution volume increases by factor 8. What is the concentration factor?",
         0.25,
         "",
         "2÷8=.25.",
@@ -578,7 +578,7 @@ export const changingConcentrationJourney: LessonJourney = {
         "All 5 g solute in 100 cm³ is diluted to 10 g/dm³. Assume additive volumes. How much solvent is added?",
         400,
         "cm³",
-        "Final5/10=.5 dm³=500 cm³; added400.",
+        "Final 5/10=.5 dm³=500 cm³; added 400.",
         "Final minus original.",
       ),
       n(
@@ -587,7 +587,7 @@ export const changingConcentrationJourney: LessonJourney = {
         "A homogeneous solution contains 16 g in 400 cm³. Retain 50 cm³. Find retained concentration.",
         40,
         "g/dm³",
-        "Retained2 g/.05 dm³=40, equal to 16/.4.",
+        "Retained 2 g/.05 dm³=40, equal to 16/.4.",
         "Both mass and volume scale by the same fraction.",
       ),
     ],
