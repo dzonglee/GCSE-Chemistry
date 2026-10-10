@@ -1,0 +1,74 @@
+{
+  "build": "ks2tYBZHMvTG6tlhT4s6l",
+  "frames": [
+    {
+      "file": "1280-correct-volume.png",
+      "sha256": "0cc9a43ad1e7a962d7a49169d1e0bad0996e4a2d4f2b3f42fabea739f340c666",
+      "personallyInspected": true
+    },
+    {
+      "file": "1280-precision-feedback.png",
+      "sha256": "b1a5842f50fad588f0928c2dae561535705dd0d53c2597e5e1765bf638a88490",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-correct-volume.png",
+      "sha256": "c8930b570776f86406146945e61c0d37156fb8a40b1552aa7956b121cf27d054",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-precision-feedback.png",
+      "sha256": "38f5abcb5449091cd27ab413669b4d2189e7eabcd820797fb235a2ab2ce8a083",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-correct-volume.png",
+      "sha256": "c625b8af872aa9a9e9ca99ef3420e4f117c7e2bc3061f45d7e0fd9ad275bb527",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-precision-feedback.png",
+      "sha256": "c2c7745c91c58be32e794736a680c03458a56d0a64727cd9ab01fd2e6e7b30e2",
+      "personallyInspected": true
+    }
+  ],
+  "samplesExplicitlySent": true,
+  "viewports": [
+    {
+      "width": 320,
+      "height": 664,
+      "wrongPath": "/workspace/course-audit/gas-precision/320-precision-feedback.png",
+      "rightPath": "/workspace/course-audit/gas-precision/320-correct-volume.png",
+      "inputBottom": 629.046875,
+      "inputHeight": 53.75,
+      "precisionRejected": true,
+      "correctAccepted": true,
+      "reloadRetained": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "wrongPath": "/workspace/course-audit/gas-precision/390-precision-feedback.png",
+      "rightPath": "/workspace/course-audit/gas-precision/390-correct-volume.png",
+      "inputBottom": 574.90625,
+      "inputHeight": 53.75,
+      "precisionRejected": true,
+      "correctAccepted": true,
+      "reloadRetained": true,
+      "axeViolations": 0
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "wrongPath": "/workspace/course-audit/gas-precision/1280-precision-feedback.png",
+      "rightPath": "/workspace/course-audit/gas-precision/1280-correct-volume.png",
+      "inputBottom": 693.703125,
+      "inputHeight": 53.75,
+      "precisionRejected": true,
+      "correctAccepted": true,
+      "reloadRetained": true,
+      "axeViolations": 0
+    }
+  ]
+}

@@ -6,6 +6,14 @@ import { assessments } from "../src/content/assessments";
 import { initialBoard, validHistory } from "../src/lib/workbench";
 import { emptyProgress, emptyWork, decode } from "../src/lib/progress";
 const all = tasks(j);
+import { mark } from "../src/lib/marking";
+test("RTP gas volume enforces the requested three significant figures", () => {
+  const q = all.find((task) => task.id === "gv-v1-p-round")!;
+  expect(mark(q, "15.2").correct).toBe(true);
+  expect(mark(q, "15.20")).toMatchObject({ correct: false, empty: false });
+  expect(mark(q, "15").correct).toBe(false);
+  expect(mark(q, "15.234545").correct).toBe(false);
+});
 test("individually authored gas tasks separate assistance, checks and phase reasoning", () => {
   expect(all).toHaveLength(49);
   expect(new Set(all.map((q) => q.id)).size).toBe(49);

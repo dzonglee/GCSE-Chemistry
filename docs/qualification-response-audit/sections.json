@@ -1047,12 +1047,12 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "Higher only",
     "actualBodyReview": "Equal gas moles equal volumes same conditions;24dm3 RTP20C1atm; mass→volume, balanced gaseous volumes and rearrangement. Actual8462 complete quantitative body read; corresponding8464 bodies read through5.3.2.5 and next5.4 heading. Separate-only parent/inherited Higher qualifiers checked.",
     "sourceReviewDate": "2026-10-10",
-    "responseEvidenceReview": "All gas-volume practice prompts, answers and written rubrics personally read: forward/reverse mass and volume, generated equation ratios, excess dry gases, phase and matching temperature/pressure restrictions. Specific marking defect remains: gv-v1-p-round requests three significant figures but lacks rounding metadata, so numerically equal 15.20 passes scalar numeric validation. Correct this individual lesson before closing the response gate.",
+    "responseEvidenceReview": "All gas-volume practice prompts, answers and written rubrics personally read: forward/reverse mass and volume, generated equation ratios, excess dry gases, phase and matching temperature/pressure restrictions. gv-v1-p-round precision corrected individually; three significant figures enforced. Wrong raw answer persists after reload. Three final production viewport checks and20 existing desktop/mobile lesson browser checks pass; six final frames personally inspected and samples sent.",
     "responseEvidenceIds": [
       "gv-v1-p-round",
       "gv-v1-p-formula",
@@ -1061,7 +1061,8 @@
       "gv-v1-p-steam",
       "gv-v1-p-equal-volume",
       "gv-v1-p-conservation"
-    ]
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.4.1.1",

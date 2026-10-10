@@ -312,15 +312,18 @@ export const gasVolumesJourney: LessonJourney = {
       "nMg=2.4/24=0.10 mol; ratio Mg: H2=1: 1; nH2=0.10; V=2.4 dm³.",
       "Convert the solid mass to moles, use the equation ratio, then gas volume.",
     ),
-    n(
-      "p-round",
-      "Retain intermediate precision",
-      "Find RTP gas volume from 27.93 g CO2, M=44 g/mol and 24 dm³/mol. Give 3significant figures.",
-      15.2,
-      "dm³",
-      "27.93/44×24=15.234545…; 3s.f.=15.2 dm³.",
-      "Round only the final volume.",
-    ),
+    {
+      ...n(
+        "p-round",
+        "Final gas volume",
+        "Find the RTP volume of 27.93 g CO₂. Use M = 44 g/mol and 24 dm³/mol. Give 3 significant figures.",
+        15.2,
+        "dm³",
+        "27.93 ÷ 44 × 24 = 15.234545…; to 3 significant figures, the gas volume is 15.2 dm³.",
+        "Round only the final volume.",
+      ),
+      rounding: { kind: "significant-figures", digits: 3 },
+    },
     n(
       "p-titanium",
       "Use mass and a different coefficient",
