@@ -1,6 +1,6 @@
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { concentrationJourney as journey } from "../src/content/journeys/concentration";
 import { STORAGE_KEY, REVIEW_DELAY } from "../src/lib/progress";
 async function task(page: Page, n: number) {
@@ -30,6 +30,29 @@ async function capture(page: Page, path: string) {
     scrollTo(0, 0);
   });
   await page.screenshot({ path, fullPage: true });
+}
+async function captureProse(page: Page, name: string, device: string) {
+  await mkdir("test-results/qa/concentration-core-prose", { recursive: true });
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.evaluate(async () => {
+    if (document.activeElement instanceof HTMLElement)
+      document.activeElement.blur();
+    await document.fonts.ready;
+    scrollTo(0, 0);
+    await new Promise<void>((r) =>
+      requestAnimationFrame(() => requestAnimationFrame(() => r())),
+    );
+  });
+  await page.screenshot({
+    path: `test-results/qa/concentration-core-prose/${device}-${name}.png`,
+    fullPage: true,
+    scale: "css",
+  });
 }
 async function answer(page: Page, q: (typeof journey.practice)[number]) {
   if (q.parts) {
@@ -290,6 +313,13 @@ test("all twenty-two independent demands preserve constructed units and written 
   page,
 }, info) => {
   await page.goto("/lessons/conservation-and-concentration");
+  await page.getByRole("button", { name: "Warm-up", exact: true }).click();
+  await answer(page, journey.warmup[0]);
+  await page.locator(".sample-check-answer").click();
+  await expect(page.locator(".question-panel .feedback")).toContainText(
+    "right",
+  );
+  await captureProse(page, "warmup", info.project.name);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
   for (let i = 0; i < journey.practice.length; i++) {
     if (i) await task(page, i + 1);
@@ -316,6 +346,8 @@ test("all twenty-two independent demands preserve constructed units and written 
           ),
         )
         .toBe(false);
+    if (q.id === "sc-v1-p-working")
+      await captureProse(page, "working", info.project.name);
     if (q.parts)
       await capture(
         page,

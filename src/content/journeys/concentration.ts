@@ -123,7 +123,7 @@ export const concentrationJourney: LessonJourney = {
     n(
       "w-divide",
       "Recall decimal division",
-      "Calculate4÷0.2.",
+      "Calculate 4÷0.2.",
       20,
       "",
       "4÷.2=20.",
