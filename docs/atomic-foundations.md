@@ -42,7 +42,12 @@ An actual exported Na-23 GLB was independently parsed: 11 proton meshes,12 neutr
 
 Final representative desktop3D atom/molecule, wrong-written-response/manual-comparison and actual native320px viewport screenshots were personally inspected. Sample links are explicitly delivered before further lesson audit work.
 
-- [3D sodium atom](../test-results/qa/atomic-foundations/desktop-sodium.png)
-- [3D water and fixed proportions](../test-results/qa/atomic-foundations/desktop-water.png)
-- [Wrong written response and self-review](../test-results/qa/atomic-foundations/desktop-boiling-review.png)
-- [Actual native320px opening](../test-results/qa/atomic-foundations/mobile-320-opening.png) Completing this extension does not establish whole-course specification coverage or exam readiness. The final statement-level qualification/tier map and complete frozen course regression remain open. Mixture separation already has dedicated lessons; this extension does not claim those were absent or replace their practical reasoning.
+- [3D sodium atom](qa/atomic-foundations-current-desktop/desktop-sodium.png)
+- [3D water and fixed proportions](qa/atomic-foundations-current-desktop/desktop-water.png)
+- [Wrong written response and self-review](qa/atomic-foundations-current-desktop/desktop-boiling-review.png)
+- Actual native320px opening: the historical generated frame is no longer retained; no published image is claimed here. Completing this extension does not establish whole-course specification coverage or exam readiness. The final statement-level qualification/tier map and complete frozen course regression remain open. Mixture separation already has dedicated lessons; this extension does not claim those were absent or replace their practical reasoning.
+
+
+## Available desktop capture checkpoint — 10 October 2026
+
+The three linked desktop images above are retained captures from the current partial production run on build `5yfoHM3EoR4wYpckkER2L`, personally inspected before archiving. They replace unstable generated-output links. The historical mobile320 opening frame is unavailable and its dead link is explicitly removed rather than substituted. These three captures establish only their displayed desktop states; they do not certify the entire browser run or mobile UI. Current acceptance remains separately recorded in validation.md. No application content changed.

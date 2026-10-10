@@ -1,0 +1,23 @@
+{
+  "scope": "three available personally inspected desktop captures from current partial production run",
+  "buildId": "5yfoHM3EoR4wYpckkER2L",
+  "unifiedBrowserAcceptance": "pending",
+  "mobileHistoricalFrameAvailable": false,
+  "files": [
+    {
+      "path": "docs/qa/atomic-foundations-current-desktop/desktop-sodium.png",
+      "sha256": "0aa2c263a2416ed2192d70f39a3ae8f6bd133194f3a1e6034f69fac99019e0fb",
+      "bytes": 314315
+    },
+    {
+      "path": "docs/qa/atomic-foundations-current-desktop/desktop-water.png",
+      "sha256": "19e4cc6a82ab49e60f444ca1a5129c7d4973e38827e8f9a53d7b03f74e23daae",
+      "bytes": 223502
+    },
+    {
+      "path": "docs/qa/atomic-foundations-current-desktop/desktop-boiling-review.png",
+      "sha256": "e0ea86b4bdadb750fd018493c4dcb2493df040d85e4e0ee74e16b2a3ead19796",
+      "bytes": 181445
+    }
+  ]
+}
