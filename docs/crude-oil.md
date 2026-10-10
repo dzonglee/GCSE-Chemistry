@@ -142,3 +142,7 @@ Final types/lint/production build pass. All641 unit checks passed31.2seconds; fo
 [First independent chart](qa/crude-oil-mobile-independent-form-0-chart.png), [second independent chart](qa/crude-oil-mobile-independent-form-1-chart.png), [read-only submitted chart](qa/crude-oil-desktop-completed-chart-review.png), [3D fallback](qa/crude-oil-mobile-fallback.png), [actual binary column asset](qa/crude-oil-desktop.glb).
 
 Final inspected sample links explicitly SENT in commentary before any lesson73 research.
+
+## Historical artifact-link restoration — 10 October 2026
+
+Restored the seventeen original linked local artifacts to GitHub: sixteen historical screenshots and the original GLB. Their bytes are unchanged. Screenshots were inspected again for archival identity and the GLB header/version/length checked. These show the older lesson layout, not current visual acceptance. No application content, scientific values or assessed demands changed; current regression evidence remains separate in validation.md.

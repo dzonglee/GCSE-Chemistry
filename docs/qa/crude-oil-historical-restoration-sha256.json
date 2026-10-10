@@ -1,0 +1,91 @@
+{
+  "scope": "seventeen pre-existing historical artifacts linked by the individual review, restored unchanged",
+  "currentVisualAcceptance": false,
+  "files": [
+    {
+      "path": "docs/qa/crude-oil-desktop-inventory.png",
+      "sha256": "d39c79e329221ad43cb58496698df3a38f438cc8d8505ee70db0054635dc5e7b",
+      "bytes": 268237
+    },
+    {
+      "path": "docs/qa/crude-oil-mobile-inventory-model.png",
+      "sha256": "5bd33a58940b8b4273282b884555c626724e549b89180b5bca3fa77bdac78b05",
+      "bytes": 110755
+    },
+    {
+      "path": "docs/qa/crude-oil-desktop-column.png",
+      "sha256": "e8b4e4c36eba382295daf3cba84b2e8e590969cdcff6b1403e13d85fa4cc1304",
+      "bytes": 332835
+    },
+    {
+      "path": "docs/qa/crude-oil-mobile-column-model.png",
+      "sha256": "1d905f99a2fb632f4dc5e9e5601e78bc265ca8c36d094ba2b913b7c2486895b4",
+      "bytes": 167452
+    },
+    {
+      "path": "docs/qa/crude-oil-desktop-trace.png",
+      "sha256": "57150edd27b07ce26950972829f731cb882e5d867ad642bc76cbf2d705315322",
+      "bytes": 338295
+    },
+    {
+      "path": "docs/qa/crude-oil-mobile-trace-model.png",
+      "sha256": "bbe45b1651f3baeaa794f10fe4db8cb98a3a15741e1b4bae52fb52ad0dbbedcf",
+      "bytes": 158293
+    },
+    {
+      "path": "docs/qa/crude-oil-desktop-trends.png",
+      "sha256": "f1cf5e91a994deec5a268e178d2d71c3089f97cdecf8c0124bae26277802cf29",
+      "bytes": 291018
+    },
+    {
+      "path": "docs/qa/crude-oil-mobile-trends-model.png",
+      "sha256": "30a77950a27b58b08bee72d5a756211e1787969ecd4ef9c1a27141daee2575f7",
+      "bytes": 126904
+    },
+    {
+      "path": "docs/qa/crude-oil-desktop-uses.png",
+      "sha256": "a2bcccf240d8bacfb8a886af9da593519c14dffa45a2ea960c95ad17bfa13254",
+      "bytes": 318836
+    },
+    {
+      "path": "docs/qa/crude-oil-mobile-uses-model.png",
+      "sha256": "a4cc2d5143cc516a9dcde792460af13bd3b7a2913f273a2950f31f0732caaed6",
+      "bytes": 154174
+    },
+    {
+      "path": "docs/qa/crude-oil-desktop-yield.png",
+      "sha256": "97b1cd19fa62da76897429a048caef2d01fb3ac9e81fe175cbc06800a1809c67",
+      "bytes": 338473
+    },
+    {
+      "path": "docs/qa/crude-oil-mobile-yield-model.png",
+      "sha256": "80d42668c257b1444f22dd47843397bb6f643bf6418ee0da347d37f05381226f",
+      "bytes": 156843
+    },
+    {
+      "path": "docs/qa/crude-oil-mobile-independent-form-0-chart.png",
+      "sha256": "a3ba3b0eb08f36ef03ede65bba6bca9bf055157548f7b5f99a6f7fafc7c2f85b",
+      "bytes": 69008
+    },
+    {
+      "path": "docs/qa/crude-oil-mobile-independent-form-1-chart.png",
+      "sha256": "de005024cc692d04a1ce8fa72717d976654022ead0ac2ea2d628116eec61d657",
+      "bytes": 68975
+    },
+    {
+      "path": "docs/qa/crude-oil-desktop-completed-chart-review.png",
+      "sha256": "456253c163ad1870cbd0e429716aa946283f90b77de55bda9f6f3c89a9c30aeb",
+      "bytes": 378514
+    },
+    {
+      "path": "docs/qa/crude-oil-mobile-fallback.png",
+      "sha256": "724f26d9c7cef793bd7f847130eb9fd65617c73f4ad3bab7fe2ca8bb273e2536",
+      "bytes": 231964
+    },
+    {
+      "path": "docs/qa/crude-oil-desktop.glb",
+      "sha256": "ea70fba137047f06d2a84caed8c1f46023806b05f5eaf8507c1e24cd4360fa42",
+      "bytes": 273872
+    }
+  ]
+}
