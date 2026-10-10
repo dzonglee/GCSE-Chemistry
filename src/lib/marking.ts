@@ -242,7 +242,7 @@ export function mark(
         q.polyesterDrawing
           ? `Response saved. Compare your ${reviewSubject(q)} with the review criteria below, then correct any missing or misplaced features. This is self-review; no automatic mark is awarded.`
           : q.shortWritten
-            ? "Response saved. Compare your answer with the examples and review criteria. Other valid uses can be accepted in manual review; no automatic mark is awarded."
+            ? "Response saved. Compare your answer with the examples and review criteria. Other valid answers can be accepted in manual review; no automatic mark is awarded."
             : "Response saved. Compare your explanation with the marking points below, then improve any missing points. This is self-review, not an automatic mark.",
     };
   if (q.profileDrawing) {

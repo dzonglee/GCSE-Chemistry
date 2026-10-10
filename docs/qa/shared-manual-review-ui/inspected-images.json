@@ -1,0 +1,27 @@
+{
+  "build": "lNMqcmyVXf1qYFj7HqzgJ",
+  "date": "2026-10-10",
+  "images": [
+    {
+      "file": "320-whole-set-manual-routes-viewport.png",
+      "sha256": "4ffb1d22d65be72c4a559df8605e80384800d83614bea48d09eade90b741573f",
+      "personallyInspected": true
+    },
+    {
+      "file": "320-whole-set-manual-routes-full.png",
+      "sha256": "7d9bcc4d0cf36dadd5e7386d03903589521c27c1d59349a0e241f8d5379331eb",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-whole-set-manual-routes-viewport.png",
+      "sha256": "14b5dc6dad3e1242ffa4bb39d2186c943ba85d1fa66a1b5074f4b0fce0deaced",
+      "personallyInspected": true
+    },
+    {
+      "file": "390-whole-set-manual-routes-full.png",
+      "sha256": "3ea9ccb9dd0fdc4c193b5e9f3720ae7de4dbe9d6cb0748b3edb4be16361848bb",
+      "personallyInspected": true
+    }
+  ],
+  "note": "All4 changed frames personally viewed. Remaining38 controlled frames byte-identical to inspected Haber gallery."
+}

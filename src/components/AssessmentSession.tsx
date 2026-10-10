@@ -236,7 +236,10 @@ export function AssessmentSession({
     ).length;
     return (
       <section className="assessment-results">
-        <div className="results-banner">
+        <div
+          className="results-banner"
+          data-manual-only={automatic.length === 0 || undefined}
+        >
           <span className="eyebrow">
             {automatic.length
               ? "Automatically checked responses"

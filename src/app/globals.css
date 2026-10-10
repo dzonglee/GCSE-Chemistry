@@ -1793,6 +1793,10 @@ progress {
   .results-banner {
     padding: 22px;
   }
+  .results-banner[data-manual-only] h2 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
   .lesson-end {
     font-size: 0.83rem;
   }
