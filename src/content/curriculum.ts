@@ -7127,11 +7127,13 @@ for (const [legacy, suffixes] of haberLegacy) {
       "haber-and-fertilisers-" + legacy,
       ...suffixes.map((s) => "haber-v1-" + s),
     ]),
-    candidates = lessons.flatMap((l) => [
-      ...l.questions,
-      ...l.checks,
-      ...(l.journey ? tasks(l.journey) : []),
-    ]);
+    candidates = lessons
+      .flatMap((l) => [
+        ...l.questions,
+        ...l.checks,
+        ...(l.journey ? tasks(l.journey) : []),
+      ])
+      .filter((q) => !q.id.startsWith("haber-v1-source-recall-"));
   let changed = true;
   while (changed) {
     changed = false;
@@ -7170,11 +7172,13 @@ for (const initial of [
   ],
 ]) {
   const ids = new Set(initial),
-    candidates = lessons.flatMap((l) => [
-      ...l.questions,
-      ...l.checks,
-      ...(l.journey ? tasks(l.journey) : []),
-    ]);
+    candidates = lessons
+      .flatMap((l) => [
+        ...l.questions,
+        ...l.checks,
+        ...(l.journey ? tasks(l.journey) : []),
+      ])
+      .filter((q) => !q.id.startsWith("haber-v1-source-recall-"));
   let changed = true;
   while (changed) {
     changed = false;

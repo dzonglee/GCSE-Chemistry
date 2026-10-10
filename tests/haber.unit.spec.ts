@@ -72,10 +72,10 @@ test("one mixed-tier separate Chemistry journey covers each process and every re
       ...f.reviewForms.flat(),
     ].some((q) => q.tier === "higher"),
   ).toBe(false);
-  expect(f.checkForms.map((f) => f.length)).toEqual([7, 7]);
-  expect(j.checkForms.map((f) => f.length)).toEqual([11, 11]);
-  expect(f.reviewForms.map((f) => f.length)).toEqual([3, 3]);
-  expect(j.practice).toHaveLength(33);
+  expect(f.checkForms.map((f) => f.length)).toEqual([7, 7, 2]);
+  expect(j.checkForms.map((f) => f.length)).toEqual([11, 11, 2]);
+  expect(f.reviewForms.map((f) => f.length)).toEqual([3, 3, 2]);
+  expect(j.practice).toHaveLength(35);
 });
 test("immutable scientific sources and bounded one-field raw histories", () => {
   const original = JSON.stringify(R);
@@ -239,6 +239,9 @@ test("every assessment answer remains honest and theoretical exposures are recip
     const result = mark(q, q.answer);
     expect(q.rubric ? result.selfReview : result.correct, q.id).toBe(true);
     if (q.rubric) expect(result.correct).toBe(false);
+    // Appended recall links are intentionally incoming-only to preserve published definitions.
+    // Runtime reciprocity for those links is asserted in haber-source-recall.unit.spec.ts.
+    if (q.id.startsWith("haber-v1-source-recall-")) continue;
     for (const a of q.exposureAliases ?? []) {
       const other = candidates.find((c) => c.id === a);
       expect(other, q.id + " " + a).toBeTruthy();

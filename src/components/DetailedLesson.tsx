@@ -80,10 +80,11 @@ export function DetailedLesson({
       )
     : savedPosition;
   const q = list[index];
-  const materialsRecallTask =
+  const compactRecallTask =
     q.id.startsWith("materials-v1-alloy-use-") ||
     q.id.startsWith("materials-v1-rust-design-") ||
-    q.id.startsWith("materials-v1-composite-recall-");
+    q.id.startsWith("materials-v1-composite-recall-") ||
+    q.id.startsWith("haber-v1-source-recall-");
   const answer = work.drafts[q.id] ?? "";
   const attempt = work.attempts[q.id]?.at(-1);
   const feedback = attempt?.answer === answer ? mark(q, answer) : undefined;
@@ -290,14 +291,15 @@ export function DetailedLesson({
   const minorAtmosphereRun = work.run?.ids.some((id) =>
     id.startsWith("early-atmosphere-v1-minor-"),
   );
-  const materialsRecallRun = work.run?.ids.some(
+  const compactRecallRun = work.run?.ids.some(
     (id) =>
       id.startsWith("materials-v1-alloy-use-") ||
       id.startsWith("materials-v1-rust-design-") ||
-      id.startsWith("materials-v1-composite-recall-"),
+      id.startsWith("materials-v1-composite-recall-") ||
+      id.startsWith("haber-v1-source-recall-"),
   );
   const compactReview =
-    (materialsRecallRun ||
+    (compactRecallRun ||
       minorAtmosphereRun ||
       compactYieldReview ||
       saltLesson ||
@@ -342,7 +344,7 @@ export function DetailedLesson({
   const ReviewContainer = compactReview ? "details" : "section";
   const reviewScheduleAfter =
     compactReview &&
-    (materialsRecallRun ||
+    (compactRecallRun ||
       minorAtmosphereRun ||
       compactYieldReview ||
       saltLesson ||
@@ -559,7 +561,7 @@ export function DetailedLesson({
             <AssessmentSession
               id={lesson.slug}
               navigationAfterResponse={
-                materialsRecallRun ||
+                compactRecallRun ||
                 minorAtmosphereRun ||
                 saltLesson ||
                 organicLesson ||
@@ -685,7 +687,7 @@ export function DetailedLesson({
       ) : (
         <section
           className="sample-task-panel"
-          data-materials-recall={materialsRecallTask || undefined}
+          data-materials-recall={compactRecallTask || undefined}
           data-atmosphere-minor={
             q.id.startsWith("early-atmosphere-v1-minor-") || undefined
           }
@@ -712,10 +714,10 @@ export function DetailedLesson({
               lesson.slug !== "life-cycle-and-recycling" &&
               !organicLesson &&
               !q.id.startsWith("early-atmosphere-v1-minor-") &&
-              !materialsRecallTask &&
+              !compactRecallTask &&
               !q.polyesterDrawing &&
               practicePicker
-            ) : !materialsRecallTask &&
+            ) : !compactRecallTask &&
               lesson.slug !== "materials-and-corrosion" ? (
               <div
                 ref={taskNavigation}
@@ -993,7 +995,7 @@ export function DetailedLesson({
           {(lesson.slug === "life-cycle-and-recycling" ||
             organicLesson ||
             q.id.startsWith("early-atmosphere-v1-minor-") ||
-            materialsRecallTask) &&
+            compactRecallTask) &&
             practicePicker}
           {(!(stage === "practice" && journey.practiceGroups) ||
             lesson.slug === "balancing-equations" ||

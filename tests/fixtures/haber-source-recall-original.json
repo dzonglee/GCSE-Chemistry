@@ -1,0 +1,532 @@
+[
+  {
+    "stage": "warmup",
+    "id": "haber-v1-w-reversible",
+    "sha256": "54c7a73de73b826920d4d2ea41726c5ce151ccd18274e364db1d80ec01045922"
+  },
+  {
+    "stage": "warmup",
+    "id": "haber-v1-w-percent",
+    "sha256": "5b514239039a6d7c5dc580cb4eb32c1568a24c4e9aa2a5f7ac9fcdd564dcdc4c"
+  },
+  {
+    "stage": "warmup",
+    "id": "haber-v1-w-charge",
+    "sha256": "522435fc3e299306fb9fb3bd941c25fa88ac7994390ea134443c147b23240a97"
+  },
+  {
+    "stage": "warmup",
+    "id": "haber-v1-w-rate",
+    "sha256": "de9a369462ade672ffd1d7da0f28ef79372d01b2f5c4428133efa404d045e0c3"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-feed2",
+    "sha256": "c1632cb0f35a198b315c3bb4b8aa4f8791c33cf26d868d2a10e322a30b8bf6c7"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-feed5",
+    "sha256": "5fa48584de909874f2e9cfcd8b1be51604ae409d7b9dd2999d34932228677459"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-loop",
+    "sha256": "f823659e54734c73213d642b84cf2727fb579113eae4eb0f897007551066a015"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-hot",
+    "sha256": "91a119a50b59f5b9a225c8dd369c6ce3a93446d667370cb986305422355a9676"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-cold",
+    "sha256": "05d612e2bc7b1cd8a40c5391ed48a03b0eee0dee93f7bbb77962c3a339f8ff48"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-pressure",
+    "sha256": "fbf1c6b3ce84077c8a18ee0ac96235d7af9351244404ca113098a128365807a4"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-catalyst",
+    "sha256": "dd45acd61b295437d34f2d0f3eb540477e87547544ad3c1a48d12dd3a0dc9a41"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-pressureGraph",
+    "sha256": "710adee105ec1219721b31edea04373e7d590c612f658b046d0a0d138b3934ef"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-betweenGraph",
+    "sha256": "fdd8e5f002298befc40f45c7c718835517c287fb8a3ad8dcaf4b802ee1da84c5"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-rateGraph",
+    "sha256": "6a02faa7aa5c6167fb3be6ea305a16c57b17c0d230167380a1eec9d41b5ae784"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-mix20",
+    "sha256": "cf1d7063719b78f8bb95b4fea1587b63d8a81ffc2e467a298da98d0803ead370"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-mix50",
+    "sha256": "bea147c65c6b048825334a72f07a97dd57882d184b9479efbe2ee4b1adc48729"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-nitricRock",
+    "sha256": "053dcb53a69acdce503f23329bf3915bd10bd910031d1fc8c3233321e4d7ef57"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-sulfuricRock",
+    "sha256": "ea8835dd5f0b8eb2f0a93c17581ca2a159235ad68e4de00e1bb83c530ee87591"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-phosphoricRock",
+    "sha256": "02c750c3de1167f74ae2b850b1f89a48f0d30fc832e30a6f0a5aba39617b9f14"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-nitrateSalt",
+    "sha256": "87fadf48aa8bd8c21a881bc1fac942979ca94ff2ea77666ffc908e4a3eea90ed"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-sulfateSalt",
+    "sha256": "1f0198e99695675097779d7ca0f880165c48d97cfc5a6b6948c88249aa47ff83"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-chlorideSalt",
+    "sha256": "6b24648bf2231ad09c4aa76f4bcb566d169c902bc147a81e48f4dd01ead9b68d"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-preparation",
+    "sha256": "86dbf348423d32149f801be2e4ebb494a563c7bb2b575c5da15676afb65b36a9"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-application",
+    "sha256": "3157be72bc5844eb7fd2daaecd0f54c437cb977d828c608ebcb6e58ea411a1c3"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-nitrogenPercent",
+    "sha256": "6708890630cc9325929ab441eecc7ef542d8aa34c1e747fe4044114e74cd8966"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-plot",
+    "sha256": "5d50e43e90ffb17c440631e85db7c8f04581b7f81e5f33a0f0e7e477219b5ef3"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-pass",
+    "sha256": "23d9658aa6beef7a9b81a2471e3777d63687c61d8ac152a2578ae7f32b6ccb3e"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-nutrientRate",
+    "sha256": "725d70adc844af7efb962a1abfcdb52c58277a780bd118deb49239d35ea9719a"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-economy",
+    "sha256": "edc42232c2681c1f2ee73a954a0bfa0e64d789e61f9f0cebaeeb61e5a29486ae"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-mining",
+    "sha256": "0e6ef2a0a066f6198f5abf4043049d7c4521c1085a751bc5cc07242b6dceb73c"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-freeGraph",
+    "sha256": "99727763eb59e69436ba3bc62359e382b43543d925fc451e2b9cbb8de242a7ac"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-bars",
+    "sha256": "85cab17a4ee9ddeb9cf5e42068a703febc9700740c759f24b0b909718b60b6f5"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-dynamic",
+    "sha256": "25fa6a6bcacc438bb816982434b2f52a25b117b17d048e22c28f1ebb659206ef"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-compromise",
+    "sha256": "cb30847d78ab470deeec25dbd432105e1b009463cbbab15bab53fe1899fcf515"
+  },
+  {
+    "stage": "refresher",
+    "id": "haber-v1-r-selection",
+    "sha256": "f94777522492480f9190b3fb78ca8aee4fb4a7d13ba1556973b3f8690478a72c"
+  },
+  {
+    "stage": "guided",
+    "id": "haber-v1-g-feed",
+    "sha256": "baf620a6ee2c89c339a530c1521660eba072fea76a4fa09407277a56fdec6cdb"
+  },
+  {
+    "stage": "guided",
+    "id": "haber-v1-g-loop",
+    "sha256": "cdc2336ea7a1761b2661d2f7d0f626d65f2b4b9cfd4501b28d41b54528c30437"
+  },
+  {
+    "stage": "guided",
+    "id": "haber-v1-g-nutrients",
+    "sha256": "578596220c5765301d7142ae2b7770293c6450a137e07be4e688123660da5449"
+  },
+  {
+    "stage": "guided",
+    "id": "haber-v1-g-rock",
+    "sha256": "2d40a2f3dec69894a93c2573fc8689abba8f082b46a554f6c015920e06abc539"
+  },
+  {
+    "stage": "guided",
+    "id": "haber-v1-g-salt",
+    "sha256": "ab95d4d59700f498f969559fa867d3d3f25014042a7924bb32eedd61957c97e8"
+  },
+  {
+    "stage": "guided",
+    "id": "haber-v1-g-preparation",
+    "sha256": "64cc92f722b26fa7b8513bb10397ae4493db9140450475eeb7eb75cfc1af6258"
+  },
+  {
+    "stage": "guided",
+    "id": "haber-v1-g-hot",
+    "sha256": "db33cea57dce11f863dd96d5aeb2d5ebd28903f876f946db4270e5e699c590dc"
+  },
+  {
+    "stage": "guided",
+    "id": "haber-v1-g-graph",
+    "sha256": "0790793164075663ee66e51f13132c14d63234851dc40886fceaedb82a018be7"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-sources",
+    "sha256": "b5024570ed9e0ccdfc2fba79da6aedb7907530736cfb3fae57121c3fde96e246"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-feed",
+    "sha256": "ffbb3d31a41ea9abe2ee84156d1ba9edc4106106946b413cb6ddcfdd14c9f40c"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-conditions",
+    "sha256": "c07422dce37d9e9c371ecc85c9ee9b794273bc1e798fe9a1323aaa7035a0a7e6"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-cooling",
+    "sha256": "d2690def2b511fedcfe571bce320b25aa4d9646ff22757c1da301747857ecb2c"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-economy",
+    "sha256": "fb4976418e9492c29a5923e402e7c6293b780da63b2d14872fbd4d0e1d610ed9"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-pass",
+    "sha256": "03787b886084c234411308c4aca1e3554036c3340b0545bf05d08a298ece45d0"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-npk",
+    "sha256": "557dfb4e646c36abad9303d61eedd9166481988b45243745effecb73c8da8b13"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-formula",
+    "sha256": "73d4ed9fac6ab2eadc1be801cf7239f7c34e7af397818c9f1affea732bb753c5"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-masses",
+    "sha256": "389da09c97eb8a8139f7a7fea1ee2b093d8417cf10061a7024e67263883ea9bf"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-other",
+    "sha256": "46d5bb7500bd72e269d70887c0ea3234a36620ba738bd91b167726694db3ddc0"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-application",
+    "sha256": "c955ab885941f754247bd388c3a553d6d2287e1798e6e5c1a06e81e6bbc807be"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-nutrientRate",
+    "sha256": "22742caa670acb8e2dc54243b7576f99dbfa5bf3f9b3c585f80d0245e950ac5f"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-selection",
+    "sha256": "fa22fc8675b386d60a4e77466f9d3cb459481c92c483a5cbdadc07115a06772d"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-total",
+    "sha256": "56babd9b37713856b5279bfed750a80d4dc3dad2a236526102ececd16318396c"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-mining",
+    "sha256": "af91a4ff7a92d34050aba1f02f4569cc7704b036f62ad264ee3749cfc059ff43"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-rock",
+    "sha256": "a0c0570f9ef38132d8f9db065dbc2b2ea8ea34b5d9d8057ed35da7b806a6c4f8"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-nitricRock",
+    "sha256": "a85e7531ad5e934a7940d71ef322c9333ae0fba283482006bdd098165bbef968"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-superphosphate",
+    "sha256": "0cc1b2b52c0013d757e2cf13d62bb94eba8b5757da98ecf57f369564cba639ba"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-acid",
+    "sha256": "f6e365218477d60e3a7b96235ada2ed141c2b08615f7c38468cd940805898217"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-nitrogenPercent",
+    "sha256": "e1f39a5a5afa54b6a29e2371fb747f14efc823410b88645c55b5a1d0bc30ebbf"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-preparation",
+    "sha256": "0e2c8497b6afeefea31622a3645c22739287240d61ca5e06954bd08161074bd6"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-industrial",
+    "sha256": "e3fa6a9f95211cbea498c90d7ae51016cc93c6245929666c02368f08430305fd"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-bias",
+    "sha256": "9b5cfb6d733a798a364d361194deca32d8fe747d7dc668d1c7eab263989d0b07"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-bars",
+    "sha256": "5fc7a7444db1dd35905df337434b8283973392e6c6c6bea1dd6155a57d75d89d"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-dynamic",
+    "sha256": "f2c51ad6991851823e492a34b31f23d7306de14be7a266ff5edff8a8b94d2cd9"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-hot",
+    "sha256": "f7add25e95fc0a33187090157dc787a8abb3f83efdce629128e48f0d0fe45081"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-pressure",
+    "sha256": "cdbee1ecb9935be969309358c79600fffee7cd62893d9dc957de5a8a292c0473"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-catalyst",
+    "sha256": "04ffbe8e3ee73617023bff8574616cd4eb1d32739ec51a7f216884e127840d3a"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-interpolate",
+    "sha256": "e887228bae65b6610ea23e5cfec589644d35db229a0c740c15a9250d60b08c92"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-plot",
+    "sha256": "fdee93dfdcb0208ec0c41fd6bd946e224f991c0fd7d1157081b85239cefec9c6"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-extrapolate",
+    "sha256": "b6b4ea037f311f51b05ad7e665bf2f3ae3654ec9da8464b06bf73d5db67b3733"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-compromise",
+    "sha256": "d6ab70ae8796f6559d89618ab287b94f28dbfe33f9d1287bebfd21f30cd5b80c"
+  },
+  {
+    "stage": "practice",
+    "id": "haber-v1-p-freeGraph",
+    "sha256": "38c271bf0bd554b057e7f84e33b30d0a865e7b9de6da72e38f6f5d32cbd83232"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cA-source",
+    "sha256": "b706c029e5b1c74452c539b40d211fc83163f48d6180cf69479708c04befa866"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cA-pass",
+    "sha256": "f834076ac0aed7254ab5434a4544869e4e1382c63b63a6a0a6e4ced0a4ce57ed"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cA-cool",
+    "sha256": "bd5ce7e1826fe2d2ac1dcfd938971bfc27a3bab8d124655970c8fdb37e4be904"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cA-mix",
+    "sha256": "2a6c624604e273206e522e1bdb7738be39f92ab3ac95bad601887ce89576c36d"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cA-rock",
+    "sha256": "cf0705350436ae32d0aa101f260500dbe84aad42875ea3879fa26c2783d22ad1"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cA-prep",
+    "sha256": "89d5184b59578a7c8dfc153eedc15bbee3d1c8647813eeceb7bd7a811fe43cb2"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cA-selection",
+    "sha256": "455f94273d96b3cadb09b0eef192d692661c5dd374ea055298f837d95921775e"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cA-rate",
+    "sha256": "1f9169ee8f71d491b0c79e1536a05030c4f734e13dbe6e6e2093854b647741a9"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cA-compromise",
+    "sha256": "dd8d3dc2436b861e9ed85180bb29f6f7e9e3eadcfbb85019aafed9c173f943f1"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cA-plot",
+    "sha256": "12284c626d32e3ea55674b52f68c93e909d6fc2c501d31801a9e1e82c2d0d488"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cA-freeGraph",
+    "sha256": "83ede4c2665786e1f53c2f575cea925c2bd08e8908375022c12382bcdc37ebb8"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cB-condition",
+    "sha256": "735a3d2d6b209ba384caadc4acb0f8f8d3a87a1a49cadc16f2a828a6a4dddee6"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cB-feed",
+    "sha256": "10c869a791178946b63212d8bfec86ad435ea66ef051fe489ff8a2a2ca64f32c"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cB-economy",
+    "sha256": "c3290d0d17dbd7e0b21c5a0439e0ef33fa0b214ff1a5e25a1671e649664f8230"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cB-rate",
+    "sha256": "1898ae4fa66f39f911e56cd6b152e9416c6442a4da0f6c03c273f56b1d0a5b32"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cB-rock",
+    "sha256": "354a4899fd77284529822e58dee366b8c6e4543c56ecf4a04049c6974944400b"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cB-production",
+    "sha256": "d3688dba87b19dbcd93c34c0274210e7c9d04180134d4873481853c4e501b205"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cB-bars",
+    "sha256": "acf507a9a689c1b9e9af51b67fc6d7383c6e1ca3817a8b506eeee009631a1274"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cB-pressure",
+    "sha256": "61d38e785e6a4d2249b39a2de6d92d6727ab6525e6393d0f4e32873bb4a984e6"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cB-equilibrium",
+    "sha256": "82c8ab51e803eaa902e35227a7ff0fc629d0d7970cef8d013be44bb967a23921"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cB-plot",
+    "sha256": "428773d6669b73309601bf24eb0637d050709be16e7283c3e178f75dd98516e0"
+  },
+  {
+    "stage": "checkForms",
+    "id": "haber-v1-cB-freeGraph",
+    "sha256": "bc0c5c96dee898dd5e423d1f32076d2d90adb304f60742a98b12a8525f682f4a"
+  },
+  {
+    "stage": "reviewForms",
+    "id": "haber-v1-vA-cool",
+    "sha256": "efce6750bd13d0cbae593fe7272c6d185fdbd9bbda08c6b34061c2e2dad96456"
+  },
+  {
+    "stage": "reviewForms",
+    "id": "haber-v1-vA-mix",
+    "sha256": "51a883d8327c731b3e90dc3ff40320cccfefb650426b335775ef5e07040025af"
+  },
+  {
+    "stage": "reviewForms",
+    "id": "haber-v1-vA-acid",
+    "sha256": "18449fb8c5bd8f7432f621f20639439086f4b1e503380116fdef0566e70b33c2"
+  },
+  {
+    "stage": "reviewForms",
+    "id": "haber-v1-vA-compromise",
+    "sha256": "5d755614606370b36c5b2a460327a069a9073d59f8a1dd7c0a789ff0bd3753a7"
+  },
+  {
+    "stage": "reviewForms",
+    "id": "haber-v1-vB-sources",
+    "sha256": "4cc92c219514f09544ce8740660a2ed42b5a9fe519fe52b8c5f26157b56ad4b9"
+  },
+  {
+    "stage": "reviewForms",
+    "id": "haber-v1-vB-application",
+    "sha256": "43cb29463188bb90e4a87ea1ea43df1079892f87faad2a22d191127021fcc67b"
+  },
+  {
+    "stage": "reviewForms",
+    "id": "haber-v1-vB-rock",
+    "sha256": "d381e52d07b6864e79758fcc2ee166d0a0765d5d266d504920ed2e4c507cab95"
+  },
+  {
+    "stage": "reviewForms",
+    "id": "haber-v1-vB-catalyst",
+    "sha256": "49892a122316fd84026662ff2a319871f28b5a8bbb8ca193c4f51892d0e85a85"
+  }
+]

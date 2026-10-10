@@ -89,7 +89,11 @@ async function answer(p: Page, q: Question) {
     for (const part of q.parts)
       await p.getByLabel(part.label, { exact: true }).fill(String(part.answer));
   else if (q.rubric)
-    await p.getByLabel("Your explanation", { exact: true }).fill(q.answer);
+    await p
+      .getByLabel(q.shortWritten ? "Your answer" : "Your explanation", {
+        exact: true,
+      })
+      .fill(q.answer);
   else if (q.options)
     await p.getByRole("radio", { name: q.answer, exact: true }).check();
   else await p.getByLabel("Your answer", { exact: true }).fill(q.answer);
@@ -267,7 +271,11 @@ test("every independent practice works, all recoveries resolve and written crite
     ).toContainText(q.rubric ? "Compare your" : "That’s right.");
     if (q.rubric) {
       await expect(page.locator(".sample-task-answer")).toContainText(
-        q.haberDrawing ? "no automatic exam mark" : "not an automatic mark",
+        q.haberDrawing
+          ? "no automatic exam mark"
+          : q.shortWritten
+            ? "no automatic mark is awarded"
+            : "not an automatic mark",
       );
       await expect(page.locator(".sample-reference")).not.toHaveAttribute(
         "open",

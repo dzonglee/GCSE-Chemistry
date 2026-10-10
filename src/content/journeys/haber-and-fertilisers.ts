@@ -1,3 +1,9 @@
+import {
+  haberSourceRecallGuided,
+  haberSourceRecallPractice,
+  haberSourceRecallCheck,
+  haberSourceRecallReview,
+} from "./haber-source-recall";
 import type { LearningTask, LessonJourney, Tier } from "../types";
 import { emptyHaberDrawing } from "../../lib/haber-drawing";
 import { haberRecords as R, type HaberGiven } from "../../lib/haber";
@@ -1884,6 +1890,37 @@ for (const g of groups)
     if (!q) throw Error("Unknown Haber exposure " + s);
     q.exposureAliases = [...g].filter((o) => o !== s).map(id);
   }
+// Append only: published v1 positions and original assessment forms stay intact.
+const originalPracticeEnd = practice.length;
+for (const added of [
+  ...haberSourceRecallGuided,
+  ...haberSourceRecallPractice,
+  ...haberSourceRecallCheck,
+  ...haberSourceRecallReview,
+]) {
+  const family = added.id.endsWith("sources")
+    ? haberExposureFamilies.sources
+    : [...haberExposureFamilies.rock, ...haberExposureFamilies.superphosphate];
+  const old = allHaberTasks.filter((q) => family.map(id).includes(q.id));
+  added.exposureAliases = [
+    ...new Set(old.flatMap((q) => [q.id, ...(q.exposureAliases ?? [])])),
+  ];
+  // The old Higher exemplar already names both sources; it cannot make fresh recall.
+  if (added.id.endsWith("sources"))
+    added.exposureAliases.push(id("p-compromise"));
+}
+haberSourceRecallPractice[0].followUp = id("r-feed2");
+haberSourceRecallPractice[1].followUp = id("r-nitricRock");
+guided.push(...haberSourceRecallGuided);
+practice.push(...haberSourceRecallPractice);
+checkForms.push(haberSourceRecallCheck);
+reviewForms.push(haberSourceRecallReview);
+allHaberTasks.push(
+  ...haberSourceRecallGuided,
+  ...haberSourceRecallPractice,
+  ...haberSourceRecallCheck,
+  ...haberSourceRecallReview,
+);
 export const haberJourney: LessonJourney = {
   version: 1,
   introduction:
@@ -1921,7 +1958,11 @@ export const haberJourney: LessonJourney = {
     },
     {
       label: "Higher: rate, equilibrium and graphs",
-      taskIds: practice.slice(24).map((q) => q.id),
+      taskIds: practice.slice(24, originalPracticeEnd).map((q) => q.id),
+    },
+    {
+      label: "Recall feed sources and phosphate products",
+      taskIds: haberSourceRecallPractice.map((q) => q.id),
     },
   ],
 };
