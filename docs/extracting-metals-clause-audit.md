@@ -1,0 +1,11 @@
+# Biological extraction — individual clause audit
+
+Reviewed10 October2026 against actual AQA8462 4.10.1.4, printed83, Higher only. All22 practice/12 independent/6 delayed questions were personally read, including prompts, answers, original supplied data and written rubrics. This changes documentation only.
+
+Whole phytomining descriptions include plant uptake of copper compounds, harvest/burn to compound-containing ash, acid dissolution to a solution, then scrap-iron displacement or electrolysis to copper metal. Bacterial leachate is a solution of compounds, not already pure copper. Ordinary filtration is distinguished from reduction. Cold full descriptions and delayed missing-stage repair preserve this breadth. Given reactivity/redox explanations conserve sulfate spectators and electron changes.
+
+Original source/ash/recovery inventories preserve existing copper content, chemical form and non-product streams. Higher concentration after burning does not create copper atoms. Complete compound formula masses, final significant figures and unrounded intermediate fractions are preserved. Supplied method comparisons use equal-quality recovered output, explicit boundaries and land/time constraints; lower energy alone does not overcome an unmet site requirement. Limited ores and avoidance of some traditional rock movement are distinguished from universal zero-impact claims.
+
+Actual2021 archive Higher Paper2 Q08.3–5 and paired scheme were reread; Q08.4/5 printed24 and scheme08.4 printed20 were personally inspected as images. Four-mark phytomining includes acid dissolution and final recovery; method-adoption answers include land/time/high-grade availability/technology. Actual2023 Higher Paper2 Q05.4 and paired scheme were reread: bacteria produce leachate solutions containing metal/copper compounds. These source demands match existing generated responses. See [original lesson review](extracting-metals.md) for exact URLs, previously delivered native3D/text/retention samples and scoped QA. No new live Maths comparison is claimed here.
+
+Exact response IDs are in [sections.json](qualification-response-audit/sections.json). Current112/124 response sections are confirmed;12 remain. Reserved potable-water work, shared UI parity and final unified regression remain open. No new app tasks or browser certificate.

@@ -35,3 +35,7 @@ Manual comparison criteria and examples require linked reasons, a declared prior
 - [2018 HigherPaper2 question paper](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-84622H-QP-JUN18.PDF) and [actual paired W-MS scheme](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-84622H-W-MS-JUN18.PDF), Q10.1–2 and corresponding scheme.
 
 Seven primary page images were personally inspected and privately hash-recorded. Current LCA inventory remains102 tasks/29practice/30manual-review items. No new tests were invented for this documentation-only audit; previously delivered lesson validation is recorded in life-cycle-assessment.md and the final unified whole-course regression remains pending.
+
+## Response-map follow-through —10 October2026
+
+All29 current practice/22 independent/16 delayed answers were personally read, including full supplied data and written rubrics;35 appended resource/magnitude definitions were also read. Actual2022H Q03.1/paired images,2018H Q10.1–2/paired images and2022F Q08.4/paired text were reinspected. The qualification response map records this clause confirmed. No new content or browser certificate. The explicit2018 standard-form instruction remains distinguished from an ordinary numeric exercise that accepts scientific notation; formal representation still requires the broader skills review.

@@ -2795,11 +2795,25 @@
     "trilogyCandidate": "5.10.1.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Current/future needs sustainability, natural/agricultural/synthetic examples, finite/renewable; charts/tables/graphs and orders of magnitude. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "All35 individually appended resource/magnitude responses and all29 lifecycle practice/38 reserved responses personally read. Teaching and generated short writing address current/future needs, agricultural/synthetic examples and chemistry improvements. Finite/renewable classification uses supplied replenishment information. Original common-axis graph/table interpretation, unit-consistent estimates and full significance judgements cover MS2h without inventing unaided classification or overall environmental certainty.",
+    "responseEvidenceIds": [
+      "lca-v1-resource-r-needs",
+      "lca-v1-resource-r-products",
+      "lca-v1-resource-p-needs",
+      "lca-v1-resource-cC-products",
+      "lca-v1-resource-cD-products",
+      "lca-v1-resource-vD-needs",
+      "lca-v1-p-graph",
+      "lca-v1-magnitude-p-scale",
+      "lca-v1-magnitude-ca-significance",
+      "lca-v1-magnitude-rb-significance"
+    ],
+    "responseSourceReview": "Actual8462p81/84–85 bodies and existing exact LCA/reduction/resource follow-up reviews reread. Actual2022H2Q03.1/paired scheme images and2018H2Q10.1–2/paired scheme images personally reinspected;2022F2Q08.4/paired text reread. All29 current practice/38 reserved responses plus35 resource/magnitude definitions personally read. No new app content or browser certificate."
   },
   {
     "section": "4.10.1.2",
@@ -2821,11 +2835,23 @@
     "trilogyCandidate": "5.10.1.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Screen/grit, sediment sludge/effluent, anaerobic sludge/aerobic effluent; industrial harmful chemicals; compare relative ease of waste/ground/salt potable production. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "All21 wastewater practice/12 cold/6 delayed responses personally read. Existing full writing covers screening/grit, sedimentation into sludge/effluent, anaerobic sludge and aerobic effluent conditions, industrial chemical-removal limits and conditional waste/ground/salt comparisons. Native domestic/agricultural/industrial targets explicitly distinguish organic matter, microbes and harmful chemicals. Dry-solid/disposal calculations retain common mass basis and same-year totals. Some named targets/delayed pairings remain recognition, as recorded in the exact clause audit.",
+    "responseEvidenceIds": [
+      "waste-v1-p-industry",
+      "waste-v1-p-route",
+      "waste-v1-p-effluent",
+      "waste-v1-p-sources",
+      "waste-v1-cA-air",
+      "waste-v1-cB-route",
+      "waste-v1-vA-evidence",
+      "waste-v1-vB-sources"
+    ],
+    "responseSourceReview": "Actual8462p83 body reread; existing wastewater-clause-audit fully read. Actual cached2020F2Q09.3 question/scheme images personally reinspected and Q09.4–6/paired extracted text read. No RP8 authoring, new content or browser certificate."
   },
   {
     "section": "4.10.1.4",
@@ -2834,11 +2860,23 @@
     "trilogyCandidate": "5.10.1.4",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
     "actualBodyReview": "Scarce ores, phytomining plants→harvest/burn compounds ash; bioleaching compound leachate; scrapiron/electrolysis metal recovery; supplied evaluation. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "All22 biological-extraction practice/12 cold/6 delayed responses personally read. Full written phytomining includes compound uptake, harvest/burn, acid dissolution and final metal recovery; bioleaching preserves compound-containing leachate and subsequent displacement/electrolysis. Given reactivity/electron-transfer reasoning, finite content and non-product balances, equal-output comparisons and site constraints are explicit. Biological methods are not assumed zero-impact or atom-creating. Higher-only scope is retained.",
+    "responseEvidenceIds": [
+      "bio-v1-p-phyto",
+      "bio-v1-p-bio",
+      "bio-v1-p-iron",
+      "bio-v1-p-evaluate",
+      "bio-v1-cA-phyto",
+      "bio-v1-cB-bio",
+      "bio-v1-vA-constraint",
+      "bio-v1-vB-complete"
+    ],
+    "responseSourceReview": "Actual8462p83 Higher-only body reread; actual2021H2Q08.3–5/paired scheme and QP24/MS20 images personally reinspected; fresh2023H2Q05.4/paired scheme read. All22 practice/18 reserved responses individually read. Existing source/QA records retained; no new content or browser certificate."
   },
   {
     "section": "4.10.2.1",
@@ -2847,11 +2885,24 @@
     "trilogyCandidate": "5.10.2.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Four stages plus transport/distribution each; quantified resource/energy/water/waste, pollutant value judgements, selective misuse; comparative paper/plastic bags. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "All29 practice/22 cold/16 delayed lifecycle responses personally read. Full writing generates all four stages, transport throughout, matching service/boundaries, conflicting quantitative comparisons and value-judgement limits. Independent/delayed paper/plastic bag comparisons require linked conditional recommendations. Mass-to-item production energy and supplied estimates are correct; the existing calculation accepts scientific notation, but that alone is not evidence of enforcing every explicit examination standard-form instruction. Formal representation remains a separate course skills gate.",
+    "responseEvidenceIds": [
+      "lca-v1-p-transport",
+      "lca-v1-p-boundary",
+      "lca-v1-p-pollutants",
+      "lca-v1-p-advert",
+      "lca-v1-p-bagDecision",
+      "lca-v1-p-energyMass",
+      "lca-v1-cA-judgement",
+      "lca-v1-cB-value",
+      "lca-v1-vB-full"
+    ],
+    "responseSourceReview": "Actual8462p81/84–85 bodies and existing exact LCA/reduction/resource follow-up reviews reread. Actual2022H2Q03.1/paired scheme images and2018H2Q10.1–2/paired scheme images personally reinspected;2022F2Q08.4/paired text reread. All29 current practice/38 reserved responses plus35 resource/magnitude definitions personally read. No new app content or browser certificate."
   },
   {
     "section": "4.10.2.2",
@@ -2860,11 +2911,23 @@
     "trilogyCandidate": "5.10.2.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Reduce/reuse/recycle limited resources/energy/impacts; glass and metal routes, separation for final required properties, scrap steel reuse; supplied evaluation. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Full concept, native sources and all29 practice/38 reserved responses inspected. Generated writing distinguishes reduction/reuse/recycling, limited extraction/energy/waste benefits, separation by final properties and nonzero processing/collection losses. Glass reuse/crush-melt, metal melt/recast/reform, five named limited-material groups and suitable scrap-steel/blast-furnace supplementation have explicit teaching or recognition evidence; no separate delayed generated list for every named process is claimed. Existing copper-scrap full writing supplies the metal remelting example.",
+    "responseEvidenceIds": [
+      "lca-v1-p-reduce",
+      "lca-v1-p-reuseRecycle",
+      "lca-v1-p-separation",
+      "lca-v1-p-steel",
+      "lca-v1-p-materials",
+      "lca-v1-cA-resources",
+      "lca-v1-vA-routes",
+      "bio-v1-p-recycle"
+    ],
+    "responseSourceReview": "Actual8462p81/84–85 bodies and existing exact LCA/reduction/resource follow-up reviews reread. Actual2022H2Q03.1/paired scheme images and2018H2Q10.1–2/paired scheme images personally reinspected;2022F2Q08.4/paired text reread. All29 current practice/38 reserved responses plus35 resource/magnitude definitions personally read. No new app content or browser certificate."
   },
   {
     "section": "4.10.3.1",
