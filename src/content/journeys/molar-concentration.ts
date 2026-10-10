@@ -416,15 +416,18 @@ export const molarConcentrationJourney: LessonJourney = {
       "Retained n=0.050 mol;final V=0.250 dm³;c=0.20.",
       "Use the stated final volume, not the water added.",
     ),
-    n(
-      "p-round",
-      "Round only the final concentration",
-      "6.23 g NaCl, M = 58.5 g/mol, in 375 cm³ final solution. Give mol/dm³ to 3 significant figures.",
-      0.284,
-      "mol/dm³",
-      "6.23/58.5/0.375=0.2839886039…;final 3 s.f0.0.284.",
-      "Keep intermediate moles unrounded.",
-    ),
+    {
+      ...n(
+        "p-round",
+        "Final concentration",
+        "6.23 g NaCl, M = 58.5 g/mol, in 375 cm³ final solution. Give mol/dm³ to 3 significant figures.",
+        0.284,
+        "mol/dm³",
+        "6.23 ÷ 58.5 ÷ 0.375 = 0.2839886039…; to 3 significant figures, the concentration is 0.284 mol/dm³.",
+        "Keep intermediate moles unrounded.",
+      ),
+      rounding: { kind: "significant-figures", digits: 3 },
+    },
     w(
       "p-proof",
       "Explain the two operations",

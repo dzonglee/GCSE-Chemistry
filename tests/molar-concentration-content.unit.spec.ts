@@ -2,6 +2,14 @@ import { test, expect } from "@playwright/test";
 import { molarConcentrationJourney as j } from "../src/content/journeys/molar-concentration";
 import { tasks } from "../src/content/journeys/helpers";
 const all = tasks(j);
+import { mark } from "../src/lib/marking";
+test("final concentration enforces the requested three significant figures", () => {
+  const q = all.find((task) => task.id === "mc-v1-p-round")!;
+  expect(mark(q, "0.284").correct).toBe(true);
+  expect(mark(q, "0.2840")).toMatchObject({ correct: false, empty: false });
+  expect(mark(q, "0.28").correct).toBe(false);
+  expect(mark(q, "0.2839886039").correct).toBe(false);
+});
 test("49 deliberately separate tasks have distinct identities and conservative written responses", () => {
   expect(all).toHaveLength(49);
   expect(new Set(all.map((q) => q.id)).size).toBe(49);
