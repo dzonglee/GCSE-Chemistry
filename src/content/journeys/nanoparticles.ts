@@ -688,3 +688,6 @@ for (const task of [
 
 import { extendNanoWriting } from "./nano-writing";
 extendNanoWriting(nanoparticlesJourney);
+
+import { extendNanoSizeRanges } from "./nano-size-ranges";
+extendNanoSizeRanges(nanoparticlesJourney);

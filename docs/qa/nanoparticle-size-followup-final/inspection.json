@@ -1,0 +1,74 @@
+[
+  {
+    "file": "320-guided-size-ranges.png",
+    "sha256": "841149b0c29bb3b08a3a6c84d1ac37b28716cca21cb67ef99962d5da0c4902b3",
+    "personallyInspected": true,
+    "findings": "Raw limits control plot; guided reference present, practice reference absent, malformed nano not plotted. Readable log-axis caption and shared-boundary explanation."
+  },
+  {
+    "file": "320-retained-malformed-range.png",
+    "sha256": "941805c82dc51e230d1067cb37be9ede0a14de21040004ac4005c7a6b75ab919",
+    "personallyInspected": true,
+    "findings": "Raw limits control plot; guided reference present, practice reference absent, malformed nano not plotted. Readable log-axis caption and shared-boundary explanation."
+  },
+  {
+    "file": "320-independent-size-ranges.png",
+    "sha256": "5282a396263bb0e11feb64dae03698355cd1656020f548ab8b736aef0da24a85",
+    "personallyInspected": true,
+    "findings": "Raw limits control plot; guided reference present, practice reference absent, malformed nano not plotted. Readable log-axis caption and shared-boundary explanation."
+  },
+  {
+    "file": "320-dust-writing-review.png",
+    "sha256": "35dcff60087f1d314560f8b535573c80d9da76bf638abe4db34cc6179efff472",
+    "personallyInspected": true,
+    "findings": "Readable ranges, units and controls; no overflowing graphic. Phone writing textarea clips retained explanation and remains a shared UI follow-up."
+  },
+  {
+    "file": "390-guided-size-ranges.png",
+    "sha256": "fc1cb13b0234ed356de7646108e88384260568623afac8b5d3b177e664b5d7e1",
+    "personallyInspected": true,
+    "findings": "Raw limits control plot; guided reference present, practice reference absent, malformed nano not plotted. Readable log-axis caption and shared-boundary explanation."
+  },
+  {
+    "file": "390-retained-malformed-range.png",
+    "sha256": "19933609c40ac2370ca3cf7bdb7c74e93732e9208a57cc03c3183352c5b6b9db",
+    "personallyInspected": true,
+    "findings": "Raw limits control plot; guided reference present, practice reference absent, malformed nano not plotted. Readable log-axis caption and shared-boundary explanation."
+  },
+  {
+    "file": "390-independent-size-ranges.png",
+    "sha256": "2b8e32dd2a75ba12d5c4eb14e29d04a0f856dc0c798ff876cfa1263ed4f0dcb9",
+    "personallyInspected": true,
+    "findings": "Raw limits control plot; guided reference present, practice reference absent, malformed nano not plotted. Readable log-axis caption and shared-boundary explanation."
+  },
+  {
+    "file": "390-dust-writing-review.png",
+    "sha256": "74268e7a184e1a557c36ec2bc7de04d4a23dea573dae3f4c0f99ee58b8d2e222",
+    "personallyInspected": true,
+    "findings": "Readable ranges, units and controls; no overflowing graphic. Phone writing textarea clips retained explanation and remains a shared UI follow-up."
+  },
+  {
+    "file": "1280-guided-size-ranges.png",
+    "sha256": "e1d937f06af237f97275f2a9cb56d7d0148c13da9ef90a9e624814af4a02f644",
+    "personallyInspected": true,
+    "findings": "Raw limits control plot; guided reference present, practice reference absent, malformed nano not plotted. Readable log-axis caption and shared-boundary explanation."
+  },
+  {
+    "file": "1280-retained-malformed-range.png",
+    "sha256": "59bbb20793c99c353cb4828666a511622c603a5d3145dffea3d7d57402f7dc9a",
+    "personallyInspected": true,
+    "findings": "Raw limits control plot; guided reference present, practice reference absent, malformed nano not plotted. Readable log-axis caption and shared-boundary explanation."
+  },
+  {
+    "file": "1280-independent-size-ranges.png",
+    "sha256": "23cd7f98b833ebf8c643955ad418865cfd4651e820f33e1c91b475e827df582b",
+    "personallyInspected": true,
+    "findings": "Raw limits control plot; guided reference present, practice reference absent, malformed nano not plotted. Readable log-axis caption and shared-boundary explanation."
+  },
+  {
+    "file": "1280-dust-writing-review.png",
+    "sha256": "f985a90dbe6fb0128323219a802ae85e049fabb9c4011fdd4d393b1865fdfd14",
+    "personallyInspected": true,
+    "findings": "Readable ranges, units and controls; no overflowing graphic. Phone writing textarea clips retained explanation and remains a shared UI follow-up."
+  }
+]

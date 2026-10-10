@@ -18,6 +18,7 @@ export interface Question {
   metalReactionReference?: boolean;
   concentrationSymbols?: boolean;
   frequencyDisplay?: import("../lib/frequency-display").FrequencyDisplayData;
+  nanoSizeRanges?: "learn" | "construct";
   nanoFootprintDiagram?: {
     base: number;
     height: number;

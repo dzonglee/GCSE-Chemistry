@@ -86,6 +86,7 @@ import { AtomicModelDiagram } from "./AtomicModelDiagram";
 import { roundingLabel } from "@/lib/marking";
 import { readArrangement } from "@/lib/shells";
 import { FrequencyDisplay } from "./FrequencyDisplay";
+import { NanoSizeRangeDisplay } from "./NanoSizeRangeDisplay";
 type InputProps = {
   question: Question;
   value: string;
@@ -369,6 +370,17 @@ export function QuestionInput(props: InputProps) {
           />
         </div>
       )}
+      {props.question.nanoSizeRanges && (
+        <div className="nano-size-response">
+          <div>
+            <ResponseInput {...props} />
+          </div>
+          <NanoSizeRangeDisplay
+            value={props.value}
+            reference={props.question.nanoSizeRanges === "learn"}
+          />
+        </div>
+      )}
       {(props.question.polymerChainDiagram ||
         props.question.polymerRepeatDiagram) && (
         <div className="polymer-reference-response">
@@ -601,6 +613,7 @@ export function QuestionInput(props: InputProps) {
         !props.question.fullereneDiagram &&
         !props.question.nanoFootprintDiagram &&
         !props.question.frequencyDisplay &&
+        !props.question.nanoSizeRanges &&
         !props.question.concentrationSymbols &&
         !props.question.metalReactionReference &&
         !props.question.acidMetalReference &&

@@ -720,7 +720,7 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Chemistry-only parent scope; nano1–100nm, fine100–2500nm, coarse2500–10000nm; tenfold cube-side quotient, size comparison, area/volume/standard form. Actual8462 body read including continued next-page maths;8464 carbon section goes directly to quantitative, no nanoparticle clauses.",
@@ -734,9 +734,15 @@
       "np-v1-p-tenfold",
       "np-v1-p-fine",
       "np-v1-p-explain",
-      "np-write-v1-p-area"
+      "np-write-v1-p-area",
+      "np-size-v1-p-ranges",
+      "np-size-v1-p-dust",
+      "np-size-v1-ca-ranges",
+      "np-size-v1-ca-dust",
+      "np-size-v1-ra-ranges",
+      "np-size-v1-ra-dust"
     ],
-    "responseEvidenceReview": "Actual nano/fine, calculations and writing read. Coarse PM10 diameter category has no current task or lesson concept evidence; fine category range is supplied rather than retrieved. Response gate remains open pending individual nanoparticle follow-up."
+    "responseEvidenceReview": "Actual specification and paired2023 Foundation Paper1 Q5 personally read and source diagrams inspected. All original nano/fine size, atom comparison, cube surface/volume and tenfold quotient responses reviewed; individual follow-up adds independently constructed full six limits, coarse/dust classification and matching-unit diameter comparison, including separate sealed check and delayed review. New8 and existing24 browser tests pass on the identical frozen production; all12 final screenshots inspected and samples sent. Shared endpoint ambiguity explicitly taught."
   },
   {
     "section": "4.2.4.2",

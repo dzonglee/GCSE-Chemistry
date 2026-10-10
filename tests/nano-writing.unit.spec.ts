@@ -12,11 +12,11 @@ import {
 } from "../src/lib/progress";
 test("nanoparticle additions preserve original forms, task positions and raw drafts", () => {
   expect(journey.version).toBe(1);
-  expect(tasks(journey)).toHaveLength(63);
+  expect(tasks(journey)).toHaveLength(71);
   expect(journey.practice[19].id).toBe("np-v1-p-explain");
   expect(journey.practice[20].id).toBe("np-v1-p-evaluate");
-  expect(journey.checkForms.map((f) => f.length)).toEqual([5, 5, 4]);
-  expect(journey.reviewForms.map((f) => f.length)).toEqual([3, 3, 3]);
+  expect(journey.checkForms.map((f) => f.length)).toEqual([5, 5, 4, 2]);
+  expect(journey.reviewForms.map((f) => f.length)).toEqual([3, 3, 3, 2]);
   expect(new Set(journey.practiceGroups!.flatMap((g) => g.taskIds))).toEqual(
     new Set(journey.practice.map((q) => q.id)),
   );
@@ -73,7 +73,9 @@ test("ethical judgements and perceived-risk writing never receive an automatic e
   expect(exposureIds(["particles-and-nanoparticles-4"])).toContain(
     added.review[1].id,
   );
-  for (const q of tasks(journey))
+  for (const q of tasks(journey).filter(
+    (task) => !task.id.startsWith("np-size-v1-"),
+  ))
     for (const id of q.exposureAliases ?? [])
       expect(questionById(id)?.exposureAliases).toContain(q.id);
 });

@@ -8901,3 +8901,47 @@ body:has(.sample-lesson) .topic-number {
     margin-bottom: 8px;
   }
 }
+
+.nano-size-response {
+  min-width: 0;
+}
+.nano-size-display {
+  margin: 16px 0 0;
+  min-width: 0;
+}
+.nano-size-display svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.nano-size-display figcaption,
+.nano-size-display p,
+.nano-size-display table {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.nano-size-display table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.nano-size-display th,
+.nano-size-display td {
+  padding: 6px 4px;
+  border-bottom: 1px solid #d8deea;
+  text-align: left;
+  vertical-align: top;
+}
+.nano-size-unplotted {
+  overflow-wrap: anywhere;
+}
+@media (min-width: 900px) {
+  .nano-size-response {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+  .nano-size-display {
+    margin-top: 0;
+  }
+}

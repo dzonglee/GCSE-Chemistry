@@ -4217,7 +4217,7 @@ Object.assign(nanoLesson, {
   course: "separate",
   prerequisite: "states-of-matter",
   concept:
-    "Nanoparticles are usually 1–100 nm in size. Ideal cube surface area is 6a² and volume a³; their quotient is 6/a in inverse length units. Smaller separated particles can expose more surface for the same material quantity. Benefits and possible risks depend on material, application and exposure; performance evidence alone does not establish safety.",
+    "Nanoparticles are usually 1–100 nm in size. Fine particles span 100–2500 nm; coarse particles, often called dust, span 2500–10000 nm (2.5 × 10⁻⁶ to 1 × 10⁻⁵ m). These stated ranges share endpoints, so single-category examples use clearly internal values. Ideal cube surface area is 6a² and volume a³; their quotient is 6/a in inverse length units. Smaller separated particles can expose more surface for the same material quantity. Benefits and possible risks depend on material, application and exposure; performance evidence alone does not establish safety.",
   journey: nanoparticlesJourney,
 });
 for (const group of [
@@ -7264,7 +7264,9 @@ for (const q of tasks(polymerStructureJourney))
   }
 
 // Preserve reciprocal exposure for new nanoparticle geometry and evidence demands.
-for (const q of tasks(nanoparticlesJourney))
+for (const q of tasks(nanoparticlesJourney).filter(
+  (task) => !task.id.startsWith("np-size-v1-"),
+))
   for (const id of q.exposureAliases ?? []) {
     const other = questionById(id);
     if (other)
