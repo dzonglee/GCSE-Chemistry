@@ -2633,11 +2633,31 @@
     "trilogyCandidate": "5.9.2.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Water vapour/CO2/methane greenhouse gases; short/long wavelength interaction with matter. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "All22 greenhouse practice/24 reserved responses read. Gas identification distinguishes CO2/CH4/H2O from abundant N2/O2; whole written mechanisms generate short-wave transmission, surface warming/long-wave infrared, absorption/emission in all directions and continuing escape. Cold/delayed writing separates natural habitability from ongoing energy gain; simplified teaching ledgers do not predict an exact temperature. Actual2023H04.1 and2023F05.1 name questions use supplied choices, matching the current lesson format; no free-water-vapour recall gap is inferred.",
+    "responseEvidenceIds": [
+      "greenhouse-v1-p-gases",
+      "greenhouse-v1-p-water",
+      "greenhouse-v1-p-wave",
+      "greenhouse-v1-p-pass",
+      "greenhouse-v1-p-surface",
+      "greenhouse-v1-p-absorb",
+      "greenhouse-v1-p-directions",
+      "greenhouse-v1-p-mirror",
+      "greenhouse-v1-p-mechanism",
+      "greenhouse-v1-cA-water",
+      "greenhouse-v1-cA-mechanism",
+      "greenhouse-v1-cB-pair",
+      "greenhouse-v1-cB-process",
+      "greenhouse-v1-cB-mechanism",
+      "greenhouse-v1-vA-explain",
+      "greenhouse-v1-vB-direction"
+    ],
+    "responseSourceReview": "Actual8462p77 body reread; fresh2023H2Q04.1/paired scheme read and cached2023F2Q05.1–3/paired scheme reread. Existing individual lesson materials/QA retained; no new lesson tasks or browser certificate."
   },
   {
     "section": "4.9.2.2",
@@ -2646,11 +2666,23 @@
     "trilogyCandidate": "5.9.2.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Recall TWO activities each increasing CO2 and methane; supplied climate report quality, uncertainties, peer review and communication. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Generated greenhouse responses recall and explain two CO2 activities (fuel combustion and deforestation) and two methane activities (cattle and oxygen-poor landfill decay), including independent responses. Climate practice/cold/delayed whole writing evaluates spatial/time coverage, transparent methods, peer review and independent checks, possible funding conflicts without automatic rejection, model assumptions, uncertainty and public communication. Original anomaly series do not claim to be measured global observations.",
+    "responseEvidenceIds": [
+      "greenhouse-v1-p-co2",
+      "greenhouse-v1-p-methane",
+      "greenhouse-v1-cA-co2",
+      "greenhouse-v1-cB-methane",
+      "climate-v1-cA-report",
+      "climate-v1-cB-quality",
+      "climate-v1-vA-report",
+      "climate-v1-p-communication"
+    ],
+    "responseSourceReview": "Actual8462p78–79 bodies reread. All27 climate practice/16 cold/8 delayed responses individually read; selected greenhouse activity responses reread. Actual2023H2 Q04.2–5/paired scheme,2023F2 Q05.4–5/paired scheme and2021F2 Q08.3–4/paired scheme read. Existing lesson source/QA records retained; no new app content or browser certificate."
   },
   {
     "section": "4.9.2.3",
@@ -2659,11 +2691,19 @@
     "trilogyCandidate": "5.9.2.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "FOUR potential climate effects; scale/risk/environment implications. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Whole independent and delayed responses describe four distinct potential effects: sea-level/coastal risk, changed rainfall/drought or inland floods, changes in some extreme events, and habitat/species/crop-range consequences. Explanations distinguish land ice/thermal expansion from floating sea ice, qualify regional exposure/adaptation and avoid ozone/acid-rain substitutions.",
+    "responseEvidenceIds": [
+      "climate-v1-p-effects",
+      "climate-v1-cA-effects",
+      "climate-v1-cB-effects",
+      "climate-v1-vB-effects"
+    ],
+    "responseSourceReview": "Actual8462p78–79 bodies reread. All27 climate practice/16 cold/8 delayed responses individually read; selected greenhouse activity responses reread. Actual2023H2 Q04.2–5/paired scheme,2023F2 Q05.4–5/paired scheme and2021F2 Q08.3–4/paired scheme read. Existing lesson source/QA records retained; no new app content or browser certificate."
   },
   {
     "section": "4.9.2.4",
@@ -2672,11 +2712,24 @@
     "trilogyCandidate": "5.9.2.4",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Full lifecycle CO2 and other greenhouse gases carbon footprint; reduce CO2/methane and explain limitations. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Personally read practice and reserved responses cover full-lifetime CO2 and other greenhouse gases, explicit boundaries, supplied warming factors, equal completed services, unit/percentage calculations and generated explanations of solar substitution, efficiency and landfill methane capture with practical/lifecycle limits. Exercise CO2e factors are supplied comparisons, not universal constants or chemical conversion.",
+    "responseEvidenceIds": [
+      "climate-v1-cA-gases",
+      "climate-v1-cA-boundary",
+      "climate-v1-cA-reduce",
+      "climate-v1-cB-service",
+      "climate-v1-cB-gases",
+      "climate-v1-cB-collection",
+      "climate-v1-vA-boundary",
+      "climate-v1-vB-percent",
+      "climate-v1-vB-zero"
+    ],
+    "responseSourceReview": "Actual8462p78–79 bodies reread. All27 climate practice/16 cold/8 delayed responses individually read; selected greenhouse activity responses reread. Actual2023H2 Q04.2–5/paired scheme,2023F2 Q05.4–5/paired scheme and2021F2 Q08.3–4/paired scheme read. Existing lesson source/QA records retained; no new app content or browser certificate."
   },
   {
     "section": "4.9.3.1",
