@@ -1,3 +1,4 @@
+import { useId } from "react";
 import type { FuelDrawingData } from "../lib/fuel-drawing";
 
 /** Shown only after a saved self-review response or whole-set submission. */
@@ -6,6 +7,7 @@ export function TemperatureGraphReference({
 }: {
   drawing: FuelDrawingData;
 }) {
+  const captionId = useId();
   const d = drawing.data,
     ends = drawing.referenceLine;
   if (d.context !== "temperature" || !ends) return null;
@@ -22,8 +24,14 @@ export function TemperatureGraphReference({
         One suitable straight fit; other balanced lines are possible. Compare
         every point, your line and its extrapolation on the same scales.
       </p>
+      <p id={captionId} className="graph-axis-caption">
+        Horizontal axis: {d.xName}
+        {d.xUnit ? ` (${d.xUnit})` : ""}; vertical axis: {d.yName}
+        {d.yUnit ? ` (${d.yUnit})` : ""}.
+      </p>
       <div
         className="fuel-plot-scroll"
+        aria-describedby={captionId}
         role="region"
         aria-label="Reference temperature graph, scroll horizontally"
         tabIndex={0}

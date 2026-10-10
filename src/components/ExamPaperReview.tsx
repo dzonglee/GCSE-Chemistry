@@ -1,4 +1,7 @@
 "use client";
+import type { Question } from "@/content/types";
+import { FuelDrawingInput } from "./FuelDrawingInput";
+import { PolymerisationDrawingInput } from "./PolymerisationDrawingInput";
 import type { ExamPaper } from "@/content/exam-paper-types";
 import type { Run, Work } from "@/lib/progress";
 import { setWork, startRun } from "@/lib/progress";
@@ -12,6 +15,49 @@ import { QuestionInput } from "./QuestionInput";
 import { TemperatureGraphReference } from "./TemperatureGraphReference";
 import { IonicSlice } from "./IonicSlice";
 import Link from "next/link";
+
+function ReviewConstruction({
+  question,
+  value,
+  contextLabel,
+}: {
+  question: Question;
+  value: string;
+  contextLabel: string;
+}) {
+  if (question.fuelDrawing)
+    return (
+      <FuelDrawingInput
+        value={value}
+        drawing={question.fuelDrawing}
+        contextLabel={contextLabel}
+        onChange={() => {}}
+        disabled
+        reviewOnly
+      />
+    );
+  if (question.polymerisationDrawing)
+    return (
+      <PolymerisationDrawingInput
+        value={value}
+        drawing={question.polymerisationDrawing}
+        contextLabel={contextLabel}
+        onChange={() => {}}
+        disabled
+        reviewOnly
+      />
+    );
+  return (
+    <QuestionInput
+      question={question}
+      value={value}
+      contextLabel={contextLabel}
+      onChange={() => {}}
+      disabled
+      compactAssessment
+    />
+  );
+}
 
 export function ExamPaperReview({
   id,
@@ -139,13 +185,10 @@ export function ExamPaperReview({
                     q.haberGiven ||
                     q.chromatographyGiven ||
                     q.isotopeData) && (
-                    <QuestionInput
+                    <ReviewConstruction
                       question={q}
                       value={response.answer}
                       contextLabel={`Retained ${part.number} response`}
-                      disabled
-                      onChange={() => {}}
-                      compactAssessment
                     />
                   )}
                 {response?.working && (
@@ -172,13 +215,10 @@ export function ExamPaperReview({
                         One valid construction; equivalent structures or other
                         suitable smooth fits can also earn the described marks.
                       </p>
-                      <QuestionInput
+                      <ReviewConstruction
                         question={q}
                         value={part.referenceConstruction}
                         contextLabel={`Worked ${part.number} reference`}
-                        disabled
-                        onChange={() => {}}
-                        compactAssessment
                       />
                     </section>
                   )}

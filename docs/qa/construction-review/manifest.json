@@ -1,0 +1,36 @@
+{
+  "productionBuild": "HYcu5IE3RwinzBeIUOsFP",
+  "scope": "Six selected personally inspected real captures. 30 initial,16 supplemental and12 framing-rerun browser cases passed with actual exit0; these overlap and represent40 distinct cases. Frozen2347 verified after final owner closure. No whole-course regression claim.",
+  "images": [
+    {
+      "file": "construction-supplement-desktop-320-paper-1-higher-full-retained-viewport.png",
+      "sha256": "6d91b6026e79eacccf4f5d7a4117a7a40de939d5b5bf79b6b9cf5649daf6c973",
+      "personallyInspected": true
+    },
+    {
+      "file": "construction-supplement-desktop-390-paper-1-higher-full-retained-region.png",
+      "sha256": "8a0de30c99d93b288155bae402100913cd3f5b33d073a739795ab50dcb47ed2f",
+      "personallyInspected": true
+    },
+    {
+      "file": "construction-supplement-desktop-320-paper-1-higher-full-reference-viewport.png",
+      "sha256": "871788fe21070edbc87b486292b05876c62b66f840fb023267f917e7ae7420b1",
+      "personallyInspected": true
+    },
+    {
+      "file": "construction-supplement-desktop-390-paper-2-higher-full-retained-viewport.png",
+      "sha256": "0b35509715e94a22cb0cb3224ec3b40df3aea16c748a6734275521331ee9538a",
+      "personallyInspected": true
+    },
+    {
+      "file": "construction-detail-desktop-390-paper-2-higher-full-8b-retained.png",
+      "sha256": "90c5559c93f4e46b6b02c556b44a3b137a722f3e5234ad991d2cb7d8bc075d51",
+      "personallyInspected": true
+    },
+    {
+      "file": "construction-detail-desktop-390-paper-2-higher-full-8b-reference.png",
+      "sha256": "ae221a0d0f1bc296241cb0c8f5da0b5cae83820042712a842388208398ac8e2d",
+      "personallyInspected": true
+    }
+  ]
+}

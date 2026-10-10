@@ -17,6 +17,7 @@ export function FuelPlotEditor({
   disabled = false,
   contextLabel,
   compact = false,
+  reviewOnly = false,
 }: {
   data: FuelPlotRecord;
   board: Record<string, string>;
@@ -25,6 +26,7 @@ export function FuelPlotEditor({
   disabled?: boolean;
   contextLabel?: string;
   compact?: boolean;
+  reviewOnly?: boolean;
 }) {
   const uid = useId(),
     [selected, setSelected] = useState(0),
@@ -180,67 +182,77 @@ export function FuelPlotEditor({
       className="fuel-plot-editor"
       aria-label={
         contextLabel
-          ? `${contextLabel}: observation plot editor`
+          ? `${contextLabel}: ${reviewOnly ? "saved graph" : "observation plot editor"}`
           : data.context === "temperature"
             ? "Temperature observation plot editor"
             : "Fuel observation plot editor"
       }
     >
-      {(straight || compact) && coordinateFields}
-      <div className="organic-field">
-        <label htmlFor={uid + "-selected"}>
-          {straight
-            ? "Choose an observation or line end"
-            : "Choose the observation to plot or curve height to edit"}
-        </label>
-        <select
-          id={uid + "-selected"}
-          value={index}
-          disabled={disabled}
-          onChange={(e) => setSelected(Number(e.target.value))}
-        >
-          {indices.map((i) => (
-            <option key={i} value={i}>
-              {!straight
-                ? `Observation ${i + 1}; curve anchor x=${data.points[i][0]}`
-                : layer === "point"
-                  ? `Observation ${i + 1}`
-                  : `Line end at ${data.points[i][0]} ${data.xUnit}`}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="model-controls">
-        <button
-          type="button"
-          disabled={disabled}
-          aria-pressed={layer === "point"}
-          onClick={() => setLayer("point")}
-        >
-          {disabled ? "View observation points" : "Edit observation point"}
-        </button>
-        <button
-          type="button"
-          disabled={disabled}
-          aria-pressed={layer === "curve"}
-          onClick={() => setLayer("curve")}
-        >
-          {disabled
-            ? `View fit ${fitName}`
-            : straight
-              ? "Edit your best-fit line"
-              : "Edit your fit curve"}
-        </button>
-      </div>
-      <p>
-        The original scales stay fixed. Tap the plot, or focus it and use arrow
-        keys (one tenth of a labelled interval). In {fitName} mode, edit the
-        chosen fixed-x {fitName} anchor’s height. Enter any coordinate{" "}
-        {straight ? "above" : "below"}. Use Shift+Left/Right to scroll
-        horizontally.
+      {!reviewOnly && (
+        <>
+          {(straight || compact) && coordinateFields}
+          <div className="organic-field">
+            <label htmlFor={uid + "-selected"}>
+              {straight
+                ? "Choose an observation or line end"
+                : "Choose the observation to plot or curve height to edit"}
+            </label>
+            <select
+              id={uid + "-selected"}
+              value={index}
+              disabled={disabled}
+              onChange={(e) => setSelected(Number(e.target.value))}
+            >
+              {indices.map((i) => (
+                <option key={i} value={i}>
+                  {!straight
+                    ? `Observation ${i + 1}; curve anchor x=${data.points[i][0]}`
+                    : layer === "point"
+                      ? `Observation ${i + 1}`
+                      : `Line end at ${data.points[i][0]} ${data.xUnit}`}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="model-controls">
+            <button
+              type="button"
+              disabled={disabled}
+              aria-pressed={layer === "point"}
+              onClick={() => setLayer("point")}
+            >
+              {disabled ? "View observation points" : "Edit observation point"}
+            </button>
+            <button
+              type="button"
+              disabled={disabled}
+              aria-pressed={layer === "curve"}
+              onClick={() => setLayer("curve")}
+            >
+              {disabled
+                ? `View fit ${fitName}`
+                : straight
+                  ? "Edit your best-fit line"
+                  : "Edit your fit curve"}
+            </button>
+          </div>
+          <p>
+            The original scales stay fixed. Tap the plot, or focus it and use
+            arrow keys (one tenth of a labelled interval). In {fitName} mode,
+            edit the chosen fixed-x {fitName} anchor’s height. Enter any
+            coordinate {straight ? "above" : "below"}. Use Shift+Left/Right to
+            scroll horizontally.
+          </p>
+        </>
+      )}
+      <p id={uid + "-axes"} className="graph-axis-caption">
+        Horizontal axis: {data.xName}
+        {data.xUnit ? ` (${data.xUnit})` : ""}; vertical axis: {data.yName}
+        {data.yUnit ? ` (${data.yUnit})` : ""}.
       </p>
       <div
         className="fuel-plot-scroll"
+        aria-describedby={uid + "-axes"}
         role="region"
         aria-label={
           contextLabel
@@ -258,6 +270,7 @@ export function FuelPlotEditor({
           }
           if (
             !disabled &&
+            !reviewOnly &&
             ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)
           ) {
             e.preventDefault();
@@ -269,9 +282,9 @@ export function FuelPlotEditor({
           viewBox="0 0 650 450"
           style={{ minWidth: 390, maxWidth: 650 }}
           role="img"
-          aria-label={`Your plotted points and separate chosen fit ${fitName}. The y-axis starts at the printed original minimum, not necessarily zero. Keyboard and labelled coordinate inputs provide alternatives.`}
+          aria-label={`${contextLabel ?? "Your saved response"}: plotted observations and separate chosen fit ${fitName}. The y-axis starts at the original printed minimum.${reviewOnly ? "" : " Keyboard and labelled coordinate inputs provide alternatives."}`}
           onClick={
-            disabled
+            disabled || reviewOnly
               ? undefined
               : (e) => {
                   const b = e.currentTarget.getBoundingClientRect(),
@@ -483,38 +496,75 @@ export function FuelPlotEditor({
           axis limits have not changed.
         </p>
       )}
-      {!straight && !compact && coordinateFields}
-      {data.independentExtrapolation && (
-        <div className="organic-field">
-          <label htmlFor={uid + "-extension"}>
-            Your extrapolated line end x ({data.xUnit})
-          </label>
-          <input
-            id={uid + "-extension"}
-            inputMode="decimal"
-            disabled={disabled}
-            value={inputValues.extensionX}
-            onChange={(e) => onChange({ extensionX: e.target.value })}
-          />
-          <p>
-            Choose where to extend your fitted line. Its dashed extension
-            appears only after you enter an endpoint outside the observed x
-            range.
-          </p>
-        </div>
+      {reviewOnly && (
+        <>
+          <dl className="construction-review-values">
+            {data.points.map((_, i) => (
+              <div key={i}>
+                <dt>Observation {i + 1}</dt>
+                <dd>
+                  x: {board["p" + i + "x"] || "blank"}; y:{" "}
+                  {board["p" + i + "y"] || "blank"}
+                </dd>
+              </div>
+            ))}
+            {data.points.map(([x], i) =>
+              straight && i !== 0 && i !== data.points.length - 1 ? null : (
+                <div key={"c" + i}>
+                  <dt>Fit height at x={x}</dt>
+                  <dd>{board["c" + i] || "blank"}</dd>
+                </div>
+              ),
+            )}
+            <div>
+              <dt>Separate estimate at x={data.targetX}</dt>
+              <dd>{board.estimate || "blank"}</dd>
+            </div>
+            {data.independentExtrapolation && (
+              <div>
+                <dt>Extension endpoint x</dt>
+                <dd>{board.extensionX || "blank"}</dd>
+              </div>
+            )}
+          </dl>
+        </>
       )}
-      <div className="organic-field">
-        <label htmlFor={uid + "-estimate"}>
-          Your proposed estimate at x={data.targetX} ({data.yUnit})
-        </label>
-        <input
-          id={uid + "-estimate"}
-          inputMode="decimal"
-          disabled={disabled}
-          value={inputValues.estimate}
-          onChange={(e) => onChange({ estimate: e.target.value })}
-        />
-      </div>
+      {!reviewOnly && (
+        <>
+          {!straight && !compact && coordinateFields}
+          {data.independentExtrapolation && (
+            <div className="organic-field">
+              <label htmlFor={uid + "-extension"}>
+                Your extrapolated line end x ({data.xUnit})
+              </label>
+              <input
+                id={uid + "-extension"}
+                inputMode="decimal"
+                disabled={disabled}
+                value={inputValues.extensionX}
+                onChange={(e) => onChange({ extensionX: e.target.value })}
+              />
+              <p>
+                Choose where to extend your fitted line. Its dashed extension
+                appears only after you enter an endpoint outside the observed x
+                range.
+              </p>
+            </div>
+          )}
+          <div className="organic-field">
+            <label htmlFor={uid + "-estimate"}>
+              Your proposed estimate at x={data.targetX} ({data.yUnit})
+            </label>
+            <input
+              id={uid + "-estimate"}
+              inputMode="decimal"
+              disabled={disabled}
+              value={inputValues.estimate}
+              onChange={(e) => onChange({ estimate: e.target.value })}
+            />
+          </div>
+        </>
+      )}
     </section>
   );
 }

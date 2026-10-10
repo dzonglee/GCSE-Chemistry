@@ -12,6 +12,7 @@ export function FuelDrawingInput({
   disabled = false,
   compact = false,
   contextLabel,
+  reviewOnly = false,
 }: {
   value: string;
   onChange: (raw: string) => void;
@@ -19,8 +20,38 @@ export function FuelDrawingInput({
   disabled?: boolean;
   compact?: boolean;
   contextLabel?: string;
+  reviewOnly?: boolean;
 }) {
   const b = readFuelDrawing(value, drawing.data);
+  if (reviewOnly)
+    return (
+      <section
+        className="fuel-drawing-input"
+        aria-label={`${contextLabel ?? "Saved response"}: graph construction`}
+      >
+        {b ? (
+          <FuelPlotEditor
+            data={drawing.data}
+            board={b}
+            onChange={() => {}}
+            disabled
+            reviewOnly
+            contextLabel={contextLabel}
+          />
+        ) : (
+          <>
+            <p role="status">
+              The saved graph cannot be displayed in the current format. Its
+              original response is retained.
+            </p>
+          </>
+        )}
+        <details>
+          <summary>Original saved response</summary>
+          <pre>{value || "Left unanswered"}</pre>
+        </details>
+      </section>
+    );
   const temperature = drawing.data.context === "temperature";
   const plotName = temperature ? "temperature graph" : "fuel plot";
   if (!b)

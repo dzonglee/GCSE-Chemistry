@@ -15,6 +15,7 @@ export function PolymerisationDrawingInput({
   disabled = false,
   compact = false,
   contextLabel,
+  reviewOnly = false,
 }: {
   value: string;
   onChange: (value: string) => void;
@@ -22,10 +23,83 @@ export function PolymerisationDrawingInput({
   disabled?: boolean;
   compact?: boolean;
   contextLabel?: string;
+  reviewOnly?: boolean;
 }) {
   const id = useId(),
     saved = value ? readPolymerisationDrawing(value) : null,
     b = saved ?? blankPolymerisationDrawing();
+  if (reviewOnly)
+    return (
+      <section
+        className="polymerisation-drawing"
+        aria-label={`${contextLabel ?? "Saved response"}: polymer construction`}
+      >
+        {value && !saved ? (
+          <p role="status">
+            The original saved structure cannot be displayed. Its raw response
+            is retained.
+          </p>
+        ) : (
+          <>
+            <PolymerisationDisplayed
+              groups={boardGroups(b)}
+              {...b}
+              label={`${contextLabel ?? "Saved response"}: displayed polymerisation construction`}
+            />
+            <dl className="construction-review-values">
+              {[0, 1, 2, 3].map((i) => (
+                <div key={i}>
+                  <dt>
+                    Carbon {i < 2 ? 1 : 2}: {i % 2 === 0 ? "above" : "below"}{" "}
+                    attachment
+                  </dt>
+                  <dd>
+                    {b["s" + i] === "none" ? "Empty attachment" : b["s" + i]}
+                  </dd>
+                </div>
+              ))}
+              <div>
+                <dt>Joining bond</dt>
+                <dd>
+                  {b.bond === "0"
+                    ? "Absent"
+                    : b.bond === "1"
+                      ? "Single C–C"
+                      : "Double C=C"}
+                </dd>
+              </div>
+              <div>
+                <dt>Continuation bonds</dt>
+                <dd>
+                  Left: {b.left === "1" ? "present" : "absent"}; right:{" "}
+                  {b.right === "1" ? "present" : "absent"}
+                </dd>
+              </div>
+              <div>
+                <dt>Brackets</dt>
+                <dd>{b.brackets === "1" ? "Present" : "Absent"}</dd>
+              </div>
+              <div>
+                <dt>Repeat-count notation</dt>
+                <dd>
+                  {b.countMark === "none"
+                    ? "Absent"
+                    : b.countMark === "n"
+                      ? "Lower-case n outside"
+                      : b.countMark === "N"
+                        ? "Upper-case N outside"
+                        : "n inside brackets"}
+                </dd>
+              </div>
+            </dl>
+          </>
+        )}
+        <details>
+          <summary>Original saved response</summary>
+          <pre>{value || "Left unanswered"}</pre>
+        </details>
+      </section>
+    );
   if (value && !saved)
     return (
       <section className="polymerisation-drawing">

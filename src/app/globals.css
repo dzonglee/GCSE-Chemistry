@@ -5376,3 +5376,33 @@ progress {
     max-height: 420px;
   }
 }
+
+/* Whole-paper construction review: retained raw text stays readable. */
+.graph-axis-caption {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.paper-retained-response + .fuel-drawing-input pre,
+.paper-worked-construction .fuel-drawing-input pre,
+.result-body .polymerisation-drawing pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+.construction-review-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
+  gap: 8px 16px;
+  margin: 12px 0;
+}
+.construction-review-values div {
+  min-width: 0;
+}
+.construction-review-values dt {
+  font-size: 14px;
+  font-weight: 600;
+}
+.construction-review-values dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
