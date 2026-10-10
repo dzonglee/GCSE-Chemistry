@@ -174,7 +174,7 @@ test("practice exposes purposeful support, error recovery, nuclear notation and 
   await page.getByLabel("Electrons", { exact: true }).fill("18");
   await page.getByRole("button", { name: "Check answer", exact: true }).click();
   await expect(page.locator(".question-panel .feedback")).toContainText(
-    "Revisit neutrons",
+    "Revisit Neutrons.",
   );
   await answer(page, journey.practice[4]);
   await page.getByRole("button", { name: "Check answer", exact: true }).click();
