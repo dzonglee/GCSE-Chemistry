@@ -2936,11 +2936,12 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Iron air/water condition experiment design/results; barriers/Al oxide; zinc galvanising/sacrificial relative reactivity. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseSourceReview": "Actual specification printed85, curriculum concept, native rust/protection records and exact rust-design review reread. All39 Materials practice/26 check/18 delayed response definitions personally read. Specimen Q03 diagram printed8 and paired scheme10 personally reinspected. Full experiment descriptions distinguish positive wet-air comparison, dry air, removed/maintained oxygen exclusion, fair controls, repeated observations and conditional conclusions. Grease/electroplating named in teaching; no claim of dedicated written retrieval for every barrier."
   },
   {
     "section": "4.10.3.2",
@@ -2949,11 +2950,12 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Seven specified alloys/compositions/properties, carats24/18, recall uses and evaluate unfamiliar alloys. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseSourceReview": "Actual specification printed86, exact alloy-use review, composition/layer native records and all39 practice/26 check/18 delayed Materials responses personally read. Actual2020F2Q05.1–2 image and paired scheme13 personally reinspected: open brass-use recall accepts any correct use. Seven specified alloy uses have short generated practice/check/delayed answers; carats/compositions, properties and unfamiliar alloy decisions retained. No claim of universal alloy performance."
   },
   {
     "section": "4.10.3.3",
@@ -2962,11 +2964,12 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Soda-lime/borosilicate ingredients/temp, wetclay furnace, LD/HD ethene manufacturing conditions, thermosoftening/setting structure, matrix/reinforcement, retrieve composite examples, quantitative property/use selection. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseSourceReview": "Actual specification printed87, exact composite-example review, full curriculum concept and native polymer/manufacture/composite/selection records reread; all39 practice/26 check/18 delayed Materials responses personally read. Actual2020F2Q06.2 image and paired scheme14 personally reinspected: furnace/shaping recognition, polymer crosslink explanations. Named glass/clay recipes mix teaching/native recognition; full LD/HD and thermal explanations, generated composite examples and quantitative constrained choices represented. Composite example recall demand comes from specification, not ceramic distractor."
   },
   {
     "section": "4.10.4.1",

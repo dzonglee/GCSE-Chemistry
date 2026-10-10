@@ -1,0 +1,15 @@
+# Materials: response-clause follow-through
+
+Reviewed 10 October 2026 against AQA8462 sections4.10.3.1–3, printed85–87. These are Separate Chemistry only, both tiers. This review adds no lesson tasks and claims no new browser run.
+
+All39 current practice,26 independent-check and18 delayed-review response definitions were personally read, including full prompts, answers, references, rubrics, numerical constraints and supplied diagrams. Large exposure-alias lists were omitted from this response inspection; their preservation and behaviour remain evidenced by the existing individual QA reviews. The current curriculum concept and native materials records were read directly.
+
+Corrosion includes meaningful reactant/protection proposals, full six-result comparison and written experimental descriptions. Positive wet-air evidence, genuinely dry air, removal and maintained exclusion of oxygen, matched nails/time/temperature, repeats and paired conclusions are explicit. Oil over untreated water is insufficient. Grease, paint and electroplating are taught; this is not a claim of dedicated written retrieval for every named barrier. Aluminium oxide and sacrificial protection through relative reactivity, contact and consumption have actual responses.
+
+All seven specified alloys have short generated-use practice, independent and delayed questions with scientifically valid alternatives eligible for manual review. Carat fractions, compositions, qualitative layer distortion and unfamiliar quantitative selection remain. Actual2020 Foundation Paper2 Q05.1–2 and paired scheme13 were visually reinspected; brass use is an open recall question, and any correct use is allowed.
+
+Glass/clay recipes use teaching and native/choice responses, distinguished from full written structural explanation. LD/HD same-ethene/different-conditions, packing/density, separate-chain attractions versus covalent crosslinks, generated composite examples with matrix/reinforcement roles, and every supplied material-selection constraint have concrete responses. Actual2020 Foundation Paper2 Q06.2 and paired scheme14 were visually reinspected: wet-clay shaping/furnace heating and polymer structural demands. A composite option in the ceramic item is a distractor, not evidence of examined free composite recall. That recall requirement comes directly from the specification.
+
+The rust specimen Q03 diagram8 and paired scheme10 were visually reinspected. The question is Chemistry2H; an erroneous scheme running header is not treated as a different examination. Unprinted boiling/drying-agent preparation is not attributed to that diagram.
+
+Sources, individual implementation decisions, preservation and accepted lesson-level checks remain in [rust design](rust-experiment-design-review.md), [alloy uses](alloy-use-recall-review.md) and [composite examples](composite-example-recall-review.md). No whole-course readiness, examiner marking or supervised practical competence certification follows from this documentation update. Shared UI, remaining response/representation gates, external potable-water integration and final unified regression remain open.
