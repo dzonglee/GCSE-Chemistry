@@ -6,7 +6,12 @@ import {
   type PolymerisationMode,
 } from "../src/lib/polymerisation";
 import { expectedPolymerisationBoard } from "../src/lib/polymerisation-board";
-import { STORAGE_KEY, REVIEW_DELAY } from "../src/lib/progress";
+import {
+  STORAGE_KEY,
+  REVIEW_DELAY,
+  emptyProgress,
+  emptyWork,
+} from "../src/lib/progress";
 import { captureCondensationNative } from "./condensation-native-capture";
 const j = {
   ...fullJourney,
@@ -44,6 +49,24 @@ async function fill(root: Locator, mode: PolymerisationMode, id: string) {
       await el.selectOption(v);
     else await el.fill(v);
   }
+}
+async function captureProse(page: Page, path: string) {
+  await page.evaluate(async () => {
+    (document.activeElement as HTMLElement)?.blur();
+    scrollTo(0, 0);
+    await new Promise<void>((resolve) =>
+      requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+    );
+  });
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await captureCondensationNative(page, () =>
+    page.screenshot({ path, fullPage: true, scale: "css" }).then(() => {}),
+  );
 }
 async function answer(page: Page, q: (typeof j.practice)[number]) {
   if (q.polymerisationDrawing) {
@@ -228,6 +251,12 @@ test("all41 practice tasks, blank independent drawings and teacher references re
           { key: STORAGE_KEY, id: q.id },
         ),
       ).toBe(false);
+    }
+    if (["pol-v1-p-mass", "pol-v1-p-molecules"].includes(q.id)) {
+      await captureProse(
+        page,
+        info.outputPath(`${info.project.name}-${q.id}.png`),
+      );
     }
     if (q.polymerisationDrawing || q.polyesterDrawing) {
       await expect(page.locator(".polymerisation-review")).toBeVisible();
@@ -597,5 +626,62 @@ test("unavailable WebGL preserves readable chemistry and the opening control fit
         scale: "css",
       })
       .then(() => {}),
+  );
+});
+
+test("historical disconnected-molecule answer preserves selected label and untouched raw history", async ({
+  page,
+}, info) => {
+  if (info.project.name === "mobile")
+    await page.setViewportSize({ width: 320, height: 720 });
+  const q = fullJourney.practice.find((q) => q.id === "pol-v1-p-molecules")!;
+  const raw = "All200 separate molecules remain disconnected";
+  const original = {
+    answer: raw,
+    correct: false,
+    helped: true,
+    fresh: false,
+    at: Date.now() - 1000,
+  };
+  const data = emptyProgress();
+  data.preferences.tier = "higher";
+  data.work.polymers = {
+    ...emptyWork(),
+    section: "practice",
+    learning: {
+      version: 1,
+      stage: "practice",
+      index: fullJourney.practice.indexOf(q),
+    },
+    drafts: { [q.id]: raw },
+    attempts: { [q.id]: [original] },
+  };
+  await page.evaluate(
+    ({ key, data }) => localStorage.setItem(key, JSON.stringify(data)),
+    { key: STORAGE_KEY, data },
+  );
+  await page.goto(route);
+  const selected = page.getByRole("radio", {
+    name: "All 200 separate molecules remain disconnected",
+    exact: true,
+  });
+  await expect(selected).toBeChecked();
+  await expect(page.locator(".sample-task-answer [role=status]")).toContainText(
+    "joins them into one chain",
+  );
+  await saved(page);
+  await page.reload();
+  await expect(selected).toBeChecked();
+  const stored = await page.evaluate(
+    ({ key, id }) => {
+      const w = JSON.parse(localStorage.getItem(key)!).work.polymers;
+      return { draft: w.drafts[id], attempts: w.attempts[id] };
+    },
+    { key: STORAGE_KEY, id: q.id },
+  );
+  expect(stored).toEqual({ draft: raw, attempts: [original] });
+  await captureProse(
+    page,
+    info.outputPath(`${info.project.name}-legacy-molecules.png`),
   );
 });

@@ -1,0 +1,51 @@
+{
+  "source": "src/content/journeys/polymerisation.ts",
+  "beforeSha256": "1e9ded9377a553273b772bcad62b2cebda3880b6581045e0d9f9ec0667f7ec86",
+  "nonSpaceBytesUnchangedBeforeExplicitAlias": true,
+  "explicitEdits": [
+    {
+      "before": "mass28",
+      "after": "mass 28",
+      "occurrences": 2
+    },
+    {
+      "before": "that12.0g",
+      "after": "that 12.0 g",
+      "occurrences": 1
+    },
+    {
+      "before": "all12.0g",
+      "after": "all 12.0 g",
+      "occurrences": 1
+    },
+    {
+      "before": "contains18",
+      "after": "contains 18",
+      "occurrences": 1
+    },
+    {
+      "before": "joins200",
+      "after": "joins 200",
+      "occurrences": 1
+    },
+    {
+      "before": "All200",
+      "after": "All 200",
+      "occurrences": 1
+    },
+    {
+      "before": "mass42",
+      "after": "mass 42",
+      "occurrences": 1
+    },
+    {
+      "before": "contains14",
+      "after": "contains 14",
+      "occurrences": 1
+    }
+  ],
+  "explicitOptionAlias": {
+    "All200 separate molecules remain disconnected": "All 200 separate molecules remain disconnected"
+  },
+  "afterSha256": "f3839e02f443ed4e532657e1ad6ec4ddb3c6d1233c57dad46349ae3bea83224d"
+}

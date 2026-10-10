@@ -266,3 +266,17 @@ test("every practice task has reviewed recovery, unique group placement and cold
     all.find((q) => q.id === "pol-v1-p-ethene")!.exposureAliases,
   ).toContain("polymers-0");
 });
+
+test("historical disconnected-molecule choice retains its wrong marking and feedback", () => {
+  const q = j.practice.find((q) => q.id === "pol-v1-p-molecules")!;
+  expect(mark(q, "All200 separate molecules remain disconnected")).toEqual(
+    mark(q, "All 200 separate molecules remain disconnected"),
+  );
+  expect(mark(q, "All200 separate molecules remain disconnected").correct).toBe(
+    false,
+  );
+  expect(
+    mark(q, "All200 separate molecules remain disconnected").feedback,
+  ).toContain("joins them into one chain");
+  expect(mark(q, q.answer).correct).toBe(true);
+});

@@ -321,7 +321,7 @@ export const refresher: Task[] = [
   n(
     "r-mass",
     "Multiply a repeat contribution",
-    "A supplied C2H4 repeat contribution has relative mass28. What is the contribution from three such units, ignoring omitted ends?",
+    "A supplied C2H4 repeat contribution has relative mass 28. What is the contribution from three such units, ignoring omitted ends?",
     "84",
     "relative-mass contribution",
     "3 × 28 = 84; this is a stated repeat contribution, not an exact whole-chain Mr.",
@@ -699,7 +699,7 @@ export const practice: Task[] = [
   n(
     "p-Mr",
     "Calculate a contribution",
-    "A supplied ethene-derived contribution has relative mass28. What is the contribution from eight units, excluding omitted ends?",
+    "A supplied ethene-derived contribution has relative mass 28. What is the contribution from eight units, excluding omitted ends?",
     "224",
     "relative-mass contribution",
     "8 × 28 = 224. A precise full-chain Mr would require its actual end groups.",
@@ -708,16 +708,16 @@ export const practice: Task[] = [
   n(
     "p-mass",
     "Conserve an addition feed",
-    "An original closed-process report states that12.0g of monomer is entirely incorporated into its addition polymer, with no other product and no material loss. What mass of polymer is produced?",
+    "An original closed-process report states that 12.0 g of monomer is entirely incorporated into its addition polymer, with no other product and no material loss. What mass of polymer is produced?",
     "12",
     "g",
-    "Mass is conserved: all12.0g is incorporated under the explicitly stated conditions.",
+    "Mass is conserved: all 12.0 g is incorporated under the explicitly stated conditions.",
     "Use the stated complete conversion and absence of losses.",
   ),
   n(
     "p-units",
     "Count units from the backbone",
-    "An original crop contains18 BACKBONE carbons from a two-backbone-carbon alkene monomer. How many monomer-derived contributions are shown?",
+    "An original crop contains 18 BACKBONE carbons from a two-backbone-carbon alkene monomer. How many monomer-derived contributions are shown?",
     "9",
     "contributions",
     "18 ÷ 2 = 9. Side-group carbons would not belong in this stated backbone count.",
@@ -726,10 +726,10 @@ export const practice: Task[] = [
   c(
     "p-molecules",
     "Distinguish atom and molecule counts",
-    "A supplied idealised report joins200 separate alkene molecules into ONE chain, with no other product. Which counts are conserved?",
+    "A supplied idealised report joins 200 separate alkene molecules into ONE chain, with no other product. Which counts are conserved?",
     "Atoms and total mass; the number of separate molecules changes",
     {
-      "All200 separate molecules remain disconnected":
+      "All 200 separate molecules remain disconnected":
         "The stated process joins them into one chain.",
       "Carbon atoms are destroyed to reduce molecule count":
         "Joining changes connectivity, not atom inventory.",
@@ -1019,7 +1019,7 @@ export const checkForms: Task[][] = [
     n(
       "b-Mr",
       "Independent repeat contribution",
-      "A supplied repeat contribution has relative mass42. What is the contribution from six units, ignoring omitted ends?",
+      "A supplied repeat contribution has relative mass 42. What is the contribution from six units, ignoring omitted ends?",
       "252",
       "relative-mass contribution",
       "6 × 42 = 252. End groups are not included.",
@@ -1028,7 +1028,7 @@ export const checkForms: Task[][] = [
     n(
       "b-units",
       "Independent backbone-to-unit conversion",
-      "A supplied alkene-derived crop contains14 backbone C atoms, with two backbone C per monomer-derived contribution. How many contributions are shown?",
+      "A supplied alkene-derived crop contains 14 backbone C atoms, with two backbone C per monomer-derived contribution. How many contributions are shown?",
       "7",
       "contributions",
       "14 ÷ 2 = 7. Side groups do not alter the stated two-carbon backbone contribution.",
@@ -1412,3 +1412,8 @@ extendCondensationWriting(
   polymerisationExposureFamilies,
   polymerisationRecovery,
 );
+
+practice.find((q) => q.id === "pol-v1-p-molecules")!.optionAliases = {
+  "All200 separate molecules remain disconnected":
+    "All 200 separate molecules remain disconnected",
+};
