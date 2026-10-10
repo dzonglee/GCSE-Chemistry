@@ -83,7 +83,7 @@ import { BondModelDiagram } from "./BondModelDiagram";
 import { Nuclide } from "./Nuclide";
 import { ShellDiagram } from "./ShellDiagram";
 import { AtomicModelDiagram } from "./AtomicModelDiagram";
-import { roundingLabel } from "@/lib/marking";
+import { roundingLabel, standardFormInstruction } from "@/lib/marking";
 import { readArrangement } from "@/lib/shells";
 import { FrequencyDisplay } from "./FrequencyDisplay";
 import { NanoSizeRangeDisplay } from "./NanoSizeRangeDisplay";
@@ -1104,18 +1104,24 @@ function ResponseInput({
   ) : (
     <>
       {question.notation && <Nuclide notation={question.notation} />}
-      <label className="numeric-label">
+      <label
+        className={`numeric-label${question.standardForm === "e" ? " standard-form-answer" : ""}`}
+      >
         Your answer
         <div className="numeric-input">
           <input
             aria-label="Your answer"
             autoCapitalize={
-              question.chemicalFormula || question.electronEquation
+              question.chemicalFormula ||
+              question.electronEquation ||
+              question.standardForm
                 ? "off"
                 : undefined
             }
             spellCheck={
-              question.chemicalFormula || question.electronEquation
+              question.chemicalFormula ||
+              question.electronEquation ||
+              question.standardForm
                 ? false
                 : undefined
             }
@@ -1134,9 +1140,11 @@ function ResponseInput({
               : "Type charged species and one arrow, using -> or →. Use e- or e− for electrons; Cu2+ and Cu^2+ are accepted charge styles. Keep element capitals. Optional state symbols must be appropriate."
             : question.chemicalFormula
               ? "Use correct capitals and parentheses for repeated whole ions. Type digits such as Ca(NO3)2; subscript digits are also accepted."
-              : question.rounding
-                ? `Write a decimal number to ${roundingLabel(question.rounding)}. Keep any required trailing zero.`
-                : "Enter a number only. Fractions and scientific notation are accepted."}
+              : question.standardForm === "e"
+                ? standardFormInstruction
+                : question.rounding
+                  ? `Write a decimal number to ${roundingLabel(question.rounding)}. Keep any required trailing zero.`
+                  : "Enter a number only. Fractions and scientific notation are accepted."}
         </small>
       </label>
     </>

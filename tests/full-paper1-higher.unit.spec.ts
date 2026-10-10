@@ -41,7 +41,7 @@ test("Higher full paper has independent reserved questions, appropriate qualific
   expect(ao[2]).toBeGreaterThanOrEqual(17);
   expect(ao[2]).toBeLessThanOrEqual(23);
   const native = lessons.flatMap((l) => tasks(l.journey!));
-  expect(native).toHaveLength(5911);
+  expect(native).toHaveLength(5916);
   for (const p of paper.parts) {
     expect(native.some((q) => q.id === p.question.id)).toBe(false);
     expect(questionById(p.question.id)).toBe(p.question);

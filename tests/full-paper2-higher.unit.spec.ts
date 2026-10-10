@@ -39,7 +39,7 @@ test("Higher Paper 2 has complete, separate Higher allocation and reserved quest
     paper.parts.filter((p) => p.practical).reduce((s, p) => s + p.marks, 0),
   ).toBe(27);
   const native = lessons.flatMap((l) => tasks(l.journey!));
-  expect(native).toHaveLength(5911);
+  expect(native).toHaveLength(5916);
   for (const p of paper.parts) {
     expect(native.some((q) => q.id === p.question.id)).toBe(false);
     expect(questionById(p.question.id)).toBe(p.question);

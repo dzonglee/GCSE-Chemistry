@@ -67,6 +67,7 @@ export interface Question {
   unit?: string;
   inputMode?: "text" | "decimal" | "numeric";
   tolerance?: number;
+  standardForm?: "e";
   acceptedRange?: { min: number; max: number; exclusive: boolean };
   rounding?: { kind: "decimal-places" | "significant-figures"; digits: number };
   misconceptions?: Record<string, string>;

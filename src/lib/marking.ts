@@ -44,6 +44,8 @@ import { readArrangement } from "./shells";
 import { normaliseFormula } from "./ionic-formulae";
 export const roundingLabel = (rounding: NonNullable<Question["rounding"]>) =>
   `${rounding.digits} ${rounding.kind === "decimal-places" ? "decimal place" : "significant figure"}${rounding.digits === 1 ? "" : "s"}`;
+export const standardFormInstruction =
+  "Use e notation with a first number at least 1 and less than 10, followed by a whole-number exponent; for example, 6.02e23.";
 export function readNumber(raw: string): number | null {
   const text = raw.trim().replace(/−/g, "-");
   const numeric = /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/;
@@ -407,7 +409,24 @@ export function mark(
         : decimal.replace(/[+\-.]/g, "").replace(/^0+/, "").length;
     precisionCorrect = plain && digits === q.rounding.digits;
   }
-  const correct = numericCorrect && precisionCorrect;
+  const standardMatch =
+    q.standardForm === "e"
+      ? /^([+-]?(?:\d+(?:\.\d*)?|\.\d+))[eE][+-]?\d+$/.exec(
+          raw.trim().replace(/−/g, "-"),
+        )
+      : null;
+  const standardFormCorrect =
+    q.standardForm !== "e" ||
+    (standardMatch !== null &&
+      Math.abs(Number(standardMatch[1])) >= 1 &&
+      Math.abs(Number(standardMatch[1])) < 10);
+  const correct = numericCorrect && precisionCorrect && standardFormCorrect;
+  if (numericCorrect && !standardFormCorrect)
+    return {
+      correct: false,
+      empty: false,
+      feedback: `Your numerical value is right. ${standardFormInstruction}`,
+    };
   if (numericCorrect && !precisionCorrect)
     return {
       correct: false,
@@ -425,7 +444,9 @@ export function mark(
       (q.options
         ? "That choice does not match the chemistry. " + q.hint
         : value === null
-          ? "Enter a number only, such as 0.5, 1/2 or 5e-1. The unit is shown beside the input."
+          ? q.standardForm === "e"
+            ? standardFormInstruction
+            : "Enter a number only, such as 0.5, 1/2 or 5e-1. The unit is shown beside the input."
           : "Check the quantities and their units. " + q.hint));
   return {
     correct,

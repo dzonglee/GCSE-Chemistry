@@ -1,0 +1,12 @@
+{
+  "id": "mo-v1-p-total-atoms",
+  "prompt": "Find total number of atoms in 0.5 mol H₂O molecules. Use Nₐ=6.02×10²³ mol⁻¹. Enter standard form using e notation, such as 6.02e23.",
+  "answer": "9.03e+23",
+  "unit": "atoms",
+  "explanation": ".5 mol molecules contains 1.5 mol total atoms:1.5×6.02×10²³=9.03×10²³.",
+  "hint": "There are three atoms per H₂O molecule.",
+  "purpose": "Count all atoms in molecules",
+  "misconceptions": {},
+  "tolerance": 903000000000,
+  "title": "Count all atoms in molecules"
+}

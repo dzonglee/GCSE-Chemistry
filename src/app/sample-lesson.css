@@ -8982,6 +8982,14 @@ body:has(.sample-lesson) .topic-number {
 }
 
 /* Complete state-symbol equations need room for the whole submitted reaction. */
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="moles-and-reacting-masses"]
+    .sample-task-panel:has(.standard-form-answer)
+    > h2 {
+    margin-bottom: 0;
+  }
+}
+
 .sample-lesson[data-lesson="states-of-matter"] .state-symbol-answer textarea {
   height: 104px;
   min-height: 104px;

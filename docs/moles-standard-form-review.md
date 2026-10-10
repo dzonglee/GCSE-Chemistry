@@ -1,0 +1,23 @@
+# Require the requested standard form in the moles lesson
+
+The single existing task `mo-v1-p-total-atoms` asks for normalized standard form using e notation. Previously the generic numeric comparison accepted both `90.3e22` and an ordinary integer for the answer `9.03e23`. The marker now distinguishes the correct numerical value from the requested presentation. Equivalent values in the wrong form are retained, with feedback acknowledging their value and explaining normalization; only a correct value with a coefficient of magnitude at least1 and below10 and an integer exponent is correct. Lowercase/uppercase E, explicit signs and leading exponent zeros are accepted. No extra significant-figure condition is imposed.
+
+This question alone adds `standardForm: "e"`, explicit text input mode and a link to the existing normalization refresher `mo-v1-r-standard`. Its ID, version, single-box answer, prompt, tolerance and all preceding definitions remain. A canonical comparison against freshly verified published9eabb2a preserves all5916 tasks:5915 other records are exact, and this question is exact after removing only those three properties. Existing numerical fractions, neighbouring e-notation-only questions and paired coefficient/power activities retain their rules. Historical attempts, including formerly correct equivalent notation, remain raw history rather than being rewritten. Practice does not award fresh independent credit.
+
+## Actual teaching and assessment materials
+
+[AQA8462 mathematical requirements](https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF), MS1b, and the actual GCSE Maths standard-form and calculator-standard-form implementations were read. Maths distinguishes coefficient and power and explains the place-value scaling; this correction preserves the Chemistry question's original single-box format while enforcing its explicit instruction and offering the existing conceptual recovery.
+
+Freshly downloaded [2018 Higher Paper2](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-84622H-QP-JUN18.PDF) Q10.2 and its [scheme](https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2018/june/AQA-84622H-W-MS-JUN18.PDF) were personally inspected as rendered printedQP31/MS23. This is an energy-resource item, not a moles question: its scheme gives two marks for6.63×10⁴ but only one for an appropriately rounded equivalent ordinary number. It supports distinguishing value from explicitly requested form; this practice marker does not pretend to award that exam item's partial marks.
+
+QP SHA256 `3d2f9e259a9c5f65520a7d269a63ea5f0bdbd1dfb6bb31827e9db8a58025fe26`; MS `bfbecf6a6c7c53347d4f655a082e79644253e08ea31d8f470bfaffda8f0118c0`.
+
+## Validation and reviewed samples
+
+Types and affected lint passed. The expanded seven-file unit run passed43 cases; the subsequent four normalization/history cases also passed after adding the explicit legacy-attempt fixture. Four full-paper unit inventory assertions were corrected5911→5916 to reflect the five already published state-symbol tasks; paper marks and independent question definitions were not relaxed.
+
+Production build `AW4_gzM1iEIdEvjAChinE` and all30 relevant browser cases passed, actualexit0, in2.8minutes. These cover the new question on320/390/1280 in both profiles, wrong raw answers through reload and recovery, incomplete notation, signed uppercase E, honest feedback, accessibility and no overflow, plus existing native molecule/export/fallback, paired standard form, reserved sealed checks and seven-day review. First two runs passed28 existing cases but failed the new320px opening at671.61px then667.61px. Scoped heading spacing corrected the actual layout; the44px and664px limits and full prompt remain unchanged. All2354 protected fingerprints verified after final owner closure; port3201 released.
+
+Four selected actual browser captures were personally inspected and explicitly sent: [320px opening](qa/moles-standard-form/desktop-320-representation-viewport.png), [full320px feedback](qa/moles-standard-form/desktop-320-representation.png), [desktop lesson](qa/moles-standard-form/desktop-1280-representation.png), [390px phone feedback](qa/moles-standard-form/mobile-390-representation.png). The deliberately wrong-form answer is retained in these samples. Original images and SHA256 manifest remain in the gallery; long images were resized by the inspection viewer.
+
+This closes this individual presentation defect. External potable-water integration, the remaining paper-reference spacing and final unified course regression remain open. It does not establish whole-course exam readiness.
