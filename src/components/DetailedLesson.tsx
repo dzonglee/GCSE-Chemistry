@@ -237,121 +237,12 @@ export function DetailedLesson({
         : stage === "guided"
           ? "Practise without the model →"
           : "Return to learning →";
-  const compactEquationForm =
-    lesson.slug === "energy-practical" &&
-    work.run?.ids.every((id) => id.startsWith("ep-v1-equation-"));
-  const compactResourceReview =
-    lesson.slug === "life-cycle-and-recycling" &&
-    work.run?.kind === "review" &&
-    work.run.ids.every((id) => id.startsWith("lca-v1-resource-"));
-  const compactCondensationReview =
-    mixedPolymer &&
-    work.run?.kind === "review" &&
-    work.run.ids.every((id) => id.startsWith("pol-cond-v1-"));
-  const compactYieldReview = lesson.slug === "yield-and-atom-economy";
-  const compactIonReview = [
-    "ion-tests",
-    "aqueous-electrolysis-products",
-    "natural-polymers",
-    "ph-scale-and-indicators",
-    "life-cycle-and-recycling",
-  ].includes(lesson.slug);
-  const minorAtmosphereRun = work.run?.ids.some((id) =>
-    id.startsWith("early-atmosphere-v1-minor-"),
-  );
-  const compactRecallRun = work.run?.ids.some(
-    (id) =>
-      id.startsWith("materials-v1-alloy-use-") ||
-      id.startsWith("materials-v1-rust-design-") ||
-      id.startsWith("materials-v1-composite-recall-") ||
-      id.startsWith("haber-v1-source-recall-"),
-  );
   const compactReview =
-    (compactRecallRun ||
-      minorAtmosphereRun ||
-      compactYieldReview ||
-      saltLesson ||
-      organicLesson ||
-      compactCondensationReview ||
-      compactIonReview ||
-      lesson.slug === "inside-an-atom" ||
-      lesson.slug === "balancing-equations" ||
-      lesson.slug === "transition-metals" ||
-      lesson.slug === "atomic-models" ||
-      compactResourceReview ||
-      compactEquationForm ||
-      [
-        "periodic-development",
-        "group-reactions",
-        "group-seven",
-        "group-zero",
-        "periodic-patterns",
-        "ionic-bonding",
-        "ionic-structures",
-        "states-of-matter",
-        "covalent-bonding",
-        "small-molecules-properties",
-        "structure-and-properties",
-        "carbon-structures",
-        "graphite",
-        "graphene",
-        "fullerenes",
-        "carbon-nanotubes",
-        "polymer-structures",
-        "particles-and-nanoparticles",
-        "conservation-of-mass",
-        "measurement-uncertainty",
-        "percentage-composition",
-        "changing-concentration",
-        "metal-reactivity",
-        "acids-and-neutralisation",
-        "electrolysis",
-      ].includes(lesson.slug)) &&
     section === "review" &&
     work.run?.kind === "review" &&
     work.run.submitted === undefined;
   const ReviewContainer = compactReview ? "details" : "section";
-  const reviewScheduleAfter =
-    compactReview &&
-    (compactRecallRun ||
-      minorAtmosphereRun ||
-      compactYieldReview ||
-      saltLesson ||
-      organicLesson ||
-      compactCondensationReview ||
-      compactIonReview ||
-      lesson.slug === "balancing-equations" ||
-      lesson.slug === "transition-metals" ||
-      lesson.slug === "atomic-models" ||
-      compactResourceReview ||
-      compactEquationForm ||
-      [
-        "periodic-development",
-        "group-reactions",
-        "group-seven",
-        "group-zero",
-        "periodic-patterns",
-        "ionic-bonding",
-        "ionic-structures",
-        "states-of-matter",
-        "covalent-bonding",
-        "small-molecules-properties",
-        "structure-and-properties",
-        "carbon-structures",
-        "graphite",
-        "graphene",
-        "fullerenes",
-        "carbon-nanotubes",
-        "polymer-structures",
-        "particles-and-nanoparticles",
-        "conservation-of-mass",
-        "measurement-uncertainty",
-        "percentage-composition",
-        "changing-concentration",
-        "metal-reactivity",
-        "acids-and-neutralisation",
-        "electrolysis",
-      ].includes(lesson.slug));
+  const reviewScheduleAfter = compactReview;
   const reviewSchedule = (
     <ReviewContainer className={compactReview ? "review-schedule" : "panel"}>
       {compactReview && <summary>About this delayed review</summary>}
@@ -530,52 +421,7 @@ export function DetailedLesson({
             work.run?.kind === "review") && (
             <AssessmentSession
               id={lesson.slug}
-              navigationAfterResponse={
-                compactRecallRun ||
-                minorAtmosphereRun ||
-                saltLesson ||
-                organicLesson ||
-                mixedPolymer ||
-                mixedNatural ||
-                lesson.slug === "ph-scale-and-indicators" ||
-                lesson.slug === "life-cycle-and-recycling" ||
-                lesson.slug === "yield-and-atom-economy" ||
-                lesson.slug === "aqueous-electrolysis-products" ||
-                lesson.slug === "ion-tests" ||
-                compactEquationForm ||
-                lesson.slug === "inside-an-atom" ||
-                lesson.slug === "balancing-equations" ||
-                lesson.slug === "transition-metals" ||
-                lesson.slug === "atomic-models" ||
-                [
-                  "periodic-development",
-                  "group-reactions",
-                  "group-seven",
-                  "group-zero",
-                  "periodic-patterns",
-                  "ionic-bonding",
-                  "ionic-structures",
-                  "states-of-matter",
-                  "covalent-bonding",
-                  "small-molecules-properties",
-                  "structure-and-properties",
-                  "carbon-structures",
-                  "graphite",
-                  "graphene",
-                  "fullerenes",
-                  "carbon-nanotubes",
-                  "polymer-structures",
-                  "particles-and-nanoparticles",
-                  "conservation-of-mass",
-                  "measurement-uncertainty",
-                  "percentage-composition",
-                  "changing-concentration",
-                  "metal-reactivity",
-                  "acids-and-neutralisation",
-                  "electrolysis",
-                  "ion-tests",
-                ].includes(lesson.slug)
-              }
+              navigationAfterResponse
               title={
                 section === "check"
                   ? "Check your understanding"
