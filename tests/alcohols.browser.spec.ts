@@ -145,7 +145,11 @@ async function answer(page: Page, q: (typeof journey.practice)[number]) {
       root.locator('[data-fit-extrapolation="your-proposal"]'),
     ).toBeVisible();
   } else if (q.rubric)
-    await page.getByLabel("Your explanation", { exact: true }).fill(q.answer);
+    await page
+      .getByLabel(q.shortWritten ? "Your answer" : "Your explanation", {
+        exact: true,
+      })
+      .fill(q.answer);
   else if (q.options)
     await page.getByRole("radio", { name: q.answer, exact: true }).check();
   else await page.getByLabel("Your answer", { exact: true }).fill(q.answer);
@@ -277,7 +281,7 @@ for (const [mode, index] of (
       ).toHaveValue("initial");
     },
   );
-test("all45 practice demands retain honest drawn and written self-review", async ({
+test("all48 practice demands retain honest drawn and written self-review", async ({
   page,
 }, info) => {
   test.setTimeout(180000);
@@ -294,7 +298,9 @@ test("all45 practice demands retain honest drawn and written self-review", async
             ? "Save and review graph"
             : q.organicDrawing
               ? "Save and review structure"
-              : "Save and review explanation"
+              : q.writtenEquations
+                ? "Save and review equations"
+                : "Save and review explanation"
           : "Check answer",
         exact: true,
       })
@@ -305,7 +311,9 @@ test("all45 practice demands retain honest drawn and written self-review", async
           ? "Compare your graph"
           : q.organicDrawing
             ? "Compare your structure"
-            : "Compare your explanation",
+            : q.writtenEquations
+              ? "Compare your equations"
+              : "Compare your explanation",
       );
     else
       await expect(
@@ -692,4 +700,166 @@ test("damaged saved structures and fuel graphs preserve original bytes until exp
       STORAGE_KEY,
     ),
   ).toBe("keep this original sibling");
+});
+
+test("whole alcohol equation retains incomplete writing and separate reference through reload and recovery", async ({
+  page,
+}, info) => {
+  await page.goto(route);
+  await page.getByRole("button", { name: "Practise", exact: true }).click();
+  await task(page, 47);
+  const field = page.getByLabel("Your answer", { exact: true });
+  await field.fill("C3H7OH + O2 -> CO2");
+  await page
+    .getByRole("button", { name: "Save and review equations", exact: true })
+    .click();
+  await expect(page.locator(".sample-task-answer .feedback")).toContainText(
+    "no automatic mark",
+  );
+  await saved(page);
+  await page.reload();
+  await expect(field).toHaveValue("C3H7OH + O2 -> CO2");
+  await page
+    .getByRole("button", { name: "Revisit the key idea", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Return to your task →", exact: true })
+    .click();
+  await expect(field).toHaveValue("C3H7OH + O2 -> CO2");
+  await capture(
+    page,
+    `docs/qa/alcohol-equations-final/${info.project.name}-retained-own-equation.png`,
+  );
+  await page
+    .getByRole("button", { name: "Save and review equations", exact: true })
+    .click();
+  await page.locator(".sample-reference summary").click();
+  await expect(page.locator(".sample-reference")).toContainText(
+    "2C₃H₇OH + 9O₂ → 6CO₂ + 8H₂O",
+  );
+  await capture(
+    page,
+    `docs/qa/alcohol-equations-final/${info.project.name}-separate-reference.png`,
+  );
+  await field.fill("C3H7OH + 4.5O2 -> 3CO2 + 4H2O");
+  await page
+    .getByRole("button", { name: "Save and review equations", exact: true })
+    .click();
+  await expect(page.locator(".sample-task-answer .feedback")).toContainText(
+    "no automatic mark",
+  );
+});
+test("whole alcohol equation reserved form hides answers and seven-day writing remains exposure-aware", async ({
+  page,
+}, info) => {
+  test.setTimeout(180000);
+  await page.goto(route);
+  await page.getByRole("button", { name: "Check", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Start understanding check →", exact: true })
+    .click();
+  for (const [fi, form] of journey.checkForms.entries()) {
+    if (fi)
+      await page
+        .getByRole("button", { name: "Try the next form", exact: true })
+        .click();
+    for (const [i, q] of form.entries()) {
+      if (i)
+        await page
+          .getByRole("button", { name: "Next question →", exact: true })
+          .click();
+      if (fi === 2 && i === 0) {
+        await page
+          .getByLabel("Your answer", { exact: true })
+          .fill("CH4O + O2 -> CO2");
+        await saved(page);
+        await page.reload();
+        await expect(
+          page.getByLabel("Your answer", { exact: true }),
+        ).toHaveValue("CH4O + O2 -> CO2");
+      } else await answer(page, q);
+      await expect(page.locator(".sample-reference")).toHaveCount(0);
+      await expect(
+        page.getByRole("region", { name: "Task model", exact: true }),
+      ).toHaveCount(0);
+      await page
+        .getByRole("button", { name: "Record answer", exact: true })
+        .click();
+      await expect(page.locator(".results-banner")).toHaveCount(0);
+    }
+    await page
+      .getByRole("button", { name: "Submit whole set", exact: true })
+      .click();
+    await saved(page);
+    if (fi === 2) {
+      await expect(
+        page.getByRole("heading", {
+          name: "Responses ready for self-review",
+          exact: true,
+        }),
+      ).toBeVisible();
+      expect(
+        await page.evaluate(
+          (key) =>
+            JSON.parse(localStorage.getItem(key)!).work["alcohols-and-acids"]
+              .run.responses["alc-write-v1-ca-methanol"].fresh,
+          STORAGE_KEY,
+        ),
+      ).toBe(false);
+      await page.locator(".result-row > summary").first().click();
+      await expect(page.locator(".result-row").first()).toContainText(
+        "CH4O + O2 -> CO2",
+      );
+      await capture(
+        page,
+        `docs/qa/alcohol-equations-final/${info.project.name}-reserved-own-equation.png`,
+      );
+    }
+  }
+  await page.getByRole("button", { name: "Review", exact: true }).click();
+  await expect(
+    page.getByRole("button", { name: "Start review →", exact: true }),
+  ).toHaveCount(0);
+  for (const [fi, form] of journey.reviewForms.entries()) {
+    await saved(page);
+    await page.evaluate(
+      ({ key, delay }) => {
+        const p = JSON.parse(localStorage.getItem(key)!);
+        const w = p.work["alcohols-and-acids"];
+        for (const r of w.history) r.submitted = Date.now() - delay - 1000;
+        if (w.run?.submitted) w.run.submitted = Date.now() - delay - 1000;
+        localStorage.setItem(key, JSON.stringify(p));
+      },
+      { key: STORAGE_KEY, delay: REVIEW_DELAY },
+    );
+    await page.reload();
+    await page.getByRole("button", { name: "Review", exact: true }).click();
+    await page
+      .getByRole("button", {
+        name: fi === 0 ? "Start review →" : "Try the next form",
+        exact: true,
+      })
+      .click();
+    for (const [i, q] of form.entries()) {
+      if (i)
+        await page
+          .getByRole("button", { name: "Next question →", exact: true })
+          .click();
+      await answer(page, q);
+      await page
+        .getByRole("button", { name: "Record answer", exact: true })
+        .click();
+    }
+    await page
+      .getByRole("button", { name: "Submit whole set", exact: true })
+      .click();
+    await saved(page);
+    if (fi === 2)
+      await expect(
+        page.getByRole("heading", {
+          name: "Responses ready for self-review",
+          exact: true,
+        }),
+      ).toBeVisible();
+  }
 });

@@ -35,9 +35,9 @@ const all = [
   ...journey.checkForms.flat(),
   ...journey.reviewForms.flat(),
 ];
-test("all93 demands retain first-four scope, literal numeric references and honest independent drawings", () => {
-  expect(all).toHaveLength(93);
-  expect(new Set(all.map((t) => t.id)).size).toBe(93);
+test("all101 demands retain first-four scope, literal numeric references and honest independent drawings", () => {
+  expect(all).toHaveLength(101);
+  expect(new Set(all.map((t) => t.id)).size).toBe(101);
   const refs: Record<string, number> = {
     "w-mass": 1.2,
     "r-acid-carbon": 2,
@@ -85,9 +85,9 @@ test("all93 demands retain first-four scope, literal numeric references and hone
       expect(mark(t, t.answer).correct).toBe(false);
     } else expect(mark(t, t.answer).correct).toBe(true);
   }
-  expect(all.filter((t) => t.rubric)).toHaveLength(15);
-  expect(journey.checkForms.map((f) => f.length)).toEqual([8, 8]);
-  expect(journey.reviewForms.map((f) => f.length)).toEqual([3, 3]);
+  expect(all.filter((t) => t.rubric)).toHaveLength(23);
+  expect(journey.checkForms.map((f) => f.length)).toEqual([8, 8, 2]);
+  expect(journey.reviewForms.map((f) => f.length)).toEqual([3, 3, 2]);
   expect(
     [...journey.checkForms.flat(), ...journey.reviewForms.flat()].every(
       (t) => !t.model,
@@ -281,10 +281,10 @@ test("displayed H-slot markers remain separate for all first-four carbon scaffol
   }
 });
 
-test("seven named practice groups contain all45 reviewed demands exactly once", () => {
+test("eight named practice groups contain all48 reviewed demands exactly once", () => {
   const ids = journey.practiceGroups!.flatMap((g) => g.taskIds);
-  expect(journey.practiceGroups).toHaveLength(7);
-  expect(ids).toHaveLength(45);
-  expect(new Set(ids).size).toBe(45);
+  expect(journey.practiceGroups).toHaveLength(8);
+  expect(ids).toHaveLength(48);
+  expect(new Set(ids).size).toBe(48);
   expect([...ids].sort()).toEqual(journey.practice.map((t) => t.id).sort());
 });

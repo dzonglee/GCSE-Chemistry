@@ -1,4 +1,5 @@
 import type { AlcoholMode } from "../../lib/alcohols";
+import { extendAlcoholEquationWriting } from "./alcohol-equation-writing";
 import { fuelPlots } from "../../lib/alcohols";
 import type { LearningTask as AlcoholTask, LessonJourney } from "../types";
 const prefix = "alc-v1-";
@@ -1484,3 +1485,4 @@ export const alcoholJourney: LessonJourney = {
   checkForms,
   reviewForms,
 };
+extendAlcoholEquationWriting(alcoholJourney, alcoholRecovery);

@@ -99,7 +99,7 @@ test("individually authored Foundation Paper2 allocates100 marks with valid qual
     paper.parts.filter((p) => p.practical).reduce((sum, p) => sum + p.marks, 0),
   ).toBe(24);
   const native = lessons.flatMap((l) => tasks(l.journey!));
-  expect(native).toHaveLength(5898);
+  expect(native).toHaveLength(5906);
   expect(new Set(paper.parts.map((p) => p.question.id)).size).toBe(49);
   for (let group = 1; group <= 10; group++)
     expect(

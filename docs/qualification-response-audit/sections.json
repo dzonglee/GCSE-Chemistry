@@ -1938,11 +1938,24 @@
     "trilogyCandidate": "5.7.1.4",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Catalytic/steamcracking conditions, alkane/alkene products, brominecolour recall, fuels/polymer/feedstock usefulness andbalanced cracking givenequations; Trilogyindividualalkene names/formula excluded. Complete8462bodies read duringindividualHigherP2research/recheckedmatrix; allfour8464organicbodies nowreadandnext5.8headingconfirmsSeparateparentsabsence. Original8462pages65/68/69/70personallyviewed.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "All36 practice and22 reserved/delayed cracking responses personally read, alongside actual8462 source and fresh RSC teaching resource. Five native modes distinguish net bond rearrangement, atom/coefficient accounting, supplied structures, matched bromine observations and process/use. Conditions permit high-temperature catalyst or steam; formula/subscript and coefficient demands are distinct; fuel/feedstock use and mixture-inference limits explicit. Existing individual lesson QA retained; no new whole-course test claim.",
+    "responseEvidenceIds": [
+      "crk-v1-p-other-cut",
+      "crk-v1-p-ten-coeff",
+      "crk-v1-p-two-alkenes",
+      "crk-v1-p-conditions",
+      "crk-v1-p-steam",
+      "crk-v1-p-written-cracking",
+      "crk-v1-p-written-test",
+      "crk-v1-a-repeated",
+      "crk-v1-b-explain"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.7.2.1",
@@ -1951,11 +1964,26 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Separate-only parent, C=C/CnH2n unsaturation andfirstfour ethene/propene/butene/pentene formula/displayed recognition. Complete8462bodies read duringindividualHigherP2research/recheckedmatrix; allfour8464organicbodies nowreadandnext5.8headingconfirmsSeparateparentsabsence. Original8462pages65/68/69/70personallyviewed.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "All cracking practice and reserved/delayed responses personally read against Separate-only alkene structure clause. First four names/formulas covered, local valence and actual own displayed constructions retained, end/internal double bonds and reversed equivalents accepted, CnH2n correctly limited to open-chain one-C=C examples; supplied ring shows formula alone is insufficient. Individual alkene name recall explicitly labelled Separate Chemistry; Combined shared checks supply formulas/names. Existing original3D review remains scoped evidence.",
+    "responseEvidenceIds": [
+      "crk-v1-p-ethene-name",
+      "crk-v1-p-propene-name",
+      "crk-v1-p-butene-name",
+      "crk-v1-p-pentene-name",
+      "crk-v1-p-draw-ethene",
+      "crk-v1-p-draw-propene",
+      "crk-v1-p-draw-but1",
+      "crk-v1-p-draw-pentene",
+      "crk-v1-p-ring",
+      "crk-v1-a-draw",
+      "crk-v1-rb-draw"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.7.2.2",
@@ -1964,11 +1992,31 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Separate-only parent, smoky combustion, H2/water/Cl2Br2I2 additionconditions andfullydisplayed structures/products. Complete8462bodies read duringindividualHigherP2research/recheckedmatrix; allfour8464organicbodies nowreadandnext5.8headingconfirmsSeparateparentsabsence. Original8462pages65/68/69/70personallyviewed.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "All48 practice and24 reserved/delayed responses personally read against actual clause. Own fully displayed addition products for every first-four alkene with H2, water, Cl2, Br2 and I2; original chain/H conserved, specified OH placement avoids invented selectivity. Actual native condition records and teaching explanations reviewed: hydrogen/nickel/heating, industrial steam/pressure/phosphoric acid, ordinary halogen addition without UV. Iodine structural tasks infer no rate/colour. Cross-journey eight-task combustion follow-up covers complete products, balanced coefficients and conditional smoky-flame tendency. Existing individual QA retained; no new whole-course pass claimed.",
+    "responseEvidenceIds": [
+      "path-v1-p-ethene-h",
+      "path-v1-p-ethene-water",
+      "path-v1-p-ethene-cl",
+      "path-v1-p-ethene-br",
+      "path-v1-p-ethene-i",
+      "path-v1-p-pentene-h",
+      "path-v1-p-pentene-water",
+      "path-v1-p-pentene-cl",
+      "path-v1-p-pentene-br",
+      "path-v1-p-pentene-i",
+      "path-v1-p-h2-condition",
+      "path-v1-p-steam-condition",
+      "path-v1-a-drawing",
+      "path-v1-b-drawing",
+      "path-comb-v1-p-explain",
+      "path-comb-v1-cb-propene"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.7.2.3",
@@ -1977,11 +2025,29 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Separate-only parent, firstfour alcoholsOH, sodium/combustion/water/oxidation, uses and yeastfermentationconditions; balanced equations onlycombustion required. Complete8462bodies read duringindividualHigherP2research/recheckedmatrix; allfour8464organicbodies nowreadandnext5.8headingconfirmsSeparateparentsabsence. Original8462pages65/68/69/70personallyviewed.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "All45 original practice and22 reserved/delayed responses personally read; eight individually authored whole-equation additions reviewed and tested. First-four structures/names, sodium/combustion/water/oxidation behaviour, fuel/solvent use and warm anaerobic sugar/yeast fermentation with subsequent physical enrichment covered. Alcohol fuel oxygen explicitly counted in full writing; no other alcohol equation recall imposed. Fresh RSC Foundation teacher509095 actual page3 inspected alongside original AQA clause and existing individually paired exam review. See alcohol-equation-writing-review.md for final scoped QA.",
+    "responseEvidenceIds": [
+      "alc-v1-p-methanol",
+      "alc-v1-p-propanol",
+      "alc-v1-p-butanol",
+      "alc-v1-p-sodium",
+      "alc-v1-p-neutral",
+      "alc-v1-p-water-limit",
+      "alc-v1-p-oxidise",
+      "alc-v1-p-ferment-plan",
+      "alc-v1-p-use",
+      "alc-write-v1-p-ethanol",
+      "alc-write-v1-p-propanol",
+      "alc-write-v1-p-butanol",
+      "alc-write-v1-ca-methanol",
+      "alc-write-v1-rb-propanol"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.7.2.4",
@@ -1990,11 +2056,27 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both; Higher weak-acid explanation sub-demand",
     "actualBodyReview": "Separate-only parent, firstfour COOH/carbonate/water/alcohol reactions, ethylethanoate only estername required; ionisation/pHweakacid explanation Higher only; balanced acidreactionequations excluded. Complete8462bodies read duringindividualHigherP2research/recheckedmatrix; allfour8464organicbodies nowreadandnext5.8headingconfirmsSeparateparentsabsence. Original8462pages65/68/69/70personallyviewed.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "All original alcohol/acid practice and reserved/delayed responses personally read. First-four names/completeCOOH structures, carbonate products and limewater evidence, acidic aqueous behaviour and acid+alcohol ester/water covered. Only ethyl ethanoate name required; no balanced acid equations imposed. Higher-only partial ionisation/equal-concentration pH task links previously reviewed written acid-strength explanation, separating strength from concentration and uncontrolled pH. Original paired2023F/H acid structures/products review re-read; fresh RSC page3 personally inspected and its indicator-only weak-acid inference not adopted.",
+    "responseEvidenceIds": [
+      "alc-v1-p-methanoic",
+      "alc-v1-p-ethanoic",
+      "alc-v1-p-propanoic",
+      "alc-v1-p-butanoic",
+      "alc-v1-p-carbonate",
+      "alc-v1-p-acid-water",
+      "alc-v1-p-ester",
+      "alc-v1-p-higher-pH",
+      "alc-v1-b-draw",
+      "alc-v1-b-ester",
+      "acid-v1-p-uncontrolled",
+      "acid-v1-rb-two"
+    ],
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.7.3.1",

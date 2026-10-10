@@ -713,6 +713,7 @@ export function DetailedLesson({
             {stage === "practice" && journey.practiceGroups ? (
               lesson.slug !== "life-cycle-and-recycling" &&
               !organicLesson &&
+              !q.id.startsWith("alc-write-v1-") &&
               !q.id.startsWith("early-atmosphere-v1-minor-") &&
               !compactRecallTask &&
               !q.polyesterDrawing &&
@@ -994,6 +995,7 @@ export function DetailedLesson({
           </div>
           {(lesson.slug === "life-cycle-and-recycling" ||
             organicLesson ||
+            q.id.startsWith("alc-write-v1-") ||
             q.id.startsWith("early-atmosphere-v1-minor-") ||
             compactRecallTask) &&
             practicePicker}
