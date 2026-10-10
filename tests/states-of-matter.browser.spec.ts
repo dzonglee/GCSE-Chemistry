@@ -221,9 +221,16 @@ async function answer(page: Page, q: (typeof journey.practice)[number]) {
     await page.getByRole("radio", { name: q.answer, exact: true }).check();
   else
     await page
-      .getByLabel(q.rubric ? "Your explanation" : "Your answer", {
-        exact: true,
-      })
+      .getByLabel(
+        q.writtenEquations
+          ? "Your equations"
+          : q.rubric
+            ? "Your explanation"
+            : "Your answer",
+        {
+          exact: true,
+        },
+      )
       .fill(q.answer);
 }
 async function saved(page: Page) {
@@ -336,12 +343,20 @@ test("all twenty-one independent questions mark data and diagrams while written 
     await answer(page, q);
     await page
       .getByRole("button", {
-        name: q.rubric ? "Save and review explanation" : "Check answer",
+        name: q.writtenEquations
+          ? "Save and review equations"
+          : q.rubric
+            ? "Save and review explanation"
+            : "Check answer",
         exact: true,
       })
       .click();
     await expect(page.getByRole("status")).toContainText(
-      q.rubric ? "Compare your explanation" : "That’s right",
+      q.writtenEquations
+        ? "Compare your equations"
+        : q.rubric
+          ? "Compare your explanation"
+          : "That’s right",
     );
     if (q.rubric)
       await expect

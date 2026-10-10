@@ -15,7 +15,7 @@ import {
 test("Foundation excludes new Higher assessment demands without changing original learning positions or Higher forms", () => {
   const foundation = statesForTier(statesJourney, "foundation");
   expect(statesJourney.version).toBe(1);
-  expect(tasks(statesJourney)).toHaveLength(57);
+  expect(tasks(statesJourney)).toHaveLength(62);
   expect(foundation.practice).toBe(statesJourney.practice);
   expect(foundation.guided).toBe(statesJourney.guided);
   expect(foundation.checkForms.slice(0, 2)).toEqual(

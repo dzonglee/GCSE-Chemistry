@@ -889,7 +889,7 @@ function ResponseInput({
   if (question.rubric)
     return (
       <label
-        className={`written-answer${question.shortWritten ? " short-written-answer" : ""}`}
+        className={`written-answer${question.shortWritten ? " short-written-answer" : ""}${question.stateSymbolUse ? " state-symbol-answer" : ""}`}
       >
         {question.shortWritten
           ? "Your answer"
@@ -910,21 +910,23 @@ function ResponseInput({
           onChange={(e) => onChange(e.target.value)}
         />
         <small>
-          {question.shortWritten && !question.writtenEquationKind
-            ? "A short phrase is enough. Compare with the examples when feedback appears; other valid answers can be accepted in manual review."
-            : question.id.startsWith("ph-v1-method-") &&
-                question.writtenEquations
-              ? "Use ion charges and state symbols; type → or ->. Explain conservation and spectators separately. Scientific accuracy is reviewed manually."
-              : question.writtenEquations &&
-                  question.id.startsWith("ion-tests-v1-write-")
-                ? "Use formulas and state symbols; type → or ->. Name spectator ions on a separate line. Scientific accuracy is reviewed manually."
-                : question.writtenEquationKind === "half"
-                  ? "Use chemical formulas, ion charges and electrons. Balance atoms and charge. You can type → or ->. State symbols are optional for this question. Include any explanation requested."
-                  : question.writtenEquationKind === "symbol"
-                    ? "Use chemical formulas and coefficients to write a balanced symbol equation. You can type → or ->."
-                    : question.writtenEquations
-                      ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
-                      : "Write in your own words. Use the marking points for self-review when feedback appears."}
+          {question.stateSymbolUse
+            ? "Add (s), (l), (g) or (aq) after each formula. Keep the supplied formulas and coefficients. You can type → or ->. Review the scientific accuracy manually."
+            : question.shortWritten && !question.writtenEquationKind
+              ? "A short phrase is enough. Compare with the examples when feedback appears; other valid answers can be accepted in manual review."
+              : question.id.startsWith("ph-v1-method-") &&
+                  question.writtenEquations
+                ? "Use ion charges and state symbols; type → or ->. Explain conservation and spectators separately. Scientific accuracy is reviewed manually."
+                : question.writtenEquations &&
+                    question.id.startsWith("ion-tests-v1-write-")
+                  ? "Use formulas and state symbols; type → or ->. Name spectator ions on a separate line. Scientific accuracy is reviewed manually."
+                  : question.writtenEquationKind === "half"
+                    ? "Use chemical formulas, ion charges and electrons. Balance atoms and charge. You can type → or ->. State symbols are optional for this question. Include any explanation requested."
+                    : question.writtenEquationKind === "symbol"
+                      ? "Use chemical formulas and coefficients to write a balanced symbol equation. You can type → or ->."
+                      : question.writtenEquations
+                        ? "Use names for a word equation and formulas for a balanced symbol equation. For ‘both’, write one of each. You can type → or ->."
+                        : "Write in your own words. Use the marking points for self-review when feedback appears."}
         </small>
       </label>
     );

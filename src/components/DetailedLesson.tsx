@@ -934,6 +934,7 @@ export function DetailedLesson({
           </div>
           <div
             className="sample-task-jump"
+            role="group"
             aria-label="Learning task navigation"
           >
             {stage === "practice" && journey.practiceGroups ? (

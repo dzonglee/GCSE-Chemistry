@@ -1,3 +1,4 @@
+import { extendStateSymbolUse } from "./state-symbol-use";
 import { extendStatesWriting } from "./states-writing";
 import type { LearningTask, LessonJourney, TaskModel } from "../types";
 import { choice, number } from "./helpers";
@@ -819,3 +820,5 @@ for (const task of [
 }
 
 extendStatesWriting(statesJourney);
+
+extendStateSymbolUse(statesJourney);

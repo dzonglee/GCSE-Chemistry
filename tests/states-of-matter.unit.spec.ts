@@ -215,9 +215,9 @@ test("complete causal predictions retain wrong state movement energy and identit
     validStateBoard("forecast", { temperature: NaN, prediction: "solid" }),
   ).toBe(false);
 });
-test("all forty-eight state tasks have reviewed references and Higher-only extension stays outside common reserved forms", () => {
+test("all current state tasks have reviewed references and Higher-only extension stays outside common reserved forms", () => {
   const all = tasks(statesJourney);
-  expect(all).toHaveLength(57);
+  expect(all).toHaveLength(62);
   for (const q of all) {
     expect(mark(q, q.answer).correct, q.id).toBe(!q.rubric);
     for (const wrong of Object.keys(q.misconceptions ?? {}))

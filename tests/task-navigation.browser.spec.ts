@@ -13,7 +13,12 @@ async function visibleCurrent(page: Page, index: number) {
           visible.length > 0 &&
           visible.every((nav) => {
             const picker = nav.querySelector<HTMLSelectElement>("select");
-            if (picker) return picker.value === String(index);
+            if (picker)
+              return (
+                picker.getClientRects().length > 0 &&
+                getComputedStyle(picker).visibility !== "hidden" &&
+                picker.value === String(index)
+              );
             const button = nav.querySelector<HTMLElement>(
               '[aria-current="step"]',
             );
@@ -98,3 +103,99 @@ for (const width of [320, 390, 1280])
       await context.close();
     }
   });
+
+const legacyHiddenPickers = [
+  "balancing-equations",
+  "transition-metals",
+  "atomic-models",
+  "periodic-development",
+  "group-reactions",
+  "group-seven",
+  "group-zero",
+  "periodic-patterns",
+  "ionic-bonding",
+  "ionic-structures",
+  "states-of-matter",
+  "covalent-bonding",
+  "small-molecules-properties",
+  "structure-and-properties",
+  "carbon-structures",
+  "graphite",
+  "graphene",
+  "fullerenes",
+  "carbon-nanotubes",
+  "polymer-structures",
+  "particles-and-nanoparticles",
+  "conservation-of-mass",
+  "measurement-uncertainty",
+  "changing-concentration",
+  "metal-reactivity",
+  "acids-and-neutralisation",
+];
+const affectedGroupedLessons = lessons.filter(
+  (lesson) =>
+    legacyHiddenPickers.includes(lesson.slug) &&
+    lesson.journey?.practiceGroups?.length,
+);
+for (const width of [320, 390])
+  for (const start of [0, 7, 14, 21])
+    test(`${width}: legacy-hidden grouped practice selectors are visible and usable on routes ${start + 1}–${Math.min(start + 7, affectedGroupedLessons.length)}`, async ({
+      page,
+    }) => {
+      test.setTimeout(180000);
+      await page.setViewportSize({ width, height: 720 });
+      expect(affectedGroupedLessons.length).toBeGreaterThan(0);
+      for (const lesson of affectedGroupedLessons.slice(start, start + 7)) {
+        const journey = lesson.journey!,
+          index = journey.practice.length - 1;
+        const raw = "Retained wrong working\n1/2",
+          progress = emptyProgress(),
+          work = emptyWork();
+        progress.preferences.course = "separate";
+        progress.preferences.tier = "higher";
+        work.section = "practice";
+        work.learning = { version: 1, stage: "practice", index };
+        work.drafts[journey.practice[index].id] = raw;
+        progress.work[lesson.slug] = work;
+        await page.goto(`/lessons/${lesson.slug}`);
+        await page.evaluate(({ key, raw }) => localStorage.setItem(key, raw), {
+          key: STORAGE_KEY,
+          raw: JSON.stringify(progress),
+        });
+        await page.reload();
+        const nav = page.getByRole("group", {
+          name: "Learning task navigation",
+          exact: true,
+        });
+        const picker = nav.getByLabel("Choose a practice task", {
+          exact: true,
+        });
+        await expect(picker, lesson.slug).toBeVisible();
+        await expect(picker).toHaveValue(String(index));
+        expect((await picker.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+        await picker.selectOption("0");
+        await expect(picker).toHaveValue("0");
+        await picker.selectOption(String(index));
+        await expect(picker).toHaveValue(String(index));
+        await expect
+          .poll(() =>
+            page.evaluate(() =>
+              sessionStorage.getItem("gcse-chemistry.pending.v1"),
+            ),
+          )
+          .toBeNull();
+        await page.reload();
+        await visibleCurrent(page, index);
+        expect(
+          await page.evaluate(
+            ({ key, slug, id }) =>
+              JSON.parse(localStorage.getItem(key)!).work[slug].drafts[id],
+            {
+              key: STORAGE_KEY,
+              slug: lesson.slug,
+              id: journey.practice[index].id,
+            },
+          ),
+        ).toBe(raw);
+      }
+    });

@@ -1,0 +1,1479 @@
+{
+  "version": 1,
+  "introduction": "Track particles, predict states from signed temperature data and explain physical changes through arrangement, movement and energy.",
+  "scopeNote": "Common Foundation/combined states and state-symbol reasoning. Schematic particles may stand for atoms, ions or molecules in different materials; illustrative frames do not calculate real speed, pressure or forces. The explicitly labelled Higher model-limits task is extension work and is excluded from common reserved checks.",
+  "outcomes": [
+    "Distinguish arrangement and movement in solid, liquid and gas.",
+    "Use melting/boiling data including signed temperatures and exact transition boundaries.",
+    "Explain heating/cooling interconversions with conserved particle identity.",
+    "Distinguish bulk properties from individual-particle properties and (l) from (aq)."
+  ],
+  "warmup": [
+    {
+      "id": "st-v1-w-identity",
+      "prompt": "When unchanged molecules physically move farther apart, what must remain the same?",
+      "answer": "Their chemical identity",
+      "options": [
+        "Their atoms must all grow larger",
+        "Their chemical identity",
+        "They must become new elements"
+      ],
+      "misconceptions": {
+        "They must become new elements": "Physical separation does not change nuclei or composition.",
+        "Their atoms must all grow larger": "Spacing is not individual atom size."
+      },
+      "explanation": "Physical state changes do not create a new substance.",
+      "hint": "Separate chemical composition from arrangement.",
+      "purpose": "Prerequisite physical-change retrieval.",
+      "title": "Recall a physical change",
+      "followUp": "st-v1-r-spacing",
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-w-matter",
+      "prompt": "Is a gas matter even when you cannot see it?",
+      "answer": "Yes: it has mass and occupies space",
+      "options": [
+        "Yes: it has mass and occupies space",
+        "No: only visible solids have mass",
+        "No: gases never occupy volume"
+      ],
+      "misconceptions": {
+        "No: only visible solids have mass": "Visibility does not determine whether something is matter.",
+        "No: gases never occupy volume": "A gas occupies the available container volume."
+      },
+      "explanation": "Gases are matter, just as solids and liquids are.",
+      "hint": "Use mass and occupied space rather than visibility.",
+      "purpose": "Prerequisite matter/property retrieval.",
+      "title": "Recall gas as matter",
+      "followUp": "st-v1-r-spacing",
+      "conciseHeading": true
+    }
+  ],
+  "refresher": [
+    {
+      "id": "st-v1-r-solid",
+      "prompt": "What motion occurs in a crystalline solid?",
+      "answer": "Vibration about fixed positions",
+      "options": [
+        "Absolutely no particle movement",
+        "Continuous flow past neighbouring particles",
+        "Vibration about fixed positions"
+      ],
+      "misconceptions": {
+        "Absolutely no particle movement": "Particles are not motionless.",
+        "Continuous flow past neighbouring particles": "That is a liquid-style freedom."
+      },
+      "explanation": "Close regularly arranged particles vibrate without continuously exchanging positions.",
+      "hint": "Separate fixed average position from no movement.",
+      "purpose": "Targeted solid movement recovery.",
+      "title": "Solid particles still move",
+      "followUp": "st-v1-r-solid",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-g-solid",
+        "st-v1-p-solid",
+        "st-v1-ca-solid",
+        "st-v1-ra-solid"
+      ]
+    },
+    {
+      "id": "st-v1-r-spacing",
+      "prompt": "What changes when the same sample becomes a gas?",
+      "answer": "Particles become much farther apart; individual particle sizes remain unchanged",
+      "options": [
+        "Half the particles disappear",
+        "Particles become much farther apart; individual particle sizes remain unchanged",
+        "Every particle grows into a larger sphere"
+      ],
+      "misconceptions": {
+        "Every particle grows into a larger sphere": "Bulk expansion is not growth of atoms or molecules.",
+        "Half the particles disappear": "Particle count is retained in the closed sample."
+      },
+      "explanation": "Greater spacing explains bulk expansion; count and identity stay the same.",
+      "hint": "Compare the space between particles.",
+      "purpose": "Targeted spacing/conservation recovery.",
+      "title": "Spacing is not particle size",
+      "followUp": "st-v1-r-spacing",
+      "exposureAliases": [
+        "st-v1-p-compare",
+        "st-write-v1-ca-bulk",
+        "st-write-v1-ra-condense",
+        "st-v1-g-solid",
+        "st-v1-g-liquid-gas",
+        "st-v1-p-size",
+        "st-v1-ca-size",
+        "st-v1-rb-spacing"
+      ],
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-r-data",
+      "prompt": "X melts at −20 °C and boils at 60 °C. What state is predicted at 0 °C at fixed pressure?",
+      "answer": "Liquid",
+      "options": [
+        "Solid",
+        "Gas",
+        "Liquid"
+      ],
+      "misconceptions": {
+        "Solid": "0 is above −20.",
+        "Gas": "0 is below 60."
+      },
+      "explanation": "0 lies between melting and boiling. At the exact thresholds, a transition can involve two phases.",
+      "hint": "Order the three signed temperatures.",
+      "purpose": "Targeted supplied-data recovery.",
+      "title": "Compare two thresholds",
+      "followUp": "st-v1-r-data",
+      "exposureAliases": [
+        "st-write-v1-ra-boundary",
+        "st-v1-g-forecast",
+        "st-v1-p-melt-boundary",
+        "st-v1-p-boil-boundary",
+        "st-v1-cb-boundary",
+        "st-v1-rb-boundary"
+      ],
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-r-energy",
+      "prompt": "Which energy directions fit melting and freezing?",
+      "answer": "Melting absorbs energy; freezing transfers energy to the surroundings",
+      "options": [
+        "Both necessarily absorb energy",
+        "Both necessarily make larger particles",
+        "Melting absorbs energy; freezing transfers energy to the surroundings"
+      ],
+      "misconceptions": {
+        "Both necessarily absorb energy": "Freezing releases energy to the surroundings.",
+        "Both necessarily make larger particles": "The individual particles do not grow."
+      },
+      "explanation": "At a pure-substance transition, added energy changes arrangement by overcoming attractions; temperature can remain constant until the transition is complete.",
+      "hint": "Identify the substance and its surroundings.",
+      "purpose": "Targeted energy-direction recovery.",
+      "title": "Track heating and cooling",
+      "followUp": "st-v1-r-energy",
+      "exposureAliases": [
+        "st-v1-p-explain",
+        "st-write-v1-ca-melt",
+        "st-write-v1-ca-forces",
+        "st-write-v1-ra-freeze",
+        "st-v1-g-transition",
+        "st-v1-p-melt-freeze",
+        "st-v1-p-boil-condense",
+        "st-v1-p-energy",
+        "st-v1-ca-cooling",
+        "st-v1-cb-heat",
+        "st-v1-rb-condense"
+      ],
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-r-symbol",
+      "prompt": "What is the state symbol for a molten substance?",
+      "answer": "(l)",
+      "options": [
+        "(aq)",
+        "(s)",
+        "(l)"
+      ],
+      "misconceptions": {
+        "(aq)": "Aqueous means dissolved in water, not merely liquid.",
+        "(s)": "Molten means the substance is liquid."
+      },
+      "explanation": "Use (s), (l), (g) for physical states; (aq) means an aqueous solution.",
+      "hint": "Distinguish molten from dissolved.",
+      "purpose": "Targeted state-symbol recovery.",
+      "title": "Liquid or aqueous?",
+      "followUp": "st-v1-r-symbol",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-p-molten",
+        "st-v1-p-aqueous",
+        "st-v1-ca-symbol",
+        "st-v1-cb-aqueous",
+        "st-v1-ra-symbol"
+      ]
+    }
+  ],
+  "guided": [
+    {
+      "id": "st-v1-g-solid",
+      "prompt": "How are particles arranged and moving in the shown crystalline solid?",
+      "answer": "Close and regular; vibrating about fixed positions",
+      "options": [
+        "Close but continuously flowing past one another",
+        "Close and regular; vibrating about fixed positions",
+        "Widely separated and completely still"
+      ],
+      "misconceptions": {
+        "Widely separated and completely still": "Particles in this model are close and continue moving.",
+        "Close but continuously flowing past one another": "That is the liquid distinction, not fixed-position vibration."
+      },
+      "explanation": "Particles vibrate about fixed positions in the solid; they are not motionless. This crystalline model shows regular close arrangement, not every possible solid structure.",
+      "hint": "Advance a frame and track the gold particle.",
+      "purpose": "Solid arrangement and actual illustrative vibration.",
+      "model": {
+        "kind": "state-properties",
+        "mode": "solid",
+        "instruction": "Predict arrangement and movement, then inspect a motion frame."
+      },
+      "title": "Inspect a solid",
+      "followUp": "st-v1-r-solid",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-solid",
+        "st-v1-p-solid",
+        "st-v1-ca-solid",
+        "st-v1-ra-solid",
+        "st-v1-r-spacing",
+        "st-v1-g-liquid-gas",
+        "st-v1-p-size",
+        "st-v1-ca-size",
+        "st-v1-rb-spacing"
+      ]
+    },
+    {
+      "id": "st-v1-g-liquid-gas",
+      "prompt": "What is the key particle distinction between a liquid and a gas?",
+      "answer": "Liquid particles are close and move past one another; gas particles are widely spaced and move rapidly/randomly",
+      "options": [
+        "Liquid particles are close and move past one another; gas particles are widely spaced and move rapidly/randomly",
+        "Both have fixed particles with no motion",
+        "Gas particles themselves become much larger"
+      ],
+      "misconceptions": {
+        "Both have fixed particles with no motion": "Both phases have moving particles.",
+        "Gas particles themselves become much larger": "Greater spacing is not growth of individual particles."
+      },
+      "explanation": "Liquid particles remain close and disordered while changing neighbours. Gas particles occupy available space with wide separations and rapid random movement. Circle size and particle count remain unchanged.",
+      "hint": "Inspect both states and track the same gold particle.",
+      "purpose": "Liquid/gas movement and spacing kept distinct from particle size.",
+      "model": {
+        "kind": "state-properties",
+        "mode": "liquid-gas",
+        "instruction": "Predict the inspected state, then compare another motion frame."
+      },
+      "title": "Compare liquid and gas",
+      "followUp": "st-v1-r-spacing",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-spacing",
+        "st-v1-g-solid",
+        "st-v1-p-size",
+        "st-v1-ca-size",
+        "st-v1-rb-spacing"
+      ]
+    },
+    {
+      "id": "st-v1-g-forecast",
+      "prompt": "X melts at −20 °C and boils at 60 °C (fixed pressure). Predict its state at −40 °C.",
+      "answer": "Solid",
+      "options": [
+        "Solid",
+        "Liquid",
+        "Gas"
+      ],
+      "misconceptions": {
+        "Liquid": "−40 °C is below the melting point.",
+        "Gas": "It is far below the boiling point."
+      },
+      "explanation": "Below melting: solid; between melting and boiling: liquid; above boiling: gas. Exact thresholds are transition boundaries where two phases may coexist. X is an illustrative supplied pure substance.",
+      "hint": "Compare signed temperature with both thresholds.",
+      "purpose": "Signed threshold prediction with equality cases.",
+      "model": {
+        "kind": "state-properties",
+        "mode": "forecast",
+        "instruction": "Predict a state, then change the supplied temperature."
+      },
+      "title": "Predict a state from data",
+      "followUp": "st-v1-r-data",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-data",
+        "st-v1-p-melt-boundary",
+        "st-v1-p-boil-boundary",
+        "st-v1-cb-boundary",
+        "st-v1-rb-boundary"
+      ]
+    },
+    {
+      "id": "st-v1-g-transition",
+      "prompt": "On melting, where does energy go? Does particle identity change?",
+      "answer": "Energy enters the substance; particle chemical identity is retained",
+      "options": [
+        "Energy leaves while particles become a different element",
+        "Energy enters because each particle grows larger",
+        "Energy enters the substance; particle chemical identity is retained"
+      ],
+      "misconceptions": {
+        "Energy leaves while particles become a different element": "This reverses melting energy direction and invents a chemical change.",
+        "Energy enters because each particle grows larger": "Individual particle size is not the cause of bulk state change."
+      },
+      "explanation": "Melting absorbs energy to overcome relevant attractions and allow particles to move past one another. Freezing and condensing transfer energy to the surroundings; boiling absorbs energy. These are physical changes.",
+      "hint": "Compare before/after arrangement and the direction of energy transfer.",
+      "purpose": "Physical interconversion and conserved identity.",
+      "model": {
+        "kind": "state-properties",
+        "mode": "transition",
+        "instruction": "Predict energy direction and particle identity for the chosen change."
+      },
+      "title": "Follow a physical change",
+      "followUp": "st-v1-r-energy",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-energy",
+        "st-v1-p-melt-freeze",
+        "st-v1-p-boil-condense",
+        "st-v1-p-energy",
+        "st-v1-ca-cooling",
+        "st-v1-cb-heat",
+        "st-v1-rb-condense"
+      ]
+    }
+  ],
+  "practice": [
+    {
+      "id": "st-v1-p-solid",
+      "prompt": "Which description fits the supplied particle pattern?",
+      "answer": "Close regular particles vibrating about fixed positions",
+      "options": [
+        "Widely spaced particles filling all available volume",
+        "Close regular particles vibrating about fixed positions",
+        "Particles are necessarily motionless"
+      ],
+      "misconceptions": {
+        "Particles are necessarily motionless": "The snapshot does not mean motion stops.",
+        "Widely spaced particles filling all available volume": "The supplied pattern is a close ordered group."
+      },
+      "explanation": "This is the simple crystalline-solid model; movement is vibration, not continuous flow.",
+      "hint": "Read arrangement separately from movement.",
+      "purpose": "Independent solid recognition.",
+      "title": "Recognise the solid drawing",
+      "followUp": "st-v1-r-solid",
+      "stateParticleDiagram": "solid",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-solid",
+        "st-v1-g-solid",
+        "st-v1-ca-solid",
+        "st-v1-ra-solid"
+      ]
+    },
+    {
+      "id": "st-v1-p-liquid",
+      "prompt": "Which description fits the supplied close disordered particles?",
+      "answer": "A liquid: particles can move past one another",
+      "options": [
+        "A liquid: particles can move past one another",
+        "A solid with completely motionless particles",
+        "A gas whose particles have grown larger"
+      ],
+      "misconceptions": {
+        "A solid with completely motionless particles": "Close disorder and flow fit this supplied liquid model.",
+        "A gas whose particles have grown larger": "The circles do not change size."
+      },
+      "explanation": "Liquid particles remain close while positions/neighbours can change.",
+      "hint": "Compare closeness with freedom to move.",
+      "purpose": "Independent liquid recognition.",
+      "title": "Recognise a liquid drawing",
+      "followUp": "st-v1-r-spacing",
+      "stateParticleDiagram": "liquid",
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-p-gas",
+      "prompt": "Why does the supplied gas occupy the available container volume?",
+      "answer": "Widely spaced moving particles spread through available space",
+      "options": [
+        "Widely spaced moving particles spread through available space",
+        "Each particle has the whole container’s shape",
+        "There is no particle movement"
+      ],
+      "misconceptions": {
+        "Each particle has the whole container’s shape": "Bulk shape is not a single-particle property.",
+        "There is no particle movement": "Gas particles move rapidly/randomly."
+      },
+      "explanation": "The gas takes the container’s volume because particles move through available space.",
+      "hint": "Use movement and spacing together.",
+      "purpose": "Independent gas bulk behaviour.",
+      "title": "Recognise the gas drawing",
+      "followUp": "st-v1-r-spacing",
+      "stateParticleDiagram": "gas",
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-p-size",
+      "prompt": "A sample expands on becoming a gas. What is the particle explanation?",
+      "answer": "More space between particles, not larger individual particles",
+      "options": [
+        "The number of protons doubles",
+        "More space between particles, not larger individual particles",
+        "Every atom becomes physically much larger"
+      ],
+      "misconceptions": {
+        "Every atom becomes physically much larger": "This confuses spacing with particle size.",
+        "The number of protons doubles": "A physical change does not alter nuclei."
+      },
+      "explanation": "Particle identity and size are retained; separation increases.",
+      "hint": "Compare centres and radii separately.",
+      "purpose": "Independent expansion misconception.",
+      "title": "Explain bulk expansion",
+      "followUp": "st-v1-r-spacing",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-spacing",
+        "st-v1-g-solid",
+        "st-v1-g-liquid-gas",
+        "st-v1-ca-size",
+        "st-v1-rb-spacing"
+      ]
+    },
+    {
+      "id": "st-v1-p-conserve",
+      "prompt": "A closed sample contains 12 unchanged molecules before a physical state change. How many molecules remain afterward?",
+      "answer": "12",
+      "unit": "molecules",
+      "explanation": "Physical change preserves these 12 unchanged molecules in the closed sample.",
+      "hint": "No molecules enter, leave or react.",
+      "purpose": "Independent conservation transfer.",
+      "misconceptions": {
+        "24": "A change of state does not duplicate molecules."
+      },
+      "title": "Conserve particles in a closed sample",
+      "followUp": "st-v1-r-spacing",
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-p-between",
+      "prompt": "X melts at −20 °C and boils at 60 °C at fixed pressure. Predict its state at 30 °C.",
+      "answer": "Liquid",
+      "options": [
+        "Gas",
+        "Liquid",
+        "Solid"
+      ],
+      "misconceptions": {
+        "Solid": "30 exceeds the melting threshold.",
+        "Gas": "30 remains below the boiling threshold."
+      },
+      "explanation": "−20 < 30 < 60, so the pure substance is liquid under the supplied conditions.",
+      "hint": "Compare with both temperatures.",
+      "purpose": "Independent intermediate state prediction.",
+      "title": "Predict between thresholds",
+      "followUp": "st-v1-r-data",
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-p-below",
+      "prompt": "X melts at −20 °C and boils at 60 °C. Predict its state at −30 °C at fixed pressure.",
+      "answer": "Solid",
+      "options": [
+        "Solid",
+        "Liquid",
+        "Gas"
+      ],
+      "misconceptions": {
+        "Liquid": "−30 is below −20, not above it.",
+        "Gas": "It is also below the boiling point."
+      },
+      "explanation": "−30 < −20, so it is below melting.",
+      "hint": "Place negative values on a number line.",
+      "purpose": "Independent signed comparison.",
+      "title": "Predict a negative temperature",
+      "followUp": "st-v1-r-data",
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-p-above",
+      "prompt": "X melts at −20 °C and boils at 60 °C. Predict its state at 80 °C at fixed pressure.",
+      "answer": "Gas",
+      "options": [
+        "Gas",
+        "Liquid",
+        "Solid"
+      ],
+      "misconceptions": {
+        "Liquid": "80 is above the boiling threshold.",
+        "Solid": "It is above both thresholds."
+      },
+      "explanation": "80 > 60, so the supplied pure substance is gas.",
+      "hint": "Compare with boiling.",
+      "purpose": "Independent upper interval prediction.",
+      "title": "Predict above boiling",
+      "followUp": "st-v1-r-data",
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-p-melt-boundary",
+      "prompt": "At exactly X’s −20 °C melting point at fixed pressure, what is the correct boundary statement?",
+      "answer": "Solid and liquid may coexist; temperature alone does not give their proportions",
+      "options": [
+        "Solid and liquid may coexist; temperature alone does not give their proportions",
+        "It must instantly be 100% liquid in every situation",
+        "It must be gas"
+      ],
+      "misconceptions": {
+        "It must instantly be 100% liquid in every situation": "Temperature alone does not tell how far the transition has progressed.",
+        "It must be gas": "The boiling threshold is 60 °C."
+      },
+      "explanation": "A pure-substance transition can have both phases at the threshold; energy/progression determines the amount of each.",
+      "hint": "Avoid assigning a fraction from temperature alone.",
+      "purpose": "Independent equality-case reasoning.",
+      "title": "Handle exact melting",
+      "followUp": "st-v1-r-data",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-data",
+        "st-v1-g-forecast",
+        "st-v1-p-boil-boundary",
+        "st-v1-cb-boundary",
+        "st-v1-rb-boundary"
+      ]
+    },
+    {
+      "id": "st-v1-p-boil-boundary",
+      "prompt": "At exactly X’s 60 °C boiling point at fixed pressure, what is the correct boundary statement?",
+      "answer": "Liquid and gas may coexist; proportions are not determined by temperature alone",
+      "options": [
+        "Liquid and gas may coexist; proportions are not determined by temperature alone",
+        "All particles must disappear",
+        "It must still be solid"
+      ],
+      "misconceptions": {
+        "All particles must disappear": "Particles remain present through the physical change.",
+        "It must still be solid": "The melting point is −20 °C."
+      },
+      "explanation": "Liquid/gas coexistence is possible at the supplied transition point.",
+      "hint": "Distinguish a transition boundary from a whole interval.",
+      "purpose": "Independent upper equality case.",
+      "title": "Handle exact boiling",
+      "followUp": "st-v1-r-data",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-data",
+        "st-v1-g-forecast",
+        "st-v1-p-melt-boundary",
+        "st-v1-cb-boundary",
+        "st-v1-rb-boundary"
+      ]
+    },
+    {
+      "id": "st-v1-p-melt-freeze",
+      "prompt": "Name solid → liquid and liquid → solid.",
+      "answer": "Melting and freezing",
+      "options": [
+        "Boiling and condensing",
+        "Melting and chemical decomposition",
+        "Melting and freezing"
+      ],
+      "misconceptions": {
+        "Boiling and condensing": "Those are liquid/gas interconversions.",
+        "Melting and chemical decomposition": "Freezing is a physical reverse change."
+      },
+      "explanation": "Melting and freezing occur at the same pure-substance transition temperature under the same pressure.",
+      "hint": "Follow the start and end states.",
+      "purpose": "Independent lower interconversion names.",
+      "title": "Name two reverse changes",
+      "followUp": "st-v1-r-spacing",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-energy",
+        "st-v1-g-transition",
+        "st-v1-p-boil-condense",
+        "st-v1-p-energy",
+        "st-v1-ca-cooling",
+        "st-v1-cb-heat",
+        "st-v1-rb-condense"
+      ]
+    },
+    {
+      "id": "st-v1-p-boil-condense",
+      "prompt": "Name liquid → gas during boiling and gas → liquid.",
+      "answer": "Boiling and condensing",
+      "options": [
+        "Boiling and condensing",
+        "Freezing and melting",
+        "Boiling and creation of a new element"
+      ],
+      "misconceptions": {
+        "Freezing and melting": "Those link liquid and solid.",
+        "Boiling and creation of a new element": "Condensing retains chemical identity."
+      },
+      "explanation": "Boiling/condensing connect liquid and gas and are physical changes.",
+      "hint": "Follow the direction arrows.",
+      "purpose": "Independent upper interconversion names.",
+      "title": "Name liquid/gas changes",
+      "followUp": "st-v1-r-spacing",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-energy",
+        "st-v1-g-transition",
+        "st-v1-p-melt-freeze",
+        "st-v1-p-energy",
+        "st-v1-ca-cooling",
+        "st-v1-cb-heat",
+        "st-v1-rb-condense"
+      ]
+    },
+    {
+      "id": "st-v1-p-energy",
+      "prompt": "Which pair describes boiling and condensing?",
+      "answer": "Boiling absorbs energy; condensing transfers energy to the surroundings",
+      "options": [
+        "Boiling releases and condensing absorbs energy",
+        "Boiling absorbs energy; condensing transfers energy to the surroundings",
+        "Both require particle growth"
+      ],
+      "misconceptions": {
+        "Both require particle growth": "Individual size does not explain the changes.",
+        "Boiling releases and condensing absorbs energy": "This reverses the supplied directions."
+      },
+      "explanation": "Heating changes overcome attractions; the reverse changes transfer energy out of the substance.",
+      "hint": "State the reference substance and surroundings.",
+      "purpose": "Independent energy-direction transfer.",
+      "title": "Match energy direction",
+      "followUp": "st-v1-r-energy",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-energy",
+        "st-v1-g-transition",
+        "st-v1-p-melt-freeze",
+        "st-v1-p-boil-condense",
+        "st-v1-ca-cooling",
+        "st-v1-cb-heat",
+        "st-v1-rb-condense"
+      ]
+    },
+    {
+      "id": "st-v1-p-plateau",
+      "prompt": "Why can the temperature remain constant while a pure substance melts, despite continued energy input?",
+      "answer": "Energy overcomes relevant attractions and changes arrangement during the transition",
+      "options": [
+        "Added energy must enlarge each atom",
+        "No energy is entering",
+        "Energy overcomes relevant attractions and changes arrangement during the transition"
+      ],
+      "misconceptions": {
+        "Added energy must enlarge each atom": "Particle size does not grow this way.",
+        "No energy is entering": "Energy can enter without increasing temperature during the transition."
+      },
+      "explanation": "During the transition, energy changes particle separation/arrangement rather than necessarily increasing temperature.",
+      "hint": "Distinguish a temperature rise from the energy used in a phase change.",
+      "purpose": "Independent transition-energy explanation.",
+      "title": "Energy during melting",
+      "followUp": "st-v1-r-energy",
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-p-forces",
+      "prompt": "For comparable supplied structures, why can stronger attractions require a higher state-change temperature?",
+      "answer": "More energy is needed to overcome the stronger attractions",
+      "options": [
+        "More energy is needed to overcome the stronger attractions",
+        "Strong attractions always need no energy",
+        "Particle identity must change into another element"
+      ],
+      "misconceptions": {
+        "Strong attractions always need no energy": "Overcoming stronger attraction requires energy.",
+        "Particle identity must change into another element": "The comparison concerns physical state change."
+      },
+      "explanation": "Relate force strength to energy, using the actual bonding/structure rather than assuming only weak molecular forces.",
+      "hint": "Name the energy requirement.",
+      "purpose": "Independent strength/energy relation.",
+      "title": "Compare attraction strength",
+      "followUp": "st-v1-r-energy",
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-p-molten",
+      "prompt": "What state symbol represents molten sodium chloride?",
+      "answer": "(l)",
+      "options": [
+        "(aq)",
+        "(s)",
+        "(l)"
+      ],
+      "misconceptions": {
+        "(aq)": "Aqueous means dissolved in water.",
+        "(s)": "Molten means liquid."
+      },
+      "explanation": "A molten substance is liquid, so use (l).",
+      "hint": "Separate melting from dissolving.",
+      "purpose": "Independent state-symbol demand from the actual paired exam requirement.",
+      "title": "Use the molten state symbol",
+      "followUp": "st-v1-r-symbol",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-symbol",
+        "st-v1-p-aqueous",
+        "st-v1-ca-symbol",
+        "st-v1-cb-aqueous",
+        "st-v1-ra-symbol"
+      ]
+    },
+    {
+      "id": "st-v1-p-aqueous",
+      "prompt": "What does (aq) mean in a chemical equation?",
+      "answer": "The substance is dissolved in water",
+      "options": [
+        "The substance is dissolved in water",
+        "Every liquid regardless of solvent",
+        "The substance is a gas"
+      ],
+      "misconceptions": {
+        "Every liquid regardless of solvent": "(l) is the physical liquid symbol.",
+        "The substance is a gas": "The gas symbol is (g)."
+      },
+      "explanation": "An aqueous solution is a water-based solution.",
+      "hint": "Read aqueous rather than merely liquid.",
+      "purpose": "Independent solution/state distinction.",
+      "title": "Interpret an aqueous symbol",
+      "followUp": "st-v1-r-symbol",
+      "conciseHeading": true,
+      "exposureAliases": [
+        "st-v1-r-symbol",
+        "st-v1-p-molten",
+        "st-v1-ca-symbol",
+        "st-v1-cb-aqueous",
+        "st-v1-ra-symbol"
+      ]
+    },
+    {
+      "id": "st-v1-p-bulk",
+      "prompt": "Can a single atom itself have the bulk property of flowing as a liquid sample?",
+      "answer": "No: liquid behaviour is a collective bulk property",
+      "options": [
+        "Yes: every atom has a liquid container shape",
+        "No: real atoms do not exist",
+        "No: liquid behaviour is a collective bulk property"
+      ],
+      "misconceptions": {
+        "Yes: every atom has a liquid container shape": "Single particles do not acquire the bulk sample shape.",
+        "No: real atoms do not exist": "Atoms exist; the issue is the property’s scale."
+      },
+      "explanation": "Flow, fixed bulk shape and similar material properties arise from many particles and their interactions.",
+      "hint": "Distinguish a particle from a macroscopic sample.",
+      "purpose": "Independent particle/bulk distinction.",
+      "title": "Avoid bulk properties for one particle",
+      "followUp": "st-v1-r-spacing",
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-p-higher-limits",
+      "prompt": "Higher extension: why can a solid-sphere particle diagram alone fail to explain different melting points?",
+      "answer": "It omits relevant forces and represents all particles as solid spheres",
+      "options": [
+        "Every drawn sphere proves each atom is a bulk solid",
+        "It omits relevant forces and represents all particles as solid spheres",
+        "The diagram proves that no real forces exist"
+      ],
+      "misconceptions": {
+        "The diagram proves that no real forces exist": "Forces omitted from a model can still exist in the substance.",
+        "Every drawn sphere proves each atom is a bulk solid": "Particle representation does not assign bulk solid properties."
+      },
+      "explanation": "AQA Higher limitations include omitted forces and solid-sphere representation. Real particles/bonding are more varied; model omissions are not proof of absent forces.",
+      "hint": "Explain what the model leaves out.",
+      "purpose": "Explicitly Higher-only model-limits extension; excluded from common checks.",
+      "title": "Higher: what spheres omit",
+      "followUp": "st-v1-r-spacing",
+      "exposureAliases": [
+        "st-write-v1-p-higher-limits",
+        "st-write-v1-ca-higher",
+        "st-write-v1-ra-higher"
+      ],
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-p-explain",
+      "title": "Explain melting without new atoms",
+      "prompt": "Explain melting of the supplied pure substance in terms of energy, forces, arrangement and movement. State what happens to particle chemical identity and individual size.",
+      "answer": "Energy enters the substance and overcomes relevant attractions holding particles in fixed positions. Particles remain close but can move past one another in the liquid. Their chemical identities and individual sizes do not change into new or larger particles. The relevant attractions depend on the material’s bonding and structure.",
+      "rubric": [
+        "Energy transferred into the substance.",
+        "Relevant attractions overcome rather than claiming every material has only weak intermolecular forces.",
+        "Fixed-position vibration becomes close particles moving past one another.",
+        "Particle identity/size retained; this is a physical change."
+      ],
+      "explanation": "The explanation links supplied energy and particle movement without inventing a chemical change.",
+      "hint": "Explain what changes between particles and what stays the same about them.",
+      "purpose": "Written physical-change explanation; self-review only.",
+      "followUp": "st-v1-r-energy",
+      "exposureAliases": [
+        "st-v1-r-energy",
+        "st-write-v1-ca-melt",
+        "st-write-v1-ca-forces",
+        "st-write-v1-ra-freeze"
+      ],
+      "conciseHeading": true
+    },
+    {
+      "id": "st-v1-p-compare",
+      "title": "Explain three bulk behaviours",
+      "prompt": "Use particles to explain why a solid has fixed shape, a liquid flows while retaining nearly fixed volume, and a gas fills the available container volume. Explain why saying solid particles do not move is wrong.",
+      "answer": "In a solid, close particles vibrate about fixed positions, retaining the bulk shape. Liquid particles are close but can move past one another, allowing flow with nearly fixed volume. Gas particles have large separations and move rapidly/randomly through the available space, so the gas takes the container’s shape and volume. Solid particles still vibrate.",
+      "rubric": [
+        "Solid particles remain in fixed positions while vibrating.",
+        "Liquid particles stay close and move past each other.",
+        "Gas particles are widely spaced and move through available volume.",
+        "Bulk behaviour follows arrangement/movement, not individual particles gaining bulk shape."
+      ],
+      "explanation": "Arrangement and movement explain bulk behaviour; single particles do not inherit the material’s bulk properties.",
+      "hint": "Compare position freedom and spacing in all three states.",
+      "purpose": "Written three-state comparison; self-review only.",
+      "followUp": "st-v1-r-spacing",
+      "exposureAliases": [
+        "st-v1-r-spacing",
+        "st-write-v1-ca-bulk",
+        "st-write-v1-ra-condense"
+      ],
+      "conciseHeading": true
+    },
+    {
+      "id": "st-write-v1-p-higher-limits",
+      "title": "Higher: evaluate the model",
+      "conciseHeading": true,
+      "prompt": "Higher extension: explain why identical solid spheres with no forces cannot explain different melting points.",
+      "answer": "The representation omits the attractions whose strengths determine the energy needed for a state change. Identical solid inelastic spheres do not represent the different atom, ion and molecule structures or their bonding. The model can illustrate arrangement and motion, but it cannot by itself explain different melting points; omitted forces still exist in real substances.",
+      "rubric": [
+        "Explain that omitted attractions prevent a force-strength/energy account.",
+        "Explain why identical solid inelastic spheres do not capture varied particles and bonding.",
+        "Distinguish a useful arrangement model from a complete explanation; omission does not prove real forces are absent."
+      ],
+      "followUp": "st-v1-r-energy",
+      "explanation": "Compare your retained explanation with the criteria. Written reasoning receives manual self-review, without an automatic examiner mark.",
+      "hint": "Separate particle identity, arrangement and movement. Link the energy transfer to the relevant attractions.",
+      "purpose": "Construct a particle and energy account of physical changes, keeping model limitations and bulk properties distinct.",
+      "tier": "higher",
+      "exposureAliases": [
+        "st-v1-p-higher-limits",
+        "st-write-v1-ca-higher",
+        "st-write-v1-ra-higher"
+      ]
+    }
+  ],
+  "checkForms": [
+    [
+      {
+        "id": "st-v1-ca-solid",
+        "prompt": "Which movement occurs in the simple solid model?",
+        "answer": "Vibration about fixed positions",
+        "options": [
+          "Continuous flow past neighbours",
+          "Vibration about fixed positions",
+          "Absolutely no motion"
+        ],
+        "misconceptions": {
+          "Absolutely no motion": "Solid particles still vibrate.",
+          "Continuous flow past neighbours": "That is not the solid movement model."
+        },
+        "explanation": "Fixed positions do not mean zero motion.",
+        "hint": "Recall movement, not a still image.",
+        "purpose": "Reserved solid movement.",
+        "title": "Retrieve solid movement",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-solid",
+          "st-v1-g-solid",
+          "st-v1-p-solid",
+          "st-v1-ra-solid"
+        ]
+      },
+      {
+        "id": "st-v1-ca-data",
+        "prompt": "Y melts at −10 °C and boils at 30 °C at fixed pressure. Predict its state at 5 °C.",
+        "answer": "Liquid",
+        "options": [
+          "Gas",
+          "Liquid",
+          "Solid"
+        ],
+        "misconceptions": {
+          "Solid": "5 is above −10.",
+          "Gas": "5 is below 30."
+        },
+        "explanation": "−10 < 5 < 30, so Y is liquid.",
+        "hint": "Use this supplied dataset, not X’s values.",
+        "purpose": "Reserved unfamiliar state transfer.",
+        "title": "Apply unfamiliar supplied data",
+        "conciseHeading": true
+      },
+      {
+        "id": "st-v1-ca-cooling",
+        "prompt": "What happens during freezing of the supplied substance?",
+        "answer": "Liquid becomes solid and energy transfers to the surroundings",
+        "options": [
+          "Liquid becomes solid and energy transfers to the surroundings",
+          "Solid becomes gas and absorbs energy",
+          "The substance necessarily changes into a new element"
+        ],
+        "misconceptions": {
+          "Solid becomes gas and absorbs energy": "That is not freezing.",
+          "The substance necessarily changes into a new element": "The change is physical."
+        },
+        "explanation": "Freezing reverses melting.",
+        "hint": "Track direction and energy.",
+        "purpose": "Reserved physical/energy retrieval.",
+        "title": "Retrieve a cooling change",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-energy",
+          "st-v1-g-transition",
+          "st-v1-p-melt-freeze",
+          "st-v1-p-boil-condense",
+          "st-v1-p-energy",
+          "st-v1-cb-heat",
+          "st-v1-rb-condense"
+        ]
+      },
+      {
+        "id": "st-v1-ca-size",
+        "prompt": "When the same particles occupy a larger gas volume, what changes?",
+        "answer": "Spacing increases while individual particle size remains unchanged",
+        "options": [
+          "The particles must vanish",
+          "Spacing increases while individual particle size remains unchanged",
+          "Every particle grows to fill the container"
+        ],
+        "misconceptions": {
+          "Every particle grows to fill the container": "Spacing is not atom size.",
+          "The particles must vanish": "They remain present."
+        },
+        "explanation": "Expansion concerns distances between particles.",
+        "hint": "Compare spacing and radius separately.",
+        "purpose": "Reserved size/spacing distinction.",
+        "title": "Retrieve bulk expansion",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-spacing",
+          "st-v1-g-solid",
+          "st-v1-g-liquid-gas",
+          "st-v1-p-size",
+          "st-v1-rb-spacing"
+        ]
+      },
+      {
+        "id": "st-v1-ca-symbol",
+        "prompt": "Which state symbol means liquid, including a molten substance?",
+        "answer": "(l)",
+        "options": [
+          "(g)",
+          "(l)",
+          "(aq)"
+        ],
+        "misconceptions": {
+          "(aq)": "That means dissolved in water.",
+          "(g)": "That means gas."
+        },
+        "explanation": "Use (l) for the liquid state.",
+        "hint": "Recall the state-symbol distinction.",
+        "purpose": "Reserved molten-state retrieval.",
+        "title": "Retrieve a molten symbol",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-symbol",
+          "st-v1-p-molten",
+          "st-v1-p-aqueous",
+          "st-v1-cb-aqueous",
+          "st-v1-ra-symbol"
+        ]
+      }
+    ],
+    [
+      {
+        "id": "st-v1-cb-liquid",
+        "prompt": "Which state matches the supplied close disordered particle drawing?",
+        "answer": "Liquid",
+        "options": [
+          "A motionless solid",
+          "A gas with widely separated particles",
+          "Liquid"
+        ],
+        "misconceptions": {
+          "A motionless solid": "The pattern is close and disordered; liquid particles can move past neighbours.",
+          "A gas with widely separated particles": "That does not fit the supplied closeness."
+        },
+        "explanation": "Close disordered particles support this liquid model.",
+        "hint": "Read arrangement and movement.",
+        "purpose": "Alternative reserved diagram recognition.",
+        "title": "Recognise a new particle pattern",
+        "stateParticleDiagram": "liquid",
+        "conciseHeading": true
+      },
+      {
+        "id": "st-v1-cb-boundary",
+        "prompt": "Y melts at −10 °C and boils at 30 °C. At exactly −10 °C under the supplied fixed pressure, what can be stated?",
+        "answer": "Solid and liquid may coexist; the temperature does not establish proportions",
+        "options": [
+          "It must be gas",
+          "Solid and liquid may coexist; the temperature does not establish proportions",
+          "It is necessarily exactly 50% solid"
+        ],
+        "misconceptions": {
+          "It is necessarily exactly 50% solid": "Temperature alone does not supply a fraction.",
+          "It must be gas": "This is the melting boundary, not the boiling boundary."
+        },
+        "explanation": "A transition boundary is different from being strictly above or below a threshold.",
+        "hint": "Check equality, then avoid an invented fraction.",
+        "purpose": "Alternative reserved boundary transfer.",
+        "title": "Transfer an equality case",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-data",
+          "st-v1-g-forecast",
+          "st-v1-p-melt-boundary",
+          "st-v1-p-boil-boundary",
+          "st-v1-rb-boundary"
+        ]
+      },
+      {
+        "id": "st-v1-cb-heat",
+        "prompt": "What is the energy direction during boiling of the supplied liquid?",
+        "answer": "Energy enters the substance",
+        "options": [
+          "Atoms must expand in size",
+          "Energy enters the substance",
+          "Energy only leaves the substance"
+        ],
+        "misconceptions": {
+          "Energy only leaves the substance": "That describes the reverse cooling change.",
+          "Atoms must expand in size": "Particle size is retained."
+        },
+        "explanation": "Energy is supplied to overcome attractions.",
+        "hint": "Track the reference substance.",
+        "purpose": "Alternative reserved heating mechanism.",
+        "title": "Retrieve boiling energy",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-energy",
+          "st-v1-g-transition",
+          "st-v1-p-melt-freeze",
+          "st-v1-p-boil-condense",
+          "st-v1-p-energy",
+          "st-v1-ca-cooling",
+          "st-v1-rb-condense"
+        ]
+      },
+      {
+        "id": "st-v1-cb-bulk",
+        "prompt": "Why should the material’s liquid flow not be assigned to one atom?",
+        "answer": "It is a collective property of many interacting particles",
+        "options": [
+          "It proves all particles are solid balls",
+          "It is a collective property of many interacting particles",
+          "An atom must take the container’s shape"
+        ],
+        "misconceptions": {
+          "An atom must take the container’s shape": "That is a bulk sample property.",
+          "It proves all particles are solid balls": "The representation is schematic."
+        },
+        "explanation": "Particles and macroscopic material properties are different scales.",
+        "hint": "Separate one particle from many.",
+        "purpose": "Alternative reserved bulk reasoning.",
+        "title": "Retrieve scale of properties",
+        "conciseHeading": true
+      },
+      {
+        "id": "st-v1-cb-aqueous",
+        "prompt": "What does (aq) indicate?",
+        "answer": "Dissolved in water",
+        "options": [
+          "Any molten pure substance",
+          "Always a gas",
+          "Dissolved in water"
+        ],
+        "misconceptions": {
+          "Any molten pure substance": "Molten uses (l).",
+          "Always a gas": "Gas uses (g)."
+        },
+        "explanation": "Aqueous means a water-based solution.",
+        "hint": "Recall the solvent context.",
+        "purpose": "Alternative reserved symbol distinction.",
+        "title": "Retrieve a solution symbol",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-symbol",
+          "st-v1-p-molten",
+          "st-v1-p-aqueous",
+          "st-v1-ca-symbol",
+          "st-v1-ra-symbol"
+        ]
+      }
+    ],
+    [
+      {
+        "id": "st-write-v1-ca-melt",
+        "title": "Explain melting",
+        "conciseHeading": true,
+        "prompt": "Explain how particles change when a crystalline solid melts. Include energy and particle identity.",
+        "answer": "Energy transfers to the substance, allowing particles to overcome enough of the attractions holding them in fixed positions. They remain close but can move past one another in a less ordered arrangement. Particle chemical identities remain unchanged: melting is physical, not atoms growing or becoming a new substance.",
+        "rubric": [
+          "Describe energy transfer into the substance and overcoming attractions holding particles in fixed positions.",
+          "Contrast fixed-position vibration with close particles moving past one another in the liquid.",
+          "Keep particle chemical identity unchanged; do not claim particles grow, disappear or react."
+        ],
+        "followUp": "st-v1-r-energy",
+        "explanation": "Compare your retained explanation with the criteria. Written reasoning receives manual self-review, without an automatic examiner mark.",
+        "hint": "Separate particle identity, arrangement and movement. Link the energy transfer to the relevant attractions.",
+        "purpose": "Construct a particle and energy account of physical changes, keeping model limitations and bulk properties distinct.",
+        "exposureAliases": [
+          "st-v1-p-explain",
+          "st-v1-r-energy",
+          "st-write-v1-ca-forces",
+          "st-write-v1-ra-freeze"
+        ]
+      },
+      {
+        "id": "st-write-v1-ca-forces",
+        "title": "Compare boiling points",
+        "conciseHeading": true,
+        "prompt": "Two molecular liquids have comparable molecule sizes. A has stronger intermolecular attractions than B. Explain why A boils at a higher temperature.",
+        "answer": "Boiling separates molecules. Stronger intermolecular attractions in A require more energy to overcome, so A has a higher boiling point. The covalent bonds within each molecule are not broken by this physical change; molecule identities remain unchanged.",
+        "rubric": [
+          "Identify attractions between molecules, not covalent bonds within them.",
+          "Link stronger attractions to more energy needed to separate molecules.",
+          "Connect that energy demand to the higher boiling point and retain molecule identity."
+        ],
+        "followUp": "st-v1-r-energy",
+        "explanation": "Compare your retained explanation with the criteria. Written reasoning receives manual self-review, without an automatic examiner mark.",
+        "hint": "Separate particle identity, arrangement and movement. Link the energy transfer to the relevant attractions.",
+        "purpose": "Construct a particle and energy account of physical changes, keeping model limitations and bulk properties distinct.",
+        "exposureAliases": [
+          "st-v1-p-explain",
+          "st-v1-r-energy",
+          "st-write-v1-ca-melt",
+          "st-write-v1-ra-freeze"
+        ]
+      },
+      {
+        "id": "st-write-v1-ca-bulk",
+        "title": "Correct the particle claim",
+        "conciseHeading": true,
+        "prompt": "Sam says a gas forms because each particle expands and becomes a tiny gas. Correct this account.",
+        "answer": "Gas describes the bulk collection, not the state of each individual atom or molecule. The particles remain the same size and chemical identity; they become widely separated and move rapidly in random directions, filling the available space. Greater spacing, not swelling of particles, explains the increased sample volume.",
+        "rubric": [
+          "Distinguish a bulk gas from individual particles; do not assign a tiny gas state to each particle.",
+          "Keep individual size and chemical identity unchanged.",
+          "Explain widely spaced random movement through available space and increased separation."
+        ],
+        "followUp": "st-v1-r-spacing",
+        "explanation": "Compare your retained explanation with the criteria. Written reasoning receives manual self-review, without an automatic examiner mark.",
+        "hint": "Separate particle identity, arrangement and movement. Link the energy transfer to the relevant attractions.",
+        "purpose": "Construct a particle and energy account of physical changes, keeping model limitations and bulk properties distinct.",
+        "exposureAliases": [
+          "st-v1-p-compare",
+          "st-v1-r-spacing",
+          "st-write-v1-ra-condense"
+        ]
+      },
+      {
+        "id": "st-write-v1-ca-higher",
+        "title": "Higher: explain a model limit",
+        "conciseHeading": true,
+        "prompt": "Higher: a sphere model shows melting but no forces. Explain two limits that stop it predicting a material’s melting point.",
+        "answer": "The representation omits the attractions whose strengths determine the energy needed for a state change. Identical solid inelastic spheres do not represent the different atom, ion and molecule structures or their bonding. The model can illustrate arrangement and motion, but it cannot by itself explain different melting points; omitted forces still exist in real substances.",
+        "rubric": [
+          "Explain that omitted attractions prevent a force-strength/energy account.",
+          "Explain why identical solid inelastic spheres do not capture varied particles and bonding.",
+          "Distinguish a useful arrangement model from a complete explanation; omission does not prove real forces are absent."
+        ],
+        "followUp": "st-v1-r-energy",
+        "explanation": "Compare your retained explanation with the criteria. Written reasoning receives manual self-review, without an automatic examiner mark.",
+        "hint": "Separate particle identity, arrangement and movement. Link the energy transfer to the relevant attractions.",
+        "purpose": "Construct a particle and energy account of physical changes, keeping model limitations and bulk properties distinct.",
+        "tier": "higher",
+        "exposureAliases": [
+          "st-v1-p-higher-limits",
+          "st-write-v1-p-higher-limits",
+          "st-write-v1-ra-higher"
+        ]
+      }
+    ]
+  ],
+  "reviewForms": [
+    [
+      {
+        "id": "st-v1-ra-solid",
+        "prompt": "How do particles move in the simple crystalline-solid model?",
+        "answer": "They vibrate about fixed positions",
+        "options": [
+          "They all flow past one another",
+          "They vibrate about fixed positions",
+          "They do not move at all"
+        ],
+        "misconceptions": {
+          "They do not move at all": "Vibration continues.",
+          "They all flow past one another": "That is liquid-style movement."
+        },
+        "explanation": "Fixed average positions coexist with vibration.",
+        "hint": "Recall the tracked particle.",
+        "purpose": "Delayed movement retrieval.",
+        "title": "Retrieve after the delay",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-solid",
+          "st-v1-g-solid",
+          "st-v1-p-solid",
+          "st-v1-ca-solid"
+        ]
+      },
+      {
+        "id": "st-v1-ra-data",
+        "prompt": "Z melts at −5 °C and boils at 45 °C at fixed pressure. Predict its state at 20 °C.",
+        "answer": "Liquid",
+        "options": [
+          "Gas",
+          "Liquid",
+          "Solid"
+        ],
+        "misconceptions": {
+          "Solid": "20 exceeds −5.",
+          "Gas": "20 remains below 45."
+        },
+        "explanation": "The supplied temperature lies between both thresholds.",
+        "hint": "Compare this dataset’s values.",
+        "purpose": "Delayed unfamiliar data transfer.",
+        "title": "Retrieve a new interval",
+        "conciseHeading": true
+      },
+      {
+        "id": "st-v1-ra-symbol",
+        "prompt": "What state symbol represents a molten substance?",
+        "answer": "(l)",
+        "options": [
+          "(s)",
+          "(l)",
+          "(aq)"
+        ],
+        "misconceptions": {
+          "(aq)": "Aqueous means dissolved in water.",
+          "(s)": "Molten is not solid."
+        },
+        "explanation": "Melting yields the liquid state.",
+        "hint": "Distinguish melting and dissolving.",
+        "purpose": "Delayed molten-state retrieval.",
+        "title": "Retrieve the liquid symbol",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-symbol",
+          "st-v1-p-molten",
+          "st-v1-p-aqueous",
+          "st-v1-ca-symbol",
+          "st-v1-cb-aqueous"
+        ]
+      }
+    ],
+    [
+      {
+        "id": "st-v1-rb-spacing",
+        "prompt": "Why can the gas occupy more volume without changing its particle identities?",
+        "answer": "There is much more space between particles",
+        "options": [
+          "Each atom changes into a larger element",
+          "Every particle disappears",
+          "There is much more space between particles"
+        ],
+        "misconceptions": {
+          "Each atom changes into a larger element": "Nuclei/chemical identities are retained.",
+          "Every particle disappears": "They remain in the sample."
+        },
+        "explanation": "Spacing changes, not individual atom size.",
+        "hint": "Compare distances rather than radii.",
+        "purpose": "Alternative delayed expansion retrieval.",
+        "title": "Retrieve gas expansion",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-spacing",
+          "st-v1-g-solid",
+          "st-v1-g-liquid-gas",
+          "st-v1-p-size",
+          "st-v1-ca-size"
+        ]
+      },
+      {
+        "id": "st-v1-rb-condense",
+        "prompt": "What is condensing?",
+        "answer": "Gas becomes liquid and transfers energy to the surroundings",
+        "options": [
+          "A physical change creates a new element",
+          "Gas becomes liquid and transfers energy to the surroundings",
+          "Liquid becomes gas while energy enters"
+        ],
+        "misconceptions": {
+          "Liquid becomes gas while energy enters": "That is the reverse change.",
+          "A physical change creates a new element": "Condensing retains chemical identity."
+        },
+        "explanation": "Condensing is a cooling physical change.",
+        "hint": "Follow direction and energy.",
+        "purpose": "Alternative delayed interconversion.",
+        "title": "Retrieve reverse change",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-energy",
+          "st-v1-g-transition",
+          "st-v1-p-melt-freeze",
+          "st-v1-p-boil-condense",
+          "st-v1-p-energy",
+          "st-v1-ca-cooling",
+          "st-v1-cb-heat"
+        ]
+      },
+      {
+        "id": "st-v1-rb-boundary",
+        "prompt": "Z boils at 45 °C at fixed pressure. What is possible at exactly 45 °C?",
+        "answer": "Liquid and gas may coexist; fractions need further information",
+        "options": [
+          "Every atom becomes bigger",
+          "Liquid and gas may coexist; fractions need further information",
+          "It must be exactly half liquid"
+        ],
+        "misconceptions": {
+          "It must be exactly half liquid": "No phase fraction is supplied.",
+          "Every atom becomes bigger": "Particle sizes do not cause the transition."
+        },
+        "explanation": "The transition temperature alone does not specify proportions.",
+        "hint": "Treat equality separately from the interval above boiling.",
+        "purpose": "Alternative delayed equality reasoning.",
+        "title": "Retrieve an upper boundary",
+        "conciseHeading": true,
+        "exposureAliases": [
+          "st-v1-r-data",
+          "st-v1-g-forecast",
+          "st-v1-p-melt-boundary",
+          "st-v1-p-boil-boundary",
+          "st-v1-cb-boundary"
+        ]
+      }
+    ],
+    [
+      {
+        "id": "st-write-v1-ra-freeze",
+        "title": "Explain freezing",
+        "conciseHeading": true,
+        "prompt": "A pure liquid freezes at fixed pressure. Explain energy transfer and changes in particle movement and arrangement.",
+        "answer": "Energy transfers from the substance to its surroundings. Attractions hold the particles in fixed positions in the solid; particles still vibrate, rather than becoming motionless. They remain close and their chemical identities are unchanged. A crystalline solid has a regular arrangement, although not all solids are crystalline.",
+        "rubric": [
+          "Describe energy leaving the substance for its surroundings.",
+          "Link attractions to fixed-position vibration, rather than no motion.",
+          "Keep particles close and identities unchanged; a regular arrangement applies to the crystalline model."
+        ],
+        "followUp": "st-v1-r-solid",
+        "explanation": "Compare your retained explanation with the criteria. Written reasoning receives manual self-review, without an automatic examiner mark.",
+        "hint": "Separate particle identity, arrangement and movement. Link the energy transfer to the relevant attractions.",
+        "purpose": "Construct a particle and energy account of physical changes, keeping model limitations and bulk properties distinct.",
+        "exposureAliases": [
+          "st-v1-p-explain",
+          "st-v1-r-energy",
+          "st-write-v1-ca-melt",
+          "st-write-v1-ca-forces"
+        ]
+      },
+      {
+        "id": "st-write-v1-ra-condense",
+        "title": "Explain condensation",
+        "conciseHeading": true,
+        "prompt": "Explain what happens to a gas’s particles and energy when it condenses. Does this create new molecules?",
+        "answer": "Energy transfers from the gas to its surroundings. Attractions bring particles much closer together in the liquid, where they can still move past one another. Their chemical identity is unchanged, so condensation does not create new molecules. Gas and liquid describe arrangements of the bulk sample, not different-sized individual particles.",
+        "rubric": [
+          "Describe energy transfer out to the surroundings.",
+          "Describe closer particles that remain mobile in the liquid, with attractions relevant to bringing them together.",
+          "Keep chemical identity unchanged: this is physical, not production of new molecules."
+        ],
+        "followUp": "st-v1-r-spacing",
+        "explanation": "Compare your retained explanation with the criteria. Written reasoning receives manual self-review, without an automatic examiner mark.",
+        "hint": "Separate particle identity, arrangement and movement. Link the energy transfer to the relevant attractions.",
+        "purpose": "Construct a particle and energy account of physical changes, keeping model limitations and bulk properties distinct.",
+        "exposureAliases": [
+          "st-v1-p-compare",
+          "st-v1-r-spacing",
+          "st-write-v1-ca-bulk"
+        ]
+      },
+      {
+        "id": "st-write-v1-ra-boundary",
+        "title": "Justify a boundary prediction",
+        "conciseHeading": true,
+        "prompt": "X melts at −20 °C and boils at 60 °C at fixed pressure. Explain its state at −10 °C and what can coexist at exactly −20 °C.",
+        "answer": "At −10 °C X is above its melting point but below its boiling point, so it is liquid. At exactly −20 °C solid and liquid can coexist during melting/freezing; that boundary temperature alone does not specify how much of each phase is present. Particles are not themselves tiny solids or liquids.",
+        "rubric": [
+          "Use both signed comparisons: −20 < −10 < 60, so X is liquid.",
+          "Recognise solid/liquid coexistence at the melting boundary during a transition.",
+          "Do not infer phase proportions from temperature alone or assign bulk states to individual particles."
+        ],
+        "followUp": "st-v1-r-data",
+        "explanation": "Compare your retained explanation with the criteria. Written reasoning receives manual self-review, without an automatic examiner mark.",
+        "hint": "Separate particle identity, arrangement and movement. Link the energy transfer to the relevant attractions.",
+        "purpose": "Construct a particle and energy account of physical changes, keeping model limitations and bulk properties distinct.",
+        "exposureAliases": [
+          "st-v1-r-data"
+        ]
+      },
+      {
+        "id": "st-write-v1-ra-higher",
+        "title": "Higher: retrieve model limits",
+        "conciseHeading": true,
+        "prompt": "Higher: Lee treats particles as literal solid inelastic balls and says omitted forces do not exist. Explain why both claims fail.",
+        "answer": "Solid inelastic balls are an illustrative representation, not literal particle structure: real particles may be atoms, ions or molecules with different bonding. Forces omitted from a drawing still act in the real material. Their type and strength determine the energy needed for changes of state, so the no-force ball model cannot explain differing melting/boiling points by itself.",
+        "rubric": [
+          "Explain the solid inelastic sphere assumption as a representation, not literal structure or bulk solid particles.",
+          "State that omitted forces still exist in the real substance.",
+          "Connect actual attraction type/strength to state-change energy and temperature, which the no-force model cannot predict."
+        ],
+        "followUp": "st-v1-r-energy",
+        "explanation": "Compare your retained explanation with the criteria. Written reasoning receives manual self-review, without an automatic examiner mark.",
+        "hint": "Separate particle identity, arrangement and movement. Link the energy transfer to the relevant attractions.",
+        "purpose": "Construct a particle and energy account of physical changes, keeping model limitations and bulk properties distinct.",
+        "tier": "higher",
+        "exposureAliases": [
+          "st-v1-p-higher-limits",
+          "st-write-v1-p-higher-limits",
+          "st-write-v1-ca-higher"
+        ]
+      }
+    ]
+  ],
+  "practiceGroups": [
+    {
+      "label": "Particles and signed state predictions",
+      "taskIds": [
+        "st-v1-p-solid",
+        "st-v1-p-liquid",
+        "st-v1-p-gas",
+        "st-v1-p-size",
+        "st-v1-p-conserve",
+        "st-v1-p-between",
+        "st-v1-p-below",
+        "st-v1-p-above",
+        "st-v1-p-melt-boundary",
+        "st-v1-p-boil-boundary"
+      ]
+    },
+    {
+      "label": "Physical changes, energy and symbols",
+      "taskIds": [
+        "st-v1-p-melt-freeze",
+        "st-v1-p-boil-condense",
+        "st-v1-p-energy",
+        "st-v1-p-plateau",
+        "st-v1-p-forces",
+        "st-v1-p-molten",
+        "st-v1-p-aqueous",
+        "st-v1-p-bulk"
+      ]
+    },
+    {
+      "label": "Explain bulk behaviour",
+      "taskIds": [
+        "st-v1-p-explain",
+        "st-v1-p-compare"
+      ]
+    },
+    {
+      "label": "Higher: model limitations",
+      "taskIds": [
+        "st-v1-p-higher-limits",
+        "st-write-v1-p-higher-limits"
+      ]
+    }
+  ]
+}

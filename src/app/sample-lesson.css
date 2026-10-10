@@ -8957,6 +8957,9 @@ body:has(.sample-lesson) .topic-number {
   margin: 0;
   max-width: 100%;
 }
+.sample-lesson[data-lesson] .sample-task-jump .practice-task-picker {
+  display: block;
+}
 .sample-task-jump-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -8976,4 +8979,22 @@ body:has(.sample-lesson) .topic-number {
   background: var(--ink);
   border-color: var(--ink);
   color: white;
+}
+
+/* Complete state-symbol equations need room for the whole submitted reaction. */
+.sample-lesson[data-lesson="states-of-matter"] .state-symbol-answer textarea {
+  height: 104px;
+  min-height: 104px;
+}
+
+@media (max-width: 600px) {
+  .sample-lesson[data-lesson="states-of-matter"]:has(.state-symbol-answer)
+    :is(.sample-title-row, .sample-overview, .sample-stages) {
+    margin-bottom: 4px;
+  }
+  .sample-lesson[data-lesson="states-of-matter"]
+    .sample-task-answer
+    .question-panel:has(.state-symbol-answer) {
+    padding-top: 8px;
+  }
 }

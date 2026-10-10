@@ -151,7 +151,12 @@ test("every teaching task opens at 320, 390 and desktop with a full response con
         await opening(page, !!journey[stage][i].model);
         if (journey[stage][i].rubric) {
           await expect(
-            page.getByLabel("Your explanation", { exact: true }),
+            page.getByLabel(
+              journey[stage][i].writtenEquations
+                ? "Your equations"
+                : "Your explanation",
+              { exact: true },
+            ),
           ).toHaveValue("");
           await expect(
             page.getByText(journey[stage][i].answer, { exact: true }),
@@ -170,7 +175,12 @@ test("written practice preserves an incorrect causal account without awarding an
 }, info) => {
   await page.goto(route);
   await page.getByRole("button", { name: "Practise", exact: true }).click();
-  await choose(page, journey.practice.length);
+  await choose(
+    page,
+    journey.practice.findIndex(
+      (q) => q.id === statesWritingAdditions.practice[0].id,
+    ) + 1,
+  );
   await opening(page);
   const raw = "Solid spheres prove all real forces are absent. 1..2";
   const input = page.getByLabel("Your explanation", { exact: true });
