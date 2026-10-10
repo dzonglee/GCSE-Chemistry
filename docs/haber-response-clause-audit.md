@@ -1,0 +1,15 @@
+# Haber and NPK: response-clause follow-through
+
+Reviewed10 October2026 against complete AQA8462 sections4.10.4.1–2, printed88–89. Both sections are Separate Chemistry only; equilibrium/commercial-condition graph sub-demands are Higher. This update adds no app content or browser acceptance.
+
+All35 practice,24 independent-check and10 delayed-review response definitions were personally read with prompts, references, rubrics, equations, numerical constraints and constructions. Large exposure aliases were omitted from this response audit; prior individual preservation/runtime checks remain the evidence for those. Current curriculum concept and native Haber records were read directly.
+
+Both-tier source-pair responses generate nitrogen from air and hydrogen from natural gas/methane or water/steam, without imposing an unasked processing explanation. Conditions remain taught/recognised with units and approximate values. Full cooling/removal/recycling explanations distinguish condensation from chemical conversion; partial-pass accounts conserve atoms and distinguish maximum amount, atom economy and actual yield.
+
+Higher responses distinguish forward/reverse rates, concentrations, initial rate and equilibrium yield. Full connected commercial explanation includes temperature, pressure, iron, energy/equipment and feedstock cost/supply. Graph work includes equal scales, all observations separately retained from the smooth fit, supplied straight-segment interpolation and explicitly uncertain extrapolation. Illustrative data are not measured industrial evidence.
+
+NPK responses distinguish nutrient elements from compounds and oxide-equivalent commercial labels. Quantitative mass/application work uses a stated denominator and units. Concept/native activities explain integrated feedstocks, ammonia use for salts/nitric acid, mined potassium compounds and insoluble rock. Generated responses name all three acid-treatment products; phosphoric acid coproduct is not called a salt. Single and triple superphosphate compositions remain distinct. Supplied continuous industrial and repeated laboratory methods support a reasoned sustained-output comparison, not invented cost/energy/purity advantages.
+
+Actual2022H2QP22/MS21 and2021H2QP16/MS16 were personally reinspected as images. Actual2022H2Q07.4–6 and paired detailed commercial scheme, plus2021H2Q05.3 supplied industrial/laboratory text, were reread. Archive November2021 documents internally sayJune2021. No whole-paper inspection is claimed. Original sources and scoped implementation/QA remain in [lesson review](haber-and-fertilisers.md) and [individual recall correction](haber-source-recall-review.md).
+
+Current response matrix120/124 is still partial. Remaining early responses, external potable-water integration, formal representation demands, shared UI and final unified frozen course regression remain open. Written/construction responses are manually reviewed; app use does not certify supervised laboratory competence or exam readiness.
