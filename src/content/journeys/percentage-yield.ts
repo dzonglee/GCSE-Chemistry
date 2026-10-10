@@ -274,7 +274,7 @@ export const percentageYieldJourney: LessonJourney = {
       "Actual 15 g and theoretical 20 g product give 5 g shortfall. Which quantity is 75%?",
       "The collected product yield",
       {
-        "The percentage shortfall": "Shortfall5/20=25%.",
+        "The percentage shortfall": "Shortfall 5/20=25%.",
         "The mass of reactant used": "Reactant mass is not supplied or needed.",
       },
       "Yield 15/20=75%; shortfall 5/20=25%.",
@@ -294,10 +294,10 @@ export const percentageYieldJourney: LessonJourney = {
     n(
       "p-sigfig",
       "Respect significant figures",
-      "Actual dry product13.7 g; theoretical18.4 g. Find percentage yield to3 significant figures.",
+      "Actual dry product 13.7 g; theoretical 18.4 g. Find percentage yield to 3 significant figures.",
       74.5,
       "%",
-      "13.7/18.4×100=74.4565…; round the final percentage to74.5% (3 significant figures).",
+      "13.7/18.4×100=74.4565…; round the final percentage to 74.5% (3 significant figures).",
       "Keep full precision until the final answer.",
     ),
     n(
@@ -388,7 +388,7 @@ export const percentageYieldJourney: LessonJourney = {
     p(
       "p-collection",
       "Account for product outside sample",
-      "All 30 g possible product forms .24 g is collected; 6 g remains in apparatus. Enter percentage collected yield and total formed product mass.",
+      "All 30 g possible product forms; 24 g is collected; 6 g remains in apparatus. Enter percentage collected yield and total formed product mass.",
       [
         { id: "percentage", label: "Collected yield / %", answer: 80 },
         { id: "total", label: "Total formed product / g", answer: 30 },
@@ -461,7 +461,7 @@ export const percentageYieldJourney: LessonJourney = {
     w(
       "p-explain-loss",
       "Explain a loss without destroying atoms",
-      "All 25 g theoretical product forms .20 g is collected and 5 g remains in transfer apparatus. Explain the 80% collected yield and what happened to the missing collected mass.",
+      "All 25 g theoretical product forms; 20 g is collected and 5 g remains in transfer apparatus. Explain the 80% collected yield and what happened to the missing collected mass.",
       "Collected yield 20/25×100=80%. The 5 g remaining in apparatus still consists of product; it was not recovered in the measured sample. No atoms were destroyed, and incomplete reaction is not the specified cause.",
       [
         "Use actual collected mass over theoretical product mass.",

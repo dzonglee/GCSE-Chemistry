@@ -68,10 +68,24 @@ test("original 48 yield definitions, v1 and stage/form positions remain exact", 
   expect(j.version).toBe(1);
   expect(all).toHaveLength(60);
   expect(new Set(all.map((q) => q.id)).size).toBe(60);
-  for (const q of baseline.tasks)
+  // The archived definitions remain exact except these explicit editorial fixes.
+  const editorialFixes = [
+    ["Shortfall5", "Shortfall 5"],
+    ["product13.7", "product 13.7"],
+    ["theoretical18.4", "theoretical 18.4"],
+    ["to3 significant", "to 3 significant"],
+    ["to74.5%", "to 74.5%"],
+    ["forms .24 g", "forms; 24 g"],
+    ["forms .20 g", "forms; 20 g"],
+  ];
+  for (const q of baseline.tasks) {
+    let expected = JSON.stringify(q);
+    for (const [before, after] of editorialFixes)
+      expected = expected.replace(before, after);
     expect(JSON.parse(JSON.stringify(all.find((t) => t.id === q.id)))).toEqual(
-      q,
+      JSON.parse(expected),
     );
+  }
   for (const stage of ["warmup", "refresher", "guided", "practice"] as const)
     expect(
       j[stage].slice(0, baseline.stageIds[stage].length).map((q) => q.id),

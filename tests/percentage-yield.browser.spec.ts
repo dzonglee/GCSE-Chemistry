@@ -31,6 +31,26 @@ async function capture(page: Page, path: string) {
   });
   await page.screenshot({ path, fullPage: true });
 }
+async function captureProse(page: Page, path: string) {
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+    (document.activeElement as HTMLElement)?.blur();
+    document.querySelectorAll("textarea").forEach((el) => {
+      el.scrollTop = 0;
+    });
+    scrollTo(0, 0);
+    await new Promise<void>((resolve) =>
+      requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+    );
+  });
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.screenshot({ path, fullPage: true, scale: "css" });
+}
 async function answer(page: Page, q: (typeof journey.practice)[number]) {
   if (q.parts) {
     const values = JSON.parse(q.answer);
@@ -347,6 +367,15 @@ test("all 23 practice demands preserve product bases, final rounding and false w
         exact: true,
       }),
     ).toBeVisible();
+    if (
+      ["py-v1-p-sigfig", "py-v1-p-collection", "py-v1-p-explain-loss"].includes(
+        q.id,
+      )
+    )
+      await captureProse(
+        page,
+        `docs/qa/percentage-yield-prose/${info.project.name}-${q.id}.png`,
+      );
     if (q.id === "py-v1-p-select")
       await capture(
         page,

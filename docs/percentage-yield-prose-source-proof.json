@@ -1,0 +1,37 @@
+{
+  "beforeSHA256": "578d3efff43c16a02fc82ccd45d3bbafa689a701057845ee7c96a628144c37a8",
+  "afterSHA256": "8100dc280e052ae08753279d51f42c2e0b5784acee2cc814f99b09138695c1b6",
+  "spaceEdits": [
+    [
+      "Shortfall5",
+      "Shortfall 5"
+    ],
+    [
+      "product13.7",
+      "product 13.7"
+    ],
+    [
+      "theoretical18.4",
+      "theoretical 18.4"
+    ],
+    [
+      "to3 significant",
+      "to 3 significant"
+    ],
+    [
+      "to74.5%",
+      "to 74.5%"
+    ]
+  ],
+  "spacePhaseNonSpaceBytesIdentical": true,
+  "punctuationEdits": [
+    [
+      "forms .24 g",
+      "forms; 24 g"
+    ],
+    [
+      "forms .20 g",
+      "forms; 20 g"
+    ]
+  ]
+}
