@@ -2738,11 +2738,26 @@
     "trilogyCandidate": "5.9.3.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Fuel carbon/hydrogen/sulfur; sources CO/soot/SO2/NOx and supplied composition/condition prediction. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "All30 pollutant practice/24 reserved responses personally read. Whole explanations predict products from supplied fuel composition, oxygen availability and hot intake air; distinguish sulfur impurities, incomplete carbon oxidation and high-temperature nitrogen–oxygen reactions; no exact incomplete-product ratio is assumed. Fixed-formula coefficient constructions preserve atom totals; supplied fuel tables separate sulfur mass/percentage and particle evidence from unsupported equal-energy verdicts.",
+    "responseEvidenceIds": [
+      "pollution-v1-p-mixture",
+      "pollution-v1-p-hydrogen",
+      "pollution-v1-p-nitrogen",
+      "pollution-v1-p-sulfur",
+      "pollution-v1-p-balanceCO",
+      "pollution-v1-p-fuelReason",
+      "pollution-v1-p-energyBasis",
+      "pollution-v1-cA-predict",
+      "pollution-v1-cB-predict",
+      "pollution-v1-cA-balance",
+      "pollution-v1-cB-balance"
+    ],
+    "responseSourceReview": "Actual8462p79–80 bodies reread; all30 pollutant practice/16 cold/8 delayed responses read. Actual cached2023F2Q06.2–6 and2020F2Q02.2–5/paired schemes read. Existing individual lesson/source/QA review retained; no new app content or browser certificate."
   },
   {
     "section": "4.9.3.2",
@@ -2751,11 +2766,27 @@
     "trilogyCandidate": "5.9.3.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "CO toxic/colourless/odourless; SO2/NOx respiratory/acid rain; particulates dimming/health, causal explanations. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceReview": "Whole practice/cold/delayed writing explains colourless/odourless toxic CO and reduced oxygen delivery, sulfur/nitrogen oxide acid-rain and respiratory effects, and particulate sunlight scattering/absorption plus health harms. Detection by sight/smell and zero-pollution claims after a targeted treatment are rejected. Original emissions data do not supply a safe threshold; greenhouse infrared effects, particle dimming and acid damage remain distinct.",
+    "responseEvidenceIds": [
+      "pollution-v1-p-toxic",
+      "pollution-v1-p-smoke",
+      "pollution-v1-p-acid",
+      "pollution-v1-p-sharedAcid",
+      "pollution-v1-p-dimming",
+      "pollution-v1-p-health",
+      "pollution-v1-p-allSafe",
+      "pollution-v1-cA-CO",
+      "pollution-v1-cA-acid",
+      "pollution-v1-cB-dimming",
+      "pollution-v1-vA-CO",
+      "pollution-v1-vB-effects"
+    ],
+    "responseSourceReview": "Actual8462p79–80 bodies reread; all30 pollutant practice/16 cold/8 delayed responses read. Actual cached2023F2Q06.2–6 and2020F2Q02.2–5/paired schemes read. Existing individual lesson/source/QA review retained; no new app content or browser certificate."
   },
   {
     "section": "4.10.1.1",
