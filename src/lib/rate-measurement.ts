@@ -782,6 +782,8 @@ export function ratesPrediction(
         ? Math.abs(Number(b[k]) - Number(r[k])) < 1e-9
         : b[k] === r[k],
     );
+  if (mode === "interval" && b.record === "minutes")
+    correct = correct && /^\d+\.\d{2}$/.test(String(b.rate));
   const explanations: Record<RatesMode, string> = {
     interval: `Use quantity change ${r.quantity} over elapsed ${r.seconds} s, keeping the stated ${r.kind === "reactant-consumption" ? "positive reactant consumption" : "product formation"} convention. The requested mean is ${r.rate} ${r.unit}; ${b.record === "minutes" ? "9.85/150 is rounded only at the final requested two decimal places. " : ""}A finite-interval mean is not an instantaneous tangent slope or final graph height.`,
     mass: `Observed same-boundary balance loss is ${r.quantity} g over ${r.seconds} s, giving ${r.rate} g/s. ${r.claim === "mass-loss-tracks-escaped-gas" ? "Under the stated no-evaporation/no-spray conditions, this tracks escaped gas. The flask itself and retained contents must not become the numerator." : "This observed balance-loss rate does not by itself establish chemical gas-production rate under the stated retained-gas or mixed-loss conditions."} Atoms are conserved across the wider system.`,

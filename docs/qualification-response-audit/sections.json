@@ -1470,11 +1470,24 @@
     "trilogyCandidate": "5.5.1.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Conserved energy; surrounding temperature and exo/endo examples/application evaluation; temperature practical RP4 versus TrilogyRP10. No calorimetry/ΔH calculation required by this clause. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "heat-v1-p-explain-warming",
+      "heat-v1-p-explain-cooling",
+      "heat-v1-a-use",
+      "heat-v1-b-use",
+      "heat-v1-d-b-use",
+      "ep-v1-p-plan",
+      "ep-v1-p-bias",
+      "ep-v1-a-written",
+      "ep-v1-d-a-plan"
+    ],
+    "responseEvidenceReview": "Actual8462 full energy-transfer/RP4 body reread. All20 thermal-transfer practice/all16 cold/review and all25 energy-practical practice/four cold/review writing personally read; actual native energyRecords includes specified citric-acid/hydrogencarbonate, neutralisation, oxidation warmer and decomposition. Generated signed changes and constructed outward/inward energy explanations conserve energy; supplied applications use allconstraints, both/neither. Constructed mass-variable practical method with measured baseline/peak, insulation/stirring, controls/repeats supports RP4=TrilogyRP10. No compulsory calorimetric energy calculation added.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.5.1.2",
@@ -1483,11 +1496,23 @@
     "trilogyCandidate": "5.5.1.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
     "actualBodyReview": "Draw curved profiles with relative reactant/product energy, activation energy and overall change; identify exo/endo and explain activation threshold. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "profile-v1-p-definition",
+      "profile-v1-p-draw",
+      "profile-v1-p-explain-exo",
+      "profile-v1-a-draw",
+      "profile-v1-a-explain",
+      "profile-v1-b-draw",
+      "profile-v1-b-explain",
+      "profile-v1-d-b-draw"
+    ],
+    "responseEvidenceReview": "Actual8462 reaction-profile body reread. All21 practice and seven generated-drawing/written cold/review responses personally read. Student constructs own three energy levels and activation/overall-arrow spans; curved profiles represent both exo and endo, independently calculated product/peak levels and changed cold/delayed construction. Written definitions compare relative endpoint energies and activation threshold; progress width/slope is not elapsed time or reaction rate. Catalyst changes barrier while endpoints stay fixed.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.5.1.3",
@@ -1496,11 +1521,25 @@
     "trilogyCandidate": "5.5.1.3",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "Higher only",
     "actualBodyReview": "Energy required for breaking/released by forming; supplied bond-energy sum difference and exo/endo comparison. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "bond-v1-p-water-change",
+      "bond-v1-p-ammonia-change",
+      "bond-v1-p-methane-change",
+      "bond-v1-p-unknown-twice",
+      "bond-v1-p-unknown-reactant",
+      "bond-v1-p-explain-exo",
+      "bond-v1-a-change",
+      "bond-v1-b-change",
+      "bond-v1-d-a-inverse",
+      "bond-v1-d-a-explain"
+    ],
+    "responseEvidenceReview": "Actual8462 Higher bond-energy body reread. All21 practice and16 cold/review prompts/answers/rubrics personally read and arithmetic independently recomputed: coefficient-weighted broken-minus-formed sums, diatomic/multiple-bond counts, unknown bond energies, reaction-basis scaling and changed cold ammonia oxidation. Written explanation distinguishes breaking input from greater formation release, supplied mean approximation/gaseous water state, and overall ledger from actual activation barrier/mechanism. Higher only.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.5.2.1",
@@ -1509,11 +1548,24 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both",
     "actualBodyReview": "Separate-only parent: simple electrodes/electrolyte, cells series batteries, reactant depletion, alkaline nonrechargeable, recharge reverses by externalcurrent; supplied reactivity/data evaluation. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "cf-v1-g-restore",
+      "cf-v1-p-reactivity",
+      "cf-v1-p-six",
+      "cf-v1-p-secondary",
+      "cf-v1-p-method",
+      "cf-v1-A-charge",
+      "cf-v1-B-method",
+      "cf-v1-R-primary",
+      "cf-v1-S-recharge"
+    ],
+    "responseEvidenceReview": "Actual8462 cells/batteries complete body reread. All25 cell/fuel practice and16 cold/review responses, native cell setup records and actual lesson scope personally read. Two differing metals/electrolyte manipulate setup against supplied voltages, series battery construction, reactant depletion/nonrechargeable alkaline and external electrical reversal for rechargeable cells. Controlled supplied reactivity interpretation and generated quantities support written/evidence-based evaluation; voltage differs from load current. Separate only.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.5.2.2",
@@ -1522,11 +1574,29 @@
     "trilogyCandidate": null,
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry only",
     "tierScope": "both; Higher half-equation sub-demand",
     "actualBodyReview": "Separate-only parent: externalfuel/H2+oxygen supply, electrochemical oxidation voltage/water, compare rechargeable; electrode half-equations Higheronly. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "cf-v1-p-hydrogen",
+      "cf-v1-p-double",
+      "cf-v1-p-evaluation",
+      "cf-v1-p-environment",
+      "cf-v1-A-impact",
+      "cf-v1-B-feed",
+      "cf-v1-R-judgement",
+      "fh-v1-p-hydrogen",
+      "fh-v1-p-oxygen",
+      "fh-v1-p-derive",
+      "fh-v1-A-hydrogen",
+      "fh-v1-B-oxygen",
+      "fh-v1-R-hydrogen",
+      "fh-v1-S-oxygen"
+    ],
+    "responseEvidenceReview": "Actual8462 fuel-cell complete body reread. All25 shared cell/fuel practice/all16 cold/review responses,24 Higher fuel-half practice and eight cold/review generated-equation/writing personally read. External hydrogen/oxygen supplies, electrochemical oxidation/potential difference and water as new reaction product, conditional battery comparison with constraints/infrastructure/lifecycle evidence. Higher students type acidic hydrogen oxidation and oxygen reduction half equations with atom/charge/process direction and whole-half scaling/cancellation, separate internal protons/external electrons. Separate-only parent and Higher half-equation sub-demand retained.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.6.1.1",
@@ -1535,11 +1605,26 @@
     "trilogyCandidate": "5.6.1.1",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both; Higher molar-rate and tangent-gradient sub-demands",
     "actualBodyReview": "Mass/volume mean rates, draw/interpret quantity-time graphs and draw/use tangent slope both; mol/s and numerical tangent gradient Higheronly. Complete actual8462/8464 bodies read; Separatecellparent absent inTrilogywhichgoes directly5.5.1.3→5.6.",
-    "sourceReviewDate": "2026-10-10"
+    "sourceReviewDate": "2026-10-10",
+    "responseEvidenceIds": [
+      "rr-v1-p-whole",
+      "rr-v1-p-consumption",
+      "rr-v1-p-minutes",
+      "rr-v1-A-round",
+      "rr-v1-A-draw",
+      "rr-v1-S-fit",
+      "tr-v1-A-gradient",
+      "tr-v1-A-moles",
+      "tr-v1-A-draw",
+      "tr-v1-B-consumed",
+      "tr-v1-R-precision"
+    ],
+    "responseEvidenceReview": "Personally read all34 measuring-rates and31 tangent practice tasks, all cold/delayed responses and construction data. Mean mass/volume rates use actual quantity/time changes, positive consumption and unit conversion; students retain original observations and construct separate curves and tangents, with local slope distinct from height/chord. Higher generated mol/s and numerical tangent gradients include explicit calibration. Three individually corrected final-precision tasks and specimen calculator honour requested decimals while preserving raw wrong input. Original AQA specimen Q09.5 paper26/marking16 inspected. This correction has17 affected unit checks,30 existing lesson browser checks and4 new precision browser checks on final production isZ28JjfHx5WHyUVoMK8r; six inspected screenshots and samples delivered. These are lesson checks, not examiner partial marks or whole-course certification.",
+    "responseReviewDate": "2026-10-10"
   },
   {
     "section": "4.6.1.2",

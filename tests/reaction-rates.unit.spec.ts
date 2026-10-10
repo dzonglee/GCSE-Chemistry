@@ -248,3 +248,27 @@ test("all33 numerical answers are independently recomputed from the actually giv
   for (const q of numeric)
     expect(Number(q.answer), q.id).toBeCloseTo(expected[q.id.slice(6)], 9);
 });
+
+for (const [id, right, wrong] of [
+  ["rr-v1-r-round", "0.07", ["0.070", "0.1", "0.06567", "7e-2"]],
+  ["rr-v1-p-minutes", "0.07", ["0.070", "0.1", "0.06567", "7e-2"]],
+  ["rr-v1-A-round", "0.038", ["0.0380", "0.04", "0.03821", "3.8e-2"]],
+] as const) {
+  test(`${id}: the requested final decimal precision matters`, () => {
+    const question = tasks(journey).find((task) => task.id === id)!;
+    expect(mark(question, right).correct).toBe(true);
+    for (const answer of wrong)
+      expect(mark(question, answer).correct, answer).toBe(false);
+  });
+}
+test("the specimen calculator preserves and rejects extra final decimal places", () => {
+  const board = complete("interval", "minutes");
+  expect(ratesPrediction("interval", board).correct).toBe(true);
+  board.rate = "0.070";
+  expect(validRatesBoard("interval", board)).toBe(true);
+  expect(ratesPrediction("interval", board).correct).toBe(false);
+  expect(board.rate).toBe("0.070");
+  const ordinary = complete("interval", "initial");
+  ordinary.rate = Number(ordinary.rate).toFixed(3);
+  expect(ratesPrediction("interval", ordinary).correct).toBe(true);
+});

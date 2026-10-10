@@ -35,6 +35,14 @@ const n = (
   explanation,
   hint,
   model: m,
+  ...(["r-round", "p-minutes", "A-round"].includes(id)
+    ? {
+        rounding: {
+          kind: "decimal-places" as const,
+          digits: id === "A-round" ? 3 : 2,
+        },
+      }
+    : {}),
 });
 function c(
   id: string,
@@ -460,7 +468,7 @@ export const ratesJourney: LessonJourney = {
     n(
       "p-minutes",
       "Convert then round",
-      "The specimen different reaction loses 9.85 g in 2 minutes 30 seconds. Give its mean rate to TWO decimal places.",
+      "A reaction loses 9.85 g in 2 minutes 30 seconds. Give its mean rate to TWO decimal places.",
       0.07,
       "g/s",
       "Elapsed 150 s;9.85/150≈0.06567, rounded 0.07 g/s.",
