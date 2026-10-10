@@ -300,7 +300,7 @@ const refresher = [
     "Complete absorbed and net entries. What is the absorbed solar energy?",
     70,
     "units",
-    "100−30=70;70−70=0 net. Do not add internal back radiation as extra solar input.",
+    "100−30=70; 70−70=0 net. Do not add internal back radiation as extra solar input.",
     "One whole-Earth boundary; count reflection once.",
     undefined,
     "balance",
@@ -549,7 +549,7 @@ const practice = [
   numeric(
     "p-fraction",
     "Use the correct denominator",
-    "200 units of sunlight arrive and50 are reflected. What percentage of arriving sunlight is absorbed?",
+    "200 units of sunlight arrive and 50 are reflected. What percentage of arriving sunlight is absorbed?",
     75,
     "%",
     "150/200×100=75%. The denominator is the original incoming 200, not the reflected 50.",
@@ -710,7 +710,7 @@ const checkForms: LearningTask[][] = [
     numeric(
       "cA-balance",
       "Find balanced escape",
-      "140 units arrive;35 are reflected. At balance, how many leave as infrared?",
+      "140 units arrive; 35 are reflected. At balance, how many leave as infrared?",
       105,
       "units",
       "140−35=105 absorbed; balanced outgoing 105.",
@@ -802,7 +802,7 @@ const checkForms: LearningTask[][] = [
     numeric(
       "cB-balance",
       "Calculate balanced output",
-      "160 units arrive and48 are reflected. What escaping infrared value balances absorbed input?",
+      "160 units arrive and 48 are reflected. What escaping infrared value balances absorbed input?",
       112,
       "units",
       "160−48=112 absorbed; balanced output 112.",

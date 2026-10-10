@@ -1,0 +1,28 @@
+{
+  "source": "src/content/journeys/greenhouse-effect.ts",
+  "beforeSha256": "3f04017848411f0b67db120cb5a2f666ff163ffad560e068403e8d3965297976",
+  "nonSpaceBytesUnchanged": true,
+  "explicitEdits": [
+    {
+      "before": "and50",
+      "after": "and 50",
+      "occurrences": 1
+    },
+    {
+      "before": "and48",
+      "after": "and 48",
+      "occurrences": 1
+    },
+    {
+      "before": "arrive;35",
+      "after": "arrive; 35",
+      "occurrences": 1
+    },
+    {
+      "before": "70;70",
+      "after": "70; 70",
+      "occurrences": 1
+    }
+  ],
+  "afterSha256": "a7183370ba57df5d642fea70dbe461a14e2a27d99491682d8b23ffe6b2ad0e3e"
+}

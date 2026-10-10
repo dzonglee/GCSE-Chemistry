@@ -157,6 +157,13 @@ test("all22 practice responses preserve supplied evidence and honest written fee
       { key: STORAGE_KEY, id: q.id },
     );
     expect(result.correct).toBe(!q.rubric);
+    if (["greenhouse-v1-p-fraction", "greenhouse-v1-p-mechanism"].includes(q.id)) {
+      await accessible(page);
+      await page.locator("textarea").evaluateAll((nodes) => {
+        for (const node of nodes) node.scrollTop = 0;
+      });
+      await shot(page, "prose-" + q.id, info.project.name);
+    }
     if ([8, 9, 16, 17, 18, 20, 21].includes(i)) {
       await accessible(page);
       await shot(page, "practice-" + i, info.project.name);
