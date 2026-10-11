@@ -718,3 +718,6 @@ Final Haber verification (10 October2026): build `7BtJ0WGs7NyhecKFPjbPS`,17 rele
 
 
 11 October2026 — Temperature/catalysts raw-draft test reconciled individually: prior22-case run10pass1failed1interrupted10notrun1.7mactual1. Native reload retains1/2 separately from validated peak99; corrected exact raw assertion also verifies byte-identical committed taskModels, original Undo99 and Reset100. Types/format/cleanfull lint0; complete22 desktop/mobile cases pass3.1mactual0. Frozen2357verified,portreleased,app/build unchanged. Whole3170/171 acceptance pending; see docs/temperature-raw-draft-test-review.md.
+
+
+11 October2026 — Real titration keyboard bug corrected individually: immediate canonicalization removed the decimal in22.40. Local focused text buffer preserves typing; existing accepted hundredths/history/invalid raw-draft rules remain. Native regression now checks intermediate decimal, canonical blur, invalid reload with exact committed history, Undo/Reset/recordchange. Final types/format/cleanfull lint/build0; all1100units1.5m0; all26 native desktop/mobile cases2.1m0. Frozen2357verified,portreleased. Two current-build screenshots personally inspected and explicitly SENT. Build5o8bvY-CXFL1FzlwiB0j6; whole3172cases/171files acceptance pending. See docs/titration-keyboard-review.md.

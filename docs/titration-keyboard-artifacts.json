@@ -1,0 +1,19 @@
+{
+  "buildId": "5o8bvY-CXFL1FzlwiB0j6",
+  "screenshots": [
+    {
+      "path": "docs/qa/titration-keyboard-fix-desktop.png",
+      "sha256": "917a2b45901ec20a8317959b7efcbf0809929a5f41ee9f112b884f328bf0c28c",
+      "buildId": "5o8bvY-CXFL1FzlwiB0j6",
+      "personallyInspected": true,
+      "explicitlySent": true
+    },
+    {
+      "path": "docs/qa/titration-keyboard-fix-mobile.png",
+      "sha256": "0aa9b0282993d4215438e400937f6060f0ca69481a2ac5a0636d460a291b883e",
+      "buildId": "5o8bvY-CXFL1FzlwiB0j6",
+      "personallyInspected": true,
+      "explicitlySent": true
+    }
+  ]
+}

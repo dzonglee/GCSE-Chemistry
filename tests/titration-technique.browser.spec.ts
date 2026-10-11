@@ -221,8 +221,12 @@ test("burette reading retains final-only mistake through reload and uses keyboar
   await expect(input).toHaveValue("23.6");
   await input.focus();
   await page.keyboard.press("ControlOrMeta+A");
-  await page.keyboard.type("22.40");
+  await page.keyboard.type("22.");
+  await expect(input).toHaveValue("22.");
+  await page.keyboard.type("40");
+  await expect(input).toHaveValue("22.40");
   await check(page, true);
+  await expect(input).toHaveValue("22.4");
   await expect(
     page.getByRole("group", {
       name: "Rotate titration apparatus reference",
@@ -248,6 +252,51 @@ test("burette reading retains final-only mistake through reload and uses keyboar
   await expect(page.getByLabel("Supplied record", { exact: true })).toHaveValue(
     "initial",
   );
+});
+test("invalid typed titre survives blur and reload without replacing committed history", async ({
+  page,
+}) => {
+  await page.goto(route);
+  const input = page.getByLabel("Your predicted delivered titre", {
+    exact: true,
+  });
+  await input.fill("22.40");
+  await input.blur();
+  await expect(input).toHaveValue("22.4");
+  await saved(page);
+  const committed = await page.evaluate((key) => {
+    const work = JSON.parse(localStorage.getItem(key)!).work[
+      "titration-practical"
+    ];
+    return JSON.stringify(work.taskModels);
+  }, STORAGE_KEY);
+  await input.fill("1/2");
+  await input.blur();
+  await expect(input).toHaveValue("1/2");
+  await check(page, false);
+  await saved(page);
+  await page.reload({ waitUntil: "domcontentloaded" });
+  await input.waitFor({ state: "visible" });
+  await expect(input).toHaveValue("1/2");
+  expect(
+    await page.evaluate((key) => {
+      const work = JSON.parse(localStorage.getItem(key)!).work[
+        "titration-practical"
+      ];
+      return JSON.stringify(work.taskModels);
+    }, STORAGE_KEY),
+  ).toBe(committed);
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
+  await expect(input).toHaveValue("22.4");
+  await input.focus();
+  await page.keyboard.press("ControlOrMeta+A");
+  await page.keyboard.type("23.");
+  await expect(input).toHaveValue("23.");
+  await page.getByRole("button", { name: "Reset model", exact: true }).click();
+  await expect(input).toHaveValue("0");
+  await input.fill("");
+  await select(page, "Supplied record", "nonzero");
+  await expect(input).toHaveValue("0");
 });
 test("repeat selector handles boundaries overlapping pairs and a separately stated wider protocol", async ({
   page,

@@ -72,6 +72,7 @@ export function TitrationTechniqueWorkbench({
   onChange: (h: WorkbenchState[]) => void;
 }) {
   const [raw, setRaw] = useWorkbenchInputDraft<Record<string, string>>({});
+  const [editingGuess, setEditingGuess] = useState<string | null>(null);
   const b = history.at(-1) ?? initialTechniqueBoard(mode),
     [feedback, setFeedback] = useState(""),
     [correct, setCorrect] = useState(false),
@@ -89,7 +90,10 @@ export function TitrationTechniqueWorkbench({
     onChange([...history, next]);
   }
   function change(field: string, value: string) {
-    if (field === "record") setRaw({});
+    if (field === "record") {
+      setEditingGuess(null);
+      setRaw({});
+    }
     if (b[field] === value) return;
     push(
       field === "record"
@@ -193,10 +197,13 @@ export function TitrationTechniqueWorkbench({
               min={0}
               max={50}
               step={0.01}
-              value={raw.guess ?? String(Number(b.guess) / 100)}
+              value={editingGuess ?? raw.guess ?? String(Number(b.guess) / 100)}
+              onFocus={(e) => setEditingGuess(e.currentTarget.value)}
+              onBlur={() => setEditingGuess(null)}
               onChange={(e) => {
                 const text = e.target.value,
                   n = Number(text);
+                setEditingGuess(text);
                 setFeedback("");
                 if (
                   /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(text) &&
@@ -413,6 +420,7 @@ export function TitrationTechniqueWorkbench({
           disabled={history.length < 2 && !Object.keys(raw).length}
           onClick={() => {
             setFeedback("");
+            setEditingGuess(null);
             if (Object.keys(raw).length) {
               setRaw({});
               return;
@@ -426,6 +434,7 @@ export function TitrationTechniqueWorkbench({
           className="text-button"
           onClick={() => {
             setFeedback("");
+            setEditingGuess(null);
             setRaw({});
             onChange([initialTechniqueBoard(mode)]);
           }}
