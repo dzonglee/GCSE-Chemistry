@@ -1,6 +1,29 @@
 {
-  "status": "pending",
+  "status": "passed",
+  "verifiedAt": "2026-10-11T15:48:29.229201+00:00",
+  "repository": "https://github.com/dzonglee/GCSE-Chemistry",
+  "branch": "codex/chemistry-main-followups-20261008",
+  "verifiedCommit": "c6ae880e241d2b5f5e72e60608a1e75a8b3c2e86",
+  "newFreshClone": true,
+  "cleanCheckout": true,
+  "allTrackedFiles": 2395,
+  "allTrackedPublisherHashesExact": true,
+  "manifestScopeFiles": 1100,
+  "rootScopeFilesExact": 1098,
+  "historicalInstructionsAbsentFromRuntimeRoot": [
+    "PARALLEL-SCOPE-NEXT.md",
+    "PARALLEL-SCOPE.md"
+  ],
+  "manifestBaselineCommit": "4b3091bc10f8e186fdadd8b8752415d71feddebe",
+  "manifestMatchesFreshClone": true,
+  "markdownDocumentsChecked": 259,
+  "relativeInlineMarkdownLinksChecked": 406,
+  "missingRelativeLinks": [],
+  "explicitArtifactLedgerHashesVerified": 41,
   "browserAcceptance": "final-browser-acceptance.json",
-  "required": "Publish final documents and accepted source manifest, create a new GitHub checkout, then verify tracked hashes, review links and artifact ledgers.",
-  "externalPotableWaterReview": "outstanding; reserved to separate worker"
+  "browserCasesPassed": 3172,
+  "unitChecksPassed": 1100,
+  "productionBuildId": "5o8bvY-CXFL1FzlwiB0j6",
+  "externalPotableWaterReview": "outstanding; no matching published delivery branch; exclusively reserved to separate GitHub worker",
+  "scope": "A new clone from GitHub; byte-exact tracked-file parity with publisher; source/config/test/instruction manifest and runtime source parity; relative inline Markdown target existence; 39 restored artifact and two titration screenshot ledger hashes. External URL availability and other-board/physical-practical certification are outside this check."
 }
