@@ -274,9 +274,10 @@ test("every practice response retains readable graphs, reachable navigation and 
               ? ".answer-option"
               : ".numeric-input input",
         );
-        const nav = p
-          .locator(".question-navigation:visible")
-          .filter({ has: p.locator('[aria-current="step"]') });
+        const nav = p.getByRole("group", {
+          name: "Learning task navigation",
+          exact: true,
+        });
         const active = nav.locator('[aria-current="step"]');
         const [navFrame, tab] = await Promise.all([
           nav.boundingBox(),
