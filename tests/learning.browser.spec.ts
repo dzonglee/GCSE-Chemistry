@@ -311,6 +311,7 @@ test("saved legacy due review survives restart and uses previously seen question
   );
   await page.reload();
   await page.getByRole("button", { name: "Review", exact: true }).click();
+  await page.getByText("About this delayed review", { exact: true }).click();
   await expect(
     page.getByText("Your delayed review is available."),
   ).toBeVisible();
