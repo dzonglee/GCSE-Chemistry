@@ -1,0 +1,9 @@
+# Submitted construction review assertions
+
+The unified 3,168-case / 171-file run exited 1 after 596 passes, one stale submitted-review assertion failure, one interrupted case and 2,570 not run in 1.2 hours. The unchanged build was `5yfoHM3EoR4wYpckkER2L`. Failure/interruption traces and receipts remain separately archived. All 2,357 fingerprints verified and port 3201 released before edits. These partial passes are not whole-course acceptance.
+
+The Foundation Paper 2 review test still looked for editable repeat-count and graph-coordinate controls. The application deliberately renders submitted polymer/graph constructions as read-only diagrams and semantic definition lists, with exact saved bytes separately available. The wrong saved uppercase `N` remains distinct from the reference lowercase `n`; the wrong saved observation `(2,31.4)` remains distinct from the reference `(2,29.2)`.
+
+The test now checks those exact semantic values within separately labelled retained/reference regions, confirms zero inputs/selects/buttons, opens Original saved response and compares exact bytes against the independently seeded response or paper reference. Existing organic structure checks, disabled-field checks, rendered SVG checks, viewport bounds, minimum text size and accessibility checks remain. Application code, science, answers, IDs, forms, saved-work rules, retry policy and deadlines are unchanged. A read-only cross-check found no corresponding stale Higher review assertion; active native-editor selectors remain intact.
+
+Final type checking and clean full lint passed with actual exits 0. Both complete affected browser files passed 76 desktop/mobile cases in 14.1 minutes, actual exit 0. All 2,357 fingerprints reverified and port 3201 released after runner closure. The unchanged production build is retained. A new full run from zero is required; current whole-course acceptance remains pending.

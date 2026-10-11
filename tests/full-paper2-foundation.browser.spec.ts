@@ -139,16 +139,47 @@ for (const width of [320, 390, 1280])
           ).toBeVisible();
         }
         if (number === "4(a)") {
-          await expect(
-            row
-              .locator(".result-body > .polymerisation-assessment-response")
-              .getByLabel("Repeat-count notation", { exact: true }),
-          ).toHaveValue("N");
-          await expect(
-            row
-              .locator(".paper-worked-construction")
-              .getByLabel("Repeat-count notation", { exact: true }),
-          ).toHaveValue("n");
+          const retained = row.getByRole("region", {
+            name: "Retained 4(a) response: polymer construction",
+            exact: true,
+          });
+          const reference = row.getByRole("region", {
+            name: "Worked 4(a) reference: polymer construction",
+            exact: true,
+          });
+          for (const [construction, notation, raw] of [
+            [
+              retained,
+              "Upper-case N outside",
+              responses[
+                paper.parts.find((p) => p.number === number)!.question.id
+              ].answer,
+            ],
+            [
+              reference,
+              "Lower-case n outside",
+              paper.parts.find((p) => p.number === number)!
+                .referenceConstruction!,
+            ],
+          ] as const) {
+            await expect(
+              construction.locator("input,select,button"),
+            ).toHaveCount(0);
+            await expect(
+              construction
+                .locator(".construction-review-values > div")
+                .filter({
+                  has: page
+                    .locator("dt")
+                    .getByText("Repeat-count notation", { exact: true }),
+                })
+                .locator("dd"),
+            ).toHaveText(notation);
+            await construction
+              .getByText("Original saved response", { exact: true })
+              .click();
+            expect(await construction.locator("pre").textContent()).toBe(raw);
+          }
         }
         if (number === "5(a)") {
           await expect(
@@ -159,16 +190,47 @@ for (const width of [320, 390, 1280])
           );
         }
         if (number === "5(e)") {
-          await expect(
-            row
-              .locator(".result-body > .fuel-drawing-input")
-              .getByLabel("Your plotted point 1 y (kJ/g)", { exact: true }),
-          ).toHaveValue("31.4");
-          await expect(
-            row
-              .locator(".paper-worked-construction")
-              .getByLabel("Your plotted point 1 y (kJ/g)", { exact: true }),
-          ).toHaveValue("29.2");
+          const retained = row.getByRole("region", {
+            name: "Retained 5(e) response: graph construction",
+            exact: true,
+          });
+          const reference = row.getByRole("region", {
+            name: "Worked 5(e) reference: graph construction",
+            exact: true,
+          });
+          for (const [construction, coordinates, raw] of [
+            [
+              retained,
+              "x: 2; y: 31.4",
+              responses[
+                paper.parts.find((p) => p.number === number)!.question.id
+              ].answer,
+            ],
+            [
+              reference,
+              "x: 2; y: 29.2",
+              paper.parts.find((p) => p.number === number)!
+                .referenceConstruction!,
+            ],
+          ] as const) {
+            await expect(
+              construction.locator("input,select,button"),
+            ).toHaveCount(0);
+            await expect(
+              construction
+                .locator(".construction-review-values > div")
+                .filter({
+                  has: page
+                    .locator("dt")
+                    .getByText("Observation 1", { exact: true }),
+                })
+                .locator("dd"),
+            ).toHaveText(coordinates);
+            await construction
+              .getByText("Original saved response", { exact: true })
+              .click();
+            expect(await construction.locator("pre").textContent()).toBe(raw);
+          }
         }
         for (const control of await row
           .locator(
