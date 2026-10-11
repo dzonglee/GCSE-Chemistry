@@ -44,7 +44,21 @@
     "commit": "af7d12edb8942ca509bf3651a7fe8d1e1f78956e"
   },
   "externalPotableWater": "reserved; last GitHub probe found no matching published branch",
-  "wholeCourseAcceptance": "pending",
+  "wholeCourseAcceptance": {
+    "status": "passed",
+    "receipt": "final-browser-acceptance.json",
+    "cases": 3172,
+    "files": 171,
+    "projectPasses": {
+      "desktop": 1586,
+      "mobile": 1586
+    },
+    "buildId": "5o8bvY-CXFL1FzlwiB0j6",
+    "runnerExitCode": 0,
+    "supervisorExitCode": 0,
+    "fingerprintsVerified": 2357,
+    "testPortReleased": true
+  },
   "moles": {
     "commit": "29a869a68762bd9a66e9e05c55563bd593c73f7c",
     "unitChecksPassed": 10,

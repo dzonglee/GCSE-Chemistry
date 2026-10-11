@@ -1,0 +1,6 @@
+{
+  "status": "pending",
+  "browserAcceptance": "final-browser-acceptance.json",
+  "required": "Publish final documents and accepted source manifest, create a new GitHub checkout, then verify tracked hashes, review links and artifact ledgers.",
+  "externalPotableWaterReview": "outstanding; reserved to separate worker"
+}
