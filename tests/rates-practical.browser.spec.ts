@@ -212,12 +212,15 @@ async function construct(page: Page, mode: PracticalMode, id: string) {
         .click();
       continue;
     }
-    if (mode === "plot" && /^[xy]\d$/.test(k))
+    if (mode === "plot" && /^x\d$/.test(k))
       await root
         .getByLabel("Choose point to construct", { exact: true })
         .selectOption(k.slice(1));
     const field = root.locator(`[id$="-${k}"]`);
-    if (await field.evaluate((x) => x.tagName === "SELECT"))
+    const numericPlotField =
+      mode === "plot" && (k === "rate" || /^[xy]\d$/.test(k));
+    if (numericPlotField) await field.fill(v);
+    else if (await field.evaluate((x) => x.tagName === "SELECT"))
       await field.selectOption(v);
     else await field.fill(v);
     if (mode === "plot" && k.startsWith("y"))
@@ -281,7 +284,8 @@ for (const [mode, n] of [
         .click();
       await expect(root.locator(".feedback.incorrect")).toBeVisible();
       await saved(page);
-      await page.reload();
+      await page.reload({ waitUntil: "domcontentloaded" });
+      await root.locator(`[id$="-${key}"]`).waitFor({ state: "visible" });
       await expect(root.locator(`[id$="-${key}"]`)).toHaveValue(
         mode === "plan"
           ? "higherConcentrationSlower"
@@ -329,8 +333,13 @@ for (const [mode, n] of [
             await table.evaluate((el) => el.scrollWidth <= el.clientWidth + 1),
           ).toBe(true);
       }
-      for (const button of await root.getByRole("button").all())
-        expect((await button.boundingBox())?.height).toBeGreaterThanOrEqual(44);
+      const buttonHeights = await root
+        .getByRole("button")
+        .evaluateAll((buttons) =>
+          buttons.map((button) => button.getBoundingClientRect().height),
+        );
+      for (const height of buttonHeights)
+        expect(height).toBeGreaterThanOrEqual(44);
       for (const svg of await root.locator("svg").all())
         await svg.evaluate((node) => {
           const svg = node as SVGSVGElement;
@@ -357,17 +366,19 @@ for (const [mode, n] of [
         await expect(
           page.locator(".sample-task-answer .feedback.correct"),
         ).toBeVisible();
-        await capture(
-          page,
-          `docs/qa/rates-practical-${info.project.name}-${mode}.png`,
-        );
-        const box = await root.boundingBox();
-        await page.screenshot({
-          path: `docs/qa/rates-practical-${info.project.name}-${mode}-model.png`,
-          fullPage: true,
-          clip: box!,
-          scale: "css",
-        });
+        if (mode !== "plot") {
+          await capture(
+            page,
+            `docs/qa/rates-practical-${info.project.name}-${mode}.png`,
+          );
+          const box = await root.boundingBox();
+          await page.screenshot({
+            path: `docs/qa/rates-practical-${info.project.name}-${mode}-model.png`,
+            fullPage: true,
+            clip: box!,
+            scale: "css",
+          });
+        }
         if (mode === "apparatus") {
           await expect(root.locator("[data-comparison]")).toHaveAttribute(
             "data-comparison",
@@ -415,6 +426,49 @@ for (const [mode, n] of [
       .click();
     await expect(root.locator(".feedback.incorrect")).toBeVisible();
   });
+test("plot initial screenshots and accessibility retain the original checked construction", async ({
+  page,
+}, info) => {
+  if (info.project.name === "mobile")
+    await page.setViewportSize({ width: 320, height: 844 });
+  await learn(page, 5);
+  const model = journey.guided[4].model!;
+  if (model.kind !== "rates-practical") throw Error("Unexpected lesson model");
+  const id = model.record!,
+    expected = expectedPracticalBoard("plot", id),
+    root = await construct(page, "plot", id),
+    field = root.locator('[id$="-rate"]'),
+    wrong = String(Number(expected.rate) + 1);
+  await field.fill(wrong);
+  await root.getByRole("button", { name: "Check model", exact: true }).click();
+  await expect(root.locator(".feedback.incorrect")).toBeVisible();
+  await saved(page);
+  await page.reload({ waitUntil: "domcontentloaded" });
+  await field.waitFor({ state: "visible" });
+  await expect(field).toHaveValue(wrong);
+  await root.locator("details summary").click();
+  await root
+    .getByLabel("Supplied comparison", { exact: true })
+    .selectOption(id);
+  await root.locator("details summary").click();
+  await expect(field).toHaveValue(wrong);
+  await field.fill(expected.rate);
+  await root.getByRole("button", { name: "Check model", exact: true }).click();
+  await expect(root.locator(".feedback.correct")).toBeVisible();
+  await answer(page, journey.guided[4]);
+  await page.getByRole("button", { name: "Check answer", exact: true }).click();
+  await expect(
+    page.locator(".sample-task-answer .feedback.correct"),
+  ).toBeVisible();
+  await capture(page, `docs/qa/rates-practical-${info.project.name}-plot.png`);
+  const box = await root.boundingBox();
+  await page.screenshot({
+    path: `docs/qa/rates-practical-${info.project.name}-plot-model.png`,
+    fullPage: true,
+    clip: box!,
+    scale: "css",
+  });
+});
 test("raw fractional and incomplete dilution entries stay visible without replacing the last committed evidence", async ({
   page,
 }) => {
@@ -444,8 +498,27 @@ test("raw fractional and incomplete dilution entries stay visible without replac
   await expect(field).toHaveValue("40");
   await field.fill("39");
   await saved(page);
+  const committed = await page.evaluate((key) => {
+    const work = JSON.parse(localStorage.getItem(key)!).work["rates-practical"];
+    return JSON.stringify(work.taskModels);
+  }, STORAGE_KEY);
   await field.fill("");
-  await page.reload();
+  await saved(page);
+  await page.reload({ waitUntil: "domcontentloaded" });
+  await field.waitFor({ state: "visible" });
+  await expect(field).toHaveValue("");
+  expect(
+    await page.evaluate((key) => {
+      const work = JSON.parse(localStorage.getItem(key)!).work[
+        "rates-practical"
+      ];
+      return JSON.stringify(work.taskModels);
+    }, STORAGE_KEY),
+  ).toBe(committed);
+  await expect(
+    root.getByRole("status").filter({ hasText: "ordinary non-negative" }),
+  ).toBeVisible();
+  await root.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(field).toHaveValue("39");
   await root.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(field).toHaveValue("40");
