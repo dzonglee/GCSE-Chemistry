@@ -404,13 +404,33 @@ test("wrong peak persists through reload and undo; invalid raw entry stays visib
   await field.fill("65");
   await page.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(field).toHaveValue("99");
+  await saved(page);
+  const committed = await page.evaluate((key) => {
+    const work = JSON.parse(localStorage.getItem(key)!).work[
+      "temperature-and-catalysts"
+    ];
+    return JSON.stringify(work.taskModels);
+  }, STORAGE_KEY);
   await field.fill("1/2");
   await expect(field).toHaveValue("1/2");
   await expect(page.locator(".thermal-workbench")).toContainText(
     "is not saved",
   );
-  await page.reload();
-  await expect(field).toHaveValue("99");
+  await saved(page);
+  await page.reload({ waitUntil: "domcontentloaded" });
+  await field.waitFor({ state: "visible" });
+  await expect(field).toHaveValue("1/2");
+  expect(
+    await page.evaluate((key) => {
+      const work = JSON.parse(localStorage.getItem(key)!).work[
+        "temperature-and-catalysts"
+      ];
+      return JSON.stringify(work.taskModels);
+    }, STORAGE_KEY),
+  ).toBe(committed);
+  await expect(page.locator(".thermal-workbench")).toContainText(
+    "is not saved",
+  );
   await page.getByRole("button", { name: "Reset model", exact: true }).click();
   await expect(field).toHaveValue("100");
 });
