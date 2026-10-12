@@ -20,6 +20,8 @@ Final scoped browser total:66, with zero retries. Every original/application/tes
 
 The final51 PNGs were personally read in35 contiguous native-scale inspection sheets covering every row, including the long written-method reference. The manifest pins each original PNG SHA256 and identifies its inspection sheets. Three optional element-only closeups were excluded after fixed mobile chrome obscured their tops; the complete full-page images remain unchanged. Source-paper figures and fresh actual Maths guided/independent desktop/mobile views were personally inspected separately, as recorded in the research/figure manifest.
 
+Readable build/lint transcripts strip terminal carriage returns and trailing blank lines only. Their exact original bytes are retained in the adjacent gzip archives and pinned by evidence/raw-log-manifest.json. Test outcomes are unchanged.
+
 ## What was checked
 
 - Exact equality of all88 original normalised tasks, forms, positions, version1, metadata and old aliases against the preserved baseline fixture; all26 original native records and ten manual tasks remain.

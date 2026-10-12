@@ -100,6 +100,9 @@ All other shipped changes are confined to `docs/qa/potable-review-final/`:
 - `docs/qa/potable-review-final/screenshots/manifest.json`
 - `docs/qa/potable-review-final/screenshots/observations.json`
 - `docs/qa/potable-review-final/source-figure-manifest.json`
+- `docs/qa/potable-review-final/evidence/build-release.txt.gz`
+- `docs/qa/potable-review-final/evidence/lint-release.txt.gz`
+- `docs/qa/potable-review-final/evidence/raw-log-manifest.json`
 - `docs/qa/potable-review-final/FILES.md`
 
 The nine shared files are baseline bytes on this branch. Their changes exist only as separately reviewed proposals under this delivery directory. Main/references, other lesson source, global ledgers, configs, public assets and dependencies are unchanged.
