@@ -1,0 +1,794 @@
+[
+  {
+    "width": 1280,
+    "name": "guided-sources",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 134.59375,
+      "bottom": 527.375
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "guided-sources-correct",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 134.59375,
+      "bottom": 527.375
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "independent-ph-wrong",
+    "overflow": false,
+    "first": {
+      "height": 56,
+      "width": 423.8125,
+      "bottom": 479.71875
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "independent-solids-wrong",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 134.59375,
+      "bottom": 527.375
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "recorded-wrong-concentration",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 134.59375,
+      "bottom": 527.375
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "equal-volume-recovery",
+    "overflow": false,
+    "first": {
+      "height": 56,
+      "width": 423.8125,
+      "bottom": 479.71875
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "independent-solids-correct",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 134.59375,
+      "bottom": 527.375
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "manual-method-reference",
+    "overflow": false,
+    "first": {
+      "height": 100,
+      "width": 863.625,
+      "bottom": 581.671875
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "original-distillation-apparatus",
+    "overflow": false,
+    "first": {
+      "height": 44,
+      "width": 582.3125,
+      "bottom": 532.296875
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "original-residue-wrong",
+    "overflow": false,
+    "first": {
+      "height": 55.921875,
+      "width": 134.59375,
+      "bottom": 547.203125
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "independent-check-sealed",
+    "overflow": false,
+    "first": {
+      "height": 58.34375,
+      "width": 435.8125,
+      "bottom": 550.765625
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "independent-check-wrong",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 138.59375,
+      "bottom": 596.078125
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "submitted-source-comparison",
+    "overflow": false,
+    "first": null,
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": true,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "original-written-sealed",
+    "overflow": false,
+    "first": {
+      "height": 100,
+      "width": 895.625,
+      "bottom": 615.71875
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "original-written-reference",
+    "overflow": false,
+    "first": null,
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": true,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "delayed-source-sealed",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 138.59375,
+      "bottom": 596.078125
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "name": "malformed-source-preserved",
+    "overflow": false,
+    "first": {
+      "height": 44,
+      "width": 200.453125,
+      "bottom": 574.203125
+    },
+    "svgText": [],
+    "touch": 0,
+    "dpr": 1,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "guided-sources",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 296,
+      "bottom": 488.84375
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "guided-sources-correct",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 296,
+      "bottom": 488.84375
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "independent-ph-wrong",
+    "overflow": false,
+    "first": {
+      "height": 56,
+      "width": 300,
+      "bottom": 462.796875
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "independent-solids-wrong",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 296,
+      "bottom": 488.84375
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "recorded-wrong-concentration",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 296,
+      "bottom": 488.84375
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "equal-volume-recovery",
+    "overflow": false,
+    "first": {
+      "height": 56,
+      "width": 300,
+      "bottom": 462.796875
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "independent-solids-correct",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 296,
+      "bottom": 488.84375
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "manual-method-reference",
+    "overflow": false,
+    "first": {
+      "height": 100,
+      "width": 300,
+      "bottom": 563.203125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "original-distillation-apparatus",
+    "overflow": false,
+    "first": {
+      "height": 44,
+      "width": 328,
+      "bottom": 510.21875
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "original-residue-wrong",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 296,
+      "bottom": 537.328125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "independent-check-sealed",
+    "overflow": false,
+    "first": {
+      "height": 56,
+      "width": 324,
+      "bottom": 516.875
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "independent-check-wrong",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 320,
+      "bottom": 564.53125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "submitted-source-comparison",
+    "overflow": false,
+    "first": null,
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": true,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "original-written-sealed",
+    "overflow": false,
+    "first": {
+      "height": 100,
+      "width": 332,
+      "bottom": 621.5
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "original-written-reference",
+    "overflow": false,
+    "first": null,
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": true,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "delayed-source-sealed",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 320,
+      "bottom": 564.53125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "name": "malformed-source-preserved",
+    "overflow": false,
+    "first": {
+      "height": 44.515625,
+      "width": 192.453125,
+      "bottom": 557.015625
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "guided-sources",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 226,
+      "bottom": 510.453125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "guided-sources-correct",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 226,
+      "bottom": 510.453125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "independent-ph-wrong",
+    "overflow": false,
+    "first": {
+      "height": 56,
+      "width": 230,
+      "bottom": 462.796875
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "independent-solids-wrong",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 226,
+      "bottom": 510.453125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "recorded-wrong-concentration",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 226,
+      "bottom": 510.453125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "equal-volume-recovery",
+    "overflow": false,
+    "first": {
+      "height": 56,
+      "width": 230,
+      "bottom": 511.28125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "independent-solids-correct",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 226,
+      "bottom": 510.453125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "manual-method-reference",
+    "overflow": false,
+    "first": {
+      "height": 100,
+      "width": 230,
+      "bottom": 584.8125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "original-distillation-apparatus",
+    "overflow": false,
+    "first": {
+      "height": 44,
+      "width": 258,
+      "bottom": 537.09375
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "original-residue-wrong",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 226,
+      "bottom": 537.328125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "independent-check-sealed",
+    "overflow": false,
+    "first": {
+      "height": 56,
+      "width": 254,
+      "bottom": 516.875
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "independent-check-wrong",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 250,
+      "bottom": 564.53125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "submitted-source-comparison",
+    "overflow": false,
+    "first": null,
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": true,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "original-written-sealed",
+    "overflow": false,
+    "first": {
+      "height": 100,
+      "width": 262,
+      "bottom": 621.5
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "original-written-reference",
+    "overflow": false,
+    "first": null,
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": true,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "delayed-source-sealed",
+    "overflow": false,
+    "first": {
+      "height": 46,
+      "width": 250,
+      "bottom": 586.140625
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "malformed-source-preserved",
+    "overflow": false,
+    "first": {
+      "height": 44.515625,
+      "width": 192.453125,
+      "bottom": 599.453125
+    },
+    "svgText": [],
+    "touch": 1,
+    "dpr": 3,
+    "readOnly": false,
+    "axe": [],
+    "errors": []
+  }
+]

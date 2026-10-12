@@ -1,0 +1,261 @@
+--- a/src/components/QuestionInput.tsx
++++ b/src/components/QuestionInput.tsx
+@@ -160,8 +160,28 @@
+       {props.question.wasteGiven && !props.question.parts && (
+         <WasteGivenFigure data={props.question.wasteGiven} />
+       )}
+-      {props.question.waterGiven && !props.question.parts && (
+-        <WaterGivenFigure data={props.question.waterGiven} />
++      {props.question.waterGiven && (
++        <div className="water-data-response">
++          <div className="water-response-controls">
++            <ResponseInput
++              {...props}
++              question={{ ...props.question, waterGiven: undefined }}
++            />
++            <button
++              type="button"
++              className="button potable-recovery-clear"
++              disabled={props.disabled}
++              onClick={() => props.onChange("")}
++            >
++              Start this answer again
++            </button>
++          </div>
++          {props.compactAssessment && props.question.waterGiven.energy ? (
++            <AssessmentWaterEnergy data={props.question.waterGiven.energy} />
++          ) : (
++            <WaterGivenFigure data={props.question.waterGiven} />
++          )}
++        </div>
+       )}
+       {props.question.cycleGiven && !props.question.parts && (
+         <CycleGivenFigure data={props.question.cycleGiven} />
+@@ -592,6 +612,7 @@
+         !(props.question.chromatographyGiven && props.compactAssessment) &&
+         !(props.question.polymerisationGiven && props.compactAssessment) &&
+         !props.question.lcaGiven &&
++        !props.question.waterGiven &&
+         !(
+           props.compactAssessment &&
+           props.question.haberGiven &&
+--- a/src/components/DetailedLesson.tsx
++++ b/src/components/DetailedLesson.tsx
+@@ -64,6 +64,7 @@
+     saltLesson ||
+     organicLesson ||
+     materialsLesson ||
++    lesson.slug === "potable-water" ||
+     (lesson.slug === "yield-and-atom-economy" &&
+       (section === "check" || section === "review"));
+   const stage: LearningStage =
+--- a/src/components/WaterWorkbench.tsx
++++ b/src/components/WaterWorkbench.tsx
+@@ -14,6 +14,7 @@
+   type WaterGiven,
+ } from "@/lib/water";
+ import { WaterScene3D } from "./WaterScene3D";
++import { potableEvidence } from "@/lib/potable-evidence";
+ export function WaterGivenFigure({
+   data,
+   embedded = false,
+@@ -214,7 +215,8 @@
+       </p>
+     );
+   const b = history.at(-1)!,
+-    full = history.length >= 500;
++    full = history.length >= 500,
++    evidence = potableEvidence(r, mode);
+   function change(h: WaterBoard[]) {
+     onChange(h);
+     setChecked(null);
+@@ -231,8 +233,10 @@
+       aria-label="Task model"
+     >
+       <h3>{r.title}</h3>
+-      <p className="water-context">{r.summary || r.note}</p>
+-      {!r.summary && <WaterGivenFigure data={r} embedded />}
++      <p className="water-context">{evidence}</p>
++      {!r.summary && evidence === r.note && (
++        <WaterGivenFigure data={r} embedded />
++      )}
+       <div className="water-fields">
+         {waterFields[mode].map((f) => (
+           <Fragment key={f}>
+@@ -272,9 +276,10 @@
+           </Fragment>
+         ))}
+       </div>
+-      {r.summary && (
++      {(r.summary || evidence !== r.note) && (
+         <details>
+           <summary>Full original evidence</summary>
++          {evidence !== r.note && <p>{r.note}</p>}
+           <WaterGivenFigure data={r} embedded />
+         </details>
+       )}
+--- a/src/components/AssessmentSession.tsx
++++ b/src/components/AssessmentSession.tsx
+@@ -588,6 +588,9 @@
+           q.id.startsWith("early-atmosphere-v1-minor-") || undefined
+         }
+         data-full-paper={examPaper ? "true" : undefined}
++        data-water-written={
++          (id === "potable-water" && Boolean(q.rubric)) || undefined
++        }
+         data-paper-part={examPaper?.parts[run.index].number}
+         data-salt-heating={id === "making-soluble-salts" || undefined}
+         data-alkene-combustion={id === "organic-reactions" || undefined}
+@@ -609,6 +612,7 @@
+         <h2 ref={heading} tabIndex={-1}>
+           {(q.writtenEquations ||
+             q.conciseHeading ||
++            (id === "potable-water" && Boolean(q.rubric)) ||
+             id === "making-soluble-salts" ||
+             id === "organic-reactions" ||
+             ([
+@@ -625,6 +629,7 @@
+         </h2>
+         {(q.writtenEquations ||
+           q.conciseHeading ||
++          (id === "potable-water" && Boolean(q.rubric)) ||
+           id === "making-soluble-salts" ||
+           id === "organic-reactions" ||
+           ([
+--- a/src/app/globals.css
++++ b/src/app/globals.css
+@@ -5406,3 +5406,134 @@
+   margin: 0;
+   overflow-wrap: anywhere;
+ }
++
++/* Potable-water proposal: keep complete responses reachable and all source evidence available. */
++.water-data-response {
++  display: grid;
++  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
++  gap: 16px;
++  align-items: start;
++}
++.water-data-response > * {
++  min-width: 0;
++}
++.sample-lesson[data-lesson="potable-water"] .sample-task-panel {
++  padding: 12px;
++}
++.sample-lesson[data-lesson="potable-water"] .sample-task-panel > h2 {
++  font-size: 1.4rem;
++  line-height: 1.2;
++  margin: 6px 0;
++}
++.sample-lesson[data-lesson="potable-water"] .sample-task-prompt {
++  font-size: 0.9rem;
++  line-height: 1.5;
++  margin: 6px 0;
++}
++.sample-lesson[data-lesson="potable-water"] .question-panel {
++  padding: 14px;
++}
++.sample-lesson[data-lesson="potable-water"]
++  .question-panel
++  .written-answer
++  textarea {
++  height: 100px;
++  min-height: 100px;
++}
++.sample-lesson[data-lesson="potable-water"] .water-workbench {
++  display: flex;
++  flex-direction: column;
++}
++.sample-lesson[data-lesson="potable-water"] .water-workbench > * {
++  order: 2;
++}
++.sample-lesson[data-lesson="potable-water"] .water-workbench > h3,
++.sample-lesson[data-lesson="potable-water"] .water-workbench > .water-context {
++  order: 0;
++}
++.sample-lesson[data-lesson="potable-water"] .water-workbench > h3 {
++  font-size: 0.9rem;
++}
++.sample-lesson[data-lesson="potable-water"] .water-workbench > .water-fields {
++  order: 1;
++}
++.sample-lesson[data-lesson="potable-water"] .water-context {
++  font-size: 0.9rem;
++  line-height: 1.35;
++  margin-bottom: 4px;
++}
++.sample-lesson[data-lesson="potable-water"] .water-fields label {
++  font-size: 0.9rem;
++  line-height: 1.4;
++}
++.sample-lesson[data-lesson="potable-water"] .assessment-session {
++  padding: 0;
++}
++.sample-lesson[data-lesson="potable-water"]
++  .assessment-session
++  .session-heading {
++  margin: 10px 0;
++}
++.sample-lesson[data-lesson="potable-water"] .assessment-session h2 {
++  font-size: 1.4rem;
++  line-height: 1.2;
++  margin: 10px 0;
++}
++.sample-lesson[data-lesson="potable-water"]
++  .assessment-session
++  .question-panel
++  > p {
++  font-size: 0.9rem;
++  line-height: 1.5;
++  margin: 10px 0;
++}
++@media (max-width: 700px) {
++  .water-data-response {
++    grid-template-columns: minmax(0, 1fr);
++  }
++  .sample-lesson[data-lesson="potable-water"] .sample-title-row {
++    margin-top: 0;
++    margin-bottom: 6px;
++  }
++  .sample-lesson[data-lesson="potable-water"] .sample-overview {
++    margin-top: 0;
++    margin-bottom: 6px;
++  }
++  .sample-lesson[data-lesson="potable-water"] .sample-stages {
++    margin-top: 0;
++    margin-bottom: 8px;
++  }
++  .sample-lesson[data-lesson="potable-water"] .sample-task-topline {
++    margin-bottom: 8px;
++  }
++  .sample-lesson[data-lesson="potable-water"] .water-workbench > h3 {
++    line-height: 1.25;
++    margin-bottom: 6px;
++  }
++}
++
++.sample-lesson[data-lesson="potable-water"]
++  .question-panel[data-water-written]
++  h2 {
++  font-size: 1.25rem;
++}
++.sample-lesson[data-lesson="potable-water"]
++  .question-panel[data-water-written]
++  .written-equation-prompt {
++  line-height: 1.35;
++  margin: 6px 0;
++}
++
++.sample-lesson[data-lesson="potable-water"]
++  .question-panel[data-water-written] {
++  padding: 10px;
++}
++
++.water-response-controls > .potable-recovery-clear {
++  display: none;
++}
++.water-response-controls:has(> .feedback[role="status"])
++  > .potable-recovery-clear {
++  display: inline-flex;
++  margin-top: 8px;
++}

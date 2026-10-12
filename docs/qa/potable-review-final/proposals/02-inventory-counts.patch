@@ -1,0 +1,44 @@
+--- a/tests/full-paper1-foundation.unit.spec.ts
++++ b/tests/full-paper1-foundation.unit.spec.ts
+@@ -55,7 +55,7 @@
+     ).toBe(10);
+   const native = lessons.flatMap((l) => tasks(l.journey!));
+   // Original5,824 tasks plus individually appended5air,30alloy,10rust-design 5composite-recall and8Haber source/product recall tasks.
+-  expect(native).toHaveLength(5916);
++  expect(native).toHaveLength(5929);
+   expect(new Set(paper.parts.map((p) => p.question.id)).size).toBe(50);
+   expect(
+     paper.parts.every((p) => !native.some((q) => q.id === p.question.id)),
+--- a/tests/full-paper1-higher.unit.spec.ts
++++ b/tests/full-paper1-higher.unit.spec.ts
+@@ -41,7 +41,7 @@
+   expect(ao[2]).toBeGreaterThanOrEqual(17);
+   expect(ao[2]).toBeLessThanOrEqual(23);
+   const native = lessons.flatMap((l) => tasks(l.journey!));
+-  expect(native).toHaveLength(5916);
++  expect(native).toHaveLength(5929);
+   for (const p of paper.parts) {
+     expect(native.some((q) => q.id === p.question.id)).toBe(false);
+     expect(questionById(p.question.id)).toBe(p.question);
+--- a/tests/full-paper2-foundation.unit.spec.ts
++++ b/tests/full-paper2-foundation.unit.spec.ts
+@@ -99,7 +99,7 @@
+     paper.parts.filter((p) => p.practical).reduce((sum, p) => sum + p.marks, 0),
+   ).toBe(24);
+   const native = lessons.flatMap((l) => tasks(l.journey!));
+-  expect(native).toHaveLength(5916);
++  expect(native).toHaveLength(5929);
+   expect(new Set(paper.parts.map((p) => p.question.id)).size).toBe(49);
+   for (let group = 1; group <= 10; group++)
+     expect(
+--- a/tests/full-paper2-higher.unit.spec.ts
++++ b/tests/full-paper2-higher.unit.spec.ts
+@@ -39,7 +39,7 @@
+     paper.parts.filter((p) => p.practical).reduce((s, p) => s + p.marks, 0),
+   ).toBe(27);
+   const native = lessons.flatMap((l) => tasks(l.journey!));
+-  expect(native).toHaveLength(5916);
++  expect(native).toHaveLength(5929);
+   for (const p of paper.parts) {
+     expect(native.some((q) => q.id === p.question.id)).toBe(false);
+     expect(questionById(p.question.id)).toBe(p.question);

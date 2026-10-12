@@ -1,0 +1,56 @@
+[
+  {
+    "file": "src/components/QuestionInput.tsx",
+    "patch": "01-water-layout.patch",
+    "baseline_sha256": "9ec0c8d7c472bcff761b858c91f1fb4b322df23493caea9c2491e75e66e5cf0c",
+    "candidate_sha256": "70de07c7470b76d35798e3a48e67e2011fc70ab95a42c6cf1579e98d3a8b71b6"
+  },
+  {
+    "file": "src/components/DetailedLesson.tsx",
+    "patch": "01-water-layout.patch",
+    "baseline_sha256": "3640385b58b0bfd16ab60e32ae56a9bd80cc974204e8aedb8cc289f246076b5d",
+    "candidate_sha256": "4151cf5b67fd9667db6ef1b19681abc8d3ad47d1e1dab43611fc190f050dbd4d"
+  },
+  {
+    "file": "src/components/WaterWorkbench.tsx",
+    "patch": "01-water-layout.patch",
+    "baseline_sha256": "0bcdf2e0e8bc115a7193bc5716fb35a3106e6109e972c5f076fb7fbdd70c7df3",
+    "candidate_sha256": "e2942849480886469e3166eaae5aa87fb76daf51cacebb27c08168916e35771f"
+  },
+  {
+    "file": "src/components/AssessmentSession.tsx",
+    "patch": "01-water-layout.patch",
+    "baseline_sha256": "81560fcc3311a0ca725dbb0de67dd3ee6caa160b8b82f9107070c70c02037c35",
+    "candidate_sha256": "7e9bbbe96d805f4b0cca1ae0e4860a3d2fcf1840759d81635660d7781625c3e9"
+  },
+  {
+    "file": "src/app/globals.css",
+    "patch": "01-water-layout.patch",
+    "baseline_sha256": "90bcdf45563ef5d9b381d1e053fbdd2665921c168af842710e585d166f438b18",
+    "candidate_sha256": "18d5a0ca58f373f4f43c653abd7e782aba4a731eb388723382b8ad1bfabb6081"
+  },
+  {
+    "file": "tests/full-paper1-foundation.unit.spec.ts",
+    "patch": "02-inventory-counts.patch",
+    "baseline_sha256": "6b171287a4e5f8e4f27e1c9517cd7e94064e19b1dd52fe4c5c51c89472365b02",
+    "candidate_sha256": "89f5b878ca1453f0f2b0099fe6d53ef4cdc3445167dde82c72a7c3a17544cd28"
+  },
+  {
+    "file": "tests/full-paper1-higher.unit.spec.ts",
+    "patch": "02-inventory-counts.patch",
+    "baseline_sha256": "834673838f007c1e2712663ce08ea051472c9e0b13a552f450689a1461bf3deb",
+    "candidate_sha256": "e1c3ee431ed2523c0c37afdae9f73fe450952c4265ef06ba934adcbcb019434f"
+  },
+  {
+    "file": "tests/full-paper2-foundation.unit.spec.ts",
+    "patch": "02-inventory-counts.patch",
+    "baseline_sha256": "39a9911c5d848329cdbf70ec40d9cffca0db755a73c5aaf2c341141568ff0be9",
+    "candidate_sha256": "e45ee7e080a0ca972da91b2eb0c75dc1f0e5b6d54b29acc5561e8d7351cc747e"
+  },
+  {
+    "file": "tests/full-paper2-higher.unit.spec.ts",
+    "patch": "02-inventory-counts.patch",
+    "baseline_sha256": "ebf0d6742d7ab2b73fa8564993529ab53bde25b40010dfbd2246d5ad89e5c369",
+    "candidate_sha256": "3287fbec4e0cc9578b283593321f1ffd40f8db701143052bcb6167beb9140bcb"
+  }
+]

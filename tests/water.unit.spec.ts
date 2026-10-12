@@ -29,16 +29,16 @@ import {
   waterDimensions as D,
 } from "../src/lib/water-asset";
 import * as T from "three";
-test("one individually authored88-task water journey has seven activities,26 supplied records and27 directed recoveries", () => {
+test("the original water activities/records remain with an append-only different-source comparison", () => {
   expect(lessons.find((l) => l.slug === "potable-water")!.journey).toBe(j);
-  expect(all).toHaveLength(88);
-  expect(new Set(all.map((q) => q.id)).size).toBe(88);
+  expect(all).toHaveLength(101);
+  expect(new Set(all.map((q) => q.id)).size).toBe(101);
   expect(Object.keys(R)).toHaveLength(26);
-  expect(j.guided).toHaveLength(7);
-  expect(j.refresher).toHaveLength(26);
-  expect(j.practice).toHaveLength(27);
-  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8]);
-  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4]);
+  expect(j.guided).toHaveLength(8);
+  expect(j.refresher).toHaveLength(28);
+  expect(j.practice).toHaveLength(29);
+  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8, 2, 2]);
+  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4, 2, 2]);
   expect(j.scopeNote).toContain("practical 8");
   expect(j.scopeNote).toContain("practical 13");
   expect(j.practiceGroups!.flatMap((g) => g.taskIds)).toEqual(
@@ -175,7 +175,9 @@ test("14 independent constructions and39 fields match separately audited literal
     "vB-membrane": [46, 2100],
   };
   expect(Object.values(refs).flat()).toHaveLength(39);
-  expect(all.filter((q) => q.parts)).toHaveLength(14);
+  expect(
+    all.filter((q) => q.parts && !q.id.startsWith("water-v1-sources-")),
+  ).toHaveLength(14);
   for (const [s, nums] of Object.entries(refs)) {
     const q = all.find((q) => q.id === "water-v1-" + s)!;
     expect(
@@ -241,7 +243,7 @@ test("actual scientific distinctions and written marking remain honest and early
     ).toContain("water-v1-" + taught);
   }
   for (const q of [...j.checkForms.flat(), ...j.reviewForms.flat()].filter(
-    (q) => q.parts,
+    (q) => q.parts && !q.id.startsWith("water-v1-sources-"),
   ))
     expect(q.exposureAliases).toBeUndefined();
   const teaching = new Set(

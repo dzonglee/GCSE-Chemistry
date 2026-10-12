@@ -1,0 +1,1634 @@
+{
+  "build": "pzPs1_MkIK9d_94qHC-_D",
+  "method": "All 51 full-page images personally read in35 contiguous native-scale inspection sheets, covering every image row; long manual criteria additionally inspected. Three optional locator closeups excluded after fixed-header overlays were found. Full-page originals are unchanged.",
+  "screenshots": [
+    {
+      "file": "1280-delayed-source-sealed.png",
+      "sha256": "7d8bbfed88605cef6fcc06edfaa0c793a1cf0d620730866d2eb8ac7871d2d53a",
+      "width": 1280,
+      "state": "delayed-source-sealed",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "delayed-source-sealed-1.png",
+        "delayed-source-sealed-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 138.59375,
+        "bottom": 596.078125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-equal-volume-recovery.png",
+      "sha256": "0bb5b89dfb8c0a2716dab94b544115a1e9094890451acfdbec7fd5912834bd83",
+      "width": 1280,
+      "state": "equal-volume-recovery",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "equal-volume-recovery-1.png",
+        "equal-volume-recovery-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 56,
+        "width": 423.8125,
+        "bottom": 479.71875
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-guided-sources-correct.png",
+      "sha256": "05d95e06bb9179c6eb39427710456a4540c205afc667dc47e90704247b288989",
+      "width": 1280,
+      "state": "guided-sources-correct",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "guided-sources-correct-1.png",
+        "guided-sources-correct-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 134.59375,
+        "bottom": 527.375
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-guided-sources.png",
+      "sha256": "87ec4bf40dff67449796f9f0ef89f6cd392a1192db9af9d238c2fd5ccaac7394",
+      "width": 1280,
+      "state": "guided-sources",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "guided-sources-1.png",
+        "guided-sources-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 134.59375,
+        "bottom": 527.375
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-independent-check-sealed.png",
+      "sha256": "a69bc1df6f24a7685d6c1ae82b9303e7496599e6ad6c1f98cd8e45220bb9a53d",
+      "width": 1280,
+      "state": "independent-check-sealed",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-check-sealed-1.png",
+        "independent-check-sealed-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 58.34375,
+        "width": 435.8125,
+        "bottom": 550.765625
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-independent-check-wrong.png",
+      "sha256": "0a1bdfffd0239cfdb9181713691bb8dda7a208973ce46d680a1dfe2cb1184533",
+      "width": 1280,
+      "state": "independent-check-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-check-wrong-1.png",
+        "independent-check-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 138.59375,
+        "bottom": 596.078125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-independent-ph-wrong.png",
+      "sha256": "bc4f3f14d7b980b428f964719c2ccedd8457f8bf975e12cc942b700c3c5b8d8e",
+      "width": 1280,
+      "state": "independent-ph-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-ph-wrong-1.png",
+        "independent-ph-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 56,
+        "width": 423.8125,
+        "bottom": 479.71875
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-independent-solids-correct.png",
+      "sha256": "0ce6b3e0ff8b4995a1e9f5f870adfa90ecc50f8227d972c0233c73a336c49f0a",
+      "width": 1280,
+      "state": "independent-solids-correct",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-solids-correct-1.png",
+        "independent-solids-correct-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 134.59375,
+        "bottom": 527.375
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-independent-solids-wrong.png",
+      "sha256": "d932dc6638ec7ea133ff3897a5b9b285e73099133d3f9089554eef680f48815a",
+      "width": 1280,
+      "state": "independent-solids-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-solids-wrong-1.png",
+        "independent-solids-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 134.59375,
+        "bottom": 527.375
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-malformed-source-preserved.png",
+      "sha256": "6112c14131692069ccf1a60eaf580dc0bebdfec932e71c21cb9842b1a5b3803a",
+      "width": 1280,
+      "state": "malformed-source-preserved",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "malformed-source-preserved-1.png",
+        "malformed-source-preserved-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 44,
+        "width": 200.453125,
+        "bottom": 574.203125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-manual-method-reference.png",
+      "sha256": "a6c4f35f911d78b64fdb5f64adaa1d5e7f64eeec3bd76e8e2c414e219f382415",
+      "width": 1280,
+      "state": "manual-method-reference",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "manual-method-reference-1.png",
+        "manual-method-reference-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 100,
+        "width": 863.625,
+        "bottom": 581.671875
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-original-distillation-apparatus.png",
+      "sha256": "272447cc16d0c88bfdbd5ac06430ca550ecf7f74ad9c32c8f26b96573a2054e4",
+      "width": 1280,
+      "state": "original-distillation-apparatus",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-distillation-apparatus-1.png",
+        "original-distillation-apparatus-2.png",
+        "original-distillation-apparatus-3.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 44,
+        "width": 582.3125,
+        "bottom": 532.296875
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-original-residue-wrong.png",
+      "sha256": "5d89289d1be429210b56fad30758348e0a3462db7046bb2c8773870929e651c7",
+      "width": 1280,
+      "state": "original-residue-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-residue-wrong-1.png",
+        "original-residue-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 55.921875,
+        "width": 134.59375,
+        "bottom": 547.203125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-original-written-reference.png",
+      "sha256": "0518d30cb00b0d9306e8ae60d72f64fe822d84f8fa14c52b547256b1683b4424",
+      "width": 1280,
+      "state": "original-written-reference",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-written-reference-1.png",
+        "original-written-reference-2.png"
+      ],
+      "readOnly": true,
+      "first": null,
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-original-written-sealed.png",
+      "sha256": "911697cd15d63ba3e1cdb5c120a42b40b05075b6cde34a4575923d9e0549b82a",
+      "width": 1280,
+      "state": "original-written-sealed",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-written-sealed-1.png",
+        "original-written-sealed-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 100,
+        "width": 895.625,
+        "bottom": 615.71875
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-recorded-wrong-concentration.png",
+      "sha256": "4b125ff6ed453dda403d6da32b6da93fac554ea7dd2cad206b782aad042ea0c5",
+      "width": 1280,
+      "state": "recorded-wrong-concentration",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "recorded-wrong-concentration-1.png",
+        "recorded-wrong-concentration-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 134.59375,
+        "bottom": 527.375
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "1280-submitted-source-comparison.png",
+      "sha256": "08d4ea7ad133f8c759867279f4f3cd5b763343312469d9aaaa4c659809d8594c",
+      "width": 1280,
+      "state": "submitted-source-comparison",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "submitted-source-comparison-1.png",
+        "submitted-source-comparison-2.png"
+      ],
+      "readOnly": true,
+      "first": null,
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 0,
+      "dpr": 1
+    },
+    {
+      "file": "320-delayed-source-sealed.png",
+      "sha256": "7e563273731c110e8e59f86d14457994128c12903dc2d1bc0a45c37dd0f47778",
+      "width": 320,
+      "state": "delayed-source-sealed",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "delayed-source-sealed-1.png",
+        "delayed-source-sealed-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 250,
+        "bottom": 586.140625
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-equal-volume-recovery.png",
+      "sha256": "b2741058945c93ff466dcd352b38a2dbb4155db48eab963ce4033a69243f8a24",
+      "width": 320,
+      "state": "equal-volume-recovery",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "equal-volume-recovery-1.png",
+        "equal-volume-recovery-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 56,
+        "width": 230,
+        "bottom": 511.28125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-guided-sources-correct.png",
+      "sha256": "511d2a707beb8340cb55d06b72367338514401a6c6136e765df84b0e7de54aaa",
+      "width": 320,
+      "state": "guided-sources-correct",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "guided-sources-correct-1.png",
+        "guided-sources-correct-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 226,
+        "bottom": 510.453125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-guided-sources.png",
+      "sha256": "8117b92f572f8719912c84756ed5671a4d29a4efd2a70eae8f24b39dd45cd0ab",
+      "width": 320,
+      "state": "guided-sources",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "guided-sources-1.png",
+        "guided-sources-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 226,
+        "bottom": 510.453125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-independent-check-sealed.png",
+      "sha256": "7713be6c7bc6d6e0309c5bd73e32e3db475cb2525f2f6e16debb17ef8841084f",
+      "width": 320,
+      "state": "independent-check-sealed",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-check-sealed-1.png",
+        "independent-check-sealed-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 56,
+        "width": 254,
+        "bottom": 516.875
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-independent-check-wrong.png",
+      "sha256": "72f03bf323657c7f26a3df150915e71e4c6dd1cf7a2237b3fc310161b4cabddc",
+      "width": 320,
+      "state": "independent-check-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-check-wrong-1.png",
+        "independent-check-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 250,
+        "bottom": 564.53125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-independent-ph-wrong.png",
+      "sha256": "03cfeff4264875f250127dfbf0aae7dba3b079223e3b411727abf990dcb02658",
+      "width": 320,
+      "state": "independent-ph-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-ph-wrong-1.png",
+        "independent-ph-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 56,
+        "width": 230,
+        "bottom": 462.796875
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-independent-solids-correct.png",
+      "sha256": "6ce4788c3224701a45d25bcaa0a558cec34ef95831333bd90d3633a0e1160adb",
+      "width": 320,
+      "state": "independent-solids-correct",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-solids-correct-1.png",
+        "independent-solids-correct-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 226,
+        "bottom": 510.453125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-independent-solids-wrong.png",
+      "sha256": "715591d41e4b7d51a4a8585fed222fedf465e4be8885f1edb0e6034b22001a64",
+      "width": 320,
+      "state": "independent-solids-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-solids-wrong-1.png",
+        "independent-solids-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 226,
+        "bottom": 510.453125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-malformed-source-preserved.png",
+      "sha256": "1c54add0cd6e871cd836e00a65dd33d6381f75ac34660b0a1bd11524b6b74886",
+      "width": 320,
+      "state": "malformed-source-preserved",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "malformed-source-preserved-1.png",
+        "malformed-source-preserved-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 44.515625,
+        "width": 192.453125,
+        "bottom": 599.453125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-manual-method-reference.png",
+      "sha256": "5df38664d221f7b9c38b331b2923559282aac67ce4c34b32e296268863cb2f1a",
+      "width": 320,
+      "state": "manual-method-reference",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "manual-method-reference-1.png",
+        "manual-method-reference-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 100,
+        "width": 230,
+        "bottom": 584.8125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-original-distillation-apparatus.png",
+      "sha256": "bc5daa2a4b3f6b4c2758731f7eb3eadc75d880f33e13d960645646697061fe51",
+      "width": 320,
+      "state": "original-distillation-apparatus",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-distillation-apparatus-1.png",
+        "original-distillation-apparatus-2.png",
+        "original-distillation-apparatus-3.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 44,
+        "width": 258,
+        "bottom": 537.09375
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-original-residue-wrong.png",
+      "sha256": "2a3957cb2b2801e4dfabc4d61190c35f7bef6eb3ca6500924ad3a1af82b0e7c1",
+      "width": 320,
+      "state": "original-residue-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-residue-wrong-1.png",
+        "original-residue-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 226,
+        "bottom": 537.328125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-original-written-reference.png",
+      "sha256": "10c9cc5fe1e712d65f0c76d89df16ddfc8cac613851147d27a3b5f9595d09566",
+      "width": 320,
+      "state": "original-written-reference",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-written-reference-1.png",
+        "original-written-reference-2.png"
+      ],
+      "readOnly": true,
+      "first": null,
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-original-written-sealed.png",
+      "sha256": "2641ab7dcffebeffdce5d81b9d52ca1b9cf8570955a2de0279dfc383e04c6872",
+      "width": 320,
+      "state": "original-written-sealed",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-written-sealed-1.png",
+        "original-written-sealed-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 100,
+        "width": 262,
+        "bottom": 621.5
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-recorded-wrong-concentration.png",
+      "sha256": "b4de2c14872bf7abcd9d537f0ba51eae67a721f8742cc541d313af16eba64f98",
+      "width": 320,
+      "state": "recorded-wrong-concentration",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "recorded-wrong-concentration-1.png",
+        "recorded-wrong-concentration-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 226,
+        "bottom": 510.453125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "320-submitted-source-comparison.png",
+      "sha256": "3a665b44ac94708c62bf9d4c00a3c5e6b35088da68c3edd03457ce75ce55db17",
+      "width": 320,
+      "state": "submitted-source-comparison",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "submitted-source-comparison-1.png",
+        "submitted-source-comparison-2.png"
+      ],
+      "readOnly": true,
+      "first": null,
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-delayed-source-sealed.png",
+      "sha256": "a42ec05a12dfc9544ee3eaa6440d9f9cfc3de5fa9eb0303f98b3ffe85a126fd9",
+      "width": 390,
+      "state": "delayed-source-sealed",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "delayed-source-sealed-1.png",
+        "delayed-source-sealed-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 320,
+        "bottom": 564.53125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-equal-volume-recovery.png",
+      "sha256": "1a311d453f9f0887608c4b7ae4defb3a4040d34bcfb73830295226569b96d3a1",
+      "width": 390,
+      "state": "equal-volume-recovery",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "equal-volume-recovery-1.png",
+        "equal-volume-recovery-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 56,
+        "width": 300,
+        "bottom": 462.796875
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-guided-sources-correct.png",
+      "sha256": "91245a73cee630761ccacc22b30c3c3924b51a1ad2e861b8c63b08f0f5068984",
+      "width": 390,
+      "state": "guided-sources-correct",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "guided-sources-correct-1.png",
+        "guided-sources-correct-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 296,
+        "bottom": 488.84375
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-guided-sources.png",
+      "sha256": "35df3175b8569942908651d60263665b4ce343ecb543fb49cd81b9b77ae7b146",
+      "width": 390,
+      "state": "guided-sources",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "guided-sources-1.png",
+        "guided-sources-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 296,
+        "bottom": 488.84375
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-independent-check-sealed.png",
+      "sha256": "c1a1c477f91bd5210cb242ca251a632f3c45b2a9fb8c4443cc784faec8bc27fc",
+      "width": 390,
+      "state": "independent-check-sealed",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-check-sealed-1.png",
+        "independent-check-sealed-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 56,
+        "width": 324,
+        "bottom": 516.875
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-independent-check-wrong.png",
+      "sha256": "8141cd0b60841ff4f78f13c4004c05614c62bb7c45c614d3e9cda9022db98073",
+      "width": 390,
+      "state": "independent-check-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-check-wrong-1.png",
+        "independent-check-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 320,
+        "bottom": 564.53125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-independent-ph-wrong.png",
+      "sha256": "94d6b6ec1f2a5d1b2881089f406605f9b61788ef2217c495dc4420c37bba1e05",
+      "width": 390,
+      "state": "independent-ph-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-ph-wrong-1.png",
+        "independent-ph-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 56,
+        "width": 300,
+        "bottom": 462.796875
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-independent-solids-correct.png",
+      "sha256": "158a41be96c41cfa0c413b15d2eb62fd24c6800e3689d1f88789f52d1869a6a4",
+      "width": 390,
+      "state": "independent-solids-correct",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-solids-correct-1.png",
+        "independent-solids-correct-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 296,
+        "bottom": 488.84375
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-independent-solids-wrong.png",
+      "sha256": "9639bc44b3e0a94214d046128dfa8a9f533aee4ae96ea271386f5d96cb411a5d",
+      "width": 390,
+      "state": "independent-solids-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "independent-solids-wrong-1.png",
+        "independent-solids-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 296,
+        "bottom": 488.84375
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-malformed-source-preserved.png",
+      "sha256": "79ea53111a29c411b3e4d895e135d3995214932126bf18c112bba6f93d07ed1b",
+      "width": 390,
+      "state": "malformed-source-preserved",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "malformed-source-preserved-1.png",
+        "malformed-source-preserved-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 44.515625,
+        "width": 192.453125,
+        "bottom": 557.015625
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-manual-method-reference.png",
+      "sha256": "1778d524b6a1cf9af05fc4053018b4ab1f87f9cff96c305c36c9e6ce9e3431bd",
+      "width": 390,
+      "state": "manual-method-reference",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "manual-method-reference-1.png",
+        "manual-method-reference-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 100,
+        "width": 300,
+        "bottom": 563.203125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-original-distillation-apparatus.png",
+      "sha256": "d5999bb4d0d74acc2b5c8de1624220c587509b157eb546debf1402a1893f9c70",
+      "width": 390,
+      "state": "original-distillation-apparatus",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-distillation-apparatus-1.png",
+        "original-distillation-apparatus-2.png",
+        "original-distillation-apparatus-3.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 44,
+        "width": 328,
+        "bottom": 510.21875
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-original-residue-wrong.png",
+      "sha256": "4d92db9d01501412efe333d15be99289042a5d0beaa136af6340cbb585fb8b77",
+      "width": 390,
+      "state": "original-residue-wrong",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-residue-wrong-1.png",
+        "original-residue-wrong-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 296,
+        "bottom": 537.328125
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-original-written-reference.png",
+      "sha256": "a01033de7f5fe387b7335ba5bd5a448ab19374cba6b8e8d6341bfb88c5b5ed82",
+      "width": 390,
+      "state": "original-written-reference",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-written-reference-1.png",
+        "original-written-reference-2.png"
+      ],
+      "readOnly": true,
+      "first": null,
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-original-written-sealed.png",
+      "sha256": "b07e19e58588cc31cfb353b2f768127dfd43c6c77a64723c81d5df3e9b79f1e0",
+      "width": 390,
+      "state": "original-written-sealed",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "original-written-sealed-1.png",
+        "original-written-sealed-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 100,
+        "width": 332,
+        "bottom": 621.5
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-recorded-wrong-concentration.png",
+      "sha256": "6245886c8dd14554c1cf480a2ddfbbc2cc8a2fa8add4b362592bac861772487c",
+      "width": 390,
+      "state": "recorded-wrong-concentration",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "recorded-wrong-concentration-1.png",
+        "recorded-wrong-concentration-2.png"
+      ],
+      "readOnly": false,
+      "first": {
+        "height": 46,
+        "width": 296,
+        "bottom": 488.84375
+      },
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    },
+    {
+      "file": "390-submitted-source-comparison.png",
+      "sha256": "28928541e0fcf6102087d5b7adee25dfc422f2d2b5b8589509df1701b87233d0",
+      "width": 390,
+      "state": "submitted-source-comparison",
+      "personally_inspected": true,
+      "inspected_in_contiguous_sheets": [
+        "submitted-source-comparison-1.png",
+        "submitted-source-comparison-2.png"
+      ],
+      "readOnly": true,
+      "first": null,
+      "axe_violations": 0,
+      "page_errors": [],
+      "overflow": false,
+      "touch": 1,
+      "dpr": 3
+    }
+  ],
+  "inspection_sheets": [
+    {
+      "file": "delayed-source-sealed-1.png",
+      "state": "delayed-source-sealed",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-delayed-source-sealed.png",
+        "390-delayed-source-sealed.png",
+        "320-delayed-source-sealed.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "delayed-source-sealed-2.png",
+      "state": "delayed-source-sealed",
+      "part": 2,
+      "range": [
+        1600,
+        2140
+      ],
+      "source_images": [
+        "1280-delayed-source-sealed.png",
+        "390-delayed-source-sealed.png",
+        "320-delayed-source-sealed.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "equal-volume-recovery-1.png",
+      "state": "equal-volume-recovery",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-equal-volume-recovery.png",
+        "390-equal-volume-recovery.png",
+        "320-equal-volume-recovery.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "equal-volume-recovery-2.png",
+      "state": "equal-volume-recovery",
+      "part": 2,
+      "range": [
+        1600,
+        2884
+      ],
+      "source_images": [
+        "1280-equal-volume-recovery.png",
+        "390-equal-volume-recovery.png",
+        "320-equal-volume-recovery.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "guided-sources-1.png",
+      "state": "guided-sources",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-guided-sources.png",
+        "390-guided-sources.png",
+        "320-guided-sources.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "guided-sources-2.png",
+      "state": "guided-sources",
+      "part": 2,
+      "range": [
+        1600,
+        2215
+      ],
+      "source_images": [
+        "1280-guided-sources.png",
+        "390-guided-sources.png",
+        "320-guided-sources.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "guided-sources-correct-1.png",
+      "state": "guided-sources-correct",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-guided-sources-correct.png",
+        "390-guided-sources-correct.png",
+        "320-guided-sources-correct.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "guided-sources-correct-2.png",
+      "state": "guided-sources-correct",
+      "part": 2,
+      "range": [
+        1600,
+        2466
+      ],
+      "source_images": [
+        "1280-guided-sources-correct.png",
+        "390-guided-sources-correct.png",
+        "320-guided-sources-correct.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "independent-check-sealed-1.png",
+      "state": "independent-check-sealed",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-independent-check-sealed.png",
+        "390-independent-check-sealed.png",
+        "320-independent-check-sealed.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "independent-check-sealed-2.png",
+      "state": "independent-check-sealed",
+      "part": 2,
+      "range": [
+        1600,
+        1882
+      ],
+      "source_images": [
+        "1280-independent-check-sealed.png",
+        "390-independent-check-sealed.png",
+        "320-independent-check-sealed.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "independent-check-wrong-1.png",
+      "state": "independent-check-wrong",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-independent-check-wrong.png",
+        "390-independent-check-wrong.png",
+        "320-independent-check-wrong.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "independent-check-wrong-2.png",
+      "state": "independent-check-wrong",
+      "part": 2,
+      "range": [
+        1600,
+        2057
+      ],
+      "source_images": [
+        "1280-independent-check-wrong.png",
+        "390-independent-check-wrong.png",
+        "320-independent-check-wrong.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "independent-ph-wrong-1.png",
+      "state": "independent-ph-wrong",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-independent-ph-wrong.png",
+        "390-independent-ph-wrong.png",
+        "320-independent-ph-wrong.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "independent-ph-wrong-2.png",
+      "state": "independent-ph-wrong",
+      "part": 2,
+      "range": [
+        1600,
+        2084
+      ],
+      "source_images": [
+        "1280-independent-ph-wrong.png",
+        "390-independent-ph-wrong.png",
+        "320-independent-ph-wrong.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "independent-solids-correct-1.png",
+      "state": "independent-solids-correct",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-independent-solids-correct.png",
+        "390-independent-solids-correct.png",
+        "320-independent-solids-correct.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "independent-solids-correct-2.png",
+      "state": "independent-solids-correct",
+      "part": 2,
+      "range": [
+        1600,
+        2193
+      ],
+      "source_images": [
+        "1280-independent-solids-correct.png",
+        "390-independent-solids-correct.png",
+        "320-independent-solids-correct.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "independent-solids-wrong-1.png",
+      "state": "independent-solids-wrong",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-independent-solids-wrong.png",
+        "390-independent-solids-wrong.png",
+        "320-independent-solids-wrong.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "independent-solids-wrong-2.png",
+      "state": "independent-solids-wrong",
+      "part": 2,
+      "range": [
+        1600,
+        1963
+      ],
+      "source_images": [
+        "1280-independent-solids-wrong.png",
+        "390-independent-solids-wrong.png",
+        "320-independent-solids-wrong.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "malformed-source-preserved-1.png",
+      "state": "malformed-source-preserved",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-malformed-source-preserved.png",
+        "390-malformed-source-preserved.png",
+        "320-malformed-source-preserved.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "malformed-source-preserved-2.png",
+      "state": "malformed-source-preserved",
+      "part": 2,
+      "range": [
+        1600,
+        1966
+      ],
+      "source_images": [
+        "1280-malformed-source-preserved.png",
+        "390-malformed-source-preserved.png",
+        "320-malformed-source-preserved.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "manual-method-reference-1.png",
+      "state": "manual-method-reference",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-manual-method-reference.png",
+        "390-manual-method-reference.png",
+        "320-manual-method-reference.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "manual-method-reference-2.png",
+      "state": "manual-method-reference",
+      "part": 2,
+      "range": [
+        1600,
+        2688
+      ],
+      "source_images": [
+        "1280-manual-method-reference.png",
+        "390-manual-method-reference.png",
+        "320-manual-method-reference.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "original-distillation-apparatus-1.png",
+      "state": "original-distillation-apparatus",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-original-distillation-apparatus.png",
+        "390-original-distillation-apparatus.png",
+        "320-original-distillation-apparatus.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "original-distillation-apparatus-2.png",
+      "state": "original-distillation-apparatus",
+      "part": 2,
+      "range": [
+        1600,
+        3200
+      ],
+      "source_images": [
+        "1280-original-distillation-apparatus.png",
+        "390-original-distillation-apparatus.png",
+        "320-original-distillation-apparatus.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "original-distillation-apparatus-3.png",
+      "state": "original-distillation-apparatus",
+      "part": 3,
+      "range": [
+        3200,
+        3442
+      ],
+      "source_images": [
+        "1280-original-distillation-apparatus.png",
+        "390-original-distillation-apparatus.png",
+        "320-original-distillation-apparatus.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "original-residue-wrong-1.png",
+      "state": "original-residue-wrong",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-original-residue-wrong.png",
+        "390-original-residue-wrong.png",
+        "320-original-residue-wrong.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "original-residue-wrong-2.png",
+      "state": "original-residue-wrong",
+      "part": 2,
+      "range": [
+        1600,
+        2041
+      ],
+      "source_images": [
+        "1280-original-residue-wrong.png",
+        "390-original-residue-wrong.png",
+        "320-original-residue-wrong.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "original-written-reference-1.png",
+      "state": "original-written-reference",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-original-written-reference.png",
+        "390-original-written-reference.png",
+        "320-original-written-reference.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "original-written-reference-2.png",
+      "state": "original-written-reference",
+      "part": 2,
+      "range": [
+        1600,
+        3196
+      ],
+      "source_images": [
+        "1280-original-written-reference.png",
+        "390-original-written-reference.png",
+        "320-original-written-reference.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "original-written-sealed-1.png",
+      "state": "original-written-sealed",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-original-written-sealed.png",
+        "390-original-written-sealed.png",
+        "320-original-written-sealed.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "original-written-sealed-2.png",
+      "state": "original-written-sealed",
+      "part": 2,
+      "range": [
+        1600,
+        1606
+      ],
+      "source_images": [
+        "1280-original-written-sealed.png",
+        "390-original-written-sealed.png",
+        "320-original-written-sealed.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "recorded-wrong-concentration-1.png",
+      "state": "recorded-wrong-concentration",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-recorded-wrong-concentration.png",
+        "390-recorded-wrong-concentration.png",
+        "320-recorded-wrong-concentration.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "recorded-wrong-concentration-2.png",
+      "state": "recorded-wrong-concentration",
+      "part": 2,
+      "range": [
+        1600,
+        2132
+      ],
+      "source_images": [
+        "1280-recorded-wrong-concentration.png",
+        "390-recorded-wrong-concentration.png",
+        "320-recorded-wrong-concentration.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "submitted-source-comparison-1.png",
+      "state": "submitted-source-comparison",
+      "part": 1,
+      "range": [
+        0,
+        1600
+      ],
+      "source_images": [
+        "1280-submitted-source-comparison.png",
+        "390-submitted-source-comparison.png",
+        "320-submitted-source-comparison.png"
+      ],
+      "native_scale": true
+    },
+    {
+      "file": "submitted-source-comparison-2.png",
+      "state": "submitted-source-comparison",
+      "part": 2,
+      "range": [
+        1600,
+        1814
+      ],
+      "source_images": [
+        "1280-submitted-source-comparison.png",
+        "390-submitted-source-comparison.png",
+        "320-submitted-source-comparison.png"
+      ],
+      "native_scale": true
+    }
+  ]
+}
