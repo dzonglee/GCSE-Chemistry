@@ -1,0 +1,3479 @@
+diff --git a/src/content/journeys/potable-sources.ts b/src/content/journeys/potable-sources.ts
+new file mode 100644
+index 0000000..1661682
+--- /dev/null
++++ b/src/content/journeys/potable-sources.ts
+@@ -0,0 +1,222 @@
++import type { LearningTask } from "../types";
++import type { WaterGiven } from "../../lib/water";
++
++// RP8 (8462) / RP13 (8464): compare different sources. All data are original
++// exercises, not drinking-water certification or instructions for home experiments.
++const id = (suffix: string) => `water-v1-sources-${suffix}`;
++type Sample = readonly [
++  name: string,
++  ph: number,
++  residue: number,
++  volume: number,
++];
++export const sourceSets = {
++  taught: [
++    ["Rain", 6, 0.01, 10],
++    ["Borehole", 7.5, 0.02, 10],
++    ["Coastal", 7, 0.35, 10],
++  ],
++  practice: [
++    ["Pond P", 5.5, 0.03, 10],
++    ["Stream Q", 8, 0.05, 25],
++  ],
++  checkC: [
++    ["Lake D", 6.8, 0.1, 50],
++    ["Well E", 7.6, 0.06, 20],
++  ],
++  checkD: [
++    ["River X", 7.3, 0.04, 20],
++    ["Spring Y", 8.2, 0.15, 50],
++  ],
++  reviewC: [
++    ["Reservoir M", 5.8, 0.02, 10],
++    ["Spring N", 7.1, 0.03, 30],
++  ],
++  reviewD: [
++    ["Stream U", 6.1, 0.12, 40],
++    ["Lake V", 6.6, 0.1, 20],
++  ],
++} as const satisfies Record<string, readonly Sample[]>;
++function given(samples: readonly Sample[]): WaterGiven {
++  return {
++    title: "Original source measurements",
++    note: "Exercise readings at 25 °C. Filtered samples; stable dry cooled residue after dish subtraction. No drinking-water safety test is supplied.",
++    rows: samples.map(([name, ph, residue, volume]) => ({
++      label: name,
++      text: `pH ${ph.toFixed(1)}; ${residue.toFixed(2)} g residue from ${volume} cm³`,
++    })),
++  };
++}
++function choice(
++  suffix: string,
++  samples: readonly Sample[],
++  answer: string,
++  prompt: string,
++): LearningTask {
++  const options = samples.map(([name]) => name);
++  return {
++    id: id(suffix),
++    title: "Compare source pH",
++    purpose: "Interpret pH measurements from different water sources",
++    conciseHeading: true,
++    prompt,
++    answer,
++    options,
++    waterGiven: given(samples),
++    explanation: `${answer} is the source identified by the requested pH comparison. At 25 °C pH below 7 is acidic, 7 is neutral and above 7 is alkaline. Residue mass measures another property; neutral pH alone does not establish purity or potability.`,
++    hint: "Read the pH values, not the residue masses. Lower pH means more acidic.",
++  };
++}
++function concentrations(
++  suffix: string,
++  samples: readonly Sample[],
++  answers: readonly number[],
++): LearningTask {
++  return {
++    id: id(suffix),
++    title: "Compare sources",
++    purpose: "Compare source concentrations using measured sample volumes",
++    conciseHeading: true,
++    prompt: `Calculate g/dm³ for ${samples.map(([name]) => name).join(" and ")}.`,
++    answer: JSON.stringify(
++      Object.fromEntries(answers.map((v, i) => [`s${i}`, String(v)])),
++    ),
++    parts: samples.map(([name], i) => ({
++      id: `s${i}`,
++      label: `${name} / g per dm³`,
++      answer: answers[i],
++      inputMode: "decimal",
++    })),
++    partLegend: "Source concentrations",
++    waterGiven: given(samples),
++    explanation:
++      samples
++        .map(
++          ([name, , mass, volume], i) =>
++            `${name}: ${mass.toFixed(2)} ÷ ${(volume / 1000).toFixed(3)} = ${answers[i]} g/dm³.`,
++        )
++        .join(" ") +
++      " Different sample volumes must be normalised; pH does not determine dissolved-solid concentration. These measurements do not establish microbiological safety.",
++    hint: "Divide dry residue mass by the sampled volume in dm³.",
++  };
++}
++export const potableSourceRefresher = [
++  choice(
++    "r-ph",
++    sourceSets.taught,
++    "Rain",
++    "Which source has the lowest pH? Use the supplied source readings.",
++  ),
++];
++potableSourceRefresher.push({
++  id: id("r-solids"),
++  title: "Compare equal volumes",
++  purpose: "Repair a raw-residue ranking using measured sample volumes",
++  conciseHeading: true,
++  prompt:
++    "Pond P and Stream Q were sampled using different volumes. What must you compare?",
++  answer: "Dry residue mass per dm³",
++  options: [
++    "Dry residue mass per dm³",
++    "Raw residue masses only",
++    "pH values only",
++  ],
++  waterGiven: given(sourceSets.practice),
++  explanation:
++    "Pond P: 0.03 g in 0.010 dm³ gives 3 g/dm³. Stream Q: 0.05 g in 0.025 dm³ gives 2 g/dm³. The larger raw residue came from the larger sample, so it need not mean a higher concentration. pH measures another property. Return to your retained answer and compare equal-volume concentrations.",
++  hint: "Divide residue mass by the sample volume in dm³ before comparing sources.",
++});
++export const potableSourceGuided = [
++  concentrations("g-solids", sourceSets.taught, [1, 2, 35]),
++];
++export const potableSourcePractice = [
++  choice(
++    "p-ph",
++    sourceSets.practice,
++    "Pond P",
++    "Which source is acidic at 25 °C? Use the pH readings.",
++  ),
++  concentrations("p-solids", sourceSets.practice, [3, 2]),
++];
++export const potableSourceChecks = [
++  [
++    choice(
++      "cC-ph",
++      sourceSets.checkC,
++      "Lake D",
++      "Which source is more acidic?",
++    ),
++    concentrations("cC-solids", sourceSets.checkC, [2, 3]),
++  ],
++  [
++    choice(
++      "cD-ph",
++      sourceSets.checkD,
++      "Spring Y",
++      "Which source is more alkaline at 25 °C?",
++    ),
++    concentrations("cD-solids", sourceSets.checkD, [2, 3]),
++  ],
++];
++export const potableSourceReviews = [
++  [
++    choice(
++      "vC-ph",
++      sourceSets.reviewC,
++      "Reservoir M",
++      "Which source has the lower pH?",
++    ),
++    concentrations("vC-solids", sourceSets.reviewC, [2, 1]),
++  ],
++  [
++    choice(
++      "vD-ph",
++      sourceSets.reviewD,
++      "Stream U",
++      "Which source is more acidic?",
++    ),
++    concentrations("vD-solids", sourceSets.reviewD, [3, 5]),
++  ],
++];
++// Equivalent comparisons never become fresh merely because names/data change or
++// seven days elapse. A cold unopened form can still supply independent evidence.
++const all = [
++  ...potableSourceRefresher,
++  ...potableSourceGuided,
++  ...potableSourcePractice,
++  ...potableSourceChecks.flat(),
++  ...potableSourceReviews.flat(),
++];
++// Existing residue/repeat models and constructed calculations teach the same
++// normalisation. Reading those equivalents must also retire fresh source evidence.
++const priorSolids = [
++  "r-dish10",
++  "g-residue",
++  "r-dish25",
++  "r-dish50",
++  "r-dish100",
++  "r-repeat50",
++  "g-repeat",
++  "r-repeat25",
++  "r-repeat10",
++  "p-residue",
++  "p-dilute",
++  "p-repeat",
++  "cA-residue",
++  "cB-residue",
++  "vA-residue",
++].map((suffix) => `water-v1-${suffix}`);
++for (const numeric of [false, true]) {
++  const family = all.filter(
++    (q) => (Boolean(q.parts) || q.id === id("r-solids")) === numeric,
++  );
++  for (const q of family)
++    q.exposureAliases = [
++      ...family.filter((o) => o.id !== q.id).map((o) => o.id),
++      ...(numeric ? priorSolids : []),
++    ];
++}
++for (const q of potableSourcePractice)
++  q.followUp = q.parts
++    ? potableSourceRefresher[1].id
++    : potableSourceRefresher[0].id;
+diff --git a/src/content/journeys/potable-water.ts b/src/content/journeys/potable-water.ts
+index ad8ec0d..55b1fca 100644
+--- a/src/content/journeys/potable-water.ts
++++ b/src/content/journeys/potable-water.ts
+@@ -1,5 +1,12 @@
+ import type { LearningTask, LessonJourney } from "../types";
+ import { waterRecords as R, type WaterGiven } from "../../lib/water";
++import {
++  potableSourceRefresher,
++  potableSourceGuided,
++  potableSourcePractice,
++  potableSourceChecks,
++  potableSourceReviews,
++} from "./potable-sources";
+ const id = (s: string) => "water-v1-" + s;
+ function choice(
+   s: string,
+@@ -1380,3 +1387,24 @@ export const waterJourney: LessonJourney = {
+     },
+   ],
+ };
++
++// Append after all original recovery/exposure processing: old v1 task objects,
++// indices, eight-item check forms and four-item review forms stay byte-for-byte
++// equivalent to their normalised baseline. New source forms have their own IDs.
++waterJourney.refresher.push(...potableSourceRefresher);
++waterJourney.guided.push(...potableSourceGuided);
++waterJourney.practice.push(...potableSourcePractice);
++waterJourney.checkForms.push(...potableSourceChecks);
++waterJourney.reviewForms.push(...potableSourceReviews);
++waterJourney.practiceGroups!.push({
++  label: "Compare pH and dissolved solids across sources",
++  taskIds: potableSourcePractice.map((q) => q.id),
++});
++allWaterTasks.push(
++  ...potableSourceRefresher,
++  ...potableSourceGuided,
++  ...potableSourcePractice,
++  ...potableSourceChecks.flat(),
++  ...potableSourceReviews.flat(),
++);
++for (const q of potableSourcePractice) waterRecoveryRoutes[q.id] = q.followUp!;
+diff --git a/src/lib/potable-evidence.ts b/src/lib/potable-evidence.ts
+new file mode 100644
+index 0000000..9d93410
+--- /dev/null
++++ b/src/lib/potable-evidence.ts
+@@ -0,0 +1,24 @@
++import type { WaterGiven, WaterMode } from "./water";
++
++/** Read only the fixed givens, never the learner's proposal or expected answer. */
++export function potableEvidence(data: WaterGiven, mode: WaterMode): string {
++  if (data.summary) return data.summary;
++  if (data.balance) {
++    const { empty, cooled, volume } = data.balance;
++    return `Sample ${volume} cm³; empty dish ${empty.toFixed(2)} g; dish + dry cooled stable nonvolatile residue ${cooled.toFixed(2)} g.`;
++  }
++  if (data.membrane) {
++    const { feed, product, salt } = data.membrane;
++    return `Ideal feed ${feed} litres with ${salt} g salt; product ${product} litres. No volume loss; complete salt rejection.`;
++  }
++  if (data.energy) {
++    const { a, b, volume } = data.energy;
++    return `Matched exercise totals: A ${a} kWh, B ${b} kWh; ${volume} m³ treated by each route, within the same boundary.`;
++  }
++  if (data.repeat) {
++    const { masses, volume } = data.repeat;
++    return `Dry cooled residue after dish subtraction: ${masses.map((m) => m.toFixed(2)).join(", ")} g; each sample ${volume} cm³.`;
++  }
++  if (mode === "treatment") return data.rows.map((r) => r.text).join(" ");
++  return data.note;
++}
+diff --git a/tests/fixtures/potable-original-v1.json b/tests/fixtures/potable-original-v1.json
+new file mode 100644
+index 0000000..3363881
+--- /dev/null
++++ b/tests/fixtures/potable-original-v1.json
+@@ -0,0 +1,2410 @@
++{
++  "version": 1,
++  "introduction": "Read water evidence, choose treatments and analyse practical results.",
++  "scopeNote": "AQA Chemistry 8462 4.10.1.2 and required practical 8; Trilogy 8464 5.10.1.2 and required practical 13. Both tiers. Original simulations/data and honest written self-review; school-supervised practical competence and whole-course exam readiness are not established by this lesson.",
++  "outcomes": [
++    "Distinguish potable, chemically pure and clear water using supplied quality evidence.",
++    "Choose suitable fresh/salty sources and link filtration, chlorine, ozone and UV to their targets.",
++    "Measure pH, subtract empty-dish mass, convert known volumes and calculate dissolved-solid concentration.",
++    "Use reheating, cooling, constant mass and equal-volume repeats; evaluate wet/spilled residue.",
++    "Explain evaporation, condensation, nonvolatile salt retention and effective receiver cooling using a rotatable 3D apparatus.",
++    "Explain high-pressure reverse osmosis, energy and concentrated brine; conserve supplied ideal inventories.",
++    "Compare energy per equal treated volume and justify local choice without universal ranking claims."
++  ],
++  "warmup": [
++    {
++      "id": "water-v1-w-mixture",
++      "title": "Recall dissolved substances",
++      "purpose": "Recall dissolved substances",
++      "prompt": "Clear salt solution is…",
++      "answer": "A mixture",
++      "options": ["Chemically pure H₂O", "An element", "A mixture"],
++      "misconceptions": {
++        "Chemically pure H₂O": "Dissolved salt is another substance.",
++        "An element": "Water and salt contain elements in compounds."
++      },
++      "explanation": "Dissolved salt can be invisible while the solution remains a mixture.",
++      "hint": "Use composition, not appearance.",
++      "exposureAliases": [
++        "water-v1-r-mineral",
++        "water-v1-g-quality",
++        "water-v1-p-minerals",
++        "water-v1-cB-pure",
++        "water-v1-vA-quality",
++        "potable-water-0"
++      ]
++    },
++    {
++      "id": "water-v1-w-volume",
++      "title": "Convert a sample volume",
++      "purpose": "Convert a sample volume",
++      "prompt": "Convert 25 cm³ to dm³.",
++      "answer": "0.025",
++      "unit": "dm³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "1000 cm³=1 dm³, so 25÷1000=0.025 dm³.",
++      "hint": "Divide by 1000."
++    },
++    {
++      "id": "water-v1-w-subtract",
++      "title": "Remove the dish contribution",
++      "purpose": "Remove the dish contribution",
++      "prompt": "A dry empty dish is 31.25 g; dish plus cooled dry residue is 31.33 g. What is residue mass?",
++      "answer": "0.08",
++      "unit": "g",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "31.33−31.25=0.08 g.",
++      "hint": "Subtract the empty dish."
++    },
++    {
++      "id": "water-v1-w-phase",
++      "title": "Recall condensation",
++      "purpose": "Recall condensation",
++      "prompt": "Condensation changes water vapour into…",
++      "answer": "Liquid water",
++      "options": ["Liquid water", "Hydrogen and oxygen", "Salt"],
++      "misconceptions": {
++        "Hydrogen and oxygen": "Phase change does not decompose H₂O.",
++        "Salt": "Water does not become salt."
++      },
++      "explanation": "Cooling changes water's state, not its chemical identity.",
++      "hint": "Track H₂O.",
++      "exposureAliases": [
++        "water-v1-r-cold",
++        "water-v1-g-distil",
++        "water-v1-p-evap",
++        "water-v1-p-steam",
++        "water-v1-cA-distil",
++        "water-v1-vA-path",
++        "water-v1-r-identity"
++      ]
++    }
++  ],
++  "refresher": [
++    {
++      "id": "water-v1-r-mineral",
++      "title": "Classify mineral water",
++      "purpose": "Classify mineral water",
++      "prompt": "Use the stated quality evidence. Which description fits?",
++      "answer": "Potable but not chemically pure",
++      "options": [
++        "Potable but not chemically pure",
++        "Pure because it is clear",
++        "Never potable if any mineral is present"
++      ],
++      "misconceptions": {
++        "Pure because it is clear": "Dissolved minerals remain.",
++        "Never potable if any mineral is present": "Acceptably low salts can remain."
++      },
++      "explanation": "The stated checks establish potability; dissolved minerals mean this is not chemically pure H₂O.",
++      "hint": "Distinguish composition and supplied quality.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "quality",
++        "record": "mineral"
++      },
++      "exposureAliases": [
++        "water-v1-w-mixture",
++        "water-v1-g-quality",
++        "water-v1-p-minerals",
++        "water-v1-cB-pure",
++        "water-v1-vA-quality",
++        "potable-water-0"
++      ]
++    },
++    {
++      "id": "water-v1-r-clear",
++      "title": "Limit a quality inference",
++      "purpose": "Limit a quality inference",
++      "prompt": "Only clarity and pH 7 are supplied. What is established?",
++      "answer": "Neither potability nor chemical purity",
++      "options": [
++        "Neither potability nor chemical purity",
++        "Both proved",
++        "Potable because pH is neutral"
++      ],
++      "misconceptions": {
++        "Both proved": "Invisible contaminants can remain.",
++        "Potable because pH is neutral": "pH does not measure all salts or microbes."
++      },
++      "explanation": "Clarity and neutral pH alone establish neither potability nor chemical purity. Dissolved salts or microbes could remain.",
++      "hint": "Notice the missing tests.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "quality",
++        "record": "clear"
++      },
++      "exposureAliases": [
++        "water-v1-p-clear",
++        "water-v1-vB-evidence",
++        "potable-water-5"
++      ]
++    },
++    {
++      "id": "water-v1-r-saline",
++      "title": "Use failed quality evidence",
++      "purpose": "Use failed quality evidence",
++      "prompt": "Which observation prevents potability in this case?",
++      "answer": "Salt exceeds the stated drinking-water limit",
++      "options": [
++        "Salt exceeds the stated drinking-water limit",
++        "pH 7",
++        "The sample is clear"
++      ],
++      "misconceptions": {
++        "pH 7": "Neutral pH is not itself a salt failure.",
++        "The sample is clear": "Clarity does not establish safe composition."
++      },
++      "explanation": "Neutral pH does not remove salt. The stated salt failure rules out potability; dissolved salt rules out chemical purity.",
++      "hint": "Use the actual failed requirement.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "quality",
++        "record": "saline"
++      },
++      "exposureAliases": ["water-v1-cA-quality"]
++    },
++    {
++      "id": "water-v1-r-pure",
++      "title": "Use stipulated composition",
++      "purpose": "Use stipulated composition",
++      "prompt": "Only H₂O and satisfactory quality are stipulated. Which applies?",
++      "answer": "Both chemically pure and potable",
++      "options": [
++        "Both chemically pure and potable",
++        "No pure water can be potable",
++        "Potable means always impure"
++      ],
++      "misconceptions": {
++        "No pure water can be potable": "The descriptions can overlap.",
++        "Potable means always impure": "Potability does not require impurities."
++      },
++      "explanation": "In this explicitly ideal case both descriptions apply. In general potable water need not be chemically pure.",
++      "hint": "Use this stipulated case, not a general rule.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "quality",
++        "record": "pure"
++      }
++    },
++    {
++      "id": "water-v1-r-fresh",
++      "title": "Link treatments to contaminants",
++      "purpose": "Link treatments to contaminants",
++      "prompt": "Why use the supplied chlorine stage after filtering?",
++      "answer": "Destroy harmful microorganisms",
++      "options": [
++        "Turn sediment into H₂O",
++        "Destroy harmful microorganisms",
++        "Remove every dissolved salt"
++      ],
++      "misconceptions": {
++        "Remove every dissolved salt": "Chlorine is not desalination.",
++        "Turn sediment into H₂O": "Filtration separates sediment."
++      },
++      "explanation": "Filter beds remove undissolved grit. Chlorine then destroys harmful microbes; dissolved minerals remain within the stated limit.",
++      "hint": "Assign each stage one purpose.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "treatment",
++        "record": "fresh"
++      },
++      "exposureAliases": [
++        "water-v1-r-uv",
++        "water-v1-r-ozone",
++        "water-v1-g-treatment",
++        "water-v1-p-filtration",
++        "water-v1-p-freshMethod",
++        "water-v1-p-boil",
++        "water-v1-cA-treatment",
++        "water-v1-vA-filter",
++        "water-v1-p-uv",
++        "water-v1-cB-UV",
++        "potable-water-1",
++        "potable-water-2"
++      ]
++    },
++    {
++      "id": "water-v1-r-uv",
++      "title": "Distinguish UV from a substance",
++      "purpose": "Distinguish UV from a substance",
++      "prompt": "The UV stage is…",
++      "answer": "Disinfection using light",
++      "options": [
++        "A chemical dissolved into water",
++        "A salt-removing filter",
++        "Disinfection using light"
++      ],
++      "misconceptions": {
++        "A chemical dissolved into water": "UV is radiation, not a dissolved chemical.",
++        "A salt-removing filter": "UV does not desalinate."
++      },
++      "explanation": "UV is a light-based disinfection method, not a chemical substance. Neither stage desalinates the dissolved salts.",
++      "hint": "Separate light treatment from chemical agents.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "treatment",
++        "record": "freshUV"
++      },
++      "exposureAliases": [
++        "water-v1-r-fresh",
++        "water-v1-r-ozone",
++        "water-v1-g-treatment",
++        "water-v1-p-filtration",
++        "water-v1-p-freshMethod",
++        "water-v1-p-boil",
++        "water-v1-cA-treatment",
++        "water-v1-vA-filter",
++        "water-v1-p-uv",
++        "water-v1-cB-UV",
++        "potable-water-1",
++        "potable-water-2"
++      ]
++    },
++    {
++      "id": "water-v1-r-ozone",
++      "title": "Explain an ozone plant",
++      "purpose": "Explain an ozone plant",
++      "prompt": "After filtration, ozone mainly targets…",
++      "answer": "Harmful microorganisms",
++      "options": [
++        "Harmful microorganisms",
++        "All dissolved minerals",
++        "Water molecules to create salt"
++      ],
++      "misconceptions": {
++        "All dissolved minerals": "Ozone does not remove every ion.",
++        "Water molecules to create salt": "It does not turn water into salt."
++      },
++      "explanation": "Ozone targets harmful microorganisms after particle filtration. It does not remove every dissolved mineral.",
++      "hint": "Connect treatment and target.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "treatment",
++        "record": "freshOzone"
++      },
++      "exposureAliases": [
++        "water-v1-r-fresh",
++        "water-v1-r-uv",
++        "water-v1-g-treatment",
++        "water-v1-p-filtration",
++        "water-v1-p-freshMethod",
++        "water-v1-p-boil",
++        "water-v1-cA-treatment",
++        "water-v1-vA-filter",
++        "water-v1-p-uv",
++        "water-v1-cB-UV",
++        "potable-water-1",
++        "potable-water-2"
++      ]
++    },
++    {
++      "id": "water-v1-r-seawater",
++      "title": "Separate salty water",
++      "purpose": "Separate salty water",
++      "prompt": "Where is nonvolatile salt after the supplied distillation?",
++      "answer": "In the heated flask",
++      "options": [
++        "Destroyed into nothing",
++        "In the heated flask",
++        "In the collected water vapour"
++      ],
++      "misconceptions": {
++        "In the collected water vapour": "Nonvolatile salt does not evaporate with water in this case.",
++        "Destroyed into nothing": "Atoms are conserved."
++      },
++      "explanation": "Water evaporates then condenses; nonvolatile salt remains in the flask. In this ideal stated case heating also destroys microbes, so no additional sterilisation is required. This is not a universal claim about unknown feeds.",
++      "hint": "Trace which component evaporates.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "treatment",
++        "record": "seawater"
++      }
++    },
++    {
++      "id": "water-v1-r-roRoute",
++      "title": "Follow a specified membrane plant",
++      "purpose": "Follow a specified membrane plant",
++      "prompt": "Where is most rejected salt?",
++      "answer": "In the brine stream",
++      "options": [
++        "In ordinary filter-paper pores",
++        "In the brine stream",
++        "Destroyed by pressure"
++      ],
++      "misconceptions": {
++        "Destroyed by pressure": "Pressure does not destroy salt.",
++        "In ordinary filter-paper pores": "This is a selective-membrane process."
++      },
++      "explanation": "High-pressure reverse osmosis retains most salt in brine. The specified chlorine stage addresses harmful microorganisms; this is different from ordinary filter beds.",
++      "hint": "Account for a separate waste stream.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "treatment",
++        "record": "saltyRO"
++      },
++      "exposureAliases": [
++        "water-v1-r-mem100",
++        "water-v1-g-membrane",
++        "water-v1-r-mem80",
++        "water-v1-r-mem120",
++        "water-v1-p-pressure",
++        "water-v1-cB-pressure",
++        "potable-water-4"
++      ]
++    },
++    {
++      "id": "water-v1-r-dish10",
++      "title": "Construct residue concentration",
++      "purpose": "Construct residue concentration",
++      "prompt": "Use the model's original dish and 10 cm³ sample. Find g per dm³.",
++      "answer": "5",
++      "unit": "g/dm³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "32.51−32.46=0.05 g. 10 cm³=0.010 dm³. 0.05÷0.010=5 g/dm³; dish mass is not dissolved solid.",
++      "hint": "Subtract then convert volume.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "residue",
++        "record": "dish10"
++      },
++      "exposureAliases": [
++        "water-v1-g-residue",
++        "water-v1-r-dish25",
++        "water-v1-r-dish50",
++        "water-v1-r-dish100"
++      ]
++    },
++    {
++      "id": "water-v1-r-dish25",
++      "title": "Scale a 25 cm³ sample",
++      "purpose": "Scale a 25 cm³ sample",
++      "prompt": "Use the supplied dish readings. Find g per dm³.",
++      "answer": "4",
++      "unit": "g/dm³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "0.10 g in 0.025 dm³ gives 4 g/dm³. Scale both mass and volume together.",
++      "hint": "0.025 dm³ is one fortieth of a litre.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "residue",
++        "record": "dish25"
++      },
++      "exposureAliases": [
++        "water-v1-r-dish10",
++        "water-v1-g-residue",
++        "water-v1-r-dish50",
++        "water-v1-r-dish100"
++      ]
++    },
++    {
++      "id": "water-v1-r-dish50",
++      "title": "Scale a seawater sample",
++      "purpose": "Scale a seawater sample",
++      "prompt": "Use the fixed 50 cm³ data. Find g per dm³.",
++      "answer": "32",
++      "unit": "g/dm³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "42.80−41.20=1.60 g; 50 cm³=0.050 dm³; concentration 32 g/dm³.",
++      "hint": "Remove the empty dish first.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "residue",
++        "record": "dish50"
++      },
++      "exposureAliases": [
++        "water-v1-r-dish10",
++        "water-v1-g-residue",
++        "water-v1-r-dish25",
++        "water-v1-r-dish100"
++      ]
++    },
++    {
++      "id": "water-v1-r-dish100",
++      "title": "Analyse dilute water",
++      "purpose": "Analyse dilute water",
++      "prompt": "Use the fixed 100 cm³ sample. Find g per dm³.",
++      "answer": "0.3",
++      "unit": "g/dm³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "The tiny difference is 0.03 g, not 35.11 g. In 0.100 dm³ this is 0.30 g/dm³.",
++      "hint": "The difference is small but not zero.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "residue",
++        "record": "dish100"
++      },
++      "exposureAliases": [
++        "water-v1-r-dish10",
++        "water-v1-g-residue",
++        "water-v1-r-dish25",
++        "water-v1-r-dish50"
++      ]
++    },
++    {
++      "id": "water-v1-r-cold",
++      "title": "Connect the phase path",
++      "purpose": "Connect the phase path",
++      "prompt": "What forms collected liquid at the cool end?",
++      "answer": "Condensation of water vapour",
++      "options": [
++        "Chemical decomposition",
++        "Evaporation of salt",
++        "Condensation of water vapour"
++      ],
++      "misconceptions": {
++        "Chemical decomposition": "H₂O identity remains.",
++        "Evaporation of salt": "The supplied salt is nonvolatile."
++      },
++      "explanation": "Heating forms water vapour without changing H₂O identity. Cooling condenses it into liquid in the receiver. Nonvolatile salt stays in the flask.",
++      "hint": "Heating and cooling have different roles.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "distil",
++        "record": "cold"
++      },
++      "exposureAliases": [
++        "water-v1-w-phase",
++        "water-v1-g-distil",
++        "water-v1-p-evap",
++        "water-v1-p-steam",
++        "water-v1-cA-distil",
++        "water-v1-vA-path",
++        "water-v1-r-identity"
++      ]
++    },
++    {
++      "id": "water-v1-r-uncooled",
++      "title": "Explain a cooling comparison",
++      "purpose": "Explain a cooling comparison",
++      "prompt": "With the same feed and heating time, effective cooling collects more because…",
++      "answer": "More water vapour condenses before escaping",
++      "options": [
++        "All dissolved salt becomes liquid water",
++        "More water vapour condenses before escaping",
++        "Cooling creates extra water atoms"
++      ],
++      "misconceptions": {
++        "Cooling creates extra water atoms": "Atoms are not created.",
++        "All dissolved salt becomes liquid water": "Salt stays at the heated end."
++      },
++      "explanation": "Cooling condenses more water vapour before it escapes; it does not create extra water or remove salt from the receiver. Equal heating/time makes this a meaningful comparison.",
++      "hint": "Relate cooling to vapour collection.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "distil",
++        "record": "uncooled"
++      },
++      "exposureAliases": ["water-v1-p-cooling", "water-v1-cB-cooling"]
++    },
++    {
++      "id": "water-v1-r-identity",
++      "title": "Retain H₂O identity",
++      "purpose": "Retain H₂O identity",
++      "prompt": "The delivery tube contains water vapour rather than…",
++      "answer": "New hydrogen and oxygen gases",
++      "options": [
++        "H₂O molecules",
++        "Water in a gaseous state",
++        "New hydrogen and oxygen gases"
++      ],
++      "misconceptions": {
++        "H₂O molecules": "Water vapour is H₂O.",
++        "Water in a gaseous state": "That is exactly water vapour."
++      },
++      "explanation": "Liquid→vapour→liquid is physical separation. No H₂ or O₂ products are formed; salt remains at the heated end.",
++      "hint": "A change of state is physical.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "distil",
++        "record": "identity"
++      },
++      "exposureAliases": [
++        "water-v1-w-phase",
++        "water-v1-r-cold",
++        "water-v1-g-distil",
++        "water-v1-p-evap",
++        "water-v1-p-steam",
++        "water-v1-cA-distil",
++        "water-v1-vA-path"
++      ]
++    },
++    {
++      "id": "water-v1-r-mem100",
++      "title": "Conserve membrane volume",
++      "purpose": "Conserve membrane volume",
++      "prompt": "Use the fixed 100 litre feed and supplied 40 litre product. Find brine volume.",
++      "answer": "60",
++      "unit": "litres",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "Pressure drives water through the selective membrane. 100−40=60 litres of brine retains 3000 g salt; salt is concentrated, not destroyed.",
++      "hint": "Feed equals product plus brine in this ideal exercise.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "membrane",
++        "record": "mem100"
++      },
++      "exposureAliases": [
++        "water-v1-g-membrane",
++        "water-v1-r-mem80",
++        "water-v1-r-mem120",
++        "water-v1-r-roRoute",
++        "water-v1-p-pressure",
++        "water-v1-cB-pressure",
++        "potable-water-4"
++      ]
++    },
++    {
++      "id": "water-v1-r-mem80",
++      "title": "Use a different recovery",
++      "purpose": "Use a different recovery",
++      "prompt": "Use the fixed 80 litre feed and 24 litre product. Find brine volume.",
++      "answer": "56",
++      "unit": "litres",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "80−24=56 litres remain; all 2400 g salt stays in the brine in this explicitly ideal model.",
++      "hint": "Subtract product from feed.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "membrane",
++        "record": "mem80"
++      },
++      "exposureAliases": [
++        "water-v1-r-mem100",
++        "water-v1-g-membrane",
++        "water-v1-r-mem120",
++        "water-v1-r-roRoute",
++        "water-v1-p-pressure",
++        "water-v1-cB-pressure",
++        "potable-water-4"
++      ]
++    },
++    {
++      "id": "water-v1-r-mem120",
++      "title": "Account for remaining water",
++      "purpose": "Account for remaining water",
++      "prompt": "Use the fixed 120 litre feed and 54 litre product. Find brine volume.",
++      "answer": "66",
++      "unit": "litres",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "54+66=120 litres. Retained 3600 g salt becomes more concentrated in 66 litres; high-pressure pumping requires energy.",
++      "hint": "Do not discard the uncollected water.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "membrane",
++        "record": "mem120"
++      },
++      "exposureAliases": [
++        "water-v1-r-mem100",
++        "water-v1-g-membrane",
++        "water-v1-r-mem80",
++        "water-v1-r-roRoute",
++        "water-v1-p-pressure",
++        "water-v1-cB-pressure",
++        "potable-water-4"
++      ]
++    },
++    {
++      "id": "water-v1-r-coast",
++      "title": "Normalise route energy",
++      "purpose": "Normalise route energy",
++      "prompt": "In the fixed comparison, how much more energy does B use per m³?",
++      "answer": "11",
++      "unit": "kWh/m³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "8÷2=4 and 30÷2=15 kWh/m³; B−A=11. A uses less energy in this dataset, not in every possible plant. Both desalination routes require energy.",
++      "hint": "Divide each total by 2 m³.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "resources",
++        "record": "coast"
++      },
++      "exposureAliases": [
++        "water-v1-g-energy",
++        "water-v1-r-lake",
++        "water-v1-r-heatReuse",
++        "water-v1-r-equal",
++        "potable-water-3"
++      ]
++    },
++    {
++      "id": "water-v1-r-lake",
++      "title": "Compare a local freshwater source",
++      "purpose": "Compare a local freshwater source",
++      "prompt": "Use the fixed equal-volume totals. Find B−A per m³.",
++      "answer": "5.5",
++      "unit": "kWh/m³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "Per-m³ energies are 0.5 and 6; B uses 5.5 kWh/m³ more here. Choose the suitable freshwater supply with the stated lower energy, considering local availability.",
++      "hint": "Compare equal quantities and the same boundary.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "resources",
++        "record": "lake"
++      },
++      "exposureAliases": [
++        "water-v1-r-coast",
++        "water-v1-g-energy",
++        "water-v1-r-heatReuse",
++        "water-v1-r-equal",
++        "potable-water-3"
++      ]
++    },
++    {
++      "id": "water-v1-r-heatReuse",
++      "title": "Read a signed comparison",
++      "purpose": "Read a signed comparison",
++      "prompt": "Use the fixed totals. Find B−A per m³.",
++      "answer": "-2",
++      "unit": "kWh/m³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "20÷4=5,12÷4=3; B−A=−2 kWh/m³. Supplied boundaries and heat availability matter; no universal ranking follows.",
++      "hint": "A negative difference means B uses less here.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "resources",
++        "record": "heatReuse"
++      },
++      "exposureAliases": [
++        "water-v1-r-coast",
++        "water-v1-g-energy",
++        "water-v1-r-lake",
++        "water-v1-r-equal",
++        "potable-water-3"
++      ]
++    },
++    {
++      "id": "water-v1-r-equal",
++      "title": "Recognise equal totals",
++      "purpose": "Recognise equal totals",
++      "prompt": "What is B−A per m³ for these fixed equal totals?",
++      "answer": "0",
++      "unit": "kWh/m³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "Both use 2 kWh/m³ here. Equal energy alone does not prove equal total environmental effects.",
++      "hint": "Same total and volume give the same per-volume energy.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "resources",
++        "record": "equal"
++      },
++      "exposureAliases": [
++        "water-v1-r-coast",
++        "water-v1-g-energy",
++        "water-v1-r-lake",
++        "water-v1-r-heatReuse",
++        "potable-water-3"
++      ]
++    },
++    {
++      "id": "water-v1-r-repeat50",
++      "title": "Average repeat residues",
++      "purpose": "Average repeat residues",
++      "prompt": "Use all four supplied 50 cm³ repeats. Find the mean concentration.",
++      "answer": "34.2",
++      "unit": "g/dm³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "Mean=(1.68+1.72+1.70+1.74)÷4=1.71 g. 50 cm³=0.050 dm³, so 34.2 g/dm³. Reheat, cool, reweigh to constant mass.",
++      "hint": "Mean mass first; scale second.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "repeat",
++        "record": "repeat50"
++      },
++      "exposureAliases": [
++        "water-v1-g-repeat",
++        "water-v1-r-repeat25",
++        "water-v1-r-repeat10"
++      ]
++    },
++    {
++      "id": "water-v1-r-repeat25",
++      "title": "Scale a repeat mean",
++      "purpose": "Scale a repeat mean",
++      "prompt": "Use the three original 25 cm³ samples. Find the mean concentration.",
++      "answer": "4.8",
++      "unit": "g/dm³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "Mean 0.12 g in 0.025 dm³ gives 4.8 g/dm³. Similar repeat values show consistency; dry evidence still needs reheat, cool, reweigh.",
++      "hint": "Equal-volume samples support direct mass averaging.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "repeat",
++        "record": "repeat25"
++      },
++      "exposureAliases": [
++        "water-v1-r-repeat50",
++        "water-v1-g-repeat",
++        "water-v1-r-repeat10"
++      ]
++    },
++    {
++      "id": "water-v1-r-repeat10",
++      "title": "Use dry residue evidence",
++      "purpose": "Use dry residue evidence",
++      "prompt": "Use the four original 10 cm³ samples. Find the mean concentration.",
++      "answer": "3",
++      "unit": "g/dm³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "Mean 0.03 g in 0.010 dm³ gives 3 g/dm³. Use the known sample volume, not the whole beaker volume.",
++      "hint": "Do not confuse repeat consistency with proof of dryness.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "repeat",
++        "record": "repeat10"
++      },
++      "exposureAliases": [
++        "water-v1-r-repeat50",
++        "water-v1-g-repeat",
++        "water-v1-r-repeat25"
++      ]
++    }
++  ],
++  "guided": [
++    {
++      "id": "water-v1-g-quality",
++      "title": "Read water evidence",
++      "purpose": "Read water evidence",
++      "prompt": "Classify this mineral-water sample.",
++      "answer": "Potable but not chemically pure",
++      "options": [
++        "Clear therefore pure",
++        "Not potable because any mineral is forbidden",
++        "Potable but not chemically pure"
++      ],
++      "misconceptions": {
++        "Clear therefore pure": "Dissolved minerals remain.",
++        "Not potable because any mineral is forbidden": "Acceptably low salts can remain."
++      },
++      "explanation": "The stated checks establish potability; dissolved minerals mean this is not chemically pure H₂O.",
++      "hint": "Use the supplied quality checks.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "quality",
++        "record": "mineral"
++      },
++      "openingHint": true,
++      "exposureAliases": [
++        "water-v1-w-mixture",
++        "water-v1-r-mineral",
++        "water-v1-p-minerals",
++        "water-v1-cB-pure",
++        "water-v1-vA-quality",
++        "potable-water-0"
++      ]
++    },
++    {
++      "id": "water-v1-g-treatment",
++      "title": "Build a freshwater route",
++      "purpose": "Build a freshwater route",
++      "prompt": "Choose the stages and track contaminants.",
++      "answer": "Filter grit; disinfect microbes; dissolved minerals remain",
++      "options": [
++        "Filter grit; disinfect microbes; dissolved minerals remain",
++        "Filter all dissolved salt",
++        "Chlorine removes grit"
++      ],
++      "misconceptions": {
++        "Filter all dissolved salt": "Ordinary beds do not desalinate.",
++        "Chlorine removes grit": "Filtration separates suspended solids."
++      },
++      "explanation": "Filter beds remove undissolved grit. Chlorine then destroys harmful microbes; dissolved minerals remain within the stated limit.",
++      "hint": "Match each operation to its target.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "treatment",
++        "record": "fresh"
++      },
++      "exposureAliases": [
++        "water-v1-r-fresh",
++        "water-v1-r-uv",
++        "water-v1-r-ozone",
++        "water-v1-p-filtration",
++        "water-v1-p-freshMethod",
++        "water-v1-p-boil",
++        "water-v1-cA-treatment",
++        "water-v1-vA-filter",
++        "water-v1-p-uv",
++        "water-v1-cB-UV",
++        "potable-water-1",
++        "potable-water-2"
++      ]
++    },
++    {
++      "id": "water-v1-g-residue",
++      "title": "Analyse dissolved solids",
++      "purpose": "Analyse dissolved solids",
++      "prompt": "Find the concentration from the original 10 cm³ sample.",
++      "answer": "5",
++      "unit": "g/dm³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "32.51−32.46=0.05 g. 10 cm³=0.010 dm³. 0.05÷0.010=5 g/dm³; dish mass is not dissolved solid.",
++      "hint": "Mass difference divided by sample volume in dm³.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "residue",
++        "record": "dish10"
++      },
++      "exposureAliases": [
++        "water-v1-r-dish10",
++        "water-v1-r-dish25",
++        "water-v1-r-dish50",
++        "water-v1-r-dish100"
++      ]
++    },
++    {
++      "id": "water-v1-g-distil",
++      "title": "Collect distilled water",
++      "purpose": "Collect distilled water",
++      "prompt": "Follow water through the apparatus.",
++      "answer": "Evaporate water, cool vapour, collect liquid",
++      "options": [
++        "Collect salt vapour",
++        "Evaporate water, cool vapour, collect liquid",
++        "Decompose H₂O into gases"
++      ],
++      "misconceptions": {
++        "Decompose H₂O into gases": "This is a physical phase separation.",
++        "Collect salt vapour": "Nonvolatile salt stays in the flask."
++      },
++      "explanation": "Heating forms water vapour without changing H₂O identity. Cooling condenses it into liquid in the receiver. Nonvolatile salt stays in the flask.",
++      "hint": "Trace the heated and cooled ends.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "distil",
++        "record": "cold"
++      },
++      "exposureAliases": [
++        "water-v1-w-phase",
++        "water-v1-r-cold",
++        "water-v1-p-evap",
++        "water-v1-p-steam",
++        "water-v1-cA-distil",
++        "water-v1-vA-path",
++        "water-v1-r-identity"
++      ]
++    },
++    {
++      "id": "water-v1-g-membrane",
++      "title": "Conserve membrane streams",
++      "purpose": "Conserve membrane streams",
++      "prompt": "Find the brine volume from the fixed membrane feed.",
++      "answer": "60",
++      "unit": "litres",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "Pressure drives water through the selective membrane. 100−40=60 litres of brine retains 3000 g salt; salt is concentrated, not destroyed.",
++      "hint": "Feed minus product.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "membrane",
++        "record": "mem100"
++      },
++      "exposureAliases": [
++        "water-v1-r-mem100",
++        "water-v1-r-mem80",
++        "water-v1-r-mem120",
++        "water-v1-r-roRoute",
++        "water-v1-p-pressure",
++        "water-v1-cB-pressure",
++        "potable-water-4"
++      ]
++    },
++    {
++      "id": "water-v1-g-energy",
++      "title": "Compare treatment energy",
++      "purpose": "Compare treatment energy",
++      "prompt": "Find B−A energy per m³ for the supplied coastal case.",
++      "answer": "11",
++      "unit": "kWh/m³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "8÷2=4 and 30÷2=15 kWh/m³; B−A=11. A uses less energy in this dataset, not in every possible plant. Both desalination routes require energy.",
++      "hint": "Normalise both totals first.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "resources",
++        "record": "coast"
++      },
++      "exposureAliases": [
++        "water-v1-r-coast",
++        "water-v1-r-lake",
++        "water-v1-r-heatReuse",
++        "water-v1-r-equal",
++        "potable-water-3"
++      ]
++    },
++    {
++      "id": "water-v1-g-repeat",
++      "title": "Check practical evidence",
++      "purpose": "Check practical evidence",
++      "prompt": "Find the mean concentration of the four equal-volume samples.",
++      "answer": "34.2",
++      "unit": "g/dm³",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "Mean=(1.68+1.72+1.70+1.74)÷4=1.71 g. 50 cm³=0.050 dm³, so 34.2 g/dm³. Reheat, cool, reweigh to constant mass.",
++      "hint": "Average all four masses, then scale.",
++      "model": {
++        "kind": "water-investigation",
++        "mode": "repeat",
++        "record": "repeat50"
++      },
++      "exposureAliases": [
++        "water-v1-r-repeat50",
++        "water-v1-r-repeat25",
++        "water-v1-r-repeat10"
++      ]
++    }
++  ],
++  "practice": [
++    {
++      "id": "water-v1-p-clear",
++      "title": "Limit an inference",
++      "purpose": "Limit an inference",
++      "prompt": "Clear water has pH 7 at room temperature; no other tests are provided. Is potability established?",
++      "answer": "No; relevant chemical and microbiological quality is unknown",
++      "options": [
++        "Yes; neutral means safe",
++        "Yes; microbes are visible if present",
++        "No; relevant chemical and microbiological quality is unknown"
++      ],
++      "misconceptions": {
++        "Yes; neutral means safe": "pH does not test all salts or microbes.",
++        "Yes; microbes are visible if present": "Clarity does not exclude microbes."
++      },
++      "explanation": "pH and clarity alone cannot certify drinking-water quality.",
++      "hint": "Identify unmeasured properties.",
++      "followUp": "water-v1-r-clear",
++      "exposureAliases": [
++        "water-v1-r-clear",
++        "water-v1-vB-evidence",
++        "potable-water-5"
++      ]
++    },
++    {
++      "id": "water-v1-p-minerals",
++      "title": "Separate potable and pure",
++      "purpose": "Separate potable and pure",
++      "prompt": "Water meets the stated drinking-water quality requirements and contains dissolved calcium salts. It is…",
++      "answer": "Potable, but a mixture",
++      "options": ["Never potable", "Potable, but a mixture", "Pure H₂O"],
++      "misconceptions": {
++        "Pure H₂O": "Calcium salts are other substances.",
++        "Never potable": "Suitable low levels of dissolved minerals can remain."
++      },
++      "explanation": "Potability describes safe drinking quality; chemical purity describes composition.",
++      "hint": "Use both definitions.",
++      "followUp": "water-v1-r-mineral",
++      "exposureAliases": [
++        "water-v1-w-mixture",
++        "water-v1-r-mineral",
++        "water-v1-g-quality",
++        "water-v1-cB-pure",
++        "water-v1-vA-quality",
++        "potable-water-0"
++      ]
++    },
++    {
++      "id": "water-v1-p-uv",
++      "title": "Name a disinfection method",
++      "purpose": "Name a disinfection method",
++      "prompt": "Which is a disinfection method using light?",
++      "answer": "Ultraviolet treatment",
++      "options": [
++        "Ordinary filter beds",
++        "Ultraviolet treatment",
++        "Ozone addition"
++      ],
++      "misconceptions": {
++        "Ozone addition": "Ozone is a chemical agent.",
++        "Ordinary filter beds": "These remove suspended solids."
++      },
++      "explanation": "Chlorine, ozone and UV are specified disinfection options; UV is radiation.",
++      "hint": "Separate light from a substance.",
++      "followUp": "water-v1-r-uv",
++      "exposureAliases": [
++        "water-v1-r-fresh",
++        "water-v1-r-uv",
++        "water-v1-r-ozone",
++        "water-v1-g-treatment",
++        "water-v1-p-filtration",
++        "water-v1-p-freshMethod",
++        "water-v1-p-boil",
++        "water-v1-cA-treatment",
++        "water-v1-vA-filter",
++        "water-v1-cB-UV",
++        "potable-water-1",
++        "potable-water-2"
++      ]
++    },
++    {
++      "id": "water-v1-p-filtration",
++      "title": "Track dissolved salt",
++      "purpose": "Track dissolved salt",
++      "prompt": "Freshwater passes through ordinary filter beds. Its dissolved salt is…",
++      "answer": "Still dissolved in the filtrate",
++      "options": [
++        "Changed into oxygen",
++        "Still dissolved in the filtrate",
++        "All trapped as ordinary-filter residue"
++      ],
++      "misconceptions": {
++        "All trapped as ordinary-filter residue": "Dissolved salt passes through ordinary beds.",
++        "Changed into oxygen": "Physical filtration does not create oxygen."
++      },
++      "explanation": "Ordinary filtration separates undissolved particles, not all dissolved ions.",
++      "hint": "Distinguish particles from dissolved solute.",
++      "followUp": "water-v1-r-fresh",
++      "exposureAliases": [
++        "water-v1-r-fresh",
++        "water-v1-r-uv",
++        "water-v1-r-ozone",
++        "water-v1-g-treatment",
++        "water-v1-p-freshMethod",
++        "water-v1-p-boil",
++        "water-v1-cA-treatment",
++        "water-v1-vA-filter",
++        "water-v1-p-uv",
++        "water-v1-cB-UV",
++        "potable-water-1",
++        "potable-water-2"
++      ]
++    },
++    {
++      "id": "water-v1-p-freshMethod",
++      "title": "Explain a treatment route",
++      "purpose": "Explain a treatment route",
++      "prompt": "Explain how a suitable freshwater source containing grit and harmful microbes becomes potable. Link each stage to its purpose.",
++      "answer": "In the UK, rain with little dissolved matter replenishes freshwater sources. Choose a suitable source with acceptably low dissolved salts, such as a river, lake or groundwater supply. Filter beds remove undissolved solid particles. Then chlorine, ozone or ultraviolet treatment destroys harmful microorganisms. Check the supplied drinking-water quality requirements; dissolved minerals can remain at acceptable levels.",
++      "referenceResponse": "In the UK, rain with little dissolved matter replenishes freshwater sources. Choose a suitable source with acceptably low dissolved salts, such as a river, lake or groundwater supply. Filter beds remove undissolved solid particles. Then chlorine, ozone or ultraviolet treatment destroys harmful microorganisms. Check the supplied drinking-water quality requirements; dissolved minerals can remain at acceptable levels.",
++      "explanation": "In the UK, rain with little dissolved matter replenishes freshwater sources. Choose a suitable source with acceptably low dissolved salts, such as a river, lake or groundwater supply. Filter beds remove undissolved solid particles. Then chlorine, ozone or ultraviolet treatment destroys harmful microorganisms. Check the supplied drinking-water quality requirements; dissolved minerals can remain at acceptable levels.",
++      "rubric": [
++        "Suitable fresh source and sufficiently low salts",
++        "Filtration linked to undissolved particles",
++        "Disinfection method linked to microorganisms",
++        "Potable does not require chemically pure H₂O"
++      ],
++      "hint": "Give step→reason links.",
++      "followUp": "water-v1-r-fresh",
++      "exposureAliases": [
++        "water-v1-r-fresh",
++        "water-v1-r-uv",
++        "water-v1-r-ozone",
++        "water-v1-g-treatment",
++        "water-v1-p-filtration",
++        "water-v1-p-boil",
++        "water-v1-cA-treatment",
++        "water-v1-vA-filter",
++        "water-v1-p-uv",
++        "water-v1-cB-UV",
++        "potable-water-1",
++        "potable-water-2"
++      ]
++    },
++    {
++      "id": "water-v1-p-residue",
++      "title": "Construct a sample concentration",
++      "purpose": "Construct a sample concentration",
++      "prompt": "Use the original readings; enter residue mass, sample dm³ and concentration.",
++      "answer": "{\"mass\":\"0.15\",\"volume\":\"0.025\",\"conc\":\"6\"}",
++      "parts": [
++        {
++          "id": "mass",
++          "label": "Residue mass / g",
++          "answer": 0.15,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "volume",
++          "label": "Sample volume / dm³",
++          "answer": 0.025,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "conc",
++          "label": "Concentration / g per dm³",
++          "answer": 6,
++          "inputMode": "decimal"
++        }
++      ],
++      "partLegend": "Construct your water-analysis values",
++      "waterGiven": {
++        "title": "Original measured sample",
++        "note": "Stable nonvolatile residue; dry dish and cooled measurements.",
++        "rows": [],
++        "balance": {
++          "empty": 27.35,
++          "cooled": 27.5,
++          "volume": 25
++        }
++      },
++      "explanation": "27.50−27.35=0.15 g;25 cm³=0.025 dm³;0.15÷0.025=6 g/dm³.",
++      "hint": "Exclude the dish, then convert volume.",
++      "followUp": "water-v1-r-dish25"
++    },
++    {
++      "id": "water-v1-p-dilute",
++      "title": "Analyse a low-residue sample",
++      "purpose": "Analyse a low-residue sample",
++      "prompt": "Construct all three values from the supplied data.",
++      "answer": "{\"mass\":\"0.02\",\"volume\":\"0.1\",\"conc\":\"0.2\"}",
++      "parts": [
++        {
++          "id": "mass",
++          "label": "Residue mass / g",
++          "answer": 0.02,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "volume",
++          "label": "Sample volume / dm³",
++          "answer": 0.1,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "conc",
++          "label": "Concentration / g per dm³",
++          "answer": 0.2,
++          "inputMode": "decimal"
++        }
++      ],
++      "partLegend": "Construct your water-analysis values",
++      "waterGiven": {
++        "title": "Original measured sample",
++        "note": "Stable nonvolatile residue; dry dish and cooled measurements.",
++        "rows": [],
++        "balance": {
++          "empty": 33.24,
++          "cooled": 33.26,
++          "volume": 100
++        }
++      },
++      "explanation": "0.02 g in 0.100 dm³ gives 0.20 g/dm³. A small residue is not automatically zero.",
++      "hint": "Subtract carefully.",
++      "followUp": "water-v1-r-dish100"
++    },
++    {
++      "id": "water-v1-p-wet",
++      "title": "Evaluate wet residue",
++      "purpose": "Evaluate wet residue",
++      "prompt": "If water remains with the residue, the calculated dissolved-solid mass is…",
++      "answer": "Too high",
++      "options": ["Too low", "Unchanged", "Too high"],
++      "misconceptions": {
++        "Too low": "Retained water adds measured mass.",
++        "Unchanged": "The balance includes remaining water."
++      },
++      "explanation": "Wet residue includes water mass and overestimates dissolved solids.",
++      "hint": "What extra mass is on the balance?",
++      "followUp": "water-v1-r-repeat50"
++    },
++    {
++      "id": "water-v1-p-spill",
++      "title": "Evaluate sample loss",
++      "purpose": "Evaluate sample loss",
++      "prompt": "Some salt residue spills before the final weighing. The result is…",
++      "answer": "Too low",
++      "options": ["Too low", "Too high", "Unaffected"],
++      "misconceptions": {
++        "Too high": "Spillage removes measured residue.",
++        "Unaffected": "The missing salt changes the mass."
++      },
++      "explanation": "Lost residue underestimates dissolved solids; heating to dryness cannot restore spilled salt.",
++      "hint": "Track the missing material.",
++      "followUp": "water-v1-r-repeat50"
++    },
++    {
++      "id": "water-v1-p-practical",
++      "title": "Plan water analysis",
++      "purpose": "Plan water analysis",
++      "prompt": "Describe a supervised practical method to measure pH and dissolved solids in a known sample, including valid dry-residue evidence.",
++      "answer": "Measure pH with a suitable pH probe/meter or universal indicator paper/solution. Weigh a clean dry empty evaporating dish using a balance. Measure a known water volume using suitable volume apparatus and add it to the dish. Under qualified supervision evaporate water by suitable controlled heating. Cool the dish before weighing; reheat, cool and reweigh until the mass is constant. Subtract empty-dish mass, convert sample volume to dm³ and divide residue mass by that volume. This measures the supplied stable nonvolatile dissolved solids, not every possible contaminant.",
++      "referenceResponse": "Measure pH with a suitable pH probe/meter or universal indicator paper/solution. Weigh a clean dry empty evaporating dish using a balance. Measure a known water volume using suitable volume apparatus and add it to the dish. Under qualified supervision evaporate water by suitable controlled heating. Cool the dish before weighing; reheat, cool and reweigh until the mass is constant. Subtract empty-dish mass, convert sample volume to dm³ and divide residue mass by that volume. This measures the supplied stable nonvolatile dissolved solids, not every possible contaminant.",
++      "explanation": "Measure pH with a suitable pH probe/meter or universal indicator paper/solution. Weigh a clean dry empty evaporating dish using a balance. Measure a known water volume using suitable volume apparatus and add it to the dish. Under qualified supervision evaporate water by suitable controlled heating. Cool the dish before weighing; reheat, cool and reweigh until the mass is constant. Subtract empty-dish mass, convert sample volume to dm³ and divide residue mass by that volume. This measures the supplied stable nonvolatile dissolved solids, not every possible contaminant.",
++      "rubric": [
++        "Suitable pH method",
++        "Balance and known volume",
++        "Controlled evaporation with school supervision",
++        "Cool, weigh, reheat and obtain constant mass",
++        "Subtract dish and use correct volume units",
++        "Recognise limited quality evidence"
++      ],
++      "hint": "Explain the quantity measured at each step.",
++      "followUp": "water-v1-r-dish10"
++    },
++    {
++      "id": "water-v1-p-constant",
++      "title": "Evaluate dryness evidence",
++      "purpose": "Evaluate dryness evidence",
++      "prompt": "Which evidence supports that a stable residue is dry?",
++      "answer": "Reheat, cool and obtain the same mass on reweighing",
++      "options": [
++        "Filter the dry salt again",
++        "Reheat, cool and obtain the same mass on reweighing",
++        "A single hot-dish reading"
++      ],
++      "misconceptions": {
++        "A single hot-dish reading": "Hot-dish weighing is unsuitable evidence.",
++        "Filter the dry salt again": "That does not demonstrate dryness."
++      },
++      "explanation": "Constant mass after reheating and cooling supports complete water removal in the stated stable-residue case.",
++      "hint": "Look for an unchanged mass after further heating.",
++      "followUp": "water-v1-r-repeat50",
++      "exposureAliases": ["water-v1-cA-dry", "water-v1-vB-dry"]
++    },
++    {
++      "id": "water-v1-p-repeat",
++      "title": "Calculate repeat concentration",
++      "purpose": "Calculate repeat concentration",
++      "prompt": "Use all four equal-volume samples. Enter total residue, mean and mean concentration.",
++      "answer": "{\"total\":\"6.8\",\"mean\":\"1.7\",\"conc\":\"34\"}",
++      "parts": [
++        {
++          "id": "total",
++          "label": "Total of repeat masses / g",
++          "answer": 6.8,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "mean",
++          "label": "Mean residue / g",
++          "answer": 1.7,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "conc",
++          "label": "Mean concentration / g per dm³",
++          "answer": 34,
++          "inputMode": "decimal"
++        }
++      ],
++      "partLegend": "Construct your water-analysis values",
++      "waterGiven": {
++        "title": "Original repeat measurements",
++        "note": "Independent equal-volume samples; dry cooled residue masses after empty-dish subtraction.",
++        "rows": [],
++        "repeat": {
++          "masses": [1.66, 1.7, 1.72, 1.72],
++          "volume": 50
++        }
++      },
++      "explanation": "Total 6.80 g; mean 6.80÷4=1.70 g;1.70÷0.050=34 g/dm³.",
++      "hint": "Divide the sum by the number of equal-volume samples.",
++      "followUp": "water-v1-r-repeat50"
++    },
++    {
++      "id": "water-v1-p-evap",
++      "title": "Choose the collected component",
++      "purpose": "Choose the collected component",
++      "prompt": "To collect water from a nonvolatile salt solution, evaporation to dryness alone is insufficient because…",
++      "answer": "Vapour must also be cooled and collected",
++      "options": [
++        "Vapour must also be cooled and collected",
++        "Salt must first turn into water",
++        "Water cannot become vapour"
++      ],
++      "misconceptions": {
++        "Salt must first turn into water": "Salt is not converted to water.",
++        "Water cannot become vapour": "Heating can evaporate water."
++      },
++      "explanation": "Evaporation leaves residue; distillation also condenses and collects the vapour.",
++      "hint": "Which substance do you want to retain?",
++      "followUp": "water-v1-r-cold",
++      "exposureAliases": [
++        "water-v1-w-phase",
++        "water-v1-r-cold",
++        "water-v1-g-distil",
++        "water-v1-p-steam",
++        "water-v1-cA-distil",
++        "water-v1-vA-path",
++        "water-v1-r-identity"
++      ]
++    },
++    {
++      "id": "water-v1-p-steam",
++      "title": "Explain distillation and its checks",
++      "purpose": "Explain distillation and its checks",
++      "prompt": "Explain how a supervised practical collects water from a nonvolatile salt solution, then checks the collected sample.",
++      "answer": "Heat the salt solution under qualified supervision to form water vapour; H₂O changes state rather than decomposing. A connected delivery tube leads to an open receiver in a cold-water or ice bath, where vapour cools and condenses into collected liquid. The delivery outlet stays above collected liquid to avoid drawing it back on cooling. Nonvolatile salt remains in the heated flask. In the supplied clean nonvolatile-salt case, compare original and collected samples using suitable pH and residue measurements; a boiling temperature near 100 °C at standard atmospheric pressure supports the expected water identity/purity in this limited practical. Pure water at the stated room temperature has pH 7. These observations alone do not certify every quality requirement for an unknown sample.",
++      "referenceResponse": "Heat the salt solution under qualified supervision to form water vapour; H₂O changes state rather than decomposing. A connected delivery tube leads to an open receiver in a cold-water or ice bath, where vapour cools and condenses into collected liquid. The delivery outlet stays above collected liquid to avoid drawing it back on cooling. Nonvolatile salt remains in the heated flask. In the supplied clean nonvolatile-salt case, compare original and collected samples using suitable pH and residue measurements; a boiling temperature near 100 °C at standard atmospheric pressure supports the expected water identity/purity in this limited practical. Pure water at the stated room temperature has pH 7. These observations alone do not certify every quality requirement for an unknown sample.",
++      "explanation": "Heat the salt solution under qualified supervision to form water vapour; H₂O changes state rather than decomposing. A connected delivery tube leads to an open receiver in a cold-water or ice bath, where vapour cools and condenses into collected liquid. The delivery outlet stays above collected liquid to avoid drawing it back on cooling. Nonvolatile salt remains in the heated flask. In the supplied clean nonvolatile-salt case, compare original and collected samples using suitable pH and residue measurements; a boiling temperature near 100 °C at standard atmospheric pressure supports the expected water identity/purity in this limited practical. Pure water at the stated room temperature has pH 7. These observations alone do not certify every quality requirement for an unknown sample.",
++      "rubric": [
++        "Supervised heating and H₂O phase identity",
++        "Connected vapour route, cooling and open liquid collection",
++        "Nonvolatile salt retained and outlet above collected liquid",
++        "Compare samples using pH, residue and boiling conditions",
++        "Limit the quality conclusion"
++      ],
++      "hint": "Link each part of the apparatus to its purpose and keep test conclusions limited.",
++      "followUp": "water-v1-r-identity",
++      "exposureAliases": [
++        "water-v1-w-phase",
++        "water-v1-r-cold",
++        "water-v1-g-distil",
++        "water-v1-p-evap",
++        "water-v1-cA-distil",
++        "water-v1-vA-path",
++        "water-v1-r-identity"
++      ]
++    },
++    {
++      "id": "water-v1-p-cooling",
++      "title": "Explain a fair collection comparison",
++      "purpose": "Explain a fair collection comparison",
++      "prompt": "Two apparatus setups use equal starting salt solution and equal heating time. One receiver is effectively cooled; the other is not. Explain why the cooled setup collects more water.",
++      "answer": "Heating forms water vapour in both setups. Effective cooling removes energy from the vapour so more condenses into liquid water before escaping. The uncooled setup loses more vapour without collecting it. Equal feed and heating time make the cooling comparison meaningful; cooling does not create water or carry nonvolatile salt into the receiver.",
++      "referenceResponse": "Heating forms water vapour in both setups. Effective cooling removes energy from the vapour so more condenses into liquid water before escaping. The uncooled setup loses more vapour without collecting it. Equal feed and heating time make the cooling comparison meaningful; cooling does not create water or carry nonvolatile salt into the receiver.",
++      "explanation": "Heating forms water vapour in both setups. Effective cooling removes energy from the vapour so more condenses into liquid water before escaping. The uncooled setup loses more vapour without collecting it. Equal feed and heating time make the cooling comparison meaningful; cooling does not create water or carry nonvolatile salt into the receiver.",
++      "rubric": [
++        "Evaporation in the heated flask",
++        "Cooling linked to condensation",
++        "Escaping vapour explains lower collection",
++        "Equal comparison conditions and nonvolatile salt retained"
++      ],
++      "hint": "Link a change of state to collected volume.",
++      "followUp": "water-v1-r-uncooled",
++      "exposureAliases": ["water-v1-r-uncooled", "water-v1-cB-cooling"]
++    },
++    {
++      "id": "water-v1-p-idealDistillate",
++      "title": "Use a stipulated distillate case",
++      "purpose": "Use a stipulated distillate case",
++      "prompt": "A nonvolatile salt solution is distilled in clean apparatus; heating destroys the specified microbes and collection is clean. Does this stated case need another sterilisation stage?",
++      "answer": "No; the supplied distillate already meets the stated quality requirements",
++      "options": [
++        "No; the supplied distillate already meets the stated quality requirements",
++        "Always yes even if requirements are met",
++        "No because pH 7 alone proves all water safe"
++      ],
++      "misconceptions": {
++        "Always yes even if requirements are met": "Use this stipulated case.",
++        "No because pH 7 alone proves all water safe": "pH alone cannot prove that."
++      },
++      "explanation": "This ideal case matches the specified separation and microbiological evidence. Do not extend it to unknown volatile contaminants or dirty collection.",
++      "hint": "Use all stipulated conditions.",
++      "followUp": "water-v1-r-seawater"
++    },
++    {
++      "id": "water-v1-p-membrane",
++      "title": "Conserve both desalination streams",
++      "purpose": "Conserve both desalination streams",
++      "prompt": "Construct product, brine and retained salt values.",
++      "answer": "{\"product\":\"36\",\"brine\":\"54\",\"salt\":\"2700\"}",
++      "parts": [
++        {
++          "id": "product",
++          "label": "Product volume / litres",
++          "answer": 36,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "brine",
++          "label": "Brine volume / litres",
++          "answer": 54,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "salt",
++          "label": "Salt in brine / g",
++          "answer": 2700,
++          "inputMode": "decimal"
++        }
++      ],
++      "partLegend": "Construct your water-analysis values",
++      "waterGiven": {
++        "title": "Original membrane inventory",
++        "note": "Ideal supplied model: no volume loss and complete salt rejection.",
++        "rows": [],
++        "membrane": {
++          "feed": 90,
++          "product": 36,
++          "salt": 2700
++        }
++      },
++      "explanation": "90−36=54 litres brine; all 2700 g salt is retained under the stated ideal rejection.",
++      "hint": "Feed equals the two streams combined.",
++      "followUp": "water-v1-r-mem100"
++    },
++    {
++      "id": "water-v1-p-brineConcentration",
++      "title": "Quantify brine concentration",
++      "purpose": "Quantify brine concentration",
++      "prompt": "Find the brine volume and salt concentration in g per litre.",
++      "answer": "{\"brine\":\"50\",\"conc\":\"60\"}",
++      "parts": [
++        {
++          "id": "brine",
++          "label": "Brine volume / litres",
++          "answer": 50,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "conc",
++          "label": "Brine concentration / g per litre",
++          "answer": 60,
++          "inputMode": "decimal"
++        }
++      ],
++      "partLegend": "Construct your water-analysis values",
++      "waterGiven": {
++        "title": "Original membrane inventory",
++        "note": "Ideal supplied model: no volume loss and complete salt rejection.",
++        "rows": [],
++        "membrane": {
++          "feed": 100,
++          "product": 50,
++          "salt": 3000
++        }
++      },
++      "explanation": "50 litres remain;3000 g÷50 litres=60 g/litre, compared with 30 g/litre in the feed.",
++      "hint": "Salt is retained in less water.",
++      "followUp": "water-v1-r-mem100"
++    },
++    {
++      "id": "water-v1-p-pressure",
++      "title": "Identify the RO mechanism",
++      "purpose": "Identify the RO mechanism",
++      "prompt": "Reverse osmosis separates water from dissolved salts using…",
++      "answer": "High pressure and a selective membrane",
++      "options": [
++        "A magnet attracting all water",
++        "High pressure and a selective membrane",
++        "An ordinary sediment filter alone"
++      ],
++      "misconceptions": {
++        "An ordinary sediment filter alone": "That is not salt-selective reverse osmosis.",
++        "A magnet attracting all water": "This is not the mechanism."
++      },
++      "explanation": "Pumping drives water through the membrane while most salts are retained; it requires energy and produces brine.",
++      "hint": "Name both the driving force and barrier.",
++      "followUp": "water-v1-r-roRoute",
++      "exposureAliases": [
++        "water-v1-r-mem100",
++        "water-v1-g-membrane",
++        "water-v1-r-mem80",
++        "water-v1-r-mem120",
++        "water-v1-r-roRoute",
++        "water-v1-cB-pressure",
++        "potable-water-4"
++      ]
++    },
++    {
++      "id": "water-v1-p-desalination",
++      "title": "Compare desalination routes",
++      "purpose": "Compare desalination routes",
++      "prompt": "A coastal community has little rainfall and available energy. Explain two possible routes from salty water to potable water and one important resource consequence.",
++      "answer": "Distillation heats water to form vapour and cools it to collect liquid, leaving nonvolatile salts behind. Reverse osmosis uses high pressure to drive water through a selective membrane while most salts remain in concentrated brine. Both need energy, for heating/cooling or pressure pumping. Choose using local source availability, supplied energy data and quality requirements; neither ordinary filtration nor pH 7 alone removes excessive dissolved salt.",
++      "referenceResponse": "Distillation heats water to form vapour and cools it to collect liquid, leaving nonvolatile salts behind. Reverse osmosis uses high pressure to drive water through a selective membrane while most salts remain in concentrated brine. Both need energy, for heating/cooling or pressure pumping. Choose using local source availability, supplied energy data and quality requirements; neither ordinary filtration nor pH 7 alone removes excessive dissolved salt.",
++      "explanation": "Distillation heats water to form vapour and cools it to collect liquid, leaving nonvolatile salts behind. Reverse osmosis uses high pressure to drive water through a selective membrane while most salts remain in concentrated brine. Both need energy, for heating/cooling or pressure pumping. Choose using local source availability, supplied energy data and quality requirements; neither ordinary filtration nor pH 7 alone removes excessive dissolved salt.",
++      "rubric": [
++        "Distillation evaporation and condensation with salt retained",
++        "RO pressure and selective membrane",
++        "Energy requirement linked to each route",
++        "Local choice and quality requirements"
++      ],
++      "hint": "Describe separation, then resource cost.",
++      "followUp": "water-v1-r-seawater"
++    },
++    {
++      "id": "water-v1-p-energy",
++      "title": "Normalise treatment energy",
++      "purpose": "Normalise treatment energy",
++      "prompt": "Compute both route energies per m³ and signed B−A.",
++      "answer": "{\"a\":\"3\",\"b\":\"9\",\"difference\":\"6\"}",
++      "parts": [
++        {
++          "id": "a",
++          "label": "A energy / kWh per m³",
++          "answer": 3,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "b",
++          "label": "B energy / kWh per m³",
++          "answer": 9,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "difference",
++          "label": "B minus A / kWh per m³",
++          "answer": 6,
++          "inputMode": "decimal"
++        }
++      ],
++      "partLegend": "Construct your water-analysis values",
++      "waterGiven": {
++        "title": "Original equal-service data",
++        "note": "Invented matched-volume energy totals with the same accounting boundary. Both products meet the supplied quality requirement.",
++        "rows": [],
++        "energy": {
++          "a": 15,
++          "b": 45,
++          "volume": 5
++        }
++      },
++      "explanation": "15÷5=3 and 45÷5=9 kWh/m³; B−A=6. The data favour A's supplied energy, not a universal environmental verdict.",
++      "hint": "Use the same treated volume.",
++      "followUp": "water-v1-r-coast"
++    },
++    {
++      "id": "water-v1-p-energyReverse",
++      "title": "Read a negative energy difference",
++      "purpose": "Read a negative energy difference",
++      "prompt": "Compute both per-volume energies and signed B−A.",
++      "answer": "{\"a\":\"8\",\"b\":\"5\",\"difference\":\"-3\"}",
++      "parts": [
++        {
++          "id": "a",
++          "label": "A energy / kWh per m³",
++          "answer": 8,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "b",
++          "label": "B energy / kWh per m³",
++          "answer": 5,
++          "inputMode": "decimal"
++        },
++        {
++          "id": "difference",
++          "label": "B minus A / kWh per m³",
++          "answer": -3,
++          "inputMode": "decimal"
++        }
++      ],
++      "partLegend": "Construct your water-analysis values",
++      "waterGiven": {
++        "title": "Original equal-service data",
++        "note": "Invented matched-volume energy totals with the same accounting boundary. Both products meet the supplied quality requirement.",
++        "rows": [],
++        "energy": {
++          "a": 24,
++          "b": 15,
++          "volume": 3
++        }
++      },
++      "explanation": "8 and 5 kWh/m³; B−A=−3. B is lower inside this supplied boundary.",
++      "hint": "Keep the requested subtraction order.",
++      "followUp": "water-v1-r-heatReuse"
++    },
++    {
++      "id": "water-v1-p-local",
++      "title": "Choose an available source",
++      "purpose": "Choose an available source",
++      "prompt": "A locality has suitable freshwater with low dissolved salt. Why can filtration/disinfection be preferable to seawater desalination?",
++      "answer": "It can meet the standard with less separation energy in the supplied setting",
++      "options": [
++        "Seawater is chemically pure",
++        "It can meet the standard with less separation energy in the supplied setting",
++        "Freshwater never has microbes"
++      ],
++      "misconceptions": {
++        "Freshwater never has microbes": "It can still require disinfection.",
++        "Seawater is chemically pure": "It contains dissolved salts."
++      },
++      "explanation": "Source suitability, treatment targets and local energy evidence matter; fresh water is not automatically potable before treatment.",
++      "hint": "Avoid an absolute claim.",
++      "followUp": "water-v1-r-lake"
++    },
++    {
++      "id": "water-v1-p-boil",
++      "title": "Exclude suspended solids",
++      "purpose": "Exclude suspended solids",
++      "prompt": "Water contains dissolved salt and sand. Why filter before measuring its dissolved-solid residue?",
++      "answer": "Prevent insoluble sand from being included in the residue mass",
++      "options": [
++        "Prevent insoluble sand from being included in the residue mass",
++        "Remove all dissolved salt before measurement",
++        "Destroy all microorganisms"
++      ],
++      "misconceptions": {
++        "Remove all dissolved salt before measurement": "Ordinary filtration does not remove dissolved salt.",
++        "Destroy all microorganisms": "Ordinary filtration alone does not establish disinfection."
++      },
++      "explanation": "Filter suspended sand first; dissolved salt remains in the known-volume filtrate. Otherwise sand would add to the residue and overestimate dissolved solids.",
++      "hint": "Separate undissolved particles from dissolved solute.",
++      "followUp": "water-v1-r-fresh",
++      "exposureAliases": [
++        "water-v1-r-fresh",
++        "water-v1-r-uv",
++        "water-v1-r-ozone",
++        "water-v1-g-treatment",
++        "water-v1-p-filtration",
++        "water-v1-p-freshMethod",
++        "water-v1-cA-treatment",
++        "water-v1-vA-filter",
++        "water-v1-p-uv",
++        "water-v1-cB-UV",
++        "potable-water-1",
++        "potable-water-2"
++      ]
++    },
++    {
++      "id": "water-v1-p-pH",
++      "title": "Use a stated pH condition",
++      "purpose": "Use a stated pH condition",
++      "prompt": "Pure water at the stated room-temperature condition has pH…",
++      "answer": "7",
++      "options": ["14", "7", "0"],
++      "misconceptions": {
++        "0": "That is strongly acidic on this scale.",
++        "14": "That is strongly alkaline."
++      },
++      "explanation": "Room-temperature pure water is neutral, pH 7. Neutral pH alone does not prove purity or safety.",
++      "hint": "Neutral on the room-temperature GCSE scale.",
++      "followUp": "water-v1-r-clear"
++    },
++    {
++      "id": "water-v1-p-testLimits",
++      "title": "Evaluate a limited water test",
++      "purpose": "Evaluate a limited water test",
++      "prompt": "A clear sample is pH 7 and leaves no measurable nonvolatile residue in a small sample. Explain what can and cannot be concluded.",
++      "answer": "The observations show neutral pH and no residue above the method's detection limit for that sampled volume. They do not establish that only H₂O is present: volatile or very low-level dissolved contaminants could be unmeasured. Microbiological quality has not been assessed. Potability requires the relevant drinking-water quality evidence, not appearance or one practical test alone.",
++      "referenceResponse": "The observations show neutral pH and no residue above the method's detection limit for that sampled volume. They do not establish that only H₂O is present: volatile or very low-level dissolved contaminants could be unmeasured. Microbiological quality has not been assessed. Potability requires the relevant drinking-water quality evidence, not appearance or one practical test alone.",
++      "explanation": "The observations show neutral pH and no residue above the method's detection limit for that sampled volume. They do not establish that only H₂O is present: volatile or very low-level dissolved contaminants could be unmeasured. Microbiological quality has not been assessed. Potability requires the relevant drinking-water quality evidence, not appearance or one practical test alone.",
++      "rubric": [
++        "Neutral pH at the stated condition",
++        "No measured residue is a detection-limited result",
++        "Possible unmeasured chemical impurities",
++        "Microbiological quality not established"
++      ],
++      "hint": "Separate measurement from a stronger claim.",
++      "followUp": "water-v1-r-clear"
++    },
++    {
++      "id": "water-v1-p-scaleOnly",
++      "title": "Scale a measured residue",
++      "purpose": "Scale a measured residue",
++      "prompt": "A 50 cm³ sample yields 1.55 g of dry nonvolatile residue. Find the mass in 1000 cm³ of homogeneous water.",
++      "answer": "31",
++      "unit": "g",
++      "inputMode": "decimal",
++      "tolerance": 0.000001,
++      "explanation": "1000÷50=20;1.55×20=31 g.",
++      "hint": "Use the ratio of volumes.",
++      "followUp": "water-v1-r-dish50"
++    }
++  ],
++  "checkForms": [
++    [
++      {
++        "id": "water-v1-cA-quality",
++        "title": "Interpret quality",
++        "purpose": "Interpret quality",
++        "prompt": "A clear, pH 7 sample exceeds the stated salt limit. It is…",
++        "answer": "Not potable in this stated case",
++        "options": [
++          "Pure because clear",
++          "Not potable in this stated case",
++          "Potable because pH 7"
++        ],
++        "misconceptions": {
++          "Potable because pH 7": "The salt requirement fails.",
++          "Pure because clear": "Dissolved salt remains."
++        },
++        "explanation": "Stated failed salt quality overrides appearance/pH.",
++        "hint": "Use every supplied fact.",
++        "exposureAliases": ["water-v1-r-saline"]
++      },
++      {
++        "id": "water-v1-cA-treatment",
++        "title": "Select stages",
++        "purpose": "Select stages",
++        "prompt": "Suitable freshwater has grit and harmful microorganisms but acceptable salts. Which route addresses both?",
++        "answer": "Filter then disinfect",
++        "options": ["Disinfect only", "Filter only", "Filter then disinfect"],
++        "misconceptions": {
++          "Disinfect only": "Grit remains.",
++          "Filter only": "Microbiological quality is not established."
++        },
++        "explanation": "Filtration targets undissolved solids; disinfection targets microbes.",
++        "hint": "Match two contaminants.",
++        "exposureAliases": [
++          "water-v1-r-fresh",
++          "water-v1-r-uv",
++          "water-v1-r-ozone",
++          "water-v1-g-treatment",
++          "water-v1-p-filtration",
++          "water-v1-p-freshMethod",
++          "water-v1-p-boil",
++          "water-v1-vA-filter",
++          "water-v1-p-uv",
++          "water-v1-cB-UV",
++          "potable-water-1",
++          "potable-water-2"
++        ]
++      },
++      {
++        "id": "water-v1-cA-residue",
++        "title": "Analyse reserved measurements",
++        "purpose": "Analyse reserved measurements",
++        "prompt": "Construct mass, dm³ and g/dm³.",
++        "answer": "{\"mass\":\"0.18\",\"volume\":\"0.03\",\"conc\":\"6\"}",
++        "parts": [
++          {
++            "id": "mass",
++            "label": "Residue mass / g",
++            "answer": 0.18,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "volume",
++            "label": "Sample volume / dm³",
++            "answer": 0.03,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "conc",
++            "label": "Concentration / g per dm³",
++            "answer": 6,
++            "inputMode": "decimal"
++          }
++        ],
++        "partLegend": "Construct your water-analysis values",
++        "waterGiven": {
++          "title": "Original measured sample",
++          "note": "Stable nonvolatile residue; dry dish and cooled measurements.",
++          "rows": [],
++          "balance": {
++            "empty": 29.14,
++            "cooled": 29.32,
++            "volume": 30
++          }
++        },
++        "explanation": "0.18÷0.030=6 g/dm³.",
++        "hint": "Subtract and convert."
++      },
++      {
++        "id": "water-v1-cA-distil",
++        "title": "Explain collection",
++        "purpose": "Explain collection",
++        "prompt": "Nonvolatile salt solution is distilled. The collected water forms by…",
++        "answer": "Condensation of water vapour",
++        "options": [
++          "Condensation of water vapour",
++          "Condensation of salt",
++          "Decomposition of H₂O"
++        ],
++        "misconceptions": {
++          "Condensation of salt": "Nonvolatile salt remains.",
++          "Decomposition of H₂O": "Water identity remains."
++        },
++        "explanation": "Cooling condenses water vapour; this is physical separation.",
++        "hint": "Track H₂O.",
++        "exposureAliases": [
++          "water-v1-w-phase",
++          "water-v1-r-cold",
++          "water-v1-g-distil",
++          "water-v1-p-evap",
++          "water-v1-p-steam",
++          "water-v1-vA-path",
++          "water-v1-r-identity"
++        ]
++      },
++      {
++        "id": "water-v1-cA-membrane",
++        "title": "Account for streams",
++        "purpose": "Account for streams",
++        "prompt": "Find brine volume and retained salt.",
++        "answer": "{\"brine\":\"72\",\"salt\":\"4000\"}",
++        "parts": [
++          {
++            "id": "brine",
++            "label": "Brine volume / litres",
++            "answer": 72,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "salt",
++            "label": "Brine salt / g",
++            "answer": 4000,
++            "inputMode": "decimal"
++          }
++        ],
++        "partLegend": "Construct your water-analysis values",
++        "waterGiven": {
++          "title": "Original membrane inventory",
++          "note": "Ideal supplied model: no volume loss and complete salt rejection.",
++          "rows": [],
++          "membrane": {
++            "feed": 125,
++            "product": 53,
++            "salt": 4000
++          }
++        },
++        "explanation": "125−53=72 litres;4000 g is retained in the ideal model.",
++        "hint": "Conserve both quantities."
++      },
++      {
++        "id": "water-v1-cA-energy",
++        "title": "Compare reserved energy",
++        "purpose": "Compare reserved energy",
++        "prompt": "Find A and B per-m³ energy and B−A.",
++        "answer": "{\"a\":\"2\",\"b\":\"7\",\"difference\":\"5\"}",
++        "parts": [
++          {
++            "id": "a",
++            "label": "A energy / kWh per m³",
++            "answer": 2,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "b",
++            "label": "B energy / kWh per m³",
++            "answer": 7,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "difference",
++            "label": "B minus A / kWh per m³",
++            "answer": 5,
++            "inputMode": "decimal"
++          }
++        ],
++        "partLegend": "Construct your water-analysis values",
++        "waterGiven": {
++          "title": "Original equal-service data",
++          "note": "Invented matched-volume energy totals with the same accounting boundary. Both products meet the supplied quality requirement.",
++          "rows": [],
++          "energy": {
++            "a": 14,
++            "b": 49,
++            "volume": 7
++          }
++        },
++        "explanation": "14÷7=2;49÷7=7; difference 5 kWh/m³.",
++        "hint": "Normalise totals."
++      },
++      {
++        "id": "water-v1-cA-method",
++        "title": "Explain the required practical",
++        "purpose": "Explain the required practical",
++        "prompt": "Explain pH/residue analysis and distillation of a supplied nonvolatile salt solution in a supervised laboratory.",
++        "answer": "Measure pH using a suitable probe or universal indicator. Weigh an empty dry dish, measure a known sample volume, evaporate water under supervision, cool and weigh residue to constant mass after reheating. Subtract empty-dish mass and divide by sample dm³. In distillation heat water to form vapour and cool it through the collection route to obtain liquid water in a clean receiver; nonvolatile salts remain in the flask. This is practical reasoning, not proof of every drinking-water quality requirement.",
++        "referenceResponse": "Measure pH using a suitable probe or universal indicator. Weigh an empty dry dish, measure a known sample volume, evaporate water under supervision, cool and weigh residue to constant mass after reheating. Subtract empty-dish mass and divide by sample dm³. In distillation heat water to form vapour and cool it through the collection route to obtain liquid water in a clean receiver; nonvolatile salts remain in the flask. This is practical reasoning, not proof of every drinking-water quality requirement.",
++        "explanation": "Measure pH using a suitable probe or universal indicator. Weigh an empty dry dish, measure a known sample volume, evaporate water under supervision, cool and weigh residue to constant mass after reheating. Subtract empty-dish mass and divide by sample dm³. In distillation heat water to form vapour and cool it through the collection route to obtain liquid water in a clean receiver; nonvolatile salts remain in the flask. This is practical reasoning, not proof of every drinking-water quality requirement.",
++        "rubric": [
++          "Suitable pH measurement",
++          "Known volume and empty-dish subtraction",
++          "Cool and repeat weighing to constant mass",
++          "Evaporation, cooling and liquid collection",
++          "Nonvolatile salt retained; quality inference limited"
++        ],
++        "hint": "Link apparatus operations to quantities and phase changes."
++      },
++      {
++        "id": "water-v1-cA-dry",
++        "title": "Judge evidence",
++        "purpose": "Judge evidence",
++        "prompt": "Stable residue gives the same cooled mass after reheating. This supports…",
++        "answer": "Dryness to constant mass in the stated method",
++        "options": [
++          "Absence of every microbe in all water",
++          "Creation of new salt",
++          "Dryness to constant mass in the stated method"
++        ],
++        "misconceptions": {
++          "Absence of every microbe in all water": "Residue mass is not a microbiological test.",
++          "Creation of new salt": "Mass consistency is not atom creation."
++        },
++        "explanation": "Constant mass supports dryness, not universal safety.",
++        "hint": "Keep the inference within the measurement.",
++        "exposureAliases": ["water-v1-p-constant", "water-v1-vB-dry"]
++      }
++    ],
++    [
++      {
++        "id": "water-v1-cB-pure",
++        "title": "Apply definitions",
++        "purpose": "Apply definitions",
++        "prompt": "A quality-approved drinking-water sample contains dissolved minerals. Which is true?",
++        "answer": "Potable does not imply chemically pure",
++        "options": [
++          "Potable does not imply chemically pure",
++          "All ions make it unsafe",
++          "Clear means only H₂O"
++        ],
++        "misconceptions": {
++          "All ions make it unsafe": "Acceptably low salts can remain.",
++          "Clear means only H₂O": "Dissolved solute can be invisible."
++        },
++        "explanation": "Composition and drinking quality are distinct.",
++        "hint": "Use both terms precisely.",
++        "exposureAliases": [
++          "water-v1-w-mixture",
++          "water-v1-r-mineral",
++          "water-v1-g-quality",
++          "water-v1-p-minerals",
++          "water-v1-vA-quality",
++          "potable-water-0"
++        ]
++      },
++      {
++        "id": "water-v1-cB-UV",
++        "title": "Classify a method",
++        "purpose": "Classify a method",
++        "prompt": "UV water treatment is…",
++        "answer": "Disinfection by light",
++        "options": [
++          "Disinfection by light",
++          "Chemical removal of all salts",
++          "A magnetic separation"
++        ],
++        "misconceptions": {
++          "Chemical removal of all salts": "UV does not desalinate.",
++          "A magnetic separation": "That is not the mechanism."
++        },
++        "explanation": "UV targets microorganisms; chlorine and ozone are alternative chemical agents.",
++        "hint": "Identify the target.",
++        "exposureAliases": [
++          "water-v1-r-fresh",
++          "water-v1-r-uv",
++          "water-v1-r-ozone",
++          "water-v1-g-treatment",
++          "water-v1-p-filtration",
++          "water-v1-p-freshMethod",
++          "water-v1-p-boil",
++          "water-v1-cA-treatment",
++          "water-v1-vA-filter",
++          "water-v1-p-uv",
++          "potable-water-1",
++          "potable-water-2"
++        ]
++      },
++      {
++        "id": "water-v1-cB-residue",
++        "title": "Use another sample volume",
++        "purpose": "Use another sample volume",
++        "prompt": "Construct residue mass, dm³ and concentration.",
++        "answer": "{\"mass\":\"0.07\",\"volume\":\"0.02\",\"conc\":\"3.5\"}",
++        "parts": [
++          {
++            "id": "mass",
++            "label": "Residue mass / g",
++            "answer": 0.07,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "volume",
++            "label": "Sample volume / dm³",
++            "answer": 0.02,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "conc",
++            "label": "Concentration / g per dm³",
++            "answer": 3.5,
++            "inputMode": "decimal"
++          }
++        ],
++        "partLegend": "Construct your water-analysis values",
++        "waterGiven": {
++          "title": "Original measured sample",
++          "note": "Stable nonvolatile residue; dry dish and cooled measurements.",
++          "rows": [],
++          "balance": {
++            "empty": 38.4,
++            "cooled": 38.47,
++            "volume": 20
++          }
++        },
++        "explanation": "0.07 g in 0.020 dm³ gives 3.5 g/dm³.",
++        "hint": "Dish is excluded."
++      },
++      {
++        "id": "water-v1-cB-repeat",
++        "title": "Average reserved repeats",
++        "purpose": "Average reserved repeats",
++        "prompt": "Construct total, mean and concentration.",
++        "answer": "{\"total\":\"3.72\",\"mean\":\"1.24\",\"conc\":\"31\"}",
++        "parts": [
++          {
++            "id": "total",
++            "label": "Total residue masses / g",
++            "answer": 3.72,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "mean",
++            "label": "Mean residue / g",
++            "answer": 1.24,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "conc",
++            "label": "Mean concentration / g per dm³",
++            "answer": 31,
++            "inputMode": "decimal"
++          }
++        ],
++        "partLegend": "Construct your water-analysis values",
++        "waterGiven": {
++          "title": "Original repeat measurements",
++          "note": "Independent equal-volume samples; dry cooled residue masses after empty-dish subtraction.",
++          "rows": [],
++          "repeat": {
++            "masses": [1.2, 1.24, 1.28],
++            "volume": 40
++          }
++        },
++        "explanation": "Total 3.72; mean 1.24;1.24÷0.040=31 g/dm³.",
++        "hint": "Equal-volume means first."
++      },
++      {
++        "id": "water-v1-cB-pressure",
++        "title": "Explain reverse osmosis",
++        "purpose": "Explain reverse osmosis",
++        "prompt": "Which combination describes reverse osmosis?",
++        "answer": "High pressure and a selective membrane",
++        "options": [
++          "Ordinary sand filter and gravity",
++          "Heating to make hydrogen",
++          "High pressure and a selective membrane"
++        ],
++        "misconceptions": {
++          "Ordinary sand filter and gravity": "Ordinary beds do not desalinate.",
++          "Heating to make hydrogen": "H₂O decomposition is not RO."
++        },
++        "explanation": "Water crosses the membrane; most salts are retained in brine.",
++        "hint": "Identify barrier and force.",
++        "exposureAliases": [
++          "water-v1-r-mem100",
++          "water-v1-g-membrane",
++          "water-v1-r-mem80",
++          "water-v1-r-mem120",
++          "water-v1-r-roRoute",
++          "water-v1-p-pressure",
++          "potable-water-4"
++        ]
++      },
++      {
++        "id": "water-v1-cB-energy",
++        "title": "Use a reversed ranking",
++        "purpose": "Use a reversed ranking",
++        "prompt": "Construct both per-m³ energies and B−A.",
++        "answer": "{\"a\":\"6\",\"b\":\"4\",\"difference\":\"-2\"}",
++        "parts": [
++          {
++            "id": "a",
++            "label": "A energy / kWh per m³",
++            "answer": 6,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "b",
++            "label": "B energy / kWh per m³",
++            "answer": 4,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "difference",
++            "label": "B minus A / kWh per m³",
++            "answer": -2,
++            "inputMode": "decimal"
++          }
++        ],
++        "partLegend": "Construct your water-analysis values",
++        "waterGiven": {
++          "title": "Original equal-service data",
++          "note": "Invented matched-volume energy totals with the same accounting boundary. Both products meet the supplied quality requirement.",
++          "rows": [],
++          "energy": {
++            "a": 30,
++            "b": 20,
++            "volume": 5
++          }
++        },
++        "explanation": "6 versus 4; B−A=−2 kWh/m³ inside this boundary.",
++        "hint": "Keep a signed difference."
++      },
++      {
++        "id": "water-v1-cB-source",
++        "title": "Justify treatment choice",
++        "purpose": "Justify treatment choice",
++        "prompt": "Explain why a coastal area with little freshwater may desalinate seawater. Compare the two specified desalination mechanisms and limits on a quality claim.",
++        "answer": "Seawater is available but contains too much dissolved salt for the stated drinking-water requirement. Distillation evaporates water and condenses it into a clean receiver while nonvolatile salt remains behind. Reverse osmosis uses high pressure and a selective membrane to pass water while retaining most salts in brine. Both use energy, and local supply and matched energy data guide choice. Quality must meet the stated requirements; clarity or neutral pH alone does not establish potability.",
++        "referenceResponse": "Seawater is available but contains too much dissolved salt for the stated drinking-water requirement. Distillation evaporates water and condenses it into a clean receiver while nonvolatile salt remains behind. Reverse osmosis uses high pressure and a selective membrane to pass water while retaining most salts in brine. Both use energy, and local supply and matched energy data guide choice. Quality must meet the stated requirements; clarity or neutral pH alone does not establish potability.",
++        "explanation": "Seawater is available but contains too much dissolved salt for the stated drinking-water requirement. Distillation evaporates water and condenses it into a clean receiver while nonvolatile salt remains behind. Reverse osmosis uses high pressure and a selective membrane to pass water while retaining most salts in brine. Both use energy, and local supply and matched energy data guide choice. Quality must meet the stated requirements; clarity or neutral pH alone does not establish potability.",
++        "rubric": [
++          "Local availability and excessive salt",
++          "Evaporation and condensation",
++          "Pressure and selective membrane with brine",
++          "Energy and limited quality inference"
++        ],
++        "hint": "Give reason-linked mechanisms."
++      },
++      {
++        "id": "water-v1-cB-cooling",
++        "title": "Predict collection",
++        "purpose": "Predict collection",
++        "prompt": "Equal feed and heating time: effective cooling increases collected liquid because…",
++        "answer": "More vapour condenses before escaping",
++        "options": [
++          "More vapour condenses before escaping",
++          "New water is created",
++          "Salt starts evaporating"
++        ],
++        "misconceptions": {
++          "New water is created": "Water is conserved.",
++          "Salt starts evaporating": "The supplied salt is nonvolatile."
++        },
++        "explanation": "Cooling improves water-vapour collection; it is not a chemical reaction.",
++        "hint": "Link temperature to phase.",
++        "exposureAliases": ["water-v1-r-uncooled", "water-v1-p-cooling"]
++      }
++    ]
++  ],
++  "reviewForms": [
++    [
++      {
++        "id": "water-v1-vA-quality",
++        "title": "Retrieve definitions",
++        "purpose": "Retrieve definitions",
++        "prompt": "Water meets quality requirements with low dissolved salts. It may be…",
++        "answer": "Potable but not chemically pure",
++        "options": [
++          "Potable but not chemically pure",
++          "Always pure",
++          "Always unsafe"
++        ],
++        "misconceptions": {
++          "Always pure": "Dissolved salts are other substances.",
++          "Always unsafe": "Suitable low salt levels can remain."
++        },
++        "explanation": "Potability is quality; purity is composition.",
++        "hint": "Use the distinction.",
++        "exposureAliases": [
++          "water-v1-w-mixture",
++          "water-v1-r-mineral",
++          "water-v1-g-quality",
++          "water-v1-p-minerals",
++          "water-v1-cB-pure",
++          "potable-water-0"
++        ]
++      },
++      {
++        "id": "water-v1-vA-residue",
++        "title": "Retrieve sample scaling",
++        "purpose": "Retrieve sample scaling",
++        "prompt": "A 20 cm³ sample yields 0.09 g dry nonvolatile residue. Find g per dm³.",
++        "answer": "4.5",
++        "unit": "g/dm³",
++        "inputMode": "decimal",
++        "tolerance": 0.000001,
++        "explanation": "0.09÷0.020=4.5 g/dm³.",
++        "hint": "Convert volume."
++      },
++      {
++        "id": "water-v1-vA-path",
++        "title": "Retrieve a physical separation",
++        "purpose": "Retrieve a physical separation",
++        "prompt": "In distillation, salt is nonvolatile. Water is collected by…",
++        "answer": "Evaporation followed by condensation",
++        "options": [
++          "Evaporation followed by condensation",
++          "H₂O decomposition",
++          "Evaporating salt only"
++        ],
++        "misconceptions": {
++          "H₂O decomposition": "Phase change does not split the molecule.",
++          "Evaporating salt only": "Salt remains behind."
++        },
++        "explanation": "Water vapour cools back to liquid.",
++        "hint": "Track both phases.",
++        "exposureAliases": [
++          "water-v1-w-phase",
++          "water-v1-r-cold",
++          "water-v1-g-distil",
++          "water-v1-p-evap",
++          "water-v1-p-steam",
++          "water-v1-cA-distil",
++          "water-v1-r-identity"
++        ]
++      },
++      {
++        "id": "water-v1-vA-filter",
++        "title": "Retrieve a linked treatment account",
++        "purpose": "Retrieve a linked treatment account",
++        "prompt": "Explain why ordinary filtration and disinfection address different contaminants.",
++        "answer": "Ordinary filter beds remove undissolved particles. Chlorine, ozone or UV treatment destroys harmful microorganisms. Neither ordinary filtration nor disinfection removes all dissolved salts, so a source with excessive salt requires desalination. Acceptable minerals can remain in potable water.",
++        "referenceResponse": "Ordinary filter beds remove undissolved particles. Chlorine, ozone or UV treatment destroys harmful microorganisms. Neither ordinary filtration nor disinfection removes all dissolved salts, so a source with excessive salt requires desalination. Acceptable minerals can remain in potable water.",
++        "explanation": "Ordinary filter beds remove undissolved particles. Chlorine, ozone or UV treatment destroys harmful microorganisms. Neither ordinary filtration nor disinfection removes all dissolved salts, so a source with excessive salt requires desalination. Acceptable minerals can remain in potable water.",
++        "rubric": [
++          "Undissolved particles and filtration",
++          "Microorganisms and a named disinfection method",
++          "Dissolved salt limitation"
++        ],
++        "hint": "Name operation, target and limitation.",
++        "exposureAliases": [
++          "water-v1-r-fresh",
++          "water-v1-r-uv",
++          "water-v1-r-ozone",
++          "water-v1-g-treatment",
++          "water-v1-p-filtration",
++          "water-v1-p-freshMethod",
++          "water-v1-p-boil",
++          "water-v1-cA-treatment",
++          "water-v1-p-uv",
++          "water-v1-cB-UV",
++          "potable-water-1",
++          "potable-water-2"
++        ]
++      }
++    ],
++    [
++      {
++        "id": "water-v1-vB-evidence",
++        "title": "Retrieve test limits",
++        "purpose": "Retrieve test limits",
++        "prompt": "Clear, pH 7 water with no microbiological results is…",
++        "answer": "Not yet established as potable",
++        "options": [
++          "Automatically pure",
++          "Not yet established as potable",
++          "Automatically safe"
++        ],
++        "misconceptions": {
++          "Automatically safe": "Microbiological and chemical quality are incomplete.",
++          "Automatically pure": "pH/clarity do not establish composition."
++        },
++        "explanation": "A limited measurement cannot justify a stronger safety claim.",
++        "hint": "What evidence is missing?",
++        "exposureAliases": [
++          "water-v1-r-clear",
++          "water-v1-p-clear",
++          "potable-water-5"
++        ]
++      },
++      {
++        "id": "water-v1-vB-membrane",
++        "title": "Retrieve conservation",
++        "purpose": "Retrieve conservation",
++        "prompt": "Find brine volume and salt for the original inventory.",
++        "answer": "{\"brine\":\"46\",\"salt\":\"2100\"}",
++        "parts": [
++          {
++            "id": "brine",
++            "label": "Brine volume / litres",
++            "answer": 46,
++            "inputMode": "decimal"
++          },
++          {
++            "id": "salt",
++            "label": "Brine salt / g",
++            "answer": 2100,
++            "inputMode": "decimal"
++          }
++        ],
++        "partLegend": "Construct your water-analysis values",
++        "waterGiven": {
++          "title": "Original membrane inventory",
++          "note": "Ideal supplied model: no volume loss and complete salt rejection.",
++          "rows": [],
++          "membrane": {
++            "feed": 70,
++            "product": 24,
++            "salt": 2100
++          }
++        },
++        "explanation": "70−24=46 litres with 2100 g retained salt in the stated ideal model.",
++        "hint": "Conserve feed and solute."
++      },
++      {
++        "id": "water-v1-vB-energy",
++        "title": "Retrieve energy normalisation",
++        "purpose": "Retrieve energy normalisation",
++        "prompt": "A process uses 28 kWh to treat 4 m³. Find kWh per m³.",
++        "answer": "7",
++        "unit": "kWh/m³",
++        "inputMode": "decimal",
++        "tolerance": 0.000001,
++        "explanation": "28÷4=7 kWh/m³.",
++        "hint": "Energy divided by volume."
++      },
++      {
++        "id": "water-v1-vB-dry",
++        "title": "Retrieve measurement quality",
++        "purpose": "Retrieve measurement quality",
++        "prompt": "Explain why residue is cooled and reweighed after reheating, and how wet residue or spilled residue biases the result.",
++        "answer": "Cool the dish before weighing to obtain a suitable mass reading. Reheat, cool and reweigh until constant mass to support complete water removal for the supplied stable nonvolatile residue. Remaining water increases apparent dissolved-solid mass; spillage loses residue and decreases it. Subtract the original empty-dish mass.",
++        "referenceResponse": "Cool the dish before weighing to obtain a suitable mass reading. Reheat, cool and reweigh until constant mass to support complete water removal for the supplied stable nonvolatile residue. Remaining water increases apparent dissolved-solid mass; spillage loses residue and decreases it. Subtract the original empty-dish mass.",
++        "explanation": "Cool the dish before weighing to obtain a suitable mass reading. Reheat, cool and reweigh until constant mass to support complete water removal for the supplied stable nonvolatile residue. Remaining water increases apparent dissolved-solid mass; spillage loses residue and decreases it. Subtract the original empty-dish mass.",
++        "rubric": [
++          "Cool before weighing",
++          "Reheat and constant mass",
++          "Wet residue overestimates",
++          "Spillage underestimates and dish subtraction"
++        ],
++        "hint": "Track added or lost measured mass.",
++        "exposureAliases": ["water-v1-p-constant", "water-v1-cA-dry"]
++      }
++    ]
++  ],
++  "practiceGroups": [
++    {
++      "label": "Quality evidence and freshwater treatment",
++      "taskIds": [
++        "water-v1-p-clear",
++        "water-v1-p-minerals",
++        "water-v1-p-uv",
++        "water-v1-p-filtration",
++        "water-v1-p-freshMethod"
++      ]
++    },
++    {
++      "label": "Measure and evaluate dissolved solids",
++      "taskIds": [
++        "water-v1-p-residue",
++        "water-v1-p-dilute",
++        "water-v1-p-wet",
++        "water-v1-p-spill",
++        "water-v1-p-practical",
++        "water-v1-p-constant",
++        "water-v1-p-repeat"
++      ]
++    },
++    {
++      "label": "Distillation and membrane separation",
++      "taskIds": [
++        "water-v1-p-evap",
++        "water-v1-p-steam",
++        "water-v1-p-cooling",
++        "water-v1-p-idealDistillate",
++        "water-v1-p-membrane",
++        "water-v1-p-brineConcentration",
++        "water-v1-p-pressure",
++        "water-v1-p-desalination"
++      ]
++    },
++    {
++      "label": "Resource choices and reliable water tests",
++      "taskIds": [
++        "water-v1-p-energy",
++        "water-v1-p-energyReverse",
++        "water-v1-p-local",
++        "water-v1-p-boil",
++        "water-v1-p-pH",
++        "water-v1-p-testLimits",
++        "water-v1-p-scaleOnly"
++      ]
++    }
++  ]
++}
+diff --git a/tests/potable-evidence.unit.spec.ts b/tests/potable-evidence.unit.spec.ts
+new file mode 100644
+index 0000000..1cfe376
+--- /dev/null
++++ b/tests/potable-evidence.unit.spec.ts
+@@ -0,0 +1,36 @@
++import { test, expect } from "@playwright/test";
++import { potableEvidence } from "../src/lib/potable-evidence";
++import { waterRecords } from "../src/lib/water";
++
++test("native water readouts expose raw quantities and conditions, not constructed answers", () => {
++  expect(potableEvidence(waterRecords.dish10, "residue")).toBe(
++    "Sample 10 cm³; empty dish 32.46 g; dish + dry cooled stable nonvolatile residue 32.51 g.",
++  );
++  expect(potableEvidence(waterRecords.mem100, "membrane")).toBe(
++    "Ideal feed 100 litres with 3000 g salt; product 40 litres. No volume loss; complete salt rejection.",
++  );
++  expect(potableEvidence(waterRecords.fresh, "treatment")).toContain(
++    "Suspended grit and harmful microbes",
++  );
++  expect(potableEvidence(waterRecords.fresh, "treatment")).toContain(
++    "filter beds, then chlorine",
++  );
++  expect(potableEvidence(waterRecords.coast, "resources")).toContain("2 m³");
++  expect(potableEvidence(waterRecords.repeat50, "repeat")).toContain(
++    "each sample 50 cm³",
++  );
++});
++test("formatting preserves all26 original records and cannot read learner or expected solutions", () => {
++  const before = JSON.stringify(waterRecords);
++  for (const r of Object.values(waterRecords)) {
++    const result = potableEvidence(r, r.mode);
++    expect(result.length).toBeGreaterThan(0);
++    expect(
++      potableEvidence(
++        { ...r, expected: { forged: "999999" } } as typeof r,
++        r.mode,
++      ),
++    ).toBe(result);
++  }
++  expect(JSON.stringify(waterRecords)).toBe(before);
++});
+diff --git a/tests/potable-review.browser.spec.ts b/tests/potable-review.browser.spec.ts
+new file mode 100644
+index 0000000..cd4a2f4
+--- /dev/null
++++ b/tests/potable-review.browser.spec.ts
+@@ -0,0 +1,535 @@
++import { test, expect, type Page, type Locator } from "@playwright/test";
++import AxeBuilder from "@axe-core/playwright";
++import { waterJourney as j } from "../src/content/journeys/potable-water";
++import {
++  emptyProgress,
++  emptyWork,
++  STORAGE_KEY,
++  REVIEW_DELAY,
++  type Run,
++  decode,
++} from "../src/lib/progress";
++import type { LearningTask } from "../src/content/types";
++const route = "/lessons/potable-water";
++async function pick(p: Page, index: number) {
++  await p
++    .getByLabel("Choose a practice task", { exact: true })
++    .selectOption(String(index));
++}
++async function committed(p: Page) {
++  await expect
++    .poll(() =>
++      p.evaluate(() => sessionStorage.getItem("gcse-chemistry.pending.v1")),
++    )
++    .toBeNull();
++}
++async function gate(p: Page, root: Locator) {
++  await p.evaluate(async () => {
++    await document.fonts.ready;
++    scrollTo(0, 0);
++  });
++  const a = await root
++    .locator("input,textarea,select,.potable-recovery-clear:visible")
++    .first()
++    .evaluate((e) => {
++      const x = e.matches('input[type="radio"]') ? e.closest("label")! : e;
++      const b = x.getBoundingClientRect();
++      return { height: b.height, bottom: b.bottom, width: b.width };
++    });
++  expect(a.height).toBeGreaterThanOrEqual(44);
++  expect(a.width).toBeGreaterThanOrEqual(44);
++  expect(a.bottom).toBeLessThanOrEqual(664);
++  expect(
++    await p.evaluate(() => document.documentElement.scrollWidth > innerWidth),
++  ).toBe(false);
++  for (const size of await p.locator("main svg text").evaluateAll((es) =>
++    es.map((e) => {
++      const t = e as SVGTextElement;
++      return (
++        parseFloat(getComputedStyle(t).fontSize) *
++        Math.hypot(t.getScreenCTM()!.a, t.getScreenCTM()!.b)
++      );
++    }),
++  ))
++    expect(size).toBeGreaterThanOrEqual(12);
++}
++async function answer(p: Page, q: LearningTask) {
++  if (q.parts) {
++    for (const part of q.parts)
++      await p.getByLabel(part.label, { exact: true }).fill(String(part.answer));
++  } else await p.getByRole("radio", { name: q.answer, exact: true }).check();
++}
++function pastRun(kind: "check" | "review", ids: string[], at: number): Run {
++  return {
++    kind,
++    ids,
++    index: ids.length - 1,
++    responses: Object.fromEntries(
++      ids.map((id) => [
++        id,
++        {
++          answer: "",
++          correct: false,
++          helped: false,
++          fresh: false,
++          at: at - 500,
++        },
++      ]),
++    ),
++    started: at - 1000,
++    submitted: at,
++  };
++}
++async function seed(
++  p: Page,
++  stage: "check" | "review" | "practice",
++  history: Run[],
++  drafts: Record<string, string> = {},
++  index = 0,
++  seen: Record<string, number> = {},
++) {
++  await p.goto("/privacy");
++  const data = emptyProgress();
++  data.seen = seen;
++  data.work["potable-water"] = {
++    ...emptyWork(),
++    history,
++    drafts,
++    section: stage === "practice" ? "explore" : stage,
++    learning: { version: 1, stage: "practice", index },
++  };
++  data.work["ionic-bonding"] = {
++    ...emptyWork(),
++    drafts: { "ib-v1-p-draw-chloride": "1..2" },
++  };
++  expect(
++    decode(JSON.stringify(data)),
++    "Fixture must obey the unchanged v1 progress parser",
++  ).not.toBeNull();
++  await p.evaluate(
++    ({ key, data }) => localStorage.setItem(key, JSON.stringify(data)),
++    { key: STORAGE_KEY, data },
++  );
++  await p.goto(route);
++}
++
++test("all original and appended guided/independent openings keep complete answers reachable and figures readable", async ({
++  page,
++}) => {
++  test.setTimeout(180000);
++  await page.goto(route);
++  for (let i = 0; i < j.guided.length; i++) {
++    const picker = page.getByLabel("Choose a practice task", { exact: true });
++    if (await picker.count()) await picker.selectOption(String(i));
++    else
++      await page
++        .getByRole("button", { name: `Task ${i + 1}`, exact: true })
++        .first()
++        .click();
++    await gate(page, page.locator(".sample-task-layout"));
++  }
++  await page.getByRole("button", { name: "Practise", exact: true }).click();
++  for (let i = 0; i < j.practice.length; i++) {
++    await pick(page, i);
++    await gate(page, page.locator(".question-panel"));
++    if (i >= 27 || [5, 9, 14, 25].includes(i))
++      expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
++  }
++});
++
++test("a wrong source concentration remains raw after check/reload; scoped reset leaves other work intact", async ({
++  page,
++}) => {
++  await page.goto(route);
++  await page.getByRole("button", { name: "Practise", exact: true }).click();
++  await pick(page, 28);
++  await page.getByLabel("Pond P / g per dm³", { exact: true }).fill("1..2");
++  await page.getByLabel("Stream Q / g per dm³", { exact: true }).fill("50");
++  await page.locator(".sample-check-answer").click();
++  await committed(page);
++  await page.reload();
++  await expect(
++    page.getByLabel("Pond P / g per dm³", { exact: true }),
++  ).toHaveValue("1..2");
++  await expect(
++    page.getByLabel("Stream Q / g per dm³", { exact: true }),
++  ).toHaveValue("50");
++  await expect(page.locator(".water-original")).toContainText(
++    "0.05 g residue from 25 cm³",
++  );
++  // Invalid typing is retained but is not recorded as a completed answer.
++  // Use a valid wrong number to exercise the explanatory recovery route.
++  await page.getByLabel("Pond P / g per dm³", { exact: true }).fill("99");
++  await page.locator(".sample-check-answer").click();
++  await page
++    .getByRole("button", { name: "Revisit the key idea", exact: true })
++    .click();
++  await expect(
++    page.getByRole("heading", { name: "Compare equal volumes", exact: true }),
++  ).toBeVisible();
++  await page
++    .getByRole("radio", { name: "Dry residue mass per dm³", exact: true })
++    .check();
++  await page.locator(".sample-check-answer").click();
++  await expect(page.locator(".question-panel .feedback")).toContainText(
++    "3 g/dm³",
++  );
++  await page
++    .getByRole("button", { name: "Return to your task →", exact: true })
++    .click();
++  await expect(
++    page.getByLabel("Pond P / g per dm³", { exact: true }),
++  ).toHaveValue("99");
++  await page.getByLabel("Pond P / g per dm³", { exact: true }).fill("3");
++  await page.getByLabel("Stream Q / g per dm³", { exact: true }).fill("2");
++  await page.locator(".sample-check-answer").click();
++  await expect(page.locator(".question-panel .feedback")).toHaveClass(
++    /correct/,
++  );
++  await page.getByRole("button", { name: "Clear answer", exact: true }).click();
++  await expect(
++    page.getByLabel("Pond P / g per dm³", { exact: true }),
++  ).toHaveValue("");
++});
++
++test("malformed source construction bytes survive reload with sibling work unchanged", async ({
++  page,
++}) => {
++  const raw = '{"s0":true,"s1":"1..2","foreign":"keep"}';
++  await seed(page, "practice", [], { [j.practice[28].id]: raw }, 28);
++  await expect(page.locator(".question-panel")).toContainText(
++    "Saved constructed answer is unreadable",
++  );
++  await page.reload();
++  await expect(page.locator(".question-panel")).toContainText(
++    "Saved constructed answer is unreadable",
++  );
++  const data = await page.evaluate(
++    (key) => JSON.parse(localStorage.getItem(key)!),
++    STORAGE_KEY,
++  );
++  expect(data.work["potable-water"].drafts[j.practice[28].id]).toBe(raw);
++  expect(data.work["ionic-bonding"].drafts["ib-v1-p-draw-chloride"]).toBe(
++    "1..2",
++  );
++  await gate(page, page.locator(".question-panel"));
++  await page
++    .getByRole("button", { name: "Start this answer again", exact: true })
++    .click();
++  await committed(page);
++  await page.reload();
++  await expect(
++    page.getByLabel("Pond P / g per dm³", { exact: true }),
++  ).toHaveValue("");
++  const recovered = await page.evaluate(
++    (key) => JSON.parse(localStorage.getItem(key)!),
++    STORAGE_KEY,
++  );
++  expect(recovered.work["ionic-bonding"].drafts["ib-v1-p-draw-chloride"]).toBe(
++    "1..2",
++  );
++});
++
++test("new reserved forms stay sealed and preserve cold versus helped exposure across changed sources", async ({
++  page,
++}) => {
++  const now = Date.now();
++  await seed(
++    page,
++    "check",
++    j.checkForms.slice(0, 2).map((f) =>
++      pastRun(
++        "check",
++        f.map((q) => q.id),
++        now - 10000,
++      ),
++    ),
++  );
++  await page
++    .getByRole("button", { name: "Start understanding check →", exact: true })
++    .click();
++  for (const form of j.checkForms.slice(2)) {
++    for (let i = 0; i < form.length; i++) {
++      if (i)
++        await page
++          .getByRole("button", { name: "Next question →", exact: true })
++          .click();
++      await gate(page, page.locator(".assessment-session"));
++      await expect(
++        page.locator(
++          ".sample-reference,.assessment-review-criteria,.water-workbench",
++        ),
++      ).toHaveCount(0);
++      await answer(page, form[i]);
++      await page
++        .getByRole("button", { name: "Record answer", exact: true })
++        .click();
++    }
++    await page
++      .getByRole("button", { name: "Submit whole set", exact: true })
++      .click();
++    await expect(
++      page.getByRole("heading", { name: "2 of 2 correct", exact: true }),
++    ).toBeVisible();
++    await committed(page);
++    const run = await page.evaluate(
++      (key) => JSON.parse(localStorage.getItem(key)!).work["potable-water"].run,
++      STORAGE_KEY,
++    );
++    expect(
++      Object.values(run.responses).map(
++        (r: unknown) => (r as { fresh: boolean }).fresh,
++      ),
++    ).toEqual(form === j.checkForms[2] ? [true, true] : [false, false]);
++    if (form === j.checkForms[2])
++      await page
++        .getByRole("button", { name: "Try the next form", exact: true })
++        .click();
++  }
++});
++
++test("new delayed sources obey the exact seven-day gate and retain malformed work until whole submission", async ({
++  page,
++}) => {
++  const now = new Date("2026-10-12T15:00:00Z").getTime();
++  await page.clock.setFixedTime(new Date(now));
++  const history = [
++    ...j.checkForms.slice(0, 2).map((f) =>
++      pastRun(
++        "check",
++        f.map((q) => q.id),
++        now - REVIEW_DELAY + 1,
++      ),
++    ),
++    ...j.reviewForms.slice(0, 2).map((f) =>
++      pastRun(
++        "review",
++        f.map((q) => q.id),
++        now - REVIEW_DELAY * 2,
++      ),
++    ),
++  ];
++  history.sort((a, b) => a.submitted! - b.submitted!);
++  await seed(page, "review", history);
++  await expect(
++    page.getByRole("button", { name: "Start review →", exact: true }),
++  ).toHaveCount(0);
++  await page.clock.setFixedTime(new Date(now + 1));
++  await page.reload();
++  await page
++    .getByRole("button", { name: "Start review →", exact: true })
++    .click();
++  const form = j.reviewForms[2];
++  await answer(page, form[0]);
++  await page
++    .getByRole("button", { name: "Record answer", exact: true })
++    .click();
++  await page
++    .getByRole("button", { name: "Next question →", exact: true })
++    .click();
++  await page
++    .getByLabel("Reservoir M / g per dm³", { exact: true })
++    .fill("1..2");
++  await page.getByLabel("Spring N / g per dm³", { exact: true }).fill("1");
++  await committed(page);
++  await page.reload();
++  await expect(
++    page.getByLabel("Reservoir M / g per dm³", { exact: true }),
++  ).toHaveValue("1..2");
++  await expect(
++    page.locator(".sample-reference,.assessment-review-criteria"),
++  ).toHaveCount(0);
++  await page
++    .getByRole("button", { name: "Record answer", exact: true })
++    .click();
++  await expect(
++    page.getByRole("button", { name: "Submit whole set", exact: true }),
++  ).toBeDisabled();
++  await page
++    .getByRole("button", { name: "Leave unanswered", exact: true })
++    .click();
++  await page
++    .getByRole("button", { name: "Submit whole set", exact: true })
++    .click();
++  await expect(
++    page.getByRole("heading", { name: "1 of 2 correct", exact: true }),
++  ).toBeVisible();
++  await committed(page);
++  const run = await page.evaluate(
++    (key) => JSON.parse(localStorage.getItem(key)!).work["potable-water"].run,
++    STORAGE_KEY,
++  );
++  expect(run.responses[form[1].id].answer).toBe("");
++  const rawDraft = await page.evaluate(
++    ({ key, id }) =>
++      JSON.parse(localStorage.getItem(key)!).work["potable-water"].drafts[id],
++    { key: STORAGE_KEY, id: form[1].id },
++  );
++  expect(rawDraft).toBe('{"s0":"1..2","s1":"1"}');
++  await expect(
++    page.getByRole("button", { name: "Try the next form", exact: true }),
++  ).toBeDisabled();
++  await page.clock.setFixedTime(new Date(now + REVIEW_DELAY));
++  await page.reload();
++  await expect(
++    page.getByRole("button", { name: "Try the next form", exact: true }),
++  ).toBeDisabled();
++  await page.clock.setFixedTime(new Date(now + 1 + REVIEW_DELAY));
++  await page.reload();
++  await page
++    .getByRole("button", { name: "Try the next form", exact: true })
++    .click();
++  for (let i = 0; i < j.reviewForms[3].length; i++) {
++    if (i)
++      await page
++        .getByRole("button", { name: "Next question →", exact: true })
++        .click();
++    await answer(page, j.reviewForms[3][i]);
++    await expect(
++      page.locator(".sample-reference,.assessment-review-criteria"),
++    ).toHaveCount(0);
++    await page
++      .getByRole("button", { name: "Record answer", exact: true })
++      .click();
++  }
++  await page
++    .getByRole("button", { name: "Submit whole set", exact: true })
++    .click();
++  await expect(
++    page.getByRole("heading", { name: "2 of 2 correct", exact: true }),
++  ).toBeVisible();
++});
++
++test("hinted source comparisons cannot be presented as fresh by the new independent form", async ({
++  page,
++}) => {
++  const now = Date.now();
++  await seed(
++    page,
++    "practice",
++    j.checkForms.slice(0, 2).map((f) =>
++      pastRun(
++        "check",
++        f.map((q) => q.id),
++        now - 10000,
++      ),
++    ),
++  );
++  await page.getByRole("button", { name: "Learn", exact: true }).click();
++  const picker = page.getByLabel("Choose a practice task", { exact: true });
++  if (await picker.count()) await picker.selectOption("7");
++  else
++    await page
++      .getByRole("button", { name: "Task 8", exact: true })
++      .first()
++      .click();
++  await page
++    .getByRole("button", { name: "Give me a hint", exact: true })
++    .click();
++  await page.getByRole("button", { name: "Check", exact: true }).click();
++  await page
++    .getByRole("button", { name: "Start understanding check →", exact: true })
++    .click();
++  for (let i = 0; i < 2; i++) {
++    if (i)
++      await page
++        .getByRole("button", { name: "Next question →", exact: true })
++        .click();
++    await answer(page, j.checkForms[2][i]);
++    await page
++      .getByRole("button", { name: "Record answer", exact: true })
++      .click();
++  }
++  await page
++    .getByRole("button", { name: "Submit whole set", exact: true })
++    .click();
++  await committed(page);
++  const run = await page.evaluate(
++    (key) => JSON.parse(localStorage.getItem(key)!).work["potable-water"].run,
++    STORAGE_KEY,
++  );
++  expect(run.responses[j.checkForms[2][1].id].fresh).toBe(false);
++});
++
++test("original reserved written methods keep their full demand and reachable retained response", async ({
++  page,
++}) => {
++  for (let form = 0; form < 2; form++) {
++    await seed(
++      page,
++      "check",
++      j.checkForms.slice(0, form).map((f) =>
++        pastRun(
++          "check",
++          f.map((q) => q.id),
++          Date.now() - 10000,
++        ),
++      ),
++    );
++    await page
++      .getByRole("button", { name: "Start understanding check →", exact: true })
++      .click();
++    for (let index = 0; index < j.checkForms[form].length; index++) {
++      const q = j.checkForms[form][index];
++      if (!q.rubric) continue;
++      await page
++        .getByRole("button", { name: `Question ${index + 1}`, exact: true })
++        .click();
++      await expect(page.locator(".written-equation-prompt")).toHaveText(
++        q.prompt,
++      );
++      await page
++        .getByLabel("Your explanation", { exact: true })
++        .fill("pH7 proves safety; weigh the hot dish including its mass.");
++      await committed(page);
++      await page.reload();
++      await expect(
++        page.getByLabel("Your explanation", { exact: true }),
++      ).toHaveValue(
++        "pH7 proves safety; weigh the hot dish including its mass.",
++      );
++      await expect(page.locator(".assessment-review-criteria")).toHaveCount(0);
++      await gate(page, page.locator(".question-panel"));
++      expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
++    }
++  }
++});
++
++test("the original residue model cannot create fresh source-concentration evidence", async ({
++  page,
++}) => {
++  await seed(
++    page,
++    "practice",
++    j.checkForms.slice(0, 2).map((f) =>
++      pastRun(
++        "check",
++        f.map((q) => q.id),
++        Date.now() - 10000,
++      ),
++    ),
++  );
++  await page.getByRole("button", { name: "Learn", exact: true }).click();
++  await page
++    .getByRole("button", { name: "Task 3", exact: true })
++    .first()
++    .click();
++  await page
++    .getByRole("button", { name: "Give me a hint", exact: true })
++    .click();
++  await page.getByRole("button", { name: "Check", exact: true }).click();
++  await page
++    .getByRole("button", { name: "Start understanding check →", exact: true })
++    .click();
++  await page.getByRole("button", { name: "Question 2", exact: true }).click();
++  await answer(page, j.checkForms[2][1]);
++  await page
++    .getByRole("button", { name: "Record answer", exact: true })
++    .click();
++  await committed(page);
++  const run = await page.evaluate(
++    (key) => JSON.parse(localStorage.getItem(key)!).work["potable-water"].run,
++    STORAGE_KEY,
++  );
++  expect(run.responses[j.checkForms[2][1].id].fresh).toBe(false);
++});
+diff --git a/tests/potable-review.unit.spec.ts b/tests/potable-review.unit.spec.ts
+new file mode 100644
+index 0000000..db7e916
+--- /dev/null
++++ b/tests/potable-review.unit.spec.ts
+@@ -0,0 +1,125 @@
++import { test, expect } from "@playwright/test";
++import baseline from "./fixtures/potable-original-v1.json";
++import { lessons } from "../src/content/curriculum";
++import { waterJourney as j } from "../src/content/journeys/potable-water";
++import {
++  potableSourceChecks,
++  potableSourceReviews,
++  potableSourceGuided,
++  potableSourcePractice,
++  potableSourceRefresher,
++  sourceSets,
++} from "../src/content/journeys/potable-sources";
++import { mark } from "../src/lib/marking";
++
++test("all 88 original normalised tasks, task positions, reserved forms and v1 metadata remain exactly unchanged", () => {
++  expect(lessons.find((l) => l.slug === "potable-water")!.journey).toBe(j);
++  const original = {
++    ...j,
++    refresher: j.refresher.slice(0, 26),
++    guided: j.guided.slice(0, 7),
++    practice: j.practice.slice(0, 27),
++    checkForms: j.checkForms.slice(0, 2),
++    reviewForms: j.reviewForms.slice(0, 2),
++    practiceGroups: j.practiceGroups!.slice(0, 4),
++  };
++  expect(JSON.parse(JSON.stringify(original))).toEqual(baseline);
++});
++test("literal comparison answers normalise each original sample volume and distinguish pH from residue mass", () => {
++  const references = [
++    ...potableSourceGuided,
++    ...potableSourcePractice.filter((q) => q.parts),
++    ...potableSourceChecks.map((f) => f[1]),
++    ...potableSourceReviews.map((f) => f[1]),
++  ];
++  const answers = [
++    [1, 2, 35],
++    [3, 2],
++    [2, 3],
++    [2, 3],
++    [2, 1],
++    [3, 5],
++  ];
++  for (let i = 0; i < references.length; i++) {
++    const q = references[i];
++    expect(q.parts!.map((p) => p.answer)).toEqual(answers[i]);
++    expect(mark(q, q.answer).correct).toBe(true);
++    for (const p of q.parts!) {
++      const wrong = { ...JSON.parse(q.answer), [p.id]: "1..2" };
++      expect(mark(q, JSON.stringify(wrong)).correct).toBe(false);
++    }
++  }
++  // Larger raw mass in Stream Q is less concentrated: 0.05/0.025 < 0.03/0.010.
++  expect(sourceSets.practice).toEqual([
++    ["Pond P", 5.5, 0.03, 10],
++    ["Stream Q", 8, 0.05, 25],
++  ]);
++  expect(potableSourcePractice[0].answer).toBe("Pond P");
++  expect(potableSourceGuided[0].waterGiven!.rows[2].text).toContain("pH 7.0");
++  expect(potableSourceGuided[0].explanation).toContain(
++    "microbiological safety",
++  );
++});
++test("new comparison families conservatively expose equivalents across guidance, independent forms and delayed review", () => {
++  const all = [
++    ...potableSourceRefresher,
++    ...potableSourceGuided,
++    ...potableSourcePractice,
++    ...potableSourceChecks.flat(),
++    ...potableSourceReviews.flat(),
++  ];
++  expect(all).toHaveLength(13);
++  expect(new Set(all.map((q) => q.id)).size).toBe(13);
++  for (const q of all) {
++    const families = [
++      ["r-ph", "p-ph", "cC-ph", "cD-ph", "vC-ph", "vD-ph"],
++      [
++        "r-solids",
++        "g-solids",
++        "p-solids",
++        "cC-solids",
++        "cD-solids",
++        "vC-solids",
++        "vD-solids",
++      ],
++    ].map((fs) => fs.map((s) => "water-v1-sources-" + s));
++    const expected = families
++      .find((fs) => fs.includes(q.id))!
++      .filter((id) => id !== q.id);
++    const prior =
++      q.parts || q.id.endsWith("r-solids")
++        ? [
++            "r-dish10",
++            "g-residue",
++            "r-dish25",
++            "r-dish50",
++            "r-dish100",
++            "r-repeat50",
++            "g-repeat",
++            "r-repeat25",
++            "r-repeat10",
++            "p-residue",
++            "p-dilute",
++            "p-repeat",
++            "cA-residue",
++            "cB-residue",
++            "vA-residue",
++          ].map((suffix) => `water-v1-${suffix}`)
++        : [];
++    const originals = [
++      ...j.refresher.slice(0, 26),
++      ...j.guided.slice(0, 7),
++      ...j.practice.slice(0, 27),
++      ...j.checkForms.slice(0, 2).flat(),
++      ...j.reviewForms.slice(0, 2).flat(),
++    ];
++    for (const id of prior)
++      expect(originals.some((o) => o.id === id)).toBe(true);
++    expect(q.exposureAliases).toEqual([...expected, ...prior]);
++    expect(q.model).toBeUndefined();
++  }
++  for (const q of potableSourcePractice)
++    expect([...j.refresher].some((r) => r.id === q.followUp)).toBe(true);
++  expect(j.checkForms.slice(2)).toEqual(potableSourceChecks);
++  expect(j.reviewForms.slice(2)).toEqual(potableSourceReviews);
++});
+diff --git a/tests/water.unit.spec.ts b/tests/water.unit.spec.ts
+index fa13c22..002951b 100644
+--- a/tests/water.unit.spec.ts
++++ b/tests/water.unit.spec.ts
+@@ -29,16 +29,16 @@ import {
+   waterDimensions as D,
+ } from "../src/lib/water-asset";
+ import * as T from "three";
+-test("one individually authored88-task water journey has seven activities,26 supplied records and27 directed recoveries", () => {
++test("the original water activities/records remain with an append-only different-source comparison", () => {
+   expect(lessons.find((l) => l.slug === "potable-water")!.journey).toBe(j);
+-  expect(all).toHaveLength(88);
+-  expect(new Set(all.map((q) => q.id)).size).toBe(88);
++  expect(all).toHaveLength(101);
++  expect(new Set(all.map((q) => q.id)).size).toBe(101);
+   expect(Object.keys(R)).toHaveLength(26);
+-  expect(j.guided).toHaveLength(7);
+-  expect(j.refresher).toHaveLength(26);
+-  expect(j.practice).toHaveLength(27);
+-  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8]);
+-  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4]);
++  expect(j.guided).toHaveLength(8);
++  expect(j.refresher).toHaveLength(28);
++  expect(j.practice).toHaveLength(29);
++  expect(j.checkForms.map((f) => f.length)).toEqual([8, 8, 2, 2]);
++  expect(j.reviewForms.map((f) => f.length)).toEqual([4, 4, 2, 2]);
+   expect(j.scopeNote).toContain("practical 8");
+   expect(j.scopeNote).toContain("practical 13");
+   expect(j.practiceGroups!.flatMap((g) => g.taskIds)).toEqual(
+@@ -175,7 +175,9 @@ test("14 independent constructions and39 fields match separately audited literal
+     "vB-membrane": [46, 2100],
+   };
+   expect(Object.values(refs).flat()).toHaveLength(39);
+-  expect(all.filter((q) => q.parts)).toHaveLength(14);
++  expect(
++    all.filter((q) => q.parts && !q.id.startsWith("water-v1-sources-")),
++  ).toHaveLength(14);
+   for (const [s, nums] of Object.entries(refs)) {
+     const q = all.find((q) => q.id === "water-v1-" + s)!;
+     expect(
+@@ -241,7 +243,7 @@ test("actual scientific distinctions and written marking remain honest and early
+     ).toContain("water-v1-" + taught);
+   }
+   for (const q of [...j.checkForms.flat(), ...j.reviewForms.flat()].filter(
+-    (q) => q.parts,
++    (q) => q.parts && !q.id.startsWith("water-v1-sources-"),
+   ))
+     expect(q.exposureAliases).toBeUndefined();
+   const teaching = new Set(

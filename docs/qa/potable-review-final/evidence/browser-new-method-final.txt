@@ -1,0 +1,43 @@
+[WebServer] (node:461241) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 24 tests using 2 workers
+
+(node:461258) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:461257) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/potable-review.browser.spec.ts:140:5 › a wrong source concentration remains raw after check/reload; scoped reset leaves other work intact (7.0s)
+  ✓   2 [desktop] › tests/potable-review.browser.spec.ts:116:5 › all original and appended guided/independent openings keep complete answers reachable and figures readable (12.0s)
+  ✓   3 [desktop] › tests/potable-review.browser.spec.ts:195:5 › malformed source construction bytes survive reload with sibling work unchanged (11.9s)
+  ✓   4 [desktop] › tests/potable-review.browser.spec.ts:233:5 › new reserved forms stay sealed and preserve cold versus helped exposure across changed sources (8.3s)
+  ✓   6 [desktop] › tests/potable-review.browser.spec.ts:403:5 › hinted source comparisons cannot be presented as fresh by the new independent form (6.4s)
+  ✓   5 [desktop] › tests/potable-review.browser.spec.ts:291:5 › new delayed sources obey the exact seven-day gate and retain malformed work until whole submission (18.3s)
+  ✓   8 [desktop] › tests/potable-review.browser.spec.ts:498:5 › the original residue model cannot create fresh source-concentration evidence (6.5s)
+(node:461966) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [desktop] › tests/potable-review.browser.spec.ts:454:5 › original reserved written methods keep their full demand and reachable retained response (18.9s)
+(node:462018) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [mobile] › tests/potable-review.browser.spec.ts:140:5 › a wrong source concentration remains raw after check/reload; scoped reset leaves other work intact (6.8s)
+  ✓   9 [mobile] › tests/potable-review.browser.spec.ts:116:5 › all original and appended guided/independent openings keep complete answers reachable and figures readable (11.4s)
+  ✓  12 [mobile] › tests/potable-review.browser.spec.ts:233:5 › new reserved forms stay sealed and preserve cold versus helped exposure across changed sources (8.2s)
+  ✓  11 [mobile] › tests/potable-review.browser.spec.ts:195:5 › malformed source construction bytes survive reload with sibling work unchanged (12.7s)
+  ✓  14 [mobile] › tests/potable-review.browser.spec.ts:403:5 › hinted source comparisons cannot be presented as fresh by the new independent form (6.5s)
+  ✓  13 [mobile] › tests/potable-review.browser.spec.ts:291:5 › new delayed sources obey the exact seven-day gate and retain malformed work until whole submission (17.5s)
+  ✓  16 [mobile] › tests/potable-review.browser.spec.ts:498:5 › the original residue model cannot create fresh source-concentration evidence (5.8s)
+(node:462620) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 [mobile] › tests/potable-review.browser.spec.ts:454:5 › original reserved written methods keep their full demand and reachable retained response (17.3s)
+(node:462647) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  18 [narrow] › tests/potable-review.browser.spec.ts:140:5 › a wrong source concentration remains raw after check/reload; scoped reset leaves other work intact (6.6s)
+  ✓  17 [narrow] › tests/potable-review.browser.spec.ts:116:5 › all original and appended guided/independent openings keep complete answers reachable and figures readable (10.5s)
+  ✓  20 [narrow] › tests/potable-review.browser.spec.ts:233:5 › new reserved forms stay sealed and preserve cold versus helped exposure across changed sources (6.4s)
+  ✓  19 [narrow] › tests/potable-review.browser.spec.ts:195:5 › malformed source construction bytes survive reload with sibling work unchanged (10.2s)
+  ✓  22 [narrow] › tests/potable-review.browser.spec.ts:403:5 › hinted source comparisons cannot be presented as fresh by the new independent form (5.9s)
+  ✓  21 [narrow] › tests/potable-review.browser.spec.ts:291:5 › new delayed sources obey the exact seven-day gate and retain malformed work until whole submission (16.0s)
+  ✓  24 [narrow] › tests/potable-review.browser.spec.ts:498:5 › the original residue model cannot create fresh source-concentration evidence (5.4s)
+  ✓  23 [narrow] › tests/potable-review.browser.spec.ts:454:5 › original reserved written methods keep their full demand and reachable retained response (16.5s)
+
+  24 passed (2.4m)

@@ -1,0 +1,47 @@
+[WebServer] (node:463270) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 32 tests using 2 workers
+
+(node:463294) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:463295) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/water.browser.spec.ts:84:7 › quality: scientific proposal, wrong state, reload, undo and scoped clear (10.0s)
+  ✓   2 [desktop] › tests/water.browser.spec.ts:84:7 › treatment: scientific proposal, wrong state, reload, undo and scoped clear (10.2s)
+  ✓   3 [desktop] › tests/water.browser.spec.ts:84:7 › residue: scientific proposal, wrong state, reload, undo and scoped clear (8.5s)
+  ✓   4 [desktop] › tests/water.browser.spec.ts:84:7 › distil: scientific proposal, wrong state, reload, undo and scoped clear (10.6s)
+  ✓   5 [desktop] › tests/water.browser.spec.ts:84:7 › membrane: scientific proposal, wrong state, reload, undo and scoped clear (8.6s)
+  ✓   6 [desktop] › tests/water.browser.spec.ts:84:7 › resources: scientific proposal, wrong state, reload, undo and scoped clear (8.8s)
+  ✓   7 [desktop] › tests/water.browser.spec.ts:84:7 › repeat: scientific proposal, wrong state, reload, undo and scoped clear (8.5s)
+  ✓   8 [desktop] › tests/water.browser.spec.ts:137:5 › all27 practice responses preserve supplied evidence and honest written feedback (17.9s)
+  ✓   9 [desktop] › tests/water.browser.spec.ts:167:5 › both reserved eight-question forms and delayed four-question forms seal marking and retain written criteria (20.5s)
+  ✓  10 [desktop] › tests/water.browser.spec.ts:268:5 › all26 records are reachable, scientifically checkable and tied to their task (13.0s)
+  ✓  11 [desktop] › tests/water.browser.spec.ts:305:5 › 320px and390px opening gives a useful keyboard control within664px (8.1s)
+  ✓  12 [desktop] › tests/water.browser.spec.ts:323:5 › malformed native residue remains raw after reload rather than becoming zero (7.2s)
+  ✓  13 [desktop] › tests/water.browser.spec.ts:342:5 › independent wrong residue preserves the given and returns to its specific refresher with support faded (7.2s)
+  ✓  14 [desktop] › tests/water.browser.spec.ts:380:5 › a written practical misconception is retained with a gated manual reference and no automatic marks (4.8s)
+  ✓  16 [desktop] › tests/water.browser.spec.ts:468:5 › unavailable WebGL preserves phase-path alternative, checking and retained wrong choices (4.8s)
+(node:464608) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 [desktop] › tests/water.browser.spec.ts:411:5 › actual cold and uncooled GLBs preserve the selected bath, camera independence and finite geometry (7.7s)
+(node:464630) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  17 [mobile] › tests/water.browser.spec.ts:84:7 › quality: scientific proposal, wrong state, reload, undo and scoped clear (7.9s)
+  ✓  18 [mobile] › tests/water.browser.spec.ts:84:7 › treatment: scientific proposal, wrong state, reload, undo and scoped clear (7.9s)
+  ✓  19 [mobile] › tests/water.browser.spec.ts:84:7 › residue: scientific proposal, wrong state, reload, undo and scoped clear (7.8s)
+  ✓  20 [mobile] › tests/water.browser.spec.ts:84:7 › distil: scientific proposal, wrong state, reload, undo and scoped clear (10.6s)
+  ✓  21 [mobile] › tests/water.browser.spec.ts:84:7 › membrane: scientific proposal, wrong state, reload, undo and scoped clear (8.4s)
+  ✓  22 [mobile] › tests/water.browser.spec.ts:84:7 › resources: scientific proposal, wrong state, reload, undo and scoped clear (8.6s)
+  ✓  23 [mobile] › tests/water.browser.spec.ts:84:7 › repeat: scientific proposal, wrong state, reload, undo and scoped clear (8.1s)
+  ✓  24 [mobile] › tests/water.browser.spec.ts:137:5 › all27 practice responses preserve supplied evidence and honest written feedback (16.6s)
+  ✓  25 [mobile] › tests/water.browser.spec.ts:167:5 › both reserved eight-question forms and delayed four-question forms seal marking and retain written criteria (19.0s)
+  ✓  26 [mobile] › tests/water.browser.spec.ts:268:5 › all26 records are reachable, scientifically checkable and tied to their task (12.5s)
+  ✓  27 [mobile] › tests/water.browser.spec.ts:305:5 › 320px and390px opening gives a useful keyboard control within664px (7.6s)
+  ✓  28 [mobile] › tests/water.browser.spec.ts:323:5 › malformed native residue remains raw after reload rather than becoming zero (6.4s)
+  ✓  29 [mobile] › tests/water.browser.spec.ts:342:5 › independent wrong residue preserves the given and returns to its specific refresher with support faded (6.8s)
+  ✓  30 [mobile] › tests/water.browser.spec.ts:380:5 › a written practical misconception is retained with a gated manual reference and no automatic marks (4.1s)
+  ✓  31 [mobile] › tests/water.browser.spec.ts:411:5 › actual cold and uncooled GLBs preserve the selected bath, camera independence and finite geometry (7.0s)
+  ✓  32 [mobile] › tests/water.browser.spec.ts:468:5 › unavailable WebGL preserves phase-path alternative, checking and retained wrong choices (4.3s)
+
+  32 passed (2.7m)

@@ -1,5 +1,12 @@
 import type { LearningTask, LessonJourney } from "../types";
 import { waterRecords as R, type WaterGiven } from "../../lib/water";
+import {
+  potableSourceRefresher,
+  potableSourceGuided,
+  potableSourcePractice,
+  potableSourceChecks,
+  potableSourceReviews,
+} from "./potable-sources";
 const id = (s: string) => "water-v1-" + s;
 function choice(
   s: string,
@@ -1380,3 +1387,24 @@ export const waterJourney: LessonJourney = {
     },
   ],
 };
+
+// Append after all original recovery/exposure processing: old v1 task objects,
+// indices, eight-item check forms and four-item review forms stay byte-for-byte
+// equivalent to their normalised baseline. New source forms have their own IDs.
+waterJourney.refresher.push(...potableSourceRefresher);
+waterJourney.guided.push(...potableSourceGuided);
+waterJourney.practice.push(...potableSourcePractice);
+waterJourney.checkForms.push(...potableSourceChecks);
+waterJourney.reviewForms.push(...potableSourceReviews);
+waterJourney.practiceGroups!.push({
+  label: "Compare pH and dissolved solids across sources",
+  taskIds: potableSourcePractice.map((q) => q.id),
+});
+allWaterTasks.push(
+  ...potableSourceRefresher,
+  ...potableSourceGuided,
+  ...potableSourcePractice,
+  ...potableSourceChecks.flat(),
+  ...potableSourceReviews.flat(),
+);
+for (const q of potableSourcePractice) waterRecoveryRoutes[q.id] = q.followUp!;

@@ -1,0 +1,25 @@
+[WebServer] (node:465966) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 2 workers
+
+(node:465982) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:465983) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [desktop] › tests/learning.browser.spec.ts:469:5 › blocked storage leaves the app usable and warns accurately (3.5s)
+  ✓   1 [desktop] › tests/learning.browser.spec.ts:496:5 › corrupt data is preserved and explicit deletion touches only the Chemistry namespace (3.9s)
+  ✓   4 [desktop] › tests/learning.browser.spec.ts:717:5 › simultaneous tab saves retain a winner and flag the conflicting writer (6.2s)
+  ✓   3 [desktop] › tests/learning.browser.spec.ts:530:5 › another tab cannot be silently overwritten by stale local work (8.8s)
+(node:466401) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [desktop] › tests/learning.browser.spec.ts:752:5 › immediate refresh recovers a draft even while its commit lock is held (5.5s)
+(node:466410) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [mobile] › tests/learning.browser.spec.ts:469:5 › blocked storage leaves the app usable and warns accurately (2.9s)
+  ✓   8 [mobile] › tests/learning.browser.spec.ts:496:5 › corrupt data is preserved and explicit deletion touches only the Chemistry namespace (3.3s)
+  ✓   7 [mobile] › tests/learning.browser.spec.ts:530:5 › another tab cannot be silently overwritten by stale local work (8.1s)
+  ✓   9 [mobile] › tests/learning.browser.spec.ts:717:5 › simultaneous tab saves retain a winner and flag the conflicting writer (5.3s)
+  ✓  10 [mobile] › tests/learning.browser.spec.ts:752:5 › immediate refresh recovers a draft even while its commit lock is held (4.9s)
+
+  10 passed (40.5s)

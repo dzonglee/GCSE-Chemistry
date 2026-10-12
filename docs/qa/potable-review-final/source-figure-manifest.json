@@ -1,0 +1,50 @@
+{
+  "note": "Actual source pages viewed during research. URLs, printed pages and paired demands are in RESEARCH-AND-MAPPING.md. Handbook image PDF55/56 corresponds to printed54/55. These are research evidence, not app assets.",
+  "figures": [
+    {
+      "external_file": "chemistry-spec-page82.png",
+      "sha256": "4e7daeeace1b4156d9923795acafed363eac19c819fe1220f2adfbfbb948ade2",
+      "personally_viewed": true
+    },
+    {
+      "external_file": "trilogy-spec-page117.png",
+      "sha256": "fc0cac2440c61cba885c135fdd82caab13b539a1275c1514a32be15b50337159",
+      "personally_viewed": true
+    },
+    {
+      "external_file": "chemistry-handbook-page55.png",
+      "sha256": "d89db9bf267a3a112b4bcc8d2401109d9118fec90c89580fed9a4cf33a8b8ceb",
+      "personally_viewed": true
+    },
+    {
+      "external_file": "chemistry-handbook-page56.png",
+      "sha256": "0fca6b79ce152504a1758a787633ca8a8f52158a3e2c149d14efa1b6671c4fcd",
+      "personally_viewed": true
+    },
+    {
+      "external_file": "2020F-QP-page30.png",
+      "sha256": "dbf7d12157e43f7aca7543ede987fa8c7ccb41c6685547a779cc76ff5a424873",
+      "personally_viewed": true
+    },
+    {
+      "external_file": "2021F-QP-page8.png",
+      "sha256": "208fbf4b084cfae399d2c2e2cc911533833d78896b98bcdfd484afa208cc226e",
+      "personally_viewed": true
+    },
+    {
+      "external_file": "2021F-MS-page10.png",
+      "sha256": "9fc42e31ac89900921cdfa10e77aed17d83a5f32813c897941fced5f00e9b278",
+      "personally_viewed": true
+    },
+    {
+      "external_file": "2022F-QP-page4.png",
+      "sha256": "aea7dfdc512a801c2d02764c1732374013a8adeac3e8a8bcd8272032b578a26c",
+      "personally_viewed": true
+    },
+    {
+      "external_file": "2022F-MS-page7.png",
+      "sha256": "4a34e12591648ab957ddbb1164a16ddb07ebcbc6a29ef79a03103c903c7a6d27",
+      "personally_viewed": true
+    }
+  ]
+}

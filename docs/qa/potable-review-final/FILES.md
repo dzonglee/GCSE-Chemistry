@@ -1,0 +1,105 @@
+# Exact changed-file list
+
+Eight owned source/test files:
+
+- `src/content/journeys/potable-water.ts`
+- `src/content/journeys/potable-sources.ts`
+- `src/lib/potable-evidence.ts`
+- `tests/water.unit.spec.ts`
+- `tests/fixtures/potable-original-v1.json`
+- `tests/potable-evidence.unit.spec.ts`
+- `tests/potable-review.browser.spec.ts`
+- `tests/potable-review.unit.spec.ts`
+
+All other shipped changes are confined to `docs/qa/potable-review-final/`:
+
+- `docs/qa/potable-review-final/README.md`
+- `docs/qa/potable-review-final/RESEARCH-AND-MAPPING.md`
+- `docs/qa/potable-review-final/VALIDATION.md`
+- `docs/qa/potable-review-final/actual-journey.json`
+- `docs/qa/potable-review-final/comparison/baseline-1280-method.png`
+- `docs/qa/potable-review-final/comparison/baseline-390-guided.png`
+- `docs/qa/potable-review-final/comparison/maths-1280-guided.png`
+- `docs/qa/potable-review-final/comparison/maths-1280-independent.png`
+- `docs/qa/potable-review-final/comparison/maths-390-guided.png`
+- `docs/qa/potable-review-final/comparison/maths-390-independent.png`
+- `docs/qa/potable-review-final/evidence/browser-new-method-final.txt`
+- `docs/qa/potable-review-final/evidence/browser-retained-method-final.txt`
+- `docs/qa/potable-review-final/evidence/browser-storage-method-final.txt`
+- `docs/qa/potable-review-final/evidence/build-release.txt`
+- `docs/qa/potable-review-final/evidence/lint-release.txt`
+- `docs/qa/potable-review-final/evidence/release-browser-freeze-verification.txt`
+- `docs/qa/potable-review-final/evidence/release-browser-freeze.json`
+- `docs/qa/potable-review-final/evidence/release-browser-runner.txt`
+- `docs/qa/potable-review-final/evidence/release-capture-freeze-verification.txt`
+- `docs/qa/potable-review-final/evidence/release-capture-freeze.json`
+- `docs/qa/potable-review-final/evidence/release-capture-server.txt`
+- `docs/qa/potable-review-final/evidence/release-capture.txt`
+- `docs/qa/potable-review-final/evidence/types-release.txt`
+- `docs/qa/potable-review-final/evidence/unit-release.txt`
+- `docs/qa/potable-review-final/owned-source.patch`
+- `docs/qa/potable-review-final/proposals/01-water-layout.patch`
+- `docs/qa/potable-review-final/proposals/02-inventory-counts.patch`
+- `docs/qa/potable-review-final/proposals/proposed-files.json`
+- `docs/qa/potable-review-final/reproduction/candidate.config.ts`
+- `docs/qa/potable-review-final/reproduction/capture.cjs`
+- `docs/qa/potable-review-final/reproduction/freeze.py`
+- `docs/qa/potable-review-final/reproduction/retained.config.ts`
+- `docs/qa/potable-review-final/reproduction/run-browser-method-final.py`
+- `docs/qa/potable-review-final/screenshots/1280-delayed-source-sealed.png`
+- `docs/qa/potable-review-final/screenshots/1280-equal-volume-recovery.png`
+- `docs/qa/potable-review-final/screenshots/1280-guided-sources-correct.png`
+- `docs/qa/potable-review-final/screenshots/1280-guided-sources.png`
+- `docs/qa/potable-review-final/screenshots/1280-independent-check-sealed.png`
+- `docs/qa/potable-review-final/screenshots/1280-independent-check-wrong.png`
+- `docs/qa/potable-review-final/screenshots/1280-independent-ph-wrong.png`
+- `docs/qa/potable-review-final/screenshots/1280-independent-solids-correct.png`
+- `docs/qa/potable-review-final/screenshots/1280-independent-solids-wrong.png`
+- `docs/qa/potable-review-final/screenshots/1280-malformed-source-preserved.png`
+- `docs/qa/potable-review-final/screenshots/1280-manual-method-reference.png`
+- `docs/qa/potable-review-final/screenshots/1280-original-distillation-apparatus.png`
+- `docs/qa/potable-review-final/screenshots/1280-original-residue-wrong.png`
+- `docs/qa/potable-review-final/screenshots/1280-original-written-reference.png`
+- `docs/qa/potable-review-final/screenshots/1280-original-written-sealed.png`
+- `docs/qa/potable-review-final/screenshots/1280-recorded-wrong-concentration.png`
+- `docs/qa/potable-review-final/screenshots/1280-submitted-source-comparison.png`
+- `docs/qa/potable-review-final/screenshots/320-delayed-source-sealed.png`
+- `docs/qa/potable-review-final/screenshots/320-equal-volume-recovery.png`
+- `docs/qa/potable-review-final/screenshots/320-guided-sources-correct.png`
+- `docs/qa/potable-review-final/screenshots/320-guided-sources.png`
+- `docs/qa/potable-review-final/screenshots/320-independent-check-sealed.png`
+- `docs/qa/potable-review-final/screenshots/320-independent-check-wrong.png`
+- `docs/qa/potable-review-final/screenshots/320-independent-ph-wrong.png`
+- `docs/qa/potable-review-final/screenshots/320-independent-solids-correct.png`
+- `docs/qa/potable-review-final/screenshots/320-independent-solids-wrong.png`
+- `docs/qa/potable-review-final/screenshots/320-malformed-source-preserved.png`
+- `docs/qa/potable-review-final/screenshots/320-manual-method-reference.png`
+- `docs/qa/potable-review-final/screenshots/320-original-distillation-apparatus.png`
+- `docs/qa/potable-review-final/screenshots/320-original-residue-wrong.png`
+- `docs/qa/potable-review-final/screenshots/320-original-written-reference.png`
+- `docs/qa/potable-review-final/screenshots/320-original-written-sealed.png`
+- `docs/qa/potable-review-final/screenshots/320-recorded-wrong-concentration.png`
+- `docs/qa/potable-review-final/screenshots/320-submitted-source-comparison.png`
+- `docs/qa/potable-review-final/screenshots/390-delayed-source-sealed.png`
+- `docs/qa/potable-review-final/screenshots/390-equal-volume-recovery.png`
+- `docs/qa/potable-review-final/screenshots/390-guided-sources-correct.png`
+- `docs/qa/potable-review-final/screenshots/390-guided-sources.png`
+- `docs/qa/potable-review-final/screenshots/390-independent-check-sealed.png`
+- `docs/qa/potable-review-final/screenshots/390-independent-check-wrong.png`
+- `docs/qa/potable-review-final/screenshots/390-independent-ph-wrong.png`
+- `docs/qa/potable-review-final/screenshots/390-independent-solids-correct.png`
+- `docs/qa/potable-review-final/screenshots/390-independent-solids-wrong.png`
+- `docs/qa/potable-review-final/screenshots/390-malformed-source-preserved.png`
+- `docs/qa/potable-review-final/screenshots/390-manual-method-reference.png`
+- `docs/qa/potable-review-final/screenshots/390-original-distillation-apparatus.png`
+- `docs/qa/potable-review-final/screenshots/390-original-residue-wrong.png`
+- `docs/qa/potable-review-final/screenshots/390-original-written-reference.png`
+- `docs/qa/potable-review-final/screenshots/390-original-written-sealed.png`
+- `docs/qa/potable-review-final/screenshots/390-recorded-wrong-concentration.png`
+- `docs/qa/potable-review-final/screenshots/390-submitted-source-comparison.png`
+- `docs/qa/potable-review-final/screenshots/manifest.json`
+- `docs/qa/potable-review-final/screenshots/observations.json`
+- `docs/qa/potable-review-final/source-figure-manifest.json`
+- `docs/qa/potable-review-final/FILES.md`
+
+The nine shared files are baseline bytes on this branch. Their changes exist only as separately reviewed proposals under this delivery directory. Main/references, other lesson source, global ledgers, configs, public assets and dependencies are unchanged.
