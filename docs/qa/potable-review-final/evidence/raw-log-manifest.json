@@ -1,0 +1,12 @@
+[
+  {
+    "readable_file": "build-release.txt",
+    "raw_archive": "build-release.txt.gz",
+    "raw_sha256": "81ebcf509d7dd85d2b176427fe69c548ef3e4335ac14e468484fc4e522faffd5"
+  },
+  {
+    "readable_file": "lint-release.txt",
+    "raw_archive": "lint-release.txt.gz",
+    "raw_sha256": "8e6c3404d35fc3cda2f481399942731d9a13652bcb3fae26cefb0a947db3a181"
+  }
+]
