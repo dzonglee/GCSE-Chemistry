@@ -1,25 +1,18 @@
-# Current GitHub handoff — 11 October 2026
+# Current GitHub handoff — 13 October 2026
 
 13 October2026 integration checkpoint: the external potable-water/RP8/RP13 delivery is integrated, both shared UI proposals are applied, and all124 AQA sections have reviewed response evidence. Types/lint/build,1105 units and48 integrated water browser checks passed;51 fresh captures passed layout/accessibility gates and representative samples were personally inspected and sent. The new3188-case/172-file whole-course run is active on build Aa0dIR-3w-sKBPnUmz_Ot; final acceptance is pending. Earlier counts/receipts below describe historical builds. See docs/qa/potable-integration-final/README.md and docs/final-maths-comparison.md. No merge or deployment.
 
 Use `origin/codex/chemistry-main-followups-20261008` from dzonglee/GCSE-Chemistry. This branch contains the main Chemistry application; the old onboarding main checkout was empty. Separate sessions have separate workspaces: fetch GitHub before starting. Read AGENTS.md and the current assignment below.
 
-## Ownership
+## Current ownership and next action
 
-The separate worker exclusively owns [potable water and Separate RP8 / Trilogy RP13](PARALLEL-SCOPE-POTABLE.md), starting a new feature branch from the latest main follow-up branch. Its returned branch/commit is not yet visible in the latest remote-head check. Do not request files or tokens from the user. Preserve its exclusive scope. All other lessons, shared UI/storage/marking, integration, qualification ledgers and final regression belong to the main session. PARALLEL-SCOPE.md and PARALLEL-SCOPE-NEXT.md describe historical completed assignments and do not authorize new overlapping work.
+The external worker delivered potable-water/RP8/RP13 on `codex/chemistry-potable-review` at7f72498a9a21bb417fdf1614b13123631a15ceca. Main integrated both commits through4c2dbaa/cf1a5b7 and shared proposals in a66d107783c030abea24e2336fcc8c4ff00de8bf. That checkpoint is pushed and a clean independent GitHub clone verifies all2512 tracked files and1106 source hashes exactly. The worker's exclusive lesson assignment is complete. Main owns whole-course acceptance and final publication; no new overlapping task is assigned.
 
-## Verified current checkpoint
+95 individually reviewed journeys /5929 activities /2192 practice /973 manual responses; four full papers400marks/191parts;124 response-confirmed AQA sections. All25 editorial follow-ups remain individually published. Root's fresh51 water captures passed their original gates and eight representative states were personally inspected; three samples were explicitly sent before the whole-course run.
 
-95 individually authored lesson journeys / 5,916 activities / 2,190 practice activities / 973 manual-review responses. Four original full papers: 400 marks / 191 parts. Qualification/tier mapping covers 124 sections; response evidence is confirmed for 123, with potable water pending external review/integration. All 25 follow-up editorial reviews have individual screenshot delivery and publication evidence in docs/editorial-publications.json.
+The live regression uses buildAa0dIR-3w-sKBPnUmz_Ot,3188 cases/172files and2363 frozen fingerprints. Private QA: `/workspace/course-audit/qa/potable-integration-20261013`. Runner owner72910; monitoring owner37275. The supervisor records actual exits and complete pass counts. `validate-unified-completion.py` requires actual zero exits, all cases, unchanged fingerprints/build and a released port. The monitor preserves only exact completed, closed passing traces if disk pressure requires archival; failure/active evidence is untouched.
 
-Final type checking, clean full lint, production build and all 1,100 units pass. **All 3,172 browser checks / 171 files passed in one frozen 6.7-hour run**, actual runner/supervisor exits 0, with 1,586 passes per project. Build `5o8bvY-CXFL1FzlwiB0j6`, 2,357 fingerprints verified unchanged and test port 3201 released. All 95 model/first-practice routes, all 95 assessment/review layouts and all 102 full-paper checks passed in each project. See [acceptance receipt](docs/final-browser-acceptance.json) and [validation](docs/validation.md). The external potable-water content review remains outstanding. SOURCE-MANIFEST.json records the accepted source, test, configuration and instruction hashes; verify a new checkout against it. See [fresh GitHub verification](docs/final-github-verification.json) for its explicit status.
-
-## Setup and verification
-
-Node 24 and npm; `npm ci`, then `npm run typecheck`, `npm run lint`, `npm run test:unit`, `npm run build`, `npm run test:e2e`. System Chromium is `/usr/bin/chromium`; set CHROMIUM_PATH only if needed. Main owns Chemistry 3201 and Maths 3000. External worker owns Chemistry 3202 and separately started Maths 3300; exclude port-only test-config changes from its delivery.
-
-Preserve original IDs, content version, stage positions, assessment forms, retained raw work, conservative help/exposure and seven-day review. Work one lesson at a time with real materials, purposeful interactions and screenshots sent before proceeding. Freeze source/tests/assets/config/build during production QA; wait for actual runner/server exits and verify fingerprints before edits. Source changes, deployed service or merged branches require separate evidence; nothing here claims deployment or exam-readiness certification.
-
+After actual completion, inspect the full log/receipt, run the validator, update acceptance/source/global documents, commit/push and independently verify GitHub. If failure occurs, preserve evidence, wait for all owners/port release and verify the freeze before any source/test correction. Do not count focused/partial passes as whole-course acceptance. Do not poll old terminated owners or overwrite their historical receipts. No merge/deployment is authorized by this checkpoint.
 
 ## Historical individual corrections before final acceptance
 

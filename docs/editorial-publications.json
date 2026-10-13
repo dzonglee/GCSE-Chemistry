@@ -43,21 +43,24 @@
     "freshCloneVerification": "ten files exact SHA256; clean checkout",
     "commit": "af7d12edb8942ca509bf3651a7fe8d1e1f78956e"
   },
-  "externalPotableWater": "reserved; last GitHub probe found no matching published branch",
+  "externalPotableWater": {
+    "status": "integrated",
+    "branch": "codex/chemistry-potable-review",
+    "remoteCommit": "7f72498a9a21bb417fdf1614b13123631a15ceca",
+    "mainIntegrationCommit": "a66d107783c030abea24e2336fcc8c4ff00de8bf",
+    "evidence": "qa/potable-integration-final/README.md",
+    "integratedBrowserPasses": 48,
+    "unitPasses": 1105,
+    "capturedStates": 51,
+    "responseSectionsConfirmed": 124
+  },
   "wholeCourseAcceptance": {
-    "status": "passed",
-    "receipt": "final-browser-acceptance.json",
-    "cases": 3172,
-    "files": 171,
-    "projectPasses": {
-      "desktop": 1586,
-      "mobile": 1586
-    },
-    "buildId": "5o8bvY-CXFL1FzlwiB0j6",
-    "runnerExitCode": 0,
-    "supervisorExitCode": 0,
-    "fingerprintsVerified": 2357,
-    "testPortReleased": true
+    "status": "pending",
+    "cases": 3188,
+    "files": 172,
+    "buildId": "Aa0dIR-3w-sKBPnUmz_Ot",
+    "frozenFingerprints": 2363,
+    "evidence": "qa/potable-integration-final/unified-final-browser-start.json"
   },
   "moles": {
     "commit": "29a869a68762bd9a66e9e05c55563bd593c73f7c",
@@ -188,5 +191,20 @@
     "initialBrowserFailed": 2,
     "finalBrowserCasesPassed": 30,
     "freshCloneVerification": "ten exact SHA256; clean checkout"
+  },
+  "historicalWholeCourseAcceptance": {
+    "status": "passed",
+    "receipt": "final-browser-acceptance.json",
+    "cases": 3172,
+    "files": 171,
+    "projectPasses": {
+      "desktop": 1586,
+      "mobile": 1586
+    },
+    "buildId": "5o8bvY-CXFL1FzlwiB0j6",
+    "runnerExitCode": 0,
+    "supervisorExitCode": 0,
+    "fingerprintsVerified": 2357,
+    "testPortReleased": true
   }
 }
