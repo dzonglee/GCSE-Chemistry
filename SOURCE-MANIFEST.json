@@ -1,6 +1,6 @@
 {
   "fileCount": 1106,
-  "generatedAt": "2026-10-13T08:41:56.117679+00:00",
+  "generatedAt": "2026-10-13T09:56:08.811216+00:00",
   "historicalManifest": "docs/historical-source-manifest.json",
   "productionBuildId": "Aa0dIR-3w-sKBPnUmz_Ot",
   "schemaVersion": 2,
@@ -8,13 +8,13 @@
   "sha256": {
     ".gitignore": "9a0934a1480d15deb8fe4769a1cda561e2d9cd6b213f295bb5357117e0007388",
     ".prettierignore": "77c223652989bb2e8474cda4b8b9d8d3b6d5b9abcc4dbf6820b4dedf33f865b9",
-    "AGENTS.md": "8eeaa42318eafe3875ca745ec9e5d7bfb5201ac4011e037cb57e87048b85d864",
+    "AGENTS.md": "dec522799566db47ec282152cd2384acf46ca05519d81d99396ac23c66759c85",
     "PARALLEL-SCOPE-CONDENSATION.md": "b901b18f7dbb4b4cc2b3d0c1db1141864f730150fde929e7f986185fd448d87e",
     "PARALLEL-SCOPE-NEXT.md": "c43ae0eb689e09fed65674c3805a0f5a186a44ff211b2fb7db038b8c84689e10",
     "PARALLEL-SCOPE-POTABLE.md": "0ad256afeba09b7ba64fb50cff34203916d377590e597205b79c1c2a54ab4fce",
     "PARALLEL-SCOPE.md": "feef05c8bfab151b8cb9694fd26a7aafb3456af1651ebd30df0a16d1a7412874",
-    "README.md": "78774bb1a6a8f9b44a59c7d72cfce94d77036fba4ec03b5049ef864c9ff43c20",
-    "WORKSPACE-HANDOFF.md": "6ae9f6a4df59ededba13ea5f11e02f2f0930a732f2aa6b55692f20fa1b6a37e2",
+    "README.md": "c82bf9a8d1622332c1aeb77d0963495df1ccd27be344e08e3ee6457869f47db6",
+    "WORKSPACE-HANDOFF.md": "99fbc27fdc5ab51aeca63a4cc9b50ca4434863fe62b893fa0cbf4abbe2d1bfae",
     "eslint.config.mjs": "5a8c81ac7c7c9a68672c2be6a713260766cf4105d80aca6340993a5c001c7a3a",
     "next.config.ts": "93c56a1578e0c2b708e83669623d2918a9ca219bedd8e368e9a3ab2563d12d50",
     "package-lock.json": "78d7024da259410b48877a53e62fca79e10b5025f38ab8cc0327d5f45e84f855",
@@ -765,7 +765,7 @@
     "tests/cells-and-fuel-cells.unit.spec.ts": "5a6cefe0929e20d6693429a91fcfe0902d9585aad3c21e4f61f8db66c5f1d431",
     "tests/changing-concentration.browser.spec.ts": "f1aa6e89253708203d3862afe5d248ecd73d3e7c9ca32c38062a3050a53b80e6",
     "tests/changing-concentration.unit.spec.ts": "c5a2cd142c03cde3513077ca6d63f4eac0880727fd3d6a08bc5ca74bd8895390",
-    "tests/changing-equilibrium.browser.spec.ts": "d21fd741cbf6f5dab9fe2d7975d096f2075d88a55c2334f6711ee531cc856e5b",
+    "tests/changing-equilibrium.browser.spec.ts": "8d0c089f29d3fee3a7b4b355f712cb7eedb81d142b05ab30cbec761334300b7d",
     "tests/changing-equilibrium.unit.spec.ts": "5d17fd40b7fe14e026765f2b2c4f77d6decdefc0f70dcfb1dd6ce42af4613f48",
     "tests/changing-writing.browser.spec.ts": "a8c70c9f69b6f4069df91f6cd927a14fae74c5c6570646c3d11b97aa45818028",
     "tests/changing-writing.unit.spec.ts": "df38eac3d813bdfe51a9c4d2870d736b13e5494e29db43567a24bc6e9f98f026",
@@ -790,9 +790,9 @@
     "tests/covalent-bonding.unit.spec.ts": "423031dfd8b6c87bae5e5441b1f69e006314acca2cca9caa145037676e08dfcd",
     "tests/covalent-writing.browser.spec.ts": "477785a92cb7bb2de76e9015cdf51231f7823fb76f94a1f5a4e3127c506e5057",
     "tests/covalent-writing.unit.spec.ts": "61cfe747b0a622396de191924465ff2860457fc5f024a22ca82ffee7e4bae157",
-    "tests/cracking.browser.spec.ts": "dd0b526a1a5e3cf8487b81425b601c4e65f66084cf775d88d578059a9fd5d598",
+    "tests/cracking.browser.spec.ts": "6140e12521882084598943d7ca545ede93a3facb299936b05bf32c833b94396a",
     "tests/cracking.unit.spec.ts": "cd37f8d6ae9a6982f4316eada37d3ce2b9abf855364d1492e6c76b1b68aefa9c",
-    "tests/crude-oil.browser.spec.ts": "f067fd7e271001f002e71d16004e5f682615cadc85f735982400d7274934907a",
+    "tests/crude-oil.browser.spec.ts": "d5240f405f01910b6afd744767558fe71b461b863af7fdf8ad208e64f75c41e7",
     "tests/crude-oil.unit.spec.ts": "be32918a43caa0cee0b3525c46d90aa4482e0d2ff8dad99d795b1bab89911c21",
     "tests/cycle.browser.spec.ts": "8f435e1439cdd45dadbc30036888611ee1a1bc9c1044d51f4a18a97ed4ed90ef",
     "tests/cycle.unit.spec.ts": "13d0c72524f3fd3e5ff7b31b10cdb000d8598492353d95f2d09e7ee49c102bf1",
@@ -1055,7 +1055,7 @@
     "tests/resource-magnitude.unit.spec.ts": "f69351b4e4003ad20fd5180c9d1fa3facfda8b095a8daef128572d6a4b5cb216",
     "tests/resource-use.browser.spec.ts": "c52253797ab7f01beeb45e98bd900a53b1eafebb5e9295f9f1223a2b174b504a",
     "tests/resource-use.unit.spec.ts": "71569f0c3244ccad119fe29e164062e0eef4f2da1d87b1a05e57d02efd141ea2",
-    "tests/reversible-reactions.browser.spec.ts": "141b25d26570719343271359febcc446a4c7f31fc2980a56c1a097db465bc1cd",
+    "tests/reversible-reactions.browser.spec.ts": "1b9d0e205cfb76ead6a38e5e33983ea17e47eb9a910656c139d0088a349cf080",
     "tests/reversible-reactions.unit.spec.ts": "69de4d701a19d1f67ca8734dc6f64545804d2e48d14c557e7bc3b5a5e86b32e2",
     "tests/rust-design.browser.spec.ts": "895c90a549b043c8cd1d6436e92ef57729beb6d7803d6ae56eefd3efb1c86800",
     "tests/rust-design.unit.spec.ts": "9d7bdf70a5011866c6214dd219f045bb356d5965c129b8ac29dee19ed07a9444",
@@ -1127,5 +1127,5 @@
     "supervisorExitCode": 0
   },
   "browserAcceptance": null,
-  "browserAcceptanceStatus": "Pending fresh3248-case run after test-only per-comparison correction; first integrated attempt failed at1269 passes; previous accepted3172 run historical."
+  "browserAcceptanceStatus": "Pending fresh3338-case run after reviewed test-only bounded comparison correction; both failed partial attempts retained; earlier3172 accepted run historical."
 }

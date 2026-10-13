@@ -331,125 +331,135 @@ for (const [mode, n] of [
   ["uses", 5],
   ["yield", 6],
 ] as [OilMode, number][])
-  test(`${mode}: all six records support real construction, saved wrong predictions, correction, readable controls and original reset`, async ({
-    page,
-  }, info) => {
-    if (info.project.name === "mobile")
-      await page.setViewportSize({ width: 320, height: 844 });
-    await learn(page, n);
-    const root = page.getByRole("region", { name: "Task model", exact: true });
-    for (const id of Object.keys(oilRecords[mode])) {
-      await comparison(root, id);
-      await construct(page, mode, id);
-      const key = {
-          inventory: "compounds",
-          column: "gradient",
-          trace: "identity",
-          trends: "explanation",
-          uses: "category",
-          yield: "massA",
-        }[mode],
-        e = expectedOilBoard(mode, id);
-      const wrong = {
-        inventory: String(Number(e[key]) + 1),
-        column: "hotterUp",
-        trace: "broken",
-        trends: "covalentBroken",
-        uses: e[key] === "fuel" ? "material" : "fuel",
-        yield: String(Number(e[key]) + 1),
-      }[mode];
-      const field = root.locator(`[id$="-${key}"]`);
-      if (await field.evaluate((x) => x.tagName === "SELECT"))
-        await field.selectOption(wrong);
-      else await field.fill(wrong);
+  for (const [chunkIndex, records] of [
+    Object.keys(oilRecords[mode]).slice(0, 3),
+    Object.keys(oilRecords[mode]).slice(2, 5),
+    Object.keys(oilRecords[mode]).slice(4),
+  ].entries())
+    test(`${mode} comparisons ${chunkIndex * 2 + 1}–${chunkIndex * 2 + records.length}: records support real construction, saved wrong predictions, correction, readable controls and original reset`, async ({
+      page,
+    }, info) => {
+      if (info.project.name === "mobile")
+        await page.setViewportSize({ width: 320, height: 844 });
+      await learn(page, n);
+      const root = page.getByRole("region", {
+        name: "Task model",
+        exact: true,
+      });
+      for (const id of records) {
+        await comparison(root, id);
+        await construct(page, mode, id);
+        const key = {
+            inventory: "compounds",
+            column: "gradient",
+            trace: "identity",
+            trends: "explanation",
+            uses: "category",
+            yield: "massA",
+          }[mode],
+          e = expectedOilBoard(mode, id);
+        const wrong = {
+          inventory: String(Number(e[key]) + 1),
+          column: "hotterUp",
+          trace: "broken",
+          trends: "covalentBroken",
+          uses: e[key] === "fuel" ? "material" : "fuel",
+          yield: String(Number(e[key]) + 1),
+        }[mode];
+        const field = root.locator(`[id$="-${key}"]`);
+        if (await field.evaluate((x) => x.tagName === "SELECT"))
+          await field.selectOption(wrong);
+        else await field.fill(wrong);
+        await root
+          .getByRole("button", { name: "Check model", exact: true })
+          .click();
+        await expect(root.locator(".feedback.incorrect")).toBeVisible();
+        await saved(page);
+        await page.reload();
+        await expect(field).toHaveValue(wrong);
+        await comparison(root, id);
+        await expect(field).toHaveValue(wrong);
+        if (await field.evaluate((x) => x.tagName === "SELECT"))
+          await field.selectOption(e[key]);
+        else await field.fill(e[key]);
+        await root
+          .getByRole("button", { name: "Check model", exact: true })
+          .click();
+        await expect(root.locator(".feedback.correct")).toBeVisible();
+        expect(
+          await page.evaluate(
+            () => document.documentElement.scrollWidth <= innerWidth,
+          ),
+        ).toBe(true);
+        for (const button of await root.getByRole("button").all())
+          expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(
+            44,
+          );
+        for (const svg of await root.locator("svg").all())
+          await svg.evaluate((node) => {
+            const svg = node as SVGSVGElement;
+            for (const t of svg.querySelectorAll("text")) {
+              const box = t.getBBox(),
+                m = t.getScreenCTM()!,
+                f = parseFloat(getComputedStyle(t).fontSize);
+              if (f * Math.hypot(m.a, m.b) < 12)
+                throw Error("Small label " + t.textContent);
+              if (
+                box.x < 0 ||
+                box.y < 0 ||
+                box.x + box.width > svg.viewBox.baseVal.width ||
+                box.y + box.height > svg.viewBox.baseVal.height
+              )
+                throw Error("Clipped label " + t.textContent);
+            }
+          });
+        if (id === "initial") {
+          await answer(page, journey.guided[n - 1]);
+          await page
+            .getByRole("button", { name: "Check answer", exact: true })
+            .click();
+          await expect(
+            page.locator(".sample-task-answer .feedback.correct"),
+          ).toBeVisible();
+          if (mode === "trace") {
+            for (let station = 1; station <= 6; station++)
+              await root
+                .getByRole("button", { name: "Next station", exact: true })
+                .click();
+            await expect(
+              root.locator('.oil-canvas[data-state="ready"]'),
+            ).toBeVisible();
+            const download = page.waitForEvent("download");
+            await root
+              .getByRole("button", { name: "Download 3D asset", exact: true })
+              .click();
+            await (
+              await download
+            ).saveAs(`docs/qa/crude-oil-${info.project.name}.glb`);
+          }
+          await capture(
+            page,
+            `docs/qa/crude-oil-${info.project.name}-${mode}.png`,
+          );
+          await page.screenshot({
+            path: `docs/qa/crude-oil-${info.project.name}-${mode}-model.png`,
+            fullPage: true,
+            clip: (await root.boundingBox())!,
+            scale: "css",
+          });
+        }
+        await root.getByRole("button", { name: "Undo", exact: true }).click();
+        await expect(root.locator(".feedback.correct")).toHaveCount(0);
+      }
+      await root
+        .getByRole("button", { name: "Reset model", exact: true })
+        .click();
+      await comparison(root, "initial");
       await root
         .getByRole("button", { name: "Check model", exact: true })
         .click();
       await expect(root.locator(".feedback.incorrect")).toBeVisible();
-      await saved(page);
-      await page.reload();
-      await expect(field).toHaveValue(wrong);
-      await comparison(root, id);
-      await expect(field).toHaveValue(wrong);
-      if (await field.evaluate((x) => x.tagName === "SELECT"))
-        await field.selectOption(e[key]);
-      else await field.fill(e[key]);
-      await root
-        .getByRole("button", { name: "Check model", exact: true })
-        .click();
-      await expect(root.locator(".feedback.correct")).toBeVisible();
-      expect(
-        await page.evaluate(
-          () => document.documentElement.scrollWidth <= innerWidth,
-        ),
-      ).toBe(true);
-      for (const button of await root.getByRole("button").all())
-        expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(44);
-      for (const svg of await root.locator("svg").all())
-        await svg.evaluate((node) => {
-          const svg = node as SVGSVGElement;
-          for (const t of svg.querySelectorAll("text")) {
-            const box = t.getBBox(),
-              m = t.getScreenCTM()!,
-              f = parseFloat(getComputedStyle(t).fontSize);
-            if (f * Math.hypot(m.a, m.b) < 12)
-              throw Error("Small label " + t.textContent);
-            if (
-              box.x < 0 ||
-              box.y < 0 ||
-              box.x + box.width > svg.viewBox.baseVal.width ||
-              box.y + box.height > svg.viewBox.baseVal.height
-            )
-              throw Error("Clipped label " + t.textContent);
-          }
-        });
-      if (id === "initial") {
-        await answer(page, journey.guided[n - 1]);
-        await page
-          .getByRole("button", { name: "Check answer", exact: true })
-          .click();
-        await expect(
-          page.locator(".sample-task-answer .feedback.correct"),
-        ).toBeVisible();
-        if (mode === "trace") {
-          for (let station = 1; station <= 6; station++)
-            await root
-              .getByRole("button", { name: "Next station", exact: true })
-              .click();
-          await expect(
-            root.locator('.oil-canvas[data-state="ready"]'),
-          ).toBeVisible();
-          const download = page.waitForEvent("download");
-          await root
-            .getByRole("button", { name: "Download 3D asset", exact: true })
-            .click();
-          await (
-            await download
-          ).saveAs(`docs/qa/crude-oil-${info.project.name}.glb`);
-        }
-        await capture(
-          page,
-          `docs/qa/crude-oil-${info.project.name}-${mode}.png`,
-        );
-        await page.screenshot({
-          path: `docs/qa/crude-oil-${info.project.name}-${mode}-model.png`,
-          fullPage: true,
-          clip: (await root.boundingBox())!,
-          scale: "css",
-        });
-      }
-      await root.getByRole("button", { name: "Undo", exact: true }).click();
-      await expect(root.locator(".feedback.correct")).toHaveCount(0);
-    }
-    await root
-      .getByRole("button", { name: "Reset model", exact: true })
-      .click();
-    await comparison(root, "initial");
-    await root
-      .getByRole("button", { name: "Check model", exact: true })
-      .click();
-    await expect(root.locator(".feedback.incorrect")).toBeVisible();
-  });
+    });
 test("multiple raw invalid predictions do not prevent a different legitimate field from committing; Undo discards raw before saved history", async ({
   page,
 }) => {

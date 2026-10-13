@@ -10,6 +10,6 @@ All51 fresh desktop/390px/320px captures passed unchanged44px/664px, no-overflow
 
 The first whole-course attempt started at2026-10-13T05:35:14.208955+00:00:3188 cases/172files. It failed after1269 passes with one rates-plot total-deadline failure, one interruption and1917 not run; actual exits1. See [failure and individual-comparison correction](../../rates-practical-record-tests-review.md). That result is partial evidence. The old3172-case acceptance is also a different historical build.
 
-The corrected whole-course inventory is3248/172. **Acceptance is pending.** A fresh restart must complete with actual zero exits, unchanged2363 fingerprints and a released port. The corresponding new start/completion receipts will identify that run separately.
+The current corrected whole-course inventory is3338/172. The second3248-case attempt also failed on a dense equilibrium comparison deadline; [bounded comparison review](../../bounded-comparison-tests-review.md) records its exact negative receipt and all190 passing affected checks. **Acceptance is pending.** A fresh restart must complete with actual zero exits, unchanged2363 fingerprints and a released port. The corresponding new start/completion receipts will identify that run separately.
 
 [Guided mobile](screenshots/390-guided-sources.png) · [Retained independent wrong work](screenshots/390-independent-check-wrong.png) · [3D apparatus](screenshots/1280-original-distillation-apparatus.png) · [Original written practical](screenshots/320-original-written-sealed.png).

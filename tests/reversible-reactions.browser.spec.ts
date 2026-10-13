@@ -298,125 +298,133 @@ for (const [mode, n] of [
   ["boundary", 5],
   ["evidence", 6],
 ] as [ReversibleMode, number][])
-  test(`${mode}: all six supplied records retain wrong predictions, reload, undo and atomic resets`, async ({
-    page,
-  }, info) => {
-    await learn(page, n);
-    const root = page.getByRole("region", { name: "Task model", exact: true });
-    for (const id of Object.keys(reversibleRecords[mode])) {
+  for (const [chunkIndex, records] of [
+    Object.keys(reversibleRecords[mode]).slice(0, 3),
+    Object.keys(reversibleRecords[mode]).slice(2, 5),
+    Object.keys(reversibleRecords[mode]).slice(4),
+  ].entries())
+    test(`${mode} comparisons ${chunkIndex * 2 + 1}–${chunkIndex * 2 + records.length}: supplied records retain wrong predictions, reload, undo and atomic resets`, async ({
+      page,
+    }, info) => {
+      await learn(page, n);
+      const root = page.getByRole("region", {
+        name: "Task model",
+        exact: true,
+      });
+      for (const id of records) {
+        await root
+          .getByText("Change the supplied teaching case", { exact: true })
+          .click();
+        await root
+          .getByLabel("Supplied comparison", { exact: true })
+          .selectOption(id);
+        await root
+          .getByText("Change the supplied teaching case", { exact: true })
+          .click();
+        await check(page, false);
+        if (mode === "turnover") {
+          await root
+            .getByRole("button", { name: "Advance one interval", exact: true })
+            .click();
+          expect(await root.locator(".reversible-token").count()).toBe(20);
+          const t = turnoverRecords[id];
+          expect(await root.locator(".token-changed").count()).toBe(
+            t.forward + t.reverse,
+          );
+        }
+        for (const field of answers(mode, id)) {
+          const control = root.getByLabel(field.label, { exact: true });
+          if (field.numeric) await control.fill(field.value);
+          else await control.selectOption(field.value);
+        }
+        if (mode === "direction") {
+          const r = directionRecords[id];
+          await expect(
+            root.locator(".reversible-reading p").first(),
+          ).toContainText(r.target === "forward" ? r.left : r.right);
+          await expect(
+            root.locator(".reversible-reading p").last(),
+          ).toContainText(r.target === "forward" ? r.right : r.left);
+        }
+        await check(page, true);
+        if (mode === "energy" || mode === "evidence") {
+          const labels = await root.locator("svg text").evaluateAll((nodes) =>
+            nodes.map((node) => {
+              const text = node as SVGTextElement,
+                matrix = text.getScreenCTM()!,
+                box = text.getBoundingClientRect(),
+                svg = text.ownerSVGElement!.getBoundingClientRect();
+              return {
+                label: text.textContent,
+                size:
+                  parseFloat(getComputedStyle(text).fontSize) *
+                  Math.hypot(matrix.a, matrix.b),
+                inside:
+                  box.left >= svg.left - 1 &&
+                  box.right <= svg.right + 1 &&
+                  box.top >= svg.top - 1 &&
+                  box.bottom <= svg.bottom + 1,
+              };
+            }),
+          );
+          for (const label of labels) {
+            expect(label.size, label.label!).toBeGreaterThanOrEqual(12);
+            expect(label.inside, label.label!).toBe(true);
+          }
+        }
+        await root
+          .getByText("Change the supplied teaching case", { exact: true })
+          .click();
+        await root
+          .getByLabel("Supplied comparison", { exact: true })
+          .selectOption(id);
+        await root
+          .getByText("Change the supplied teaching case", { exact: true })
+          .click();
+        await check(page, true);
+        await saved(page);
+        await page.reload();
+        await check(page, true);
+        for (const label of ["Check model", "Undo", "Reset model"]) {
+          const box = await root
+            .getByRole("button", { name: label, exact: true })
+            .boundingBox();
+          expect(box!.height).toBeGreaterThanOrEqual(44);
+        }
+      }
       await root
-        .getByText("Change the supplied teaching case", { exact: true })
-        .click();
-      await root
-        .getByLabel("Supplied comparison", { exact: true })
-        .selectOption(id);
-      await root
-        .getByText("Change the supplied teaching case", { exact: true })
+        .getByRole("button", { name: "Reset model", exact: true })
         .click();
       await check(page, false);
-      if (mode === "turnover") {
+      // Recreate the original guided comparison and submit its own question.
+      if (mode === "turnover")
         await root
           .getByRole("button", { name: "Advance one interval", exact: true })
           .click();
-        expect(await root.locator(".reversible-token").count()).toBe(20);
-        const t = turnoverRecords[id];
-        expect(await root.locator(".token-changed").count()).toBe(
-          t.forward + t.reverse,
-        );
-      }
-      for (const field of answers(mode, id)) {
+      for (const field of answers(mode, "initial")) {
         const control = root.getByLabel(field.label, { exact: true });
         if (field.numeric) await control.fill(field.value);
         else await control.selectOption(field.value);
       }
-      if (mode === "direction") {
-        const r = directionRecords[id];
-        await expect(
-          root.locator(".reversible-reading p").first(),
-        ).toContainText(r.target === "forward" ? r.left : r.right);
-        await expect(
-          root.locator(".reversible-reading p").last(),
-        ).toContainText(r.target === "forward" ? r.right : r.left);
-      }
       await check(page, true);
-      if (mode === "energy" || mode === "evidence") {
-        const labels = await root.locator("svg text").evaluateAll((nodes) =>
-          nodes.map((node) => {
-            const text = node as SVGTextElement,
-              matrix = text.getScreenCTM()!,
-              box = text.getBoundingClientRect(),
-              svg = text.ownerSVGElement!.getBoundingClientRect();
-            return {
-              label: text.textContent,
-              size:
-                parseFloat(getComputedStyle(text).fontSize) *
-                Math.hypot(matrix.a, matrix.b),
-              inside:
-                box.left >= svg.left - 1 &&
-                box.right <= svg.right + 1 &&
-                box.top >= svg.top - 1 &&
-                box.bottom <= svg.bottom + 1,
-            };
-          }),
-        );
-        for (const label of labels) {
-          expect(label.size, label.label!).toBeGreaterThanOrEqual(12);
-          expect(label.inside, label.label!).toBe(true);
-        }
-      }
-      await root
-        .getByText("Change the supplied teaching case", { exact: true })
+      await answer(page, journey.guided[n - 1]);
+      await page
+        .getByRole("button", { name: "Check answer", exact: true })
         .click();
+      await expect(
+        page.locator(".sample-task-answer [role=status]"),
+      ).toContainText("That’s right.");
+      await capture(
+        page,
+        `docs/qa/reversible-reactions-${info.project.name}-${mode}${chunkIndex ? `-chunk${chunkIndex + 1}` : ""}.png`,
+      );
+      await root.getByRole("button", { name: "Undo", exact: true }).click();
+      await check(page, false);
       await root
-        .getByLabel("Supplied comparison", { exact: true })
-        .selectOption(id);
-      await root
-        .getByText("Change the supplied teaching case", { exact: true })
+        .getByRole("button", { name: "Reset model", exact: true })
         .click();
-      await check(page, true);
-      await saved(page);
-      await page.reload();
-      await check(page, true);
-      for (const label of ["Check model", "Undo", "Reset model"]) {
-        const box = await root
-          .getByRole("button", { name: label, exact: true })
-          .boundingBox();
-        expect(box!.height).toBeGreaterThanOrEqual(44);
-      }
-    }
-    await root
-      .getByRole("button", { name: "Reset model", exact: true })
-      .click();
-    await check(page, false);
-    // Recreate the original guided comparison and submit its own question.
-    if (mode === "turnover")
-      await root
-        .getByRole("button", { name: "Advance one interval", exact: true })
-        .click();
-    for (const field of answers(mode, "initial")) {
-      const control = root.getByLabel(field.label, { exact: true });
-      if (field.numeric) await control.fill(field.value);
-      else await control.selectOption(field.value);
-    }
-    await check(page, true);
-    await answer(page, journey.guided[n - 1]);
-    await page
-      .getByRole("button", { name: "Check answer", exact: true })
-      .click();
-    await expect(
-      page.locator(".sample-task-answer [role=status]"),
-    ).toContainText("That’s right.");
-    await capture(
-      page,
-      `docs/qa/reversible-reactions-${info.project.name}-${mode}.png`,
-    );
-    await root.getByRole("button", { name: "Undo", exact: true }).click();
-    await check(page, false);
-    await root
-      .getByRole("button", { name: "Reset model", exact: true })
-      .click();
-    await check(page, false);
-  });
+      await check(page, false);
+    });
 test("opening turnover control is a real keyboard-accessible mobile action", async ({
   page,
 }, info) => {

@@ -1,6 +1,6 @@
 # Individual course rebuild status
 
-13 October2026 integration checkpoint: the external potable-water/RP8/RP13 delivery is integrated, both shared UI proposals are applied, and all124 AQA sections have reviewed response evidence. Types/lint/build,1105 units and48 integrated water browser checks passed;51 fresh captures passed layout/accessibility gates and representative samples were personally inspected and sent. The new3248-case/172-file whole-course restart is pending on build Aa0dIR-3w-sKBPnUmz_Ot; final acceptance is pending. Earlier counts/receipts below describe historical builds. See docs/qa/potable-integration-final/README.md and docs/final-maths-comparison.md. No merge or deployment.
+13 October2026 integration checkpoint: the external potable-water/RP8/RP13 delivery is integrated, both shared UI proposals are applied, and all124 AQA sections have reviewed response evidence. Types/lint/build,1105 units and48 integrated water browser checks passed;51 fresh captures passed layout/accessibility gates and representative samples were personally inspected and sent. The new3338-case/172-file whole-course restart is pending on build Aa0dIR-3w-sKBPnUmz_Ot; final acceptance is pending. Earlier counts/receipts below describe historical builds. See docs/qa/potable-integration-final/README.md and docs/final-maths-comparison.md. No merge or deployment.
 
 ## Current verdict
 
@@ -20,7 +20,7 @@ The current Chemistry course contains **95 lesson routes across 10 topics**. **A
 | Using resources       |       6 |                                   6 |         0 |
 | **Total**             |  **95** |                              **95** |     **0** |
 
-The final software acceptance verdict awaits the new3,248-case/172-file frozen regression. All124 AQA Chemistry sections have qualification/tier and response mapping reviewed against Trilogy where applicable. Four original100-mark full papers provide400 marks/191parts. The current95 lessons contain5,929 activities/2,192 practice/973 manual activities. See [response audit](qualification-response-audit/README.md), [Maths comparison](final-maths-comparison.md) and [water integration evidence](qa/potable-integration-final/README.md).
+The final software acceptance verdict awaits the new3,338-case/172-file frozen regression. All124 AQA Chemistry sections have qualification/tier and response mapping reviewed against Trilogy where applicable. Four original100-mark full papers provide400 marks/191parts. The current95 lessons contain5,929 activities/2,192 practice/973 manual activities. See [response audit](qualification-response-audit/README.md), [Maths comparison](final-maths-comparison.md) and [water integration evidence](qa/potable-integration-final/README.md).
 
 The previous whole-course run passed3,172 cases/171files on build5o8bvY-CXFL1FzlwiB0j6 before water integration. Its [receipt](final-browser-acceptance.json) is historical evidence, not acceptance of the current build. All preceding personal lesson reviews and sample deliveries remain recorded below.
 

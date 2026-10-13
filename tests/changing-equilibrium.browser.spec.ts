@@ -218,12 +218,13 @@ for (const [mode, n] of [
   ["evidence", 6],
 ] as [ShiftMode, number][]) {
   const comparisons = Object.entries(shiftRecords[mode]);
-  const chunks =
-    mode === "compression"
-      ? [comparisons.slice(0, 3), comparisons.slice(3)]
-      : [comparisons];
+  const chunks = [
+    comparisons.slice(0, 3),
+    comparisons.slice(2, 5),
+    comparisons.slice(4),
+  ];
   for (const [chunkIndex, records] of chunks.entries())
-    test(`${mode}${mode === "compression" ? ` comparisons ${chunkIndex * 3 + 1}–${chunkIndex * 3 + records.length}` : ": six comparisons"} retain scientific predictions and strict histories`, async ({
+    test(`${mode} comparisons ${chunkIndex * 2 + 1}–${chunkIndex * 2 + records.length} retain scientific predictions and strict histories`, async ({
       page,
     }, info) => {
       if (
@@ -404,7 +405,7 @@ for (const [mode, n] of [
           ).toContainText("That’s right.");
           await capture(
             page,
-            `docs/qa/changing-equilibrium-${info.project.name}-${mode}.png`,
+            `docs/qa/changing-equilibrium-${info.project.name}-${mode}${chunkIndex ? `-chunk${chunkIndex + 1}` : ""}.png`,
           );
         }
         await page.reload();

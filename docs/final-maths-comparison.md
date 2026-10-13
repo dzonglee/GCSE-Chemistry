@@ -19,4 +19,4 @@ The comparison found and prompted concrete shared improvements: retained raw inp
 
 The supported claim is a thoroughly reviewed AQA-focused software course with concept-specific interactions and cumulative practice. Full Pearson Edexcel/OCR alignment, human classroom validation and real-device iOS/Safari or screen-reader certification have not been established. Simulated practical reasoning is not supervised laboratory participation. Student readiness must be assessed through independent performance and reviewed written work; the application cannot guarantee an exam result.
 
-Acceptance status will be updated only after the new frozen3248-case whole-course run finishes. The earlier3172-case acceptance predates this integration.
+Acceptance status will be updated only after the new frozen3338-case whole-course run finishes. The earlier3172-case acceptance predates this integration.

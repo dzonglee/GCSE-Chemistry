@@ -1,6 +1,6 @@
 # Validation evidence
 
-13 October2026 integration checkpoint: the external potable-water/RP8/RP13 delivery is integrated, both shared UI proposals are applied, and all124 AQA sections have reviewed response evidence. Types/lint/build,1105 units and48 integrated water browser checks passed;51 fresh captures passed layout/accessibility gates and representative samples were personally inspected and sent. The new3248-case/172-file whole-course restart is pending on build Aa0dIR-3w-sKBPnUmz_Ot; final acceptance is pending. Earlier counts/receipts below describe historical builds. See docs/qa/potable-integration-final/README.md and docs/final-maths-comparison.md. No merge or deployment.
+13 October2026 integration checkpoint: the external potable-water/RP8/RP13 delivery is integrated, both shared UI proposals are applied, and all124 AQA sections have reviewed response evidence. Types/lint/build,1105 units and48 integrated water browser checks passed;51 fresh captures passed layout/accessibility gates and representative samples were personally inspected and sent. The new3338-case/172-file whole-course restart is pending on build Aa0dIR-3w-sKBPnUmz_Ot; final acceptance is pending. Earlier counts/receipts below describe historical builds. See docs/qa/potable-integration-final/README.md and docs/final-maths-comparison.md. No merge or deployment.
 
 ## Historical accepted checkpoint — 11 October 2026
 

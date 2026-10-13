@@ -55,12 +55,12 @@
     "responseSectionsConfirmed": 124
   },
   "wholeCourseAcceptance": {
-    "status": "pending restart",
-    "cases": 3248,
+    "status": "pending fresh restart",
+    "cases": 3338,
     "files": 172,
     "buildId": "Aa0dIR-3w-sKBPnUmz_Ot",
     "frozenFingerprints": 2363,
-    "evidence": "rates-practical-record-tests-review.md"
+    "evidence": "bounded-comparison-tests-review.md"
   },
   "moles": {
     "commit": "29a869a68762bd9a66e9e05c55563bd593c73f7c",
@@ -218,5 +218,31 @@
     "inventoryFiles": 172,
     "completedPasses": 1269,
     "reportedFailedOrInterruptedCases": 2
-  }
+  },
+  "failedIntegratedAttempts": [
+    {
+      "started": "2026-10-13T05:35:14.208955+00:00",
+      "finished": "2026-10-13T08:18:44.964121+00:00",
+      "runnerExitCode": 1,
+      "supervisorExitCode": 1,
+      "stoppedExplicitly": false,
+      "buildId": "Aa0dIR-3w-sKBPnUmz_Ot",
+      "inventoryCases": 3188,
+      "inventoryFiles": 172,
+      "completedPasses": 1269,
+      "reportedFailedOrInterruptedCases": 2
+    },
+    {
+      "started": "2026-10-13T08:42:26.912018+00:00",
+      "finished": "2026-10-13T09:22:50.838606+00:00",
+      "runnerExitCode": 1,
+      "supervisorExitCode": 1,
+      "stoppedExplicitly": false,
+      "buildId": "Aa0dIR-3w-sKBPnUmz_Ot",
+      "inventoryCases": 3248,
+      "inventoryFiles": 172,
+      "completedPasses": 266,
+      "reportedFailedOrInterruptedCases": 2
+    }
+  ]
 }

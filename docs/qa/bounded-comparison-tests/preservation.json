@@ -1,0 +1,11 @@
+{
+  "unchangedFingerprints": 2359,
+  "changedOnly": [
+    "tests/changing-equilibrium.browser.spec.ts",
+    "tests/cracking.browser.spec.ts",
+    "tests/crude-oil.browser.spec.ts",
+    "tests/reversible-reactions.browser.spec.ts"
+  ],
+  "productionBuildId": "Aa0dIR-3w-sKBPnUmz_Ot",
+  "previousFailedReceipt": "/workspace/course-audit/qa/potable-integration-20261013-r2/unified-final-browser-receipt.json"
+}

@@ -1,0 +1,58 @@
+  ✓   253 [desktop] › tests/changing-concentration.browser.spec.ts:113:5 › every factor combination has a selectable correct answer and graph labels remain readable (7.1s)
+  ✓   254 [desktop] › tests/changing-concentration.browser.spec.ts:139:5 › dilution actual 3D export keeps the same ten identities while real volume changes (6.4s)
+  ✓   255 [desktop] › tests/changing-concentration.browser.spec.ts:217:5 › homogeneous sampling requires solute in both portions and a correct causal reason (5.4s)
+  ✓   256 [desktop] › tests/changing-concentration.browser.spec.ts:245:5 › target dilution distinguishes final solution from the addition (5.4s)
+  ✓   257 [desktop] › tests/changing-concentration.browser.spec.ts:265:5 › twenty independent demands include constructed inventories and honest written self review (9.6s)
+  ✓   258 [desktop] › tests/changing-concentration.browser.spec.ts:313:5 › incorrect inventory returns from targeted recovery with original working preserved (7.7s)
+  ✓   259 [desktop] › tests/changing-concentration.browser.spec.ts:339:5 › unavailable WebGL retains the labelled inventory and numerical prediction (5.8s)
+  ✓   260 [desktop] › tests/changing-concentration.browser.spec.ts:373:5 › reserved checks defer marking, retain drafts and separate actual seven-day retrieval (14.1s)
+  ✓   261 [desktop] › tests/changing-equilibrium.browser.spec.ts:57:5 › reserved checks defer marking, retain drafts and separate actual seven-day retrieval (16.0s)
+  ✓   262 [desktop] › tests/changing-equilibrium.browser.spec.ts:176:5 › all original practice works while written responses remain self-reviewed (9.5s)
+  ✓   263 [desktop] › tests/changing-equilibrium.browser.spec.ts:226:9 › compression comparisons 1–3 retain scientific predictions and strict histories (22.7s)
+  ✓   264 [desktop] › tests/changing-equilibrium.browser.spec.ts:226:9 › compression comparisons 4–6 retain scientific predictions and strict histories (20.7s)
+  ✓   265 [desktop] › tests/changing-equilibrium.browser.spec.ts:226:9 › pressure: six comparisons retain scientific predictions and strict histories (28.7s)
+  ✓   266 [desktop] › tests/changing-equilibrium.browser.spec.ts:226:9 › temperature: six comparisons retain scientific predictions and strict histories (27.9s)
+  ✘   267 [desktop] › tests/changing-equilibrium.browser.spec.ts:226:9 › concentration: six comparisons retain scientific predictions and strict histories (30.9s)
+Testing stopped early after 1 maximum allowed failures.
+  ✘   268 [desktop] › tests/changing-equilibrium.browser.spec.ts:226:9 › combined: six comparisons retain scientific predictions and strict histories (31.0s)
+
+
+  1) [desktop] › tests/changing-equilibrium.browser.spec.ts:226:9 › concentration: six comparisons retain scientific predictions and strict histories
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Check model', exact: true })
+        - locator resolved to <button type="button" class="button">Check model</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+
+
+      50 | }
+      51 | async function check(page: Page, correct: boolean) {
+    > 52 |   await page.getByRole("button", { name: "Check model", exact: true }).click();
+         |                                                                        ^
+      53 |   await expect(
+      54 |     page.locator(".shift-workbench .feedback[role=status]"),
+      55 |   ).toHaveClass(correct ? /correct/ : /retry/);
+        at check (/workspace/GCSE-Chemistry/tests/changing-equilibrium.browser.spec.ts:52:72)
+        at /workspace/GCSE-Chemistry/tests/changing-equilibrium.browser.spec.ts:411:15
+
+    Error Context: test-results/browser/changing-equilibrium.brows-76b7f-ctions-and-strict-histories-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/changing-equilibrium.brows-76b7f-ctions-and-strict-histories-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/changing-equilibrium.brows-76b7f-ctions-and-strict-histories-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [desktop] › tests/changing-equilibrium.browser.spec.ts:226:9 › concentration: six comparisons retain scientific predictions and strict histories
+  1 interrupted
+    [desktop] › tests/changing-equilibrium.browser.spec.ts:226:9 › combined: six comparisons retain scientific predictions and strict histories
+  2980 did not run
+  266 passed (40.4m)
+  1 error was not a part of any test, see above for details
