@@ -1,8 +1,8 @@
 # Final comparison with GCSE Maths — 13 October 2026
 
-This comparison records observed product behavior, not exam-board certification or a guarantee of a student's result. All95 Chemistry lesson journeys were individually researched, reviewed and their sample screenshots delivered. The final external water delivery has now been integrated; the new whole-course regression remains pending.
+This comparison records observed product behavior, not exam-board certification or a guarantee of a student's result. All95 Chemistry lesson journeys were individually researched, reviewed and their sample screenshots delivered. The final external water delivery has now been integrated; the new whole-course regression passed all3338 cases.
 
-The reference is the actual neighbouring GCSE-Maths application, including `CourseLesson.tsx` and `ratio-concentration-conversion.ts` at1299379ad29346f3d44d5ba640dee13da06f7c70. The main reviewer personally inspected the delivered all four delivered live1280px/390px guided and independent concentration views on13October. Earlier individual lesson reviews record their own Maths source and live-view comparisons. The [water comparison images](qa/potable-review-final/comparison/) preserve the reference views.
+The reference is the actual neighbouring GCSE-Maths application, including `CourseLesson.tsx` and `ratio-concentration-conversion.ts` at1299379ad29346f3d44d5ba640dee13da06f7c70. The main reviewer personally inspected all four delivered live 1280px/390px guided and independent concentration views on 13 October. Earlier individual lesson reviews record their own Maths source and live-view comparisons. The [water comparison images](qa/potable-review-final/comparison/) preserve the reference views.
 
 | Principle observed in Maths | Chemistry implementation and review evidence |
 | --- | --- |
@@ -19,4 +19,4 @@ The comparison found and prompted concrete shared improvements: retained raw inp
 
 The supported claim is a thoroughly reviewed AQA-focused software course with concept-specific interactions and cumulative practice. Full Pearson Edexcel/OCR alignment, human classroom validation and real-device iOS/Safari or screen-reader certification have not been established. Simulated practical reasoning is not supervised laboratory participation. Student readiness must be assessed through independent performance and reviewed written work; the application cannot guarantee an exam result.
 
-Acceptance status will be updated only after the new frozen3338-case whole-course run finishes. The earlier3172-case acceptance predates this integration.
+Final verdict: Chemistry meets the observed Maths standard for the reviewed visual hierarchy, concept-specific interactions, reversible work and assessment behavior. All3338 integrated whole-course browser checks passed, with1669 per device, actual zero exits and2363 unchanged fingerprints. Content has been reviewed against all124 AQA sections and cumulative exam demands; this supports the stated AQA scope, not a guarantee of individual exam readiness. The earlier3172-case receipt remains separately archived.

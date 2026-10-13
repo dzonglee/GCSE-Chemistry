@@ -55,12 +55,19 @@
     "responseSectionsConfirmed": 124
   },
   "wholeCourseAcceptance": {
-    "status": "pending fresh restart",
+    "status": "passed",
+    "receipt": "final-browser-acceptance.json",
     "cases": 3338,
     "files": 172,
+    "projectPasses": {
+      "desktop": 1669,
+      "mobile": 1669
+    },
     "buildId": "Aa0dIR-3w-sKBPnUmz_Ot",
-    "frozenFingerprints": 2363,
-    "evidence": "bounded-comparison-tests-review.md"
+    "runnerExitCode": 0,
+    "supervisorExitCode": 0,
+    "fingerprintsVerified": 2363,
+    "testPortReleased": true
   },
   "moles": {
     "commit": "29a869a68762bd9a66e9e05c55563bd593c73f7c",

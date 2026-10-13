@@ -1,0 +1,5 @@
+{
+  "validationExitCode": 0,
+  "stdout": "Verified 2363 application/test/config/public/production fingerprints\nCOMPLETE: 3338 passed across 172 files; actual exits zero, fingerprints unchanged and test port released.\n",
+  "stderr": ""
+}

@@ -1,6 +1,6 @@
 # Current GitHub handoff — 13 October 2026
 
-13 October2026 integration checkpoint: the external potable-water/RP8/RP13 delivery is integrated, both shared UI proposals are applied, and all124 AQA sections have reviewed response evidence. Types/lint/build,1105 units and48 integrated water browser checks passed;51 fresh captures passed layout/accessibility gates and representative samples were personally inspected and sent. The new3338-case/172-file whole-course restart is pending on build Aa0dIR-3w-sKBPnUmz_Ot; final acceptance is pending. Earlier counts/receipts below describe historical builds. See docs/qa/potable-integration-final/README.md and docs/final-maths-comparison.md. No merge or deployment.
+Final acceptance: all 95 Chemistry lessons are individually researched and reviewed, with sample screenshots explicitly delivered. Water/RP8/RP13 and the shared UI proposals are integrated; all 124 AQA section responses are reviewed. Types, lint, build, 1,105 units and all 3,338 browser checks across 172 files passed on build Aa0dIR-3w-sKBPnUmz_Ot, with 1,669 checks per device. All 2,363 frozen fingerprints are unchanged and port 3201 is released. Four original full papers provide 400 marks across 191 parts. The final Maths comparison supports parity in the reviewed UI, tasks and assessment behavior, without promising an exam result or full other-board certification. No merge or deployment.
 
 Use `origin/codex/chemistry-main-followups-20261008` from dzonglee/GCSE-Chemistry. This branch contains the main Chemistry application; the old onboarding main checkout was empty. Separate sessions have separate workspaces: fetch GitHub before starting. Read AGENTS.md and the current assignment below.
 
@@ -10,13 +10,7 @@ The external worker delivered potable-water/RP8/RP13 on `codex/chemistry-potable
 
 95 individually reviewed journeys /5929 activities /2192 practice /973 manual responses; four full papers400marks/191parts;124 response-confirmed AQA sections. All25 editorial follow-ups remain individually published. Root's fresh51 water captures passed their original gates and eight representative states were personally inspected; three samples were explicitly sent before the whole-course run.
 
-The first integrated3188-case run failed with1269 passed, one plot deadline failure, one interruption and1917 not run; actual exits1. Only the rates-practical browser cases are reorganised per comparison, preserving original controls/values/readability/persistence checks,30-second deadlines, two workers and zero retries. No application/build change. The new inventory is3248/172. See docs/rates-practical-record-tests-review.md.
-
-The second3248-case attempt failed at266 passes with one equilibrium deadline failure, one interruption and2980 not run. Four at-risk native record families now use reviewed overlapping cohorts preserving every adjacent transition and all assertions; all190 affected checks passed, actual0, with types/lint0 and unchanged application/build. See docs/bounded-comparison-tests-review.md.
-
-Private next QA: `/workspace/course-audit/qa/potable-integration-20261013-r3`. Use its own `run-unified.py`, `monitor-unified.py` and `publish-on-acceptance.py`; retain both earlier negative receipts. New complete inventory3338/172,1669 per device,2363 fingerprints, original two workers/zero retries/deadlines. After native actual0 and port/freeze validation, start from zero. Only actual complete acceptance plus clean GitHub verification completes the goal.
-
-After actual completion, inspect the full log/receipt, run the validator, update acceptance/source/global documents, commit/push and independently verify GitHub. If failure occurs, preserve evidence, wait for all owners/port release and verify the freeze before any source/test correction. Do not count focused/partial passes as whole-course acceptance. Do not poll old terminated owners or overwrite their historical receipts. No merge/deployment is authorized by this checkpoint.
+The integrated regression completed:3338/3338,1669 per device, actual runner/supervisor exits0,2363 frozen fingerprints unchanged and port3201 released. The final validator passed. See docs/final-browser-acceptance.json and docs/qa/potable-integration-final/README.md. All agreed AQA-focused lesson/shared-UI/integration software gates are complete. No merge/deployment or full Pearson/OCR/human-classroom certification is claimed.
 
 ## Historical individual corrections before final acceptance
 

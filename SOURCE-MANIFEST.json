@@ -1,6 +1,6 @@
 {
   "fileCount": 1106,
-  "generatedAt": "2026-10-13T09:56:08.811216+00:00",
+  "generatedAt": "2026-10-13T17:29:38.511935+00:00",
   "historicalManifest": "docs/historical-source-manifest.json",
   "productionBuildId": "Aa0dIR-3w-sKBPnUmz_Ot",
   "schemaVersion": 2,
@@ -8,13 +8,13 @@
   "sha256": {
     ".gitignore": "9a0934a1480d15deb8fe4769a1cda561e2d9cd6b213f295bb5357117e0007388",
     ".prettierignore": "77c223652989bb2e8474cda4b8b9d8d3b6d5b9abcc4dbf6820b4dedf33f865b9",
-    "AGENTS.md": "dec522799566db47ec282152cd2384acf46ca05519d81d99396ac23c66759c85",
+    "AGENTS.md": "02f364a3a2608494af56915669d53797e3b966913d8a1f56d2e6d92a91f5e9df",
     "PARALLEL-SCOPE-CONDENSATION.md": "b901b18f7dbb4b4cc2b3d0c1db1141864f730150fde929e7f986185fd448d87e",
     "PARALLEL-SCOPE-NEXT.md": "c43ae0eb689e09fed65674c3805a0f5a186a44ff211b2fb7db038b8c84689e10",
     "PARALLEL-SCOPE-POTABLE.md": "0ad256afeba09b7ba64fb50cff34203916d377590e597205b79c1c2a54ab4fce",
     "PARALLEL-SCOPE.md": "feef05c8bfab151b8cb9694fd26a7aafb3456af1651ebd30df0a16d1a7412874",
-    "README.md": "c82bf9a8d1622332c1aeb77d0963495df1ccd27be344e08e3ee6457869f47db6",
-    "WORKSPACE-HANDOFF.md": "99fbc27fdc5ab51aeca63a4cc9b50ca4434863fe62b893fa0cbf4abbe2d1bfae",
+    "README.md": "6d7ba1a9289ca83acecc8968f4c33c0107c958f4cec274f07c298ba1e05807ee",
+    "WORKSPACE-HANDOFF.md": "9e49a90118dd898be9e2c90f217c9856b0c9481e522140f74b865c5ad1a0412a",
     "eslint.config.mjs": "5a8c81ac7c7c9a68672c2be6a713260766cf4105d80aca6340993a5c001c7a3a",
     "next.config.ts": "93c56a1578e0c2b708e83669623d2918a9ca219bedd8e368e9a3ab2563d12d50",
     "package-lock.json": "78d7024da259410b48877a53e62fca79e10b5025f38ab8cc0327d5f45e84f855",
@@ -1113,7 +1113,7 @@
     "tests/yield-reversible.unit.spec.ts": "a6eea9b30b9542f38be4326286dcdb2b0b09170be25cfe4b0ec9a3789e0235ac",
     "tsconfig.json": "d88b60c515bc31b4e69138f4548c378268cb4b1c61e28f632194edf950d22d59"
   },
-  "sourceBaselineCommit": "cf1a5b7",
+  "sourceBaselineCommit": "e3299454054718a5afcd2dad711823cadd1eb3d2",
   "historicalBrowserAcceptance": {
     "buildId": "5o8bvY-CXFL1FzlwiB0j6",
     "completedPasses": 3172,
@@ -1126,6 +1126,30 @@
     "stoppedExplicitly": false,
     "supervisorExitCode": 0
   },
-  "browserAcceptance": null,
-  "browserAcceptanceStatus": "Pending fresh3338-case run after reviewed test-only bounded comparison correction; both failed partial attempts retained; earlier3172 accepted run historical."
+  "browserAcceptance": {
+    "started": "2026-10-13T09:56:51.944357+00:00",
+    "finished": "2026-10-13T17:28:52.312670+00:00",
+    "runnerExitCode": 0,
+    "supervisorExitCode": 0,
+    "stoppedExplicitly": false,
+    "buildId": "Aa0dIR-3w-sKBPnUmz_Ot",
+    "inventoryCases": 3338,
+    "inventoryFiles": 172,
+    "completedPasses": 3338,
+    "reportedFailedOrInterruptedCases": 0,
+    "testedSourceCommit": "e3299454054718a5afcd2dad711823cadd1eb3d2",
+    "projectPasses": {
+      "desktop": 1669,
+      "mobile": 1669
+    },
+    "protectedFingerprintsVerified": 2363,
+    "testPortReleased": true,
+    "workers": 2,
+    "retries": 0,
+    "browserLogSha256": "c64e753944d66955f9ca1109666894b9cc16cb3375113c7414b7ef40692f4cb4",
+    "inventorySha256": "9fdb1d860279fd5c0147c91206c916b1c36d72871148335cdb45f5151d7dffef",
+    "externalPotableWaterReview": "Integrated and root-reviewed; remote7f72498a9a21bb417fdf1614b13123631a15ceca",
+    "scope": "Whole frozen integrated production build; original test deadlines/science/accessibility assertions retained; practical simulation is not physical participation."
+  },
+  "browserAcceptanceStatus": "Passed complete frozen integrated run"
 }

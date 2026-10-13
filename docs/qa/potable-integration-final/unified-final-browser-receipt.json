@@ -1,0 +1,12 @@
+{
+  "started": "2026-10-13T09:56:51.944357+00:00",
+  "finished": "2026-10-13T17:28:52.312670+00:00",
+  "runnerExitCode": 0,
+  "supervisorExitCode": 0,
+  "stoppedExplicitly": false,
+  "buildId": "Aa0dIR-3w-sKBPnUmz_Ot",
+  "inventoryCases": 3338,
+  "inventoryFiles": 172,
+  "completedPasses": 3338,
+  "reportedFailedOrInterruptedCases": 0
+}

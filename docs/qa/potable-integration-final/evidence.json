@@ -14,14 +14,16 @@
     "320-original-written-sealed.png",
     "320-delayed-source-sealed.png"
   ],
-  "wholeCourseAcceptance": "pending active 3188-case run",
+  "wholeCourseAcceptance": "passed3338/3338; zero actual exits",
   "sha256": {
+    "README.md": "fae187654b5ef7643e90675493abed17eba012e0cf0d8b1db13ab5a579e7787a",
     "build.txt": "8452c205cc33ecba20942743297d2a1f9b083d20b43128083476927e75fc9ac3",
     "capture-final.txt": "c47058a1257c3305fdc032db7e3aeb30e685f8f89afcea073bf14680f43395a7",
     "capture-observations.json": "575d4c53a00e9540e500c0ad08c434d3a9f73f12510f3198b5a23d24c9c6d654",
     "final-browser-inventory.txt": "62f93541040a6f704c899ffb3a15891c2bad62d40d6b6212e5fa4151d7cf2e29",
     "frozen-production.json": "a54b275b5e4877532912cf721f6d8ad6f696196c767c4983007acef863e022aa",
     "lint.txt": "8e6c3404d35fc3cda2f481399942731d9a13652bcb3fae26cefb0a947db3a181",
+    "monitor-completion.json": "fff4ceb168efd44efff41a35630453bf12c12f70d8c0fcdadfbcd9f92597f52d",
     "native-browser.txt": "e27db7b757e40d6a11000a5fc8fc298d303b62fc2f54fdfc675be13c77d67956",
     "screenshots/1280-original-distillation-apparatus.png": "272447cc16d0c88bfdbd5ac06430ca550ecf7f74ad9c32c8f26b96573a2054e4",
     "screenshots/320-delayed-source-sealed.png": "7e563273731c110e8e59f86d14457994128c12903dc2d1bc0a45c37dd0f47778",
@@ -31,7 +33,8 @@
     "screenshots/390-independent-check-wrong.png": "8141cd0b60841ff4f78f13c4004c05614c62bb7c45c614d3e9cda9022db98073",
     "screenshots/390-malformed-source-preserved.png": "79ea53111a29c411b3e4d895e135d3995214932126bf18c112bba6f93d07ed1b",
     "screenshots/390-original-written-reference.png": "a01033de7f5fe387b7335ba5bd5a448ab19374cba6b8e8d6341bfb88c5b5ed82",
-    "unified-final-browser-start.json": "02f1d24428a3edebe3651e2343f206ef6d8e61ab0f97de45f3d78daf5d484da1",
+    "unified-final-browser-receipt.json": "7bdfe7ca04ff7d78b9f89543b3afb74d412d0ae24fd2418e9275709c7a84f200",
+    "unified-final-browser-start.json": "7e3385007bf7b835512ec5ca5ac7449e4991342ac29065d54c61aacfd7c9f18d",
     "unit.txt": "d6fedd88490efae99cdd9d24ac71038fe462642aac219fba018ba981300e7728"
   }
 }

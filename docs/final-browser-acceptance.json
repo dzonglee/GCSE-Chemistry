@@ -1,25 +1,25 @@
 {
-  "started": "2026-10-11T09:00:53.148980+00:00",
-  "finished": "2026-10-11T15:43:16.055180+00:00",
+  "started": "2026-10-13T09:56:51.944357+00:00",
+  "finished": "2026-10-13T17:28:52.312670+00:00",
   "runnerExitCode": 0,
   "supervisorExitCode": 0,
   "stoppedExplicitly": false,
-  "buildId": "5o8bvY-CXFL1FzlwiB0j6",
-  "inventoryCases": 3172,
-  "inventoryFiles": 171,
-  "completedPasses": 3172,
+  "buildId": "Aa0dIR-3w-sKBPnUmz_Ot",
+  "inventoryCases": 3338,
+  "inventoryFiles": 172,
+  "completedPasses": 3338,
   "reportedFailedOrInterruptedCases": 0,
-  "testedSourceCommit": "5a72ef9b3a9b87dd945e3c31dd404aff0b979d83",
+  "testedSourceCommit": "e3299454054718a5afcd2dad711823cadd1eb3d2",
   "projectPasses": {
-    "desktop": 1586,
-    "mobile": 1586
+    "desktop": 1669,
+    "mobile": 1669
   },
-  "reportedDuration": "6.7h",
-  "protectedFingerprintsVerified": 2357,
+  "protectedFingerprintsVerified": 2363,
   "testPortReleased": true,
   "workers": 2,
   "retries": 0,
-  "browserLogSha256": "c58c36313567c9064da50d56fd4126858f89ff95249c679d83a828e296faefe2",
-  "inventorySha256": "8576dbffb431aa26731f7e22301cc01fee3b0c0212d4e63e8bf51091653b1b2f",
-  "externalPotableWaterReview": "outstanding; reserved to separate GitHub worker"
+  "browserLogSha256": "c64e753944d66955f9ca1109666894b9cc16cb3375113c7414b7ef40692f4cb4",
+  "inventorySha256": "9fdb1d860279fd5c0147c91206c916b1c36d72871148335cdb45f5151d7dffef",
+  "externalPotableWaterReview": "Integrated and root-reviewed; remote7f72498a9a21bb417fdf1614b13123631a15ceca",
+  "scope": "Whole frozen integrated production build; original test deadlines/science/accessibility assertions retained; practical simulation is not physical participation."
 }
