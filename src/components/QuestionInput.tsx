@@ -160,8 +160,28 @@ export function QuestionInput(props: InputProps) {
       {props.question.wasteGiven && !props.question.parts && (
         <WasteGivenFigure data={props.question.wasteGiven} />
       )}
-      {props.question.waterGiven && !props.question.parts && (
-        <WaterGivenFigure data={props.question.waterGiven} />
+      {props.question.waterGiven && (
+        <div className="water-data-response">
+          <div className="water-response-controls">
+            <ResponseInput
+              {...props}
+              question={{ ...props.question, waterGiven: undefined }}
+            />
+            <button
+              type="button"
+              className="button potable-recovery-clear"
+              disabled={props.disabled}
+              onClick={() => props.onChange("")}
+            >
+              Start this answer again
+            </button>
+          </div>
+          {props.compactAssessment && props.question.waterGiven.energy ? (
+            <AssessmentWaterEnergy data={props.question.waterGiven.energy} />
+          ) : (
+            <WaterGivenFigure data={props.question.waterGiven} />
+          )}
+        </div>
       )}
       {props.question.cycleGiven && !props.question.parts && (
         <CycleGivenFigure data={props.question.cycleGiven} />
@@ -592,6 +612,7 @@ export function QuestionInput(props: InputProps) {
         !(props.question.chromatographyGiven && props.compactAssessment) &&
         !(props.question.polymerisationGiven && props.compactAssessment) &&
         !props.question.lcaGiven &&
+        !props.question.waterGiven &&
         !(
           props.compactAssessment &&
           props.question.haberGiven &&

@@ -1,5 +1,7 @@
 # Individual course rebuild status
 
+13 October2026 integration checkpoint: the external potable-water/RP8/RP13 delivery is integrated, both shared UI proposals are applied, and all124 AQA sections have reviewed response evidence. Types/lint/build,1105 units and48 integrated water browser checks passed;51 fresh captures passed layout/accessibility gates and representative samples were personally inspected and sent. The new3188-case/172-file whole-course run is active on build Aa0dIR-3w-sKBPnUmz_Ot; final acceptance is pending. Earlier counts/receipts below describe historical builds. See docs/qa/potable-integration-final/README.md and docs/final-maths-comparison.md. No merge or deployment.
+
 ## Current verdict
 
 The current Chemistry course contains **95 lesson routes across 10 topics**. **All 95 lessons have individually reviewed journeys and explicitly delivered samples.** Lesson95, Haber process and fertilisers, completed its native browser and screenshot gate on2026-10-06. The AQA qualification/tier map and complete frozen browser regression are finished; the external potable-water response/practical review remains open. These are lesson counts; task and automated-test counts are separate.

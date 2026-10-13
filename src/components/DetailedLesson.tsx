@@ -64,6 +64,7 @@ export function DetailedLesson({
     saltLesson ||
     organicLesson ||
     materialsLesson ||
+    lesson.slug === "potable-water" ||
     (lesson.slug === "yield-and-atom-economy" &&
       (section === "check" || section === "review"));
   const stage: LearningStage =

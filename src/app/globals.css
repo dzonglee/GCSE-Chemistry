@@ -5406,3 +5406,134 @@ progress {
   margin: 0;
   overflow-wrap: anywhere;
 }
+
+/* Potable-water proposal: keep complete responses reachable and all source evidence available. */
+.water-data-response {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.water-data-response > * {
+  min-width: 0;
+}
+.sample-lesson[data-lesson="potable-water"] .sample-task-panel {
+  padding: 12px;
+}
+.sample-lesson[data-lesson="potable-water"] .sample-task-panel > h2 {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin: 6px 0;
+}
+.sample-lesson[data-lesson="potable-water"] .sample-task-prompt {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+.sample-lesson[data-lesson="potable-water"] .question-panel {
+  padding: 14px;
+}
+.sample-lesson[data-lesson="potable-water"]
+  .question-panel
+  .written-answer
+  textarea {
+  height: 100px;
+  min-height: 100px;
+}
+.sample-lesson[data-lesson="potable-water"] .water-workbench {
+  display: flex;
+  flex-direction: column;
+}
+.sample-lesson[data-lesson="potable-water"] .water-workbench > * {
+  order: 2;
+}
+.sample-lesson[data-lesson="potable-water"] .water-workbench > h3,
+.sample-lesson[data-lesson="potable-water"] .water-workbench > .water-context {
+  order: 0;
+}
+.sample-lesson[data-lesson="potable-water"] .water-workbench > h3 {
+  font-size: 0.9rem;
+}
+.sample-lesson[data-lesson="potable-water"] .water-workbench > .water-fields {
+  order: 1;
+}
+.sample-lesson[data-lesson="potable-water"] .water-context {
+  font-size: 0.9rem;
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+.sample-lesson[data-lesson="potable-water"] .water-fields label {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.sample-lesson[data-lesson="potable-water"] .assessment-session {
+  padding: 0;
+}
+.sample-lesson[data-lesson="potable-water"]
+  .assessment-session
+  .session-heading {
+  margin: 10px 0;
+}
+.sample-lesson[data-lesson="potable-water"] .assessment-session h2 {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+.sample-lesson[data-lesson="potable-water"]
+  .assessment-session
+  .question-panel
+  > p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+@media (max-width: 700px) {
+  .water-data-response {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sample-lesson[data-lesson="potable-water"] .sample-title-row {
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+  .sample-lesson[data-lesson="potable-water"] .sample-overview {
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+  .sample-lesson[data-lesson="potable-water"] .sample-stages {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="potable-water"] .sample-task-topline {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-lesson="potable-water"] .water-workbench > h3 {
+    line-height: 1.25;
+    margin-bottom: 6px;
+  }
+}
+
+.sample-lesson[data-lesson="potable-water"]
+  .question-panel[data-water-written]
+  h2 {
+  font-size: 1.25rem;
+}
+.sample-lesson[data-lesson="potable-water"]
+  .question-panel[data-water-written]
+  .written-equation-prompt {
+  line-height: 1.35;
+  margin: 6px 0;
+}
+
+.sample-lesson[data-lesson="potable-water"]
+  .question-panel[data-water-written] {
+  padding: 10px;
+}
+
+.water-response-controls > .potable-recovery-clear {
+  display: none;
+}
+.water-response-controls:has(> .feedback[role="status"])
+  > .potable-recovery-clear {
+  display: inline-flex;
+  margin-top: 8px;
+}

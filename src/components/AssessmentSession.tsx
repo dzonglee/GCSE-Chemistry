@@ -588,6 +588,9 @@ export function AssessmentSession({
           q.id.startsWith("early-atmosphere-v1-minor-") || undefined
         }
         data-full-paper={examPaper ? "true" : undefined}
+        data-water-written={
+          (id === "potable-water" && Boolean(q.rubric)) || undefined
+        }
         data-paper-part={examPaper?.parts[run.index].number}
         data-salt-heating={id === "making-soluble-salts" || undefined}
         data-alkene-combustion={id === "organic-reactions" || undefined}
@@ -609,6 +612,7 @@ export function AssessmentSession({
         <h2 ref={heading} tabIndex={-1}>
           {(q.writtenEquations ||
             q.conciseHeading ||
+            (id === "potable-water" && Boolean(q.rubric)) ||
             id === "making-soluble-salts" ||
             id === "organic-reactions" ||
             ([
@@ -625,6 +629,7 @@ export function AssessmentSession({
         </h2>
         {(q.writtenEquations ||
           q.conciseHeading ||
+          (id === "potable-water" && Boolean(q.rubric)) ||
           id === "making-soluble-salts" ||
           id === "organic-reactions" ||
           ([

@@ -14,6 +14,7 @@ import {
   type WaterGiven,
 } from "@/lib/water";
 import { WaterScene3D } from "./WaterScene3D";
+import { potableEvidence } from "@/lib/potable-evidence";
 export function WaterGivenFigure({
   data,
   embedded = false,
@@ -214,7 +215,8 @@ export function WaterWorkbench({
       </p>
     );
   const b = history.at(-1)!,
-    full = history.length >= 500;
+    full = history.length >= 500,
+    evidence = potableEvidence(r, mode);
   function change(h: WaterBoard[]) {
     onChange(h);
     setChecked(null);
@@ -231,8 +233,10 @@ export function WaterWorkbench({
       aria-label="Task model"
     >
       <h3>{r.title}</h3>
-      <p className="water-context">{r.summary || r.note}</p>
-      {!r.summary && <WaterGivenFigure data={r} embedded />}
+      <p className="water-context">{evidence}</p>
+      {!r.summary && evidence === r.note && (
+        <WaterGivenFigure data={r} embedded />
+      )}
       <div className="water-fields">
         {waterFields[mode].map((f) => (
           <Fragment key={f}>
@@ -272,9 +276,10 @@ export function WaterWorkbench({
           </Fragment>
         ))}
       </div>
-      {r.summary && (
+      {(r.summary || evidence !== r.note) && (
         <details>
           <summary>Full original evidence</summary>
+          {evidence !== r.note && <p>{r.note}</p>}
           <WaterGivenFigure data={r} embedded />
         </details>
       )}

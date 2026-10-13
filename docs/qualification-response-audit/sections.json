@@ -2830,11 +2830,24 @@
     "trilogyCandidate": "5.10.1.2",
     "qualificationConfirmed": true,
     "tierConfirmed": true,
-    "responseEvidenceConfirmed": false,
+    "responseEvidenceConfirmed": true,
     "qualification": "Separate Chemistry and Combined Science Trilogy",
     "tierScope": "both",
-    "actualBodyReview": "Potable low salts/microbes versus pure; appropriate freshwater/filter/sterilise chlorine ozoneUV; saltywater distillation/reverseosmosis energy; SeparateRP8 = TrilogyRP13. External worker retains exclusive lesson ownership. Complete actual8462 bodies read during individual research/matrix; corresponding8464 bodies and transition headings read. Parent qualification restrictions checked.",
-    "sourceReviewDate": "2026-10-10"
+    "actualBodyReview": "Potable versus pure, low dissolved salts/microbes; freshwater filtering and sterilising with chlorine, ozone or UV; local-source selection; desalination by distillation or reverse osmosis and energy demands. Separate RP8 maps to Trilogy RP13, both tiers, required AT2/3/4. Actual specification bodies reread after the external delivery.",
+    "sourceReviewDate": "2026-10-13",
+    "responseEvidenceReview": "Root personally read the original practical/treatment/native responses and all 13 appended source-analysis tasks. Unequal sample volumes require concentration comparison; pH does not establish safety. Original 88 task definitions and ten manual written demands retained. Fixed source evidence and independent/delayed equivalents preserve conservative exposure. Integrated 48 desktop/mobile browser checks passed; whole-course regression is a separate gate.",
+    "responseEvidenceIds": [
+      "water-v1-g-quality",
+      "water-v1-g-treatment",
+      "water-v1-g-residue",
+      "water-v1-g-distil",
+      "water-v1-p-practical",
+      "water-v1-p-repeat",
+      "water-v1-cA-method",
+      "water-v1-sources-g-solids"
+    ],
+    "responseSourceReview": "Root reread actual AQA8462 printed82 and AQA8464 printed117 practical bodies and AT scope, and actual 2022 Foundation Paper2 Q01.1–5 with paired mark scheme, including personally viewed residue table. Worker additionally reviewed the practical handbook and 2020/2021 paired items. See docs/qa/potable-review-final/RESEARCH-AND-MAPPING.md; integration of remote 7f72498a9a21bb417fdf1614b13123631a15ceca on 13 October2026.",
+    "responseReviewDate": "2026-10-13"
   },
   {
     "section": "4.10.1.3",
