@@ -1,0 +1,8 @@
+{
+  "unchangedFingerprints": 2362,
+  "changedOnly": [
+    "tests/rates-practical.browser.spec.ts"
+  ],
+  "buildId": "Aa0dIR-3w-sKBPnUmz_Ot",
+  "previousFailedReceipt": "/workspace/course-audit/qa/potable-integration-20261013/unified-final-browser-receipt.json"
+}

@@ -1,6 +1,6 @@
 {
   "fileCount": 1106,
-  "generatedAt": "2026-10-13T05:36:09.335519+00:00",
+  "generatedAt": "2026-10-13T08:41:56.117679+00:00",
   "historicalManifest": "docs/historical-source-manifest.json",
   "productionBuildId": "Aa0dIR-3w-sKBPnUmz_Ot",
   "schemaVersion": 2,
@@ -8,13 +8,13 @@
   "sha256": {
     ".gitignore": "9a0934a1480d15deb8fe4769a1cda561e2d9cd6b213f295bb5357117e0007388",
     ".prettierignore": "77c223652989bb2e8474cda4b8b9d8d3b6d5b9abcc4dbf6820b4dedf33f865b9",
-    "AGENTS.md": "87dc7e476e0ffe5838aa519638916951e9ebd7bfcac24f1fc9ca5a2af9d18c64",
+    "AGENTS.md": "8eeaa42318eafe3875ca745ec9e5d7bfb5201ac4011e037cb57e87048b85d864",
     "PARALLEL-SCOPE-CONDENSATION.md": "b901b18f7dbb4b4cc2b3d0c1db1141864f730150fde929e7f986185fd448d87e",
     "PARALLEL-SCOPE-NEXT.md": "c43ae0eb689e09fed65674c3805a0f5a186a44ff211b2fb7db038b8c84689e10",
     "PARALLEL-SCOPE-POTABLE.md": "0ad256afeba09b7ba64fb50cff34203916d377590e597205b79c1c2a54ab4fce",
     "PARALLEL-SCOPE.md": "feef05c8bfab151b8cb9694fd26a7aafb3456af1651ebd30df0a16d1a7412874",
-    "README.md": "86a8663acb21905fd2d349216542727c8bbb0f76816e02d9516880204f2c5c02",
-    "WORKSPACE-HANDOFF.md": "ec6579cddec5326bedd60ecaf967d1f62e4c8f8a3aa4a53dcb0f0c00d84f9707",
+    "README.md": "78774bb1a6a8f9b44a59c7d72cfce94d77036fba4ec03b5049ef864c9ff43c20",
+    "WORKSPACE-HANDOFF.md": "6ae9f6a4df59ededba13ea5f11e02f2f0930a732f2aa6b55692f20fa1b6a37e2",
     "eslint.config.mjs": "5a8c81ac7c7c9a68672c2be6a713260766cf4105d80aca6340993a5c001c7a3a",
     "next.config.ts": "93c56a1578e0c2b708e83669623d2918a9ca219bedd8e368e9a3ab2563d12d50",
     "package-lock.json": "78d7024da259410b48877a53e62fca79e10b5025f38ab8cc0327d5f45e84f855",
@@ -1037,7 +1037,7 @@
     "tests/profile-content.unit.spec.ts": "5adff469572ce5db620788a150e5480597ffcb0837d58ac0b5e35b6a36c5cd7f",
     "tests/purity-separation.browser.spec.ts": "4652f79b5a4d3a77915eeb1b2e833eb7a56522cb59a99299072de8fbda02397f",
     "tests/purity-separation.unit.spec.ts": "f05f37e149e2ecaf5c4f6a2774756f13a3e64b868acf13e15e9296d00d872eb9",
-    "tests/rates-practical.browser.spec.ts": "612a930bd695ee0077607e0bf501a070c5a8b89c477b256424f3d0966658bd92",
+    "tests/rates-practical.browser.spec.ts": "e38de59d2b0497bfc1d909f1ed5581ea7d0debe2b2f4018211c8f03b6c56855a",
     "tests/rates-practical.unit.spec.ts": "05f995d81f0d636e06bcf3c7a9b1143b51144131be266b9a88c8c0d39b8e2934",
     "tests/rates-precision.browser.spec.ts": "c1738b4932946f6615f9c8ca2d90a35d17f40bb1dc29546cf0bc88a2d186ffff",
     "tests/reacting-masses.browser.spec.ts": "d4ff25a0ec529dc39290a29cce4016782649f9caf993e27482bb3a86d50810cd",
@@ -1127,5 +1127,5 @@
     "supervisorExitCode": 0
   },
   "browserAcceptance": null,
-  "browserAcceptanceStatus": "Pending new 3188-case run after water/shared UI integration; prior acceptance is historical."
+  "browserAcceptanceStatus": "Pending fresh3248-case run after test-only per-comparison correction; first integrated attempt failed at1269 passes; previous accepted3172 run historical."
 }

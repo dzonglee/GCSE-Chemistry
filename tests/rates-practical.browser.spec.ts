@@ -240,20 +240,23 @@ for (const [mode, n] of [
   ["plot", 5],
   ["repeats", 6],
 ] as [PracticalMode, number][])
-  test(`${mode}: six individual comparisons retain wrong work, meaningful construction, committed histories and readable representations`, async ({
-    page,
-  }, info) => {
-    if (
-      info.project.name === "mobile" &&
-      ["plan", "endpoint", "plot", "repeats"].includes(mode)
-    )
-      await page.setViewportSize({ width: 320, height: 844 });
-    await learn(page, n);
-    const root = page.getByRole("region", { name: "Task model", exact: true }),
-      model = journey.guided[n - 1].model!;
-    if (model.kind !== "rates-practical")
-      throw Error("Unexpected lesson model");
-    for (const id of Object.keys(practicalRecords[mode])) {
+  for (const id of Object.keys(practicalRecords[mode]))
+    test(`${mode} / ${id}: retained wrong work, meaningful construction, committed history and readable representation`, async ({
+      page,
+    }, info) => {
+      if (
+        info.project.name === "mobile" &&
+        ["plan", "endpoint", "plot", "repeats"].includes(mode)
+      )
+        await page.setViewportSize({ width: 320, height: 844 });
+      await learn(page, n);
+      const root = page.getByRole("region", {
+          name: "Task model",
+          exact: true,
+        }),
+        model = journey.guided[n - 1].model!;
+      if (model.kind !== "rates-practical")
+        throw Error("Unexpected lesson model");
       await root.locator("details summary").click();
       await root
         .getByLabel("Supplied comparison", { exact: true })
@@ -412,20 +415,19 @@ for (const [mode, n] of [
       }
       await root.getByRole("button", { name: "Undo", exact: true }).click();
       await expect(root.locator(".feedback.correct")).toHaveCount(0);
-    }
-    await root
-      .getByRole("button", { name: "Reset model", exact: true })
-      .click();
-    await root.locator("details summary").click();
-    await expect(
-      root.getByLabel("Supplied comparison", { exact: true }),
-    ).toHaveValue(model.record!);
-    await root.locator("details summary").click();
-    await root
-      .getByRole("button", { name: "Check model", exact: true })
-      .click();
-    await expect(root.locator(".feedback.incorrect")).toBeVisible();
-  });
+      await root
+        .getByRole("button", { name: "Reset model", exact: true })
+        .click();
+      await root.locator("details summary").click();
+      await expect(
+        root.getByLabel("Supplied comparison", { exact: true }),
+      ).toHaveValue(model.record!);
+      await root.locator("details summary").click();
+      await root
+        .getByRole("button", { name: "Check model", exact: true })
+        .click();
+      await expect(root.locator(".feedback.incorrect")).toBeVisible();
+    });
 test("plot initial screenshots and accessibility retain the original checked construction", async ({
   page,
 }, info) => {

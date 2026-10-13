@@ -1,0 +1,54 @@
+  ✓  1242 [desktop] › tests/production-pathways.browser.spec.ts:207:5 › complete batch times alter output ranking and proportional scale leaves rate fixed (5.2s)
+  ✓  1243 [desktop] › tests/production-pathways.browser.spec.ts:236:5 › buyer demand retains unsold disposal and does not change desired-product atom economy (5.4s)
+  ✓  1244 [desktop] › tests/production-pathways.browser.spec.ts:274:5 › equilibrium and output use separate units and catalyst never raises equilibrium percentage (5.1s)
+  ✓  1245 [desktop] › tests/production-pathways.browser.spec.ts:309:5 › eligibility precedes a stated objective and changing the purpose changes the chosen route (6.3s)
+  ✓  1246 [desktop] › tests/production-pathways.browser.spec.ts:344:5 › all 21 practice tasks preserve chemical assumptions and written review stays non-evidence (6.7s)
+  ✓  1247 [desktop] › tests/production-pathways.browser.spec.ts:378:5 › highest-percentage recovery returns to the original wrong argument (5.9s)
+  ✓  1248 [desktop] › tests/production-pathways.browser.spec.ts:412:5 › reserved multipart fields align, reject missing parts and clear obsolete warning on edit (4.5s)
+  ✓  1249 [desktop] › tests/production-pathways.browser.spec.ts:441:5 › actual quantity chart exports retained predictions with meaningful units and readable rendered text (3.6s)
+  ✓  1251 [desktop] › tests/purity-separation.browser.spec.ts:59:7 › melting: actual guided cases preserve wrong entries, reload and asked-only checks (19.9s)
+  ✓  1250 [desktop] › tests/purity-separation.browser.spec.ts:59:7 › identity: actual guided cases preserve wrong entries, reload and asked-only checks (24.8s)
+  ✓  1252 [desktop] › tests/purity-separation.browser.spec.ts:59:7 › boiling: actual guided cases preserve wrong entries, reload and asked-only checks (17.2s)
+  ✓  1253 [desktop] › tests/purity-separation.browser.spec.ts:59:7 › formulation: actual guided cases preserve wrong entries, reload and asked-only checks (14.4s)
+  ✓  1254 [desktop] › tests/purity-separation.browser.spec.ts:59:7 › method: actual guided cases preserve wrong entries, reload and asked-only checks (23.0s)
+  ✓  1255 [desktop] › tests/purity-separation.browser.spec.ts:59:7 › filtration: actual guided cases preserve wrong entries, reload and asked-only checks (22.3s)
+  ✓  1257 [desktop] › tests/purity-separation.browser.spec.ts:105:5 › all25 practice questions save correct scalar/ratio answers and honest separation self-reviews (8.0s)
+  ✓  1256 [desktop] › tests/purity-separation.browser.spec.ts:59:7 › recovery: actual guided cases preserve wrong entries, reload and asked-only checks (19.4s)
+  ✓  1258 [desktop] › tests/purity-separation.browser.spec.ts:148:5 › both cold forms and both delayed forms hide references until whole-set submission (15.2s)
+  ✓  1259 [desktop] › tests/purity-separation.browser.spec.ts:266:5 › first temperature action fits short screens, markers use keyboard and labels stay readable (4.8s)
+  ✓  1261 [desktop] › tests/purity-separation.browser.spec.ts:377:5 › current real filtration asset downloads a wrong proposal and stays optional without WebGL (6.2s)
+  ✓  1260 [desktop] › tests/purity-separation.browser.spec.ts:309:5 › wrong separation drawings stay separate from references and clear only current corrupt bytes (8.8s)
+  ✓  1263 [desktop] › tests/rates-practical.browser.spec.ts:50:5 › reserved checks defer marking, retain drafts and separate actual seven-day retrieval (16.0s)
+  ✓  1264 [desktop] › tests/rates-practical.browser.spec.ts:168:5 › all original practice works while written responses remain self-reviewed (8.1s)
+  ✓  1262 [desktop] › tests/purity-separation.browser.spec.ts:429:5 › formulation writing survives reload and its new cold and delayed form stays sealed (27.3s)
+  ✓  1265 [desktop] › tests/rates-practical.browser.spec.ts:243:7 › plan: six individual comparisons retain wrong work, meaningful construction, committed histories and readable representations (26.0s)
+  ✓  1266 [desktop] › tests/rates-practical.browser.spec.ts:243:7 › apparatus: six individual comparisons retain wrong work, meaningful construction, committed histories and readable representations (27.6s)
+  ✓  1267 [desktop] › tests/rates-practical.browser.spec.ts:243:7 › dilution: six individual comparisons retain wrong work, meaningful construction, committed histories and readable representations (26.6s)
+  ✓  1268 [desktop] › tests/rates-practical.browser.spec.ts:243:7 › endpoint: six individual comparisons retain wrong work, meaningful construction, committed histories and readable representations (26.6s)
+  ✓  1270 [desktop] › tests/rates-practical.browser.spec.ts:243:7 › repeats: six individual comparisons retain wrong work, meaningful construction, committed histories and readable representations (27.2s)
+  ✘  1269 [desktop] › tests/rates-practical.browser.spec.ts:243:7 › plot: six individual comparisons retain wrong work, meaningful construction, committed histories and readable representations (31.2s)
+Testing stopped early after 1 maximum allowed failures.
+  ✘  1271 [desktop] › tests/rates-practical.browser.spec.ts:429:5 › plot initial screenshots and accessibility retain the original checked construction (2.5s)
+
+
+  1) [desktop] › tests/rates-practical.browser.spec.ts:243:7 › plot: six individual comparisons retain wrong work, meaningful construction, committed histories and readable representations
+
+    Test timeout of 30000ms exceeded.
+
+    Error Context: test-results/browser/rates-practical.browser-pl-ce763-nd-readable-representations-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser/rates-practical.browser-pl-ce763-nd-readable-representations-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser/rates-practical.browser-pl-ce763-nd-readable-representations-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [desktop] › tests/rates-practical.browser.spec.ts:243:7 › plot: six individual comparisons retain wrong work, meaningful construction, committed histories and readable representations
+  1 interrupted
+    [desktop] › tests/rates-practical.browser.spec.ts:429:5 › plot initial screenshots and accessibility retain the original checked construction
+  1917 did not run
+  1269 passed (2.7h)
+  1 error was not a part of any test, see above for details

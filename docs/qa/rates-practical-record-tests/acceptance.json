@@ -1,0 +1,11 @@
+{
+  "typesExitCode": 0,
+  "lintExitCode": 0,
+  "nativeBrowserExitCode": 0,
+  "nativeBrowserPasses": 88,
+  "duration": "6.0m",
+  "frozenFingerprintsVerified": 2363,
+  "testPortReleased": true,
+  "productionBuildId": "Aa0dIR-3w-sKBPnUmz_Ot",
+  "wholeCourseStatus": "pending fresh3248-case run"
+}
