@@ -80,7 +80,9 @@ test("worked visual references are readable native constructions with full ethan
 });
 
 test("individually authored Foundation Paper2 allocates100 marks with valid qualification, AO and reserved references", () => {
-  expect(fullPapers).toHaveLength(4);
+  expect(
+    fullPapers.filter((p) => p.examPaper?.basis?.board === "AQA"),
+  ).toHaveLength(4);
   expect(fullPapers[1].examPaper).toBe(paper);
   expect(fullPapers[1].course).toBe("separate");
   expect(fullPapers[1].tier).toBe("foundation");

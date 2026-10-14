@@ -3,6 +3,7 @@ import { paper1FoundationFull } from "./paper1-foundation-full";
 import { paper2FoundationFull } from "./paper2-foundation-full";
 import { paper1HigherFull } from "./paper1-higher-full";
 import { paper2HigherFull } from "./paper2-higher-full";
+import { edexcelPaper1FoundationFull } from "./edexcel-paper1-foundation-full";
 
 export const fullPapers: Assessment[] = [
   {
@@ -68,5 +69,20 @@ export const fullPapers: Assessment[] = [
     examPaper: paper2HigherFull,
     questions: paper2HigherFull.parts.map((part) => part.question),
     topics: paper2HigherFull.parts.map((part) => part.topic),
+  },
+  {
+    slug: edexcelPaper1FoundationFull.id,
+    title: "Edexcel Paper 1 · Foundation",
+    shortTitle: "Paper 1 · Foundation",
+    description:
+      "An original 100-mark, 105-minute Pearson Edexcel Separate Chemistry paper. Its own 40 parts include ink separation, copper purification and plotting, empirical formulae from reacting masses, titration and Haber/cell decisions. Submit the whole paper before reviewing retained work, drawings and method credit.",
+    tier: "foundation",
+    course: "separate",
+    structure: "full",
+    kind: "paper",
+    minutes: edexcelPaper1FoundationFull.minutes,
+    examPaper: edexcelPaper1FoundationFull,
+    questions: edexcelPaper1FoundationFull.parts.map((part) => part.question),
+    topics: edexcelPaper1FoundationFull.parts.map((part) => part.topic),
   },
 ];

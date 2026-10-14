@@ -114,7 +114,12 @@ export function FuelPlotEditor({
     }
   }
   function place(x: number, y: number) {
-    const clean = (n: number) => String(Number(n.toFixed(straight ? 1 : 2))),
+    const clean = (n: number) =>
+        String(
+          Number(
+            n.toFixed(data.context === "measurement" ? 6 : straight ? 1 : 2),
+          ),
+        ),
       nx = clean(Math.max(data.xMin, Math.min(data.xMax, x))),
       ny = clean(Math.max(data.yMin, Math.min(data.yMax, y)));
     onChange(
@@ -183,9 +188,11 @@ export function FuelPlotEditor({
       aria-label={
         contextLabel
           ? `${contextLabel}: ${reviewOnly ? "saved graph" : "observation plot editor"}`
-          : data.context === "temperature"
-            ? "Temperature observation plot editor"
-            : "Fuel observation plot editor"
+          : data.context === "measurement"
+            ? "Measurement observation plot editor"
+            : data.context === "temperature"
+              ? "Temperature observation plot editor"
+              : "Fuel observation plot editor"
       }
     >
       {!reviewOnly && (
@@ -257,9 +264,11 @@ export function FuelPlotEditor({
         aria-label={
           contextLabel
             ? `${contextLabel}: graph with fixed original scales`
-            : data.context === "temperature"
-              ? "Temperature graph with fixed original scales"
-              : "Fuel graph with fixed original scales"
+            : data.context === "measurement"
+              ? "Measurement graph with fixed original scales"
+              : data.context === "temperature"
+                ? "Temperature graph with fixed original scales"
+                : "Fuel graph with fixed original scales"
         }
         tabIndex={0}
         onKeyDown={(e) => {

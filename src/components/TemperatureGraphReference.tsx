@@ -10,10 +10,11 @@ export function TemperatureGraphReference({
   const captionId = useId();
   const d = drawing.data,
     ends = drawing.referenceLine;
-  if (d.context !== "temperature" || !ends) return null;
+  const measurement = d.context === "measurement";
+  if ((!measurement && d.context !== "temperature") || !ends) return null;
   const first = d.points[0][0],
     last = d.points.at(-1)![0];
-  const temperature = (x: number) =>
+  const fitHeight = (x: number) =>
     ends[0] + ((x - first) * (ends[1] - ends[0])) / (last - first);
   const px = (x: number) => 100 + ((x - d.xMin) / (d.xMax - d.xMin)) * 520;
   const py = (y: number) => 335 - ((y - d.yMin) / (d.yMax - d.yMin)) * 300;
@@ -33,7 +34,7 @@ export function TemperatureGraphReference({
         className="fuel-plot-scroll"
         aria-describedby={captionId}
         role="region"
-        aria-label="Reference temperature graph, scroll horizontally"
+        aria-label={`Reference ${measurement ? "measurement" : "temperature"} graph, scroll horizontally`}
         tabIndex={0}
       >
         <svg
@@ -76,7 +77,7 @@ export function TemperatureGraphReference({
                     stroke="#d5ddea"
                   />
                   <text x="88" y={py(y) + 7} textAnchor="end">
-                    {y}
+                    {measurement ? Number(y.toFixed(6)) : y}
                   </text>
                 </g>
               );
@@ -110,7 +111,7 @@ export function TemperatureGraphReference({
             x1={px(first)}
             y1={py(ends[0])}
             x2={px(0)}
-            y2={py(temperature(0))}
+            y2={py(fitHeight(0))}
             stroke="#bd7624"
             strokeWidth="3"
             strokeDasharray="7 5"
@@ -148,9 +149,11 @@ export function TemperatureGraphReference({
       </div>
       <p>
         {d.note} Its extrapolated intercept is approximately{" "}
-        {temperature(0).toFixed(1)} °C. A reading allowance of half a small
-        square checks consistency with the chosen line. It does not award marks
-        for the complete graph.
+        {measurement
+          ? Number(fitHeight(0).toFixed(6))
+          : fitHeight(0).toFixed(1)}{" "}
+        {d.yUnit}. A reading allowance of half a small square checks consistency
+        with the chosen line. It does not award marks for the complete graph.
       </p>
     </details>
   );

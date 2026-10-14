@@ -1,7 +1,4 @@
-import { paper1FoundationFull } from "./paper1-foundation-full";
-import { paper2FoundationFull } from "./paper2-foundation-full";
-import { paper1HigherFull } from "./paper1-higher-full";
-import { paper2HigherFull } from "./paper2-higher-full";
+import { fullPapers } from "./full-assessments";
 import {
   haberJourney,
   haberExposureFamilies,
@@ -4201,12 +4198,7 @@ export const questionById = (id: string) =>
       ...(l.journey ? tasks(l.journey) : []),
     ])
     .find((q) => q.id === id) ??
-  paper1FoundationFull.parts.find((part) => part.question.id === id)
-    ?.question ??
-  paper2FoundationFull.parts.find((part) => part.question.id === id)
-    ?.question ??
-  paper1HigherFull.parts.find((part) => part.question.id === id)?.question ??
-  paper2HigherFull.parts.find((part) => part.question.id === id)?.question;
+  fullPapers.flatMap((paper) => paper.questions).find((q) => q.id === id);
 
 const nanoLesson = lessons.find(
   (l) => l.slug === "particles-and-nanoparticles",

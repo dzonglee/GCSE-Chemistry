@@ -53,7 +53,12 @@ export function FuelDrawingInput({
       </section>
     );
   const temperature = drawing.data.context === "temperature";
-  const plotName = temperature ? "temperature graph" : "fuel plot";
+  const measurement = drawing.data.context === "measurement";
+  const plotName = temperature
+    ? "temperature graph"
+    : measurement
+      ? "measurement graph"
+      : "fuel plot";
   if (!b)
     return (
       <div role="status">
@@ -78,12 +83,14 @@ export function FuelDrawingInput({
       aria-label={
         contextLabel
           ? `${contextLabel}: graph construction`
-          : temperature
-            ? "Temperature graph construction"
-            : "Independent fuel graph construction"
+          : measurement
+            ? "Measurement graph construction"
+            : temperature
+              ? "Temperature graph construction"
+              : "Independent fuel graph construction"
       }
     >
-      {temperature ? (
+      {temperature || measurement ? (
         <table className="temperature-source-table">
           <caption
             aria-label={`${drawing.data.xName} (${drawing.data.xUnit}) to ${drawing.data.yName} (${drawing.data.yUnit})`}
@@ -98,7 +105,7 @@ export function FuelDrawingInput({
               <tr key={i}>
                 {drawing.data.points.slice(i, i + 3).map(([x, y]) => (
                   <td key={x}>
-                    {x}→{y.toFixed(1)}
+                    {x}→{measurement ? y : y.toFixed(1)}
                   </td>
                 ))}
               </tr>
@@ -142,7 +149,7 @@ export function FuelDrawingInput({
         onChange={(changes) => onChange(JSON.stringify({ ...b, ...changes }))}
         disabled={disabled}
       />
-      {compact && !temperature && (
+      {compact && !temperature && !measurement && (
         <details>
           <summary>About these observations and your construction</summary>
           <p>{drawing.note}</p>
@@ -154,7 +161,7 @@ export function FuelDrawingInput({
           </p>
         </details>
       )}
-      {temperature && (
+      {(temperature || measurement) && (
         <>
           <p>{drawing.note}</p>
           <p>

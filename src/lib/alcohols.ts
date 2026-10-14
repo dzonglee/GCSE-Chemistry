@@ -491,7 +491,7 @@ export type FuelPlotRecord = {
   fitKind?: "straight";
   /** Opt-in construction: learners choose the extrapolated line endpoint. */
   independentExtrapolation?: boolean;
-  context?: "temperature";
+  context?: "temperature" | "measurement";
   title: string;
   xName: string;
   xUnit: string;
