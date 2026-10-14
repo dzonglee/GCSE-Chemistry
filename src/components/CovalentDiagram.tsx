@@ -8,6 +8,7 @@ export function CovalentDiagram({
   partnerUnshared,
   proposed = true,
   compact = false,
+  contextLabel,
 }: {
   molecule: CovalentMolecule;
   own: number[];
@@ -16,6 +17,7 @@ export function CovalentDiagram({
   partnerUnshared: number[];
   proposed?: boolean;
   compact?: boolean;
+  contextLabel?: string;
 }) {
   const spec = covalentMolecules[molecule],
     single = spec.partners.length === 1;
@@ -122,7 +124,7 @@ export function CovalentDiagram({
             : "0 0 400 350"
         }
         role="img"
-        aria-label={`${proposed ? "Your proposed" : "Reference"} ${molecule} outer-electron diagram. Bond regions: ${own.map((n, i) => `${n} dots and ${other[i]} crosses`).join("; ")}. Unshared reference-atom electrons ${unshared}; partner electrons ${partnerUnshared.join(", ")}. Inner electrons omitted.`}
+        aria-label={`${contextLabel ?? (proposed ? "Your proposed" : "Reference")} ${molecule} outer-electron diagram. Bond regions: ${own.map((n, i) => `${n} dots and ${other[i]} crosses`).join("; ")}. Unshared reference-atom electrons ${unshared}; partner electrons ${partnerUnshared.join(", ")}. Inner electrons omitted.`}
       >
         <circle
           cx={centre[0]}
@@ -208,9 +210,11 @@ export function CovalentDiagram({
         })}
       </svg>
       <figcaption>
-        {proposed
-          ? "Your proposed diagram is retained; it is not corrected automatically."
-          : "Outer-electron reference diagram."}{" "}
+        {contextLabel
+          ? `${contextLabel}. The diagram displays the shown electron counts.`
+          : proposed
+            ? "Your proposed diagram is retained; it is not corrected automatically."
+            : "Outer-electron reference diagram."}{" "}
         Dots come from the reference atom; crosses from its partners. All
         electrons are the same kind of particle. Circles and positions are
         schematic; inner electrons are omitted.

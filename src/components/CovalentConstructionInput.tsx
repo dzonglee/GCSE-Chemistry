@@ -7,11 +7,13 @@ export function CovalentConstructionInput({
   value,
   onChange,
   disabled = false,
+  contextLabel,
 }: {
   question: Question;
   value: string;
   onChange: (value: string) => void;
   disabled?: boolean;
+  contextLabel?: string;
 }) {
   const molecule = question.drawCovalent!.molecule,
     spec = covalentMolecules[molecule],
@@ -80,6 +82,7 @@ export function CovalentConstructionInput({
       </fieldset>
       {drawable ? (
         <CovalentDiagram
+          contextLabel={contextLabel}
           molecule={molecule}
           own={spec.partners.map((_, i) => count(`centre${i}`))}
           other={spec.partners.map((_, i) => count(`partner${i}`))}

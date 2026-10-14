@@ -222,18 +222,20 @@ export function ExamPaperReview({
                       />
                     </section>
                   )}
-                  {(q.profileDrawing ||
-                    q.drawArrangement ||
-                    q.drawDotCross ||
-                    q.drawCovalent) && (
-                    <QuestionInput
-                      question={q}
-                      value={q.answer}
-                      disabled
-                      onChange={() => {}}
-                      compactAssessment
-                    />
-                  )}
+                  {!part.referenceConstruction &&
+                    (q.profileDrawing ||
+                      q.drawArrangement ||
+                      q.drawDotCross ||
+                      q.drawCovalent) && (
+                      <QuestionInput
+                        question={q}
+                        value={q.answer}
+                        contextLabel={`Worked ${part.number} reference`}
+                        disabled
+                        onChange={() => {}}
+                        compactAssessment
+                      />
+                    )}
                   {part.automaticMarks > 0 && (
                     <p>
                       {review.finalCorrect

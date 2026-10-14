@@ -301,9 +301,17 @@ export function QuestionInput(props: InputProps) {
       {props.question.temperatureTrace && (
         <TemperatureTrace {...props.question.temperatureTrace} />
       )}
-      {props.question.buretteScale && (
-        <BuretteScale {...props.question.buretteScale} />
-      )}
+      {props.question.buretteScale &&
+        (props.compactAssessment ? (
+          <div className="aqueous-scale-response">
+            <div>
+              <ResponseInput {...props} />
+            </div>
+            <BuretteScale {...props.question.buretteScale} />
+          </div>
+        ) : (
+          <BuretteScale {...props.question.buretteScale} />
+        ))}
       {props.question.invertedGasScale && (
         <div className="aqueous-scale-response">
           <div>
@@ -619,6 +627,7 @@ export function QuestionInput(props: InputProps) {
           !props.question.parts
         ) &&
         !(props.compactAssessment && props.question.tangentGraph) &&
+        !(props.compactAssessment && props.question.buretteScale) &&
         !props.question.phMeasurements &&
         !props.question.invertedGasScale &&
         !props.question.halogenResults &&
@@ -896,6 +905,7 @@ function ResponseInput({
   if (question.drawCovalent)
     return (
       <CovalentConstructionInput
+        contextLabel={contextLabel}
         question={question}
         value={value}
         onChange={onChange}

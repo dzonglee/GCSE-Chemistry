@@ -1,0 +1,20 @@
+{
+  "reference": "eb001d50edbd276b20730cf415919548ae0df233",
+  "unchangedContentAndLibFiles": 363,
+  "acceptedPaperDefinitionsAndMetadata": 6,
+  "alcoholRuntimeUnchanged": true,
+  "legacyGraphSchemaAndDescriptionComparisons": 18,
+  "addedCandidate": "edexcel-paper-1-higher-full",
+  "allowedExistingSourceChanges": [
+    "src/components/CovalentConstructionInput.tsx",
+    "src/components/CovalentDiagram.tsx",
+    "src/components/ExamPaperReview.tsx",
+    "src/components/FuelDrawingInput.tsx",
+    "src/components/FuelPlotEditor.tsx",
+    "src/components/QuestionInput.tsx",
+    "src/components/TemperatureGraphReference.tsx",
+    "src/content/full-assessments.ts",
+    "src/lib/alcohols.ts",
+    "src/lib/fuel-drawing.ts"
+  ]
+}

@@ -5,7 +5,7 @@ The requested target is four full Separate Chemistry papers per board: AQA 8462,
 | Board       | Components          | Marks each | Minutes each | Current expansion status                                                                       |
 | ----------- | ------------------- | ---------: | -----------: | ---------------------------------------------------------------------------------------------- |
 | AQA         | 8462/1F, 2F, 1H, 2H |        100 |          105 | Four original papers; all four individual provenance audits and fresh sample delivery complete |
-| Edexcel     | 1CH0/1F, 2F, 1H, 2H |        100 |          105 | Foundation Papers1/2 individually accepted and delivered; Higher Papers1/2 pending                    |
+| Edexcel     | 1CH0/1F, 2F, 1H, 2H |        100 |          105 | Foundation Papers1/2 and Higher Paper1 individually accepted and delivered; Higher Paper2 pending                    |
 | OCR Gateway | J248/01, 02, 03, 04 |         90 |          105 | Pending individual authorship and acceptance                                                   |
 
 OCR has 15 Section A multiple-choice marks plus 75 Section B marks, **90 total**. The final target is 1,160 marks, not 1,200. Its component/topic allocation differs from AQA and Pearson. Pearson places extracting metals/equilibria in component 1 and rates/energy in component 2. Papers must follow their own board allocation.
@@ -27,6 +27,8 @@ Current individual records:
 - [Edexcel 1CH0/1F basis](edexcel-1f-basis.md): individually researched/authored, final affected checks, 22 initial captures plus8 corrected-tier captures inspected and explicitly delivered.
 
 - [Edexcel 1CH0/2F basis](edexcel-2f-basis.md): individually researched/authored, final affected checks,28 inspected captures and explicit sample delivery complete.
+
+- [Edexcel 1CH0/1H basis](edexcel-1h-basis.md): individually researched/authored, complete scientific/marking/UI review,28 final inspected or byte-identical verified captures and explicit sample delivery complete.
 
 ## Baseline and current claims
 

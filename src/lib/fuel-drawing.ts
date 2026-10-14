@@ -50,6 +50,8 @@ export function describeFuelDrawing(raw: string, data: FuelPlotRecord) {
   return (
     "Your observation coordinates: " +
     points.join("; ") +
-    ". Your fit and estimate require the graph self-review rubric."
+    (data.showEstimate === false
+      ? ". Your fit requires the graph self-review rubric."
+      : ". Your fit and estimate require the graph self-review rubric.")
   );
 }

@@ -33,6 +33,7 @@ export function FuelPlotEditor({
     [selected, setSelected] = useState(0),
     [layer, setLayer] = useState<"point" | "curve">("point"),
     straight = data.fitKind === "straight",
+    showEstimate = data.showEstimate !== false,
     fitName = straight ? "line" : "curve",
     indices =
       straight && layer === "curve"
@@ -59,7 +60,7 @@ export function FuelPlotEditor({
         ? []
         : [{ x, y: fuelCoordinate(board["c" + i]) }],
     ),
-    estimateValue = fuelCoordinate(board.estimate),
+    estimateValue = showEstimate ? fuelCoordinate(board.estimate) : null,
     extensionX = data.independentExtrapolation
       ? fuelCoordinate(board.extensionX)
       : data.targetX,
@@ -435,18 +436,21 @@ export function FuelPlotEditor({
                 data-fit={straight ? "your-chosen-line" : "your-chosen-curve"}
               />
             )}
-            {hasCurve && extrapolationAnchor && projectedY !== null && (
-              <line
-                x1={px(extrapolationAnchor.x)}
-                y1={py(extrapolationAnchor.y!)}
-                x2={px(extensionX!)}
-                y2={py(projectedY)}
-                stroke="#bd7624"
-                strokeWidth="3"
-                strokeDasharray="7 5"
-                data-fit-extrapolation="your-proposal"
-              />
-            )}
+            {showEstimate &&
+              hasCurve &&
+              extrapolationAnchor &&
+              projectedY !== null && (
+                <line
+                  x1={px(extrapolationAnchor.x)}
+                  y1={py(extrapolationAnchor.y!)}
+                  x2={px(extensionX!)}
+                  y2={py(projectedY)}
+                  stroke="#bd7624"
+                  strokeWidth="3"
+                  strokeDasharray="7 5"
+                  data-fit-extrapolation="your-proposal"
+                />
+              )}
             {points.map((p) =>
               p.x === null || p.y === null ? null : (
                 <g key={p.i} data-plot-point={p.i} data-x={p.x} data-y={p.y}>
@@ -469,7 +473,7 @@ export function FuelPlotEditor({
                 </g>
               ),
             )}
-            {fuelCoordinate(board.estimate) !== null && (
+            {showEstimate && fuelCoordinate(board.estimate) !== null && (
               <circle
                 cx={px(data.targetX)}
                 cy={py(fuelCoordinate(board.estimate)!)}
@@ -495,17 +499,26 @@ export function FuelPlotEditor({
       <p>
         Each labelled interval has five small squares. Blue crosses: your
         plotted observations. Amber {fitName}: your chosen fit, drawn only after
-        {straight ? " both end heights" : " all curve heights"} are entered.
-        Open amber circle: your proposed estimate at x={data.targetX}. Neither
-        fit nor estimate is automatically examiner-marked.
+        {straight ? " both end heights" : " all curve heights"} are entered.{" "}
+        {showEstimate ? (
+          <>
+            Open amber circle: your proposed estimate at x={data.targetX}.
+            Neither fit nor estimate is automatically examiner-marked.
+          </>
+        ) : (
+          "Your fit is saved for manual review; no automatic graph mark is awarded."
+        )}
       </p>
-      {hasCurve && extrapolationAnchor && projectedY !== null && (
-        <p>
-          {straight
-            ? "The dashed segment extends your straight line using its slope. Compare its y-axis crossing with your separate estimate circle; neither is automatically marked."
-            : "The dashed segment joins your own outer fit height to your chosen extrapolated estimate. It represents your proposal beyond the original observations and is self-reviewed."}
-        </p>
-      )}
+      {showEstimate &&
+        hasCurve &&
+        extrapolationAnchor &&
+        projectedY !== null && (
+          <p>
+            {straight
+              ? "The dashed segment extends your straight line using its slope. Compare its y-axis crossing with your separate estimate circle; neither is automatically marked."
+              : "The dashed segment joins your own outer fit height to your chosen extrapolated estimate. It represents your proposal beyond the original observations and is self-reviewed."}
+          </p>
+        )}
       {outside.length > 0 && (
         <p role="status">
           Retained outside the original printed scale: {outside.join("; ")}. The
@@ -532,10 +545,12 @@ export function FuelPlotEditor({
                 </div>
               ),
             )}
-            <div>
-              <dt>Separate estimate at x={data.targetX}</dt>
-              <dd>{board.estimate || "blank"}</dd>
-            </div>
+            {showEstimate && (
+              <div>
+                <dt>Separate estimate at x={data.targetX}</dt>
+                <dd>{board.estimate || "blank"}</dd>
+              </div>
+            )}
             {data.independentExtrapolation && (
               <div>
                 <dt>Extension endpoint x</dt>
@@ -567,18 +582,20 @@ export function FuelPlotEditor({
               </p>
             </div>
           )}
-          <div className="organic-field">
-            <label htmlFor={uid + "-estimate"}>
-              Your proposed estimate at x={data.targetX} ({data.yUnit})
-            </label>
-            <input
-              id={uid + "-estimate"}
-              inputMode="decimal"
-              disabled={disabled}
-              value={inputValues.estimate}
-              onChange={(e) => onChange({ estimate: e.target.value })}
-            />
-          </div>
+          {showEstimate && (
+            <div className="organic-field">
+              <label htmlFor={uid + "-estimate"}>
+                Your proposed estimate at x={data.targetX} ({data.yUnit})
+              </label>
+              <input
+                id={uid + "-estimate"}
+                inputMode="decimal"
+                disabled={disabled}
+                value={inputValues.estimate}
+                onChange={(e) => onChange({ estimate: e.target.value })}
+              />
+            </div>
+          )}
         </>
       )}
     </section>

@@ -54,6 +54,8 @@ export function FuelDrawingInput({
     );
   const temperature = drawing.data.context === "temperature";
   const measurement = drawing.data.context === "measurement";
+  const zeroMeasured =
+    drawing.data.points[0][0] <= 0 && drawing.data.points.at(-1)![0] >= 0;
   const plotName = temperature
     ? "temperature graph"
     : measurement
@@ -176,9 +178,11 @@ export function FuelDrawingInput({
             <p>
               Use two separate end heights for a straight best-fit line, with
               observations balanced around it. Do not join the observations dot
-              to dot. Your intercept is an estimate outside the measured x
-              values. Save to compare the criteria; no automatic graph mark is
-              awarded.
+              to dot.{" "}
+              {zeroMeasured
+                ? "Zero is within the measured x range."
+                : "Your intercept is an estimate outside the measured x values."}{" "}
+              Save to compare the criteria; no automatic graph mark is awarded.
             </p>
           )}
         </>

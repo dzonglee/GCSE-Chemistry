@@ -5,6 +5,7 @@ import { paper1HigherFull } from "./paper1-higher-full";
 import { paper2HigherFull } from "./paper2-higher-full";
 import { edexcelPaper1FoundationFull } from "./edexcel-paper1-foundation-full";
 import { edexcelPaper2FoundationFull } from "./edexcel-paper2-foundation-full";
+import { edexcelPaper1HigherFull } from "./edexcel-paper1-higher-full";
 
 export const fullPapers: Assessment[] = [
   {
@@ -100,5 +101,20 @@ export const fullPapers: Assessment[] = [
     examPaper: edexcelPaper2FoundationFull,
     questions: edexcelPaper2FoundationFull.parts.map((part) => part.question),
     topics: edexcelPaper2FoundationFull.parts.map((part) => part.topic),
+  },
+  {
+    slug: edexcelPaper1HigherFull.id,
+    title: "Edexcel Paper 1 · Higher",
+    shortTitle: "Paper 1 · Higher",
+    description:
+      "An original 100-mark, 105-minute Pearson Edexcel Separate Chemistry paper. Its own 43 parts include isotope and particle calculations, oxygen construction, two extended responses, accurate titration, copper plotting, limiting-reactant gas calculations and industrial decisions. Submit the whole paper before reviewing retained work and method marks.",
+    tier: "higher",
+    course: "separate",
+    structure: "full",
+    kind: "paper",
+    minutes: edexcelPaper1HigherFull.minutes,
+    examPaper: edexcelPaper1HigherFull,
+    questions: edexcelPaper1HigherFull.parts.map((part) => part.question),
+    topics: edexcelPaper1HigherFull.parts.map((part) => part.topic),
   },
 ];

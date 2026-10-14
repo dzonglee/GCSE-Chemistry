@@ -14,6 +14,7 @@ export function TemperatureGraphReference({
   if ((!measurement && d.context !== "temperature") || !ends) return null;
   const first = d.points[0][0],
     last = d.points.at(-1)![0];
+  const extrapolated = first > 0;
   const fitHeight = (x: number) =>
     ends[0] + ((x - first) * (ends[1] - ends[0])) / (last - first);
   const px = (x: number) => 100 + ((x - d.xMin) / (d.xMax - d.xMin)) * 520;
@@ -22,8 +23,9 @@ export function TemperatureGraphReference({
     <details className="temperature-graph-reference">
       <summary>Compare a reference graph</summary>
       <p>
-        One suitable straight fit; other balanced lines are possible. Compare
-        every point, your line and its extrapolation on the same scales.
+        {extrapolated
+          ? "One suitable straight fit; other balanced lines are possible. Compare every point, your line and its extrapolation on the same scales."
+          : "One suitable straight fit; other balanced lines are possible. Compare every point and your line on the same scales. Zero is within the measured range."}
       </p>
       <p id={captionId} className="graph-axis-caption">
         Horizontal axis: {d.xName}
@@ -41,7 +43,7 @@ export function TemperatureGraphReference({
           viewBox="0 0 650 450"
           style={{ minWidth: 390, maxWidth: 650 }}
           role="img"
-          aria-label={`Reference observations with one balanced straight fit and its extrapolation to zero ${d.xName.toLowerCase()}`}
+          aria-label={`Reference observations with one balanced straight fit${extrapolated ? ` and its extrapolation to zero ${d.xName.toLowerCase()}` : "; zero is within the measured range"}`}
         >
           {Array.from(
             { length: Math.round((d.xMax - d.xMin) / d.xTick) + 1 },
@@ -107,15 +109,17 @@ export function TemperatureGraphReference({
             stroke="#bd7624"
             strokeWidth="3"
           />
-          <line
-            x1={px(first)}
-            y1={py(ends[0])}
-            x2={px(0)}
-            y2={py(fitHeight(0))}
-            stroke="#bd7624"
-            strokeWidth="3"
-            strokeDasharray="7 5"
-          />
+          {extrapolated && (
+            <line
+              x1={px(first)}
+              y1={py(ends[0])}
+              x2={px(0)}
+              y2={py(fitHeight(0))}
+              stroke="#bd7624"
+              strokeWidth="3"
+              strokeDasharray="7 5"
+            />
+          )}
           {d.points.map(([x, y], i) => (
             <g key={i}>
               <line
@@ -148,7 +152,10 @@ export function TemperatureGraphReference({
         </svg>
       </div>
       <p>
-        {d.note} Its extrapolated intercept is approximately{" "}
+        {d.note}{" "}
+        {extrapolated
+          ? "Its extrapolated intercept is approximately "
+          : "Its intercept within the measured range is approximately "}
         {measurement
           ? Number(fitHeight(0).toFixed(6))
           : fitHeight(0).toFixed(1)}{" "}

@@ -1,0 +1,40 @@
+{
+  "build": "CCm1c_fG-akoUN4I0r8mC",
+  "capturedAt": "2026-10-14T21:52:00.944Z",
+  "inspectedAt": "2026-10-14T21:55:36.483508+00:00",
+  "all28HashesVerified": true,
+  "directlyViewedFinalChangedFrames": [
+    "390-6a.png",
+    "390-review-6a.png",
+    "1280-6a.png",
+    "1280-review-6a.png"
+  ],
+  "byteIdenticalToEarlierPersonallyViewedFrames": [
+    "390-intro.png",
+    "390-basis.png",
+    "390-2a.png",
+    "390-2b.png",
+    "390-5a.png",
+    "390-5b.png",
+    "390-5c.png",
+    "390-6b.png",
+    "390-8a.png",
+    "390-review-2a.png",
+    "390-review-5b.png",
+    "390-review-6b.png",
+    "1280-intro.png",
+    "1280-basis.png",
+    "1280-2a.png",
+    "1280-2b.png",
+    "1280-5a.png",
+    "1280-5b.png",
+    "1280-5c.png",
+    "1280-6b.png",
+    "1280-8a.png",
+    "1280-review-2a.png",
+    "1280-review-5b.png",
+    "1280-review-6b.png"
+  ],
+  "previousInspection": "All28 V3 original frames were directly viewed; six changed V5 frames were then directly viewed. Final V6 has24 byte-identical already-inspected frames and four directly viewed graph frames.",
+  "controlledFixtures": "Question openings and unresolved submitted reviews; no grade, score or fresh-independent success is inferred."
+}
