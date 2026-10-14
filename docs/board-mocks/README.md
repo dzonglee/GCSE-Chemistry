@@ -4,7 +4,7 @@ The requested target is four full Separate Chemistry papers per board: AQA 8462,
 
 | Board | Components | Marks each | Minutes each | Current expansion status |
 | --- | --- | ---: | ---: | --- |
-| AQA | 8462/1F, 2F, 1H, 2H | 100 | 105 | Four existing original papers; individual provenance re-audits in progress |
+| AQA | 8462/1F, 2F, 1H, 2H | 100 | 105 | Four original papers; all four individual provenance audits and fresh sample delivery complete |
 | Edexcel | 1CH0/1F, 2F, 1H, 2H | 100 | 105 | Pending individual authorship and acceptance |
 | OCR Gateway | J248/01, 02, 03, 04 | 90 | 105 | Pending individual authorship and acceptance |
 
@@ -21,6 +21,8 @@ Current individual records:
 * [AQA 8462/2F basis](aqa-2f-basis.md): content re-audit, fresh affected checks, twelve personally inspected captures and explicit sample delivery complete.
 
 * [AQA 8462/1H basis](aqa-1h-basis.md): Higher demand audit, fresh affected checks, twelve personally inspected captures and explicit delivery complete.
+
+* [AQA 8462/2H basis](aqa-2h-basis.md): Higher demand/citation audit, fresh affected checks, twelve personally inspected captures and explicit delivery complete.
 
 ## Baseline and current claims
 

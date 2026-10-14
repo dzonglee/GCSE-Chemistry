@@ -1,0 +1,68 @@
+{
+  "paper": "paper-2-higher-full",
+  "build": "4nAg0__zUib_le0qnNSgb",
+  "capturedAt": "2026-10-14T13:47:31.307Z",
+  "note": "Controlled native QA saved/reloaded: original six-point curve with unanswered extrapolation, correct-value tangent with wrong precision, reversed equivalent repeat with deliberately wrong upper-case N, and incomplete nutrient/cost evaluation. Complete unseeded 49-part submission/review flows checked separately.",
+  "captures": [
+    {
+      "file": "390-intro.png",
+      "width": 390,
+      "sha256": "5588300047a014389a688b652982cbb129888514242fda5aa05cc8a4cf0c32e9"
+    },
+    {
+      "file": "390-basis.png",
+      "width": 390,
+      "sha256": "f66ad58dcda90c280345d4e06474b58cc75cb2ce0fb5e65b0d0e068078528a4f"
+    },
+    {
+      "file": "390-2b.png",
+      "width": 390,
+      "sha256": "902fc8dc597222b962ceea9be65dbb9c6c865a4f6106abaf0ae7e67397602a03"
+    },
+    {
+      "file": "390-7c.png",
+      "width": 390,
+      "sha256": "7055b8c46e7303da10558a7c5f15ba5842f65c6efeff4920bf9bc3b70f66c2d1"
+    },
+    {
+      "file": "390-8b.png",
+      "width": 390,
+      "sha256": "245314672d2407aeee42d543642e4ebee4b29065b3ac134543b865c5920d1b05"
+    },
+    {
+      "file": "390-10a.png",
+      "width": 390,
+      "sha256": "5d1d0c5f89ad372d587019b531d8f045402c8f9bedd24f98ebf25cf18a2fa7cc"
+    },
+    {
+      "file": "1280-intro.png",
+      "width": 1280,
+      "sha256": "4ae645ebe6411629365a8e07d0cc5187fe5e6948bd3c93b7395b1b85bf8b3087"
+    },
+    {
+      "file": "1280-basis.png",
+      "width": 1280,
+      "sha256": "b0840c673c867ef7effa0f47f531d30d5db78d13e04d955160f12b46afd9ef22"
+    },
+    {
+      "file": "1280-2b.png",
+      "width": 1280,
+      "sha256": "8a99087295f08057e347341842aa557b73357952cef9a651a495e2d3d6ba37a7"
+    },
+    {
+      "file": "1280-7c.png",
+      "width": 1280,
+      "sha256": "2d2d2182cd820cf2e057739df5e22d33854ae816c974ee40af3a8a3c80130572"
+    },
+    {
+      "file": "1280-8b.png",
+      "width": 1280,
+      "sha256": "c95e3c433a2a4d5fc71f0d4bf8c6af4a6667ec8ed3b869392fee5fda661980df"
+    },
+    {
+      "file": "1280-10a.png",
+      "width": 1280,
+      "sha256": "8a0740c4dfd245af0ad7971efb9e1fc1dd0171a428886c9260f2b4d92e085b0d"
+    }
+  ]
+}

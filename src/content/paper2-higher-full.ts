@@ -1333,7 +1333,7 @@ export const higherPaper2Equilibrium: ExamPart[] = [
     "9(c)",
     "Reversible changes and equilibrium",
     "rates",
-    ["4.6.2.4", "4.6.2.5"],
+    ["4.6.2.4", "4.6.2.6"],
     written(
       "09c",
       "Explain the temperature effect",
@@ -1594,6 +1594,16 @@ export const higherPaper2Fertilisers: ExamPart[] = [
 ];
 
 export const paper2HigherFull: ExamPaper = {
+  basis: {
+    board: "AQA",
+    qualification: "8462",
+    component: "8462/2H",
+    summary:
+      "Paper 2 topics with Higher demands: instantaneous rate from a tangent, equilibrium shifts, condensation polymers and bio-extraction. Original evidence includes supplied spectra, an unfamiliar addition monomer and a nutrient-and-cost fertiliser evaluation.",
+    specificationUrl:
+      "https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF",
+    researchPath: "docs/board-mocks/aqa-2h-basis.md",
+  },
   id: "paper-2-higher-full",
   totalMarks: 100,
   minutes: 105,
