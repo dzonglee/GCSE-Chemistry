@@ -4,6 +4,7 @@ import { paper2FoundationFull } from "./paper2-foundation-full";
 import { paper1HigherFull } from "./paper1-higher-full";
 import { paper2HigherFull } from "./paper2-higher-full";
 import { edexcelPaper1FoundationFull } from "./edexcel-paper1-foundation-full";
+import { edexcelPaper2FoundationFull } from "./edexcel-paper2-foundation-full";
 
 export const fullPapers: Assessment[] = [
   {
@@ -84,5 +85,20 @@ export const fullPapers: Assessment[] = [
     examPaper: edexcelPaper1FoundationFull,
     questions: edexcelPaper1FoundationFull.parts.map((part) => part.question),
     topics: edexcelPaper1FoundationFull.parts.map((part) => part.topic),
+  },
+  {
+    slug: edexcelPaper2FoundationFull.id,
+    title: "Edexcel Paper 2 · Foundation",
+    shortTitle: "Paper 2 · Foundation",
+    description:
+      "An original 100-mark, 105-minute Pearson Edexcel Separate Chemistry paper. Its own48 parts include gas-rate plotting, endothermic profiles, ion identification, photometer calibration, alcohol and polymer construction, atmosphere evidence and nanoparticle calculations. Submit the whole paper before reviewing retained work and method marks.",
+    tier: "foundation",
+    course: "separate",
+    structure: "full",
+    kind: "paper",
+    minutes: edexcelPaper2FoundationFull.minutes,
+    examPaper: edexcelPaper2FoundationFull,
+    questions: edexcelPaper2FoundationFull.parts.map((part) => part.question),
+    topics: edexcelPaper2FoundationFull.parts.map((part) => part.topic),
   },
 ];

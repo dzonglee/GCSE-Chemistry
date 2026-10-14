@@ -28,6 +28,20 @@ export function boardPaperAuthor(prefix: string, tier: Tier) {
         text,
         marks: value,
       }));
+      const manualNative =
+        response === "native" &&
+        Boolean(
+          extra.question?.fuelDrawing ||
+          extra.question?.organicDrawing ||
+          extra.question?.polymerisationDrawing ||
+          extra.question?.polyesterDrawing ||
+          extra.question?.naturalDrawing ||
+          extra.question?.pathwayDrawing ||
+          extra.question?.purityDrawing ||
+          extra.question?.tangentDrawing ||
+          extra.question?.rateDrawing ||
+          extra.question?.haberDrawing,
+        );
       const question: Question = {
         id: prefix + number.replace(/[()]/g, ""),
         tier,
@@ -37,7 +51,7 @@ export function boardPaperAuthor(prefix: string, tier: Tier) {
         answer: reference,
         explanation: reference,
         hint: "Work independently. Review only after submitting the whole paper.",
-        ...(response === "written"
+        ...(response === "written" || manualNative
           ? {
               rubric: review.length
                 ? review.map(([text]) => text)

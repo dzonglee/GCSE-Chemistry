@@ -1,0 +1,148 @@
+{
+  "paper": "edexcel-paper-2-foundation-full",
+  "build": "JWZp0C6QbEmJ88dH_Ozms",
+  "capturedAt": "2026-10-14T18:41:23.710Z",
+  "note": "Controlled QA openings and unresolved submitted reviews; no score or fresh-independent success is inferred from these captures.",
+  "captures": [
+    {
+      "file": "390-intro.png",
+      "width": 390,
+      "sha256": "ad57e27e11f539ebf91ce4d42cc8677ba456a6265c557ccccb5c1c580f968f97"
+    },
+    {
+      "file": "390-basis.png",
+      "width": 390,
+      "sha256": "22b9a754b6ac63d9631a441163e6a1838d565b72db41134610199c63acbfdb06"
+    },
+    {
+      "file": "390-3a.png",
+      "width": 390,
+      "sha256": "70306ba284d66ce08a25fd9b238c9b05c1345b849fde3d5dfa36f26ec7f8df31"
+    },
+    {
+      "file": "390-4a.png",
+      "width": 390,
+      "sha256": "80226f18532794066755dcb55a4999a28a0a9b68dd27958318e3d50f8d24c15e"
+    },
+    {
+      "file": "390-4c.png",
+      "width": 390,
+      "sha256": "9118bbf119f311fccbd40c20dae380022f4baf44cc928f7def3fb114b00a12ab"
+    },
+    {
+      "file": "390-7a.png",
+      "width": 390,
+      "sha256": "b928392e4dea2e00ef89514508d5d76de512e99f775b478baabc654e1c6e142c"
+    },
+    {
+      "file": "390-7b.png",
+      "width": 390,
+      "sha256": "e7ff4e99df3315a7d364aaaba2b4744700c7218d725fe8d4f40ac084e77ee7a6"
+    },
+    {
+      "file": "390-8a.png",
+      "width": 390,
+      "sha256": "196b0f1d18da5018345b3272894846925868fc4fa4741ef044cfb03edb8f9762"
+    },
+    {
+      "file": "390-9a.png",
+      "width": 390,
+      "sha256": "956352f9464aa5406a3f8f09a09a41ebd42412014ad98888d601f257a90ed822"
+    },
+    {
+      "file": "390-10b.png",
+      "width": 390,
+      "sha256": "108ad70ae0393a494f05ecea7b3117019a4eeac6fb025d97ae05d907c57f0458"
+    },
+    {
+      "file": "390-review-3a.png",
+      "width": 390,
+      "sha256": "d82fe2ca5e29695e78d0a6f47047d32f6b6f20776b05aee5516783246959b033"
+    },
+    {
+      "file": "390-review-7a.png",
+      "width": 390,
+      "sha256": "dfa09994b38ade0b06d46f027d381c565155105e0ba80ab0b8f0e365a836d924"
+    },
+    {
+      "file": "390-review-8a.png",
+      "width": 390,
+      "sha256": "0433866d1c83384f113ffb784f880a526cc337fe5449308fda0d0a3bdce55ff6"
+    },
+    {
+      "file": "390-review-9a.png",
+      "width": 390,
+      "sha256": "fd117c9a5911d36aa20b49976fc0d92258f85036ec804415a358fbdb2ecbd6d6"
+    },
+    {
+      "file": "1280-intro.png",
+      "width": 1280,
+      "sha256": "794aa99d659cf71649ee47531deb93e2f29aa8df543b1f03d3f4de173244d89c"
+    },
+    {
+      "file": "1280-basis.png",
+      "width": 1280,
+      "sha256": "d2e3d8e1e6adf7407c845290e148f6b85f21b516627e5d1b53b7fe242988d21f"
+    },
+    {
+      "file": "1280-3a.png",
+      "width": 1280,
+      "sha256": "2d8137580869c91988d844d2ccc816f5c9740e15947d3c6f17301f96d7a2d11c"
+    },
+    {
+      "file": "1280-4a.png",
+      "width": 1280,
+      "sha256": "a4b508142522406b49ecbc9b0bca16aea2a361ed87dc2a9f47ae1ceb522cecbd"
+    },
+    {
+      "file": "1280-4c.png",
+      "width": 1280,
+      "sha256": "fc86a721a7831403532b6d4c78ed7dc167edae158f317de6240c7f2fc10b80d0"
+    },
+    {
+      "file": "1280-7a.png",
+      "width": 1280,
+      "sha256": "932c1523235254b603948dd0a50998e9cf35a26fdcf3b0a677f0e37f1731eabd"
+    },
+    {
+      "file": "1280-7b.png",
+      "width": 1280,
+      "sha256": "6dfddd87544886d4a29d7b9c01f128a9d0f30c276eeae9ec5f14056d6d434c2a"
+    },
+    {
+      "file": "1280-8a.png",
+      "width": 1280,
+      "sha256": "129b16ee4da3ca8b1fe99459595c9e92dc9682caffee71642c31a3aac2288ce0"
+    },
+    {
+      "file": "1280-9a.png",
+      "width": 1280,
+      "sha256": "08af813d0a83dd934d0a9033a823c0b32db47d1404d966413a5fc3fdaede3117"
+    },
+    {
+      "file": "1280-10b.png",
+      "width": 1280,
+      "sha256": "aea0e5a9d204d7ce77d59437f933317aa8bf1e1e889fadc8958b6413f39e2eab"
+    },
+    {
+      "file": "1280-review-3a.png",
+      "width": 1280,
+      "sha256": "7357be6b2711b21529ecc935093efa022388858c996d05011895335ae9910453"
+    },
+    {
+      "file": "1280-review-7a.png",
+      "width": 1280,
+      "sha256": "12447da1a9f7a7bb400f05adc3bd69c10df562f518dc098ae02da432070c0d7b"
+    },
+    {
+      "file": "1280-review-8a.png",
+      "width": 1280,
+      "sha256": "c4f07775414f7072b8c4a4422117857feffaf9e6279b3c5ced8a974a59f75b17"
+    },
+    {
+      "file": "1280-review-9a.png",
+      "width": 1280,
+      "sha256": "69baf5c94d672ef44aaac8f387a119c1cbbe01316b98a5b8245bc304bd5fd836"
+    }
+  ]
+}

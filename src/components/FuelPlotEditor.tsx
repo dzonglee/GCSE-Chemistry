@@ -1,6 +1,7 @@
 "use client";
 import { useId, useState } from "react";
 import { FUEL_GRID_SUBDIVISIONS, type FuelPlotRecord } from "../lib/alcohols";
+import { measurementCurveSegments } from "../lib/measurement-curve";
 export function fuelCoordinate(raw: string | undefined) {
   return raw !== undefined &&
     /^(?:0|[1-9]\d*)(?:\.\d+)?$/.test(raw) &&
@@ -101,16 +102,22 @@ export function FuelPlotEditor({
   let path = "";
   if (hasCurve) {
     path = "M" + curvePoints[0].x + "," + curvePoints[0].y;
-    for (let i = 0; i < curvePoints.length - 1; i++) {
-      const p0 = curvePoints[Math.max(0, i - 1)],
-        p1 = curvePoints[i],
-        p2 = curvePoints[i + 1],
-        p3 = curvePoints[Math.min(curvePoints.length - 1, i + 2)];
-      if (straight) {
-        path += ` L${p2.x},${p2.y}`;
-        continue;
+    if (data.context === "measurement" && !straight) {
+      for (const s of measurementCurveSegments(curvePoints)) {
+        path += ` C${s.first.x},${s.first.y} ${s.second.x},${s.second.y} ${s.to.x},${s.to.y}`;
       }
-      path += ` C${p1.x + (p2.x - p0.x) / 6},${p1.y + (p2.y - p0.y) / 6} ${p2.x - (p3.x - p1.x) / 6},${p2.y - (p3.y - p1.y) / 6} ${p2.x},${p2.y}`;
+    } else {
+      for (let i = 0; i < curvePoints.length - 1; i++) {
+        const p0 = curvePoints[Math.max(0, i - 1)],
+          p1 = curvePoints[i],
+          p2 = curvePoints[i + 1],
+          p3 = curvePoints[Math.min(curvePoints.length - 1, i + 2)];
+        if (straight) {
+          path += ` L${p2.x},${p2.y}`;
+          continue;
+        }
+        path += ` C${p1.x + (p2.x - p0.x) / 6},${p1.y + (p2.y - p0.y) / 6} ${p2.x - (p3.x - p1.x) / 6},${p2.y - (p3.y - p1.y) / 6} ${p2.x},${p2.y}`;
+      }
     }
   }
   function place(x: number, y: number) {

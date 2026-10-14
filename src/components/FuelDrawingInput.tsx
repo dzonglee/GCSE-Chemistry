@@ -164,12 +164,23 @@ export function FuelDrawingInput({
       {(temperature || measurement) && (
         <>
           <p>{drawing.note}</p>
-          <p>
-            Use two separate end heights for a straight best-fit line, with
-            observations balanced around it. Do not join the observations dot to
-            dot. Your intercept is an estimate outside the measured x values.
-            Save to compare the criteria; no automatic graph mark is awarded.
-          </p>
+          {measurement && drawing.data.fitKind !== "straight" ? (
+            <p>
+              Choose separate heights for a smooth supported fit, with
+              observations balanced around it. Do not join the observations with
+              straight dot-to-dot segments. Any optional estimate is retained
+              separately. Save to compare the criteria after submission; no
+              automatic graph mark is awarded.
+            </p>
+          ) : (
+            <p>
+              Use two separate end heights for a straight best-fit line, with
+              observations balanced around it. Do not join the observations dot
+              to dot. Your intercept is an estimate outside the measured x
+              values. Save to compare the criteria; no automatic graph mark is
+              awarded.
+            </p>
+          )}
         </>
       )}
       <button
