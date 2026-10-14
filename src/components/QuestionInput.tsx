@@ -795,6 +795,7 @@ function ResponseInput({
         value={value}
         onChange={onChange}
         drawing={question.polyesterDrawing}
+        contextLabel={contextLabel}
         compact={compactAssessment}
         disabled={disabled}
       />
@@ -855,6 +856,7 @@ function ResponseInput({
         value={value}
         onChange={onChange}
         disabled={disabled}
+        contextLabel={contextLabel}
       />
     );
   if (question.haberDrawing)
@@ -883,6 +885,7 @@ function ResponseInput({
         value={value}
         onChange={onChange}
         disabled={disabled}
+        contextLabel={contextLabel}
       />
     );
   if (question.polymerRepeatDrawing)

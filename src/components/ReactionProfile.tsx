@@ -17,6 +17,7 @@ export function ReactionProfile({
   overallArrow,
   constructed = false,
   downloadable = false,
+  contextLabel,
 }: {
   profile: ProfileDiagram;
   alternative?: ProfileDiagram;
@@ -24,6 +25,7 @@ export function ReactionProfile({
   overallArrow?: string;
   constructed?: boolean;
   downloadable?: boolean;
+  contextLabel?: string;
 }) {
   const svg = useRef<SVGSVGElement>(null),
     [error, setError] = useState("");
@@ -99,7 +101,7 @@ export function ReactionProfile({
         style={{ width: "100%", height: "auto", display: "block" }}
       >
         <title id={id + "-title"}>
-          {(constructed ? "Your constructed" : "Supplied") +
+          {(contextLabel ?? (constructed ? "Your constructed" : "Supplied")) +
             " schematic profile: reactants " +
             profile.reactant +
             " kJ, products " +
@@ -213,13 +215,22 @@ export function ReactionProfile({
         </text>
       </svg>
       <figcaption>
-        {constructed ? "Your proposed curve." : "Supplied curve."} Relative
-        energy for the stated reaction amount. Progress is not elapsed time.
+        {contextLabel
+          ? `${contextLabel}.`
+          : constructed
+            ? "Your proposed curve."
+            : "Supplied curve."}{" "}
+        Relative energy for the stated reaction amount. Progress is not elapsed
+        time.
         {activationArrow && activationArrow !== "unset"
-          ? " Purple: your activation arrow."
+          ? contextLabel
+            ? " Purple: activation arrow."
+            : " Purple: your activation arrow."
           : ""}
         {overallArrow && overallArrow !== "unset"
-          ? " Gold: your overall-change arrow."
+          ? contextLabel
+            ? " Gold: overall-change arrow."
+            : " Gold: your overall-change arrow."
           : ""}
         {alternative
           ? " Blue solid: original. Gold dashed: your alternative."
@@ -229,7 +240,9 @@ export function ReactionProfile({
         <summary>Equivalent energy levels</summary>
         <table className="data-table">
           <caption>
-            {constructed ? "Your construction" : "Supplied profile"} / kJ
+            {contextLabel ??
+              (constructed ? "Your construction" : "Supplied profile")}{" "}
+            / kJ
           </caption>
           <thead>
             <tr>

@@ -179,8 +179,9 @@ export function TangentPlot({
         )}
       </svg>
       <figcaption>
-        {graph.label} Gold is the supplied curve; teal marks the requested
-        moment. Purple is{" "}
+        {graph.label}
+        {graph.label.endsWith(".") ? "" : "."} Gold is the supplied curve; teal
+        marks the requested moment. Purple is{" "}
         {suppliedLine ? "the supplied tangent" : "your proposed line"} and blue
         dashes its gradient triangle. Time {c.start}–{c.end} s; {c.quantity} 0–
         {c.max} {c.unit}.

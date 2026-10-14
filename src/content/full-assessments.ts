@@ -6,6 +6,7 @@ import { paper2HigherFull } from "./paper2-higher-full";
 import { edexcelPaper1FoundationFull } from "./edexcel-paper1-foundation-full";
 import { edexcelPaper2FoundationFull } from "./edexcel-paper2-foundation-full";
 import { edexcelPaper1HigherFull } from "./edexcel-paper1-higher-full";
+import { edexcelPaper2HigherFull } from "./edexcel-paper2-higher-full";
 
 export const fullPapers: Assessment[] = [
   {
@@ -116,5 +117,20 @@ export const fullPapers: Assessment[] = [
     examPaper: edexcelPaper1HigherFull,
     questions: edexcelPaper1HigherFull.parts.map((part) => part.question),
     topics: edexcelPaper1HigherFull.parts.map((part) => part.topic),
+  },
+  {
+    slug: edexcelPaper2HigherFull.id,
+    title: "Edexcel Paper 2 · Higher",
+    shortTitle: "Paper 2 · Higher",
+    description:
+      "An original 100-mark, 105-minute Pearson Edexcel Separate Chemistry paper. Its own 39 parts include halogen redox, tangent and energy-profile construction, cracking deductions, two extended responses, acid/monomer/polyester structures, finite-chain water loss, calibration and practical evaluation. Submit the whole paper before reviewing retained work and method marks.",
+    tier: "higher",
+    course: "separate",
+    structure: "full",
+    kind: "paper",
+    minutes: edexcelPaper2HigherFull.minutes,
+    examPaper: edexcelPaper2HigherFull,
+    questions: edexcelPaper2HigherFull.parts.map((part) => part.question),
+    topics: edexcelPaper2HigherFull.parts.map((part) => part.topic),
   },
 ];

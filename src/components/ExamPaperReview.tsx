@@ -14,6 +14,7 @@ import { canonicalAnswer, displayResponse } from "@/lib/marking";
 import { QuestionInput } from "./QuestionInput";
 import { TemperatureGraphReference } from "./TemperatureGraphReference";
 import { IonicSlice } from "./IonicSlice";
+import { PaperDrawingReview } from "./PaperDrawingReview";
 import Link from "next/link";
 
 function ReviewConstruction({
@@ -25,6 +26,19 @@ function ReviewConstruction({
   value: string;
   contextLabel: string;
 }) {
+  if (
+    question.tangentDrawing ||
+    question.profileDrawing ||
+    question.organicDrawing ||
+    (question.polyesterDrawing && !question.polyesterDrawing.construction)
+  )
+    return (
+      <PaperDrawingReview
+        question={question}
+        value={value}
+        contextLabel={contextLabel}
+      />
+    );
   if (question.fuelDrawing)
     return (
       <FuelDrawingInput
@@ -181,6 +195,8 @@ export function ExamPaperReview({
                     q.fuelDrawing ||
                     q.organicDrawing ||
                     q.polymerisationDrawing ||
+                    q.polyesterDrawing ||
+                    q.tangentDrawing ||
                     q.tangentGraph ||
                     q.haberGiven ||
                     q.chromatographyGiven ||
@@ -227,13 +243,10 @@ export function ExamPaperReview({
                       q.drawArrangement ||
                       q.drawDotCross ||
                       q.drawCovalent) && (
-                      <QuestionInput
+                      <ReviewConstruction
                         question={q}
                         value={q.answer}
                         contextLabel={`Worked ${part.number} reference`}
-                        disabled
-                        onChange={() => {}}
-                        compactAssessment
                       />
                     )}
                   {part.automaticMarks > 0 && (

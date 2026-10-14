@@ -9,9 +9,11 @@ import {
 export function PolyesterDisplayed({
   board: b,
   reference = false,
+  contextLabel,
 }: {
   board: Record<string, string>;
   reference?: boolean;
+  contextLabel?: string;
 }) {
   const tokens: { label: string; carbonyl?: string }[] = [];
   if (b.leftO === "1") tokens.push({ label: "O" });
@@ -30,9 +32,11 @@ export function PolyesterDisplayed({
         tabIndex={0}
         role="region"
         aria-label={
-          reference
-            ? "Reference polyester repeat; scroll horizontally if needed"
-            : "Your polyester repeat; scroll horizontally if needed"
+          contextLabel
+            ? `${contextLabel}: polyester repeat; scroll horizontally if needed`
+            : reference
+              ? "Reference polyester repeat; scroll horizontally if needed"
+              : "Your polyester repeat; scroll horizontally if needed"
         }
       >
         <svg
@@ -46,9 +50,11 @@ export function PolyesterDisplayed({
           }}
           role="img"
           aria-label={
-            reference
-              ? "Reference polyester repeating unit"
-              : "Your constructed polyester repeating unit"
+            contextLabel
+              ? `${contextLabel}: polyester repeating unit`
+              : reference
+                ? "Reference polyester repeating unit"
+                : "Your constructed polyester repeating unit"
           }
         >
           {tokens.map((t, i) => (
@@ -109,9 +115,11 @@ export function PolyesterDisplayed({
       </div>
       <figcaption>
         Scroll sideways if needed to inspect the complete repeat.{" "}
-        {reference
-          ? "Reference spacers and oxygen attachments are shown for self-review."
-          : "Your chosen spacers and oxygen attachments are retained."}{" "}
+        {contextLabel
+          ? `${contextLabel}: spacers and oxygen attachments are shown for comparison.`
+          : reference
+            ? "Reference spacers and oxygen attachments are shown for self-review."
+            : "Your chosen spacers and oxygen attachments are retained."}{" "}
         CH₂ is the provided spacer notation; both carboxyl carbons are shown
         separately. These are repeat contributions with omitted ends, not a full
         finite-chain formula.
@@ -211,12 +219,14 @@ export function PolyesterDrawingInput({
   onChange,
   drawing,
   disabled = false,
+  contextLabel,
 }: {
   value: string;
   onChange: (value: string) => void;
   drawing: import("../lib/polyester").PolyesterDrawingData;
   disabled?: boolean;
   compact?: boolean;
+  contextLabel?: string;
 }) {
   if (drawing.construction)
     return (
@@ -250,22 +260,39 @@ export function PolyesterDrawingInput({
     <section
       className="polymerisation-drawing"
       data-condensation-construction="legacy-repeat"
+      aria-label={
+        contextLabel ? `${contextLabel}: polyester construction` : undefined
+      }
     >
       <PolyesterChoices
         board={b}
         onChange={(k, v) => onChange(JSON.stringify({ ...b, [k]: v }))}
         disabled={disabled}
       />
-      <PolyesterDisplayed board={b} />
-      <p>
-        {drawing.note} Your construction is saved for manual review; no
-        automatic examiner drawing mark.
-      </p>
-      <p>
-        Your current repeat contributions: {atoms.C} C, {atoms.H} H and{" "}
-        {atoms.O} O atoms. Incomplete bonds and wrong spacer counts are
-        retained.
-      </p>
+      <PolyesterDisplayed board={b} contextLabel={contextLabel} />
+      {contextLabel ? (
+        <p>
+          {drawing.note} {contextLabel} is shown for manual comparison.
+        </p>
+      ) : (
+        <p>
+          {drawing.note} Your construction is saved for manual review; no
+          automatic examiner drawing mark.
+        </p>
+      )}
+      {contextLabel ? (
+        <p>
+          {contextLabel}: {atoms.C} C, {atoms.H} H and {atoms.O} O atoms per
+          repeat contribution. Compare spacers, bonds and notation with the
+          criteria.
+        </p>
+      ) : (
+        <p>
+          Your current repeat contributions: {atoms.C} C, {atoms.H} H and{" "}
+          {atoms.O} O atoms. Incomplete bonds and wrong spacer counts are
+          retained.
+        </p>
+      )}
       <button
         type="button"
         disabled={disabled}

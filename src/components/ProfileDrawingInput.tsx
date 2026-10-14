@@ -21,11 +21,13 @@ export function ProfileDrawingInput({
   onChange,
   disabled = false,
   compact = false,
+  contextLabel,
 }: {
   value: string;
   onChange: (v: string) => void;
   disabled?: boolean;
   compact?: boolean;
+  contextLabel?: string;
 }) {
   const b = readProfileDrawing(value) ?? emptyProfileDrawing(),
     levels = drawingLevels(b);
@@ -34,7 +36,11 @@ export function ProfileDrawingInput({
   return (
     <fieldset className="profile-drawing-input" disabled={disabled}>
       <legend>
-        {compact ? "Your energy diagram" : "Your constructed energy diagram"}
+        {contextLabel
+          ? `${contextLabel}: energy diagram`
+          : compact
+            ? "Your energy diagram"
+            : "Your constructed energy diagram"}
       </legend>
       <p>
         {compact
@@ -91,6 +97,7 @@ export function ProfileDrawingInput({
       {levels ? (
         <ReactionProfile
           profile={{ ...levels, max: 240, step: 40 }}
+          contextLabel={contextLabel}
           constructed
           activationArrow={b.activationArrow}
           overallArrow={b.overallArrow}

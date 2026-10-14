@@ -25,12 +25,14 @@ export function OrganicDisplayed({
   onToggle,
   supplied = false,
   contextLabel,
+  reviewOnly = false,
 }: {
   n: number;
   board: Record<string, string>;
   onToggle?: (key: string) => void;
   supplied?: boolean;
   contextLabel?: string;
+  reviewOnly?: boolean;
 }) {
   const width = n * 100 + 170,
     terminal = n * 100,
@@ -59,9 +61,11 @@ export function OrganicDisplayed({
         style={{ maxWidth: width, minWidth: Math.ceil((width * 12) / 26) }}
         role="img"
         aria-label={
-          supplied
-            ? "Original supplied C,H,O atoms and displayed covalent bonds. Two parallel lines denote a double bond."
-            : "Your C,H,O construction. Empty + markers are vacant slots, not atoms. Labelled controls provide a keyboard alternative."
+          contextLabel
+            ? `${contextLabel}: displayed C,H,O atoms and covalent bonds.${reviewOnly ? "" : " Empty + markers are vacant slots, not atoms."}`
+            : supplied
+              ? "Original supplied C,H,O atoms and displayed covalent bonds. Two parallel lines denote a double bond."
+              : "Your C,H,O construction. Empty + markers are vacant slots, not atoms. Labelled controls provide a keyboard alternative."
         }
         onClick={
           onToggle
@@ -92,7 +96,7 @@ export function OrganicDisplayed({
         {slots.map(({ key, c, slot }) => {
           const [x, y] = organicAttachment(n, c, slot),
             placed = board[key] === "yes";
-          if (supplied && !placed) return null;
+          if ((supplied || reviewOnly) && !placed) return null;
           return (
             <g
               key={key}
@@ -191,9 +195,11 @@ export function OrganicDisplayed({
         ))}
       </svg>
       <p>
-        {supplied
-          ? "Original supplied displayed structure; the layout does not claim actual bond angles."
-          : "Displayed proposal, not actual molecular angles. Each line is a single bond; parallel lines are double. Empty + markers are vacant slots, not H atoms. Scroll if needed; use labelled buttons to edit each H."}
+        {reviewOnly
+          ? `${contextLabel}: displayed structure, not actual molecular angles. Each line is a single bond; parallel lines are double. Scroll if needed to inspect every atom.`
+          : supplied
+            ? "Original supplied displayed structure; the layout does not claim actual bond angles."
+            : "Displayed proposal, not actual molecular angles. Each line is a single bond; parallel lines are double. Empty + markers are vacant slots, not H atoms. Scroll if needed; use labelled buttons to edit each H."}
       </p>
     </div>
   );

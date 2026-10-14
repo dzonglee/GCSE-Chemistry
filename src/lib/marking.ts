@@ -496,6 +496,20 @@ export const canonicalAnswer = (q: Question) =>
         : q.answer + (q.unit ? " " + q.unit : "");
 export function displayResponse(q: Question, raw: string) {
   if (!raw.trim()) return "No answer";
+  if (q.profileDrawing) {
+    const b = readProfileDrawing(raw);
+    if (!b) return "Unreadable energy diagram; original response retained.";
+    const arrows: Record<string, string> = {
+      "reactants-peak": "reactants → peak",
+      "products-peak": "products → peak",
+      "zero-peak": "zero reference → peak",
+      "reactants-products": "reactants → products",
+      "products-reactants": "products → reactants",
+      "peak-products": "peak → products",
+      unset: "not chosen",
+    };
+    return `Reactants: ${b.reactant || "not entered"} kJ; products: ${b.product || "not entered"} kJ; peak: ${b.peak || "not entered"} kJ. Activation arrow: ${arrows[b.activationArrow] ?? b.activationArrow}; overall-change arrow: ${arrows[b.overallArrow] ?? b.overallArrow}.`;
+  }
   if (q.tangentDrawing) {
     const b = readTangentDrawing(raw);
     return b

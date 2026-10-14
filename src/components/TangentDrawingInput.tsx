@@ -8,13 +8,18 @@ export function TangentDrawingInput({
   value,
   onChange,
   disabled = false,
+  contextLabel,
 }: {
   graph: TangentGraph;
   value: string;
   onChange: (v: string) => void;
   disabled?: boolean;
+  contextLabel?: string;
 }) {
   const b = readTangentDrawing(value);
+  const displayedGraph = contextLabel
+    ? { ...graph, label: `${contextLabel}. ${graph.label}` }
+    : graph;
   if (!b)
     return (
       <div className="rate-drawing-input">
@@ -36,11 +41,11 @@ export function TangentDrawingInput({
   return (
     <div className="rate-drawing-input">
       <p>
-        {graph.label} This drawing is saved for self-review; no examiner mark is
-        awarded.
+        {displayedGraph.label}. This drawing is saved for self-review; no
+        automatic examiner mark is awarded.
       </p>
       <TangentEditor
-        graph={graph}
+        graph={displayedGraph}
         persistedCoordinates
         board={b}
         disabled={disabled}
