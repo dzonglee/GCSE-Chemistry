@@ -1,0 +1,68 @@
+{
+  "paper": "paper-1-higher-full",
+  "build": "P77sP8Jwr-mR-yiJoWYNc",
+  "capturedAt": "2026-10-14T13:38:45.158Z",
+  "note": "Controlled native QA responses saved/reloaded: complete HCl, six measured points plus independently entered extrapolation, a deliberately four-significant-figure titration answer, and a valid alternate exothermic profile. Whole-paper flows tested separately.",
+  "captures": [
+    {
+      "file": "390-intro.png",
+      "width": 390,
+      "sha256": "5e456bf915fdde5beea5ecec755f72459d222fb2f37b690980a16149ff63557e"
+    },
+    {
+      "file": "390-basis.png",
+      "width": 390,
+      "sha256": "6e5b844ecab1e71891eb350f438872d96359a8a56aa4410a0cc1003800ee4258"
+    },
+    {
+      "file": "390-2a.png",
+      "width": 390,
+      "sha256": "c47727044eb00ce4414395ee83b2ebce0784190b765942b22624bd781ae2f4ba"
+    },
+    {
+      "file": "390-3b.png",
+      "width": 390,
+      "sha256": "b9f603a46f68e7e9592f1206b1e1bd0e9a97fa3b0f506d35c64e0bbbd96c9d2d"
+    },
+    {
+      "file": "390-5b.png",
+      "width": 390,
+      "sha256": "a9c6336a5f0f13c75109efaedd2f638cf2fa5e6e3f2991a376c1a97060c757e3"
+    },
+    {
+      "file": "390-9b.png",
+      "width": 390,
+      "sha256": "3672de0a41382d7563eeeedda6c6f037993499fc15b292a44857874a2d633ee6"
+    },
+    {
+      "file": "1280-intro.png",
+      "width": 1280,
+      "sha256": "20dd19329f27bfa0375e660d31415cf9e5234b612d36368f557ad8167bbade76"
+    },
+    {
+      "file": "1280-basis.png",
+      "width": 1280,
+      "sha256": "abf89daf8e2a6c29f48a66438f272fa35339f1441ee5eb73d71007e7ea69c705"
+    },
+    {
+      "file": "1280-2a.png",
+      "width": 1280,
+      "sha256": "471a35aba0ad05143b7cbe1c2291be720245fb2c702a08b5e672522e45df45a9"
+    },
+    {
+      "file": "1280-3b.png",
+      "width": 1280,
+      "sha256": "619bee74d4618237eb67a6aeda0f9c7e92a8ebff4f4d8eb0a04126edf4408a5d"
+    },
+    {
+      "file": "1280-5b.png",
+      "width": 1280,
+      "sha256": "228c11fde3c658acc69f9d061cc86257060d9f8f36e5ac3b74869cff88701e6f"
+    },
+    {
+      "file": "1280-9b.png",
+      "width": 1280,
+      "sha256": "74e80fcebd52941959272d20265beb5af59d0aa63358c731003e8a91978abc59"
+    }
+  ]
+}

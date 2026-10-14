@@ -20,6 +20,8 @@ Current individual records:
 
 * [AQA 8462/2F basis](aqa-2f-basis.md): content re-audit, fresh affected checks, twelve personally inspected captures and explicit sample delivery complete.
 
+* [AQA 8462/1H basis](aqa-1h-basis.md): Higher demand audit, fresh affected checks, twelve personally inspected captures and explicit delivery complete.
+
 ## Baseline and current claims
 
 Commit `37817ca29a788fc9d90a068c094357a3f2b5c4cd` is the previously accepted course release. The root `SOURCE-MANIFEST.json`, `docs/final-browser-acceptance.json` and `docs/final-github-verification.json` describe that earlier release and its 3,338 browser checks. They are preserved historical evidence, **not acceptance of this expansion**. They must be superseded or archived clearly at final release.

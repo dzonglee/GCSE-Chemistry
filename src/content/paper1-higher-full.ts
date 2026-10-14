@@ -1470,6 +1470,16 @@ const yieldEconomy: ExamPart[] = [
 
 // Complete individual draft; registration follows content/mark-allocation review.
 export const paper1HigherFull: ExamPaper = {
+  basis: {
+    board: "AQA",
+    qualification: "8462",
+    component: "8462/1H",
+    summary:
+      "Paper 1 topics with Higher demands: limiting reactants, molar titration, gas quantities, electron half equations and bond-energy calculations. Distinct original contexts include copper isotopes, independent thermal extrapolation and inverse atom economy.",
+    specificationUrl:
+      "https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF",
+    researchPath: "docs/board-mocks/aqa-1h-basis.md",
+  },
   id: "paper-1-higher-full",
   totalMarks: 100,
   minutes: 105,
