@@ -1572,6 +1572,16 @@ const fertiliserProduction: ExamPart[] = [
 // All ten question groups are individually authored; acceptance requires the
 // content review, sealed whole-paper behaviour and final visual inspection.
 export const paper2FoundationFull: ExamPaper = {
+  basis: {
+    board: "AQA",
+    qualification: "8462",
+    component: "8462/2F",
+    summary:
+      "Rates and reversible changes, organic chemistry, chemical analysis, atmosphere and resources, drawing on core principles from Paper 1. Original demands include an offset-origin chromatogram, polymer and alcohol construction, and an ion-test method.",
+    specificationUrl:
+      "https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF",
+    researchPath: "docs/board-mocks/aqa-2f-basis.md",
+  },
   id: "paper-2-foundation-full",
   totalMarks: 100,
   minutes: 105,

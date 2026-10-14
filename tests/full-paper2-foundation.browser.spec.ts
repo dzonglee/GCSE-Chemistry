@@ -288,6 +288,9 @@ for (const width of [320, 390, 1280])
       await page
         .getByRole("button", { name: "Start without a timer →", exact: true })
         .waitFor();
+      await expect(page.locator(".full-paper-intro")).toContainText(
+        "10 question groups · 49 parts",
+      );
       await page.evaluate(async () => {
         await document.fonts.ready;
         scrollTo(0, 0);

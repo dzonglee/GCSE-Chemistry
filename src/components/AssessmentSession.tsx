@@ -87,8 +87,12 @@ export function AssessmentSession({
       <section className="panel assessment-intro full-paper-intro">
         <h2>Start your paper</h2>
         <p>
-          {new Set(examPaper.parts.map((part) => part.context)).size} question
-          groups · {questions.length} parts · Work saved on this device.
+          {
+            new Set(examPaper.parts.map((part) => part.number.split("(")[0]))
+              .size
+          }{" "}
+          question groups · {questions.length} parts · Work saved on this
+          device.
         </p>
         <div className="button-row">
           <button
@@ -167,7 +171,7 @@ export function AssessmentSession({
         <h2>{title}</h2>
         <p>
           {examPaper
-            ? `${examPaper.totalMarks} marks across ${new Set(examPaper.parts.map((part) => part.context)).size} question groups (${questions.length} parts).`
+            ? `${examPaper.totalMarks} marks across ${new Set(examPaper.parts.map((part) => part.number.split("(")[0])).size} question groups (${questions.length} parts).`
             : `${questions.length} questions.`}{" "}
           {independent
             ? "Models and hints are hidden."

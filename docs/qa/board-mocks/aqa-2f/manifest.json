@@ -1,0 +1,68 @@
+{
+  "paper": "paper-2-foundation-full",
+  "build": "202-UrPCUUjyk874P1l3k",
+  "capturedAt": "2026-10-14T13:31:07.085Z",
+  "note": "Controlled QA openings; incomplete ethanol (missing O\u2013H) and correct offset-origin Rf working entered through native controls, saved and reloaded. Complete unseeded 49-part flows checked separately.",
+  "captures": [
+    {
+      "file": "390-intro.png",
+      "width": 390,
+      "sha256": "fc98b68c8664f3a96e11c15e2346ece495f8c35f9083c11b67845f54cbf4626b"
+    },
+    {
+      "file": "390-basis.png",
+      "width": 390,
+      "sha256": "bd0e8599006f5c52b1c36df2651a066e9b2634308c42856f13d2e9e1512e36e1"
+    },
+    {
+      "file": "390-1b.png",
+      "width": 390,
+      "sha256": "321b865914c55635f391c41719c9c3ecdf3b1d358aa4b50d6cf2366211baa453"
+    },
+    {
+      "file": "390-5a.png",
+      "width": 390,
+      "sha256": "5522a5cdcc58d4992b0840ff2c9f829170eb6d9cde9a6737ac3a18f4f367d6ea"
+    },
+    {
+      "file": "390-6b.png",
+      "width": 390,
+      "sha256": "f158eb44254acb6898a5c52341e79502be7a24e7b0d9509be5b7228f85b55610"
+    },
+    {
+      "file": "390-7a.png",
+      "width": 390,
+      "sha256": "17d63f0b8f6303b811d9b7d8ddffbf8ed3d3bfdbdb3ffe5b0bb69f8c683172bf"
+    },
+    {
+      "file": "1280-intro.png",
+      "width": 1280,
+      "sha256": "01c55ec2a252dc067ee478b78e742b058611aaad9cc34508b6a6721d48480088"
+    },
+    {
+      "file": "1280-basis.png",
+      "width": 1280,
+      "sha256": "99264751427906944a14446920671b2e495d8fcfd4bfd449d9d74f9986c96253"
+    },
+    {
+      "file": "1280-1b.png",
+      "width": 1280,
+      "sha256": "bca67f0399f25e34a08ce3e426f3151ba72fc1cb0773018e955f2d809a014147"
+    },
+    {
+      "file": "1280-5a.png",
+      "width": 1280,
+      "sha256": "a7a5932ff046d5f16e4bf23f51b57ef49f23ee602629f2b271695f62f02d97b2"
+    },
+    {
+      "file": "1280-6b.png",
+      "width": 1280,
+      "sha256": "b89db1c13c044c23311f9b35abce33203c60da2d1a69056676f5a4bbebcbfebd"
+    },
+    {
+      "file": "1280-7a.png",
+      "width": 1280,
+      "sha256": "6e8fea80847459105e6608a4828ed1c29dfefaffeb3300619e11ef52c5b04249"
+    }
+  ]
+}
