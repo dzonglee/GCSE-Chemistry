@@ -1,0 +1,13 @@
+# Foundation Paper1 tier correction accepted
+
+Current Pearson specification issue4, SHA256 `ece75263101c146352be0d59da9936bb76e7cf3899a7994e7746944006c32bcf`: actual PDF page15/printed11 makes clause1.12 bold Higher-only. The initial individually delivered1F incorrectly included its numerical isotope weighted mean. This record supersedes that tier-alignment claim. [Full basis and correction](../../../board-mocks/edexcel-1f-basis.md).
+
+Question1(d) now follows1.11: explain an isotope mixture's non-whole average and its position nearer the more abundant isotope. The proportions stay visible; no numerical mean is required. Two explicit manual points replace the scalar calculation. The paper remains40parts/100marks/105minutes/AO39/40/21, with24mathematical-context marks. All39 other definitions and paper metadata compare exactly with accepted05f4fbb. Paper/part IDs remain reserved; recorded raw answers, history and exposure are retained. Main still contains the original accepted four-AQA release; the expansion is not deployed.
+
+## Actual final evidence
+
+Final build `UayBaVRhnqoQ6A0AmwoVy`: types, affected lint and build passed. Full lint and1,117units/1.4minutes passed before the final prompt/layout adjustment; final12 affected units passed in10.5seconds. Final10 affected production-browser checks passed in2.7minutes, actual exit0. They include first-ten cold openings at320/390/1280 in both projects, real exposure freshness and both complete40-answer submission/manual-review/reload/restart flows. The earlier correction run had4passes/six true opening failures and is not acceptance. Removing the redundant graph kept both the full qualitative demand and original664px opening threshold.
+
+All8 final390/1280 intro/basis/retained-answer/review captures were personally inspected. [Manifest](manifest.json): UTC2026-10-14T18:59:27.826Z, final build and every SHA256 verified. Capture actual exit0; owned3201 server deliberately stopped afterwards with receipt130. Controlled incorrect explanations remain beside separate references with manual decisions unresolved; these screenshots infer no score or independent success. Two clickable samples were explicitly sent before resuming Higher research/authorship.
+
+Actual ram-v1-r-meaning, ram-v1-r-weight, ram-v1-g-heavy and ram-v1-g-transfer references were individually read and linked conservatively in both directions. Both Foundation paper guards now reject1.12. New numerical contexts elsewhere remain independent. Earlier first-paper and second-paper preservation proofs describe their exact checkpoints; this subsequent scientific correction is explicitly the only first-paper definition change.

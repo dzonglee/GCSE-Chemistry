@@ -1,0 +1,48 @@
+{
+  "paper": "edexcel-paper-1-foundation-full",
+  "build": "UayBaVRhnqoQ6A0AmwoVy",
+  "capturedAt": "2026-10-14T18:59:27.826Z",
+  "note": "Controlled QA openings and unresolved submitted reviews; no score or fresh-independent success is inferred from these captures.",
+  "captures": [
+    {
+      "file": "390-intro.png",
+      "width": 390,
+      "sha256": "a2cb1413337ec636aed6bb66f76acbc8543cd9958707765f9b7b86ce2518eda0"
+    },
+    {
+      "file": "390-basis.png",
+      "width": 390,
+      "sha256": "f7b6081052c96e94e69816da2fedb82aef4f0bbb61164ffd009d36a1afb5eafe"
+    },
+    {
+      "file": "390-1d.png",
+      "width": 390,
+      "sha256": "cfc641cd78a0cc7c9f7daf6718ebcf1c36b513015e51235176131e984596e72a"
+    },
+    {
+      "file": "390-review-1d.png",
+      "width": 390,
+      "sha256": "fe14dd3aef1619a23d640d9fcefb33644946501ccf14da8734ea55e3854c0f5f"
+    },
+    {
+      "file": "1280-intro.png",
+      "width": 1280,
+      "sha256": "fcadae6ff78d87345d33d00a8a2641495029ca3cd93ea4473bfa4052a2815f35"
+    },
+    {
+      "file": "1280-basis.png",
+      "width": 1280,
+      "sha256": "f368f8582d025b4b5949f6af0668639bd616db52b95a2b24eca63e2d7cb9890e"
+    },
+    {
+      "file": "1280-1d.png",
+      "width": 1280,
+      "sha256": "2301bc9ee71943ba90fbccd7a19f015b7e27453e68e61a5fda87f101e67aa442"
+    },
+    {
+      "file": "1280-review-1d.png",
+      "width": 1280,
+      "sha256": "5131672f0222c49e29f4a8984c702a725fccd81effeaf9d38956a2b906c13e26"
+    }
+  ]
+}

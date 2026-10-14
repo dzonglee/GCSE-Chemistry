@@ -1,3 +1,5 @@
+> Subsequent Foundation tier correction: the original isotope weighted mean was Higher-only for Pearson. [The accepted correction and fresh captures](../edexcel-1f-tier-correction/README.md) supersede that original tier claim; the runs and22captures below remain dated evidence of the earlier candidate.
+
 # Edexcel 1CH0/1F individual acceptance evidence
 
 Original Separate Chemistry Foundation Paper 1: 40 parts, 100 marks, 105 optional minutes. Read the [individual research and mark ledger](../../../board-mocks/edexcel-1f-basis.md) for the actual Pearson specification and paired 2023 source materials.

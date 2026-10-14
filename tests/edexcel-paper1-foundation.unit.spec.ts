@@ -32,7 +32,7 @@ test("Pearson Foundation Paper 1 has its own complete tier/component allocation 
   ).toEqual([39, 40, 21]);
   expect(
     paper.parts.filter((p) => p.mathematics).reduce((s, p) => s + p.marks, 0),
-  ).toBe(26);
+  ).toBe(24);
   expect(
     fullPapers.filter((p) => p.examPaper?.basis?.board === "AQA"),
   ).toHaveLength(4);
@@ -55,6 +55,7 @@ test("Pearson Foundation Paper 1 has its own complete tier/component allocation 
   expect(part("4(a)").specification).toContain("3.30");
   expect(part("10(a)").specification).toContain("4.16");
   const forbidden = [
+    "1.12",
     "1.50",
     "1.51",
     "1.52",
@@ -83,7 +84,6 @@ test("Pearson Foundation Paper 1 has its own complete tier/component allocation 
 
 test("independent calculations agree with supplied data, units and requested raw precision", () => {
   const expected: Record<string, string> = {
-    "1(d)": ((20 * 10 + 80 * 11) / 100).toFixed(1),
     "2(e)": String(12 + 2 * 16),
     "3(b)": ((48 - 12) / (102 - 12)).toFixed(2),
     "4(d)": ((18858 - 18642) / 1000).toFixed(3),
@@ -99,6 +99,10 @@ test("independent calculations agree with supplied data, units and requested raw
     expect(part(number).automaticMarks, number).toBe(0);
   }
   expect(part("3(b)").question.answer).toBe("0.40");
+  expect(part("1(d)").specification).toEqual(["1.11"]);
+  expect(part("1(d)").question.rubric).toHaveLength(2);
+  expect(part("1(d)").mathematics).toBeUndefined();
+  expect(part("1(d)").question.prompt).toContain("No calculation is required");
   expect(part("8(b)").question.answer).toBe("23.63");
   expect(1.8 / 24).toBeCloseTo(1.2 / 16, 12);
   expect(part("7(b)").criteria[0].text).toContain(
@@ -148,6 +152,10 @@ test("drawing references preserve electron origins and exact conceptual repeats 
   });
   expect(mark(q, q.answer).correct).toBe(true);
   for (const [number, alias] of [
+    ["1(d)", "ram-v1-r-meaning"],
+    ["1(d)", "ram-v1-r-weight"],
+    ["1(d)", "ram-v1-g-heavy"],
+    ["1(d)", "ram-v1-g-transfer"],
     ["1(b)", "sh-v1-w-read"],
     ["1(b)", "sh-v1-p-explanation"],
     ["2(d)", "chem-p1f-full-v1-03e"],

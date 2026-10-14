@@ -63,6 +63,7 @@ test("Pearson 2F has its own complete component ledger, registered reserved iden
       .flatMap((p) => p.specification)
       .filter((s) =>
         [
+          "1.12",
           "6.12",
           "7.14",
           "9.22C",

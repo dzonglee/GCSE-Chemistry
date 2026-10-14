@@ -84,29 +84,30 @@ const particles = [
   ),
   atomic(
     "1(d)",
-    ["1.12"],
-    "Calculate the relative atomic mass",
-    "A sample contains 20.0% boron-10 and 80.0% boron-11. Calculate its relative atomic mass to one decimal place. Show your working.",
-    "10.8",
+    ["1.11"],
+    "Explain the isotope average",
+    "Sample: 20% boron-10, 80% boron-11. Explain why its relative atomic mass is non-whole and closer to 11 than 10. No calculation is required.",
+    "The sample contains isotopes of both masses, so its relative atomic mass reflects an average between 10 and 11. Boron-11 is more abundant at 80%, so the average lies closer to 11.",
     2,
     [0, 2, 0],
     [
       [
-        "Use both abundances: (20×10+80×11)/100, or an equivalent fraction method.",
+        "Explains the non-whole relative atomic mass as an average across the two different isotope masses, rather than giving individual atoms fractional neutrons.",
         1,
       ],
       [
-        "Evaluate and present 10.8 to one decimal place. Allow a correct evaluation/rounding of the student's preceding weighted setup; a contradictory setup cannot earn full credit.",
+        "Links the average being closer to 11 to boron-11 being more abundant (80% versus 20%). No numerical weighted-mean calculation is required or separately rewarded.",
         1,
       ],
     ],
-    "scalar",
+    "written",
     {
-      mathematics: true,
       question: {
-        isotopeData: [
-          { mass: 10, abundance: 20 },
-          { mass: 11, abundance: 80 },
+        exposureAliases: [
+          "ram-v1-r-meaning",
+          "ram-v1-r-weight",
+          "ram-v1-g-heavy",
+          "ram-v1-g-transfer",
         ],
       },
     },

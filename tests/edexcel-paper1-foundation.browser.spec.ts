@@ -19,6 +19,7 @@ test("existing shell, formula, indicator and practical disclosures prevent fresh
     "materials-v1-cB-barrier",
     "haber-v1-p-conditions",
     "cf-v1-R-primary",
+    "ram-v1-r-weight",
   ])
     state.seen[cue] = Date.now();
   await page.addInitScript(({ key, raw }) => localStorage.setItem(key, raw), {
@@ -36,6 +37,7 @@ test("existing shell, formula, indicator and practical disclosures prevent fresh
   );
   for (const number of [
     "1(b)",
+    "1(d)",
     "2(d)",
     "2(e)",
     "5(e)",
@@ -51,7 +53,7 @@ test("existing shell, formula, indicator and practical disclosures prevent fresh
       ],
       number,
     ).toBe("false");
-  for (const number of ["1(d)", "3(b)", "4(c)", "6(c)", "8(b)"])
+  for (const number of ["3(b)", "4(c)", "6(c)", "8(b)"])
     expect(
       drafts[
         "fresh:" +

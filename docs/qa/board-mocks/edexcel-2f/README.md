@@ -19,3 +19,5 @@ Five clickable samples were explicitly sent before starting the next paper's res
 ## Development evidence kept distinct
 
 An initial101-mark content total was corrected by revising the monomer terminology demand to one term/one mark. Initial browser runs exposed a curve-helper selector mismatch and a genuine missing native-review flag that blocked whole submission at45/48; neither counts as passing. A subsequent critical run reached96/reload but failed a selector expecting notation in a generic description; actual retained/reference regions are now checked instead. A run that ended without a final receipt is unaccepted. The final46-pass and12-pass runs above are the acceptance evidence. No assertion threshold or scientific demand was weakened.
+
+A subsequent [Foundation1F tier correction](../edexcel-1f-tier-correction/README.md) changes only1F part1(d). The40-definition preservation proof above applies to this2F checkpoint before that explicitly recorded correction; current1F has39 unchanged parts and the corrected qualitative1(d). No2F part changed.
