@@ -1,0 +1,68 @@
+{
+  "paper": "paper-1-foundation-full",
+  "build": "tKL0DecsXwYXZV9MYam8X",
+  "capturedAt": "2026-10-14T13:19:45.267Z",
+  "note": "Controlled QA question openings; no whole-paper score is inferred from these captures.",
+  "captures": [
+    {
+      "file": "390-intro.png",
+      "width": 390,
+      "sha256": "7e244d4a0e527d4089f0de2fb44b7783b2afc1daa20def3ba4e4dc174435a068"
+    },
+    {
+      "file": "390-basis.png",
+      "width": 390,
+      "sha256": "e214d4e062e82c50235c7f277b4d228a2bfec9244640e883310380e7c512b388"
+    },
+    {
+      "file": "390-1c.png",
+      "width": 390,
+      "sha256": "419b4c86854001966a0408bc1ce5412ac1c3e3decf57c807ba608a095bddb2a1"
+    },
+    {
+      "file": "390-3a.png",
+      "width": 390,
+      "sha256": "d4a34e178997383dfb2e680458dbf1b844a258be2b3d5b946bae818de3f0311d"
+    },
+    {
+      "file": "390-7b.png",
+      "width": 390,
+      "sha256": "be189debfb2df97f125ad316e2086db10d8953b0e36c5a94f2d659b15592aa9a"
+    },
+    {
+      "file": "390-9e.png",
+      "width": 390,
+      "sha256": "d94ff367b86acb00b4c84539c290c4b8ce9b374c7cf8a7d967ef16b7d3f2fe14"
+    },
+    {
+      "file": "1280-intro.png",
+      "width": 1280,
+      "sha256": "e2ee98304329b0081fe7ae262a27ad42b81445960f6f408f26022832c7eca5a3"
+    },
+    {
+      "file": "1280-basis.png",
+      "width": 1280,
+      "sha256": "a5b2bda613346bd5f083a4993e2fc98532d7e1f801643e18897103b844af5b0c"
+    },
+    {
+      "file": "1280-1c.png",
+      "width": 1280,
+      "sha256": "9b4022598659b90b75fdbbbe9a79d239697841bc03e082cd62ef366afcdd094d"
+    },
+    {
+      "file": "1280-3a.png",
+      "width": 1280,
+      "sha256": "0c0013010c1a5d8754696fd3e9234a65ae66c53be96c7d4b3454e7392335369b"
+    },
+    {
+      "file": "1280-7b.png",
+      "width": 1280,
+      "sha256": "3bee0b90d03c27711fa85f35ac361df94329b3f7cdd605dabeeaaa606be27ccb"
+    },
+    {
+      "file": "1280-9e.png",
+      "width": 1280,
+      "sha256": "bba552aee12fbc5c452f86e57894ed6b583579d36aecc1ccc33ce79228cb1f8d"
+    }
+  ]
+}

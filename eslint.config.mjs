@@ -9,5 +9,7 @@ export default defineConfig([
     "next-env.d.ts",
     "playwright-report/**",
     "test-results/**",
+    // Archived worker scripts depend on their historical external workspace.
+    "docs/qa/potable-review-final/reproduction/**",
   ]),
 ]);

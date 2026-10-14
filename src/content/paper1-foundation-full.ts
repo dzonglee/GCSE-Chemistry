@@ -1537,6 +1537,16 @@ const cells: ExamPart[] = [
 // All ten contexts were individually authored from reviewed scientific and
 // marking demands; this is a single original full-length practice paper.
 export const paper1FoundationFull: ExamPaper = {
+  basis: {
+    board: "AQA",
+    qualification: "8462",
+    component: "8462/1F",
+    summary:
+      "Atomic structure, bonding, quantitative chemistry, chemical changes and energy changes. Original contexts include neon isotopes, crystallisation and thermal measurements.",
+    specificationUrl:
+      "https://filestore.aqa.org.uk/resources/chemistry/specifications/AQA-8462-SP-2016.PDF",
+    researchPath: "docs/board-mocks/aqa-1f-basis.md",
+  },
   id: "paper-1-foundation-full",
   totalMarks: 100,
   minutes: 105,

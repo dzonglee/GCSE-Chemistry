@@ -34,7 +34,7 @@ export function AssessmentCatalogue({
       <p className="lede">
         {kind === "diagnostic"
           ? "Try twenty questions across the course. Use the results to choose what to study next, without a predicted grade."
-          : "Choose a full 100-mark paper, a cumulative set or a short topic mix. Work independently, then review the reasoning after submitting the whole paper or set."}
+          : "Choose a full paper, a cumulative set or a short topic mix. Check its board, tier and mark total, then work independently and review after submitting the whole paper or set."}
       </p>
       <div className="assessment-cards">
         {items.map((item) => (
@@ -50,6 +50,8 @@ export function AssessmentCatalogue({
             <span className="eyebrow">
               {item.tier === "higher" ? "Higher" : "Foundation"} ·{" "}
               {item.course === "separate" && "Chemistry only · "}
+              {item.examPaper?.basis &&
+                `${item.examPaper.basis.board} ${item.examPaper.basis.qualification} · `}
               {item.minutes} minutes suggested
               {item.examPaper && ` · ${item.examPaper.totalMarks} marks`}
             </span>
@@ -114,7 +116,10 @@ export function AssessmentPage({ assessment }: { assessment: Assessment }) {
       )}
       {assessment.course === "separate" && (
         <p className="sample-course-scope">
-          Chemistry only{assessment.examPaper ? " · AQA 8462" : ""}
+          Chemistry only
+          {assessment.examPaper
+            ? ` · ${assessment.examPaper.basis?.board ?? "AQA"} ${assessment.examPaper.basis?.qualification ?? "8462"}`
+            : ""}
         </p>
       )}
       {!working && assessment.structure === "extended" && (

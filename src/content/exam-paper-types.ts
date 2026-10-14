@@ -26,5 +26,14 @@ export interface ExamPaper {
   id: string;
   totalMarks: number;
   minutes: number;
+  /** The specification used to author this original practice paper. */
+  basis?: {
+    board: "AQA" | "Edexcel" | "OCR";
+    qualification: string;
+    component: string;
+    summary: string;
+    specificationUrl: string;
+    researchPath: string;
+  };
   parts: ExamPart[];
 }
