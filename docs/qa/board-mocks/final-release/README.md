@@ -1,16 +1,22 @@
 # Twelve-paper expansion — final release gates
 
-All twelve individual paper research/review/sample gates and the grouped catalogue/fresh Maths comparison are complete. Four components per board means two Foundation and two Higher components: one two-component practice set per tier. Total 1,160 marks across 549 parts; 95 lesson journeys remain unchanged.
+All twelve individually researched original mock components and their sample-review gates are complete: four AQA 8462, four Pearson Edexcel 1CH0 and four OCR Gateway J248. Each board has two Foundation and two Higher components, one two-component practice set per tier. Total: 1,160 marks across 549 parts. The 95 lesson journeys remain unchanged.
 
+The frozen production build `Rxb6qPeCLgmBC4GXQefEJ` has completed **all 3,642 browser checks in one continuous run**, with 1,821 desktop and 1,821 mobile passes across 182 files, two workers and no retries. No cases were skipped or flaky; no test or runner error remains. Actual runner, owner, resource monitor and trace relay all exited 0. The actual owned exec session closed with 0. All 2,451 protected source/manifest and production fingerprints match, and port 3201 is released. Tested application source: `52c371cee7d5618feb5e88ca5300b02ff4fad490`.
+
+- [Exact inventory/result reconciliation](whole-browser-reconciliation.json).
+- [Original complete result JSON](whole-browser-results.json).
+- [Original complete runner output](whole-browser-output.txt).
+- [Frozen-source, production and ownership proof](whole-browser-fingerprints.json).
+- [Types, lint, all 1,157 units, build and 20 focused review checks](preflight.json).
 - [Individual research and paper records](../../../board-mocks/README.md).
-- [Catalogue and fresh Maths comparison](../catalogue/README.md).
-- [Current organic-review fix and delivered samples](organic-review/README.md).
-- [Preserved earlier 3,338-case release](../baseline-37817ca/README.md).
+- [Catalogue and actual Maths comparison](../catalogue/README.md).
+- [Organic-review correction and nine reviewed original images](organic-review/README.md).
 
-The current build is `Rxb6qPeCLgmBC4GXQefEJ`. Types, full lint, all 1,157 units, build and all 20 focused original review browser checks pass. All nine updated original review screenshots were personally inspected and samples explicitly delivered. All twelve exam definitions and 371 other content/library files remain preserved, with the previously documented one catalogue-description word space corrected. No original browser assertion, deadline or scientific criterion was relaxed. [Current preflight](preflight.json) · [Frozen counts](frozen-summary.json) · [Complete inventory](browser-inventory.json).
+The current application restores a local atom-count summary in submitted organic drawing reviews; saved wrong structures and the separate references remain exact. The original six AQA review assertions passed unchanged inside the complete run. All 95 lesson assessment/review layout checks passed on both projects; the complete lesson-model/first-practice flows also passed. No scientific criterion, viewport/accessibility threshold, original deadline, worker count or retry setting was weakened.
 
-The catalogue and 18 final Chemistry views and six actual Maths views were reviewed on the preceding catalogue build `CXDvQrArl0eiKmoxKMRzr`; [its scoped preflight is retained separately](preflight-v7-catalogue.json). The only subsequent application change restores the atom-count summary in read-only submitted organic drawing reviews. Questions, answers, marks, references, IDs, order and exposure are unchanged.
+All twelve exam definitions, IDs, questions, answers, marks, references, order and exposure remain exact to the accepted twelve-paper content checkpoint. The previously documented catalogue-description word space is the only content/library copy exception. The catalogue and fresh six-view Maths comparison were reviewed on the preceding catalogue build; the only subsequent application change is the read-only organic-review atom-count summary. Its nine final original images were personally reviewed and representative samples were explicitly delivered before this complete run.
 
-No complete expansion-wide browser pass is claimed. Attempt1 ended with [ENOSPC after 273 passes](attempt-1-enospc.json). Attempt2 [lost its detached session after one pass](attempt-2-session-ended.json) and has no completion receipt. Attempt3 ended after [732 passes and one real review-summary failure](attempt-3-organic-review-summary.json), now corrected in the product. Failed/partial/scoped results are never combined into full acceptance.
+Three older attempts remain explicitly incomplete and separate: [ENOSPC after 273 passes](attempt-1-enospc.json), [lost detached session after one pass](attempt-2-session-ended.json), and [a real local atom-count omission after 732 passes](attempt-3-organic-review-summary.json). Their passes were never combined with this accepted run. Closed successful trace archives were compressed and relayed with verified hashes; active/failure/network/resource files and all protected files were untouched. Generated runtime QA images were preserved privately and their working copies restored before publication.
 
-The complete inventory remains 3,642 cases across 182 files, with 1,821 per device, two workers and no retries. Current protected fingerprints cover 1,136 source/manifest files and 1,315 production files (2,451 total). A fresh complete run from zero, fresh GitHub retrieval/build validation, and the authorized main/default integration remain pending. Original practice and manual review do not provide an official grade or certify complete other-board lesson coverage.
+Fresh GitHub retrieval/build verification and the authorized main/default integration are the remaining release gates. Original practice and manual review do not provide an official grade or certify complete other-board lesson coverage. [Earlier 3,338-case release](../baseline-37817ca/README.md).

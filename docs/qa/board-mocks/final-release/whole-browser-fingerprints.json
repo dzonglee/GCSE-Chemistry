@@ -1,0 +1,28 @@
+{
+  "verifiedAt": "2026-10-15T16:39:06.436902+00:00",
+  "buildId": "Rxb6qPeCLgmBC4GXQefEJ",
+  "counts": {
+    "source-frozen.json": 1136,
+    "production-frozen.json": 1315
+  },
+  "allHashesMatch": true,
+  "actualExecSession": {
+    "sessionId": 28009,
+    "actualExitCode": 0,
+    "actualCompletionOutput": "Owned browser runner exit 0; resource monitor exit 0; trace relay exit 0",
+    "retrievedAt": "2026-10-15T16:39:06.250404+00:00"
+  },
+  "runnerExitCode": 0,
+  "ownerExitCode": 0,
+  "resourceMonitorExitCode": 0,
+  "traceRelayExitCode": 0,
+  "productionPortReleased": true,
+  "testedSourceCommit": "52c371cee7d5618feb5e88ca5300b02ff4fad490",
+  "sourceManifestScopeFiles": 1135,
+  "frozenSourceMapSha256": "eeeb5f6b17dfb4c56f4a505e32600852b184251fba886bc4930c62cc3af95395",
+  "frozenProductionMapSha256": "bea53416eb7215ddd842573c7482424149612409fa5e0cc233ee053cf994f9b1",
+  "runnerJsonSha256": "5fcddd9b56b9f7e638c8d40cb7d7c0074a44c9232b3816520b6efee0f53f2967",
+  "runnerLogSha256": "46065f74e000db59b80d428ce50198e796dd21a94c6eb83f87b599418cd976a5",
+  "runtimeQaOutputsPreservedAndRestored": 1282,
+  "scope": "All inventoried tests passed in one continuous run; no combination of failed, partial or focused runs."
+}

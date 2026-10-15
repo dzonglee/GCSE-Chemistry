@@ -1,0 +1,27 @@
+{
+  "verifiedAt": "2026-10-15T16:39:06.542121+00:00",
+  "cases": 3642,
+  "files": 182,
+  "projectPasses": {
+    "desktop": 1821,
+    "mobile": 1821
+  },
+  "stats": {
+    "startTime": "2026-10-15T07:42:53.474Z",
+    "duration": 32097883.106000002,
+    "expected": 3642,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "workers": 2,
+  "retries": 0,
+  "runnerExitCode": 0,
+  "ownerExitCode": 0,
+  "inventorySha256": "85532e51027a8e415a5039ee8786f24e1f1ad935237195f4a6ae7d1ca96440d6",
+  "browserLogSha256": "46065f74e000db59b80d428ce50198e796dd21a94c6eb83f87b599418cd976a5",
+  "testedSourceCommit": "52c371cee7d5618feb5e88ca5300b02ff4fad490",
+  "started": "2026-10-15T07:42:52Z",
+  "finished": "2026-10-15T16:37:58Z",
+  "scope": "Every inventoried browser case passed exactly once in one complete run; no union of scoped/partial runs."
+}
