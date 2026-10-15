@@ -9,6 +9,9 @@ import { readOrganicDrawing } from "@/lib/organic-drawing";
 import { OrganicDisplayed } from "./OrganicDisplayed";
 import { readPolyesterDrawing } from "@/lib/polyester";
 import { PolyesterDisplayed } from "./PolyesterConstruction";
+import { CovalentDiagram } from "./CovalentDiagram";
+import { IonDotCross } from "./IonDotCross";
+import { covalentMolecules } from "@/lib/covalent";
 
 /** Submitted work is a readable record, without inactive answer-entry forms. */
 export function PaperDrawingReview({
@@ -26,6 +29,72 @@ export function PaperDrawingReview({
       response is retained.
     </p>
   );
+  if (q.drawCovalent || q.drawDotCross) {
+    let b: Record<string, unknown>;
+    try {
+      b = JSON.parse(value);
+    } catch {
+      return unreadable;
+    }
+    if (!b || typeof b !== "object" || Array.isArray(b)) return unreadable;
+    const number = (key: string, low: number, high: number) => {
+      const raw = b[key];
+      if (typeof raw !== "string" || !raw.trim()) return null;
+      const n = Number(raw);
+      return Number.isInteger(n) && n >= low && n <= high ? n : null;
+    };
+    if (q.drawCovalent) {
+      const molecule = q.drawCovalent.molecule,
+        spec = covalentMolecules[molecule],
+        unshared = number("unsharedCentre", 0, 8),
+        own = spec.partners.map((_, i) => number(`centre${i}`, 0, 3)),
+        other = spec.partners.map((_, i) => number(`partner${i}`, 0, 3)),
+        partnerUnshared = spec.partners.map((_, i) =>
+          number(`unsharedPartner${i}`, 0, 8),
+        );
+      if (
+        unshared === null ||
+        [...own, ...other, ...partnerUnshared].some((n) => n === null)
+      )
+        return unreadable;
+      return (
+        <section className="paper-electron-review" aria-label={contextLabel}>
+          <CovalentDiagram
+            molecule={molecule}
+            own={own as number[]}
+            other={other as number[]}
+            unshared={unshared}
+            partnerUnshared={partnerUnshared as number[]}
+            compact
+            contextLabel={contextLabel}
+          />
+        </section>
+      );
+    }
+    const dots = number("dots", 0, 12),
+      crosses = number("crosses", 0, 12),
+      charge = number("charge", -3, 3),
+      brackets = number("brackets", 0, 1);
+    if (
+      dots === null ||
+      crosses === null ||
+      charge === null ||
+      brackets === null
+    )
+      return unreadable;
+    return (
+      <section className="paper-electron-review" aria-label={contextLabel}>
+        <IonDotCross
+          symbol={q.drawDotCross!.symbol}
+          dots={dots}
+          crosses={crosses}
+          charge={charge}
+          showBrackets={brackets === 1}
+          contextLabel={contextLabel}
+        />
+      </section>
+    );
+  }
   if (q.tangentDrawing) {
     const b = readTangentDrawing(value);
     if (!b) return unreadable;

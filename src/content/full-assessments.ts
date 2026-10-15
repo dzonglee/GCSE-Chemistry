@@ -7,6 +7,7 @@ import { edexcelPaper1FoundationFull } from "./edexcel-paper1-foundation-full";
 import { edexcelPaper2FoundationFull } from "./edexcel-paper2-foundation-full";
 import { edexcelPaper1HigherFull } from "./edexcel-paper1-higher-full";
 import { edexcelPaper2HigherFull } from "./edexcel-paper2-higher-full";
+import { ocrPaper1FoundationFull } from "./ocr-paper1-foundation-full";
 
 export const fullPapers: Assessment[] = [
   {
@@ -132,5 +133,20 @@ export const fullPapers: Assessment[] = [
     examPaper: edexcelPaper2HigherFull,
     questions: edexcelPaper2HigherFull.parts.map((part) => part.question),
     topics: edexcelPaper2HigherFull.parts.map((part) => part.topic),
+  },
+  {
+    slug: ocrPaper1FoundationFull.id,
+    title: "OCR Gateway Paper 1 · Foundation",
+    shortTitle: "Paper 1 · Foundation",
+    description:
+      "An original 90-mark, 105-minute OCR Gateway J248/01 Separate Chemistry paper: 15 multiple-choice marks followed by 75 structured marks. Includes electron and energy constructions, measured chromatography, a six-mark salt preparation plan and practical evidence evaluation. Submit the whole paper before reviewing answers and method credit.",
+    tier: "foundation",
+    course: "separate",
+    structure: "full",
+    kind: "paper",
+    minutes: ocrPaper1FoundationFull.minutes,
+    examPaper: ocrPaper1FoundationFull,
+    questions: ocrPaper1FoundationFull.parts.map((part) => part.question),
+    topics: ocrPaper1FoundationFull.parts.map((part) => part.topic),
   },
 ];

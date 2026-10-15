@@ -16,6 +16,17 @@ export type ChromaGivenSource = {
   note: string;
 };
 export const chromaGivenSources: Record<string, ChromaGivenSource> = {
+  ocr1fOrigin: {
+    title: "Original OCR practice chromatogram: U",
+    origin: 12,
+    front: 82,
+    top: 95,
+    unit: "mm",
+    phaseNote:
+      "Paper chromatography; coordinates are measured above the paper bottom.",
+    lanes: [{ label: "U", centres: [54], colour: "purple" }],
+    note: "The origin, spot centre and marked solvent front are supplied. The calibrated schematic is not a life-size sheet.",
+  },
   paper2Foundation: {
     title: "Original full-paper calibrated chromatogram",
     origin: 15,

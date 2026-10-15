@@ -27,6 +27,8 @@ function ReviewConstruction({
   contextLabel: string;
 }) {
   if (
+    question.drawCovalent ||
+    question.drawDotCross ||
     question.tangentDrawing ||
     question.profileDrawing ||
     question.organicDrawing ||
@@ -228,8 +230,8 @@ export function ExamPaperReview({
                     >
                       <h3>Worked visual reference</h3>
                       <p>
-                        One valid construction; equivalent structures or other
-                        suitable smooth fits can also earn the described marks.
+                        One valid construction; equivalent correct responses can
+                        also earn the described marks.
                       </p>
                       <ReviewConstruction
                         question={q}

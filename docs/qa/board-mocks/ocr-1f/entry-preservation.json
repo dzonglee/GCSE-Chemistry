@@ -1,0 +1,10 @@
+{
+  "reference": "fd5d20f54981ece79603fc41d90bfd62408369ed",
+  "ordinaryIonDiagramRendersIdentical": 12,
+  "answerEntryComponentsUnchanged": [
+    "QuestionInput",
+    "IonConstructionInput",
+    "CovalentConstructionInput"
+  ],
+  "scope": "Only submitted paper reviews use the new static record; default ion diagrams remain exact."
+}

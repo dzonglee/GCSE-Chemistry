@@ -8,7 +8,11 @@ export function IonDotCross({
   shellsOmitted = false,
   showBrackets,
   textLegend = false,
-}: NonNullable<Question["ionDotCross"]> & { textLegend?: boolean }) {
+  contextLabel,
+}: NonNullable<Question["ionDotCross"]> & {
+  textLegend?: boolean;
+  contextLabel?: string;
+}) {
   const total = dots + crosses,
     chargeLabel =
       charge === 0
@@ -27,7 +31,7 @@ export function IonDotCross({
       <svg
         viewBox="0 0 260 205"
         role="img"
-        aria-label={`${proposed ? "Proposed diagram" : "Current outer-shell diagram"}: ${symbol}, displayed charge ${chargeLabel}; square brackets ${bracketed ? "drawn" : "omitted"}; ${shellsOmitted ? "Electron shells omitted in this symbol; this does not mean no electrons." : `${dots} ${dots === 1 ? "dot" : "dots"} and ${crosses} ${crosses === 1 ? "cross" : "crosses"}. Inner electrons omitted.`}`}
+        aria-label={`${contextLabel ?? (proposed ? "Proposed diagram" : "Current outer-shell diagram")}: ${symbol}, displayed charge ${chargeLabel}; square brackets ${bracketed ? "drawn" : "omitted"}; ${shellsOmitted ? "Electron shells omitted in this symbol; this does not mean no electrons." : `${dots} ${dots === 1 ? "dot" : "dots"} and ${crosses} ${crosses === 1 ? "cross" : "crosses"}. Inner electrons omitted.`}`}
       >
         {!shellsOmitted && (
           <circle cx="120" cy="96" r="61" fill="#f5f6fc" stroke="#c5cede" />
