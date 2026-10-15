@@ -6,7 +6,7 @@ The requested target is four full Separate Chemistry papers per board: AQA 8462,
 | ----------- | ------------------- | ---------: | -----------: | ---------------------------------------------------------------------------------------------- |
 | AQA         | 8462/1F, 2F, 1H, 2H |        100 |          105 | Four original papers; all four individual provenance audits and fresh sample delivery complete |
 | Edexcel     | 1CH0/1F, 2F, 1H, 2H |        100 |          105 | All four papers individually researched, authored, reviewed and delivered                      |
-| OCR Gateway | J248/01, 02, 03, 04 |         90 |          105 | J248/01,02 and03 individually accepted and delivered;04 pending                                                   |
+| OCR Gateway | J248/01, 02, 03, 04 |         90 |          105 | All four components individually accepted and delivered; final whole-expansion gates pending                                                   |
 
 OCR has 15 Section A multiple-choice marks plus 75 Section B marks, **90 total**. The final target is 1,160 marks, not 1,200. Its component/topic allocation differs from AQA and Pearson. Pearson places extracting metals/equilibria in component 1 and rates/energy in component 2. Papers must follow their own board allocation.
 
@@ -36,7 +36,9 @@ Current individual records:
 
 - [OCR Gateway J248/02 basis](ocr-2f-basis.md): complete current scope/paired2025 paper/scheme/report reading,48 individually considered parts, final affected checks and26 final originals personally inspected and explicitly delivered. That checkpoint completed ten accepted papers (980marks/456parts).
 
-- [OCR Gateway J248/03 basis](ocr-3h-basis.md): complete current C1–C3/paired2025 paper/scheme/report reading,45 individually reviewed parts, native extrapolation/ion/profile tasks, final affected checks and26 inspected or byte-identical verified captures explicitly delivered. **Eleven accepted papers total1070marks/501parts.** J248/04 and final whole-expansion gates remain pending.
+- [OCR Gateway J248/03 basis](ocr-3h-basis.md): complete current C1–C3/paired2025 paper/scheme/report reading,45 individually reviewed parts, native extrapolation/ion/profile tasks, final affected checks and26 inspected or byte-identical verified captures explicitly delivered. That checkpoint completed eleven accepted papers (1070marks/501parts).
+
+- [OCR Gateway J248/04 basis](ocr-4h-basis.md): complete current C4–C6/paired2025 paper/scheme/report reading,48 individually reviewed parts, native tangent/two-polymer construction, genuine ECF, final affected checks and35 inspected or byte-identical verified captures explicitly delivered. **All twelve individual paper gates complete:1160marks/549parts.** Catalogue/Maths comparison, unified whole-course regression, fresh GitHub verification and main/default integration remain pending.
 
 ## Baseline and current claims
 

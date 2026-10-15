@@ -10,6 +10,7 @@ import { edexcelPaper2HigherFull } from "./edexcel-paper2-higher-full";
 import { ocrPaper1FoundationFull } from "./ocr-paper1-foundation-full";
 import { ocrPaper2FoundationFull } from "./ocr-paper2-foundation-full";
 import { ocrPaper3HigherFull } from "./ocr-paper3-higher-full";
+import { ocrPaper4HigherFull } from "./ocr-paper4-higher-full";
 
 export const fullPapers: Assessment[] = [
   {
@@ -180,5 +181,20 @@ export const fullPapers: Assessment[] = [
     examPaper: ocrPaper3HigherFull,
     questions: ocrPaper3HigherFull.parts.map((part) => part.question),
     topics: ocrPaper3HigherFull.parts.map((part) => part.topic),
+  },
+  {
+    slug: ocrPaper4HigherFull.id,
+    title: "OCR Gateway Paper 4 · Higher",
+    shortTitle: "Paper 4 · Higher",
+    description:
+      "An original 90-mark, 105-minute OCR Gateway J248/04 Separate Chemistry paper. Its own 48 parts include tangent construction with carried-error calculation, titration evidence, a six-mark industrial decision, distinct addition/polyester constructions, finite-chain condensation and matched-service comparisons. Submit the whole paper before reviewing retained work and method marks.",
+    tier: "higher",
+    course: "separate",
+    structure: "full",
+    kind: "paper",
+    minutes: ocrPaper4HigherFull.minutes,
+    examPaper: ocrPaper4HigherFull,
+    questions: ocrPaper4HigherFull.parts.map((part) => part.question),
+    topics: ocrPaper4HigherFull.parts.map((part) => part.topic),
   },
 ];

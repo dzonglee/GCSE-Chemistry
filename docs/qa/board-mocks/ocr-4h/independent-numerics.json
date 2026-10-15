@@ -1,0 +1,7 @@
+{
+  "verifiedAt": "2026-10-15T03:28:35.386278+00:00",
+  "checks": "yield,gas ratios,burette,concordant mean,diprotic concentration,raw LCA conversions,CO2 mass/amount/volume,conserved concentration totals,tangent contact/derivative/span,polymer/finite atom accounts,Haber constraints and rounded same-temperature equilibrium compatibility all pass",
+  "mean": "14.20",
+  "acidConcentrationUnrounded": "0.1056338028169014084507042254",
+  "roundedHaberKpIntervalsOverlap": true
+}
