@@ -1,6 +1,6 @@
 # Validation evidence
 
-Final acceptance: all 95 Chemistry lessons are individually researched and reviewed, with sample screenshots explicitly delivered. Water/RP8/RP13 and the shared UI proposals are integrated; all 124 AQA section responses are reviewed. Types, lint, build, 1,105 units and all 3,338 browser checks across 172 files passed on build Aa0dIR-3w-sKBPnUmz_Ot, with 1,669 checks per device. All 2,363 frozen fingerprints are unchanged and port 3201 is released. Four original full papers provide 400 marks across 191 parts. The final Maths comparison supports parity in the reviewed UI, tasks and assessment behavior, without promising an exam result or full other-board certification. No merge or deployment.
+Current 12-paper expansion validation and publication state is recorded in the [final release record](qa/board-mocks/final-release/README.md), with exact build, frozen source, complete browser inventory, actual exit receipts and fresh GitHub proof. All 95 lessons and twelve original components have individual review/sample records. The older 3,338-case/four-AQA-paper acceptance is preserved in the [baseline archive](qa/board-mocks/baseline-37817ca/README.md); it does not establish acceptance of the expanded source.
 
 ## Historical accepted checkpoint — 11 October 2026
 

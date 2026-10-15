@@ -531,6 +531,7 @@ footer > div {
 }
 .question-panel[data-full-paper] .written-equation-prompt {
   margin: 8px 0;
+  overflow-wrap: anywhere;
 }
 .question-panel[data-full-paper]
   .polymerisation-assessment-response
@@ -1393,7 +1394,9 @@ progress {
   flex: 1;
   font-size: 0.95rem;
 }
-.assessment-card h2 {
+.assessment-card h2,
+.assessment-card h3,
+.assessment-card h4 {
   font-size: 1.35rem;
 }
 .note-panel {
@@ -5536,4 +5539,52 @@ progress {
   > .potable-recovery-clear {
   display: inline-flex;
   margin-top: 8px;
+}
+
+.paper-board-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 20px 0 32px;
+}
+.paper-board-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+}
+.paper-board-section,
+.paper-format-section {
+  margin-top: 40px;
+}
+.paper-board-section > h2 {
+  scroll-margin-top: 24px;
+  margin-bottom: 8px;
+}
+.paper-tier-section > h3 {
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+.paper-tier-section > .assessment-cards {
+  margin-top: 12px;
+}
+.assessment-card h3,
+.assessment-card h4 {
+  font-family: var(--heading);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  font-weight: 620;
+  margin: 0 0 0.8rem;
+}
+.paper-format-section > h2 {
+  scroll-margin-top: 24px;
+}
+@media (max-width: 900px) {
+  .paper-board-section > h2,
+  .paper-format-section > h2 {
+    scroll-margin-top: 80px;
+  }
 }

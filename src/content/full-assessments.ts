@@ -97,7 +97,7 @@ export const fullPapers: Assessment[] = [
     title: "Edexcel Paper 2 · Foundation",
     shortTitle: "Paper 2 · Foundation",
     description:
-      "An original 100-mark, 105-minute Pearson Edexcel Separate Chemistry paper. Its own48 parts include gas-rate plotting, endothermic profiles, ion identification, photometer calibration, alcohol and polymer construction, atmosphere evidence and nanoparticle calculations. Submit the whole paper before reviewing retained work and method marks.",
+      "An original 100-mark, 105-minute Pearson Edexcel Separate Chemistry paper. Its own 48 parts include gas-rate plotting, endothermic profiles, ion identification, photometer calibration, alcohol and polymer construction, atmosphere evidence and nanoparticle calculations. Submit the whole paper before reviewing retained work and method marks.",
     tier: "foundation",
     course: "separate",
     structure: "full",

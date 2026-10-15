@@ -1,0 +1,110 @@
+{
+  "lessons": 95,
+  "journeyPractice": 2192,
+  "diagnostics": [
+    20,
+    20
+  ],
+  "short": [
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15
+  ],
+  "cumulative": [
+    30,
+    30,
+    30,
+    30
+  ],
+  "full": [
+    {
+      "slug": "paper-1-foundation-full",
+      "board": "AQA",
+      "tier": "foundation",
+      "marks": 100,
+      "parts": 50
+    },
+    {
+      "slug": "paper-2-foundation-full",
+      "board": "AQA",
+      "tier": "foundation",
+      "marks": 100,
+      "parts": 49
+    },
+    {
+      "slug": "paper-1-higher-full",
+      "board": "AQA",
+      "tier": "higher",
+      "marks": 100,
+      "parts": 43
+    },
+    {
+      "slug": "paper-2-higher-full",
+      "board": "AQA",
+      "tier": "higher",
+      "marks": 100,
+      "parts": 49
+    },
+    {
+      "slug": "edexcel-paper-1-foundation-full",
+      "board": "Edexcel",
+      "tier": "foundation",
+      "marks": 100,
+      "parts": 40
+    },
+    {
+      "slug": "edexcel-paper-2-foundation-full",
+      "board": "Edexcel",
+      "tier": "foundation",
+      "marks": 100,
+      "parts": 48
+    },
+    {
+      "slug": "edexcel-paper-1-higher-full",
+      "board": "Edexcel",
+      "tier": "higher",
+      "marks": 100,
+      "parts": 43
+    },
+    {
+      "slug": "edexcel-paper-2-higher-full",
+      "board": "Edexcel",
+      "tier": "higher",
+      "marks": 100,
+      "parts": 39
+    },
+    {
+      "slug": "ocr-paper-1-foundation-full",
+      "board": "OCR",
+      "tier": "foundation",
+      "marks": 90,
+      "parts": 47
+    },
+    {
+      "slug": "ocr-paper-2-foundation-full",
+      "board": "OCR",
+      "tier": "foundation",
+      "marks": 90,
+      "parts": 48
+    },
+    {
+      "slug": "ocr-paper-3-higher-full",
+      "board": "OCR",
+      "tier": "higher",
+      "marks": 90,
+      "parts": 45
+    },
+    {
+      "slug": "ocr-paper-4-higher-full",
+      "board": "OCR",
+      "tier": "higher",
+      "marks": 90,
+      "parts": 48
+    }
+  ]
+}

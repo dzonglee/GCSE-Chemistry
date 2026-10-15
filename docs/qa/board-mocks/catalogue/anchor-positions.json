@@ -1,0 +1,56 @@
+[
+  {
+    "width": 320,
+    "label": "OCR Gateway J248",
+    "targetTop": 80.125,
+    "headerBottom": 64
+  },
+  {
+    "width": 320,
+    "label": "Cumulative sets",
+    "targetTop": 80.1875,
+    "headerBottom": 64
+  },
+  {
+    "width": 320,
+    "label": "Short topic mixes",
+    "targetTop": 80.359375,
+    "headerBottom": 64
+  },
+  {
+    "width": 390,
+    "label": "OCR Gateway J248",
+    "targetTop": 80.390625,
+    "headerBottom": 64
+  },
+  {
+    "width": 390,
+    "label": "Cumulative sets",
+    "targetTop": 79.953125,
+    "headerBottom": 64
+  },
+  {
+    "width": 390,
+    "label": "Short topic mixes",
+    "targetTop": 79.75,
+    "headerBottom": 64
+  },
+  {
+    "width": 1280,
+    "label": "OCR Gateway J248",
+    "targetTop": 24.28125,
+    "headerBottom": 0
+  },
+  {
+    "width": 1280,
+    "label": "Cumulative sets",
+    "targetTop": 24,
+    "headerBottom": 0
+  },
+  {
+    "width": 1280,
+    "label": "Short topic mixes",
+    "targetTop": 23.671875,
+    "headerBottom": 0
+  }
+]

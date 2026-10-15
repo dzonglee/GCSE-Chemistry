@@ -17,6 +17,8 @@ The [current rebuild status](rebuild-status.md) records the final course audit. 
 5. Personal progress, tier/course preferences, mixed practice, low-stakes diagnostics and original practice papers. No predicted grades, accounts, tracking, paid APIs, videos or deployment.
 6. Scientific model/answer regression tests, content integrity, desktop/mobile browser checks, production build, types, lint and automated accessibility checks. Document actual coverage and limitations.
 
+The current assessment expansion contains twelve individually researched components, grouped by board/specification and tier. Each board has one Foundation pair and one Higher pair; four components does not mean four complete qualification sets. Individual source/marking/native-input/sample records are in [board-paper review](board-mocks/README.md); current whole-course and GitHub release evidence is in [final release](qa/board-mocks/final-release/README.md).
+
 ## Acceptance
 
 All advertised routes work; every released lesson has authored tasks and an appropriate working model; hints, incorrect answers, reset and resume work; assessment feedback is deferred until submission; reload cannot earn fresh evidence; diagnostics/papers reserve separate questions; small screens and keyboard controls work; storage failure never prevents learning; no unsupported mastery or board alignment claims.

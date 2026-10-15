@@ -1,0 +1,116 @@
+{
+  "build": "CXDvQrArl0eiKmoxKMRzr",
+  "contentCheckpoint": "627a3320bdfb1206fbf54057e3ba2c8fea49a0f1",
+  "capturedAt": "2026-10-15T04:41:27.127Z",
+  "note": "Actual original catalogue views; one controlled empty OCR draft illustrates resume wording and is not student achievement.",
+  "captures": [
+    {
+      "file": "320-opening.png",
+      "width": 320,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "388f9ba923e3513abd6173ab76323b849edbe674e631230bd9e6899d39576470"
+    },
+    {
+      "file": "320-ocr.png",
+      "width": 320,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "3bf175fb90291f0b9d55687c563b4143a0d22c79d67632a77ba0a4bd45987679"
+    },
+    {
+      "file": "320-edexcel-isotope.png",
+      "width": 320,
+      "url": "http://127.0.0.1:3201/exams/edexcel-paper-1-higher-full",
+      "sha256": "33136aa5f8dbb3cb56d64e04857586aef67d6618fbb240a27695d5d5ef23c368"
+    },
+    {
+      "file": "320-jump-full-board-OCR.png",
+      "width": 320,
+      "url": "http://127.0.0.1:3201/exams#full-board-OCR",
+      "sha256": "4769a26abc6b2e75d6326b5048369c735f14e97340223642c0433ff7954aea51"
+    },
+    {
+      "file": "390-opening.png",
+      "width": 390,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "5366cf0d1bb97dd2040923c1784249f53b98589bd3b69e506f5043d8b568e95a"
+    },
+    {
+      "file": "390-catalogue.png",
+      "width": 390,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "d9625dc3a2aebb11ad8f22d948a6d61a0bed6ce46b1e3543eea13aa74e92ae51"
+    },
+    {
+      "file": "390-aqa.png",
+      "width": 390,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "252dd90aaacf5b6e58e9fb56a273c17e62cac239c29d1ebd595c5c323a9de477"
+    },
+    {
+      "file": "390-edexcel.png",
+      "width": 390,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "a6b27d42221e548440f7f48473f6a1c685351de13622e42892c0aa368d6d55ae"
+    },
+    {
+      "file": "390-cumulative.png",
+      "width": 390,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "503a1175d849ee380c21e6e6bb980887bccb7cab60f4980c888b0a4018cae9cb"
+    },
+    {
+      "file": "390-short-mixes.png",
+      "width": 390,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "6705bd6f9d800a2ca0be27b79fa7207d54d9e001f7f3d55e9b0618833596f45e"
+    },
+    {
+      "file": "390-ocr.png",
+      "width": 390,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "f57700a742934b457bc683f9b9aa8ef3ed34e1494a10c7edd5913844db069385"
+    },
+    {
+      "file": "390-ocr-resume.png",
+      "width": 390,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "3ffd0f799e1250616da95ea0e56bcfa8f9da46046aba8a4b5d448eedf6aa3ea3"
+    },
+    {
+      "file": "390-diagnostics.png",
+      "width": 390,
+      "url": "http://127.0.0.1:3201/diagnostics",
+      "sha256": "bb568d7370cb8efd7dd836a72f86b26a54f69cc57ee8cc1d1348e2400036f073"
+    },
+    {
+      "file": "390-jump-cumulative-sets.png",
+      "width": 390,
+      "url": "http://127.0.0.1:3201/exams#cumulative-sets",
+      "sha256": "bbc8224b5ab022b87c1d9e8ccaa80dd329984aceef7880c34536e5518c42b11a"
+    },
+    {
+      "file": "1280-opening.png",
+      "width": 1280,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "ad6105e626e68ea149e588aac32dd4a4692ca0f8732cf17c5d033eca4ff5c064"
+    },
+    {
+      "file": "1280-catalogue.png",
+      "width": 1280,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "8db1ea32ee0d21270953e7744271783db43e0ffd88c6b224a9fb6fb060e09e1f"
+    },
+    {
+      "file": "1280-ocr.png",
+      "width": 1280,
+      "url": "http://127.0.0.1:3201/exams",
+      "sha256": "bec4b98214b4c8c1590fe7116ac9515408e30dd53acab103e8e2378539afbae1"
+    },
+    {
+      "file": "1280-jump-short-topic-mixes.png",
+      "width": 1280,
+      "url": "http://127.0.0.1:3201/exams#short-topic-mixes",
+      "sha256": "7a2bb0e9cb13ca26d125cab1789d817a304a237f7c80503c7546c8033acaed8d"
+    }
+  ]
+}

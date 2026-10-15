@@ -1,0 +1,13 @@
+{
+  "inventoryOnly": true,
+  "cases": 3642,
+  "files": 182,
+  "projects": {
+    "desktop": 1821,
+    "mobile": 1821
+  },
+  "workers": 2,
+  "retries": 0,
+  "sha256": "6d9175ab4b0423ad3b661b56f32dddd741983db237491e8fb6deffed6c969fbc",
+  "note": "List mode contains no executed results; its skipped status is not a test-run outcome."
+}

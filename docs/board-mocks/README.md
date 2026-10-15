@@ -6,7 +6,7 @@ The requested target is four full Separate Chemistry papers per board: AQA 8462,
 | ----------- | ------------------- | ---------: | -----------: | ---------------------------------------------------------------------------------------------- |
 | AQA         | 8462/1F, 2F, 1H, 2H |        100 |          105 | Four original papers; all four individual provenance audits and fresh sample delivery complete |
 | Edexcel     | 1CH0/1F, 2F, 1H, 2H |        100 |          105 | All four papers individually researched, authored, reviewed and delivered                      |
-| OCR Gateway | J248/01, 02, 03, 04 |         90 |          105 | All four components individually accepted and delivered; final whole-expansion gates pending                                                   |
+| OCR Gateway | J248/01, 02, 03, 04 |         90 |          105 | All four components individually accepted and delivered; see current final-release evidence                                                   |
 
 OCR has 15 Section A multiple-choice marks plus 75 Section B marks, **90 total**. The final target is 1,160 marks, not 1,200. Its component/topic allocation differs from AQA and Pearson. Pearson places extracting metals/equilibria in component 1 and rates/energy in component 2. Papers must follow their own board allocation.
 
@@ -38,11 +38,11 @@ Current individual records:
 
 - [OCR Gateway J248/03 basis](ocr-3h-basis.md): complete current C1–C3/paired2025 paper/scheme/report reading,45 individually reviewed parts, native extrapolation/ion/profile tasks, final affected checks and26 inspected or byte-identical verified captures explicitly delivered. That checkpoint completed eleven accepted papers (1070marks/501parts).
 
-- [OCR Gateway J248/04 basis](ocr-4h-basis.md): complete current C4–C6/paired2025 paper/scheme/report reading,48 individually reviewed parts, native tangent/two-polymer construction, genuine ECF, final affected checks and35 inspected or byte-identical verified captures explicitly delivered. **All twelve individual paper gates complete:1160marks/549parts.** Catalogue/Maths comparison, unified whole-course regression, fresh GitHub verification and main/default integration remain pending.
+- [OCR Gateway J248/04 basis](ocr-4h-basis.md): complete current C4–C6/paired2025 paper/scheme/report reading,48 individually reviewed parts, native tangent/two-polymer construction, genuine ECF, final affected checks and35 inspected or byte-identical verified captures explicitly delivered. **All twelve individual paper gates complete:1160marks/549parts.** Catalogue/Maths comparison is complete; current unified regression, fresh GitHub verification and main/default integration state is recorded in [final release](../qa/board-mocks/final-release/README.md).
 
 ## Baseline and current claims
 
-Commit `37817ca29a788fc9d90a068c094357a3f2b5c4cd` is the previously accepted course release. The root `SOURCE-MANIFEST.json`, `docs/final-browser-acceptance.json` and `docs/final-github-verification.json` describe that earlier release and its 3,338 browser checks. They are preserved historical evidence, **not acceptance of this expansion**. They must be superseded or archived clearly at final release.
+Commit `37817ca29a788fc9d90a068c094357a3f2b5c4cd` is the previously accepted course release. Its source/browser/Git receipts are preserved in [baseline-37817ca](../qa/board-mocks/baseline-37817ca/README.md). Current root SOURCE-MANIFEST.json and final browser/Git receipts belong to the expansion; [final release](../qa/board-mocks/final-release/README.md) records their actual pending/completed state. Historical 3,338-case evidence is not counted as acceptance of the new source.
 
 The four existing AQA papers' question IDs, answers, order, saved drafts and exposure links are retained. New board papers require distinct IDs; conceptually equivalent recalls/constructions need explicitly reviewed exposure aliases. A board preference is not proof that all existing lessons cover that board. An original practice-paper score is not a predicted grade.
 

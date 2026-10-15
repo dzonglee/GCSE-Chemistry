@@ -1,20 +1,5 @@
 {
-  "status": "passed",
-  "verifiedAt": "2026-10-13T17:30:01.598384+00:00",
-  "repository": "https://github.com/dzonglee/GCSE-Chemistry",
-  "branch": "codex/chemistry-main-followups-20261008",
-  "verifiedCommit": "660d80af09aa776e8850c1221d7ea87d9cb70525",
-  "newFreshClone": true,
-  "cleanCheckout": true,
-  "allTrackedFiles": 2533,
-  "allTrackedPublisherHashesExact": true,
-  "manifestScopeFiles": 1106,
-  "manifestMatchesFreshClone": true,
-  "relativeMarkdownLinksChecked": 435,
-  "missingRelativeLinks": [],
-  "browserCasesPassed": 3338,
-  "unitChecksPassed": 1105,
-  "productionBuildId": "Aa0dIR-3w-sKBPnUmz_Ot",
-  "externalPotableWaterReview": "Integrated and accepted",
-  "scope": "Clean fresh GitHub clone of complete acceptance commit; byte-exact tracked/source-manifest parity. This proof-only follow-up is separately verified below."
+  "status": "pending",
+  "scope": "Awaiting final expanded-source acceptance, push, fresh GitHub clone and main/default integration",
+  "record": "docs/qa/board-mocks/final-release/README.md"
 }

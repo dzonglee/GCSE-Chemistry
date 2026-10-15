@@ -18,11 +18,45 @@ export function AssessmentCatalogue({
 }: {
   kind: "diagnostic" | "paper";
 }) {
-  const items =
-    kind === "diagnostic"
-      ? diagnostics
-      : [...fullPapers, ...extendedPapers, ...papers];
   const { data } = useProgress();
+  function card(item: Assessment, level: 2 | 3 | 4) {
+    const Heading = level === 4 ? "h4" : level === 3 ? "h3" : "h2";
+    const run = data.work[`assessment-${item.slug}`]?.run;
+    return (
+      <Link
+        key={item.slug}
+        className="panel assessment-card"
+        href={
+          kind === "diagnostic"
+            ? `/diagnostics/${item.slug}`
+            : `/exams/${item.slug}`
+        }
+      >
+        <span className="eyebrow">
+          {item.tier === "higher" ? "Higher" : "Foundation"} ·{" "}
+          {item.course === "separate" && "Chemistry only · "}
+          {item.examPaper?.basis &&
+            `${item.examPaper.basis.board} ${item.examPaper.basis.qualification} · `}
+          {item.minutes} minutes{!item.examPaper && " suggested"}
+          {item.examPaper && ` · ${item.examPaper.totalMarks} marks`}
+        </span>
+        <Heading>{item.title}</Heading>
+        <p>{item.description}</p>
+        <div className="topic-card-foot">
+          <span>
+            {run?.submitted !== undefined
+              ? "Results saved"
+              : run
+                ? item.examPaper
+                  ? "Resume your paper"
+                  : "Resume your set"
+                : `${item.questions.length} ${item.examPaper ? "parts" : "questions"}`}
+          </span>
+          <span aria-hidden="true">→</span>
+        </div>
+      </Link>
+    );
+  }
   return (
     <>
       <p className="eyebrow">
@@ -34,48 +68,97 @@ export function AssessmentCatalogue({
       <p className="lede">
         {kind === "diagnostic"
           ? "Try twenty questions across the course. Use the results to choose what to study next, without a predicted grade."
-          : "Choose a full paper, a cumulative set or a short topic mix. Check its board, tier and mark total, then work independently and review after submitting the whole paper or set."}
+          : "Choose your board and tier, then work independently. Submit the whole paper before reviewing answers, working and drawing marks."}
       </p>
-      <div className="assessment-cards">
-        {items.map((item) => (
-          <Link
-            key={item.slug}
-            className="panel assessment-card"
-            href={
-              kind === "diagnostic"
-                ? `/diagnostics/${item.slug}`
-                : `/exams/${item.slug}`
-            }
+      {kind === "diagnostic" ? (
+        <div className="assessment-cards">
+          {diagnostics.map((item) => card(item, 2))}
+        </div>
+      ) : (
+        <>
+          <p className="paper-catalogue-scope">
+            Four original Separate Chemistry papers per board: two Foundation
+            components and two Higher components. Each tier has one
+            two-component practice set. These are original practice papers, not
+            official papers or predicted grades.
+          </p>
+          <nav
+            className="paper-board-links"
+            aria-label="Jump to a board or practice format"
           >
-            <span className="eyebrow">
-              {item.tier === "higher" ? "Higher" : "Foundation"} ·{" "}
-              {item.course === "separate" && "Chemistry only · "}
-              {item.examPaper?.basis &&
-                `${item.examPaper.basis.board} ${item.examPaper.basis.qualification} · `}
-              {item.minutes} minutes suggested
-              {item.examPaper && ` · ${item.examPaper.totalMarks} marks`}
-            </span>
-            <h2>{item.title}</h2>
-            <p>{item.description}</p>
-            <div className="topic-card-foot">
-              <span>
-                {data.work[`assessment-${item.slug}`]?.run?.submitted
-                  ? "Results saved"
-                  : data.work[`assessment-${item.slug}`]?.run
-                    ? "Resume your set"
-                    : `${item.questions.length} questions`}
-              </span>
-              <span aria-hidden="true">→</span>
+            <a href="#full-board-AQA">AQA 8462</a>
+            <a href="#full-board-Edexcel">Pearson Edexcel 1CH0</a>
+            <a href="#full-board-OCR">OCR Gateway J248</a>
+            <a href="#cumulative-sets">Cumulative sets</a>
+            <a href="#short-topic-mixes">Short topic mixes</a>
+          </nav>
+          {[
+            { id: "AQA", label: "AQA · 8462", marks: 100 },
+            { id: "Edexcel", label: "Pearson Edexcel · 1CH0", marks: 100 },
+            { id: "OCR", label: "OCR Gateway Science A · J248", marks: 90 },
+          ].map((board) => (
+            <section
+              className="paper-board-section"
+              aria-labelledby={`full-board-${board.id}`}
+              key={board.id}
+            >
+              <h2 id={`full-board-${board.id}`}>{board.label}</h2>
+              <p>
+                {board.marks} marks per paper · 105 minutes · Calculator allowed
+              </p>
+              {(["foundation", "higher"] as const).map((tier) => (
+                <section
+                  className="paper-tier-section"
+                  aria-labelledby={`full-board-${board.id} full-tier-${board.id}-${tier}`}
+                  key={tier}
+                >
+                  <h3 id={`full-tier-${board.id}-${tier}`}>
+                    {tier === "higher" ? "Higher" : "Foundation"}
+                  </h3>
+                  <div className="assessment-cards">
+                    {fullPapers
+                      .filter(
+                        (item) =>
+                          item.examPaper?.basis?.board === board.id &&
+                          item.tier === tier,
+                      )
+                      .map((item) => card(item, 4))}
+                  </div>
+                </section>
+              ))}
+            </section>
+          ))}
+          <section
+            className="paper-format-section"
+            aria-labelledby="cumulative-sets"
+          >
+            <h2 id="cumulative-sets">Cumulative sets</h2>
+            <p>
+              Thirty-question study sets. Check the scope and suggested time of
+              each set.
+            </p>
+            <div className="assessment-cards">
+              {extendedPapers.map((item) => card(item, 3))}
             </div>
-          </Link>
-        ))}
-      </div>
+          </section>
+          <section
+            className="paper-format-section"
+            aria-labelledby="short-topic-mixes"
+          >
+            <h2 id="short-topic-mixes">Short topic mixes</h2>
+            <p>Shorter collections for focused practice across topics.</p>
+            <div className="assessment-cards">
+              {papers.map((item) => card(item, 3))}
+            </div>
+          </section>
+        </>
+      )}
       <div className="panel note-panel">
         <h2>What these results can tell you</h2>
         <p>
           A response is evidence about one question under these conditions. It
           is not an exam-board grade, a diagnosis of a misconception, or proof
-          of mastery. The full paper has original questions and allocated marks;
+          of mastery. Full papers have original questions and allocated marks;
           cumulative sets and short mixes have different lengths. None is an
           official exam-board paper or a source of predicted grades.
         </p>
@@ -89,6 +172,7 @@ export function AssessmentCatalogue({
     </>
   );
 }
+
 export function AssessmentPage({ assessment }: { assessment: Assessment }) {
   const { data } = useProgress();
   const run = data.work[`assessment-${assessment.slug}`]?.run;
