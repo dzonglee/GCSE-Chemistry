@@ -7815,6 +7815,16 @@ body:has(.sample-lesson) .topic-number {
 .ph-measurement-response .ph-measurements {
   margin: 0;
 }
+.assessment-page.full-paper .ph-measurements table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.assessment-page.full-paper .ph-measurements :is(th, td) {
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
 @media (max-width: 600px) {
   .ph-measurement-response {
     grid-template-columns: minmax(0, 1fr);

@@ -9,6 +9,7 @@ import { edexcelPaper1HigherFull } from "./edexcel-paper1-higher-full";
 import { edexcelPaper2HigherFull } from "./edexcel-paper2-higher-full";
 import { ocrPaper1FoundationFull } from "./ocr-paper1-foundation-full";
 import { ocrPaper2FoundationFull } from "./ocr-paper2-foundation-full";
+import { ocrPaper3HigherFull } from "./ocr-paper3-higher-full";
 
 export const fullPapers: Assessment[] = [
   {
@@ -164,5 +165,20 @@ export const fullPapers: Assessment[] = [
     examPaper: ocrPaper2FoundationFull,
     questions: ocrPaper2FoundationFull.parts.map((part) => part.question),
     topics: ocrPaper2FoundationFull.parts.map((part) => part.topic),
+  },
+  {
+    slug: ocrPaper3HigherFull.id,
+    title: "OCR Gateway Paper 3 · Higher",
+    shortTitle: "Paper 3 · Higher",
+    description:
+      "An original 90-mark, 105-minute OCR Gateway J248/03 Separate Chemistry paper. Its own 45 parts include 15 multiple-choice marks, a six-mark bonding critique, ion and energy constructions, cooling-line extrapolation, limiting-reactant and atom-mass calculations, pH evidence and half equations. Submit the whole paper before reviewing retained work and method marks.",
+    tier: "higher",
+    course: "separate",
+    structure: "full",
+    kind: "paper",
+    minutes: ocrPaper3HigherFull.minutes,
+    examPaper: ocrPaper3HigherFull,
+    questions: ocrPaper3HigherFull.parts.map((part) => part.question),
+    topics: ocrPaper3HigherFull.parts.map((part) => part.topic),
   },
 ];

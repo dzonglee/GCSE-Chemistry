@@ -1,0 +1,138 @@
+{
+  "paper": "ocr-paper-3-higher-full",
+  "build": "zgPsE_cHVaM2S-wiyPy7d",
+  "capturedAt": "2026-10-15T02:26:35.594Z",
+  "note": "Controlled QA openings and unresolved submitted reviews; no score or fresh-independent success is inferred from these captures.",
+  "captures": [
+    {
+      "file": "390-intro.png",
+      "width": 390,
+      "sha256": "208cf3ce190afb50b305aeaaa4888fffc38d012a0d216d7d04223557b74c1dec"
+    },
+    {
+      "file": "390-basis.png",
+      "width": 390,
+      "sha256": "f50d9e3c3bc8f413cb9c0e3178fb4024b5165a53d0fb890d2297a83ef1271ad3"
+    },
+    {
+      "file": "390-13.png",
+      "width": 390,
+      "sha256": "508ebfafa4530639fc1d177541b5ed9ee8bd43b911060d92ea595584ccdf91b5"
+    },
+    {
+      "file": "390-18a.png",
+      "width": 390,
+      "sha256": "baddcf45578b6275572ff66e354efecef9ca42124d5e7060ac6f369b5b5799bb"
+    },
+    {
+      "file": "390-18b.png",
+      "width": 390,
+      "sha256": "2b22255b23c19ced2061661bd0a0440c4c818e89b188675419937d631ae345aa"
+    },
+    {
+      "file": "390-19a.png",
+      "width": 390,
+      "sha256": "282a42b01f268ca1de50b9a87c8f60bf460efe7b4f00c303dc260b9a137ce414"
+    },
+    {
+      "file": "390-20a.png",
+      "width": 390,
+      "sha256": "1c8f88d878471369b16cd5194621a3fea40d90dae2fff47697ee7b87956e9c43"
+    },
+    {
+      "file": "390-20e.png",
+      "width": 390,
+      "sha256": "056efb371ae05510e64568671f7d3e97c4b8aa5c53a44b6b2ca2021a84568165"
+    },
+    {
+      "file": "390-21b.png",
+      "width": 390,
+      "sha256": "296a06bdaad4790cad7186edae5d1b545f259bc8a148f46b30f5abd4c3d26b5c"
+    },
+    {
+      "file": "390-review-18a.png",
+      "width": 390,
+      "sha256": "52f9c10ef53129b6ad6af5b24af94ee8b831eddee7ec57389aad3a0300af1a09"
+    },
+    {
+      "file": "390-review-18b.png",
+      "width": 390,
+      "sha256": "18373174be531ef4feb4560fcbb23da5bfce9efeec4baf23494ca764765f19af"
+    },
+    {
+      "file": "390-review-20a.png",
+      "width": 390,
+      "sha256": "19b8428dd39032d57b9dfe8e26d7ce078491990d7e0b8279f844302422a93ba4"
+    },
+    {
+      "file": "390-review-20e.png",
+      "width": 390,
+      "sha256": "56fae283579ec3820b92412004159c292ee77c3116404c907a387b1965f2e411"
+    },
+    {
+      "file": "1280-intro.png",
+      "width": 1280,
+      "sha256": "90d91043b676e2d586dcb9f5886af1c67a21118043b4429c45b8bac8179eb8a7"
+    },
+    {
+      "file": "1280-basis.png",
+      "width": 1280,
+      "sha256": "24f93839b5ebfd15b4cb82d73e05e1012c63f009c02fcfb7ecbe2534be22cc0b"
+    },
+    {
+      "file": "1280-13.png",
+      "width": 1280,
+      "sha256": "6f22bb06b756ecd8b5dad5d0008e7bf4302a070649650e8a38c338c5cf5a8695"
+    },
+    {
+      "file": "1280-18a.png",
+      "width": 1280,
+      "sha256": "fa532aaff64b68a394fb1504ab2dd72f7b8f01041255e31134818fe9f51384ac"
+    },
+    {
+      "file": "1280-18b.png",
+      "width": 1280,
+      "sha256": "b1400bde8fdc0895327680b552a4363883eb1e0c0994b9ce2170721405d02496"
+    },
+    {
+      "file": "1280-19a.png",
+      "width": 1280,
+      "sha256": "9a58f6d07f85c73a78308b629c10b7a7d3d6bc180b897d81d2656d3094510292"
+    },
+    {
+      "file": "1280-20a.png",
+      "width": 1280,
+      "sha256": "064fe3ee075a022b3f41e147d4fac9040c3e38a11d5c612ad0519d945381709d"
+    },
+    {
+      "file": "1280-20e.png",
+      "width": 1280,
+      "sha256": "83bac20adc103ef7ca3c375b84e06f4994cbd47f3ff394d7453c606de1c03350"
+    },
+    {
+      "file": "1280-21b.png",
+      "width": 1280,
+      "sha256": "0bd00b5ea94be71fd7934fd44e18c7c7dddd97dc0153e2b54916555b0ec1816d"
+    },
+    {
+      "file": "1280-review-18a.png",
+      "width": 1280,
+      "sha256": "3d3a1ddfa00e40b333cad5372df036cafb269002ab5d18b165db26fdbbc95412"
+    },
+    {
+      "file": "1280-review-18b.png",
+      "width": 1280,
+      "sha256": "26e09645d49c1926c65b471cf19e094e1f63f5cebd1831b51996c13afcb65745"
+    },
+    {
+      "file": "1280-review-20a.png",
+      "width": 1280,
+      "sha256": "14a8f89a9f3551287c5cba6d2dca3d49c54fd8965d4c20260f6fe96852f58e66"
+    },
+    {
+      "file": "1280-review-20e.png",
+      "width": 1280,
+      "sha256": "d21e8ef03027e904b01c0aa9951e4e0bb0d65c469d0c97a562617105bb372ed3"
+    }
+  ]
+}

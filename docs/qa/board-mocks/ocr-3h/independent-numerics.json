@@ -1,0 +1,47 @@
+{
+  "verifiedAt": "2026-10-15T01:59:38.455340+00:00",
+  "pHCurvePhysicalCheck": "20cm3 0.010mol/dm3 strong acid with equal-concentration strong alkali at25C, rounded supplied readings",
+  "pHChecks": [
+    {
+      "volumeCm3": 0,
+      "pH": 2,
+      "computed": 2.0
+    },
+    {
+      "volumeCm3": 5,
+      "pH": 2.2,
+      "computed": 2.221848749616356
+    },
+    {
+      "volumeCm3": 10,
+      "pH": 2.5,
+      "computed": 2.4771212547196626
+    },
+    {
+      "volumeCm3": 19,
+      "pH": 3.6,
+      "computed": 3.591064607026499
+    },
+    {
+      "volumeCm3": 20,
+      "pH": 7,
+      "computed": 7
+    },
+    {
+      "volumeCm3": 21,
+      "pH": 10.4,
+      "computed": 10.387216143280265
+    },
+    {
+      "volumeCm3": 30,
+      "pH": 11.3,
+      "computed": 11.301029995663981
+    },
+    {
+      "volumeCm3": 40,
+      "pH": 11.5,
+      "computed": 11.522878745280337
+    }
+  ],
+  "otherLiteralChecks": "cube ratio, offset Rf, limiting oxide mass, single-atom mass, profile differences, coefficient-weighted bond energies, ion counts, tenfold pH shift all pass"
+}
