@@ -1,0 +1,21 @@
+{
+  "verifiedAt": "2026-10-15T16:46:51.721251+00:00",
+  "verifiedAcceptanceCommit": "c01ea3949892462fc4a5f66cb7bc4c4f0986b107",
+  "testedApplicationSourceCommit": "52c371cee7d5618feb5e88ca5300b02ff4fad490",
+  "freshClone": true,
+  "stages": {
+    "ci": 0,
+    "typecheck": 0,
+    "lint": 0,
+    "unit": 0,
+    "build": 0,
+    "owner": 0
+  },
+  "unitChecksPassed": 1157,
+  "sourceManifestFiles": 1135,
+  "allTrackedFilesByteExact": 2982,
+  "cleanAfterChecks": true,
+  "freshBuildId": "7fUegwqL0n0DZxDTIh5Ej",
+  "completeBrowserTestedBuildId": "Rxb6qPeCLgmBC4GXQefEJ",
+  "note": "Build IDs identify separate actual builds. The full browser run used the frozen publisher build; a new GitHub clone independently passed install, types, lint, all units and production build from the same application source. This proof-only publication follows the verified acceptance ancestor."
+}

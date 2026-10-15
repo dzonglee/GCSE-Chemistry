@@ -1,0 +1,28 @@
+{
+  "integratedAt": "2026-10-15T16:46:26.111644+00:00",
+  "integratedAcceptanceCommit": "c01ea3949892462fc4a5f66cb7bc4c4f0986b107",
+  "testedApplicationSourceCommit": "52c371cee7d5618feb5e88ca5300b02ff4fad490",
+  "actualDefaultRef": "refs/heads/codex/chemistry-courseware-handoff-20261008",
+  "remoteHeads": {
+    "refs/heads/codex/chemistry-courseware-handoff-20261008": "c01ea3949892462fc4a5f66cb7bc4c4f0986b107",
+    "refs/heads/main": "c01ea3949892462fc4a5f66cb7bc4c4f0986b107"
+  },
+  "atomicPush": true,
+  "forceUsed": false,
+  "allPreviousRemoteHeadsPreservedAsAncestors": true,
+  "freshMainAndDefaultFetchExact": true,
+  "freshMainCheckoutAllTrackedBytesExact": true,
+  "freshCheckedBuildId": "7fUegwqL0n0DZxDTIh5Ej",
+  "testedPublisherBuildId": "Rxb6qPeCLgmBC4GXQefEJ",
+  "freshStages": {
+    "ci": 0,
+    "typecheck": 0,
+    "lint": 0,
+    "unit": 0,
+    "build": 0,
+    "owner": 0
+  },
+  "freshUnitChecks": 1157,
+  "completeBrowserChecks": 3642,
+  "scope": "Acceptance commit integrated after complete browser and fresh-clone gates. A later proof-only documentation follow-up may record this integration without changing tested application source."
+}
