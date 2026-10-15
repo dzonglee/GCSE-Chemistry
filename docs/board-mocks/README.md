@@ -6,7 +6,7 @@ The requested target is four full Separate Chemistry papers per board: AQA 8462,
 | ----------- | ------------------- | ---------: | -----------: | ---------------------------------------------------------------------------------------------- |
 | AQA         | 8462/1F, 2F, 1H, 2H |        100 |          105 | Four original papers; all four individual provenance audits and fresh sample delivery complete |
 | Edexcel     | 1CH0/1F, 2F, 1H, 2H |        100 |          105 | All four papers individually researched, authored, reviewed and delivered                      |
-| OCR Gateway | J248/01, 02, 03, 04 |         90 |          105 | J248/01 individually accepted and delivered;02/03/04 pending                                                   |
+| OCR Gateway | J248/01, 02, 03, 04 |         90 |          105 | J248/01 and02 individually accepted and delivered;03/04 pending                                                   |
 
 OCR has 15 Section A multiple-choice marks plus 75 Section B marks, **90 total**. The final target is 1,160 marks, not 1,200. Its component/topic allocation differs from AQA and Pearson. Pearson places extracting metals/equilibria in component 1 and rates/energy in component 2. Papers must follow their own board allocation.
 
@@ -32,7 +32,9 @@ Current individual records:
 
 - [Edexcel 1CH0/2H basis](edexcel-2h-basis.md): complete individual primary/content/marking/UI review,32 final inspected or byte-identical verified captures and explicit sample delivery complete. This checkpoint completed the eight AQA/Pearson papers (800marks/361parts).
 
-- [OCR Gateway J248/01 basis](ocr-1f-basis.md): current specification, complete paired2025 paper/scheme and examiner report;47 individually considered parts, final affected checks and26 inspected or byte-identical verified captures explicitly delivered. **Nine accepted papers total890marks/408parts.** J248/02,03,04 remain individually pending.
+- [OCR Gateway J248/01 basis](ocr-1f-basis.md): current specification, complete paired2025 paper/scheme and examiner report;47 individually considered parts, final affected checks and26 inspected or byte-identical verified captures explicitly delivered. That checkpoint completed nine accepted papers (890marks/408parts).
+
+- [OCR Gateway J248/02 basis](ocr-2f-basis.md): complete current scope/paired2025 paper/scheme/report reading,48 individually considered parts, final affected checks and26 final originals personally inspected and explicitly delivered. **Ten accepted papers total980marks/456parts.** J248/03 and04 remain individually pending.
 
 ## Baseline and current claims
 
