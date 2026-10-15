@@ -1,0 +1,13 @@
+{
+  "reference": "627a3320bdfb1206fbf54057e3ba2c8fea49a0f1",
+  "totalContentAndLibraryFiles": 372,
+  "byteExactFiles": 371,
+  "controlledCatalogueCopyChanges": [
+    {
+      "file": "src/content/full-assessments.ts",
+      "change": "One catalogue-description word space: own48→own 48"
+    }
+  ],
+  "allTwelveExamDefinitionsQuestionsMarksReferencesOrderAndExposureExact": true,
+  "allOtherCatalogueMetadataExact": true
+}

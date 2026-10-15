@@ -1,0 +1,16 @@
+{
+  "status": "failed-infrastructure-no-complete-pass",
+  "testedCommit": "1966f6d91d90d3d1c4b2159cee2369a44120c6e9",
+  "productionBuildId": "CXDvQrArl0eiKmoxKMRzr",
+  "started": "2026-10-15T04:49:39Z",
+  "runnerExit": 1,
+  "ownerExit": 1,
+  "passed": 273,
+  "failed": 1,
+  "interrupted": 1,
+  "notRun": 3367,
+  "cause": "ENOSPC during browserContext.close while writing a raw browser trace; no complete suite pass is claimed.",
+  "protectedHashesVerifiedAfterClosure": 2451,
+  "productionPortReleased": true,
+  "response": "Preserved the original runner JSON/logs/report and generated artifacts. Reclaimed obsolete task-owned successful-run trace archives and an old compiler cache. Restart the whole suite from zero with monitoring that compresses only closed, exact confirmed passing-case raw traces older than 300 seconds, verifies decompressed SHA256 and unchanged file stat before working-copy removal, and retains ledgers. Active and failure traces remain untouched; source, assertions, deadlines, viewport, workers, retries and trace coverage remain unchanged."
+}

@@ -1,0 +1,140 @@
+{
+  "reviewedAt": "2026-10-15T07:40:26.052079+00:00",
+  "buildId": "Rxb6qPeCLgmBC4GXQefEJ",
+  "acceptedOriginalPngs": 9,
+  "images": [
+    {
+      "file": "1280-organic-review-full.png",
+      "originalDimensions": [
+        1280,
+        8060
+      ],
+      "sha256": "5115f1c3e09d2c38dbf8716502ec066d98c566809a6ae6355f42dab7da34363f",
+      "personallyReviewed": true,
+      "viewerPreviewDimensions": [
+        325,
+        2048
+      ],
+      "reviewBasis": "Full-page preview for page context; corresponding original720px-high retained/reference viewport captures for readable content."
+    },
+    {
+      "file": "1280-organic-review-reference.png",
+      "originalDimensions": [
+        1280,
+        720
+      ],
+      "sha256": "546812ac7a1ee30c6f8a2920e61ab82fef3a3d5ed803ae2170e78a81d6db8da2",
+      "personallyReviewed": true,
+      "viewerPreviewDimensions": [
+        1280,
+        720
+      ],
+      "reviewBasis": "Original actual viewport image; readable atoms, counts, separate reference and controls; no fixed header overlap."
+    },
+    {
+      "file": "1280-organic-review-retained.png",
+      "originalDimensions": [
+        1280,
+        720
+      ],
+      "sha256": "a1ea10d8d6b439847fa14708b32b8af6ebec7dc1f53cf269c01746afc1013eff",
+      "personallyReviewed": true,
+      "viewerPreviewDimensions": [
+        1280,
+        720
+      ],
+      "reviewBasis": "Original actual viewport image; readable atoms, counts, separate reference and controls; no fixed header overlap."
+    },
+    {
+      "file": "320-organic-review-full.png",
+      "originalDimensions": [
+        320,
+        9593
+      ],
+      "sha256": "e2c058f852eb6439cb94e9fbc4f8ba7aa5a35855955166ecacbfe5613f51a0e7",
+      "personallyReviewed": true,
+      "viewerPreviewDimensions": [
+        68,
+        2048
+      ],
+      "reviewBasis": "Full-page preview for page context; corresponding original720px-high retained/reference viewport captures for readable content."
+    },
+    {
+      "file": "320-organic-review-reference.png",
+      "originalDimensions": [
+        320,
+        720
+      ],
+      "sha256": "0677e78c009adede5e6e70d327e1c73b80a1711f974f2e7fb1447d6a71b76d3d",
+      "personallyReviewed": true,
+      "viewerPreviewDimensions": [
+        320,
+        720
+      ],
+      "reviewBasis": "Original actual viewport image; readable atoms, counts, separate reference and controls; no fixed header overlap."
+    },
+    {
+      "file": "320-organic-review-retained.png",
+      "originalDimensions": [
+        320,
+        720
+      ],
+      "sha256": "40fa58f79badb325a9460e58e7f58b80926040a1280d4fad21321adee0286070",
+      "personallyReviewed": true,
+      "viewerPreviewDimensions": [
+        320,
+        720
+      ],
+      "reviewBasis": "Original actual viewport image; readable atoms, counts, separate reference and controls; no fixed header overlap."
+    },
+    {
+      "file": "390-organic-review-full.png",
+      "originalDimensions": [
+        390,
+        9283
+      ],
+      "sha256": "a034e7dba7810bf7b848df527ca47c79b10ea8bc608a01c934a02cb7225b9fb8",
+      "personallyReviewed": true,
+      "viewerPreviewDimensions": [
+        86,
+        2048
+      ],
+      "reviewBasis": "Full-page preview for page context; corresponding original720px-high retained/reference viewport captures for readable content."
+    },
+    {
+      "file": "390-organic-review-reference.png",
+      "originalDimensions": [
+        390,
+        720
+      ],
+      "sha256": "18c5359b6faf5399ef77d161406b505a045e9d7076808c7a323909f42d71466a",
+      "personallyReviewed": true,
+      "viewerPreviewDimensions": [
+        390,
+        720
+      ],
+      "reviewBasis": "Original actual viewport image; readable atoms, counts, separate reference and controls; no fixed header overlap."
+    },
+    {
+      "file": "390-organic-review-retained.png",
+      "originalDimensions": [
+        390,
+        720
+      ],
+      "sha256": "caec51acd2ebca8d7f1c84296a86613bca0ff2825ee9fd5d72de4d6b7aa8ae41",
+      "personallyReviewed": true,
+      "viewerPreviewDimensions": [
+        390,
+        720
+      ],
+      "reviewBasis": "Original actual viewport image; readable atoms, counts, separate reference and controls; no fixed header overlap."
+    }
+  ],
+  "noPostEditing": true,
+  "noDomOrCssHiding": true,
+  "initialTallElementCapture": "Rejected and preserved privately because an off-viewport fixed header entered the tall capture. Final screenshots use actual viewport positions below the visible header; full-page context begins at scroll0. Application source unchanged during recapture.",
+  "wrongWorkRemainsExact": true,
+  "retainedCounts": "2 C, 1 H, 1 O",
+  "referenceCounts": "2 C, 6 H, 1 O",
+  "samplesExplicitlyDelivered": true
+}

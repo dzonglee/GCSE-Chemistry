@@ -5,7 +5,10 @@ import { readTangentDrawing } from "@/lib/tangent-drawing";
 import { validTangentNumber } from "@/lib/tangent-rates";
 import { readProfileDrawing, drawingLevels } from "@/lib/reaction-profiles";
 import { ReactionProfile } from "./ReactionProfile";
-import { readOrganicDrawing } from "@/lib/organic-drawing";
+import {
+  readOrganicDrawing,
+  drawingOrganicCounts,
+} from "@/lib/organic-drawing";
 import { OrganicDisplayed } from "./OrganicDisplayed";
 import { readPolyesterDrawing } from "@/lib/polyester";
 import { PolyesterDisplayed } from "./PolyesterConstruction";
@@ -144,16 +147,23 @@ export function PaperDrawingReview({
     );
   }
   if (q.organicDrawing) {
-    const b = readOrganicDrawing(value);
+    const b = readOrganicDrawing(value),
+      count = b?.n ? drawingOrganicCounts(b) : null;
     return (
       <section className="organic-drawing-input" aria-label={contextLabel}>
-        {b?.n ? (
-          <OrganicDisplayed
-            n={Number(b.n)}
-            board={b}
-            contextLabel={contextLabel}
-            reviewOnly
-          />
+        {b?.n && count ? (
+          <>
+            <OrganicDisplayed
+              n={Number(b.n)}
+              board={b}
+              contextLabel={contextLabel}
+              reviewOnly
+            />
+            <p>
+              Atom count: {count.C} C, {count.H} H and {count.O} O atoms in this
+              construction.
+            </p>
+          </>
         ) : (
           unreadable
         )}

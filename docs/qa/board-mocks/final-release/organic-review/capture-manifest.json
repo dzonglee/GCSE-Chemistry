@@ -1,0 +1,145 @@
+{
+  "capturedAt": "2026-10-15T07:36:02.573Z",
+  "productionBuildId": "Rxb6qPeCLgmBC4GXQefEJ",
+  "scope": "Native browser full-page and actual viewport screenshots; original PNGs, no post-editing. Mobile layout uses iPhone13 context at explicitly recorded 1x rendering.",
+  "views": [
+    {
+      "width": 320,
+      "height": 720,
+      "deviceScaleFactor": 1,
+      "files": [
+        "320-organic-review-full.png",
+        "320-organic-review-retained.png",
+        "320-organic-review-reference.png"
+      ],
+      "nativeViewportBoxes": [
+        {
+          "file": "320-organic-review-retained.png",
+          "box": {
+            "x": 41,
+            "y": 80.25,
+            "width": 238,
+            "height": 352.828125
+          },
+          "headerBottom": 64
+        },
+        {
+          "file": "320-organic-review-reference.png",
+          "box": {
+            "x": 41,
+            "y": 80.046875,
+            "width": 238,
+            "height": 474.703125
+          },
+          "headerBottom": 64
+        }
+      ],
+      "minimumVisibleSvgGlyphCssPx": 16.7234375,
+      "wrongRawExact": true,
+      "retainedCounts": {
+        "C": 2,
+        "H": 1,
+        "O": 1
+      },
+      "referenceCounts": {
+        "C": 2,
+        "H": 6,
+        "O": 1
+      },
+      "noEditableReviewControls": true,
+      "bodyFitsViewport": true
+    },
+    {
+      "width": 390,
+      "height": 720,
+      "deviceScaleFactor": 1,
+      "files": [
+        "390-organic-review-full.png",
+        "390-organic-review-retained.png",
+        "390-organic-review-reference.png"
+      ],
+      "nativeViewportBoxes": [
+        {
+          "file": "390-organic-review-retained.png",
+          "box": {
+            "x": 41,
+            "y": 80.28125,
+            "width": 308,
+            "height": 378.015625
+          },
+          "headerBottom": 64
+        },
+        {
+          "file": "390-organic-review-reference.png",
+          "box": {
+            "x": 41,
+            "y": 80.46875,
+            "width": 308,
+            "height": 499.890625
+          },
+          "headerBottom": 64
+        }
+      ],
+      "minimumVisibleSvgGlyphCssPx": 21.6421875,
+      "wrongRawExact": true,
+      "retainedCounts": {
+        "C": 2,
+        "H": 1,
+        "O": 1
+      },
+      "referenceCounts": {
+        "C": 2,
+        "H": 6,
+        "O": 1
+      },
+      "noEditableReviewControls": true,
+      "bodyFitsViewport": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "deviceScaleFactor": 1,
+      "files": [
+        "1280-organic-review-full.png",
+        "1280-organic-review-retained.png",
+        "1280-organic-review-reference.png"
+      ],
+      "nativeViewportBoxes": [
+        {
+          "file": "1280-organic-review-retained.png",
+          "box": {
+            "x": 340.1875,
+            "y": 16.046875,
+            "width": 859.625,
+            "height": 349.59375
+          },
+          "headerBottom": 0
+        },
+        {
+          "file": "1280-organic-review-reference.png",
+          "box": {
+            "x": 340.1875,
+            "y": 15.859375,
+            "width": 859.625,
+            "height": 423.421875
+          },
+          "headerBottom": 0
+        }
+      ],
+      "minimumVisibleSvgGlyphCssPx": 26,
+      "wrongRawExact": true,
+      "retainedCounts": {
+        "C": 2,
+        "H": 1,
+        "O": 1
+      },
+      "referenceCounts": {
+        "C": 2,
+        "H": 6,
+        "O": 1
+      },
+      "noEditableReviewControls": true,
+      "bodyFitsViewport": true
+    }
+  ]
+}

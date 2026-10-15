@@ -1,8 +1,7 @@
 {
-  "recordedAt": "2026-10-15T04:48:44.846125+00:00",
-  "buildId": "CXDvQrArl0eiKmoxKMRzr",
+  "recordedAt": "2026-10-15T07:40:26.041776+00:00",
+  "buildId": "Rxb6qPeCLgmBC4GXQefEJ",
   "unitChecks": 1157,
-  "catalogueBrowserCases": 8,
   "stages": {
     "typecheck": {
       "exitCode": 0,
@@ -14,20 +13,66 @@
     },
     "unit": {
       "exitCode": 0,
-      "logSha256": "277c0fb98c204cf9400262dce9dbd87d51fd05b401e901942905da4ddc91bed1"
+      "logSha256": "764d02f080dd86fffc50d927d5cdc0ed637bb3b8faec4f82e5167e128070519e"
     },
     "build": {
       "exitCode": 0,
-      "logSha256": "e99221cb3058c38dfca0a5cf6c3f6539e40270d078dd634208935d9d73faa61b"
-    },
-    "browser": {
-      "exitCode": 0,
-      "logSha256": "50a9cd36b2172023eeef598abfdf48bc6ee2935846ce4a6957742dde5db1d639"
+      "logSha256": "b95370cd5df20f2e6b394fdc86a0a722923f32a7d16e45f53e0cafc38066dea8"
     }
   },
-  "ownerExitCode": 0,
-  "earlierStrictReflowCases": 24,
-  "earlierCompatibilityCases": 8,
-  "earlierCasesAreSeparatelyScoped": true,
-  "finalWholeBrowserPending": true
+  "preflightOwnerExitCode": 0,
+  "affectedBrowserCases": 20,
+  "affectedBrowserStats": {
+    "startTime": "2026-10-15T07:27:15.090Z",
+    "duration": 262220.929,
+    "expected": 20,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "affectedBrowserFiles": [
+    "edexcel-paper2-foundation.browser.spec.ts",
+    "edexcel-paper2-higher.browser.spec.ts",
+    "full-paper2-foundation.browser.spec.ts",
+    "full-paper2-higher.browser.spec.ts",
+    "ocr-paper2-foundation.browser.spec.ts",
+    "ocr-paper4-higher.browser.spec.ts"
+  ],
+  "affectedBrowserProjectPasses": {
+    "desktop": 10,
+    "mobile": 10
+  },
+  "affectedRunnerExitCode": 0,
+  "affectedOwnerExitCode": 0,
+  "affectedBrowserLogSha256": "93521096fdd71b4f27c73c21781b8205d5cb7e31ee939612acbfc9219a548b8c",
+  "affectedBrowserJsonSha256": "922bed543c5095cc1fbbfe3a90a4842efe9123e737b98d3b9211e7c025ce790e",
+  "allOriginalBrowserAssertionsUnchanged": true,
+  "postAffectedFingerprints": {
+    "verifiedAt": "2026-10-15T07:31:37.506956+00:00",
+    "buildId": "Rxb6qPeCLgmBC4GXQefEJ",
+    "counts": {
+      "source-frozen.json": 1136,
+      "production-frozen.json": 1315
+    },
+    "allHashesMatch": true
+  },
+  "postCaptureFingerprints": {
+    "verifiedAt": "2026-10-15T07:36:13.952085+00:00",
+    "buildId": "Rxb6qPeCLgmBC4GXQefEJ",
+    "counts": {
+      "source-frozen.json": 1136,
+      "production-frozen.json": 1315
+    },
+    "allHashesMatch": true
+  },
+  "frozenSourceMapSha256": "eeeb5f6b17dfb4c56f4a505e32600852b184251fba886bc4930c62cc3af95395",
+  "frozenProductionMapSha256": "bea53416eb7215ddd842573c7482424149612409fa5e0cc233ee053cf994f9b1",
+  "captureExitCode": 0,
+  "manualServerExitCode": 130,
+  "manualServerExitWasIntentionalClosure": true,
+  "productionPortReleased": true,
+  "originalReviewedPngs": 9,
+  "earlierCatalogueProof": "preflight-v7-catalogue.json",
+  "currentWholeBrowserPending": true,
+  "scope": "Focused review checks are separate evidence; failed whole-run counts are not combined into acceptance."
 }

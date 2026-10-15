@@ -1,8 +1,8 @@
 {
   "fileCount": 1135,
-  "generatedAt": "2026-10-15T04:47:12.563228+00:00",
+  "generatedAt": "2026-10-15T07:27:14.203328+00:00",
   "historicalManifest": "docs/qa/board-mocks/baseline-37817ca/SOURCE-MANIFEST.json",
-  "productionBuildId": "CXDvQrArl0eiKmoxKMRzr",
+  "productionBuildId": "Rxb6qPeCLgmBC4GXQefEJ",
   "schemaVersion": 3,
   "scope": "Tracked source, tests, public assets, root configuration and instructions; excludes this manifest, generated next-env.d.ts, docs artifacts, build/runtime outputs and credentials.",
   "sha256": {
@@ -248,7 +248,7 @@
     "src/components/OxygenRedoxWorkbench.tsx": "24776d87acd15f05a2138534e37e5210bceae726051ea1950d6bbf9ef9b2662a",
     "src/components/OxygenTransfer3D.tsx": "e38799e4ca765ad2d4447d722a9adceabcdca01003646e7fb83d47e1f863af5d",
     "src/components/PaperClock.tsx": "fe970552db8e3693b04d3362c8eb89851c6d5e0b6266352595ec9d04306a97fe",
-    "src/components/PaperDrawingReview.tsx": "2132e842384b83e9893eb7b7eaa276cdd7e4a7900efae3020810332b031ae2e9",
+    "src/components/PaperDrawingReview.tsx": "308a6b755f705b0a5c9a069f514132b06ddb260ec698275d47288bde3d7745e3",
     "src/components/PathwayAddition.tsx": "c7b392194df25219326e28ea7ffe96a87c85ebd43b540b9e440d8ae30dce0310",
     "src/components/PathwayDisplayed.tsx": "c50cab5f9f3591f9b6deb5f4984acbca8cfa5089702b5a30cda6e44a2e757b34",
     "src/components/PathwayDrawingInput.tsx": "d66cd3038cddc9c3e666621cd9524caf57f7fb0627e6d995300b045e7bb04d08",

@@ -1,0 +1,17 @@
+{
+  "status": "failed-product-regression",
+  "testedCommit": "1966f6d91d90d3d1c4b2159cee2369a44120c6e9",
+  "productionBuildId": "CXDvQrArl0eiKmoxKMRzr",
+  "runnerExit": 1,
+  "ownerExit": 1,
+  "resourceMonitorExit": 0,
+  "traceRelayExit": 0,
+  "passed": 732,
+  "failed": 1,
+  "interrupted": 1,
+  "notRun": 2908,
+  "scope": "No complete suite pass; no union of attempts.",
+  "cause": "The new read-only organic review renderer retained the atom diagram but omitted the prior human-readable atom-count summary. Original AQA Paper2 Foundation review assertion correctly required 1 H in the submitted wrong construction and 6 H in the separate reference. Restore product summary without changing the original assertion, source answers, marking, viewport thresholds or deadlines.",
+  "protectedHashesVerifiedAfterClosure": 2451,
+  "port3201Released": true
+}

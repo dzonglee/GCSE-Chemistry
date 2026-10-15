@@ -1,0 +1,9 @@
+{
+  "status": "incomplete-runner-session-ended",
+  "completedPassLogLines": 1,
+  "actualRunnerCompletionReceipt": false,
+  "actualOwnerCompletionReceipt": false,
+  "sourceAndBuildUnchanged": true,
+  "portReleasedAfterOwnedOrphanCleanup": true,
+  "cause": "Detached process did not survive tool session closure. Restart in an attached owned execution session; no union of partial outcomes."
+}
