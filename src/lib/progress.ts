@@ -7,6 +7,11 @@ import { validModel } from "./model-state";
 import { validTaskModels } from "./workbench";
 import { tasks } from "@/content/journeys/helpers";
 import type { LearningStage, WorkbenchState } from "@/content/types";
+import {
+  isWorkedLesson,
+  validWorkedCursor,
+  type WorkedCursor,
+} from "./worked-cursor";
 export const STORAGE_KEY = "gcse-chemistry.progress.v1";
 export const REVIEW_DELAY = 7 * 24 * 60 * 60 * 1000;
 export interface Response {
@@ -38,6 +43,8 @@ export interface Work {
   model?: Record<string, number | string>;
   learning?: { version: 1; stage: LearningStage; index: number };
   taskModels?: Record<string, WorkbenchState[]>;
+  /** A separate teaching cursor; never an attempt, exposure or check result. */
+  worked?: WorkedCursor;
 }
 export interface Progress {
   version: 1;
@@ -188,6 +195,11 @@ export function decode(raw: string | null): Progress | null {
       if (
         w.taskModels !== undefined &&
         (!lesson?.journey || !validTaskModels(lesson.journey, w.taskModels))
+      )
+        return null;
+      if (
+        w.worked !== undefined &&
+        (!isWorkedLesson(id) || !validWorkedCursor(w.worked))
       )
         return null;
       if (
@@ -402,6 +414,11 @@ export function setWork(id: string, change: (w: Work) => Work) {
       [id]: { ...change(p.work[id] ?? emptyWork()), updated: Date.now() },
     },
   }));
+}
+export function saveWorkedCursor(id: string, cursor: WorkedCursor): boolean {
+  if (!isWorkedLesson(id) || !validWorkedCursor(cursor)) return false;
+  // Reuse the existing journal/lock/conflict path; no other learning field changes.
+  return setWork(id, (work) => ({ ...work, worked: { ...cursor } }));
 }
 export function exposureIds(ids: string[]) {
   const bank = [

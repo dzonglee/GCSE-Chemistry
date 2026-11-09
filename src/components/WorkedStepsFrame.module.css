@@ -1,0 +1,165 @@
+.frame {
+  min-width: 0;
+  margin-top: 24px;
+  border: 1px solid #c9d0dc;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  color: #182135;
+  scroll-margin-top: 20px;
+  overflow-wrap: anywhere;
+}
+.header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.header p,
+.note {
+  color: #485269;
+  font-size: 0.9rem;
+}
+.selector {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+}
+.selector select {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 8px;
+  font: inherit;
+  color: #182135;
+  background: white;
+  border: 1px solid #63728b;
+  border-radius: 6px;
+}
+.current {
+  margin-top: 20px;
+}
+.position {
+  margin: 0 0 5px;
+  font-weight: 700;
+  color: #3046c8;
+}
+.current h4 {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+}
+.explanation {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+.explanation > div {
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr);
+  gap: 12px;
+}
+.explanation dt {
+  font-weight: 800;
+}
+.explanation dd {
+  margin: 0;
+  line-height: 1.5;
+}
+.visual {
+  margin-top: 20px;
+  min-width: 0;
+}
+.visual figure {
+  margin: 0;
+}
+.visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.visual figcaption {
+  margin-top: 10px;
+  color: #485269;
+  line-height: 1.5;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.frame button,
+.history summary {
+  min-height: 44px;
+  min-width: 44px;
+}
+.frame :is(button, select, summary, h4):focus-visible {
+  outline: 3px solid #3046c8;
+  outline-offset: 3px;
+}
+.history {
+  border-top: 1px solid #dfe4ed;
+  margin-top: 18px;
+  padding-top: 10px;
+}
+.history summary {
+  cursor: pointer;
+  align-content: center;
+  font-weight: 700;
+}
+.history ol {
+  margin: 0;
+  padding-left: 22px;
+}
+.history li {
+  padding-block: 10px;
+}
+.history h5 {
+  font-size: 1rem;
+  margin: 0 0 10px;
+}
+.note {
+  margin: 14px 0 0;
+}
+.frame :global(.t17-worked-count-tiles) {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+  margin-block: 12px;
+  padding: 0;
+  list-style: none;
+}
+.frame :global(.t17-worked-count-tile) {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-height: 52px;
+  padding: 6px 2px;
+  border: 1px solid #63728b;
+  border-radius: 7px;
+  background: #edf0ff;
+  font-size: 0.9rem;
+}
+.frame :global(.t17-worked-contributions) {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-block: 12px;
+}
+.frame :global(.t17-worked-contributions) :is(th, td) {
+  text-align: left;
+  border-bottom: 1px solid #dfe4ed;
+  padding: 8px 5px;
+}
+.frame :global(.t17-worked-contributions) caption {
+  text-align: left;
+  font-weight: 700;
+}
+@media (max-width: 540px) {
+  .frame {
+    padding: 12px;
+  }
+  .explanation > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}
