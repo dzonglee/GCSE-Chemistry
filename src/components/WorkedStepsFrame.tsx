@@ -62,7 +62,9 @@ export function WorkedStepsFrame({
       data-worked-step={cursor.step}
     >
       <header className={styles.header}>
-        <h3 id={`${id}-title`}>{title}</h3>
+        <h3 id={`${id}-title`} tabIndex={-1}>
+          {title}
+        </h3>
         <p>Follow the change, then explain why it works.</p>
       </header>
       <label className={styles.selector}>

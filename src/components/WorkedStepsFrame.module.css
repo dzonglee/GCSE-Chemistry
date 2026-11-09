@@ -154,6 +154,73 @@
   text-align: left;
   font-weight: 700;
 }
+.frame :global(.t17-worked-atom-map) {
+  display: grid;
+  gap: 12px;
+  margin-block: 14px;
+}
+.frame
+  :is(:global(.t17-worked-atom-nucleus), :global(.t17-worked-atom-shells)) {
+  border: 2px solid #63728b;
+  border-radius: 12px;
+  padding: 12px;
+}
+.frame :global(.t17-worked-atom-nucleus) {
+  background: #f7f8fb;
+}
+.frame :global(.t17-worked-atom-shells) {
+  border-style: dashed;
+}
+.frame :global(.t17-worked-particles) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-block: 8px;
+}
+.frame :global(.t17-worked-particle) {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #63728b;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+}
+.frame :global(.t17-worked-proton) {
+  color: #24358e;
+  background: #edf0ff;
+}
+.frame :global(.t17-worked-neutron) {
+  color: #182135;
+  background: #e2e6ee;
+}
+.frame :global(.t17-worked-electron) {
+  color: #854018;
+  background: #fff0e7;
+}
+.frame :global(.t17-worked-particle)[data-added="true"] {
+  outline: 3px double #182135;
+  outline-offset: 1px;
+}
+.frame :global(.t17-worked-shell) {
+  margin-top: 12px;
+}
+.frame :global(.t17-worked-atom-ledger) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  font-weight: 750;
+}
+.frame :global(.t17-worked-model-note),
+.frame :global(.t17-worked-added-note) {
+  font-size: 0.9rem;
+  color: #485269;
+  line-height: 1.5;
+}
+.frame :global(.t17-worked-atom-action) {
+  margin-top: 8px;
+}
 @media (max-width: 540px) {
   .frame {
     padding: 12px;

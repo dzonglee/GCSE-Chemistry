@@ -1,4 +1,22 @@
 /* Individually authored journeys follow the inspected Maths lesson shell. */
+.t17-worked-vocabulary {
+  margin: 0 0 12px;
+  color: #485269;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+.t17-worked-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+.t17-worked-link:focus-visible {
+  outline: 3px solid #3046c8;
+  outline-offset: 2px;
+}
 .sample-lesson {
   --ink: #111827;
   --border: #e2e6ee;

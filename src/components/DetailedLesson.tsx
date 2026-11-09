@@ -18,11 +18,15 @@ import {
   dueReview,
   lastSubmission,
   REVIEW_DELAY,
+  saveWorkedCursor,
 } from "@/lib/progress";
+import { initialWorkedCursor } from "@/lib/worked-cursor";
 import { initialBoard } from "@/lib/workbench";
 import { mark, reviewSubject } from "@/lib/marking";
 import { QuestionInput } from "./QuestionInput";
 import { TaskWorkbench } from "./TaskWorkbench";
+import { RelativeAtomicMassWorkedSteps } from "./RelativeAtomicMassWorkedSteps";
+import { InsideAtomWorkedSteps } from "./InsideAtomWorkedSteps";
 import { WorkbenchInputDraft } from "./WorkbenchInputDraft";
 import { AssessmentSession } from "./AssessmentSession";
 import { naturalForTier } from "@/content/journeys/natural-higher-assessments";
@@ -81,6 +85,22 @@ export function DetailedLesson({
       )
     : savedPosition;
   const q = list[index];
+  const relativeWorked =
+    section === "explore" &&
+    stage === "guided" &&
+    lesson.slug === "relative-atomic-mass" &&
+    q.id === "ram-v1-g-light";
+  const atomWorked =
+    section === "explore" &&
+    stage === "guided" &&
+    lesson.slug === "inside-an-atom" &&
+    ["atom-v2-g-place", "atom-v2-g-neutral", "atom-v2-g-mass"].includes(q.id);
+  const workedId = relativeWorked
+    ? "relative-atomic-mass-worked"
+    : atomWorked
+      ? "inside-atom-worked"
+      : undefined;
+  const workedCursor = work.worked ?? initialWorkedCursor();
   const compactRecallTask =
     q.id.startsWith("materials-v1-alloy-use-") ||
     q.id.startsWith("materials-v1-rust-design-") ||
@@ -528,7 +548,29 @@ export function DetailedLesson({
                   : "Task"}{" "}
               {index + 1} of {list.length}
             </span>
+            {workedId && (
+              <a className="t17-worked-link" href={`#${workedId}`}>
+                See worked steps
+              </a>
+            )}
           </div>
+          {relativeWorked && (
+            <p className="t17-worked-vocabulary" data-worked-vocabulary>
+              <strong>Isotopes:</strong> same proton number, different neutron
+              number. <strong>Abundance:</strong> the fraction or percentage of
+              atoms. <strong>Relative atomic mass (Aᵣ):</strong> the mean
+              weighted by abundance; it has no unit.
+            </p>
+          )}
+          {atomWorked && (
+            <p className="t17-worked-vocabulary" data-worked-vocabulary>
+              <strong>p:</strong> protons (+1); <strong>n:</strong> neutrons
+              (0);
+              <strong> e:</strong> electrons (−1). <strong>Z</strong> (atomic
+              number) = p. <strong>A</strong> (mass number) = p + n.
+              <strong> Charge</strong> = p − e. Neutral means charge 0.
+            </p>
+          )}
           <h2 ref={heading} tabIndex={-1}>
             {q.title ?? q.prompt}
           </h2>
@@ -571,6 +613,28 @@ export function DetailedLesson({
                     }
                   />
                 </WorkbenchInputDraft>
+                {relativeWorked && (
+                  <RelativeAtomicMassWorkedSteps
+                    lightPercent={Number(
+                      work.taskModels?.["ram-v1-g-light"]?.at(-1)
+                        ?.lightPercent ?? 50,
+                    )}
+                    cursor={workedCursor}
+                    onCursorChange={(cursor) =>
+                      saveWorkedCursor(lesson.slug, cursor)
+                    }
+                    onPractice={() => choose("practice")}
+                  />
+                )}
+                {atomWorked && (
+                  <InsideAtomWorkedSteps
+                    cursor={workedCursor}
+                    onCursorChange={(cursor) =>
+                      saveWorkedCursor(lesson.slug, cursor)
+                    }
+                    onPractice={() => choose("practice")}
+                  />
+                )}
               </div>
             )}
             <div className="sample-task-answer">
