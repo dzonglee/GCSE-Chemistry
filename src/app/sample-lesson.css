@@ -17,6 +17,57 @@
   outline: 3px solid #3046c8;
   outline-offset: 2px;
 }
+@media (max-width: 650px) {
+  body:has(.sample-lesson[data-worked-pilot]) main {
+    padding-top: 12px;
+  }
+  .sample-lesson[data-worked-pilot] .lesson-breadcrumb,
+  .sample-lesson[data-worked-pilot] .sample-title-row,
+  .sample-lesson[data-worked-pilot] .sample-overview,
+  .sample-lesson[data-worked-pilot] .sample-stages,
+  .sample-lesson[data-worked-pilot] .sample-task-topline,
+  .sample-lesson[data-worked-pilot] .sample-task-panel > h2,
+  .sample-lesson[data-worked-pilot] .sample-task-prompt,
+  .sample-lesson[data-worked-pilot] .bench-instruction {
+    margin-bottom: 8px;
+  }
+  .sample-lesson[data-worked-pilot] .sample-title-row h1 {
+    font-size: 1.5rem;
+    line-height: 1.15;
+  }
+  .sample-lesson[data-worked-pilot] .sample-overview {
+    gap: 4px 12px;
+  }
+  .sample-lesson[data-worked-pilot] .sample-stages {
+    padding: 4px;
+  }
+  .sample-lesson[data-worked-pilot] .sample-task-panel,
+  .sample-lesson[data-worked-pilot] .task-workbench {
+    padding: 12px;
+  }
+  .sample-lesson[data-worked-pilot] .sample-task-topline {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .sample-lesson[data-worked-pilot] .sample-task-chip {
+    width: auto;
+  }
+  .sample-lesson[data-worked-pilot] .t17-worked-link {
+    white-space: nowrap;
+  }
+  .sample-lesson[data-worked-pilot] .t17-worked-vocabulary {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+  .sample-lesson[data-worked-pilot] .sample-task-panel > h2 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+  .sample-lesson[data-worked-pilot] .sample-task-prompt {
+    line-height: 1.4;
+  }
+}
 .sample-lesson {
   --ink: #111827;
   --border: #e2e6ee;

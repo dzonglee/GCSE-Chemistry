@@ -222,7 +222,7 @@ for (const pilot of pilots) {
     await frame.getByRole("button", { name: "Next", exact: true }).click();
     await frame.getByRole("button", { name: "Next", exact: true }).click();
     await frame
-      .getByLabel("Worked example", { exact: true })
+      .getByRole("combobox", { name: "Worked example", exact: true })
       .selectOption("difficult");
     await frame.getByRole("button", { name: "Next", exact: true }).click();
     await settled(page);
@@ -315,7 +315,7 @@ test("an invalid nested worked cursor is preserved rather than repaired over old
   );
   const frame = page.locator(`#${pilots[1].frame}`);
   await frame
-    .getByLabel("Worked example", { exact: true })
+    .getByRole("combobox", { name: "Worked example", exact: true })
     .selectOption("difficult");
   await frame.getByRole("button", { name: "Next", exact: true }).click();
   await expect(frame).toHaveAttribute("data-worked-example", "difficult");
@@ -358,7 +358,7 @@ test("denied local storage keeps both worked players usable for the visit", asyn
     await frame.getByRole("button", { name: "Next", exact: true }).click();
     await expect(frame).toHaveAttribute("data-worked-step", "1");
     await frame
-      .getByLabel("Worked example", { exact: true })
+      .getByRole("combobox", { name: "Worked example", exact: true })
       .selectOption("difficult");
     await frame.getByRole("button", { name: "Next", exact: true }).click();
     await expect(frame).toHaveAttribute("data-worked-example", "difficult");
@@ -436,7 +436,7 @@ test("two pending cursor edits keep the winning save and export the conflicting 
   const secondFrame = second.locator(`#${pilots[0].frame}`);
   await firstFrame.getByRole("button", { name: "Next", exact: true }).click();
   await secondFrame
-    .getByLabel("Worked example", { exact: true })
+    .getByRole("combobox", { name: "Worked example", exact: true })
     .selectOption("difficult");
   const conflicting = await second.evaluate(
     (key) => sessionStorage.getItem(key),
@@ -537,7 +537,7 @@ test("the synchronous journal restores a worked cursor after refresh while its s
   await holdSaveLock(page);
   const frame = page.locator(`#${pilots[1].frame}`);
   await frame
-    .getByLabel("Worked example", { exact: true })
+    .getByRole("combobox", { name: "Worked example", exact: true })
     .selectOption("difficult");
   await frame.getByRole("button", { name: "Next", exact: true }).click();
   expect((await saved(page)).work["inside-an-atom"].worked).toBeUndefined();

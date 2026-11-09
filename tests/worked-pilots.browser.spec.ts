@@ -208,7 +208,7 @@ test("count-table example reveals ten atoms, their contribution and the actual d
   await page.goto("/lessons/relative-atomic-mass");
   const frame = page.locator("#relative-atomic-mass-worked");
   await frame
-    .getByLabel("Worked example", { exact: true })
+    .getByRole("combobox", { name: "Worked example", exact: true })
     .selectOption("difficult");
   await expectStep(frame, 0);
   await expect(frame.getByRole("slider")).toHaveCount(0);
@@ -287,7 +287,7 @@ test("carbon and aluminium constructions track their current step without changi
   await atomCounts(frame, 6, 6, 0);
 
   await frame
-    .getByLabel("Worked example", { exact: true })
+    .getByRole("combobox", { name: "Worked example", exact: true })
     .selectOption("difficult");
   await expectStep(frame, 0);
   await atomCounts(frame, 13, 13, 13);
@@ -323,6 +323,54 @@ test("carbon and aluminium constructions track their current step without changi
 });
 
 for (const pilot of pilots) {
+  test(`${pilot.slug}: the original model action stays in the opening viewport with vocabulary before use`, async ({
+    page,
+  }) => {
+    await page.goto(`/lessons/${pilot.slug}`);
+    const action =
+      pilot.slug === "relative-atomic-mass"
+        ? page.getByRole("slider", {
+            name: "Percentage of mass-35 atoms",
+            exact: true,
+          })
+        : page.getByRole("button", { name: "Choose proton", exact: true });
+    await expect(action).toBeVisible();
+    await page.evaluate(async () => {
+      await document.fonts.ready;
+      window.scrollTo(0, 0);
+    });
+    const actionBox = await action.boundingBox();
+    expect(actionBox).not.toBeNull();
+    expect(actionBox!.y).toBeGreaterThanOrEqual(0);
+    expect(actionBox!.height).toBeGreaterThanOrEqual(44);
+    expect(actionBox!.width).toBeGreaterThanOrEqual(44);
+    expect(actionBox!.y + actionBox!.height).toBeLessThanOrEqual(
+      page.viewportSize()!.height,
+    );
+    await expect(page.locator("[data-worked-vocabulary]")).toBeVisible();
+    expect(
+      await action.evaluate((element) => {
+        const vocabulary = document.querySelector("[data-worked-vocabulary]");
+        return (
+          !!vocabulary &&
+          !!(
+            vocabulary.compareDocumentPosition(element) &
+            Node.DOCUMENT_POSITION_FOLLOWING
+          )
+        );
+      }),
+    ).toBe(true);
+    const jump = page.getByRole("link", {
+      name: "See worked steps",
+      exact: true,
+    });
+    await expect(jump).toBeVisible();
+    const jumpBox = await jump.boundingBox();
+    expect(jumpBox).not.toBeNull();
+    expect(jumpBox!.height).toBeGreaterThanOrEqual(44);
+    expect(jumpBox!.width).toBeGreaterThanOrEqual(44);
+  });
+
   test(`${pilot.slug}: keyboard navigation is bounded, focused and exposes only collapsed prior steps`, async ({
     page,
   }) => {
@@ -368,7 +416,7 @@ for (const pilot of pilots) {
     await expectStep(frame, 1);
     await expect(currentStep(frame).locator("h4")).toBeFocused();
     await frame
-      .getByLabel("Worked example", { exact: true })
+      .getByRole("combobox", { name: "Worked example", exact: true })
       .selectOption("difficult");
     await expectStep(frame, 0);
     await expect(currentStep(frame).locator("h4")).toBeFocused();
@@ -377,7 +425,7 @@ for (const pilot of pilots) {
       frame.getByRole("button", { name: "Back", exact: true }),
     ).toBeDisabled();
     await frame
-      .getByLabel("Worked example", { exact: true })
+      .getByRole("combobox", { name: "Worked example", exact: true })
       .selectOption("main");
     await expectStep(frame, 0);
   });
@@ -390,18 +438,18 @@ for (const pilot of pilots) {
     const frame = page.locator(pilot.selector);
     // Make an explicit selection so the initial main cursor is saved as well.
     await frame
-      .getByLabel("Worked example", { exact: true })
+      .getByRole("combobox", { name: "Worked example", exact: true })
       .selectOption("difficult");
     for (const example of ["main", "difficult"] as const) {
       await frame
-        .getByLabel("Worked example", { exact: true })
+        .getByRole("combobox", { name: "Worked example", exact: true })
         .selectOption(example);
       for (const step of [0, 1, 2]) {
         await setStep(frame, step);
         await committedCursor(page, pilot.slug, example, step);
         await page.reload();
         await expect(
-          frame.getByLabel("Worked example", { exact: true }),
+          frame.getByRole("combobox", { name: "Worked example", exact: true }),
         ).toHaveValue(example);
         await expectStep(frame, step);
         await expect(frame.locator("details")).not.toHaveAttribute("open", "");
@@ -473,7 +521,7 @@ for (const viewport of [
       await expect(frame).toBeInViewport();
       for (const example of ["main", "difficult"] as const) {
         await frame
-          .getByLabel("Worked example", { exact: true })
+          .getByRole("combobox", { name: "Worked example", exact: true })
           .selectOption(example);
         for (const step of [0, 1, 2]) {
           await setStep(frame, step);

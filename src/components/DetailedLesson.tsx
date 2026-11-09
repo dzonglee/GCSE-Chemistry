@@ -306,7 +306,11 @@ export function DetailedLesson({
     </div>
   );
   return (
-    <article className="sample-lesson" data-lesson={lesson.slug}>
+    <article
+      className="sample-lesson"
+      data-lesson={lesson.slug}
+      data-worked-pilot={workedId ? true : undefined}
+    >
       <div className="lesson-breadcrumb">
         <Link href="/">Contents</Link>
         <span>/</span>
@@ -556,10 +560,10 @@ export function DetailedLesson({
           </div>
           {relativeWorked && (
             <p className="t17-worked-vocabulary" data-worked-vocabulary>
-              <strong>Isotopes:</strong> same proton number, different neutron
-              number. <strong>Abundance:</strong> the fraction or percentage of
-              atoms. <strong>Relative atomic mass (Aᵣ):</strong> the mean
-              weighted by abundance; it has no unit.
+              <strong>Isotopes:</strong> same proton count, different neutron
+              count. <strong>Abundance:</strong> fraction or % of atoms.
+              <strong> Relative atomic mass (Aᵣ):</strong> abundance-weighted
+              mean; no unit.
             </p>
           )}
           {atomWorked && (
