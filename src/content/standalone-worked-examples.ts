@@ -256,7 +256,7 @@ export const standaloneWorkedExamples: Readonly<
     steps: [
       "Follow the main chain and look for the shortest pattern that reproduces its substituent positions.",
       "Group one CH₂ and the next CH(CH₃) together. The CH₃ is a side group on the second backbone carbon.",
-      "The repeat is –CH₂–CH(CH₃)–. Continue both backbone bonds across the bracket boundaries; the side group stays attached within the bracket.",
+      "The repeat is –CH₂–CH(CH₃)–. Continue both backbone bonds across the bracket boundaries. The side group stays attached within the bracket.",
     ],
   },
 };

@@ -97,7 +97,7 @@ export const modelWorkedExamples: Readonly<
   ],
   "np-v1-g-cube": [
     "The 4 nm edge gives a square of 4 × 4 nm² on each face. Count all six exposed faces.",
-    "For volume, multiply the base area by the height. In area ÷ volume, nm² divided by nm³ leaves nm⁻¹.",
+    "For volume, multiply the base area by the height to get nm³. In area ÷ volume, nm² divided by nm³ leaves nm⁻¹.",
   ],
   "be-v1-g-words": [
     "Translate the named products into KOH and H₂ before changing any equation coefficients.",
