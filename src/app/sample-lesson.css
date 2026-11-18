@@ -2731,17 +2731,6 @@ body:has(.sample-lesson) .topic-number {
   color: #3349bd;
   background: #eef1ff;
 }
-@media (max-width: 600px) {
-  .results-list .result-row summary:has(.result-self-review) {
-    flex-wrap: wrap;
-  }
-  .results-list .result-row summary > span.result-self-review {
-    display: block;
-    flex-basis: 100%;
-    margin-left: 33px;
-    text-align: left;
-  }
-}
 
 .cracking-workbench,
 .alkene-drawing {
@@ -9086,7 +9075,7 @@ body:has(.sample-lesson) .topic-number {
   }
 }
 
-.quantity-example summary {
+.worked-example summary {
   min-height: 44px;
   align-content: center;
 }

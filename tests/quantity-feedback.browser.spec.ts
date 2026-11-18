@@ -77,9 +77,16 @@ test("worked predictions and steps leave independent concentration feedback seal
   await expect(first.getByText(targetedFeedback)).toBeVisible();
   await expect(first).toContainText("0.00035");
   await expect(first).toContainText("0.350");
+  await expect(first.getByText("Revisit", { exact: true })).toBeVisible();
   await expect(
-    page.locator(".result-row").nth(2).locator("summary"),
-  ).toContainText("Not answered");
+    page.locator(".result-row").nth(1).getByText("Correct", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    page
+      .locator(".result-row")
+      .nth(2)
+      .getByText("Not answered", { exact: true }),
+  ).toBeVisible();
 
   await expect
     .poll(() =>

@@ -305,6 +305,7 @@ export function AssessmentSession({
             <details key={q.id} className="result-row">
               <summary>
                 <span
+                  aria-hidden="true"
                   className={`result-indicator ${q.rubric ? "self-review" : result.correct ? "pass" : "fail"}`}
                 >
                   {q.rubric ? "?" : result.correct ? "✓" : "↺"}

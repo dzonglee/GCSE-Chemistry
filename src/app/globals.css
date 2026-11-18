@@ -1822,11 +1822,13 @@ progress {
     padding: 15px;
   }
   .result-row summary {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 4px 9px;
     font-size: 0.85rem;
-    gap: 9px;
   }
   .result-row summary > span:last-child {
-    display: none;
+    grid-column: 2;
   }
   .result-row > div {
     margin-left: 0;

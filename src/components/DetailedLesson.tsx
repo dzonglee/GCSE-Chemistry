@@ -29,6 +29,8 @@ import { RelativeAtomicMassWorkedSteps } from "./RelativeAtomicMassWorkedSteps";
 import { InsideAtomWorkedSteps } from "./InsideAtomWorkedSteps";
 import { QuantityExample } from "./QuantityExample";
 import { quantityExamples } from "@/content/quantity-examples";
+import { modelWorkedExamples } from "@/content/model-worked-examples";
+import { WorkedReasoning } from "./WorkedReasoning";
 import { WorkbenchInputDraft } from "./WorkbenchInputDraft";
 import { AssessmentSession } from "./AssessmentSession";
 import { naturalForTier } from "@/content/journeys/natural-higher-assessments";
@@ -104,6 +106,7 @@ export function DetailedLesson({
       : undefined;
   const workedCursor = work.worked ?? initialWorkedCursor();
   const quantityExample = quantityExamples[lesson.slug];
+  const modelExample = modelWorkedExamples[q.id];
   const compactRecallTask =
     q.id.startsWith("materials-v1-alloy-use-") ||
     q.id.startsWith("materials-v1-rust-design-") ||
@@ -792,6 +795,16 @@ export function DetailedLesson({
                     example={quantityExample}
                   />
                 )}
+              {section === "explore" && stage === "guided" && modelExample && (
+                <details
+                  key={q.id}
+                  className="sample-explanation worked-example"
+                >
+                  <summary>Work through this model</summary>
+                  <p>Compare each step with the task’s starting model.</p>
+                  <WorkedReasoning steps={[...modelExample, q.explanation]} />
+                </details>
+              )}
               <p className="sample-learning-note">
                 {stage === "practice"
                   ? "Try your own answer first. Use support if you need it."
