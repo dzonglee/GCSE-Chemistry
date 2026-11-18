@@ -37,6 +37,11 @@ test("twelve original components are grouped by actual specification and tier at
   page,
 }) => {
   test.setTimeout(90000);
+  await page.goto("/coverage");
+  await page
+    .getByRole("link", { name: "Browse 12 original full mock components" })
+    .click();
+  await expect(page).toHaveURL("/exams");
   for (const width of [320, 390, 1280]) {
     await page.setViewportSize({ width, height: 800 });
     await page.goto("/exams");

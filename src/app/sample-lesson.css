@@ -9085,3 +9085,28 @@ body:has(.sample-lesson) .topic-number {
     padding-top: 8px;
   }
 }
+
+.quantity-example summary {
+  min-height: 44px;
+  align-content: center;
+}
+
+.quantity-example form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+.quantity-example-input {
+  display: block;
+  margin-block-start: 0.25rem;
+}
+
+.quantity-example-input input {
+  width: 7rem;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 0.4rem;
+  font: inherit;
+}

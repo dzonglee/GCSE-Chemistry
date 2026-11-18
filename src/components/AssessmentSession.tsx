@@ -242,19 +242,15 @@ export function AssessmentSession({
     const results = questions.map((q) => ({
       q,
       r: run.responses[q.id],
-      correct: run.responses[q.id]
-        ? mark(q, run.responses[q.id].answer).correct
-        : false,
+      result: mark(q, run.responses[q.id]?.answer ?? ""),
     }));
-    const count = results.filter((r) => r.correct).length;
+    const count = results.filter(({ result }) => result.correct).length;
     const fresh = results.filter(
-      (r) => r.correct && r.r.fresh && !r.r.helped,
+      ({ result, r }) => result.correct && r?.fresh && !r.helped,
     ).length;
     const automatic = results.filter(({ q }) => !q.rubric);
     const manual = results.filter(({ q }) => q.rubric);
-    const manualSaved = manual.filter(
-      ({ q, r }) => r && !mark(q, r.answer).empty,
-    ).length;
+    const manualSaved = manual.filter(({ result }) => !result.empty).length;
     return (
       <section className="assessment-results">
         <div
@@ -266,7 +262,7 @@ export function AssessmentSession({
               ? "Automatically checked responses"
               : "Responses for self-review"}
           </span>
-          <h2>
+          <h2 ref={heading} tabIndex={-1}>
             {automatic.length
               ? `${count} of ${automatic.length} correct`
               : "Responses ready for self-review"}
@@ -305,25 +301,25 @@ export function AssessmentSession({
           </p>
         </div>
         <div className="results-list">
-          {results.map(({ q, r, correct }, i) => (
+          {results.map(({ q, r, result }, i) => (
             <details key={q.id} className="result-row">
               <summary>
                 <span
-                  className={`result-indicator ${q.rubric ? "self-review" : correct ? "pass" : "fail"}`}
+                  className={`result-indicator ${q.rubric ? "self-review" : result.correct ? "pass" : "fail"}`}
                 >
-                  {q.rubric ? "?" : correct ? "✓" : "↺"}
+                  {q.rubric ? "?" : result.correct ? "✓" : "↺"}
                 </span>
                 <span>
                   {i + 1}. {q.prompt}
                 </span>
                 <span className={q.rubric ? "result-self-review" : undefined}>
-                  {q.rubric
-                    ? r && !mark(q, r.answer).empty
+                  {result.empty
+                    ? "Not answered"
+                    : q.rubric
                       ? "Self-review"
-                      : "Not answered"
-                    : correct
-                      ? "Correct"
-                      : "Revisit"}
+                      : result.correct
+                        ? "Correct"
+                        : "Revisit"}
                 </span>
               </summary>
               <div>
@@ -362,6 +358,12 @@ export function AssessmentSession({
                       disabled
                       onChange={() => {}}
                     />
+                  )}
+                {!q.rubric &&
+                  !result.empty &&
+                  !result.correct &&
+                  result.feedback !== q.explanation && (
+                    <p className="feedback">{result.feedback}</p>
                   )}
                 <p>
                   Expected: <strong>{canonicalAnswer(q)}</strong>

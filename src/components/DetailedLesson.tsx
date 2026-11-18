@@ -27,6 +27,8 @@ import { QuestionInput } from "./QuestionInput";
 import { TaskWorkbench } from "./TaskWorkbench";
 import { RelativeAtomicMassWorkedSteps } from "./RelativeAtomicMassWorkedSteps";
 import { InsideAtomWorkedSteps } from "./InsideAtomWorkedSteps";
+import { QuantityExample } from "./QuantityExample";
+import { quantityExamples } from "@/content/quantity-examples";
 import { WorkbenchInputDraft } from "./WorkbenchInputDraft";
 import { AssessmentSession } from "./AssessmentSession";
 import { naturalForTier } from "@/content/journeys/natural-higher-assessments";
@@ -101,6 +103,7 @@ export function DetailedLesson({
       ? "inside-atom-worked"
       : undefined;
   const workedCursor = work.worked ?? initialWorkedCursor();
+  const quantityExample = quantityExamples[lesson.slug];
   const compactRecallTask =
     q.id.startsWith("materials-v1-alloy-use-") ||
     q.id.startsWith("materials-v1-rust-design-") ||
@@ -780,6 +783,15 @@ export function DetailedLesson({
                   </div>
                 )}
               </form>
+              {section === "explore" &&
+                stage === "guided" &&
+                index === 0 &&
+                quantityExample && (
+                  <QuantityExample
+                    key={lesson.slug}
+                    example={quantityExample}
+                  />
+                )}
               <p className="sample-learning-note">
                 {stage === "practice"
                   ? "Try your own answer first. Use support if you need it."
@@ -910,10 +922,10 @@ export function DetailedLesson({
         <details>
           <summary>How this lesson is checked</summary>
           <p>
-            Learning tasks give feedback and optional support. Checks reserve
-            two different forms and hide feedback until submission. Reviews use
-            separate forms after seven days. Written explanations are compared
-            with marking points; they receive no automatic mark.
+            Learning tasks give feedback and optional support. Checks rotate
+            through {journey.checkForms.length} reserved forms and show feedback
+            after submission. Separate review forms unlock after seven days.
+            Compare written explanations with the marking points yourself.
           </p>
         </details>
       </div>

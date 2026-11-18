@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { topics, lessons } from "@/content/curriculum";
+import { fullPapers } from "@/content/full-assessments";
 export const metadata = { title: "Coverage and sources" };
 const practicals = [
   ["1. Prepare a pure, dry soluble salt", "making-soluble-salts"],
@@ -27,10 +28,8 @@ export default function Page() {
       <p>
         All {reviewed.length} lessons across {topics.length} topics have
         individually authored learning journeys: warm-up, teaching and models,
-        independent practice, alternate understanding checks and separate
-        delayed reviews. There are {practice} independent practice tasks across
-        those lessons. These counts describe activities, not distinct exam
-        skills or a grade.
+        practice with optional support, alternate understanding checks and
+        separate delayed reviews. The {practice} practice tasks span the course.
       </p>
       <h2>Course scope</h2>
       <ul>
@@ -76,16 +75,14 @@ export default function Page() {
       </p>
       <h2>Assessment and review</h2>
       <p>
-        The original{" "}
-        <Link href="/exams/paper-1-foundation-full">
-          full Foundation Paper 1
+        <Link href="/exams">
+          Browse {fullPapers.length} original full mock components
         </Link>{" "}
-        has 100 allocated marks and a 105-minute practice timer, with an untimed
-        option. Its ten question groups include calculation working, native
-        drawings, practical methods and graph construction. Submit the whole
-        paper before reviewing method credit, drawings and extended writing.
-        Automatic answer points and your own review decisions remain distinct;
-        this is not an official paper or a predicted grade.
+        for Separate Chemistry. AQA 8462, Pearson Edexcel 1CH0 and OCR Gateway
+        J248 each have a Foundation pair and a Higher pair. Submit the whole
+        paper to review answers, calculation working, practical methods and
+        drawings. Automatic answer points and your own review decisions are
+        recorded separately.
       </p>
       <p>
         Each lesson reserves alternate checks and delayed-review questions.
@@ -96,10 +93,9 @@ export default function Page() {
       </p>
       <p>
         <Link href="/diagnostics">Starting checks</Link> contain two 20-question
-        sets. <Link href="/exams">Practice papers</Link> contain eight original
-        15-question short sets: four Foundation and four Higher. They do not
-        match full official paper length, mark allocation or
-        assessment-objective weighting. The longer Foundation
+        sets. The practice-paper catalogue also includes eight original
+        15-question short sets, four Foundation and four Higher. The longer
+        Foundation
         <Link href="/exams/paper-1-foundation-extended">
           {" "}
           Paper 1 cumulative set
