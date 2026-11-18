@@ -1,0 +1,11 @@
+# Worked examples in GCSE Chemistry
+
+The 95 lesson routes each offer a dedicated worked example in guided learning. The original inside-an-atom and relative-atomic-mass players account for two. Nine lessons offer a separate unscored calculation with an optional numeric prediction. Fifty-seven use the model and question already available in a formative task. The other 27 use standalone teaching scenarios with their own givens, separate from the assessment banks. The polymer route also offers a standalone Foundation example when the Higher condensation model is outside the selected tier.
+
+The model walkthroughs explain what to observe or change in the task’s starting model, how to interpret that observation, and how it supports the existing conclusion. When the matching model occurs later in the sequence, the first guided task links directly to it. A model remains available for learners to test their own proposal. Existing questions, marking, exposure aliases, saved responses and paper definitions retain their original IDs and content.
+
+The standalone scenarios cover lessons or tier views where the exposure audit found no eligible formative-only guided model case. A learner can make a prediction before revealing the three steps. The examples have no question ID, score, answer submission or connection to independent assessment evidence. The unit check compares normalized prompts with the lesson, review, diagnostic and paper banks. For the model walkthroughs it checks the actual guided task and its exposure relationships with those banks.
+
+Browser spot checks span the ten topics. The cases cover group and period placement, the forces between graphite layers, limiting reactants, the soluble-salt model, a reaction profile, rates from tangents, alcohol and acid functional groups, chromatography, reading climate anomalies and material selection. The checks reveal the worked conclusion step by step and verify that the worked panel is absent from the independent check. The oxygen case also verifies keyboard operation and runs automated accessibility checks on the worked panel.
+
+The coverage count records the presence of a walkthrough for each route. It does not establish combined or separate course coverage for every specification statement, and a walkthrough on one guided task does not cover every objective in that lesson.

@@ -4,6 +4,8 @@ import { lessons } from "../src/content/curriculum";
 import { extendedPapers } from "../src/content/extended-assessments";
 import { fullPapers } from "../src/content/full-assessments";
 import { modelWorkedExamples } from "../src/content/model-worked-examples";
+import { quantityExamples } from "../src/content/quantity-examples";
+import { standaloneWorkedExamples } from "../src/content/standalone-worked-examples";
 import { exposureIds } from "../src/lib/progress";
 
 test("worked model cases have complete formative steps and no reserved assessment exposure links", () => {
@@ -35,4 +37,51 @@ test("worked model cases have complete formative steps and no reserved assessmen
       id,
     ).toEqual([]);
   }
+});
+
+test("each lesson has one worked-example route and standalone scenarios have distinct prompts", () => {
+  const normalize = (prompt: string) =>
+    prompt
+      .normalize("NFKC")
+      .toLowerCase()
+      .replace(/[\p{P}\s]+/gu, "");
+  const reservedPrompts = new Set(
+    [
+      ...lessons.flatMap(({ checks, journey }) => [
+        ...checks,
+        ...(journey?.checkForms.flat() ?? []),
+        ...(journey?.reviewForms.flat() ?? []),
+      ]),
+      ...[...diagnostics, ...papers, ...extendedPapers, ...fullPapers].flatMap(
+        ({ questions }) => questions,
+      ),
+    ].map(({ prompt }) => normalize(prompt)),
+  );
+  const lessonSlugs = new Set(lessons.map(({ slug }) => slug));
+  for (const [slug, example] of Object.entries(standaloneWorkedExamples)) {
+    expect(lessonSlugs.has(slug), slug).toBe(true);
+    expect(
+      example?.steps.every((step) => step.trim().length > 0),
+      slug,
+    ).toBe(true);
+    expect(reservedPrompts.has(normalize(example!.prompt)), slug).toBe(false);
+  }
+  for (const { slug, journey } of lessons) {
+    const owners = [
+      slug === "inside-an-atom" || slug === "relative-atomic-mass",
+      Boolean(quantityExamples[slug]),
+      Boolean(standaloneWorkedExamples[slug]) && slug !== "polymers",
+      ...(journey?.guided ?? []).map(({ id }) =>
+        Boolean(modelWorkedExamples[id]),
+      ),
+    ];
+    expect(owners.filter(Boolean), slug).toHaveLength(1);
+  }
+});
+
+test("the Foundation polymer route has a worked example away from the Higher model", () => {
+  const guided = lessons.find(({ slug }) => slug === "polymers")!.journey!
+    .guided;
+  expect(guided.find(({ id }) => modelWorkedExamples[id])?.tier).toBe("higher");
+  expect(standaloneWorkedExamples.polymers?.steps).toHaveLength(3);
 });

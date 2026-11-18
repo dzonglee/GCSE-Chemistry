@@ -30,6 +30,7 @@ import { InsideAtomWorkedSteps } from "./InsideAtomWorkedSteps";
 import { QuantityExample } from "./QuantityExample";
 import { quantityExamples } from "@/content/quantity-examples";
 import { modelWorkedExamples } from "@/content/model-worked-examples";
+import { standaloneWorkedExamples } from "@/content/standalone-worked-examples";
 import { WorkedReasoning } from "./WorkedReasoning";
 import { WorkbenchInputDraft } from "./WorkbenchInputDraft";
 import { AssessmentSession } from "./AssessmentSession";
@@ -107,6 +108,11 @@ export function DetailedLesson({
   const workedCursor = work.worked ?? initialWorkedCursor();
   const quantityExample = quantityExamples[lesson.slug];
   const modelExample = modelWorkedExamples[q.id];
+  const workedModelIndex = journey.guided.findIndex(
+    ({ id }) => modelWorkedExamples[id],
+  );
+  const standaloneExample =
+    workedModelIndex < 0 ? standaloneWorkedExamples[lesson.slug] : undefined;
   const compactRecallTask =
     q.id.startsWith("materials-v1-alloy-use-") ||
     q.id.startsWith("materials-v1-rust-design-") ||
@@ -805,6 +811,34 @@ export function DetailedLesson({
                   <WorkedReasoning steps={[...modelExample, q.explanation]} />
                 </details>
               )}
+              {section === "explore" &&
+                stage === "guided" &&
+                index === 0 &&
+                workedModelIndex > 0 && (
+                  <button
+                    className="button"
+                    onClick={() => choose("guided", workedModelIndex)}
+                  >
+                    Open the worked model
+                  </button>
+                )}
+              {section === "explore" &&
+                stage === "guided" &&
+                index === 0 &&
+                standaloneExample && (
+                  <details
+                    key={lesson.slug}
+                    className="sample-explanation worked-example"
+                  >
+                    <summary>Try a worked example</summary>
+                    <p>{standaloneExample.prompt}</p>
+                    <p>
+                      Make a prediction, then reveal the reasoning. This example
+                      is unscored.
+                    </p>
+                    <WorkedReasoning steps={standaloneExample.steps} />
+                  </details>
+                )}
               <p className="sample-learning-note">
                 {stage === "practice"
                   ? "Try your own answer first. Use support if you need it."
